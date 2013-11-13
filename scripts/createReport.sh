@@ -1,6 +1,13 @@
-echo "STATS"
+log="logs/stats.log"
 
-echo -e "\tNumber of TODO items: `grep -rPc "(?<=%) ?(TODO|todo).*$" *.tex`"
+date | tee -a $log
+
+echo -e "\nWORD COUNT"
+wc -w document/*_*.md | tee -a $log
+
+echo -e "\nSTATS"
 
 echo -e "\nTODOS"
+echo -e "Count\t`grep -rPc "(?<=%) ?(TODO|todo).*$" *.tex`" | tee -a $log
+echo "----" | tee -a $log
 grep -roPn "(?<=%) ?(TODO|todo).*$" *.tex

@@ -2,6 +2,7 @@
 *.glo
 *.idx
 *.log
+!logs/*log
 *.toc
 *.ist
 *.acn
