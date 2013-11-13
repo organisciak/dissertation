@@ -10,8 +10,43 @@ CHAPTER 1: INTRODUCTION
 
 # Introduction
 
+The internet is growing increasingly interactive as it matures. Rather than simply transmitting information to readers, web pages allow their audience to react and interact with their information. The products of these interactions are a trove of qualitative judgements, valuable to understanding information objects.
+
+## Broad Research Question
+
+How do we interpret these qualitative user contributions in a quantitative system? Humans have individual biases that results in differences between how a contribution is created: this study looks at how such variance is introduced and how it affects the product of human contributions.
+
+# Specific Research Question
+
+Specifically, we focus on whether bias in /descriptive crowdsourcing/ be accounted for --either a priori or posterior to data collection-- in a manner that improves the information-theoretic quality (TODO: lowers entropy?) of the contribution. ( for use in ranked retrieval?)
+
+### Hypothesis
+
+The proposed study makes an assumption that crowd contributors are honest but inherently biased, with the hypothesis that such a assumption can result in a) more algorithmically valuable crowdsourced discription and b) a greater proportion of useful contributions.
+
+### Practical application
+
+The contribution of this work is the application of human corrective technique to the encoding of metadata about existing information object, and the broader understanding of the nature of such contributions.
+
+
+TODO: crowdsourcing for encoding existing information with more informative metadata, with a goal of improving information retrieval systems. By focusing on a mix 
+
+## Relevance to IS and IR
+
+Information science deals with many information objects, giving crowdsourcing considerable potential as a tool for item description. 
+
+TODO
+
+### Notes
+
+Discuss relevance of problem to information science and specifically information retrieval.
+
+This is partially strategic for myself: I should think of the problem right out of the gate: carefully and precisely. 
+ Relevance to my areas of study should be returned to in-depth later.
+
 # Problem
-Set up the problem and propose hypothesis, speaking on a higher level.
+
+## Relevance in Information Science
 
 ## Notes
 
@@ -21,28 +56,6 @@ Set up the problem and propose hypothesis, speaking on a higher level.
 
 ## Text
 
-
-# Research Question
-
-# Methodology
-
-## Definitions
-
-## A Priori
-
-## Posterior Corrections of Bias
-
-# Hypothesis
- * Move in to the practical part of the problem that I'll be addressing.
-
-# Relevance to IS and IR
-
-## Notes
-
-Discuss relevance of problem to information science and specifically information retrieval.
-
-This is partially strategic for myself: I should think of the problem right out of the gate: carefully and precisely. 
- Relevance to my areas of study should be returned to in-depth later.
 
 # Methodology
 
@@ -72,8 +85,16 @@ Crowdsou
 
 # Chapter Outline
 
-## Outline
+The proposed dissertation will follow the following structure, delineated by chapters.
+
 ### Introduction
+
+The first chapter will introduce the problem of human bias in crowdsourcing and how it affects computational uses of contributed data. Subsequently, the assumption of honest but biased contributors will be outlined, and the hypothesis on this assumption will be outlined along with the study that will be pursued to test it.
+
 ### Literature Review
+
 ### A Priori Corrections for Bias
+
 ### Posterior Corrections for Bias
+
+:
