@@ -26,14 +26,14 @@ The proposed study makes an assumption that crowd contributors are honest but in
 
 ### Practical application
 
-The contribution of this work is the application of human corrective technique to the encoding of metadata about existing information object, and the broader understanding of the nature of such contributions.
+The contribution of this work is the application of human corrective techniques to the encoding of metadata about existing information object, and the broader understanding of the nature of such contributions.
 
 
 TODO: crowdsourcing for encoding existing information with more informative metadata, with a goal of improving information retrieval systems. By focusing on a mix 
 
 ## Relevance to IS and IR
 
-Information science deals with many information objects, giving crowdsourcing considerable potential as a tool for item description. 
+Information science deals with many information objects, giving crowdsourcing considerable potential as a tool for item description. By collecting human judgments about the quality of information  
 
 TODO
 
@@ -97,4 +97,3 @@ The first chapter will introduce the problem of human bias in crowdsourcing and 
 
 ### Posterior Corrections for Bias
 
-:
