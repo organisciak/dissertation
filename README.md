@@ -2,6 +2,7 @@ Dissertation
 ------------
 
 ## To Compile
+<<<<<<< HEAD
     pdflatex --include-directory=document thesis.tex
 Or,
     TEXINPUTS=document/: pdflatex thesis.tex
@@ -20,6 +21,8 @@ or simply:
 ```
 ls document/*_*.md | parallel pandoc -f markdown -t latex --chapters -o {.}.tex {}
 ```
+=======
+    PDFLatex --include-directory=documents thesis.tex
 
 ## Templates
 LaTex templates from Electrical and Computer Engineering at UIUC: http://wiki.engr.illinois.edu/display/ECEThesisReview/LaTeX+Resources
