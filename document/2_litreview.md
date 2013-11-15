@@ -1,90 +1,90 @@
-Chapter 2: Literature Review
-=============================
+Literature Review
+===================
 
-# Intro
+## Intro
 
-# General overview
+## General overview
 
-# Definitions and History
+## Definitions and History
 
-## Crowdsourcing
+### Crowdsourcing
 
-## Wisdom of the Crowds
+### Wisdom of the Crowds
 
-## Human-Computation
+### Human-Computation
 
-## Open-Source
+### Open-Source
 
-## Commons-based Peer Production
+### Commons-based Peer Production
 
-## Classical Work on crowds
+### Classical Work on crowds
 
-### Extraodinary Madness of the Crowds (Mackay [sp?])
+#### Extraodinary Madness of the Crowds (Mackay [sp?])
 
-### The Crowd (LeBon)
-
-
-# Top research in crowdsourcing
-
-## ESP Game
-
-## VizWiz
-
-## Soylent
-
-## Mason and Watts
-
-## Benkler - Wealth of Networks
+#### The Crowd (LeBon)
 
 
-# Crowdsourcing in the Wild
+## Top research in crowdsourcing
+
+### ESP Game
+
+### VizWiz
+
+### Soylent
+
+### Mason and Watts
+
+### Benkler - Wealth of Networks
+
+
+## Crowdsourcing in the Wild
 Notable crowdsourcing in the wild
 
-## Wikipedia
+### Wikipedia
 
-## Threadless
+### Threadless
 
-## Academic
+### Academic
 
-### Zooniverse
+#### Zooniverse
 
-### FoldIt
+#### FoldIt
 
-### ReCaptcha
-
-
-# Failures and Concerns
+#### ReCaptcha
 
 
-
-## Ethics
-
-
-# Research in Information Science
+## Failures and Concerns
 
 
 
-# Research in Information Retrieval
-
-## Relevance Judgments
-
-### Alonso et al.
-
-## TREC Crowdsourcing track
+### Ethics
 
 
-# Taxonomies of Crowdsourcing
-
-## By Function
-
-## By Motivation
+## Research in Information Science
 
 
-# Research relevant to study
 
-## Coding Aggregation / Ground Truth generation
+## Research in Information Retrieval
 
-## 
+### Relevance Judgments
+
+#### Alonso et al.
+
+### TREC Crowdsourcing track
+
+
+## Taxonomies of Crowdsourcing
+
+### By Function
+
+### By Motivation
+
+
+## Research relevant to study
+
+### Coding Aggregation / Ground Truth generation
+
+### 
 
 [TODO: Rename header]
 
