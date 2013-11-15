@@ -81,6 +81,24 @@ Crowdsou
 			
 ## A Priori Corrections of Bias
 
+### Introduction
+
+### Literature
+
+### My Research Thus Far
+
+### Proposed Research
+
+In new research for this chapter, I will investigate the effect of different parameterizations of the task, 
+
+#### Data
+
+#### Parameterization
+
+#### Evaluation
+
+
+
 ## Posterior Corrections of Bias
 
 # Chapter Outline
