@@ -1,9 +1,13 @@
 log="logs/stats.log"
+data="logs/stats.csv"
 
 date | tee -a $log
 
 echo -e "\nWORD COUNT"
 wc -w document/*_*.md | tee -a $log
+
+# Also save a tab-saparated machine-readable version
+wc -w document/*_*md | perl -pe "s/ +/\t/g" | perl -pe "s/^/`date +%s`/g" >>$data
 
 echo -e "\nSTATS"
 
