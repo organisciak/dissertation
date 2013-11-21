@@ -25,3 +25,5 @@
 *~
 /thesis.pdf
 *.swp
+.Rproj.user
+/Rplots.pdf

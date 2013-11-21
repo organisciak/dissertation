@@ -2,15 +2,23 @@ INTRODUCTION
 =============
 
 > In these democratic days, any investigation in the trustworthiness and peculiarities of popular judgments is of interest
-> -- Francis Gaston, 1907i
-
-% TODO: Add citation to refs
+> -- Francis Gaston, 1907
+<!--TODO: Add citation to refs-->
 
 ## Notes
 
 ## Introduction
 
-The internet is growing increasingly interactive as it matures. Rather than simply transmitting information to readers, web pages allow their audience to react and interact with their information. The products of these interactions are a trove of qualitative judgements, valuable to understanding information objects.
+Strong information retrieval depends on reliable, detailed information to index.
+The broad phenomenon of crowdsourcing has the potential to improve retrieval over web documents by producing descriptive metadata about documents.
+Since crowdsourcing considers humans at large-scales, it can be used for qualitative and subjective information at scales useful to retrieval.
+<!--Written roughly to dump, TODO wordsmith-->
+
+<!-- Old text
+The internet is growing increasingly interactive as it matures.
+Rather than simply transmitting information to readers, web pages allow their audience to react and interact with their information.
+The products of these interactions are a trove of qualitative judgements, valuable to understanding information objects.
+-->
 
 ### Broad Research Question
 
@@ -18,7 +26,11 @@ How do we interpret these qualitative user contributions in a quantitative syste
 
 ## Specific Research Question
 
-Specifically, we focus on whether bias in /descriptive crowdsourcing/ be accounted for --either a priori or posterior to data collection-- in a manner that improves the information-theoretic quality (TODO: lowers entropy?) of the contribution. ( for use in ranked retrieval?)
+Specifically, this study asks whether bias in /descriptive crowdsourcing/ be accounted for in a manner that improves the information-theoretic quality of the contribution, either at the time of data collection or afterward.
+
+<!--
+ (TODO: lowers entropy?) of the contribution. ( for use in ranked retrieval?)
+-->
 
 #### Hypothesis
 
@@ -33,7 +45,7 @@ TODO: crowdsourcing for encoding existing information with more informative meta
 
 ### Relevance to IS and IR
 
-Information science deals with many information objects, giving crowdsourcing considerable potential as a tool for item description. By collecting human judgments about the quality of information  
+Information science deals with many information objects, giving crowdsourcing considerable potential as a tool for item description. By collecting human judgments about the quality of information... 
 
 TODO
 

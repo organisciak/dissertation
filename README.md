@@ -14,15 +14,8 @@ Pandoc is needed to convert Markdown to Latex
 
 ```
 cd document
-pandoc -f markdown -t latex --chapters -o 1_intro.tex 1_intro.md
+pandoc -f markdown -t latex --smart --chapters -o 1_intro.tex 1_intro.md
 ```
-or simply:
-
-```
-ls document/*_*.md | parallel pandoc -f markdown -t latex --chapters -o {.}.tex {}
-```
-=======
-    PDFLatex --include-directory=documents thesis.tex
 
 ## Templates
 LaTex templates from Electrical and Computer Engineering at UIUC: http://wiki.engr.illinois.edu/display/ECEThesisReview/LaTeX+Resources
