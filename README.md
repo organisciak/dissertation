@@ -2,7 +2,6 @@ Dissertation
 ------------
 
 ## To Compile
-<<<<<<< HEAD
     pdflatex --include-directory=document thesis.tex
 Or,
     TEXINPUTS=document/: pdflatex thesis.tex
