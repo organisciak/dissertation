@@ -22,31 +22,52 @@ The products of these interactions are a trove of qualitative judgements, valuab
 
 ### Broad Research Question
 
-How do we interpret these qualitative user contributions in a quantitative system? Humans have individual biases that results in differences between how a contribution is created: this study looks at how such variance is introduced and how it affects the product of human contributions.
+However, humans have predictable and unpredictable biases that make it difficult to systematically adopt their contributions in an information system.
+How do we interpret qualitative user contributions in an inherently quantitative system?
+This study looks at the effect of human biases on crowdsourcing in information retrieval and how they affects the product of human contributions.
 
-## Specific Research Question
+### Specific Research Question
 
-Specifically, this study asks whether bias in /descriptive crowdsourcing/ be accounted for in a manner that improves the information-theoretic quality of the contribution, either at the time of data collection or afterward.
-
+Specifically: can bias in _descriptive crowdsourcing_ be accounted for in a manner that improves the information-theoretic quality of the contribution, either at the time of data collection or afterward?
 <!--
  (TODO: lowers entropy?) of the contribution. ( for use in ranked retrieval?)
 -->
 
 #### Hypothesis
 
-The proposed study makes an assumption that crowd contributors are honest but inherently biased, with the hypothesis that such a assumption can result in a) more algorithmically valuable crowdsourced discription and b) a greater proportion of useful contributions.
+The proposed study makes an assumption that crowd contributors are honest but inherently biased, with the hypothesis that such a assumption leads to 
+a) more algorithmically valuable crowdsourced description and 
+b) a greater proportion of useful contributions.
+
+#### Approach
+
+This hypothesis will be applied in two different sites of crowdsourcing:
+in the design of contribution tasks in order to minimize bias, and
+in the normalization of contributions after they have already been collected.
+Doing so will both adopt work that I have performed during my doctoral studies and perform new research.
+
+In looking at the design of contribution tasks, I hope to concentrate on paid crowdsourcing.
+For the scope of this study, it would be intractable to look at at the design of both paid and volunteer crowdsourcing, so I will pursue the facet more pertinent to information retrieval.
+Paying workers is only a subset of crowdsourcing approaches, and one that arguably tethers the scalability of a task by anchoring it
+to financial means.
+However, it is easier to control for by removing much of the complexities of motivation.
+Information retrieval researchers are using the predictability of paid crowd markets like Amazon's Mechanical Turk to generate on-demand data, making design for those systems important.
+<!--Add citations?-->
+
+More importantly, much information retrieval research occurs parallel to the system of content
+<!--Users on Flickr, for example, contribute semantic tags-->
+ information retrieval systems 
 
 #### Practical application
 
 The contribution of this work is the application of human corrective techniques to the encoding of metadata about existing information object, and the broader understanding of the nature of such contributions.
 
-
-TODO: crowdsourcing for encoding existing information with more informative metadata, with a goal of improving information retrieval systems. By focusing on a mix 
+<!--TODO: crowdsourcing for encoding existing information with more informative metadata, with a goal of improving information retrieval systems. By focusing on a mix -->
 
 ### Relevance to IS and IR
 
 Information science deals with many information objects, giving crowdsourcing considerable potential as a tool for item description. By collecting human judgments about the quality of information... 
-
+<!--
 TODO
 
 #### Notes
@@ -79,8 +100,6 @@ Note that the treatment here is cursory; a more in-depth look can be found in Ch
 
 #### Crowdsourcing
 
-Crowdsou
-
 #### Descriptive crowdsourcing
 
 #### Human computation
@@ -110,6 +129,8 @@ In new research for this chapter, I will investigate the effect of different par
 ##### Evaluation
 
 
+<!--Talk about Mechanical Turk. -->
+<!--Talk about the the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
 
 ### Posterior Corrections of Bias
 
