@@ -27,3 +27,4 @@
 *.swp
 .Rproj.user
 /Rplots.pdf
+document/[1-9]_*tex
