@@ -2,6 +2,7 @@
 ls document/*_*.md | parallel pandoc -f markdown -t latex --smart --chapters -o {.}.tex {}
 
 # Compile to PDF and view
+bibtext thesis
 TEXINPUTS=document/: pdflatex thesis.tex
 open thesis.pdf
 

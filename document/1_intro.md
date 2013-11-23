@@ -33,62 +33,72 @@ Specifically: can bias in _descriptive crowdsourcing_ be accounted for in a mann
  (TODO: lowers entropy?) of the contribution. ( for use in ranked retrieval?)
 -->
 
-#### Hypothesis
+### Hypothesis
 
 The proposed study makes an assumption that crowd contributors are honest but inherently biased, with the hypothesis that such a assumption leads to 
 a) more algorithmically valuable crowdsourced description and 
 b) a greater proportion of useful contributions.
 
-#### Approach
+### Approach
 
 This hypothesis will be applied in two different sites of crowdsourcing:
 in the design of contribution tasks in order to minimize bias, and
 in the normalization of contributions after they have already been collected.
 Doing so will both adopt work that I have performed during my doctoral studies and perform new research.
 
-In looking at the design of contribution tasks, I hope to concentrate on paid crowdsourcing.
-For the scope of this study, it would be intractable to look at at the design of both paid and volunteer crowdsourcing, so I will pursue the facet more pertinent to information retrieval.
-Paying workers is only a subset of crowdsourcing approaches, and one that arguably tethers the scalability of a task by anchoring it
-to financial means.
-However, it is easier to control for by removing much of the complexities of motivation.
-Information retrieval researchers are using the predictability of paid crowd markets like Amazon's Mechanical Turk to generate on-demand data, making design for those systems important.
-<!--Add citations?-->
+## Crowdsourcing
+ 
+<!-- From earlier draft -->
+Crowdsourcing is the distributed, large-scale collaboration of users contributing to a common product.
+Significantly, the term is a verb, describing an act as seen from the system-end.
+Users do not necessarily collaborate directly with each other -- though they can -- so the crowd refers broadly to the collective users of the system.
+Sourcing describes the act of soliciting user contribution, regardless of whether it is successfully executed or not.
+Crowdsourcing is an umbrella term preceded by a number of more narrowly scoped concepts, such as 
+commons-based peer production \cite{benkler_wealth_2006},
+open source software development \cite{raymond_cathedral_1999, lakhani_how_2003},
+and human computation \cite{von_ahn_games_2006, law_human_2011}. <--_ -->
 
-More importantly, much information retrieval research occurs parallel to the system of content
-<!--Users on Flickr, for example, contribute semantic tags-->
- information retrieval systems 
+Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds’ \cite{surowiecki_wisdom_2004}; one way to interpret crowdsourcing is the process of trying to utilize that wisdom.
 
-#### Practical application
 
+## Problem
+
+### Assumption of Honesty
+
+Much crowdsouring research makes an adverserial assumption.
+<!-- TODO: Research this statement and back it up. -->
+
+<!--
+### Notes
+
+* Crowdsourcing aggregates contributions from human participants/workers. While such contributions are helpful for understanding the content in an information system, they are 
+
+Why standardize crowdsourcing collection?
+- With large enough numbers, it doesn't matter.
+- However, a cleaner input makes you reliant on less workers, which is good.
+-->
+
+### Text
+
+## Relevance
+
+### Practical application
 The contribution of this work is the application of human corrective techniques to the encoding of metadata about existing information object, and the broader understanding of the nature of such contributions.
 
 <!--TODO: crowdsourcing for encoding existing information with more informative metadata, with a goal of improving information retrieval systems. By focusing on a mix -->
 
-### Relevance to IS and IR
-
-Information science deals with many information objects, giving crowdsourcing considerable potential as a tool for item description. By collecting human judgments about the quality of information... 
-<!--
-TODO
-
-#### Notes
-
-Discuss relevance of problem to information science and specifically information retrieval.
-
-This is partially strategic for myself: I should think of the problem right out of the gate: carefully and precisely. 
- Relevance to my areas of study should be returned to in-depth later.
-
-## Problem
-
 ### Relevance in Information Science
+Information science deals with many information objects, giving crowdsourcing considerable potential as a tool for item description.
+By collecting human judgments about the quality of information... 
 
-### Notes
+### Relevance in Information Retrieval
 
- * Much crowdsourcing research makes an adversarial assumption
+The primary audience for this dissertation is the information retrieval community.
 
- * Crowdsourcing aggregates contributions from human participants/workers. While such contributions are helpful for understanding the content in an information system, they are 
+### Relevance to Crowdsourcing
 
-### Text
 
+## Collection time
 
 ## Methodology
 
@@ -110,27 +120,7 @@ Note that the treatment here is cursory; a more in-depth look can be found in Ch
 
 #### Human bias?
 			
-### A Priori Corrections of Bias
 
-#### Introduction
-
-#### Literature
-
-#### My Research Thus Far
-
-#### Proposed Research
-
-In new research for this chapter, I will investigate the effect of different parameterizations of the task, 
-
-##### Data
-
-##### Parameterization
-
-##### Evaluation
-
-
-<!--Talk about Mechanical Turk. -->
-<!--Talk about the the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
 
 ### Posterior Corrections of Bias
 
@@ -143,6 +133,8 @@ The proposed dissertation will follow the following structure, delineated by cha
 The first chapter will introduce the problem of human bias in crowdsourcing and how it affects computational uses of contributed data. Subsequently, the assumption of honest but biased contributors will be outlined, and the hypothesis on this assumption will be outlined along with the study that will be pursued to test it.
 
 #### Literature Review
+
+<!-- TODO look up text previously written about this -->
 
 #### A Priori Corrections for Bias
 
