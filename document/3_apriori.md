@@ -3,7 +3,25 @@ A Priori Corrections for Bias
 
 ## Introduction
 
+Humans don't operate with the formality of computers.
+Many of the benefits of crowdsourcing follow from that fact: human contributions are valuable specifically because they are not easily automated.
+However, when using crowd contributions to inform an algorithmic system, such as in information retrieval, the inconsistencies of human work present a challenge.
+<!-- This text might be better in the intro --> 
 
+In the first of two research chapters, the proposed dissertation will investigate how studies 
+
+## Outline
+
+This section of the dissertation proposal serves as a skeleton for the dissertation chapter.
+Below, I 
+ outline the problem of collecting less biased data from human workers,
+ discuss some of my previous research on the topic,
+ and present the 
+  scope,
+  methodology,
+  data,
+  and evaluation
+ for proposed new research.
 
 ## Problem
 
@@ -39,11 +57,12 @@ While there are other potential factors affecting differences between the system
 
 ##### System 1 vs System 2
 
-More evidence for this was encountered in a peripheral finding while conducting \cite{}<!-- TODO cite human computation? Of just  -->.
+More evidence for this was encountered in a peripheral finding while conducting \cite{}<!-- TODO cite human computation? Or just unpublished?  -->.
 In this case, we were again looking at opinion ratings on a five-point scale, this time on Mechanical Turk. 
 Workers were asked to provide their personal opinions on whether they liked the style of each of 100 saltshakers.
 In one group of workers, this is all they were asked.
 In another group, we also asked workers to explain why they gave that rating.
+Alongside their rating of the item, they would provide a short explanation, such as <!--TODO-->.
 In most other regards the ratings were collected in the same way:
  on Mechanical Turk during the US work day,
  in an interface designed identically -- besides the additional text input boxes for the latter formulation --
@@ -52,14 +71,20 @@ In most other regards the ratings were collected in the same way:
 <!--The payment for the task was scaled to account for the extra time necessary for completion: in the first set of tasks, workers averaged XXX/hr, on the latter, they averaged XXX/hr ... TODO: what _did_ we do for the money? -->
 
 Figure XXX <!-- TODO --> shows the distribution of workers by their average rating.
-In the first set, where workers rated quickly (<--(TODO: time)-->), the workers' average ratings were across the board.
+In the first set, where workers rated quickly (<!--(TODO: time)-->), the workers' average ratings were across the board.
 There were very positive workers, very negative workers, and everything in between.
 While the average worker gave a rating of <!--TODO-->, the standard deviation was <!--TODO-->.
 
-[] <!-- TODO: Image -->
-<!-- TODO: Figure XXX: Comparison of worker rating distributions for preferences in salt shakers. In the basic set, workers were asked only for a rating.  . Unpublished research, (TODO: text to make clear that it is Microsoft IP, not University's ) -->
+In contrast, the workers that were asked to explain their rating tempered their opinions more.
+The distribution of average ratings of individuals was normal (<!--TODO normality test results-->) about a mean of <!--TODO--> with a standard deviation of <!-- TODO -->.
 
-It is clear that workers in the more set with more introspection 
+[] <!-- TODO: Image -->
+<!-- TODO: Figure XXX: Comparison of worker rating distributions for preferences in salt shakers.
+In the basic set, workers were asked only for a rating.
+In the detailed set, workers were asked for a rating and an brief explanation of why they chose that rating.
+-Unpublished research, (TODO: text to make clear that it is Microsoft IP, not University's ) -->
+
+It is clear that workers in the set with more introspection 
 Howe
 
 
@@ -69,6 +94,8 @@ Figure YYY also shows the distribution of rating values overall.
 
 
 
+
+### How this fits in the dissertation
 
 ## Scope
 
@@ -91,15 +118,17 @@ More importantly, much information retrieval research occurs parallel to the sys
 
 #### Prior Work 
 
-### Proposed Research
+## Proposed Research
 
 In new research for this chapter, I will investigate the effect of different parameterizations of the task, 
 
-##### Data
+#### Data
 
-##### Parameterization
+#### Parameterization
 
-##### Evaluation
+#### Evaluation
 
 <!--Talk about Mechanical Turk. -->
 <!--Talk about the the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
+
+##### Baselines
