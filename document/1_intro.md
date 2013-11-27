@@ -42,9 +42,28 @@ b) a greater proportion of useful contributions.
 ### Approach
 
 This hypothesis will be applied in two different sites of crowdsourcing:
-in the design of contribution tasks in order to minimize bias, and
-in the normalization of contributions after they have already been collected.
-Doing so will both adopt work that I have performed during my doctoral studies and perform new research.
+
+ * in the design of contribution tasks in order to minimize bias, and
+
+ * in the normalization of contributions after they have already been collected.
+
+Doing so will both adopt work that I have performed during my doctoral studies and contribute new research.
+
+### Take Away
+
+A reader of the proposed dissertation will understand:
+
+ * the issues related to using crowdsourcing contributions for information retrieval indexing,
+
+ * the effect of designing 'quicker' or 'slower' collection tasks on a paid crowdsourcing platform,
+ with a sense of how this information generalizes to different tasks or collection spaces,
+
+ * corrective measures for human bias in already-collected descriptive metadata,
+    particularly compus-based methods for online review normalization and
+    error-reducing voting techniques for crowdsourced relevance judgments,
+and
+
+ * the tractability of making an assumption of honest-but-biased contributors
 
 ## Crowdsourcing
  
@@ -59,7 +78,6 @@ open source software development \cite{raymond_cathedral_1999, lakhani_how_2003}
 and human computation \cite{von_ahn_games_2006, law_human_2011}. <--_ -->
 
 Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds’ \cite{surowiecki_wisdom_2004}; one way to interpret crowdsourcing is the process of trying to utilize that wisdom.
-
 
 ## Problem
 
