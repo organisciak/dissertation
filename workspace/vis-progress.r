@@ -21,4 +21,4 @@ ggplot(stats[name!='total'], aes(x=time, y=count, color=name)) +
   geom_vline(xintercept=dates, linetype='dotted') +
   scale_x_datetime() +
   theme_minimal()+ theme(legend.position="bottom")
-#ggsave("progress.png")
+ggsave("progress.png",dpi=150, width=10, height=7)

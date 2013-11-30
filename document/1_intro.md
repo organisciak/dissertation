@@ -9,7 +9,7 @@ INTRODUCTION
 
 ## Introduction
 
-Strong information retrieval depends on reliable, detailed information to index.
+Effective information retrieval depends on reliable, detailed information to index.
 The broad phenomenon of crowdsourcing has the potential to improve retrieval over web documents by producing descriptive metadata about documents.
 Since crowdsourcing considers humans at large-scales, it can be used for qualitative and subjective information at scales useful to retrieval.
 <!--Written roughly to dump, TODO wordsmith-->
@@ -83,7 +83,7 @@ Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds
 
 ### Assumption of Honesty
 
-Much crowdsouring research makes an adverserial assumption.
+Much crowdsourcing research makes an adversarial assumption.
 <!-- TODO: Research this statement and back it up. -->
 
 <!--
@@ -107,14 +107,7 @@ The contribution of this work is the application of human corrective techniques 
 
 ### Relevance in Information Science
 Information science deals with many information objects, giving crowdsourcing considerable potential as a tool for item description.
-By collecting human judgments about the quality of information... 
-
-### Relevance in Information Retrieval
-
-The primary audience for this dissertation is the information retrieval community.
-
-### Relevance to Crowdsourcing
-
+By collecting human judgments about the quality of information...
 
 ## Collection time
 
@@ -137,8 +130,6 @@ Note that the treatment here is cursory; a more in-depth look can be found in Ch
 #### Volunteer, contributor
 
 #### Human bias?
-			
-
 
 ### Posterior Corrections of Bias
 
