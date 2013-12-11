@@ -5,20 +5,15 @@ INTRODUCTION
 > -- Francis Gaston, 1907
 <!--TODO: Add citation to refs-->
 
-## Notes
-
 ## Introduction
 
 Effective information retrieval depends on reliable, detailed information to index.
 The broad phenomenon of crowdsourcing has the potential to improve retrieval over web documents by producing descriptive metadata about documents.
 Since crowdsourcing considers humans at large-scales, it can be used for qualitative and subjective information at scales useful to retrieval.
-<!--Written roughly to dump, TODO wordsmith-->
 
-<!-- Old text
 The internet is growing increasingly interactive as it matures.
 Rather than simply transmitting information to readers, web pages allow their audience to react and interact with their information.
 The products of these interactions are a trove of qualitative judgements, valuable to understanding information objects.
--->
 
 ### Broad Research Question
 
@@ -28,10 +23,7 @@ This study looks at the effect of human biases on crowdsourcing in information r
 
 ### Specific Research Question
 
-Specifically: can bias in _descriptive crowdsourcing_ be accounted for in a manner that improves the information-theoretic quality of the contribution, either at the time of data collection or afterward?
-<!--
- (TODO: lowers entropy?) of the contribution. ( for use in ranked retrieval?)
--->
+Specifically: can human bias in _descriptive crowdsourcing_ be accounted, either at the time of data collection or afterward, in a manner that maximizes the information gain for information retrieval?
 
 ### Hypothesis
 
@@ -67,24 +59,44 @@ and
 
 ## Crowdsourcing
  
-<!-- From earlier draft -->
 Crowdsourcing is the distributed, large-scale collaboration of users contributing to a common product.
-Significantly, the term is a verb, describing an act as seen from the system-end.
+Significantly, the term describes the _act_ of a system opening up for contributions from distributed users.
 Users do not necessarily collaborate directly with each other -- though they can -- so the crowd refers broadly to the collective users of the system.
 Sourcing describes the act of soliciting user contribution, regardless of whether it is successfully executed or not.
 Crowdsourcing is an umbrella term preceded by a number of more narrowly scoped concepts, such as 
 commons-based peer production \cite{benkler_wealth_2006},
 open source software development \cite{raymond_cathedral_1999, lakhani_how_2003},
-and human computation \cite{von_ahn_games_2006, law_human_2011}. <--_ -->
+and human computation \cite{von_ahn_games_2006, law_human_2011}. <!--_ -->
 
 Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds’ \cite{surowiecki_wisdom_2004}; one way to interpret crowdsourcing is the process of trying to utilize that wisdom.
 
 ## Problem
 
+Many of the benefits of crowdsourcing follow from the fact that humans approach tasks in qualitative and abstract ways that are difficult to emulate algorithmically.
+A human can respond to complex questions on a Q&A website, judge the quality of a restaurant/product/film, or decipher a sloppy piece of handwriting.
+
+Since many information systems are intended to serve an information-seeking user, the information that crowdsourcing collects can also better embody the needs of user.
+For example, a user-tagged image in a museum collection can fill in colloquial terms that the more formal vocabulary employed by a cataloguer (\cite{}<!--TODO Springer et al and  steve.museum?-->).
+
+While the complex qualitative actions of human contributions are the cornerstone of such contributions' usefulness, they present a challenge for algorithmic use, because they can be highly variable.
+
 ### Assumption of Honesty
 
-Much crowdsourcing research makes an adversarial assumption.
+Much crowdsourcing research makes an adversarial assumption, focusing on removing variability by detecting or smoothing over cheaters.
 <!-- TODO: Research this statement and back it up. -->
+
+For example, Eickhoff et al. note that a notable proportion of Mechanical Turk workers sacrifice correctness for speed, in order to maximise their profits \cite{}.
+
+However, this argument is not generalizable. While observable in various cases \cite{}<!--TODO-->, including suspicious user analysis that we observed during \cite{}<!--TODO MSR--><!-- TODO FIGURE-->, other studies on contribution conflict it.
+In \cite{organisciak_evaluating_2012}, we found that the fastest performing workers generally did not contribute worse labor, except for one case: when workers spent less time on the instructions and first task. The fact that time was only significant in this one case suggests that the effect for this particular dataset was not a result of 'cheaters' as much as workers that did not interpret the instructions close enough.
+Similarly, during the research for \cite{}<!--TODO MSR--> we found that slowing workers down resulted in lower quality contributions, both in terms of internal consistency by workers and algorithmic quality of the data.
+
+Following from the mixed signals accounting for low-quality results, this research assumes that the quality of a contribution is not only affected by the objective quality of the worker, but also due to subjective differences in the worker's perception of the task.
+
+\begin{equation}
+Contribution = truth + quality bias + perception bias
+\end{equation}
+
 
 <!--
 ### Notes

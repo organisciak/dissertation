@@ -1,5 +1,5 @@
-A Priori Corrections for Bias
-==============================
+Correcting for Human Bias at Collection Time
+=============================================
 
 ## Introduction
 
@@ -9,6 +9,16 @@ However, when using crowd contributions to inform an algorithmic system, such as
 <!-- This text might be better in the intro --> 
 
 In the first of two research chapters, the proposed dissertation will investigate how the design of crowdsourcing tasks for improve information retrieval metadata affects the quality of the content.
+
+When paid crowdsourcing is used for information retrieval, it usually follows a basic design, with a task, description, and one or more items that are reacted to.
+Some exceptions to this approach have been attempted with success<!--TODO-->
+
+Evidence suggests that the design of a data collection interface affects the quality and distribution of \cite{ASIS&T, HOWE 2008, DH 2012} <!--TODO-->.
+The manner to improve on a basic task/description/item is unclear thus far; some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers \cite{TODO}.
+
+In keeping with goals of the proposed dissertation, this study will evaluate two interfaces for encouraging less deviation between human contributors by providing training and feedback, respectively. <!--TODO: Removes: "accounting for their (inattention?selection?) biases -->.
+These interfaces are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
+They will be compared to a baseline basic interface, as well as an alternative system that encourages quicker responses.
 
 ## Outline
 
@@ -25,16 +35,16 @@ Below, I
 
 ## Problem
 
-#### Work up to now
+### Work up to now
 
-##### ASIS&T Paper
+#### ASIS&T Paper
 
-In <!-- TODO:cite ASIS&T paper -->, we consider a variety of methods for removing error from relevance judgments collected on Mechanical Turk.
+In \cite{organisciak_evaluating_2012}, we consider a variety of methods for removing error from relevance judgments collected on Mechanical Turk.
 This study will be discussed in-depth in the next chapter, on accounting for bias after collection, but it also revealed a finding that hints at the importance of task design.
 
 In relevance judgments, workers are shown a _query_, a _description_ of what is relevant to the query, and a set of _results_ to classify as relevant or not relevant to the query. In our tasks, we showed ten results per tasks, using full item records from an online catalogue.
 
-Looking at the amount of time that a worker spends on classifying each result, we found that overall neither slower workers nor faster workers are more consistently reliable (Wilcoxon rank sum $p = 0.064$, but p = 0.154 when excluding extreme outliers).
+Looking at the amount of time that a worker spends on classifying each result, we found that overall neither slower workers nor faster workers are more consistently reliable (Wilcoxon rank sum $p = 0.064$, but $p = 0.154$ when excluding extreme outliers).
 However, looking at that value blocked by the order of results -- i.e. how reliability are workers taking $x$ time on the $y^th$ result of a task -- we found that the time spent on correct classifications are significantly higher than the time spent on incorrect classifications (Wilcoxon Rank Sum one-sided $p=0.01$).
 For all other relevance judgments in a task, the amount of time spent was insignificant.
 
@@ -42,7 +52,7 @@ Why are slower workers better for the first item in a task set, but not for subs
 Remembering that the time spent on the first relevance judgment is confounded with the start of the task and reading the description of what is relevant, our hypothesis was that the effect is actually related to closer reading of instructions.
 Partially showing this to be the case, we found that those tasks where a worker spent more time on the first time were correlated to better performance overall (Figure<!--TODO-->).
 
-It does not matter how much time a worker spends on a task, as long as they spend enough time figuring out out at the beginning. How do you encourage this form of behaviour? \cite{} <!--cite ASIST--> did not explore the design of tasks, but the findings suggest two things.
+It does not matter how much time a worker spends on a task, as long as they spend enough time figuring out out at the beginning. How do you encourage this form of behaviour? \cite{organisciak_evaluating_2012} did not explore the design of tasks, but the findings suggest two things.
 
 Most significantly, it encourages the assumption of honest but biased workers.
 If a worker interprets the codebook, i.e. the relevance description, differently, then they will disagree with the consensus and be considered a bad performer.
@@ -62,7 +72,7 @@ In a task such as relevance judgments, encouraging better work might require wor
 <!-- TODO: Create a section in the lit review about this -->
 
 
-##### Incidental Crowdsourcing
+#### Incidental Crowdsourcing
 
 In <!-- TODO: cite incidental crowdsourcing paper -->, I looked at a facet of crowdsourcing that I called _incidental crowdsourcing_ (IC).
 
@@ -86,7 +96,7 @@ The difference between rating
 
 While there are other potential factors affecting differences between the systems, this cursory comparison suggests that the attentiveness and introspection required of a crowdsourcing contribution affects what that contribution will look like.
 
-##### System 1 vs System 2
+#### System 1 vs System 2
 
 More evidence for this was encountered in a peripheral finding while conducting \cite{}<!-- TODO cite human computation? Or just unpublished?  -->.
 In this case, we were again looking at opinion ratings on a five-point scale, this time on Mechanical Turk. 
@@ -148,20 +158,41 @@ More importantly, much information retrieval research occurs parallel to the sys
 
 In new research for this chapter, I will investigate the effect of different parameterizations of the task, 
 
+### Task
+
+The metadata encoding task that will be compared is a microblog annotation task.
+
+Microblogging messages, in this case from Twitter, are notably truncated.
+Since Twitter messages are limited to 140 characters, messages often are curt, missing context, and heavily abbreviated.
+This creates problems for parsing the topic of an individual message.<!-- TODO: citations for microblog search... both Jaime and Miles have them-->
+On Twitter, the use of microblogging is so ephemeral and diverse that many information retrieval needs are completely new when introduced and only exist for a short period of time \cite{TODO Twitter blog}.
+
+Microblogging users partially address this problem by encoding some metadata in a structured way.
+For example, `hashtags` are used to describe the topic, theme, or context of a tweet \cite{Efron JASIST TODO}.
+Unfortunately, these are inconsistently applied and with differing purposes.
+
+Due to the sparse information and urgent needs of microblog IR, crowdsourcing has been used in this area, both for augmenting tweets and for creating datasets to train classifiers specific to the corpus.
+Twitter uses Mechanical Turk in this way to understand the context of trending queries.
+When there is a spike in search volume, human classifiers are able to differentiate between possible interpretations of the query \cite{Twitter human computation, Twitter clockwork raven, }.
+For example, when "Big Bird" began trending after a political candidate made a polarizing comment about public television funding, it was easily identified as a political query.
+
+
+
+<!--
 ### Data
 
 This study will look at enriching metadata for records in a cultural heritage collection for information retrieval.
 
-<!-- TODO: Alternately, perhaps adding metadata to untagged tweets -->
+ TODO: Alternately, perhaps adding metadata to untagged tweets 
 
 In library and museum archives, a common problem for information discovery is that many materials are not textual, and catalogue records are described more formally than the language information-seeking users use in queries.
-To overcome the language mismatch, some libraries have incorporated user tags to capture colloquial semantic description \cite{} <!--TODO-->.
+To overcome the language mismatch, some libraries have incorporated user tags to capture colloquial semantic description \cite{}  
 
-<!-- TODO, this should be much higher in the document... Problem section? -->
+ TODO, this should be much higher in the document... Problem section? 
 
 The data that will be used in a randomized collection of image records from... 
 
-<!-- TODO: Where is the data going to come from? It needs to be something that can be evaluated against basic retrieval -->
+ TODO: Where is the data going to come from? It needs to be something that can be evaluated against basic retrieval -->
 
 ### Parameterization
 
