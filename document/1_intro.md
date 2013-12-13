@@ -1,6 +1,6 @@
 INTRODUCTION
 =============
-
+_ _
 > In these democratic days, any investigation in the trustworthiness and peculiarities of popular judgments is of interest
 > -- Francis Gaston, 1907
 <!--TODO: Add citation to refs-->
@@ -36,7 +36,6 @@ b) a greater proportion of useful contributions.
 This hypothesis will be applied in two different sites of crowdsourcing:
 
  * in the design of contribution tasks in order to minimize bias, and
-
  * in the normalization of contributions after they have already been collected.
 
 Doing so will both adopt work that I have performed during my doctoral studies and contribute new research.
@@ -46,16 +45,13 @@ Doing so will both adopt work that I have performed during my doctoral studies a
 A reader of the proposed dissertation will understand:
 
  * the issues related to using crowdsourcing contributions for information retrieval indexing,
-
  * the effect of designing 'quicker' or 'slower' collection tasks on a paid crowdsourcing platform,
- with a sense of how this information generalizes to different tasks or collection spaces,
-
+    with a sense of how this information generalizes to different tasks or collection spaces,
  * corrective measures for human bias in already-collected descriptive metadata,
     particularly compus-based methods for online review normalization and
     error-reducing voting techniques for crowdsourced relevance judgments,
-and
-
- * the tractability of making an assumption of honest-but-biased contributors
+   and
+ * the tractability of making an assumption of honest-but-biased contributors.
 
 ## Crowdsourcing
  
@@ -64,11 +60,11 @@ Significantly, the term describes the _act_ of a system opening up for contribut
 Users do not necessarily collaborate directly with each other -- though they can -- so the crowd refers broadly to the collective users of the system.
 Sourcing describes the act of soliciting user contribution, regardless of whether it is successfully executed or not.
 Crowdsourcing is an umbrella term preceded by a number of more narrowly scoped concepts, such as 
-commons-based peer production \cite{benkler_wealth_2006},
-open source software development \cite{raymond_cathedral_1999, lakhani_how_2003},
-and human computation \cite{von_ahn_games_2006, law_human_2011}. <!--_ -->
+commons-based peer production [@benkler_wealth_2006],
+open source software development [@raymond_cathedral_1999; @lakhani_how_2003],
+and human computation [@von_ahn_games_2006; @law_human_2011] <!--_-->
 
-Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds’ \cite{surowiecki_wisdom_2004}; one way to interpret crowdsourcing is the process of trying to utilize that wisdom.
+Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds’ [@surowiecki_wisdom_2004]; one way to interpret crowdsourcing is the process of trying to utilize that wisdom.
 
 ## Problem
 
@@ -76,7 +72,7 @@ Many of the benefits of crowdsourcing follow from the fact that humans approach 
 A human can respond to complex questions on a Q&A website, judge the quality of a restaurant/product/film, or decipher a sloppy piece of handwriting.
 
 Since many information systems are intended to serve an information-seeking user, the information that crowdsourcing collects can also better embody the needs of user.
-For example, a user-tagged image in a museum collection can fill in colloquial terms that the more formal vocabulary employed by a cataloguer (\cite{}<!--TODO Springer et al and  steve.museum?-->).
+For example, a user-tagged image in a museum collection can fill in colloquial terms that the more formal vocabulary employed by a cataloguer [<!--TODO cite Springer et al and  steve.museum?-->].
 
 While the complex qualitative actions of human contributions are the cornerstone of such contributions' usefulness, they present a challenge for algorithmic use, because they can be highly variable.
 
@@ -85,16 +81,16 @@ While the complex qualitative actions of human contributions are the cornerstone
 Much crowdsourcing research makes an adversarial assumption, focusing on removing variability by detecting or smoothing over cheaters.
 <!-- TODO: Research this statement and back it up. -->
 
-For example, Eickhoff et al. note that a notable proportion of Mechanical Turk workers sacrifice correctness for speed, in order to maximise their profits \cite{}.
+For example, Eickhoff et al. note that a notable proportion of Mechanical Turk workers sacrifice correctness for speed, in order to maximise their profits <!-- TODO cite -->.
 
-However, this argument is not generalizable. While observable in various cases \cite{}<!--TODO-->, including suspicious user analysis that we observed during \cite{}<!--TODO MSR--><!-- TODO FIGURE-->, other studies on contribution conflict it.
-In \cite{organisciak_evaluating_2012}, we found that the fastest performing workers generally did not contribute worse labor, except for one case: when workers spent less time on the instructions and first task. The fact that time was only significant in this one case suggests that the effect for this particular dataset was not a result of 'cheaters' as much as workers that did not interpret the instructions close enough.
-Similarly, during the research for \cite{}<!--TODO MSR--> we found that slowing workers down resulted in lower quality contributions, both in terms of internal consistency by workers and algorithmic quality of the data.
+However, this argument is not generalizable. While observable in various cases <!--TODO cite-->, including suspicious user analysis that we observed during <!--TODO cite MSR--><!-- TODO FIGURE-->, other studies on contribution conflict it.
+In @organisciak_evaluating_2012, we found that the fastest workers generally did not contribute worse labor, except for one case: when workers spent less time on the instructions and first task. The fact that time was only significant in this one case suggests that the effect for this particular dataset was not a result of 'cheaters' as much as workers that did not interpret the instructions close enough.
+Similarly, during the research for <!--TODO cite MSR--> we found that slowing workers down resulted in lower quality contributions, both in terms of internal consistency by workers and algorithmic quality of the data.
 
 Following from the mixed signals accounting for low-quality results, this research assumes that the quality of a contribution is not only affected by the objective quality of the worker, but also due to subjective differences in the worker's perception of the task.
 
 \begin{equation}
-Contribution = truth + quality bias + perception bias
+Contribution = truth + \text{quality bias} + \text{perception bias}
 \end{equation}
 
 
@@ -107,6 +103,11 @@ Why standardize crowdsourcing collection?
 - With large enough numbers, it doesn't matter.
 - However, a cleaner input makes you reliant on less workers, which is good.
 -->
+
+
+### Biases
+
+<!-- TODO: More details on biases -->
 
 ### Text
 
@@ -125,23 +126,39 @@ By collecting human judgments about the quality of information...
 
 ## Methodology
 
-### Definitions
+## Definitions and important distinctions
 
 Before proceeding, the terminology of this study should be established. As this work spans multiple domains, and makes reference to recently introduced concepts, it is important to establish a shared understanding of language within these pages.
 
 Note that the treatment here is cursory; a more in-depth look can be found in Chapter 2. (TODO better reference)
 
-#### Crowdsourcing
+### Crowdsourcing
 
 #### Descriptive crowdsourcing
 
-#### Human computation
+This paper focuses on crowdsourcing for descriptive metadata.
 
-#### Worker (paid)
+The distinction here is that the human contributions are reactive.
+There is an information object that already exists, and crowdsourcing workers add information about it.
+The response can be subjective, such as ratings or interpretations, or objective, such as descriptions or corrections.
 
-#### Volunteer, contributor
+Crowdsourcing descriptive metadata stands in contrast to crowdsourcing that _creates_, introducing new information objects into the world. One example of this is T-shirt design contests on Threadless[^1]. 
 
-#### Human bias?
+[^1]: http://www.threadless.com
+
+This approach to crowdsourcing was looked at in  @organisciak_incidental_2013 when defining the concept of _incidental crowdsourcing_.
+Incidental crowdsourcing is an approach to crowdsourcing that is unobtrusive and non-critical.
+This form of peripheral collection of data was noted to favour descriptive activities. 
+
+##### Types of Tasks
+
+### Human computation
+
+### Worker (paid)
+
+### Volunteer, contributor
+
+### Human bias?
 
 ### Posterior Corrections of Bias
 

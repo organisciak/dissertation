@@ -13,12 +13,16 @@ In the first of two research chapters, the proposed dissertation will investigat
 When paid crowdsourcing is used for information retrieval, it usually follows a basic design, with a task, description, and one or more items that are reacted to.
 Some exceptions to this approach have been attempted with success<!--TODO-->
 
-Evidence suggests that the design of a data collection interface affects the quality and distribution of \cite{ASIS&T, HOWE 2008, DH 2012} <!--TODO-->.
-The manner to improve on a basic task/description/item is unclear thus far; some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers \cite{TODO}.
+Evidence suggests that the design of a data collection interface affects the quality and distribution of [@organisciak_evaluating_2012; @howe_crowdsourcing:_2008; @organisciak_incidental_2013].
+The manner to improve on a basic task/description/item is unclear thus far; some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers <!-- TODO cite -->.
 
-In keeping with goals of the proposed dissertation, this study will evaluate two interfaces for encouraging less deviation between human contributors by providing training and feedback, respectively. <!--TODO: Removes: "accounting for their (inattention?selection?) biases -->.
+In keeping with goals of the proposed dissertation, this study will evaluate two interfaces for encouraging less deviation between human contributors by providing training and feedback, respectively. <!--TODO: Removed: "accounting for their (inattention?selection?) biases -->.
 These interfaces are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
 They will be compared to a baseline basic interface, as well as an alternative system that encourages quicker responses.
+
+These alternate designs will be evaluated for a sample task of identifying the topic of a microblogging message from Twitter -- a tweet.
+This is a task where the information object is sparse and the topics are often short-lived and previously unseen, making crowdsourcing a promising approach to improve information retrieval across the data.
+It is also a realistic task that has been attempted with crowdsourcing in the past. <!--TODO-->
 
 ## Outline
 
@@ -35,11 +39,17 @@ Below, I
 
 ## Problem
 
+
 ### Work up to now
+
+My past doctoral-level research motivates this chapter in a number of ways.
+In @organisciak_evaluating_2012 we found evidence that at least some error in crowdsourced relevance judging is stemming to do differing (but non-malicious) interpretations of the task, suggesting that improved quality can follow from tweaks in design.
+During research on <!--TODO cite hcomp-->, we found that asking people to reflect on their response changed the nature of their response, with less internal consistency.
+In a sample study comparing the space of incidental crowdsourcing across two systems [@organisciak_incidental_2013], I found that an 'easy' rating interface -- one that puts up less hurdles to contribution -- results in a shifted distribution of ratings than a 'hard' interface.
 
 #### ASIS&T Paper
 
-In \cite{organisciak_evaluating_2012}, we consider a variety of methods for removing error from relevance judgments collected on Mechanical Turk.
+In @organisciak_evaluating_2012 , we consider a variety of methods for removing error from relevance judgments collected on Mechanical Turk.
 This study will be discussed in-depth in the next chapter, on accounting for bias after collection, but it also revealed a finding that hints at the importance of task design.
 
 In relevance judgments, workers are shown a _query_, a _description_ of what is relevant to the query, and a set of _results_ to classify as relevant or not relevant to the query. In our tasks, we showed ten results per tasks, using full item records from an online catalogue.
@@ -52,7 +62,7 @@ Why are slower workers better for the first item in a task set, but not for subs
 Remembering that the time spent on the first relevance judgment is confounded with the start of the task and reading the description of what is relevant, our hypothesis was that the effect is actually related to closer reading of instructions.
 Partially showing this to be the case, we found that those tasks where a worker spent more time on the first time were correlated to better performance overall (Figure<!--TODO-->).
 
-It does not matter how much time a worker spends on a task, as long as they spend enough time figuring out out at the beginning. How do you encourage this form of behaviour? \cite{organisciak_evaluating_2012} did not explore the design of tasks, but the findings suggest two things.
+It does not matter how much time a worker spends on a task, as long as they spend enough time figuring it out at the beginning. How do you encourage this form of behaviour? @organisciak_evaluating_2012 did not explore the design of tasks, but the findings suggest two things.
 
 Most significantly, it encourages the assumption of honest but biased workers.
 If a worker interprets the codebook, i.e. the relevance description, differently, then they will disagree with the consensus and be considered a bad performer.
@@ -64,17 +74,14 @@ While much research tends to focus on the honesty and quality of paid crowdsourc
 In a task such as relevance judgments, encouraging better work might require workers to be more aware of their performance or to reassess their understanding of the task when it is necessary. Some possibilities to research might me,
 
 * A training task, where workers are walked through the codebook in relation to actual tasks, and told why specific results are relevant or not relevant.
-
 * Online feedback, showing workers their estimated performance based on agreement with other workers.
-
 * Starting tasks with a known item, and alerting workers when they fail that task.
 
 <!-- TODO: Create a section in the lit review about this -->
 
-
 #### Incidental Crowdsourcing
 
-In <!-- TODO: cite incidental crowdsourcing paper -->, I looked at a facet of crowdsourcing that I called _incidental crowdsourcing_ (IC).
+In [@organisciak_incidental_2013], I looked at a facet of crowdsourcing that I called _incidental crowdsourcing_ (IC).
 
 Incidental crowdsourcing refers to crowdsourcing in the periphery.
 These are elements that are unobtrusive and non-critical to the user or the system.
@@ -87,18 +94,18 @@ An example an incidental crowdsourcing mechanic mike be a 'thumbs-up' voting but
 By not taking users hostage or asking users for overly attentive or time-consuming contributions, incidental crowdsourcing contributions result in greater numbers of contributions, even if individual contributions are less frequent.
 They also tend toward different patterns of contribution.
 
-This was clear in a small example study <!-- CITE IC DH --> comparing a crowdsourcing element on two systems: one that was designed more 'incidental' while another put up more hurdles for contributing quality.
+This was clear in a small example study comparing a crowdsourcing element on two systems: one that was designed more 'incidental' while another put up more hurdles for contributing quality [@organisciak_incidental_2013].
 In the systems, I compared the ratings of identical product on two application marketplaces for the Android smartphone operating system: Amazon's Appstore and Google Play.
 Users on both systems are able to rate applications on a five-point scale;
 however, while Google's store allows them to offer this rating quickly and without any other guidelines, Amazon's store requires an accompanying review with a minimum word length, and also has a codebook that reviewers must abide by.
 
-The difference between rating 
+![The difference in average ratings for the same items between Amazon Appstore and Google Play](images/comparison-of-average-ratings.png)
 
 While there are other potential factors affecting differences between the systems, this cursory comparison suggests that the attentiveness and introspection required of a crowdsourcing contribution affects what that contribution will look like.
 
 #### System 1 vs System 2
 
-More evidence for this was encountered in a peripheral finding while conducting \cite{}<!-- TODO cite human computation? Or just unpublished?  -->.
+More evidence for this was encountered in a peripheral finding while conducting <!-- TODO cite human computation? Or just unpublished?  -->.
 In this case, we were again looking at opinion ratings on a five-point scale, this time on Mechanical Turk. 
 Workers were asked to provide their personal opinions on whether they liked the style of each of 100 saltshakers.
 In one group of workers, this is all they were asked.
@@ -165,15 +172,15 @@ The metadata encoding task that will be compared is a microblog annotation task.
 Microblogging messages, in this case from Twitter, are notably truncated.
 Since Twitter messages are limited to 140 characters, messages often are curt, missing context, and heavily abbreviated.
 This creates problems for parsing the topic of an individual message.<!-- TODO: citations for microblog search... both Jaime and Miles have them-->
-On Twitter, the use of microblogging is so ephemeral and diverse that many information retrieval needs are completely new when introduced and only exist for a short period of time \cite{TODO Twitter blog}.
+On Twitter, the use of microblogging is so ephemeral and diverse that many information retrieval needs are completely new when introduced and only exist for a short period of time [TODO cite TODO Twitter blog].
 
 Microblogging users partially address this problem by encoding some metadata in a structured way.
-For example, `hashtags` are used to describe the topic, theme, or context of a tweet \cite{Efron JASIST TODO}.
+For example, `hashtags` are used to describe the topic, theme, or context of a tweet [@efron_information_2011].
 Unfortunately, these are inconsistently applied and with differing purposes.
 
 Due to the sparse information and urgent needs of microblog IR, crowdsourcing has been used in this area, both for augmenting tweets and for creating datasets to train classifiers specific to the corpus.
 Twitter uses Mechanical Turk in this way to understand the context of trending queries.
-When there is a spike in search volume, human classifiers are able to differentiate between possible interpretations of the query \cite{Twitter human computation, Twitter clockwork raven, }.
+When there is a spike in search volume, human classifiers are able to differentiate between possible interpretations of the query [@chen_improving_2013].
 For example, when "Big Bird" began trending after a political candidate made a polarizing comment about public television funding, it was easily identified as a political query.
 
 
@@ -186,7 +193,7 @@ This study will look at enriching metadata for records in a cultural heritage co
  TODO: Alternately, perhaps adding metadata to untagged tweets 
 
 In library and museum archives, a common problem for information discovery is that many materials are not textual, and catalogue records are described more formally than the language information-seeking users use in queries.
-To overcome the language mismatch, some libraries have incorporated user tags to capture colloquial semantic description \cite{}  
+To overcome the language mismatch, some libraries have incorporated user tags to capture colloquial semantic description <!--TODO cite-->.
 
  TODO, this should be much higher in the document... Problem section? 
 
@@ -229,17 +236,17 @@ $TODO$
 
 ### Time-Limited Interface
 
-As hinted at during work on \cite{}<!--TODO CITE MSR, DH -->, not all crowdsourcing contribution cases require a
+As hinted at during work on <!--TODO CITE MSR, DH -->, not all crowdsourcing contribution cases require a
 
 The final data collection interface will encourage workers to complete tasks quickly by giving them a timer.
 
-The timer has been used previously in \cite{}<!--TODO--> to push people into a visceral form of task completion.
+The timer has been used previously in <!--TODO cite--> to push people into a visceral form of task completion.
 
 
 
 #### Evaluation
 
 <!--Talk about Mechanical Turk. -->
-<!--Talk about the the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
+<!--Talk about the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
 
 ##### Baselines

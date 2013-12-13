@@ -32,3 +32,5 @@ document/[1-9]_*tex
 *.swo
 progress.png
 .Rhistory
+*.bcf
+*.run.xml

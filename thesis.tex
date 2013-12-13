@@ -20,6 +20,18 @@
 \usepackage{lscape}  % Useful for wide tables or figures.
 \usepackage[justification=raggedright]{caption}	% makes captions ragged right - thanks to Bryce Lobdell
 
+% Added by Peter <--
+% Support biblatex via babel (instructions via http://tex.stackexchange.com/questions/5091/what-to-do-to-switch-to-biblatex)
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}% Recommended
+\usepackage[babel]{csquotes} % Recommended
+\usepackage[notes,natbib,isbn=false,backend=biber]{biblatex-chicago}  
+
+%\usepackage[style=chicago]{biblatex}
+
+\addbibresource{refs.bib} % Syntax for version >= 1.2
+% -->
+
 % Uncomment the appropriate one of the following four lines:
 \phdthesis %TODO: Fix so that it doesn't say DISSERTAION OR HAVE THE "PARTIAL FULFILLMENT PREAMBLE ON THE FIRST PAGE"
 %\otherdoctorate[abbrev]{Title of Degree}
@@ -145,9 +157,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAPHY
 %
-\bibliographystyle{IEEE_ECE} % TODO: CHANGE BIBLIOGRAPHY STYLE
+% REMOVED BIBTEX
+%\bibliographystyle{IEEE_ECE} % TODO: CHANGE BIBLIOGRAPHY STYLE
 % Put references in BibTeX format in thesisrefs.bib.
-\bibliography{refs}
+%\bibliography{refs}
+
+% ADDED BIBLATEX
+\printbibliography %[<options for printing>]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
