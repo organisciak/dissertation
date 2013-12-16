@@ -40,6 +40,9 @@ This hypothesis will be applied in two different sites of crowdsourcing:
 
 Doing so will both adopt work that I have performed during my doctoral studies and contribute new research.
 
+Importantly, this study cannot account for all possible situations and methods for accounting for human bias before and after crowdsourcing collection.
+Instead, each chapter will focus on a more narrowly scoped sub-problem in the area, to give this study grounding for a thorough exploration of the larger problem space.
+
 ### Take Away
 
 A reader of the proposed dissertation will understand:
@@ -48,7 +51,7 @@ A reader of the proposed dissertation will understand:
  * the effect of designing 'quicker' or 'slower' collection tasks on a paid crowdsourcing platform,
     with a sense of how this information generalizes to different tasks or collection spaces,
  * corrective measures for human bias in already-collected descriptive metadata,
-    particularly compus-based methods for online review normalization and
+    particularly corpus-based methods for online review normalization and
     error-reducing voting techniques for crowdsourced relevance judgments,
    and
  * the tractability of making an assumption of honest-but-biased contributors.
@@ -57,8 +60,9 @@ A reader of the proposed dissertation will understand:
  
 Crowdsourcing is the distributed, large-scale collaboration of users contributing to a common product.
 Significantly, the term describes the _act_ of a system opening up for contributions from distributed users.
-Users do not necessarily collaborate directly with each other -- though they can -- so the crowd refers broadly to the collective users of the system.
+Users do not necessarily collaborate directly with each other -- though they can -- so the crowd in the term refers broadly to the collective users of the system.
 Sourcing describes the act of soliciting user contribution, regardless of whether it is successfully executed or not.
+
 Crowdsourcing is an umbrella term preceded by a number of more narrowly scoped concepts, such as 
 commons-based peer production [@benkler_wealth_2006],
 open source software development [@raymond_cathedral_1999; @lakhani_how_2003],
@@ -72,7 +76,7 @@ Many of the benefits of crowdsourcing follow from the fact that humans approach 
 A human can respond to complex questions on a Q&A website, judge the quality of a restaurant/product/film, or decipher a sloppy piece of handwriting.
 
 Since many information systems are intended to serve an information-seeking user, the information that crowdsourcing collects can also better embody the needs of user.
-For example, a user-tagged image in a museum collection can fill in colloquial terms that the more formal vocabulary employed by a cataloguer [<!--TODO cite Springer et al and  steve.museum?-->].
+For example, a user-tagged image in a museum collection can fill in colloquial terms that the more formal vocabulary employed by a cataloguer [@springer_for_2008; trant_investigating_2006].
 
 While the complex qualitative actions of human contributions are the cornerstone of such contributions' usefulness, they present a challenge for algorithmic use, because they can be highly variable.
 
@@ -83,8 +87,9 @@ Much crowdsourcing research makes an adversarial assumption, focusing on removin
 
 For example, Eickhoff et al. note that a notable proportion of Mechanical Turk workers sacrifice correctness for speed, in order to maximise their profits <!-- TODO cite -->.
 
-However, this argument is not generalizable. While observable in various cases <!--TODO cite-->, including suspicious user analysis that we observed during <!--TODO cite MSR--><!-- TODO FIGURE-->, other studies on contribution conflict it.
-In @organisciak_evaluating_2012, we found that the fastest workers generally did not contribute worse labor, except for one case: when workers spent less time on the instructions and first task. The fact that time was only significant in this one case suggests that the effect for this particular dataset was not a result of 'cheaters' as much as workers that did not interpret the instructions close enough.
+However, this behaviour is not generalizable. While observable in some cases [<!--TODO cite-->], including suspicious user analysis that we observed during <!--TODO cite MSR--><!-- TODO FIGURE-->, other studies on contribution conflict it.
+In @organisciak_evaluating_2012, we found that the fastest workers generally did not contribute worse labor, except for one case: when workers spent less time on the instructions and first task.
+The fact that time was only significant in this one case suggests that the effect for this particular dataset was not a result of 'cheaters' as much as workers that did not interpret the instructions close enough.
 Similarly, during the research for <!--TODO cite MSR--> we found that slowing workers down resulted in lower quality contributions, both in terms of internal consistency by workers and algorithmic quality of the data.
 
 Following from the mixed signals accounting for low-quality results, this research assumes that the quality of a contribution is not only affected by the objective quality of the worker, but also due to subjective differences in the worker's perception of the task.
@@ -93,23 +98,20 @@ Following from the mixed signals accounting for low-quality results, this resear
 Contribution = truth + \text{quality bias} + \text{perception bias}
 \end{equation}
 
-
-<!--
-### Notes
-
-* Crowdsourcing aggregates contributions from human participants/workers. While such contributions are helpful for understanding the content in an information system, they are 
-
-Why standardize crowdsourcing collection?
-- With large enough numbers, it doesn't matter.
-- However, a cleaner input makes you reliant on less workers, which is good.
--->
-
+This simplifying assumption underlies this proposal.
+While keeping the possibility of variance from good or bad quality contributors on the radar, it is pursuing an understanding of that second bias: when contributors introduce variance that is stimulated by differing interpretations of task, ones that deviate from the instructive or normative ways to approach the task.
 
 ### Biases
 
 <!-- TODO: More details on biases -->
 
-### Text
+### Benefits of Recovering Error from Human Biases 
+
+Why standardize crowdsourcing collection?
+With large enough numbers, it doesn't matter.
+Problems of user quality get smoothed over when enough honest people collaborate, while problems stemming from perception biases in many cases will converge <!-- TODO: pickup where I left off -->
+However, a cleaner input makes you reliant on less workers, which is good.
+
 
 ## Relevance
 

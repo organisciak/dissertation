@@ -9,21 +9,51 @@ In the second of two research chapters, the proposed dissertation will look at m
 This will integrate previously-completed research on improving signal in information retrieval relevance judgments [@organisciak_evaluating_2012] and perform new work on normalizing quality judgments in volunteer crowdsourcing.
 
 The new research performed in this chapter will look at normalizing opinion contributions in a volunteer crowdsourcing system.
-The focus on a volunteered data in the proposed new work is for a number of reasons.
-	First, my existing research has already looked at this problem in paid crowdsourcing environment, and it is generally a well-explored space in research [notably including: @ipeirotis_quality_2010; @raykar_supervised_2009; @eickhoff_increasing_2012; @wallace_who_2011; @sheng_get_2008; @welinder_online_2010; @whitehill_whose_2009; @snow_cheap_2008; @novotney_cheap_2010].
-	Secondly, researching already collected data does not require the same control that researching varying collection designs does, making it more tractable to focus on volunteer systems.
-<!-- TODO something less subjective than opinions? -->
+
+Specifically, it will look at the deviation of ratings from normative opinions on business-rating website Yelp.
+I will examine when an online rater's perception of their rating task deviates from the popular interpretation.
+This comparison will be done by providing a rater's reviews to other human workers, and asking them what they would expect the rating to be based on the review.
+
+After performing an analysis on the points of disparity between a rater's rating and the rating others would expect from their review, this study will attempt a method to model the normative opinion by workers.
+The exact approach will be informed by the analysis proposed, but one potential approach is described below.
 
 ## Scope
 
 The assumptions and focus of this chapter will stay unchanged,
  pursuing the assumption of honest-but-biased workers, and
- focusing on crowdsourcing additional metadata for improved information retrieval indexing.
+
+x The focus on a volunteered data in the proposed new work is for a number of reasons.
+	First, my existing research has already looked at this problem in paid crowdsourcing environment, and it is generally a well-explored space in research [notably including: @ipeirotis_quality_2010; @raykar_supervised_2009; @eickhoff_increasing_2012; @wallace_who_2011; @sheng_get_2008; @welinder_online_2010; @whitehill_whose_2009; @snow_cheap_2008; @novotney_cheap_2010].
+	Secondly, researching already collected data does not require the same control that researching varying collection designs does, making it more tractable to focus on volunteer systems.
+<!-- TODO something less subjective than opinions? -->
+
+focusing on crowdsourcing additional metadata for improved information retrieval indexing.
 
 ## Problem
 
 How do you normalize for deviations among 
 
+## Subjective vs. Objective Assumptions
+
+Crowdsourced opinions can be treated in two ways: a personalized approach and a consensus-seeking approach.
+
+For personalization, a system assumes that each opinion is representative of a specific type of user, and that the data can be used to model the individual users.
+Collaborative filtering usually makes this assumption.
+Doing so keeps closer to a user's tastes in highly divisive domains, separating Black Sabbath from Black-Eyed Peas, or Doctor Zhivago from Doctor Doolittle.
+This was the assumption made in [<!--TODO cite hcomp-->].
+
+<!--TODO: Jaime would have much more to say about this-->
+
+Another approach to opinion ratings is to seek consensus.
+This approach is not as nuanced to the differences of opinions between humans, but has a few benefits.
+First, it is easier to communicate to users a single absolute opinion. 
+Secondly, it accommodates users that have never been seen before: recommending the option that has the maximum likelihood of satisfy any user is safe for new users.
+It's The Beatles option.
+
+
+## User and work related normalization
+
+In collaborative filtering, ...
 
 ## Existing Work
 
@@ -34,6 +64,14 @@ The research covered in this
 
 ## Methodology
 
+This chapter involves
+
+### Understanding Deviation from Expectation
+
+### Correcting for Deviation
+
+
+
 $P(r_s|C)\approx(1-\lambda)(P(r)+\lambda P(r|R)$ <!--_-->
 Where, 
 $P(r|R)=\sum_{i=1}^{n}{P(r|t_i}$
@@ -41,6 +79,15 @@ $P(r|R)=\sum_{i=1}^{n}{P(r|t_i}$
 ### Evaluation
 
 ### Baseline
+
+## Data
+
+The dataset that will be used is the Yelp Dateset Challenge data[^Yelp], released for academic use in 2013.
+
+[^Yelp: http://www.yelp.com/dataset_challenge] <!--_--> 
+
+The dataset includes a snapshot of all of Yelp's ratings and reviews for Phoenix, Arizona and the reviewers involved in that data.
+
 
 ## Related questions
 
