@@ -9,7 +9,7 @@ Literature Review
 
 ### Crowdsourcing
 
-Crowdsourcing refers to "groups of disparate people, connected through technology, contributing to a common product" \cite{organisciak\\\_why\\\_2010}.
+Crowdsourcing refers to "groups of disparate people, connected through technology, contributing to a common product" \cite{organisciak\\\\\\_why\\\\\\_2010}.
 It is an umbrella term that broadly captures the abilities of the internet, as a communications medium, to efficient connect people.
 
 Nothing about crowdsourcing is fundamentally tied to the internet.
@@ -120,5 +120,5 @@ Notable crowdsourcing in the wild
 
 ### 
 
-[TODO: Rename header]
+<!--TODO: Rename header-->
 

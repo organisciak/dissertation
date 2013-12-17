@@ -1,19 +1,18 @@
 INTRODUCTION
 =============
-_ _
-> In these democratic days, any investigation in the trustworthiness and peculiarities of popular judgments is of interest
-> -- Francis Gaston, 1907
-<!--TODO: Add citation to refs-->
+
+> In these democratic days, any investigation in the trustworthiness and peculiarities of popular judgments is of interest -- @galton_vox_1907
 
 ## Introduction
-
-Effective information retrieval depends on reliable, detailed information to index.
-The broad phenomenon of crowdsourcing has the potential to improve retrieval over web documents by producing descriptive metadata about documents.
-Since crowdsourcing considers humans at large-scales, it can be used for qualitative and subjective information at scales useful to retrieval.
 
 The internet is growing increasingly interactive as it matures.
 Rather than simply transmitting information to readers, web pages allow their audience to react and interact with their information.
 The products of these interactions are a trove of qualitative judgements, valuable to understanding information objects.
+
+Effective information retrieval depends on reliable, detailed information to index.
+The broad phenomenon of crowdsourcing has the potential to improve retrieval over web documents by producing more descriptive metadata about documents.
+Humans can provide latent information like quality judgments or higher-level thematic description, and are good at actions such correcting, describing in different language,and connecting to other documents.
+Since crowdsourcing considers humans at large-scales, it is a tool for collecting qualitative and subjective information at scales useful to retrieval.
 
 ### Broad Research Question
 
@@ -72,13 +71,27 @@ Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds
 
 ## Problem
 
+The growth of digital collections has outpaced the ability to comprehensively clean, transcribe, and annotate the data.
+Crowdsourcing is increasing being used to address this problem.
+
 Many of the benefits of crowdsourcing follow from the fact that humans approach tasks in qualitative and abstract ways that are difficult to emulate algorithmically.
 A human can respond to complex questions on a Q&A website, judge the quality of a restaurant/product/film, or decipher a sloppy piece of handwriting.
 
 Since many information systems are intended to serve an information-seeking user, the information that crowdsourcing collects can also better embody the needs of user.
 For example, a user-tagged image in a museum collection can fill in colloquial terms that the more formal vocabulary employed by a cataloguer [@springer_for_2008; trant_investigating_2006].
+Such information is invaluable in indexing items for information retrieval, where the goal is commonly to infer what a user is searching from their textual attempt to describe it in a query.
+
+Similarly, other uses of crowdsourcing capitalize on humans' abilities to spot when algorithmic attempts at understanding an information object have failed.
+ReCaptcha uses human contributions to correct transcriptions of scanned text from Google Books and the New York Times [@_what_????].
+The National Library of Australia's Trove also crowdsources corrections of scanned text, by allowing readers of their scanned newspapers to edit transcript text when they come across problems [@holley_many_2009].
+
+Finally, humans are being used to encode parsable text descriptions for non-text materials or higher-level latent concepts.
+In libraries, this approach is being adopted with crowd transcription of materials which are too difficult for computer vision, such as digitized letters.
+For example, the Bentham Project at University College London has a pilot project for crowdsourcing the transcription Jeremy Bentham’s letters [@moyle_manuscript_2010; @causer_transcription_2012].
 
 While the complex qualitative actions of human contributions are the cornerstone of such contributions' usefulness, they present a challenge for algorithmic use, because they can be highly variable.
+
+<!-- TODO... keep going on the problem!-->
 
 ### Assumption of Honesty
 
@@ -109,20 +122,54 @@ While keeping the possibility of variance from good or bad quality contributors 
 
 Why standardize crowdsourcing collection?
 With large enough numbers, it doesn't matter.
-Problems of user quality get smoothed over when enough honest people collaborate, while problems stemming from perception biases in many cases will converge <!-- TODO: pickup where I left off -->
-However, a cleaner input makes you reliant on less workers, which is good.
+Problems of user quality get smoothed over when enough honest people collaborate, while problems stemming from perception biases in many cases will converge on the normative understanding of the task. 
+However, by recovering a cleaner signal from human contributions, a system is reliant on less workers.
+Doing so thus helps keep system less affected by the ebbs and flows of motivating volunteers, or the costs of paying workers.
+Since the attention that contributors is not uniform across all items in a system, usually resembling an inverse power-law distribution [<!--TODO-->], understanding crowdsourced information with less aggregation means more of the middle of the distribution can be represented.
 
+In other words, accounting for human bias seeks to make each individual contribution more valuable.
 
 ## Relevance
 
 ### Practical application
-The contribution of this work is the application of human corrective techniques to the encoding of metadata about existing information object, and the broader understanding of the nature of such contributions.
 
-<!--TODO: crowdsourcing for encoding existing information with more informative metadata, with a goal of improving information retrieval systems. By focusing on a mix -->
+The contribution of this work is the application of human corrective techniques to the encoding of metadata about existing information objects, and the broader understanding of the nature of such contributions.
+
+There are many ways to apply a lens to such research.
+This study reflects my own field of information retrieval, and more broadly in information science.
 
 ### Relevance in Information Science
-Information science deals with many information objects, giving crowdsourcing considerable potential as a tool for item description.
-By collecting human judgments about the quality of information...
+
+Information science deals with the representation of information objects, giving crowdsourcing considerable potential as a tool for item description.
+
+By being able to accurately
+
+<!-- TODO... this whole sections is drafty --> 
+
+While crowdsourcing has shown itself as a useful method for enriching information objects, there remains the question of how the method of collection affects the way the data can be used.
+Contributors are self-selected and often without verified reliability, training or expertise.
+Agreement is sometimes a useful metric for objective information, but sometimes there is meaning in disagreement, such as in collaborative filtering.
+
+In Library and Information Science, focusing on the system value of crowdsourcing information has potential uses in a number of areas.
+Two fertile areas in my focus are curation of materials and improving information access and retrieval.
+
+By way of example, consider crowd curation of materials.
+In the presence of big collections of information objects, information-seeking and discovery can be aided by user-generated curated lists of thematically-similar objects. 
+Sites like Amazon, LibraryThing and the new Delicious let people create lists of products, books, and websites, respectively.
+The themes binding the lists are also user-defined, so a list can be about 
+ quality (e.g. "favorites", "worst of"), 
+ thematic (e.g. "teen vampire romance novels"), 
+ or administrative (e.g. "to buy", "read this year"). 
+This crowdsourced information is useful to users directly, but it also provides high-quality information for understanding the content in a collection and its relationship to other materials.
+
+Inversely, this can return value to users curating content themselves: consider a system that can discover further items for a user that are thematically in line with a group that they have compiled.
+
+New OPACs are increasing giving users the ability to classify and curate content, connecting to user habits that are commonly associated with public libraries.
+For example, Bibliocommons -- employed at the Edmonton and New York Public Libraries -- positions list-making as a “curated topic guide,” a way to “share your expertise with others” (‘Lists’ 2011).
+According to one study of social OPACs, the list feature in BiblioCommons is heavily used, many times greater that commenting and more than ratings (2011).
+
+Similarly, cultural heritage collections have reported past success in using crowd contributions for increasing discoverability to content, improving metadata quality, or even contributing to item description. For example, After a pilot partnership with Flickr, the Library of Congress implemented a workflow for review public comments on images for research or information to integrate back into item records (Springer et al. 2008).
+
 
 ## Collection time
 
@@ -132,7 +179,7 @@ By collecting human judgments about the quality of information...
 
 Before proceeding, the terminology of this study should be established. As this work spans multiple domains, and makes reference to recently introduced concepts, it is important to establish a shared understanding of language within these pages.
 
-Note that the treatment here is cursory; a more in-depth look can be found in Chapter 2. (TODO better reference)
+Note that the treatment here is cursory; a more in-depth look can be found in Chapter 2. <!--TODO better reference-->
 
 ### Crowdsourcing
 

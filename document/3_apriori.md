@@ -172,7 +172,7 @@ The metadata encoding task that will be compared is a microblog annotation task.
 Microblogging messages, in this case from Twitter, are notably truncated.
 Since Twitter messages are limited to 140 characters, messages often are curt, missing context, and heavily abbreviated.
 This creates problems for parsing the topic of an individual message.<!-- TODO: citations for microblog search... both Jaime and Miles have them-->
-On Twitter, the use of microblogging is so ephemeral and diverse that many information retrieval needs are completely new when introduced and only exist for a short period of time [TODO cite TODO Twitter blog].
+On Twitter, the use of microblogging is so ephemeral and diverse that many information retrieval needs are completely new when introduced and only exist for a short period of time [@chen_improving_2013].
 
 Microblogging users partially address this problem by encoding some metadata in a structured way.
 For example, `hashtags` are used to describe the topic, theme, or context of a tweet [@efron_information_2011].
@@ -193,7 +193,9 @@ This study will look at enriching metadata for records in a cultural heritage co
  TODO: Alternately, perhaps adding metadata to untagged tweets 
 
 In library and museum archives, a common problem for information discovery is that many materials are not textual, and catalogue records are described more formally than the language information-seeking users use in queries.
-To overcome the language mismatch, some libraries have incorporated user tags to capture colloquial semantic description <!--TODO cite-->.
+To overcome the language mismatch, some libraries have incorporated user tags to capture colloquial semantic description 
+
+!!TODO cite
 
  TODO, this should be much higher in the document... Problem section? 
 
@@ -229,9 +231,9 @@ In the feedback interface, a worker is taught
 #### Rough Notes
 
 If you're doing voting, then a score is possible based on agreement with other workers:
-^Score=Avg. StdDev from Mean of Ratings <!--TODO LATEX-->
+^Score=Avg. StdDev from Mean of Ratings 
 $TODO$
-<!--TODO -->
+TODO -->
 
 
 ### Time-Limited Interface
