@@ -11,23 +11,23 @@ This will integrate previously-completed research on improving signal in informa
 The new research performed in this chapter will look at normalizing opinion contributions in a volunteer crowdsourcing system.
 
 Specifically, it will look at the deviation of ratings from normative opinions on business-rating website Yelp.
-I will examine when an online rater's perception of their rating task deviates from the popular interpretation.
+First, I will examine when an online rater's perception of their rating task deviates from the popular interpretation.
 This comparison will be done by providing a rater's reviews to other human workers, and asking them what they would expect the rating to be based on the review.
 
-After performing an analysis on the points of disparity between a rater's rating and the rating others would expect from their review, this study will attempt a method to model the normative opinion by workers.
-The exact approach will be informed by the analysis proposed, but one potential approach is described below.
+After performing an analysis on the points of disparity between a contributor's rating and the rating others would expect from their review, this study will attempt a method to model the normative opinion by workers.
+The exact approach will be informed by the analysis done in the proposed study, but one potential approach is described below.
 
 ## Scope
 
-The assumptions and focus of this chapter will stay unchanged,
+The goals of this chapter will stay unchanged,
  pursuing the assumption of honest-but-biased workers, and
+ focusing on crowdsourcing additional metadata for improved information retrieval indexing.
+Again, the use cases being looked at are those with objective goals, with the intention of producing an output with minimal divergence from either the norms of a community or the instructions of a task designer.
 
-x The focus on a volunteered data in the proposed new work is for a number of reasons.
-	First, my existing research has already looked at this problem in paid crowdsourcing environment, and it is generally a well-explored space in research [notably including: @ipeirotis_quality_2010; @raykar_supervised_2009; @eickhoff_increasing_2012; @wallace_who_2011; @sheng_get_2008; @welinder_online_2010; @whitehill_whose_2009; @snow_cheap_2008; @novotney_cheap_2010].
-	Secondly, researching already collected data does not require the same control that researching varying collection designs does, making it more tractable to focus on volunteer systems.
-<!-- TODO something less subjective than opinions? -->
-
-focusing on crowdsourcing additional metadata for improved information retrieval indexing.
+The proposed new work will focus on volunteered data, for a number of reasons.
+First, my existing research has already looked at this problem in paid crowdsourcing environment, and it is generally a well-explored space in research [notably including: @ipeirotis_quality_2010; @raykar_supervised_2009; @eickhoff_increasing_2012; @sheng_get_2008; @welinder_online_2010; @whitehill_whose_2009; @snow_cheap_2008; @novotney_cheap_2010].
+Others have looks at similar situtations of consensus-making among exports [@wallace_who_2011].
+Secondly, researching already collected data does not require the same control that researching varying collection designs does, making it more tractable to focus on volunteer systems.
 
 ## Problem
 
@@ -35,7 +35,7 @@ How do you normalize for deviations among
 
 ## Subjective vs. Objective Assumptions
 
-Crowdsourced opinions can be treated in two ways: a personalized approach and a consensus-seeking approach.
+Crowdsourced opinions can be treated either through a personalized approach and a consensus-seeking approach.
 
 For personalization, a system assumes that each opinion is representative of a specific type of user, and that the data can be used to model the individual users.
 Collaborative filtering usually makes this assumption.
@@ -50,7 +50,6 @@ First, it is easier to communicate to users a single absolute opinion.
 Secondly, it accommodates users that have never been seen before: recommending the option that has the maximum likelihood of satisfy any user is safe for new users.
 It's The Beatles option.
 
-
 ## User and work related normalization
 
 In collaborative filtering, ...
@@ -61,32 +60,46 @@ Much work has been completed in posterior corrections for paid crowdsourcing con
 
 The research covered in this
 
+# ASIS&T Study
+
 
 ## Methodology
 
-This chapter involves
+### Measuring Reliability of Human Raters
+
+The first part of this chapter will outline the work previously completed by @organisciak_evaluating_2012, which is already discussed above.
+
+A few additional questions need to be asked for discussion in the context of the proposed dissertation.
+One form of analysis that would be useful but was not originally done is to compare the recoverable signal from artificially smaller contributor groups.
+If data collection had been cut off earlier, how accurate would the various methods for correcting against a worker's reliability be?
 
 ### Understanding Deviation from Expectation
 
-### Correcting for Deviation
+The cornerstone of this chapter will be a study analyzing the deviation of online ratings from the expectation of other humans.
+_If another person is shown an online review, what rating will they expect?_ 
 
-
-
-$P(r_s|C)\approx(1-\lambda)(P(r)+\lambda P(r|R)$ <!--_-->
-Where, 
-$P(r|R)=\sum_{i=1}^{n}{P(r|t_i}$
-
-### Evaluation
-
-### Baseline
-
-## Data
+### Data
 
 The dataset that will be used is the Yelp Dateset Challenge data[^Yelp], released for academic use in 2013.
 
 [^Yelp: http://www.yelp.com/dataset_challenge] <!--_--> 
 
-The dataset includes a snapshot of all of Yelp's ratings and reviews for Phoenix, Arizona and the reviewers involved in that data.
+The dataset includes a snapshot of all of Yelp's ratings and reviews for Phoenix, Arizona and data for the reviewers involved in those contributions.
+
+#### 
+
+### Correcting for Deviation
+
+Following from the analysis of how and when contributor habits deviate from expected actions, there will be some research put 
+
+$P(r_s|C)\approx(1-\lambda)(P(r)+\lambda P(r|R)$ <!--_-->
+Where, 
+$P(r|R)=\sum_{i=1}^{n}{P(r|t_i}$
+
+#### Evaluation
+
+#### Baseline
+
 
 
 ## Related questions

@@ -98,7 +98,7 @@ While the complex qualitative actions of human contributions are the cornerstone
 Much crowdsourcing research makes an adversarial assumption, focusing on removing variability by detecting or smoothing over cheaters.
 <!-- TODO: Research this statement and back it up. -->
 
-For example, Eickhoff et al. note that a notable proportion of Mechanical Turk workers sacrifice correctness for speed, in order to maximise their profits <!-- TODO cite -->.
+For example, @eickhoff_increasing_2012 note that a notable proportion of Mechanical Turk workers sacrifice correctness for speed, in order to maximise their profits.
 
 However, this behaviour is not generalizable. While observable in some cases [<!--TODO cite-->], including suspicious user analysis that we observed during <!--TODO cite MSR--><!-- TODO FIGURE-->, other studies on contribution conflict it.
 In @organisciak_evaluating_2012, we found that the fastest workers generally did not contribute worse labor, except for one case: when workers spent less time on the instructions and first task.
