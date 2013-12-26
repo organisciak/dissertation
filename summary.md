@@ -3,31 +3,31 @@ Point-form outline
 
 As per Mike's suggestion, a point-form outline of how I see the dissertation
 
-* Broad Question: How do human biases affect crowdsourcing for information retrieval
-* Specific Research Question: Can human bias in _descriptive crowdsourcing_ be accounted for, either at the time of data collection or afterward, in a manner that maximizes the information gain for information retrieval?
+* Broad Question: How do cognitive biases affect crowdsourcing for information retrieval
+* Specific Research Question: Can variance stemming from cognitive biases be accounted for in _descriptive crowdsourcing_, either at the time of data collection or afterward, in a manner that maximizes the information gain for information retrieval?
 * Core assumption: That crowd contributors are honest but biased
 * Hypothesis: That pursuing the honest-but-biases assumption leads:
 	* Contributions that are more valuable for algorithmic use
 	* A greater proportion of useful contributions
 * This high-level theme for the dissertation is explored in two parts of the dissertation:
-	1) A chapter on accounting for human bias at the time of collection
-	2) A chapter on accounting for human bias in data that has already been collected
+	1) A chapter on accounting for cognitive bias at the time of collection
+	2) A chapter on accounting for cognitive bias in data that has already been collected
 
-## Accounting for human bias at collection
+## Accounting for cognitive bias at collection
 
 * This chapter focuses on how the _way_ you ask for contributions changes the nature of the response. 
 * Specifically, I'm looking at the design of the task by comparing different types of interfaces for the same task on the same content.
-* Problem: there is increasing evidence showing that the design and communication of a task affects how the contributors interpret their role. Utilizing crowdsourcing without knowledge of how this effect is manifested may possible result in unnecessarily variance and disagreement, dismissed as unrecoverable error from bad users.
+* Problem: there is increasing evidence showing that the design and communication of a task affects how the contributors interpret their role. Utilizing crowdsourcing without knowledge of how this effect is manifested may result in unnecessarily variance and disagreement, dismissed as unrecoverable error from bad users.
 * Crowdsourcing Task: identifying the topic of a tweet
-	* Why: Tweets are a valuable source of real-time information, but are very terse and emphemeral, possibly never before encountered. This type of task is a real-world task where crowdsourcing is being attempted.
+	* Why: Tweets are a valuable source of real-time information, but are very terse and emphemeral, possibly never before encountered. Judging the content of a tweet is a real-world task where crowdsourcing is being attempted.
 * Site of research: Mechanical Turk
 * Methodology
 	* Two tasks will be completed in four different parameterizations.
 	* Tasks
 		* Version 1 of "Identifying the topic of a tweet" task
-			* Workers are shown 10 tweets from 
+			* Workers are shown 10 tweets from <!-- TODO --> 
 		* Version 2 of task
-			* "Find the most self-explanatory tweet from Set A": Workers are shown 10 tweets and choose the one that best communicates what is being discussed.
+			* "Find the most self-explanatory tweet from Set A": :Workers are shown 10 tweets and choose the one that best communicates what is being discussed.
 	* Parameterizations
 		* Design 1: Baseline. Tweets are show in a list, instructions at the top, not forc
 		* Design 2: Training. First task explains right and wrong answers. Subsequent tasks resemble the baseline.
@@ -38,7 +38,7 @@ As per Mike's suggestion, a point-form outline of how I see the dissertation
 	* What tweets are being evaluated?
 		* <!--!!!!!-->
 
-## Accounting for human bias in collected data
+## Accounting for cognitive bias in collected data
 
 * This chapter looks at correcting for perception biases in data that is already collected
 * Problem:
