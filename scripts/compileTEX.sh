@@ -10,7 +10,7 @@ if [ '$1' != 'statsonly' ]; then
 	TEXINPUTS=document/: pdflatex thesis.tex
 	open thesis.pdf
 
-	cat summary.md document/*_*md | pandoc -f markdown -t html --smart --bibliography=refs.bib --template pandoc-bootstrap-template/template.html --css pandoc-bootstrap-template/template.css -o summary.html
+	cat summary.md document/*_*md | pandoc -f markdown -t html --smart --bibliography=refs.bib --table-of-contents --template pandoc-bootstrap-template/template.html --css pandoc-bootstrap-template/template.css -o summary.html
 	open summary.html
 fi;
 

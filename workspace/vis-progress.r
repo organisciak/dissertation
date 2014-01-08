@@ -8,7 +8,7 @@ stats[,time:=as.POSIXct(time, origin='1970-01-01')]
 dates = as.numeric(unique(stats$time))
 startdate = dates[1]
 currentdate = tail(dates, 1)
-wps = 10000/(1388534400- startdate) # Words per second, for slope; 10k words by the New Year
+wps = 9000/(1388534400- startdate) # Words per second, for slope; 9k words by the New Year
 intercept = (wps * startdate)
 goal = (wps * currentdate) - intercept # Today's goal
 goal_line = geom_abline(intercept=-intercept, slope=wps)
