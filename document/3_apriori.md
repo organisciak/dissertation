@@ -1,5 +1,5 @@
-Correcting for Human Bias at Collection Time
-=============================================
+Correcting for Cognitive Biases at Collection Time
+==================================================
 
 ## Introduction
 
@@ -163,7 +163,9 @@ More importantly, much information retrieval research occurs parallel to the sys
 
 ## Proposed Research
 
-In new research for this chapter, I will investigate the effect of different parameterizations of the task, 
+In new research for this chapter, I will investigate the effect of different parameterizations of the same tasks.
+
+There will be two tasks, both related to encoding microblogging messages, and four different designs for collecting information for them. 
 
 ### Task
 
@@ -183,6 +185,34 @@ Twitter uses Mechanical Turk in this way to understand the context of trending q
 When there is a spike in search volume, human classifiers are able to differentiate between possible interpretations of the query [@chen_improving_2013].
 For example, when "Big Bird" began trending after a political candidate made a polarizing comment about public television funding, it was easily identified as a political query.
 
+Two types of microblogging metadata tasks will be pursued in this study.
+
+The first task will be a topic identification task:
+ "Is this tweet about topic X?"
+Workers are shown a tweet that contains the terms of a query, $Q$, where $Q$ represents an entity.
+Their task will be to describe whether the entity is the topic of the tweet, or simply mentioned.
+
+For example, <!-- TODO -->
+
+Such a task is useful <!-- TODO: because... -->, but potentially easy to misinterpret by contributors conflating a term being the topic of a tweet with merely being in the tweet.
+
+The second task will be a summarization task:
+ "Find the most self-explanatory tweet from Set A"
+Workers will be shown ten microblogging messages from a trending topic and asked to identify the one tweet that best communicates the topic.
+
+Trending topics are a designation on Twitter denoting suddenly popular discussion topics.
+They are usually a short query or a hashtag.
+Hashtags are likely to represent a discussion topic borne on Twitter itself rather than discussion on an external topic.
+A cursory look at trending topics suggests that they are more likely to be self-evident, whereas regular terms tend to react to a notable news event.
+For this reason, the tweets will be sampled from non-hashtag trending topics, where the need for explaining what is being referenced appears to be greater.
+
+Understanding a topic based on multiple tweets has previously been performed by @shiells_generating_2010.
+They looked at the information contained in multiple messages sharing the same link.
+This study differs in that a human looks at multiple messages to understand the topic then selects the single existing message that is the most informative by itself.
+However, similar data preparation steps will be required, removing expected spam and near-duplicates.
+
+<!-- TODO: estimates of Twitter duplicates -->
+<!-- TODO: research hueristics on removing Twitter spam -->
 
 
 <!--
