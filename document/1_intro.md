@@ -8,39 +8,52 @@ INTRODUCTION
 The internet is growing increasingly interactive as it matures.
 Rather than simply transmitting information to readers, web pages allow their audience to react and interact with their information.
 The products of these interactions are a trove of qualitative judgements, valuable to understanding information objects.
+In recent years, this form of creation through collaboration has been studied as _crowdsourcing_.
 
 Effective information retrieval depends on reliable, detailed information to index.
-The broad phenomenon of crowdsourcing has the potential to improve retrieval over web documents by producing more descriptive metadata about documents.
-Humans can provide latent information like quality judgments or higher-level thematic description, and are good at actions such correcting, describing in different language,and connecting to other documents.
-Since crowdsourcing considers humans at large-scales, it is a tool for collecting qualitative and subjective information at scales useful to retrieval.
+Crowdsourcing has the potential to improve retrieval over web documents by having humans produce descriptive metadata about documents.
+In contrast to algorithmic methods, humans are able to provide latent information such as quality judgments or higher-level thematic description, and are good at critical actions such correcting, describing in different language, and connecting to other documents.
+More importantly, crowdsourcing looks at human contribution at scales that are potentially useful for retrieval.
+<!-- TODO: awkward paragraph -->
 
 ### Broad Research Question
 
 However, humans have predictable and unpredictable biases that make it difficult to systematically adopt their contributions in an information system.
-How do we interpret qualitative user contributions in an inherently quantitative system?
-This study looks at the effect of human biases on crowdsourcing in information retrieval and how they affects the product of human contributions.
+How do we control and interpret qualitative user contributions in an inherently quantitative system?
+This study looks at the effect of cognitive biases on crowdsourcing in information retrieval and how they affect the product of human contributions.
 
 ### Specific Research Question
 
-Specifically: can human bias in _descriptive crowdsourcing_ be accounted, either at the time of data collection or afterward, in a manner that maximizes the information gain for information retrieval?
+Specifically: can variance in _descriptive crowdsourcing_ be accounted for, either at the time of data collection or afterward, in a manner that maximizes the information gain for information retrieval?
 
 ### Hypothesis
 
-The proposed study makes an assumption that crowd contributors are honest but inherently biased, with the hypothesis that such a assumption leads to 
+The proposed study makes an assumption that crowd contributors are honest but inherently biased, with the hypothesis that such an assumption leads to 
 a) more algorithmically valuable crowdsourced description and 
 b) a greater proportion of useful contributions.
+
+#### Language clarification
+
+In assuming that humans are biased, the 'bias' refers to the individual quirks that affect their worldview and how they understand and perform tasks.
+By this definition, such perceptual differences contribute to a greater variance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias' as the inverse of variance.
+In information science, we refer to this as _intercoder reliability_ <!-- TODO doublecheck -->
+<!-- TODO dictionary definition of biased -->
+
+While competing definitions for the term are unfortunate, inventing new terms where ones exist would potentially make communication more difficult.
+When discussing the processes of humans --and only when doing so-- this study may use refer to biases, but discussion of effects on data will solely use statistical and information science language.
 
 ### Approach
 
 This hypothesis will be applied in two different sites of crowdsourcing:
 
- * in the design of contribution tasks in order to minimize bias, and
+ * in the design of contribution tasks in order to minimize variance, and
  * in the normalization of contributions after they have already been collected.
 
 Doing so will both adopt work that I have performed during my doctoral studies and contribute new research.
 
-Importantly, this study cannot account for all possible situations and methods for accounting for human bias before and after crowdsourcing collection.
-Instead, each chapter will focus on a more narrowly scoped sub-problem in the area, to give this study grounding for a thorough exploration of the larger problem space.
+This study cannot account for all possible situations and methods for accounting for human-introduced variance before and after crowdsourcing collection.
+Rather, each chapter will focus on a more narrowly scoped sub-problem in the area, to give this study grounding for a thorough exploration of the larger problem space.
+
 
 ### Take Away
 
@@ -49,11 +62,12 @@ A reader of the proposed dissertation will understand:
  * the issues related to using crowdsourcing contributions for information retrieval indexing,
  * the effect of designing 'quicker' or 'slower' collection tasks on a paid crowdsourcing platform,
     with a sense of how this information generalizes to different tasks or collection spaces,
- * corrective measures for human bias in already-collected descriptive metadata,
+ * corrective measures for variance in already-collected descriptive metadata,
     particularly corpus-based methods for online review normalization and
     error-reducing voting techniques for crowdsourced relevance judgments,
    and
  * the tractability of making an assumption of honest-but-biased contributors.
+
 
 ## Crowdsourcing
  
@@ -72,6 +86,8 @@ Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds
 ## Problem
 
 The growth of digital collections has outpaced the ability to comprehensively clean, transcribe, and annotate the data.
+Similar roadblocks are affecting born-digital information, as the world wide world does not require any form of meta description.<!--TODO citation on meta tags; also sentence could use rewriting--> 
+This poses a problem for information retrieval, as <!-- TODO: finish sentence... --> 
 Crowdsourcing is increasing being used to address this problem.
 
 Many of the benefits of crowdsourcing follow from the fact that humans approach tasks in qualitative and abstract ways that are difficult to emulate algorithmically.
@@ -114,9 +130,21 @@ Contribution = truth + \text{quality bias} + \text{perception bias}
 This simplifying assumption underlies this proposal.
 While keeping the possibility of variance from good or bad quality contributors on the radar, it is pursuing an understanding of that second bias: when contributors introduce variance that is stimulated by differing interpretations of task, ones that deviate from the instructive or normative ways to approach the task.
 
-### Biases
+### Contributor variance
 
-<!-- TODO: More details on biases -->
+The variance that exists between different contributors adds noise both to tasks that make a subjective assumption and tasks that make an objective assumption.
+
+In subjective tasks, it is assumed that there is no universally correct form of contribution.
+For example, when crowd contributions are used to inform recommendations, such as for music or film, it often assumed that different types of people enjoy different products.
+We thus see approaches to recommendation such as collaborative filtering, where users are matched to similar users based on the overlap between their tastes rather than a global definition of 'good' or 'bad' products.
+In such a case, inter-rater consistency is still important, to make it possible to identify similar users.
+Modern approaches to collaborative filtering commonly normalize ratings against
+ a user-specific bias (i.e. "how does this rating compare this user's average rating") and sometimes against 
+ an item-specific bias (i.e. "how does this rating compare to what the rest of the community thinks about the item").
+A 
+<!--TODO cite cf normalization-->
+
+
 
 ### Benefits of Recovering Error from Human Biases 
 
@@ -127,7 +155,7 @@ However, by recovering a cleaner signal from human contributions, a system is re
 Doing so thus helps keep system less affected by the ebbs and flows of motivating volunteers, or the costs of paying workers.
 Since the attention that contributors is not uniform across all items in a system, usually resembling an inverse power-law distribution [<!--TODO-->], understanding crowdsourced information with less aggregation means more of the middle of the distribution can be represented.
 
-In other words, accounting for human bias seeks to make each individual contribution more valuable.
+In other words, accounting for cognitive bias seeks to make each individual contribution more valuable.
 
 ## Relevance
 
@@ -217,7 +245,7 @@ The proposed dissertation will follow the following structure, delineated by cha
 
 #### Introduction
 
-The first chapter will introduce the problem of human bias in crowdsourcing and how it affects computational uses of contributed data. Subsequently, the assumption of honest but biased contributors will be outlined, and the hypothesis on this assumption will be outlined along with the study that will be pursued to test it.
+The first chapter will introduce the problem of cognitive bias in crowdsourcing and how it affects computational uses of contributed data. Subsequently, the assumption of honest but biased contributors will be outlined, and the hypothesis on this assumption will be outlined along with the study that will be pursued to test it.
 
 #### Literature Review
 
