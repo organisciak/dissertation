@@ -1,3 +1,4 @@
+# Update stats
 data="logs/stats.csv"
 
 date 
@@ -7,3 +8,8 @@ wc -w summary.md document/*_*.md
 
 # Also save a tab-saparated machine-readable version
 wc -w summary.md document/*_*md | perl -pe "s/ +/\t/g" | perl -pe "s/^/`date +%s`/g" >>$data
+
+
+# Show chart of word count progress
+cat logs/stats.csv | Rscript workspace/vis-progress.r
+open progress.png
