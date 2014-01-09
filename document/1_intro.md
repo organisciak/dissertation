@@ -34,12 +34,11 @@ b) a greater proportion of useful contributions.
 
 #### Language clarification
 
-In assuming that humans are biased, the 'bias' refers to the individual quirks that affect their worldview and how they understand and perform tasks.
+In assuming that humans are biased, the biases referred to are the inclinations, leanings, and tendencies [@_bias_????] of individuals, quirks that affect their worldview and how they understand and perform tasks.
 By this definition, such perceptual differences contribute to a greater variance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias' as the inverse of variance.
-In information science, we refer to this as _intercoder reliability_ <!-- TODO doublecheck -->
-<!-- TODO dictionary definition of biased -->
+In information science, this is closely related to _intercoder reliability_, the measure of how similar multiple coders will perform in a given parameterization of a task [@neuendorf_content_2002].
 
-While competing definitions for the term are unfortunate, inventing new terms where ones exist would potentially make communication more difficult.
+<!--While competing definitions for the term are unfortunate, inventing new terms where ones exist would potentially make communication more difficult.-->
 When discussing the processes of humans --and only when doing so-- this study may use refer to biases, but discussion of effects on data will solely use statistical and information science language.
 
 ### Approach
@@ -87,7 +86,8 @@ Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds
 
 The growth of digital collections has outpaced the ability to comprehensively clean, transcribe, and annotate the data.
 Similar roadblocks are affecting born-digital information, as the world wide world does not require any form of meta description.<!--TODO citation on meta tags; also sentence could use rewriting--> 
-This poses a problem for information retrieval, as <!-- TODO: finish sentence... --> 
+The lack of strong descriptive metadata poses an obstacle for information retrieval, which must infer the aboutness of a document in order to surface it for an interested user.
+<!-- TODO: there should a good citation on this somewhere... -->
 Crowdsourcing is increasing being used to address this problem.
 
 Many of the benefits of crowdsourcing follow from the fact that humans approach tasks in qualitative and abstract ways that are difficult to emulate algorithmically.
@@ -101,20 +101,54 @@ Similarly, other uses of crowdsourcing capitalize on humans' abilities to spot w
 ReCaptcha uses human contributions to correct transcriptions of scanned text from Google Books and the New York Times [@_what_????].
 The National Library of Australia's Trove also crowdsources corrections of scanned text, by allowing readers of their scanned newspapers to edit transcript text when they come across problems [@holley_many_2009].
 
-Finally, humans are being used to encode parsable text descriptions for non-text materials or higher-level latent concepts.
+Humans are also being used to encode parsable text descriptions for non-text materials or higher-level latent concepts.
 In libraries, this approach is being adopted with crowd transcription of materials which are too difficult for computer vision, such as digitized letters.
 For example, the Bentham Project at University College London has a pilot project for crowdsourcing the transcription Jeremy Bentham’s letters [@moyle_manuscript_2010; @causer_transcription_2012].
 
-While the complex qualitative actions of human contributions are the cornerstone of such contributions' usefulness, they present a challenge for algorithmic use, because they can be highly variable.
+More than typical description, additional useful information can be reactionary or critical.
+Indexing human judgments of a document's quality, for example, can enable a information retrieval system to rank the best version of multiple similarly relevant document.
 
-<!-- TODO... keep going on the problem!-->
+While the complex qualitative actions of human contributions are the cornerstone of such contributions' usefulness, they present a challenge for algorithmic use because they can be highly variable.
+
+### <!--TODO Heading, and move below the assumption of honest section -->
+A task becomes more open to interpretation the more complex it becomes.
+<!-- TODO paragraph not done! See Hu and Lee JCDL paper, on inconsistencies of 100-point scale-->
+
+The variability seen in human interpretations of complex tasks is not a novel issue.
+It is a problem that we call low intercoder reliability, and can result from a variety of problems.
+Four 'threats to reliability' that @neuendorf_content_2002 lists echo issues in crowdsourcing document description:
+ an insufficient coding scheme,
+ inadequate training,
+ fatigue,
+ and problem coders.
+
+Whereas much research has looked at the final problem <!--TODO: examples? -->
+ 
+In crowdsourcing, increasing intercoder reliability is sometimes at odds with the collection strategy.
+The most effective crowdsourcing deals with large numbers of people, and part of maximizing the involvement of contributors, especially those which are volunteers, is to minimize the restrictions on a contribution. <!-- TODO back up w/ references -->
+To enforce a strong coding scheme or training contributors will reduce the number of individuals willing to perform the task.
+Whether the improvements in quality are worth the losses in contributions will be looked at in the first chapter of new research in this dissertation.
+
+Other times, controlling the circumstances under which the contribution is created is not possible, such as in information retrieval over web documents.
+The second chapter of new research will look at such a case: how can you make sense of existing data that appears to have low intercoder reliability?
+For tasks where the contribution is numeric and ordinally or continuously coded, methods exist for interpreting when coders are similar but operating with different frame.
+These include using covariance instead of agreement [@neuendorf_content_2002], and normalizing a user mean [<!--TODO cite: hoffman, netflix 2008 progress paper-->].
+
+Also, in a traditional setting such as that seen in cataloguing, few coders are making many contributions, overlapping greatly when multiple keying is required.
+In contrast, crowdsourcing deals with many contributors submitting generally few contributions and with little
+<!--TODO unfinish paragraph/sentence-->
+
+ Contributors are most often self-selected, even those that are 
+
+<!-- TODO: talk about -->
+
 
 ### Assumption of Honesty
 
 Much crowdsourcing research makes an adversarial assumption, focusing on removing variability by detecting or smoothing over cheaters.
 <!-- TODO: Research this statement and back it up. -->
 
-For example, @eickhoff_increasing_2012 note that a notable proportion of Mechanical Turk workers sacrifice correctness for speed, in order to maximise their profits.
+For example, @eickhoff_increasing_2012 note that a significant proportion of Mechanical Turk workers sacrifice correctness for speed, in order to maximise their profits.
 
 However, this behaviour is not generalizable. While observable in some cases [<!--TODO cite-->], including suspicious user analysis that we observed during <!--TODO cite MSR--><!-- TODO FIGURE-->, other studies on contribution conflict it.
 In @organisciak_evaluating_2012, we found that the fastest workers generally did not contribute worse labor, except for one case: when workers spent less time on the instructions and first task.
