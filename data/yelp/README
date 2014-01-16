@@ -1,0 +1,44 @@
+Yelp Dataset challenge
+======================
+
+Data Preparation (old approach)
+--------------------------------
+To choose what data is encoded on Mechanical Turk, sort the input data randomly. Then filter by banned words and read the top *n* results.
+
+>gshuf yelp_phoenix_academic_dataset/yelp_academic_dataset_review.json | bzip2 -c >shuffled_reviews.json.bz2
+
+>bzgrep -Piv "\"text\": \".*(yelp|stars|phoenix)" shuffled_reviews.json.bz2 | head -n 300 >shuffled-1-300.json
+
+*NOTE that the resulting document needs to be enclosed in square brackets to be properly formed. Also, curly braces at the end of each line need commas. Find and replace these in vim with ':%s/\}\n/\},\r/gc' *
+
+Data Preparation (new approach)
+-------------------------------
+
+To sample randomly while still collecting enough data for valid comparisons, the following approach is taken:
+
+ 1. The number of reviews for each business are counted
+ 2. Businesses with >=N reviews are added to the sampling pool
+ 3. B number of unique businesses are sampled
+ 4. For each of the sampled businesses, M reviews are randomly sampled (where M<N)
+
+Currently, N=20, M=10, and B=50.
+
+### Steps
+
+Extract all business id, including redundancies, then sort and count unique (#1).
+
+    bzgrep -o "\"business_id\": \".*\"" yelp_phoenix_academic_dataset/yelp_academic_dataset_review.json | sort | uniq -c | sort -r | bzip2 -c >business_sampling_pool.bz2
+
+Filter banned words ('yelp', 'phoenix'), trim sampling pool to reviews with 20+ reviews (#2), extract the business id, and choose 50 random business (#3).
+
+    bzgrep "^ *[1-9]\d\|^ *\d\d\d" business_sampling_pool.bz2 | perl -pe "s/.*\"(.*)\"/\1/" | gshuf | head -n 50 | bzip2 -c >sampled_business_50.bz2
+    rm business_sampling_pool.bz2
+
+Pull out all reviews from sampled businesses, filter by banned words, then randomly select 10 reviews per business.
+Note that the escaping of hyphens and underscores is a workaround for an odd behavior.
+
+    bzcat sampled_business_50.bz2 | perl -pe "s:(-|_):\\\\\1:" | parallel "grep \"{}\" yelp_phoenix_academic_dataset/yelp_academic_dataset_review.json | gshuf | grep -v \"yelp\\|Yelp\\|phoenix\\|Phoenix\" | head -n 10" | gshuf >final_sample.txt
+
+Convert JSON to a CSV format, using https://github.com/jehiah/json2csv
+
+    cat final_sample.txt | perl -pe "s/\\\n/##NEWLINE##/g" | json2csv -k votes.funny,votes.useful,votes.cool,user_id,review_id,stars,date,text,type,business_id -p | perl -pe "s/##NEWLINE##/\\\n/g" > final_sample.csv
