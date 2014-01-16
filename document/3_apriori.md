@@ -1,12 +1,11 @@
-Correcting for Cognitive Biases at Collection Time
-==================================================
+Correcting for Contributor-Introduced Variance at Collection Time
+====================================================================
 
 ## Introduction
 
 Humans don't operate with the formality of computers.
 Many of the benefits of crowdsourcing follow from that fact: human contributions are valuable specifically because they are not easily automated.
 However, when using crowd contributions to inform an algorithmic system, such as in information retrieval, the inconsistencies of human work present a challenge.
-<!-- This text might be better in the intro --> 
 
 In the first of two research chapters, the proposed dissertation will investigate how the design of crowdsourcing tasks for improve information retrieval metadata affects the quality of the content.
 
@@ -14,21 +13,25 @@ When paid crowdsourcing is used for information retrieval, it usually follows a 
 Some exceptions to this approach have been attempted with success<!--TODO-->
 
 Evidence suggests that the design of a data collection interface affects the quality and distribution of [@organisciak_evaluating_2012; @howe_crowdsourcing:_2008; @organisciak_incidental_2013].
-The manner to improve on a basic task/description/item is unclear thus far; some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers <!-- TODO cite -->.
+The manner to improve on a basic task/description/item design is unclear thus far; some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers <!-- TODO cite -->.
 
-In keeping with goals of the proposed dissertation, this study will evaluate two interfaces for encouraging less deviation between human contributors by providing training and feedback, respectively. <!--TODO: Removed: "accounting for their (inattention?selection?) biases -->.
+In keeping with goals of the proposed dissertation, this study will evaluate the effect of task design on collected information retrieval data.
+
+Looking at task design, I will evaluate two interfaces for encouraging less deviation between human contributors by providing training and feedback, respectively.
 These interfaces are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
 They will be compared to a baseline basic interface, as well as an alternative system that encourages quicker responses.
 
-These alternate designs will be evaluated for a sample task of identifying the topic of a microblogging message from Twitter -- a tweet.
+This will be done in the context of an established information retrieval problem -- enriching terse microblogging messages through paid crowdsourcing -- with the study design motivated by effects seen in my earlier work.
+
+In the control study, workers will identifying the topic of a microblogging message from Twitter -- a tweet.
 This is a task where the information object is sparse and the topics are often short-lived and previously unseen, making crowdsourcing a promising approach to improve information retrieval across the data.
-It is also a realistic task that has been attempted with crowdsourcing in the past. <!--TODO-->
+It is also a realistic task that has been attempted with crowdsourcing in the past.
 
 ## Outline
 
 This section of the dissertation proposal serves as a skeleton for the dissertation chapter.
 Below, I 
- outline the problem of collecting less biased data from human workers,
+ outline the problem of collecting higher reliability work from human workers,
  discuss some of my previous research on the topic,
  and present the 
   scope,
@@ -37,19 +40,19 @@ Below, I
   and evaluation
  for proposed new research.
 
-## Problem
-
+<!-- formerly labelled 'Problem'.. still need a problem section, or was the intro chapter's section sufficient? -->
+## Motivation
 
 ### Work up to now
 
 My past doctoral-level research motivates this chapter in a number of ways.
-In @organisciak_evaluating_2012 we found evidence that at least some error in crowdsourced relevance judging is stemming to do differing (but non-malicious) interpretations of the task, suggesting that improved quality can follow from tweaks in design.
-During research on <!--TODO cite hcomp-->, we found that asking people to reflect on their response changed the nature of their response, with less internal consistency.
+In @organisciak_evaluating_2012 we found evidence that at least some error in crowdsourced relevance judgments stems from differing but not necessarily malicious interpretations of the task, suggesting that improved quality can follow from tweaks in design.
+During research on @organisciak_personalized_2013, we found that asking people to reflect on their response changed the nature of their response, with less internal consistency.
 In a sample study comparing the space of incidental crowdsourcing across two systems [@organisciak_incidental_2013], I found that an 'easy' rating interface -- one that puts up less hurdles to contribution -- results in a shifted distribution of ratings than a 'hard' interface.
 
 #### ASIS&T Paper
 
-In @organisciak_evaluating_2012 , we consider a variety of methods for removing error from relevance judgments collected on Mechanical Turk.
+In @organisciak_evaluating_2012, we consider a variety of methods for removing error from relevance judgments collected on Mechanical Turk.
 This study will be discussed in-depth in the next chapter, on accounting for bias after collection, but it also revealed a finding that hints at the importance of task design.
 
 In relevance judgments, workers are shown a _query_, a _description_ of what is relevant to the query, and a set of _results_ to classify as relevant or not relevant to the query. In our tasks, we showed ten results per tasks, using full item records from an online catalogue.
@@ -85,11 +88,11 @@ In [@organisciak_incidental_2013], I looked at a facet of crowdsourcing that I c
 
 Incidental crowdsourcing refers to crowdsourcing in the periphery.
 These are elements that are unobtrusive and non-critical to the user or the system.
-They generally
- describe existing information,
- collect contributions in low-granularity mechanisms,
- and favor interface choices over statements.
-An example an incidental crowdsourcing mechanic mike be a 'thumbs-up' voting button on a video-sharing website or tagging functionality on an image-sharing website that does not force itself upon users.
+They generally:
+ * describe existing information,
+ * collect contributions in low-granularity mechanisms,
+ * and favor interface choices over statements.
+An example an incidental crowdsourcing mechanic might be a 'thumbs-up' voting button on a video-sharing website or tagging functionality on an image-sharing website that does not force itself upon users.
 
 By not taking users hostage or asking users for overly attentive or time-consuming contributions, incidental crowdsourcing contributions result in greater numbers of contributions, even if individual contributions are less frequent.
 They also tend toward different patterns of contribution.
@@ -103,9 +106,11 @@ however, while Google's store allows them to offer this rating quickly and witho
 
 While there are other potential factors affecting differences between the systems, this cursory comparison suggests that the attentiveness and introspection required of a crowdsourcing contribution affects what that contribution will look like.
 
+Since most incidental crowdsourcing deals with reaction to existing documents rather than creation of outright new works, the future directions suggested by this work (in addition the work itself) are pertinent to the proposed dissertation's focus on crowdsourcing for information retrieval indexing.
+
 #### System 1 vs System 2
 
-More evidence for this was encountered in a peripheral finding while conducting <!-- TODO cite human computation? Or just unpublished?  -->.
+Additional evidence for this was encountered in a peripheral finding while conducting research for @organisciak_personalized_2013.
 In this case, we were again looking at opinion ratings on a five-point scale, this time on Mechanical Turk. 
 Workers were asked to provide their personal opinions on whether they liked the style of each of 100 saltshakers.
 In one group of workers, this is all they were asked.

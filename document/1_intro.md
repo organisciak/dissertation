@@ -9,6 +9,9 @@ However, such contributions are also subject to variance from the inconsistencie
 The proposed dissertation studies the problem of such variance, and investigates how it can be controlled both a priori and posterior to data collection.
 Doing so will incorporate the body of existing research, my past work in the area, and two new studies of pertinent sub-problems within the larger research problem.
 
+At the heart of this study is the assumption of honest-but-biased contributors.
+Rather than focusing on finding dishonest or unreliable contributors, a well-studied problem in crowdsourcing, this dissertation focuses
+
 Introduction
 =============
 
@@ -25,7 +28,6 @@ Effective information retrieval depends on reliable, detailed information to ind
 Crowdsourcing has the potential to improve retrieval over web documents by having humans produce descriptive metadata about documents.
 In contrast to algorithmic methods, humans are able to provide latent information such as quality judgments or higher-level thematic description, and are good at critical actions such as correcting, describing in different language, and connecting to other documents.
 More importantly, crowdsourcing looks at human contribution at scales that are potentially useful for retrieval.
-<!-- TODO: awkward paragraph -->
 
 ### Broad Research Question
 
