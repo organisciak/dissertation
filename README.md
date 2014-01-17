@@ -1,6 +1,11 @@
 Dissertation
 ------------
 
+This project outlines Peter's dissertation research and writing.
+
+Writing can be found in #/documents, one document per chapter. It's written in Markdown (a text-only format), but is easily converted to laTex or HTML with [Pandoc http://johnmacfarlane.net/pandoc/getting-started.html].
+
+
 ## To Compile
     pdflatex --include-directory=document thesis.tex
 Or,
