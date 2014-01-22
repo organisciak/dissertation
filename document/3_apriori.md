@@ -280,10 +280,31 @@ The final data collection interface will encourage workers to complete tasks qui
 The timer has been used previously in <!--TODO cite--> to push people into a visceral form of task completion.
 
 
-
 #### Evaluation
 
 <!--Talk about Mechanical Turk. -->
 <!--Talk about the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
 
 ##### Baselines
+
+
+## Gedanken Experiments
+
+_Some notes on how the design might affect the _
+
+Attributes:
+- restrictive vs. interpretable instructions
+- clarity of instruction
+- attentiveness and fatigue of worker
+- experience of worker
+- time spent on each task
+- self-confidence/decisiveness or worker
+- perceived importance of task (although this would simply affect the other attributes. e.g. if you need to get the correct answer to diffuse the bomb, time spent will change, probably self-confidence)
+
+Big idea:
+Let's say we have a Twitter encoding task. How would the contribution change if:
+- Contributors had to complete only 200 tasks before finishing? 300? 4000? Only 1?
+- Contributors were tested on the instructions at the beginning of the task? If there were gold label items throughout the task? If everything had a known answer?
+- Contributors were asked to volunteer their time? Were paid 1c per task? Were paid 10c per task? Were paid by the hour?
+- Contributors had tasks/time quotas to meet for bonuses? What if they were forced into these quotas (with tasks automatically moving forward)? What if a timer ticked away until their task disappears?
+- What if contributors were told when they got something wrong? hat if you lie to them?
