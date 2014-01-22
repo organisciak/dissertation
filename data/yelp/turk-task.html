@@ -1,0 +1,87 @@
+<!-- Template for Mechanical Turk -->
+
+<h3>Assign a rating based on how much a reviewer seemed to like a business</h3>
+
+<div class="highlight-box">
+<p>Below is a&nbsp;<strong>review</strong> of a business. Read the review and assign a <strong>rating</strong> of how much you think the reviewer liked the business&nbsp;from 1 to 5 stars.</p>
+
+<p>Some more guidelines:</p>
+
+<ul>
+	<li>This task is for student scholarly&nbsp;research. We want your honest interpretation and thank you for your assistance!</li>
+	<li>Please do not share this task publicly (as per 6b of the <a href="https://www.mturk.com/mturk/conditionsofuse">conditions of use</a>).</li>
+	<li>If the task is not possible (for example, if the review is missing), leave a note in the feedback form explaining why. Try not to accidentally submit a task with no rating or explanation!</li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+
+<table border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<th class="review">Review</th>
+			<th colspan="3">Which of the following five rating options do you think the reviewer would agree with the most?</th>
+		</tr>
+		<tr>
+			<td class="review" rowspan="5">${review}</td>
+			<td class="radio-cell"><input name="rating" type="radio" value="1" /></td>
+			<td style="width:20px">1</td>
+			<td style="width:100px">Eek, methinks not.</td>
+		</tr>
+		<tr>
+			<td class="radio-cell"><input name="rating" type="radio" value="2" /></td>
+			<td>2</td>
+			<td>Meh, I&#39;ve had better.</td>
+		</tr>
+		<tr>
+			<td class="radio-cell"><input name="rating" type="radio" value="3" /></td>
+			<td>3</td>
+			<td>A-OK.</td>
+		</tr>
+		<tr>
+			<td class="radio-cell"><input name="rating" type="radio" value="4" /></td>
+			<td>4</td>
+			<td>Yay! I&#39;m a fan.</td>
+		</tr>
+		<tr>
+			<td class="radio-cell"><input name="rating" type="radio" value="5" /></td>
+			<td>5</td>
+			<td>Woohoo! As good as it gets!</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><strong>Optional feedback</strong> <em>(e.g.&nbsp;Are there problems with this task? Anything we can fix? Anything to make you enjoy it more?)</em></p>
+
+<p><textarea cols="80" name="comment" rows="3"></textarea></p>
+<style type="text/css"><!--
+body {
+  font-family: sans-serif;
+}
+
+.highlight-box { border:solid 0px #98BE10; background:#FCF9CE; color:#222222; padding:4px; text-align:left; font-size: smaller;}
+
+table {
+   width: 750px;
+   background: #5bc0de;
+   text-align:left;
+}
+
+td, th {
+   padding: 10px;
+}
+
+.review {
+  background: whitesmoke;
+  width:500px;
+}
+
+.radio-cell {
+   width: 20px;
+   padding: 5px;
+}
+-->
+</style>
+
