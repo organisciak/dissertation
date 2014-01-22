@@ -60,12 +60,12 @@ Much work has been completed in posterior corrections for paid crowdsourcing con
 
 The research covered in this
 
-# ASIS&T Study
+## ASIS&T Study
 
 
-## Methodology
+### Methodology
 
-### Measuring Reliability of Human Raters
+#### Measuring Reliability of Human Raters
 
 The first part of this chapter will outline the work previously completed by @organisciak_evaluating_2012, which is already discussed above.
 
@@ -73,12 +73,12 @@ A few additional questions need to be asked for discussion in the context of the
 One form of analysis that would be useful but was not originally done is to compare the recoverable signal from artificially smaller contributor groups.
 If data collection had been cut off earlier, how accurate would the various methods for correcting against a worker's reliability be?
 
-### Understanding Deviation from Expectation
+#### Understanding Deviation from Expectation
 
 The cornerstone of this chapter will be a study analyzing the deviation of online ratings from the expectation of other humans.
 _If another person is shown an online review, what rating will they expect?_ 
 
-### Data
+#### Data
 
 The dataset that will be used is the Yelp Dateset Challenge data[^Yelp], released for academic use in 2013.
 
