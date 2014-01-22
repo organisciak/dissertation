@@ -41,4 +41,4 @@ Note that the escaping of hyphens and underscores is a workaround for an odd beh
 
 Convert JSON to a CSV format, using https://github.com/jehiah/json2csv
 
-    cat final_sample.txt | perl -pe "s/\\\n/##NEWLINE##/g" | json2csv -k votes.funny,votes.useful,votes.cool,user_id,review_id,stars,date,text,type,business_id -p | perl -pe "s/##NEWLINE##/\\\n/g" > final_sample.csv
+    cat final_sample.txt | perl -pe "s/\\\n/##NEWLINE##/g" | json2csv -k votes.funny,votes.useful,votes.cool,user_id,review_id,stars,date,text,type,business_id -p | perl -pe "s/##NEWLINE##/\<br\/\>/g" > final_sample.csv
