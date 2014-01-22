@@ -38,8 +38,8 @@ Thus, crowdsourcing was adopted to refer broadly to a series of related concepts
 These concepts included
  human computation \cite{<!--TODO-->},
  commons-based peer production \cite{<!--TODO cite coase's penguin and benkler book -->},
- free and open-source development \cite{<!--TODO-->},
- and the 'wisdom of the crowds' \cite{<!--TODO-->}.
+ free and open-source development [@lakhani_how_2003, @raymond_cathedral_1999],
+ and the 'wisdom of the crowds' [@surowiecki_wisdom_2004].
 
 ### Wisdom of the Crowds
 
@@ -47,7 +47,29 @@ _The Wisdom of the Crowds_\cite{<!--TODO-->} ...
 
 ### Human-Computation
 
+_Human Computation_ emerged from from the doctoral dissertation work by Luis von Ahn in 2005, popularized alongside the ESP Game [@ahn_labeling_2004; @von_ahn_games_2006]. <!--_-->
+It refers to a process of computation -- the "mapping of some input representation to some output representation using an explicit, finite set of instruction" [@law_defining_2011] -- performed by humans.
+
+In synthesizing the definition of human computation in relation to crowdsourcing, collection intelligence, and social computing, Quinn and Bederson note two characteristics of consensus:
+ that "the problems fit the general paradigm of computation, and as such might someday be solvable by computers", and 
+ that "the human participation is direction by the computational system or process" [@quinn_human_2011].
+
+As noted by @[TODO cite law], Turing defined the purpose of computers as carrying out operations that humans would normally do.
+Human Computation, then, refers to utilizing humans for operations that computers simply are not capable of performed yet.
+
+By this definition, much human computation aligns with crowdsourcing, but large swaths of crowdsourcing are not relevant to human computation.
+For example, the types of large creative crowdsourcing projects like t-shirt design website Threadless and online encyclopedia Wikipedia are not human computation.
+Inversely, human computation does not have to sustained by self-selected workers; a more traditionally hired closed system can suffice [@law_defining_2011].
+
 ### Open-Source
+
+### Social Computing
+
+<!-- See Law 2011, and see Bederson 2011 -->
+
+### Collective Intelligence
+
+<!-- also see law and bederson papers -->
 
 ### Commons-based Peer Production
 
@@ -56,6 +78,15 @@ _The Wisdom of the Crowds_\cite{<!--TODO-->} ...
 #### Extraodinary Madness of the Crowds (Mackay [sp?])
 
 #### The Crowd (LeBon)
+
+## Taxonomies of Crowdsourcing
+
+The space of crowdsourcing is large, and there have been a number of attempts to organize the sub-concepts within it or to reconcile it in a space alongside other areas of research.
+Below, I'll look at some of the most important lenses applied.
+
+### Paid vs. Volunteer Crowdsourcing
+
+### Incidental Crowdsourcing
 
 
 ## Top research in crowdsourcing
