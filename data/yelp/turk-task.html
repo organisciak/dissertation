@@ -11,43 +11,43 @@
 </div>
 
 <div class="review">
-<div class="rating">Which of the following five rating options do you think the reviewer would agree with the most?
-<ul>
-	<li><input name="rating" type="radio" value="1" /> 1 Eek, methinks not.</li>
-	<li><input name="rating" type="radio" value="2" /> 2 Meh, I&#39;ve had better.</li>
-	<li><input name="rating" type="radio" value="3" /> 3 A-OK.</li>
-	<li><input name="rating" type="radio" value="4" /> 4 Yay! I&#39;m a fan.</li>
-	<li><input name="rating" type="radio" value="5" /> 5 Woohoo! As good as it gets!</li>
-</ul>
-</div>
+<div class="rating clearfix">
+<p><em>Which of the following five rating options do you think the reviewer would agree with the most?</em></p>
+<input name="rating" type="radio" value="1" /> 1 - Eek, methinks not.<br />
+<input name="rating" type="radio" value="2" /> 2 - Meh, I&#39;ve had better.<br />
+<input name="rating" type="radio" value="3" /> 3 - A-OK.<br />
+<input name="rating" type="radio" value="4" /> 4 - Yay! I&#39;m a fan.<br />
+<input name="rating" type="radio" value="5" /> 5 - Woohoo! As good as it gets!</div>
 
 <h3>Review</h3>
-${review} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac faucibus tortor, ut ornare felis. Quisque fermentum ipsum nibh, in sollicitudin massa cursus in. Phasellus sit amet consequat quam. Cras at enim ut dolor sodales congue eget euismod sem. Nunc ut orci ipsum. Donec porttitor vitae tellus a ultrices. Quisque at euismod nulla. Fusce iaculis libero mi, sed vulputate sem convallis id. Donec vel viverra quam. Maecenas id iaculis est, eu mattis ante. Morbi tempor dui ac interdum tincidunt. Pellentesque sodales pulvinar eros, quis euismod lectus blandit ut. Maecenas eu erat dignissim, tincidunt neque ut, vehicula magna. Vestibulum vehicula elementum porta. Sed et libero in diam lacinia ultricies. Praesent suscipit semper mollis. Proin et consectetur felis. Aliquam eleifend, nunc id tristique faucibus, sem lorem mattis lorem, quis cursus libero enim vitae est. Nunc id ligula hendrerit, semper eros in, malesuada ligula. Nunc cursus feugiat nisl nec iaculis. Sed egestas nisi et enim varius, nec imperdiet massa tincidunt. Ut viverra urna eu rhoncus faucibus. Donec tristique egestas felis in imperdiet.</div>
+${text}</div>
 
-<p>&nbsp;</p>
-
-<p style="clear:both">&nbsp;</p>
-
-<p style="clear:both"><strong>Optional feedback</strong> <em>(e.g.&nbsp;Are there problems with this task? Anything we can fix? Anything to make you enjoy it more?)</em></p>
-
-<p><textarea cols="80" name="comment" rows="3"></textarea></p>
+<div style="clear:both; margin-top:10px; border-top: solid 1px #a5a5a5; padding-top:5px"><strong>Optional feedback</strong> <em>(e.g.&nbsp;Are there problems with this task? Anything we can fix? Anything to make you enjoy it more?)</em><textarea cols="80" name="comment" rows="3"></textarea></div>
 <style type="text/css"><!--
 body {
-  font-family: sans-serif;
+
 }
 
 .highlight-box { border:solid 0px #98BE10; background:#FCF9CE; color:#222222; padding:4px; text-align:left; font-size: smaller;}
 
 .review {
-  width:500px;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }
 
 .rating {
-  width: 200px;
+  width: 250px;
   float:left;
   background:#5bc0de;
   margin:0 10px 0 0;
   padding:5px;
+  font-family:sans-serif;
 }
 -->
 </style>
