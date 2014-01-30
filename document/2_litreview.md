@@ -63,6 +63,10 @@ Inversely, human computation does not have to sustained by self-selected workers
 
 ### Open-Source
 
+## User Innovation
+
+von Hippel 2003, 2005, 1988
+
 ### Social Computing
 
 <!-- See Law 2011, and see Bederson 2011 -->
@@ -82,11 +86,105 @@ Inversely, human computation does not have to sustained by self-selected workers
 ## Taxonomies of Crowdsourcing
 
 The space of crowdsourcing is large, and there have been a number of attempts to organize the sub-concepts within it or to reconcile it in a space alongside other areas of research.
-Below, I'll look at some of the most important lenses applied.
+Some of the most important questions in differentiating crowdsourcing include:
 
-### Paid vs. Volunteer Crowdsourcing
+ * How are crowds motivated? Particularly: are they paid or do the volunteer for other incentives?
+ * How are contributions presented or aggregated?
+ * Is the crowdsourcing central to the system?
+ * Are contributions subjective or objective?
+ * Is the collaboration indirect (i.e. contributors work on parts independently) or manifest?
+ * Are contributions new, or do they react to existing documents or entities?
+ * Who is asking for the contributions?
 
-### Incidental Crowdsourcing
+### Motivation
+
+The primary lens on motivation is in the form of intrinsic and extrinsic motivation [<!--TODO cite-->].
+In the former, fulfillment is internal to the contributor, psychologically motivated, while in the latter the rewards are external.
+
+The particulars of motivation are complex and non-exclusive. <!--TODO: cite Resnick book?-->
+In @organisciak_why_2010, for example, I identified X primary motivators and X secondary motivations among a diverse set of crowdsourcing websites.[TODO]
+
+#### Paid vs. Volunteer Crowdsourcing
+There are extrinsic motivators beyond money; however, it is common to separate crowdsourcing projects into paid and volunteer crowdsourcing.
+This possible because of the differing design implications around the two approaches: money is a direct currency for obtaining labor, while convincing volunteers to contribute requires a greater sensitivity of their needs and ultimately more complexity in engineering the crowdsourcing system or mechanic.
+
+It has been shown that intrinsic motivation still plays a part in paid crowdsourcing [@mason_financial_2010], and some systems mix intrinsically motivated tasks with payment or the chance at renumeration (e.g. Quirky, GasBuddy, 99Designs).
+
+For paid crowdsourcing, @geiger_managing_2011 makes the distinction between fixed renumeration, with a pre-agreed fee, and success-based renumeration, such as contest winnings or bonus.
+
+In sum:
+ * intrinsic/extrinsic motivation
+ * paid/volunteer
+
+### Aggregation
+
+@schenk_crowdsourcing:_2009 and @geiger_managing_2011 discuss two types of aggregation: _integrative_ and _selective_.
+Integrative aggregation pools contributions into a common product, like a wiki, while selective aggregation tries to choose the best contributions, such as in contests.
+
+This simple separation hides some of the complexity seen in aggregation approaches.
+Integrative aggregation can be approached in a number of ways.
+I offer the following finer views on integrative aggregation:
+ * Summation: In summative aggregation, people contribute to an ever-expanding base of information. Contributions are clearly part of a bigger whole, but their individual form is retained. Examples: online reviews
+ * Versioning (TODO or iterative?): In versioned aggregation, multiple contributions are used toward a larger product, but the contributions are permutations of a common work. Examples: wikis
+ * Averaging: In averaged aggregation. Contributions are still pooled, but a consensus-seeking processing tries to reconcile them. Examples: ratings, multiple-keyed classifications 
+
+### Benefactor
+
+Zwass et al 2010 [TODO] distinguish between _autonomous_ and _sponsored_ crowdsourcing.
+_Sponsored_ crowdsourcing is when there is a entity at the top soliciting the contributions: a client of sorts. [TODO add examples]
+In contrast _autonomous_ crowdsourcing serves the community itself. Zwass et al explain: "Marketable value is not necessarily consigned to the market—it may be placed in the commons, as is the case with Wikipedia".
+
+### Object of Interest
+
+* Creation vs. Reaction
+
+### Criticality of Crowdsourcing
+
+* Central vs. Incidental
+
+### Type of Work
+
+The type of work performed by crowds can vary greatly in its complexity and style. 
+
+One notable facet here is represented in the concept of human computation, where "the problems fit the general paradigm of computation, and as such might someday be solvable by computers" [@quinn_human_2011].
+In the understanding that crowdsourcing is not solely human computation tasks, the inferred companion to these types of tasks are those that are expected to be too complex for computers: creative, judgmental, or requiring critical thinking.
+
+@schenk_crowdsourcing:_2009 distinguish between three types of crowdsourcing.
+First are routine tasks, such as crowdsourcing of OCR text correction with ReCaptcha.
+The majority of human computation tasks would likely fall within this category of rote tasks.
+Second are complex tasks, such are open-source software development.
+Finally, they suggest creative tasks. An examples would be a system like MyStarbucksIdea, where people suggest changes they would like to see at the coffee chain Starbucks.
+Since @schenk_crowdsourcing:_2009 focus on crowdsourcing when there is a client, usually a corporate client, they do not consider the wider space of creative crowdsourcing tasks.
+However, the taxonomy does appear
+
+#### Subjective vs. Objective Crowdsourcing
+
+Another parallel being drawn in recent years is that of objective or subjective crowdsourcing tasks.
+
+Objective tasks are assumed to have an authoritative truth, even if it is unknown.
+For example, in transcribing scanned texts, it is assumed that there is a 'correct' passage in the work that has been scanned.
+
+In contrast, Subjective tasks have a variable concept of correctness, as they are are not expected to be consistent between contributors.
+<!--TODO: write more-->
+
+Commonly human computation are objective tasks, while Schenk's split of routine, complex, and creative does not make in any particular way to this split.
+
+<!-- TODO: citations -->
+
+This designation also applies to aggregation, because sometimes subjective tasks are treated by a system as if they were objective, trying to determine a consensus while not treating deviations form the consensus as flawed contributions.
+
+### Common design patterns
+
+ * Microtasking
+ * Gamification
+   * Eickhoff, Harris et. al talk about gamification on MTurk [TODO]
+ * Opinion Ratings
+ * Platforms
+
+
+### Full Taxonomies
+
+@geiger_managing_2011 identify crowdsourcing processes by four defining characteristics: the preselection process for contributors, the accessibility of peer contributions, the aggregation of contributions, and the form of renumeration for contributors.
 
 
 ## Top research in crowdsourcing

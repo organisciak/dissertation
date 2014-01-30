@@ -5,15 +5,16 @@ Correcting for Contributor-Introduced Variance at Collection Time
 
 Humans don't operate with the formality of computers.
 Many of the benefits of crowdsourcing follow from that fact: human contributions are valuable specifically because they are not easily automated.
-However, when using crowd contributions to inform an algorithmic system, such as in information retrieval, the inconsistencies of human work present a challenge.
+However, when using crowd contributions to inform an algorithmic system, as in information retrieval, the inconsistencies of human work present a challenge.
 
-In the first of two research chapters, the proposed dissertation will investigate how the design of crowdsourcing tasks for improve information retrieval metadata affects the quality of the content.
+In the first of two research chapters, the proposed dissertation will investigate how the design of crowdsourcing tasks for improved information retrieval metadata affects the quality of the content.
 
 When paid crowdsourcing is used for information retrieval, it usually follows a basic design, with a task, description, and one or more items that are reacted to.
-Some exceptions to this approach have been attempted with success<!--TODO-->
+Most often, this design is applied to creating custom evaluation datasets through relevance judgments[@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [TODO cite twitter, others]
+<!-- Removed: Some exceptions to this approach have been attempted with success[<!--TODO-->].-->
 
-Evidence suggests that the design of a data collection interface affects the quality and distribution of [@organisciak_evaluating_2012; @howe_crowdsourcing:_2008; @organisciak_incidental_2013].
-The manner to improve on a basic task/description/item design is unclear thus far; some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers <!-- TODO cite -->.
+Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008, @organisciak_evaluating_2012; @howe_crowdsourcing:_2008; @organisciak_incidental_2013].<!-- TODO: cite more-->
+The manner to improve on a basic task/description/item design is not immediately clear: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers <!-- TODO cite -->.
 
 In keeping with goals of the proposed dissertation, this study will evaluate the effect of task design on collected information retrieval data.
 
