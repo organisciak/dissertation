@@ -122,6 +122,11 @@ How does the stylistic variance of contributions change through the lifespan of 
 We hypothesize that as crowdsourcing systems grow in size, their contributions also grow less variant in their approach.
 This question is related to the primary research questions of the proposed dissertation and this chapter, and it will be useful to consider it.
 
+- Directionality of influence
+  - IF structure is being solidified: why is it being systematized?
+- Contribution attrition 
+- Simplicity vs. Hand-holding
+
 If our hypothesis holds true, it would suggest that system designers (or self-governed crowds) steer their system toward more algorithmically tractable forms of contributions over time.
 Such a shift might be afforded by crowds large enough to allow the attrition associated with more complexity, or by the increase of well-experienced participants that are comfortable adapting to tighter guidelines.
 
