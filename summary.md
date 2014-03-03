@@ -1,19 +1,19 @@
 Point-form outline
 ====================
 
-As per Mike's suggestion, a point-form outline of how I see the dissertation
-
-* Broad Question: How do cognitive biases affect crowdsourcing for information retrieval
-* Specific Research Question: Can variance stemming from cognitive biases be accounted for in _descriptive crowdsourcing_, either at the time of data collection or afterward, in a manner that maximizes the information gain for information retrieval?
+Title: Crowdsourcing descriptive metadata for information retrieval indexing: Reliably augmenting documents with crowd contributions
+	 
+* Broad Question: How can crowdsourcing be used for collecting algorithmically valuable information about documents while accounting for qualitative differences in how individuals contribute? 
+* Specific Research Question: How should qualitative differences stemming from human variance be accounted for in _descriptive crowdsourcing_, at the time of data collection or afterward, in a manner that maximizes the information gain for information retrieval?
 * Core assumption: That crowd contributors are honest but biased
 * Hypothesis: That pursuing the honest-but-biased assumption leads to:
 	* Contributions that are more valuable for algorithmic use
 	* A greater proportion of useful contributions
 * This high-level theme for the dissertation is explored in two parts of the dissertation:
-	1) A chapter on accounting for cognitive bias at the time of collection
-	2) A chapter on accounting for cognitive bias in data that has already been collected
+	1) A chapter on accounting for human variance at the time of collection. How does the task design affect the task output?
+	2) A chapter on accounting for human variance in data that has already been collected
 
-## Accounting for cognitive bias at collection
+## Designing for increased reliability at collection time
 
 * This chapter focuses on how the _way_ you ask for contributions changes the nature of the response. 
 * Specifically, I'm looking at the design of the task by comparing different types of interfaces for the same task on the same content.
