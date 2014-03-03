@@ -91,10 +91,12 @@ Some of the most important questions in differentiating crowdsourcing include:
  * How are crowds motivated? Particularly: are they paid or do the volunteer for other incentives?
  * How are contributions presented or aggregated?
  * Is the crowdsourcing central to the system?
- * Are contributions subjective or objective?
+ * What do the contributions look like? Are they subjective or objective?
  * Is the collaboration indirect (i.e. contributors work on parts independently) or manifest?
  * Are contributions new, or do they react to existing documents or entities?
  * Who is asking for the contributions?
+ * Who are the contributors?
+ * How do you control for quality?
 
 ### Motivation
 
@@ -128,6 +130,8 @@ I offer the following finer views on integrative aggregation:
  * Versioning (TODO or iterative?): In versioned aggregation, multiple contributions are used toward a larger product, but the contributions are permutations of a common work. Examples: wikis
  * Averaging: In averaged aggregation. Contributions are still pooled, but a consensus-seeking processing tries to reconcile them. Examples: ratings, multiple-keyed classifications 
 
+<!-- See also @quinn_human_2011 -->
+
 ### Benefactor
 
 Zwass et al 2010 [TODO] distinguish between _autonomous_ and _sponsored_ crowdsourcing.
@@ -155,7 +159,6 @@ The majority of human computation tasks would likely fall within this category o
 Second are complex tasks, such are open-source software development.
 Finally, they suggest creative tasks. An examples would be a system like MyStarbucksIdea, where people suggest changes they would like to see at the coffee chain Starbucks.
 Since @schenk_crowdsourcing:_2009 focus on crowdsourcing when there is a client, usually a corporate client, they do not consider the wider space of creative crowdsourcing tasks.
-However, the taxonomy does appear
 
 #### Subjective vs. Objective Crowdsourcing
 
@@ -173,6 +176,21 @@ Commonly human computation are objective tasks, while Schenk's split of routine,
 
 This designation also applies to aggregation, because sometimes subjective tasks are treated by a system as if they were objective, trying to determine a consensus while not treating deviations form the consensus as flawed contributions.
 
+### Type of Crowd
+
+Vukovic and Batolini (TODO proper cite) define two extremes of crowd types: _internal_ and _external_.
+Internal crowds are composed solely of contributors from the organization that is crowdsourcing, if it is thus centralized.
+External crowds are members outside of the institution.
+Vukovic and Batolini also note that _mixed_ crowds are observable.
+
+### Quality control
+
+see @quinn_human_2011
+
+### Necessary skills
+
+* mentioned briefly in @quinn_human_2011, anywhere else?
+
 ### Common design patterns
 
  * Microtasking
@@ -180,12 +198,14 @@ This designation also applies to aggregation, because sometimes subjective tasks
    * Eickhoff, Harris et. al talk about gamification on MTurk [TODO]
  * Opinion Ratings
  * Platforms
-
+ * Contest
+ * Wisdom of crowds
 
 ### Full Taxonomies
 
-@geiger_managing_2011 identify crowdsourcing processes by four defining characteristics: the preselection process for contributors, the accessibility of peer contributions, the aggregation of contributions, and the form of renumeration for contributors.
+@geiger_managing_2011 identify crowdsourcing processes by four defining characteristics: the pre-selection process for contributors, the accessibility of peer contributions, the aggregation of contributions, and the form of renumeration for contributors.
 
+@quinn_human_2011 look at crowdsourcing along six facets: motivation, quality control, aggregation, human skill, process order, and task-request cardinality.
 
 ## Top research in crowdsourcing
 

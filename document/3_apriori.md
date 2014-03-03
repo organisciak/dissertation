@@ -9,40 +9,42 @@ However, when using crowd contributions to inform an algorithmic system, as in i
 
 In the first of two research chapters, the proposed dissertation will investigate how the design of crowdsourcing tasks for improved information retrieval metadata affects the quality of the content.
 
-When paid crowdsourcing is used for information retrieval, it usually follows a basic design, with a task, description, and one or more items that are reacted to.
-Most often, this design is applied to creating custom evaluation datasets through relevance judgments[@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [TODO cite twitter, others]
+When crowdsourcing is used for information retrieval, it usually follows a basic design, with a task, description, and one or more items that are reacted to.
+Most often, this design is applied to creating custom evaluation datasets through relevance judgments[@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [TODO cite twitter, others].
 <!-- Removed: Some exceptions to this approach have been attempted with success[<!--TODO-->].-->
 
 Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008, @organisciak_evaluating_2012; @howe_crowdsourcing:_2008; @organisciak_incidental_2013].<!-- TODO: cite more-->
-The manner to improve on a basic task/description/item design is not immediately clear: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers <!-- TODO cite -->.
+The manner to improve on a basic task/description/item design is not immediately clear: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO cite -->.
 
-In keeping with goals of the proposed dissertation, this study will evaluate the effect of task design on collected information retrieval data.
+In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will evaluate the effect of task design on collected information retrieval data.
 
-Looking at task design, I will evaluate two interfaces for encouraging less deviation between human contributors by providing training and feedback, respectively.
-These interfaces are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
+Evaluating task designs, I will evaluate two interfaces for encouraging less deviation between human contributors by providing training and feedback mechanisms, respectively.
+These interfaces, motivated by efforts in my earlier work,  are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
 They will be compared to a baseline basic interface, as well as an alternative system that encourages quicker responses.
 
-This will be done in the context of an established information retrieval problem -- enriching terse microblogging messages through paid crowdsourcing -- with the study design motivated by effects seen in my earlier work.
+Since the focus is on design for crowdsourcing, I will adopt an established information retrieval problem to control for the task:
+ enriching terse microblogging messages through paid crowdsourcing.
+What is being completed is not as central to this study as how it is done, but this a task that is structured similar to many on-demand crowdsourced information retrieval tasks.
 
-In the control study, workers will identifying the topic of a microblogging message from Twitter -- a tweet.
+Workers will identify the topic of a microblogging message from Twitter -- a tweet.
 This is a task where the information object is sparse and the topics are often short-lived and previously unseen, making crowdsourcing a promising approach to improve information retrieval across the data.
 It is also a realistic task that has been attempted with crowdsourcing in the past.
 
 ## Outline
 
-This section of the dissertation proposal serves as a skeleton for the dissertation chapter.
+This section of the dissertation proposal serves as a skeleton for the corresponding dissertation chapter.
 Below, I 
  outline the problem of collecting higher reliability work from human workers,
  discuss some of my previous research on the topic,
- and present the 
-  scope,
-  methodology,
-  data,
-  and evaluation
- for proposed new research.
+ and present the scope, methodology, data, and evaluation for proposed new research.
 
-<!-- formerly labelled 'Problem'.. still need a problem section, or was the intro chapter's section sufficient? -->
+<!-- formerly labeled 'Problem'.. still need a problem section, or was the intro chapter's section sufficient? -->
 ## Motivation
+
+Why is task design important to the understanding of intercoder reliability in crowdsourcing?
+Crowdsourcing task design is a problem that...
+
+<!-- To cite: post-mortems of failed sites -->
 
 ### Work up to now
 
@@ -75,7 +77,7 @@ After all, the effect where good work on the first judgment was representative o
 
 The second implication is that a better designed task can help.
 While much research tends to focus on the honesty and quality of paid crowdsourcing workers, part of the responsibility toward good quality crowdsourcing data is the requesters.
-In a task such as relevance judgments, encouraging better work might require workers to be more aware of their performance or to reassess their understanding of the task when it is necessary. Some possibilities to research might me,
+In a task such as relevance judgments, encouraging better work might require workers to be more aware of their performance or to reassess their understanding of the task when it is necessary. Some possibilities to research might be,
 
 * A training task, where workers are walked through the codebook in relation to actual tasks, and told why specific results are relevant or not relevant.
 * Online feedback, showing workers their estimated performance based on agreement with other workers.
@@ -93,7 +95,7 @@ They generally:
  * describe existing information,
  * collect contributions in low-granularity mechanisms,
  * and favor interface choices over statements.
-An example an incidental crowdsourcing mechanic might be a 'thumbs-up' voting button on a video-sharing website or tagging functionality on an image-sharing website that does not force itself upon users.
+An example of an incidental crowdsourcing mechanic might be a 'thumbs-up' voting button on a video-sharing website or tagging functionality on an image-sharing website that does not force itself upon users.
 
 By not taking users hostage or asking users for overly attentive or time-consuming contributions, incidental crowdsourcing contributions result in greater numbers of contributions, even if individual contributions are less frequent.
 They also tend toward different patterns of contribution.
@@ -116,12 +118,12 @@ In this case, we were again looking at opinion ratings on a five-point scale, th
 Workers were asked to provide their personal opinions on whether they liked the style of each of 100 saltshakers.
 In one group of workers, this is all they were asked.
 In another group, we also asked workers to explain why they gave that rating.
-Alongside their rating of the item, they would provide a short explanation, such as <!-- TODO -->.
+Alongside their rating of the item, they would provide a short explanation, such as 'I like the colors'.
 In most other regards the ratings were collected in the same way:
  on Mechanical Turk during the US work day,
  in an interface designed identically -- besides the additional text input boxes for the latter formulation --
  and with the same restrictions on workers.
-<!-- To clarify the restrictions? -->
+
 <!-- The payment for the task was scaled to account for the extra time necessary for completion: in the first set of tasks, workers averaged XXX/hr, on the latter, they averaged XXX/hr ... TODO: what _did_ we do for the money? -->
 
 Figure XXX <!-- TODO --> shows the distribution of workers by their average rating.
@@ -133,7 +135,7 @@ In contrast, the workers that were asked to explain their rating tempered their 
 The distribution of average ratings of individuals was normal (<!--TODO normality test results-->) about a mean of <!--TODO--> with a standard deviation of <!-- TODO -->.
 
 [] <!-- TODO: Image -->
-<!-- TODO: Figure XXX: Comparison of worker rating distributions for preferences in salt shakers.
+<!-- TODO: Figure XXX: Comparison of worker rating distributions for preferences in salt shakers.-->
 In the basic set, workers were asked only for a rating.
 In the detailed set, workers were asked for a rating and an brief explanation of why they chose that rating.
 <!-- Unpublished research, (TODO: text to make clear that it is Microsoft IP, not University's ) -->
@@ -249,7 +251,7 @@ The basic interface will show workers an item,
 
 This information will collect... <!-- TODO -->
 
-### Training interface
+#### Training interface
 
 In the training interface, the worker is walked through their first task slowly.
 As they complete the tasks, their answers are evaluated against a gold standard and they are informed if they completed it correctly or incorrectly.
@@ -259,12 +261,12 @@ Incorrect answers will also be given an explanation of why the actual answer is 
 
 The training tasks will hand-designed, based on a random sample of items.
 
-### Feedback Interface
+#### Feedback Interface
 
 In the feedback interface, a worker is taught 
 
 <!--
-#### Rough Notes
+##### Rough Notes
 
 If you're doing voting, then a score is possible based on agreement with other workers:
 ^Score=Avg. StdDev from Mean of Ratings 
@@ -272,7 +274,7 @@ $TODO$
 TODO -->
 
 
-### Time-Limited Interface
+#### Time-Limited Interface
 
 As hinted at during work on <!--TODO CITE MSR, DH -->, not all crowdsourcing contribution cases require a
 
@@ -281,17 +283,17 @@ The final data collection interface will encourage workers to complete tasks qui
 The timer has been used previously in <!--TODO cite--> to push people into a visceral form of task completion.
 
 
-#### Evaluation
+### Evaluation
 
 <!--Talk about Mechanical Turk. -->
 <!--Talk about the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
 
-##### Baselines
+#### Baselines
 
 
 ## Gedanken Experiments
 
-_Some notes on how the design might affect the _
+_Some notes on how the design might affect the_
 
 Attributes:
 - restrictive vs. interpretable instructions
@@ -308,4 +310,4 @@ Let's say we have a Twitter encoding task. How would the contribution change if:
 - Contributors were tested on the instructions at the beginning of the task? If there were gold label items throughout the task? If everything had a known answer?
 - Contributors were asked to volunteer their time? Were paid 1c per task? Were paid 10c per task? Were paid by the hour?
 - Contributors had tasks/time quotas to meet for bonuses? What if they were forced into these quotas (with tasks automatically moving forward)? What if a timer ticked away until their task disappears?
-- What if contributors were told when they got something wrong? hat if you lie to them?
+- What if contributors were told when they got something wrong? What if you lie to them?

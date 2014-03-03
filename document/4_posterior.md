@@ -1,12 +1,26 @@
-Posterior Corrections for Human Bias
-=====================================
+Correcting for Contributor-Introduced Variance After Contribution 
+==================================================================
 
 While working to normalize contributing users' contexts is possible in well-controlled circumstances, there are cases where either 
  the data is already collected, or 
  where there is a limit to the amount of control a system designer can exert over contributors.
 
-In the second of two research chapters, the proposed dissertation will look at methods to normalize for human bias in already-collected metadata.
-This will integrate previously-completed research on improving signal in information retrieval relevance judgments [@organisciak_evaluating_2012] and perform new work on normalizing quality judgments in volunteer crowdsourcing.
+It is common to see differences is the habits of contributors that are trying to achieve the same thing.
+Many tasks that make an objective assumption nonetheless are subject to interpretation, especially in volunteered contributions where detailed codebooks are deterrents to casual contributions.
+This is still an issue in subjective tasks.
+One person's definition of a 3-star opinion judgment or their threshold for what is needed to click an approving 'thumbs up' button might be different from another person's, even if their underlying opinions is identical.
+
+In the second of two research chapters, the proposed dissertation will investigate the issue of interpreting the human-introduced variance in already-collected metadata.
+This will a) integrate previously-completed research on improving signal in information retrieval relevance judgments [@organisciak_evaluating_2012] and b) perform new work on normalizing quality judgments in volunteer crowdsourcing.
+
+On the topic of understanding human-introduced variance and low rater inconsistencies, the research that I collaboratively performed in @organisciak_evaluating_2012 shed light on consensus-building in ground truth tasks.
+We studied time, experience, and agreement as indicators of the quality of contributions for a paid relevance feedback task.
+Does the amount of time spent on a contribution correlate to a good or bad task?
+Does the experience of a contributor, either on the task in general or responding to the specific query, reflect the quality of their contributions?
+Can agreement with other contributors be used to measure and potentially correct for quality differences?
+Answering these questions provided valuable insights into how to treat workers and their data when using paid crowdsourcing for building ground truth datasets.
+
+However, the breadth of crowd contribution tasks that need to be <!-- TODO -->
 
 The new research performed in this chapter will look at normalizing opinion contributions in a volunteer crowdsourcing system.
 
