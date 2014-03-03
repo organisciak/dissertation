@@ -10,7 +10,7 @@ The proposed dissertation studies the problem of such variance, and investigates
 Doing so will incorporate the body of existing research, my past work in the area, and two new studies of pertinent sub-problems within the larger research problem.
 
 At the heart of this study is the assumption of honest-but-biased contributors.
-Rather than focusing on finding dishonest or unreliable contributors, a well-studied problem in crowdsourcing, this dissertation focuses
+Rather than focusing on finding dishonest or unreliable contributors, a well-studied problem in crowdsourcing, this dissertation focuses on strategies that understand the quirks and inconsistencies of humans in trying to account data reliability problems.
 
 Introduction
 =============
@@ -26,18 +26,18 @@ In recent years, this form of creation through collaboration has been studied as
 
 Effective information retrieval depends on reliable, detailed information to index.
 Crowdsourcing has the potential to improve retrieval over web documents by having humans produce descriptive metadata about documents.
-In contrast to algorithmic methods, humans are able to provide latent information such as quality judgments or higher-level thematic description, and are good at critical actions such as correcting, describing in different language, and connecting to other documents.
+Humans are able to provide latent information about documents that would not be possible to ascertain computationally, such as quality judgments or higher-level thematic description.
+They are also good at critical actions such as correcting, describing in different language, or inferring relationships with other documents.
 More importantly, crowdsourcing looks at human contribution at scales that are potentially useful for retrieval.
 
-### Broad Research Question
-
+<!-- Broad Research Question -->
 However, humans have predictable and unpredictable biases that make it difficult to systematically adopt their contributions in an information system.
 How do we control and interpret qualitative user contributions in an inherently quantitative system?
-This study looks at the effect of human error on crowdsourcing in information retrieval and how they affect the product of human contributions.
+This study looks at the effect of human error on crowdsourcing for document augmentation, which I will refer by the shorthand of _descriptive crowdsourcing_, and how it affect the product of human contributions.
 
-### Specific Research Question
-
-Specifically: can low variance in _descriptive crowdsourcing_ be accounted for, either at the time of data collection or afterward, in a manner that maximizes the intercoder reliability of contributions and subsequently the usefulness for information retrieval?
+<!-- Specific Research Question -->
+Particularly, I look at the issue of recoverable variance in such data, or -- viewed from the contributor end -- intercoder reliability.
+Can error in _descriptive crowdsourcing_ be accounted for, either at the time of data collection or afterward, in a manner that maximizes the intercoder reliability of contributions and subsequently the usefulness for information retrieval?
 
 ### Hypothesis
 
