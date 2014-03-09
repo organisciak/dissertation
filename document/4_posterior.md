@@ -1,13 +1,14 @@
 Correcting for Contributor-Introduced Variance After Contribution 
 ==================================================================
 
-While working to normalize contributing users' contexts is possible in well-controlled circumstances, there are cases where either 
+While working to normalize the manner that users contribute is possible in well-controlled circumstances, there are cases where either 
  the data is already collected, or 
  where there is a limit to the amount of control a system designer can exert over contributors.
 
-It is common to see differences is the habits of contributors that are trying to achieve the same thing.
-Many tasks that make an objective assumption nonetheless are subject to interpretation, especially in volunteered contributions where detailed codebooks are deterrents to casual contributions.
-This is still an issue in subjective tasks.
+It is common to see differences in the habits of contributors that are trying to achieve the same thing.
+<!--For example, when providing opinion ratings it is possible to have different contexts of a 'good' or 'bad' rating, when tagging images there are more or less useful types of tags, and ... <--TODO: citations, final example -->
+Many tasks that assume an objective, correct contribution are nonetheless are subject to interpretation, especially in volunteered contributions where detailed codebooks are deterrents to casual contributions.
+Likewise, even when a task is subjective, where a contribution is understood to be related to each individual's tastes and opinion, there are still problems of reliability beyond differences of opinion.
 One person's definition of a 3-star opinion judgment or their threshold for what is needed to click an approving 'thumbs up' button might be different from another person's, even if their underlying opinions is identical.
 
 In the second of two research chapters, the proposed dissertation will investigate the issue of interpreting the human-introduced variance in already-collected metadata.
@@ -20,9 +21,10 @@ Does the experience of a contributor, either on the task in general or respondin
 Can agreement with other contributors be used to measure and potentially correct for quality differences?
 Answering these questions provided valuable insights into how to treat workers and their data when using paid crowdsourcing for building ground truth datasets.
 
-However, the breadth of crowd contribution tasks that need to be <!-- TODO -->
-
-The new research performed in this chapter will look at normalizing opinion contributions in a volunteer crowdsourcing system.
+However, normalizing crowds contributions to control for variance and improve inter-coder reliability is a larger issue that affects more than just paid ground truth tasks.
+Various crowdsourced data has been used for understanding information retrieval documents, including page links (<!--TODO cite-->), Twitter discussion (<!--TODO cite-->), social tags (!--TODO cite-->), opinion ratings (<!--TODO cite-->), and explicit relevance feedback (<!--TODO cite-->).
+To study all cases would be unfeasible, but this study will focus on a relevant subset related to crowdsourced data that is already being used in information retrieval.
+Below, I review how various forms of contributions have been used for information retrieval, and use the work to justify additional research on a normalizing opinion contributions in a volunteer crowdsourcing system <!--TODO change this sentence after the lit review, to say *why* rather than to say I 'will justify'-->.
 
 Specifically, it will look at the deviation of ratings from normative opinions on business-rating website Yelp.
 First, I will examine when an online rater's perception of their rating task deviates from the popular interpretation.

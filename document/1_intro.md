@@ -12,6 +12,10 @@ Doing so will incorporate the body of existing research, my past work in the are
 At the heart of this study is the assumption of honest-but-biased contributors.
 Rather than focusing on finding dishonest or unreliable contributors, a well-studied problem in crowdsourcing, this dissertation focuses on strategies that understand the quirks and inconsistencies of humans in trying to account data reliability problems.
 
+Often, there is a trade-off between well-engaged crowds and the amount of restrictiveness that a task designer can exert on a task.
+This dissertation admits that in practice, the engagement of an accessible and non-restrictive task is more encouraging both to contributors and the health of a community.
+How do you encourage the humanness<!-- I know this is a real word used in literature, but it seems awkwark... --> of contributors while still convincing them to be consistent and reliable, and how do you model the subsequent contributions?
+
 Introduction
 =============
 
@@ -33,13 +37,13 @@ More importantly, crowdsourcing looks at human contribution at scales that are p
 <!-- Broad Research Question -->
 However, humans have predictable and unpredictable biases that make it difficult to systematically adopt their contributions in an information system.
 How do we control and interpret qualitative user contributions in an inherently quantitative system?
-This study looks at the effect of human error on crowdsourcing for document augmentation, which I will refer by the shorthand of _descriptive crowdsourcing_, and how it affect the product of human contributions.
+This study looks at the effect of human error on crowdsourcing for document metadata, which I will refer by the shorthand of _descriptive crowdsourcing_, and how it affect the product of human contributions.
 
 <!-- Specific Research Question -->
 Particularly, I look at the issue of recoverable variance in such data, or -- viewed from the contributor end -- intercoder reliability.
 Can error in _descriptive crowdsourcing_ be accounted for, either at the time of data collection or afterward, in a manner that maximizes the intercoder reliability of contributions and subsequently the usefulness for information retrieval?
 
-### Hypothesis
+<!--### Hypothesis-->
 
 The proposed study makes an assumption that crowd contributors are honest but inherently biased, with the hypothesis that such an assumption leads to 
 a) more algorithmically valuable crowdsourced description and 
@@ -48,11 +52,11 @@ b) a greater proportion of useful contributions.
 #### Language clarification
 
 In assuming that humans are biased, the biases referred to are the inclinations, leanings, and tendencies [@_bias_????] of individuals, quirks that affect their worldview and how they understand and perform tasks.
-By this definition, such perceptual differences contribute to a greater variance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias', referring to a model that is overfit, or overly 'biased, to a specific dataset.
+By this definition, such perceptual differences contribute to a greater variance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias', referring to a model that is overfit, or overly 'biased', to a specific dataset.
 In information science, this is closely related to _intercoder reliability_, the measure of how similar multiple coders will perform in a given parameterization of a task [@neuendorf_content_2002].
 
 <!--Removed: While competing definitions for the term are unfortunate, inventing new terms where ones exist would potentially make communication more difficult.-->
-When discussing the processes of humans --and only when doing so-- this study may use refer to biases, but discussion of effects on data will solely use statistical and information science language.
+When discussing the processes of humans --and only when doing so-- this study may refer to biases, but discussion of effects on data will solely use statistical and information science language.
 
 ### Approach
 
@@ -367,7 +371,7 @@ Subsequently, the assumption of honest but biased contributors will be outlined,
 
 <!-- TODO look up text previously written about this -->
 
-#### Increasing Reliability at Collection time
+#### Increasing Reliability at collection time
 
-#### Recovering Reliability from Collected Data 
+#### Increasing Reliability in collected data 
 
