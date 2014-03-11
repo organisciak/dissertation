@@ -38,7 +38,7 @@ Thus, crowdsourcing was adopted to refer broadly to a series of related concepts
 These concepts included
  human computation \cite{<!--TODO-->},
  commons-based peer production \cite{<!--TODO cite coase's penguin and benkler book -->},
- free and open-source development [@lakhani_how_2003, @raymond_cathedral_1999],
+ free and open-source development [@lakhani_how_2003; @raymond_cathedral_1999],
  and the 'wisdom of the crowds' [@surowiecki_wisdom_2004].
 
 ### Wisdom of the Crowds
@@ -267,7 +267,6 @@ Notable crowdsourcing in the wild
 
 ### Coding Aggregation / Ground Truth generation
 
-### 
 
 <!--TODO: Rename header-->
 
