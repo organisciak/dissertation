@@ -16,38 +16,39 @@
 %\usepackage{subfigure}  % for subfigures
 \usepackage{amsmath}  % for math spacing
 %\usepackage{amssymb}  % for math spacing
-%\usepackage{url}  % Hyphenation of URLs.
+\usepackage{url}  % Hyphenation of URLs.
 \usepackage{lscape}  % Useful for wide tables or figures.
 \usepackage[justification=raggedright]{caption}	% makes captions ragged right - thanks to Bryce Lobdell
 
 % Added by Peter <--
 % Support biblatex via babel (instructions via http://tex.stackexchange.com/questions/5091/what-to-do-to-switch-to-biblatex)
 \usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{booktabs}
 \usepackage[english]{babel}% Recommended
 \usepackage[babel]{csquotes} % Recommended
-\usepackage[notes,natbib,isbn=false,backend=biber]{biblatex-chicago}  
-
+\usepackage[style=authoryear]{biblatex}
+%\usepackage[notes,natbib,isbn=false,backend=biber]{biblatex-chicago} % To use chicago style file 
 %\usepackage[style=chicago]{biblatex}
 
-\addbibresource{refs.bib} % Syntax for version >= 1.2
+%\addbibresource{refs.bib} % Syntax for version >= 1.2
+\bibliography{refs.bib}
 % -->
 
 % Uncomment the appropriate one of the following four lines:
 \phdthesis %TODO: Fix so that it doesn't say DISSERTAION OR HAVE THE "PARTIAL FULFILLMENT PREAMBLE ON THE FIRST PAGE"
-%\otherdoctorate[abbrev]{Title of Degree}
-%\othermasters[abbrev]{Title of Degree}
+%\otherdoctorate[PhD]{Library and Information Science}
 
-\title{Something something crowdsourcing} % TODO TITLE
+\title{Crowdsourcing for information retrieval: Reliably augmenting documents with crowd contributions} 
 \author{Peter Organisciak}
 \department{Graduate School of Library and Information Science}
-\degreeyear{201X} % TODO YEAR
+\degreeyear{2014} 
 
-\advisor{Miles Efron}
+\advisor{Michael Twidale, Professor}
 
-\committee{Michael Twidale, Professor\\ % TODO TITLE
-        Stephen J. Downie, Associate Dean for Research\\ % TODO CONFIRM NAME AND ADD TITLE
-	Jaime Teevan, Senior Researcher, Microsoft Research} % TODO TITLE
-
+\committee{Miles Efron, Associate Professor\\
+        Stephen J. Downie, Associate Dean for Research\\ 
+	Jaime Teevan, Senior Researcher, Microsoft Research}
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
