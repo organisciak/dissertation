@@ -1,7 +1,7 @@
 Correcting for Contributor-Introduced Variance After Contribution 
 ==================================================================
 
-While working to normalize the manner that users contribute is possible in well-controlled circumstances, there are cases where either 
+While working to normalize the manner in which users contribute is possible in well-controlled circumstances, there are cases where either 
  the data is already collected, or 
  where there is a limit to the amount of control a system designer can exert over contributors.
 
@@ -12,9 +12,11 @@ Likewise, even when a task is subjective, where a contribution is understood to 
 One person's definition of a 3-star opinion judgment or their threshold for what is needed to click an approving 'thumbs up' button might be different from another person's, even if their underlying opinions is identical.
 
 In the second of two research chapters, the proposed dissertation will investigate the issue of interpreting the human-introduced variance in already-collected metadata.
-This will a) integrate previously-completed research on improving signal in information retrieval relevance judgments [@organisciak_evaluating_2012] and b) perform new work on normalizing quality judgments in volunteer crowdsourcing.
+This will 
+ a) integrate previously-completed research on improving signal in information retrieval relevance judgments [@organisciak_evaluating_2012] and 
+ b) perform new work on normalizing quality judgments in volunteer crowdsourcing, using a test case of crowdsourced contributions on the online craft marketplace Etsy.
 
-On the topic of understanding human-introduced variance and low rater inconsistencies, the research that I collaboratively performed in @organisciak_evaluating_2012 shed light on consensus-building in ground truth tasks.
+In understanding human-introduced variance and low rater inconsistencies, the research that we performed in @organisciak_evaluating_2012 shed light on consensus-building in ground truth tasks.
 We studied time, experience, and agreement as indicators of the quality of contributions for a paid relevance feedback task.
 Does the amount of time spent on a contribution correlate to a good or bad task?
 Does the experience of a contributor, either on the task in general or responding to the specific query, reflect the quality of their contributions?
@@ -24,14 +26,19 @@ Answering these questions provided valuable insights into how to treat workers a
 However, normalizing crowds contributions to control for variance and improve inter-coder reliability is a larger issue that affects more than just paid ground truth tasks.
 Various crowdsourced data has been used for understanding information retrieval documents, including page links (<!--TODO cite-->), Twitter discussion (<!--TODO cite-->), social tags (!--TODO cite-->), opinion ratings (<!--TODO cite-->), and explicit relevance feedback (<!--TODO cite-->).
 To study all cases would be unfeasible, but this study will focus on a relevant subset related to crowdsourced data that is already being used in information retrieval.
-Below, I review how various forms of contributions have been used for information retrieval, and use the work to justify additional research on a normalizing opinion contributions in a volunteer crowdsourcing system <!--TODO change this sentence after the lit review, to say *why* rather than to say I 'will justify'-->.
+Below, I review how various forms of contributions have been used for information retrieval, and subsequently justify additional research on a normalizing opinion contributions in a volunteer crowdsourcing system <!--TODO change this sentence after the lit review, to say *why* rather than to say I 'will justify'-->.
 
-Specifically, it will look at the deviation of ratings from normative opinions on business-rating website Yelp.
+<!--Specifically, it will look at the deviation of ratings from normative opinions on business-rating website Yelp.
 First, I will examine when an online rater's perception of their rating task deviates from the popular interpretation.
 This comparison will be done by providing a rater's reviews to other human workers, and asking them what they would expect the rating to be based on the review.
 
 After performing an analysis on the points of disparity between a contributor's rating and the rating others would expect from their review, this study will attempt a method to model the normative opinion by workers.
-The exact approach will be informed by the analysis done in the proposed study, but one potential approach is described below.
+The exact approach will be informed by the analysis done in the proposed study, but one potential approach is described below.-->
+
+Specifically, I will study how the various crowdsourced elements on craft marketplace Etsy can be leveraged in document representation to improve the quality of information retrieval, comparing baseline weighting schemes with normalized approaches.
+Etsy is a marketplace with a large space of documents, but with a long tail of user focus.
+While there are many ways that online crowds can contribute information about individual documents, the quantity of contributions on an individual document is fairly low (<!--TODO confirm this with numbers -->).
+In making use of these contributions for ranked retrieval, it is important for each contribution to be interpreted correctly.
 
 ## Scope
 
@@ -40,14 +47,14 @@ The goals of this chapter will stay unchanged,
  focusing on crowdsourcing additional metadata for improved information retrieval indexing.
 Again, the use cases being looked at are those with objective goals, with the intention of producing an output with minimal divergence from either the norms of a community or the instructions of a task designer.
 
-The proposed new work will focus on volunteered data, for a number of reasons.
+The proposed new research will focus on volunteered data, for a number of reasons.
 First, my existing research has already looked at this problem in paid crowdsourcing environment, and it is generally a well-explored space in research [notably including: @ipeirotis_quality_2010; @raykar_supervised_2009; @eickhoff_increasing_2012; @sheng_get_2008; @welinder_online_2010; @whitehill_whose_2009; @snow_cheap_2008; @novotney_cheap_2010].
-Others have looks at similar situtations of consensus-making among exports [@wallace_who_2011].
+Others have looks at similar situations of consensus-making among exports [@wallace_who_2011].
 Secondly, researching already collected data does not require the same control that researching varying collection designs does, making it more tractable to focus on volunteer systems.
 
 ## Problem
 
-How do you normalize for deviations among 
+How do you normalize for deviations among <!--TODO -->
 
 ## Subjective vs. Objective Assumptions
 
