@@ -88,35 +88,129 @@ von Hippel 2003, 2005, 1988
 The space of crowdsourcing is large, and there have been a number of attempts to organize the sub-concepts within it or to reconcile it in a space alongside other areas of research.
 Some of the most important questions in differentiating crowdsourcing include:
 
- * How are crowds motivated? Particularly: are they paid or do the volunteer for other incentives?
- * How are contributions presented or aggregated?
- * Is the crowdsourcing central to the system?
- * What do the contributions look like? Are they subjective or objective?
- * Is the collaboration indirect (i.e. contributors work on parts independently) or manifest?
+<!--Contributors-->
+ * Who are the contributors? What are their skills?
+ * How are contributors motivated? Are they paid or do they volunteer for other incentives?
+<!--Contributions-->
  * Are contributions new, or do they react to existing documents or entities?
- * Who is asking for the contributions?
- * Who are the contributors?
- * How do you control for quality?
+ * Are contributions presented or used as a whole, or are they combined into a larger contribution?
+ * What do the contributions look like? Are they subjective or objective?
+<!--Beneficiaries and directors -->
+ * Who is asking for the contributions? Who is benefiting?
+<!--Collaboration-->
+ * Is the collaboration indirect (i.e. contributors work on parts independently) or manifest?
+<!--Design-->
+ * Is the crowdsourcing central to the system?
+ * How is quality controlled for?
+
+### Overview
+
+ * Motivation
+   * Primary/Secondary, Contribution/commitment
+   * Extrinsic/Intrinsic
+   * Paid/Volunteer
+     * Form of renumeration
+ * Type of Work
+   * Creative / Reactive
+ * Aggregation
+  * Selective
+  * Integrative
+     * Summative / Iterative / Averaged
+ * Type of Crowd 
+ * Beneficiary
+   * Autonomous / sponsored
+   * Requester/contributor relationship: Symbiosis / parasitism / commensalism
+ * Object of Interest
+ * Centrality 
+   * Core / Peripheral (incidental)
+ * Quality Control
+
+
 
 ### Motivation
 
-The primary lens on motivation is in the form of intrinsic and extrinsic motivation [<!--TODO cite-->].
+The incentives for contributors to participate in crowdsourcing are complex and not always... <!--TODO-->
+
+#### Intrinsic / Extrinsic Motivation
+
+Motivation in crowdsourcing follows related work in the motivations of humans in general (TODO: cite Deci, Maslow, Aldoufer?).
+While a review of that work is beyond the scope of this work, many views<!--(TODO: 'many views' needs citations)--> of crowdsourcing motivation adopt the lens of motivation as a mixture of _intrinsic_ factors and _extrinsic_ factors [@ryan_intrinsic_2000].
 In the former, fulfillment is internal to the contributor, psychologically motivated, while in the latter the rewards are external.
 
-The particulars of motivation are complex and non-exclusive. <!--TODO: cite Resnick book?-->
-In @organisciak_why_2010, for example, I identified X primary motivators and X secondary motivations among a diverse set of crowdsourcing websites.[TODO]
+The spectrum of intrinsic to extrinsic motivators is commonly paralleled in crowdsourcing literation in a dichotomy of paid and volunteer crowdsourcing [].
 
-#### Paid vs. Volunteer Crowdsourcing
-There are extrinsic motivators beyond money; however, it is common to separate crowdsourcing projects into paid and volunteer crowdsourcing.
-This possible because of the differing design implications around the two approaches: money is a direct currency for obtaining labor, while convincing volunteers to contribute requires a greater sensitivity of their needs and ultimately more complexity in engineering the crowdsourcing system or mechanic.
+Paid and volunteer crowdsourcing are not exclusive, and there are extrinsic motivators beyond money.
+However, this separation is common because of it accounts for some of the starkest differences between how crowdsourcing is implemented and motivated.
+There are differing design implications around people being paid and performing work for other reasons: money is a direct currency for obtaining labor, while convincing volunteers to contribute requires a greater sensitivity of their needs and ultimately more complexity in engineering the crowdsourcing system or mechanic.
 
 It has been shown that intrinsic motivation still plays a part in paid crowdsourcing [@mason_financial_2010], and some systems mix intrinsically motivated tasks with payment or the chance at renumeration (e.g. Quirky, GasBuddy, 99Designs).
 
-For paid crowdsourcing, @geiger_managing_2011 makes the distinction between fixed renumeration, with a pre-agreed fee, and success-based renumeration, such as contest winnings or bonus.
+Some taxonomies make a distinction between forms of payment.
+@geiger_managing_2011 makes the distinction between fixed renumeration, with a pre-agreed fee, and success-based renumeration, such as contest winnings or bonus.
 
-In sum:
- * intrinsic/extrinsic motivation
- * paid/volunteer
+#### Specific Motivators
+
+TODO section notes:
+
+ - primary / secondary motivators
+ - commitment/contribution
+ - add more from @kraut_building_2011, @kraut_encouraging_2012
+
+Taxonomies of specific motivators seen in crowdsourcing have been previously attempted, with varying results that touch on similar issues.
+In @organisciak_why_2010, for example, I identified a series of primary and secondary motivators from a diverse set of crowdsourcing websites.
+Below I adopt the categories from that study, as they accommodate related work well.
+
+_Primary motivators_ are those that are considered critical parts of a system's interaction.
+Systems do not require all of them, but to attract and retain contributions, they need one or more of them.
+In contrast, _secondary motivators_ are system mechanics that generally were not observed as necessary parts of a system, but were elements that encourage increased interaction by people that are already contributors.
+@kraut_building_2011 similarly differential between encouraging contributions, and encouraging commitment.
+
+The motivators of @organisciak_why_2010 were observed from a content analysis of 13 crowdsourcing websites and subsequent user interviews.
+For sampling, 300 websites most commonly described as 'crowdsourcing' in online bookmarks were classified with a bottom-up ontology, then the 13 final sites were selected through purposive stratified sampling, to represent the breadth of the types of crowdsourcing seen.
+
+The primary motivators seen in @organisciak_why_2010 were:
+
+ * __Money and extrinsic reward__. Paying crowds is not particularly novel, but it is the most reliable approach for collecting contributions.
+In the absence of other motivators or where certainty is required, reimbursement will attract contributors.
+However, it also introduces bottlenecks of scale, and negates some of the benefits of intrinsic motivation.
+@mason_financial_2010 note that, while intrinsic motivation still exists on paid crowdsourcing platforms, it is overwhelmed when tasks are too closely tied to reimbursement, resulting in contributions that are done minimally, briskly, and with less enjoyment.
+<!-- TODO Mark Twain quote -->
+ * __Interest in the Topic__. Sites that cater to people that have a pre-existing interest in their subject matter or outcomes tend to get longer, more consistent engagement.
+For example, the Australian Newspaper Digitisation Project found that that amateur genealogists, with pre-existing communities and a willingness to learn new technologies, took “to text correction like ducks to water” @holley_many_2009.
+Similarly, Galaxy Zoo found similar success with amateur astronomers.
+ * __Ease of entry and ease of participation__. Low barriers to entry and participation were cited by every single user interviewed for the study.
+TODO: repurpose old text: Wikipedia has a low barrier to entry – just click ‘Edit’ – but has been criticized for the barrier to participation created by the interface and the overzealous core community (Angwin and Fowler 2009, Sanger 2009). As a result, its new participant numbers have been trending downward, and it has been singled out in the most recent Wikimedia annual report as a high priority problem.
+ * __Altruism and Meaningful contribution__. People like to help if they believe in what they’re helping, whether they are donating money to an artist <!--TODO cite Kickstarter--> or collaboratively trudging through Senate bills <!--TODO cite MP finance scandal-->.
+Writing about Flickr Commons, Library of Congress noted that they “appear to have tapped into the Web community’s altruistic substratum by asking people for help.
+People wanted to participate and liked being asked to contribute”. [@springer_for_2008].
+Likewise with Galaxy Zoo <!-- TODO cite GZ study and my own-->, people often cite the fact that it’s not simply an outreach project, but a tangible way to contribute to science.
+ * __Sincerity__.
+ * __Appeal to knowledge__.
+ * __Appeal to opinions__.
+
+<!---
+
+Talking through taxonomies
+Centrality
+Sincerity
+Seen in academia with scholars getting weary of free work for Elsevier
+Novelty
+vs. curiosity?
+
+Appeal to knowledge
+Implicit vs. explicit
+irritation as implicit appeal to knowledge: Mike’s first Wikipedia contribution
+
+--> 
+
+One ephemeral but nonetheless observable motivator overlooking in @organisciak_why_2010 is _novelty_: a unique idea can attract contributions for a short amount of time.
+
+The supplemental secondary motivators observed in the study were:
+
+ * __"Cred": External indicators of progress and reputation__.
+ * __Feedback and impression of change__.
+ * __Recommendations and the social__.
+ * __Window fixing__.
 
 ### Aggregation
 
@@ -126,25 +220,46 @@ Integrative aggregation pools contributions into a common product, like a wiki, 
 This simple separation hides some of the complexity seen in aggregation approaches.
 Integrative aggregation can be approached in a number of ways.
 I offer the following finer views on integrative aggregation:
- * Summation: In summative aggregation, people contribute to an ever-expanding base of information. Contributions are clearly part of a bigger whole, but their individual form is retained. Examples: online reviews
- * Versioning (TODO or iterative?): In versioned aggregation, multiple contributions are used toward a larger product, but the contributions are permutations of a common work. Examples: wikis
- * Averaging: In averaged aggregation. Contributions are still pooled, but a consensus-seeking processing tries to reconcile them. Examples: ratings, multiple-keyed classifications 
+ * __Summative__. In summative aggregation, people contribute to an ever-expanding base of information. Contributions are clearly part of a bigger whole, but their individual form is retained. Examples: online reviews
+ * __Iterative__. In versioned aggregation, multiple contributions are used toward a larger product, but the contributions are permutations of a common work. Examples: wikis
+ * __Averaged__. In averaged aggregation. Contributions are still pooled, but a consensus-seeking processing tries to reconcile them. Examples: ratings, multiple-keyed classifications 
 
 <!-- See also @quinn_human_2011 -->
 
-### Benefactor
+### Director / Beneficiary
 
-Zwass et al 2010 [TODO] distinguish between _autonomous_ and _sponsored_ crowdsourcing.
-_Sponsored_ crowdsourcing is when there is a entity at the top soliciting the contributions: a client of sorts. [TODO add examples]
-In contrast _autonomous_ crowdsourcing serves the community itself. Zwass et al explain: "Marketable value is not necessarily consigned to the market—it may be placed in the commons, as is the case with Wikipedia".
+Who directs the crowdsourcing activities and who benefits from the contributions?
+
+Considering the director of a crowdsourcing task, @zwass_cocreation:_2010 distinguishes between _autonomous_ and _sponsored_ forms of crowdsourcing.
+
+_Sponsored_ crowdsourcing is when there is a entity at the top soliciting the contributions: a client of sorts. 
+In contrast _autonomous_ crowdsourcing serves the community itself.
+Autonomous crowdsourcing can be in a centralized location, like a community-written wiki or video-sharing website, or exist loosely, as in blogs.
+@zwass_cocreation:_2010 explains: "Marketable value is not necessarily consigned to the market—it may be placed in the commons, as is the case with Wikipedia".
+
+Considering the soliciting party as a case of sponsorship or autonomy is useful, though a further distinction should be made between the collective (the _crowd_) and the individual (the _contributors_).
+Crowds collaborate toward a shared goal, as with Wikipedia or a type of open-source software development, while individuals are more self-possessed.
+For example, in citation analysis through web links, as was done with PageRank (<!--TODO cite pagerank paper-->), the large-scale benefits of the crowds were ...
+
+The relationship between the director 
+My effort vs. my benefit vs. their benefit
+
+Symbiosis (both benefit) vs. Parasitism (one benefits at the expense of the other) vs. Commensalism (relationship between two organisms where one organism benefits without affecting the other)
+
 
 ### Object of Interest
 
 * Creation vs. Reaction
 
 ### Criticality of Crowdsourcing
+<!-- TODO I used "centrality above, is it better or worse than criticality?-->
 
-* Central vs. Incidental
+ * How important in the crowdsourcing to the larger project? 
+ * Peripheral / Core
+ * Fairly neglected in literature
+ * Relates to incidental crowdsourcing, which looked at the space of 'peripheral and non-critical' crowdsourcing [@organisciak_incidental_2013]
+ * Notes
+   * Soylent: is Soylent incidental or full-system?
 
 ### Type of Work
 
@@ -183,15 +298,15 @@ Internal crowds are composed solely of contributors from the organization that i
 External crowds are members outside of the institution.
 Vukovic and Batolini also note that _mixed_ crowds are observable.
 
-### Quality control
+#### Necessary Skills
 
-see @quinn_human_2011
+ * mentioned briefly in @quinn_human_2011, anywhere else?
 
-### Necessary skills
+### Quality Control
 
-* mentioned briefly in @quinn_human_2011, anywhere else?
+see @quinn_human_2011, others
 
-### Common design patterns
+### Common Design Patterns
 
  * Microtasking
  * Gamification
@@ -254,13 +369,6 @@ Notable crowdsourcing in the wild
 #### Alonso et al.
 
 ### TREC Crowdsourcing track
-
-
-## Taxonomies of Crowdsourcing
-
-### By Function
-
-### By Motivation
 
 
 ## Research relevant to study
