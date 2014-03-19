@@ -1,12 +1,12 @@
 Correcting for Contributor-Introduced Variance After Contribution 
 ==================================================================
 
-While working to normalize the manner in which users contribute is possible in well-controlled circumstances, there are cases where either 
+While working to normalize the manner in which users contribute is possible in controlled circumstances, there are cases where either 
  the data is already collected, or 
  where there is a limit to the amount of control a system designer can exert over contributors.
 
 It is common to see differences in the habits of contributors that are trying to achieve the same thing.
-<!--For example, when providing opinion ratings it is possible to have different contexts of a 'good' or 'bad' rating, when tagging images there are more or less useful types of tags, and ... <--TODO: citations, final example -->
+<!--For example, when providing opinion ratings it is possible to have different contexts of a 'good' or 'bad' rating, when tagging images there are more or less useful types of tags, and ... TODO: citations, final example -->
 Many tasks that assume an objective, correct contribution are nonetheless are subject to interpretation, especially in volunteered contributions where detailed codebooks are deterrents to casual contributions.
 Likewise, even when a task is subjective, where a contribution is understood to be related to each individual's tastes and opinion, there are still problems of reliability beyond differences of opinion.
 One person's definition of a 3-star opinion judgment or their threshold for what is needed to click an approving 'thumbs up' button might be different from another person's, even if their underlying opinions is identical.
@@ -96,20 +96,46 @@ A few additional questions need to be asked for discussion in the context of the
 One form of analysis that would be useful but was not originally done is to compare the recoverable signal from artificially smaller contributor groups.
 If data collection had been cut off earlier, how accurate would the various methods for correcting against a worker's reliability be?
 
-#### Understanding Deviation from Expectation
+# Understanding Deviation from Expectation
 
-The cornerstone of this chapter will be a study analyzing the deviation of online ratings from the expectation of other humans.
-_If another person is shown an online review, what rating will they expect?_ 
+The cornerstone of this chapter will will a study measuring the value of crowdsourced information in improving information retrieval ranking against the data from Etsy.
+
+Etsy is an online marketplace encouraging  <!--TODO: see their definition -->.
+<!-- The cornerstone of this chapter will be a study analyzing the deviation of online ratings from the expectation of other humans.
+_If another person is shown an online review, what rating will they expect?_ -->
+
+RQ1:
+
+RQ2:
 
 #### Data
 
-The dataset that will be used is the Yelp Dateset Challenge data[^Yelp], released for academic use in 2013.
 
-[^Yelp: http://www.yelp.com/dataset_challenge] <!--_--> 
+#### Design
 
-The dataset includes a snapshot of all of Yelp's ratings and reviews for Phoenix, Arizona and data for the reviewers involved in those contributions.
 
-#### 
+
+
+
+#### Evaluation
+<!--
+What metric?
+	Why?
+	What are the alternatives? Why not those?
+What data?
+	How is it collected?
+	What queries is it run against? Why?
+How is relevance described? By whom?
+-->
+
+The different retrieval models will be evaluated with Normalized Discounted Cumulative Gain (NDCG) with relevance judgements collected on demand.
+
+The robustness of the ranked retrieval models will be measured against a randomly selected subset of real-world queries, provided by Etsy.
+For each query, a description of relevance will be written by myself, and the relevance of each document will be rated by paid workers on a graded relevance scale.
+
+
+
+
 
 ### Correcting for Deviation
 
