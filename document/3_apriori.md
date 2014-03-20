@@ -7,16 +7,35 @@ Humans don't operate with the formality of computers.
 Many of the benefits of crowdsourcing follow from that fact: human contributions are valuable specifically because they are not easily automated.
 However, when using crowd contributions to inform an algorithmic system, as in information retrieval, the inconsistencies of human work present a challenge.
 
-In the first of two research chapters, the proposed dissertation will investigate how the design of crowdsourcing tasks for improved information retrieval metadata affects the quality of the content.
+In the first of two research chapters, the proposed dissertation will investigate how the design of crowdsourcing tasks for collecting useful metadata for information retrieval metadata affects the quality of the content.
 
-When crowdsourcing is used for information retrieval, it usually follows a basic design, with a task, description, and one or more items that are reacted to.
-Most often, this design is applied to creating custom evaluation datasets through relevance judgments[@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [TODO cite twitter, others].
+In a controlled set up, crowdsourcing in information retrieval usually follows a typical design: a task, description, and a set of one or more documents that are reacted to.
+This type of design is common for creating custom evaluation datasets through relevance judgments[@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information[<!--TODO cite twitter, others -->].
 <!-- Removed: Some exceptions to this approach have been attempted with success[<!--TODO-->].-->
 
-Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008, @organisciak_evaluating_2012; @howe_crowdsourcing:_2008; @organisciak_incidental_2013].<!-- TODO: cite more-->
+Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008, @organisciak_evaluating_2012; @howe_crowdsourcing:_2008; @organisciak_incidental_2013].<!--_ TODO: cite more-->
 The manner to improve on a basic task/description/item design is not immediately clear: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO cite -->.
 
-In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will evaluate the effect of task design on collected information retrieval data.
+In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will compare the effect of task design on collected information retrieval data.
+Scoped to reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval --a typical encoding task performed by paid crowds an information retrieval task, the following questions will be pursued:
+
+__RQ1__: Which approaches to collection interface designs are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
+
+__RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?
+
+__RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
+
+__RQ4__: Do the questions above generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)? 
+
+RQ1 is the question of design, intending to synthesize prior work and brainstorming directions to explore.
+It is a subjective question, but one still worth pursuing with diligence.
+RQ2 and RQ3 are the primary questions, on quality (for computational use) and satisfaction, that will be measured quantitatively in the proposed study.
+RQ4 is the question of generalizability that expands beyond a feasible scope, but can be approached in preliminary ways.
+
+Quality
+Designs
+Satisfaction
+Generalizability
 
 Evaluating task designs, I will evaluate two interfaces for encouraging less deviation between human contributors by providing training and feedback mechanisms, respectively.
 These interfaces, motivated by efforts in my earlier work,  are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
