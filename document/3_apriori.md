@@ -10,40 +10,45 @@ However, when using crowd contributions to inform an algorithmic system, as in i
 In the first of two research chapters, the proposed dissertation will investigate how the design of crowdsourcing tasks for collecting useful metadata for information retrieval metadata affects the quality of the content.
 
 In a controlled set up, crowdsourcing in information retrieval usually follows a typical design: a task, description, and a set of one or more documents that are reacted to.
-This type of design is common for creating custom evaluation datasets through relevance judgments[@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information[<!--TODO cite twitter, others -->].
-<!-- Removed: Some exceptions to this approach have been attempted with success[<!--TODO-->].-->
+This type of design is common for creating custom evaluation datasets through relevance judgments [@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [<!--TODO cite twitter, others -->].
+<!-- Removed: Some exceptions to this approach have been attempted with success[].-->
 
 Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008, @organisciak_evaluating_2012; @howe_crowdsourcing:_2008; @organisciak_incidental_2013].<!--_ TODO: cite more-->
-The manner to improve on a basic task/description/item design is not immediately clear: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO cite -->.
+The manner to improve on a basic task/description/items interface design is not immediately clear, though: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO cite -->.
 
 In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will compare the effect of task design on collected information retrieval data.
-Scoped to reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval --a typical encoding task performed by paid crowds an information retrieval task, the following questions will be pursued:
+Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval -- a typical encoding task performed by paid crowds, the following questions will be pursued:
 
-__RQ1__: Which approaches to collection interface designs are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
+ * __RQ1__: Which approaches to collection interface designs are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
 
-__RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?
+ * __RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?
 
-__RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
+ * __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
 
-__RQ4__: Do the questions above generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)? 
+ * __RQ4__: Do the questions above generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)? 
 
-RQ1 is the question of design, intending to synthesize prior work and brainstorming directions to explore.
-It is a subjective question, but one still worth pursuing with diligence.
-RQ2 and RQ3 are the primary questions, on quality (for computational use) and satisfaction, that will be measured quantitatively in the proposed study.
-RQ4 is the question of generalizability that expands beyond a feasible scope, but can be approached in preliminary ways.
+RQ1 is the question of design, on synthesizing prior work and brainstorming directions to explore.
+It is a partially subjective question, but one still worth pursuing with diligence.
+As research by (TODO <!--cite-->) found, the effects seen in traditional user studies are still present in online crowd markets.
+Their finding suggests that non-crowdsourcing research in human-computer interaction is informative for our purposes.
+This proposal chapter explores some possible design decisions and argues why they should be studied.
 
-Quality
-Designs
-Satisfaction
-Generalizability
+RQ2 and RQ3 are the primary questions being explored in this chapter of the proposed dissertation, on quality for computational use and on satisfaction.
+While this dissertation is explicitly pursuing the former question, collecting computationally useful contributions needs to be understood in the context of contributor satisfaction.
+The trade-off between contributions that crowds want to make and the reliability of the data is a central consideration for fostering sustainable, or alternately affordable, crowdsourcing.
 
+RQ4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be approached.
+
+### Overview of proposed research design
+
+What type of designs do I propose below?
 Evaluating task designs, I will evaluate two interfaces for encouraging less deviation between human contributors by providing training and feedback mechanisms, respectively.
 These interfaces, motivated by efforts in my earlier work,  are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
 They will be compared to a baseline basic interface, as well as an alternative system that encourages quicker responses.
 
-Since the focus is on design for crowdsourcing, I will adopt an established information retrieval problem to control for the task:
+Since the focus is on design for crowdsourcing in information retrieval, I will adopt an established information retrieval problem to control for the task:
  enriching terse microblogging messages through paid crowdsourcing.
-What is being completed is not as central to this study as how it is done, but this a task that is structured similar to many on-demand crowdsourced information retrieval tasks.
+What is being completed is not as central to this study as how it is done, but this is a task that is structured similar to many on-demand crowdsourced information retrieval tasks.
 
 Workers will identify the topic of a microblogging message from Twitter -- a tweet.
 This is a task where the information object is sparse and the topics are often short-lived and previously unseen, making crowdsourcing a promising approach to improve information retrieval across the data.
@@ -54,48 +59,57 @@ It is also a realistic task that has been attempted with crowdsourcing in the pa
 This section of the dissertation proposal serves as a skeleton for the corresponding dissertation chapter.
 Below, I 
  outline the problem of collecting higher reliability work from human workers,
- discuss some of my previous research on the topic,
+ discuss motivating research on the topic -- particularly my previous research as a doctoral student,
  and present the scope, methodology, data, and evaluation for proposed new research.
 
 <!-- formerly labeled 'Problem'.. still need a problem section, or was the intro chapter's section sufficient? -->
+
 ## Motivation
 
 Why is task design important to the understanding of intercoder reliability in crowdsourcing?
 Crowdsourcing task design is a problem that...
+
+Crowdsourcing is increasingly being used for information retrieval.
+Particularly, the on-demand nature of paid crowdsourcing is being embraced for uses such as relevance judgments [@alonso_crowdsourcing_2008], to describing queries [@chen_improving_2013], and to annotating entities []<!--TODO cite finin-->.
+
+
 
 <!-- To cite: post-mortems of failed sites -->
 
 ### Work up to now
 
 My past doctoral-level research motivates this chapter in a number of ways.
-In @organisciak_evaluating_2012 we found evidence that at least some error in crowdsourced relevance judgments stems from differing but not necessarily malicious interpretations of the task, suggesting that improved quality can follow from tweaks in design.
-During research on @organisciak_personalized_2013, we found that asking people to reflect on their response changed the nature of their response, with less internal consistency.
-In a sample study comparing the space of incidental crowdsourcing across two systems [@organisciak_incidental_2013], I found that an 'easy' rating interface -- one that puts up less hurdles to contribution -- results in a shifted distribution of ratings than a 'hard' interface.
 
-#### ASIS&T Paper
+ * In @organisciak_evaluating_2012 we found evidence that at least some error in crowdsourced relevance judgments stems from differing but not necessarily malicious interpretations of the task, suggesting that improved quality can follow from tweaks in design.
+ * During research on @organisciak_personalized_2013, we found that asking people to reflect on their response changed the nature of their response, with less internal consistency.
+ * In a sample study comparing the space of incidental crowdsourcing across two systems [@organisciak_incidental_2013], I found that an 'easy' rating interface -- one that puts up less hurdles to contribution -- results in a shifted distribution of ratings than a 'hard' interface.
+
+#### @organisciak_evaluating_2012
 
 In @organisciak_evaluating_2012, we consider a variety of methods for removing error from relevance judgments collected on Mechanical Turk.
 This study will be discussed in-depth in the next chapter, on accounting for bias after collection, but it also revealed a finding that hints at the importance of task design.
 
-In relevance judgments, workers are shown a _query_, a _description_ of what is relevant to the query, and a set of _results_ to classify as relevant or not relevant to the query. In our tasks, we showed ten results per tasks, using full item records from an online catalogue.
+In relevance judgments, workers are shown a _query_, a _description_ of what is relevant to the query, and a set of _results_ to classify as relevant or not relevant to the query.
+In our tasks, we showed ten results per tasks, using full item records from an online catalogue.
 
 Looking at the amount of time that a worker spends on classifying each result, we found that overall neither slower workers nor faster workers are more consistently reliable (Wilcoxon rank sum $p = 0.064$, but $p = 0.154$ when excluding extreme outliers).
-However, looking at that value blocked by the order of results -- i.e. how reliability are workers taking $x$ time on the $y^th$ result of a task -- we found that the time spent on correct classifications are significantly higher than the time spent on incorrect classifications (Wilcoxon Rank Sum one-sided $p=0.01$).
+However, looking at that value blocked by the order of results -- i.e. how reliable are workers taking $x$ time on the $y^th$ result of a task -- we found that the time spent on correct classifications are significantly higher than the time spent on incorrect classifications (Wilcoxon Rank Sum one-sided $p=0.01$).
 For all other relevance judgments in a task, the amount of time spent was insignificant.
 
 Why are slower workers better for the first item in a task set, but not for subsequent items?
 Remembering that the time spent on the first relevance judgment is confounded with the start of the task and reading the description of what is relevant, our hypothesis was that the effect is actually related to closer reading of instructions.
-Partially showing this to be the case, we found that those tasks where a worker spent more time on the first time were correlated to better performance overall (Figure<!--TODO-->).
+Partially showing this to be the case, we found that those tasks where a worker spent more time on the first task were correlated to better performance overall (Figure<!--TODO-->).
 
-It does not matter how much time a worker spends on a task, as long as they spend enough time figuring it out at the beginning. How do you encourage this form of behaviour? @organisciak_evaluating_2012 did not explore the design of tasks, but the findings suggest two things.
+It does not matter how much time a worker spends on a task, as long as they spend enough time figuring it out at the beginning.
+How do you encourage this form of behaviour? @organisciak_evaluating_2012 did not explore the design of tasks, but the findings suggest two things.
 
-Most significantly, it encourages the assumption of honest but biased workers.
+First, it encourages the assumption of honest but biased workers.
 If a worker interprets the codebook, i.e. the relevance description, differently, then they will disagree with the consensus and be considered a bad performer.
 Nothing here suggests a malicious worker, only a misguided one.
 After all, the effect where good work on the first judgment was representative of performance was not seen in an subsequently judgments.
 
 The second implication is that a better designed task can help.
-While much research tends to focus on the honesty and quality of paid crowdsourcing workers, part of the responsibility toward good quality crowdsourcing data is the requesters.
+While much research tends to focus on the honesty and quality of paid crowdsourcing workersi <!--TODO-->, part of the responsibility toward good quality crowdsourcing data is the requesters.
 In a task such as relevance judgments, encouraging better work might require workers to be more aware of their performance or to reassess their understanding of the task when it is necessary. Some possibilities to research might be,
 
 * A training task, where workers are walked through the codebook in relation to actual tasks, and told why specific results are relevant or not relevant.
@@ -106,14 +120,16 @@ In a task such as relevance judgments, encouraging better work might require wor
 
 #### Incidental Crowdsourcing
 
-In [@organisciak_incidental_2013], I looked at a facet of crowdsourcing that I called _incidental crowdsourcing_ (IC).
+In @organisciak_incidental_2013, I looked at a facet of crowdsourcing that I called _incidental crowdsourcing_ (IC).
 
 Incidental crowdsourcing refers to crowdsourcing in the periphery.
 These are elements that are unobtrusive and non-critical to the user or the system.
 They generally:
+
  * describe existing information,
  * collect contributions in low-granularity mechanisms,
  * and favor interface choices over statements.
+
 An example of an incidental crowdsourcing mechanic might be a 'thumbs-up' voting button on a video-sharing website or tagging functionality on an image-sharing website that does not force itself upon users.
 
 By not taking users hostage or asking users for overly attentive or time-consuming contributions, incidental crowdsourcing contributions result in greater numbers of contributions, even if individual contributions are less frequent.
@@ -126,7 +142,7 @@ however, while Google's store allows them to offer this rating quickly and witho
 
 ![The difference in average ratings for the same items between Amazon Appstore and Google Play](images/comparison-of-average-ratings.png)
 
-While there are other potential factors affecting differences between the systems, this cursory comparison suggests that the attentiveness and introspection required of a crowdsourcing contribution affects what that contribution will look like.
+Though other potential factors may also affect differences between the systems, this cursory comparison suggests that the attentiveness and introspection required of a crowdsourcing contribution affects what that contribution will look like.
 
 Since most incidental crowdsourcing deals with reaction to existing documents rather than creation of outright new works, the future directions suggested by this work (in addition the work itself) are pertinent to the proposed dissertation's focus on crowdsourcing for information retrieval indexing.
 
@@ -134,7 +150,7 @@ Since most incidental crowdsourcing deals with reaction to existing documents ra
 
 Additional evidence for this was encountered in a peripheral finding while conducting research for @organisciak_personalized_2013.
 In this case, we were again looking at opinion ratings on a five-point scale, this time on Mechanical Turk. 
-Workers were asked to provide their personal opinions on whether they liked the style of each of 100 saltshakers.
+Workers were asked to provide their personal opinions on whether they liked the style of each of 100 salt shakers.
 In one group of workers, this is all they were asked.
 In another group, we also asked workers to explain why they gave that rating.
 Alongside their rating of the item, they would provide a short explanation, such as 'I like the colors'.
@@ -154,39 +170,40 @@ In contrast, the workers that were asked to explain their rating tempered their 
 The distribution of average ratings of individuals was normal (<!--TODO normality test results-->) about a mean of <!--TODO--> with a standard deviation of <!-- TODO -->.
 
 [] <!-- TODO: Image -->
-<!-- TODO: Figure XXX: Comparison of worker rating distributions for preferences in salt shakers.-->
+<!-- TODO: Figure XXX: Comparison of worker rating distributions for preferences in salt shakers.
 In the basic set, workers were asked only for a rating.
-In the detailed set, workers were asked for a rating and an brief explanation of why they chose that rating.
+In the detailed set, workers were asked for a rating and an brief explanation of why they chose that rating.-->
 <!-- Unpublished research, (TODO: text to make clear that it is Microsoft IP, not University's ) -->
 
-It is clear that workers in the set with more introspection 
-Howe
-
+It is clear that workers in the set with more introspection performed work differently.
+However, their contributions were also _less_ reliable.
+The contributions were more likely to fail an internal consistency test, with an average deviation of (<!--TODO-->) stars when given the same item again in a task set.
+In contrast, the 'quick' task group had an average deviation of <!--TODO--> in the consistency items.
 
 Figure YYY also shows the distribution of rating values overall.   
 
-### How this fits in the dissertation
+
+
+### Motivating and related work
+
+<!-- TODO: lots of lit review here!! -->
+
+__Notes__
+
+ * On-demand data collection for IR in increasingly common
+ * Others have warned that design plays an important role (e.g. Alonso and Lease, Howe, others) <!--TODO-->
+   * That being said research on the area of design is sparse
+     * TREC track? 
+     * Research on Games with a Purpose is the exception
 
 ## Scope
 
-### Paid Crowdsourcing
-In looking at the design of contribution tasks, I hope to concentrate on paid crowdsourcing.
-For the scope of this study, it would be intractable to look at at the design of both paid and volunteer crowdsourcing, so I will pursue the facet more pertinent to information retrieval.
-<!--'More pertinent': Is this true? TODO: Rewrite-->
+In looking at the design of contribution tasks, I will be focusing on paid crowdsourcing.
+For the scope of this study, it would be intractable to look at at the design of both paid and volunteer crowdsourcing task, so I will pursue the part that is more common for information retrieval researchers to have control over.
 Paying workers is only one part of crowdsourcing, and one that arguably tethers the scalability of a task by anchoring it
 to financial means.
 However, it is easier to control for by removing much of the complexities of motivation.
-Information retrieval researchers are also using the predictability of paid crowd markets like Amazon's Mechanical Turk to generate on-demand data, making design for those systems important.
-<!--Add citations?-->
-
-More importantly, much information retrieval research occurs parallel to the system of content
-<!--Users on Flickr, for example, contribute semantic tags-->
- information retrieval systems 
-
-### Literature
-
-
-#### Prior Work 
+Information retrieval researchers are using the predictability of paid crowd markets like Amazon's Mechanical Turk to generate on-demand data, making design for those systems important.
 
 ## Proposed Research
 
@@ -260,9 +277,71 @@ The data that will be used in a randomized collection of image records from...
 
  TODO: Where is the data going to come from? It needs to be something that can be evaluated against basic retrieval -->
 
-### Parameterization
+### Task Flow
 
-This study will compare three parameterizations of the 
+To see identify areas of crowdsourced task design, let's establish the common design pattern that we are working within.
+
+Commonly, a worker goes through the following steps:
+
+ 1. Worker $w$ arrives at task page
+ 2. $w$ is shown a preview of task $t$
+ 3. Worker $w$ accepts the task $t$ 
+ 4. Work performs task $t$ and submits
+ 5. A new task $t'$ is chosen and, worker is taken back to _step 2_ or _step 3_
+
+The task typically has the following parts:
+
+ * __Goal__ statement/question. _e.g. "Is this page relevant to query $q$?", "Find the topic of a tweet."_
+ * __Instructions__ for performing the task.
+ * one or more __Items__ that worker responds to. _e.g. webpage snippets, microblogging messages_
+ * __Action__, one per item: the data collection mechanism.
+
+### Gedanken Experiments
+
+Worker
+
+ - Experience.
+ - Self-confidence and decisiveness.
+ - Attentiveness and fatigue.
+ - Perceived importance of task. <!--(although this would simply affect the other attributes. e.g. if you need to get the correct answer to diffuse the bomb, time spent will change, probably self-confidence)-->
+ - time spent on each task.
+
+Task
+
+ * Payment.
+ * Bonuses.
+ * Number of tasks available.
+
+Goal
+
+ * ?? -  (TODO)
+
+Instructions
+
+ * Clarity.
+ * Restrictive vs. interpretable.
+ * Length.
+
+Item
+
+ * Number of items in a task.
+
+Action
+
+ * Complexity of action. e.g. granularity.
+
+Big idea:
+Let's say we have a Twitter encoding task. How would the contribution change if:
+- Contributors had to complete only 200 tasks before finishing? 300? 4000? Only 1?
+- Contributors were tested on the instructions at the beginning of the task? If there were gold label items throughout the task? If everything had a known answer?
+- Contributors were asked to volunteer their time? Were paid 1c per task? Were paid 10c per task? Were paid by the hour?
+- Contributors had tasks/time quotas to meet for bonuses? What if they were forced into these quotas (with tasks automatically moving forward)? What if a timer ticked away until their task disappears?
+- What if contributors were told when they got something wrong? What if you lie to them?
+
+### Proposed designs
+
+ - So what tweaks will _this study_ measure?
+
 
 #### Basic interface
 
@@ -310,23 +389,3 @@ The timer has been used previously in <!--TODO cite--> to push people into a vis
 #### Baselines
 
 
-## Gedanken Experiments
-
-_Some notes on how the design might affect the_
-
-Attributes:
-- restrictive vs. interpretable instructions
-- clarity of instruction
-- attentiveness and fatigue of worker
-- experience of worker
-- time spent on each task
-- self-confidence/decisiveness or worker
-- perceived importance of task (although this would simply affect the other attributes. e.g. if you need to get the correct answer to diffuse the bomb, time spent will change, probably self-confidence)
-
-Big idea:
-Let's say we have a Twitter encoding task. How would the contribution change if:
-- Contributors had to complete only 200 tasks before finishing? 300? 4000? Only 1?
-- Contributors were tested on the instructions at the beginning of the task? If there were gold label items throughout the task? If everything had a known answer?
-- Contributors were asked to volunteer their time? Were paid 1c per task? Were paid 10c per task? Were paid by the hour?
-- Contributors had tasks/time quotas to meet for bonuses? What if they were forced into these quotas (with tasks automatically moving forward)? What if a timer ticked away until their task disappears?
-- What if contributors were told when they got something wrong? What if you lie to them?
