@@ -96,7 +96,7 @@ A few additional questions need to be asked for discussion in the context of the
 One form of analysis that would be useful but was not originally done is to compare the recoverable signal from artificially smaller contributor groups.
 If data collection had been cut off earlier, how accurate would the various methods for correcting against a worker's reliability be?
 
-# Understanding Deviation from Expectation
+## Understanding Deviation from Expectation
 
 The cornerstone of this chapter will will a study measuring the value of crowdsourced information in improving information retrieval ranking against the data from Etsy.
 
@@ -108,16 +108,16 @@ RQ1:
 
 RQ2:
 
-#### Data
+##### Data
 
 
-#### Design
+##### Design
 
 
 
 
 
-#### Evaluation
+##### Evaluation
 <!--
 What metric?
 	Why?
@@ -137,7 +137,7 @@ For each query, a description of relevance will be written by myself, and the re
 
 
 
-### Correcting for Deviation
+#### Correcting for Deviation
 
 Following from the analysis of how and when contributor habits deviate from expected actions, there will be some research put 
 
@@ -145,13 +145,13 @@ $P(r_s|C)\approx(1-\lambda)(P(r)+\lambda P(r|R)$ <!--_-->
 Where, 
 $P(r|R)=\sum_{i=1}^{n}{P(r|t_i}$
 
-#### Evaluation
+##### Evaluation
 
-#### Baseline
+##### Baseline
 
 
 
-## Related questions
+### Related questions
 
 How does the stylistic variance of contributions change through the lifespan of a system?
 We hypothesize that as crowdsourcing systems grow in size, their contributions also grow less variant in their approach.

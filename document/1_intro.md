@@ -21,7 +21,7 @@ Introduction
 
 > In these democratic days, any investigation in the trustworthiness and peculiarities of popular judgments is of interest -- @galton_vox_1907
 
-## Introduction
+<!--## Introduction-->
 
 The internet is growing increasingly interactive as it matures.
 Rather than simply transmitting information to readers, web pages allow their audience to react and interact with their information.
