@@ -213,7 +213,7 @@ There will be two tasks, both related to encoding microblogging messages, and fo
 
 ### Task
 
-The metadata encoding task that will be compared is a microblog annotation task.
+The metadata encoding task that will be controlled for is a microblog annotation task.
 
 Microblogging messages, in this case from Twitter, are notably truncated.
 Since Twitter messages are limited to 140 characters, messages often are curt, missing context, and heavily abbreviated.
@@ -236,7 +236,7 @@ The first task will be a topic identification task:
 Workers are shown a tweet that contains the terms of a query, $Q$, where $Q$ represents an entity.
 Their task will be to describe whether the entity is the topic of the tweet, or simply mentioned.
 
-For example, <!-- TODO -->
+For example, ... <!-- TODO -->
 
 Such a task is useful <!-- TODO: because... -->, but potentially easy to misinterpret by contributors conflating a term being the topic of a tweet with merely being in the tweet.
 
@@ -258,8 +258,29 @@ However, similar data preparation steps will be required, removing expected spam
 <!-- TODO: estimates of Twitter duplicates -->
 <!-- TODO: research hueristics on removing Twitter spam -->
 
+__Notes__:
+ * Remove second task. Keep task short and typical (i.e. unextraordinary) - it's not what I'm trying to measure
+
+#### Data
+
+<!-- TODO -->
+
+__Notes__
+
+ * Building study dataset
+   * Data will be collected from Twitter through Search API
+     * Alternately, is the TREC data accessible?
+   * Data type 1: select random stream tweets 
+   * Data type 2: select all tweets about prominent topics (e.g. Obama, Bieber) - ones where the entity may be mentioned but not necessary the focus
+   * Number of tweets?
+     * Informally, 1000 is a nice number, will need consideration of a) statistical power and b) typical time per task (TODO)
+ * Preparing evaluation corpus
+   * Gold standard set encoded by hand by myself
+   * A second ground truth dataset will be built after the experiments are run, by pooling _all responses_ for a consensus
+   * The second dataset will be compared against my ground truth, and points of disagreement will be re-evaluated
 
 <!--
+
 ### Data
 
 This study will look at enriching metadata for records in a cultural heritage collection for information retrieval.
@@ -279,7 +300,7 @@ The data that will be used in a randomized collection of image records from...
 
 ### Task Flow
 
-To see identify areas of crowdsourced task design, let's establish the common design pattern that we are working within.
+Before proposing the variations of designing the microblogging task to be studied, let's first establish the space within which we are working.
 
 Commonly, a worker goes through the following steps:
 
@@ -289,58 +310,97 @@ Commonly, a worker goes through the following steps:
  4. Work performs task $t$ and submits
  5. A new task $t'$ is chosen and, worker is taken back to _step 2_ or _step 3_
 
-The task typically has the following parts:
+The above steps are the model used by Amazon Mechanical Turk when a task is followed through to completion.
+Workers are also given escape options, to skip, reject or return tasks.
+
+Metadata enrichment tasks generally consist of the following parts:
 
  * __Goal__ statement/question. _e.g. "Is this page relevant to query $q$?", "Find the topic of a tweet."_
  * __Instructions__ for performing the task.
  * one or more __Items__ that worker responds to. _e.g. webpage snippets, microblogging messages_
  * __Action__, one per item: the data collection mechanism.
 
+
 ### Gedanken Experiments
 
-Worker
+Understanding the popular model of paid crowd work on enriching known items, we can observe a number of factors that may potentially affect the manner in which our microblog encoding task is completed.
+First are the parameterizations of the task within its existing structure -- changes to the goal, instructions, item, action, and even the task itself.
+Ways that these can change from task to task include:
 
- - Experience.
+ * __Task__
+   * Payment.
+   * Bonuses.
+   * Number of tasks available.
+ * __Goal__
+   * ?? -  (TODO)
+ * __Instructions__
+   * Clarity.
+   * Restrictive vs. interpretable.
+   * Length.
+ * __Item__
+   * Number of items in a task.
+ * __Action__
+   * Complexity of action. e.g. granularity.
+
+Of course, we're not constrained to the task structure provided above.
+We can add elements to the task design before the task is accepted, at the start of the task, during or in response to individual interactions, or after the task is completed.
+Taking away elements might also be possible, such as the instructions, though it is hard to imagine that doing would would have a positive effect on the reliability or variance of the data.
+
+The possibilities are endless for adding parts to the basic task.
+To inspire useful ones, it is helpful to consider one final, naturalistic set of factors that may affect the outcome of a paid crowdsourcing task: worker behaviours.
+
+A worker's contribution may be affected by a myriad of factors, such as experience, skill, time spent per task, and attentiveness.
+Which of these can be influenced by external factor? 
+
+ - Experience. Experience is a product of sustained interaction with the current type of task.
+   It can affecting indirectly by focusing on methods to extend the length of a user's interaction, such as bonus payments for staying around.
+ * Skill. Skill is developed over time and is mostly affected by factors internal to the worker.
+   To the extent that we could affect it, most functionality would encourage greater experience.
+   Teaching workers by reinforcing their successes and failures might also have an effect.
  - Self-confidence and decisiveness.
+    <!-- TODO -->
  - Attentiveness and fatigue.
- - Perceived importance of task. <!--(although this would simply affect the other attributes. e.g. if you need to get the correct answer to diffuse the bomb, time spent will change, probably self-confidence)-->
+ - perceived importance of task. <!--(although this would simply affect the other attributes. e.g. if you need to get the correct answer to diffuse the bomb, time spent will change, probably self-confidence)-->
  - time spent on each task.
 
-Task
+#### Brainstorming
 
- * Payment.
- * Bonuses.
- * Number of tasks available.
+In a moment we'll rein in discussion to a smaller set of design interfaces to test.
+However, an exercise to think through the possibilities afforded to us by the features in the previous section will be helpful.
 
-Goal
+Consider this study's Twitter encoding task.
+How would the contribution change if:
 
- * ?? -  (TODO)
-
-Instructions
-
- * Clarity.
- * Restrictive vs. interpretable.
- * Length.
-
-Item
-
- * Number of items in a task.
-
-Action
-
- * Complexity of action. e.g. granularity.
-
-Big idea:
-Let's say we have a Twitter encoding task. How would the contribution change if:
-- Contributors had to complete only 200 tasks before finishing? 300? 4000? Only 1?
-- Contributors were tested on the instructions at the beginning of the task? If there were gold label items throughout the task? If everything had a known answer?
-- Contributors were asked to volunteer their time? Were paid 1c per task? Were paid 10c per task? Were paid by the hour?
-- Contributors had tasks/time quotas to meet for bonuses? What if they were forced into these quotas (with tasks automatically moving forward)? What if a timer ticked away until their task disappears?
-- What if contributors were told when they got something wrong? What if you lie to them?
+- Tasks were 100 items long? 
+  200? 1000? Only 1?
+* Instructions were written very tersely?
+  Verbosely, with many examples?
+- Contributors were tested on the instructions at the beginning of the task?
+  If there were gold label items throughout the task?
+  If everything had a known answer and workers were inconvenienced (e.g. with a time delay) when they got an answer wrong?
+- Contributors were asked to volunteer their time?
+  Were paid 1c per task? Were paid 10c per task?
+  Were paid by the hour?
+* Contributors were paid bonuses for performance against a ground truth or internal consistency?
+  For continued task completion?
+  For difficulty of their classification?
+* Contributors were told their performance (or estimated performance)?
+  What if they were ranked against other workers?
+  What if they gained levels or earned badges for performance?
+- Contributors had tasks/time quotas to meet for bonuses?
+  What if they were forced into these quotas (with tasks automatically moving forward)?
+  What if a timer ticked away until their task disappear?
+- contributors were told when they got something wrong? What if you lie to them?
 
 ### Proposed designs
 
  - So what tweaks will _this study_ measure?
+
+Question: why not studying other properties?
+ * Designs to encourage longer engagement from individuals does not appear to be a promising direction.
+   Worker experience was previously measured [@organisciak_evaluating_2012] and found to not be significant for simple tasks.
+ * The effect of incentive structures, payment and bonuses, has been studied frequently, notable by @mason_financial_2010. 
+ * TODO...
 
 
 #### Basic interface
