@@ -34,3 +34,6 @@ progress.png
 .Rhistory
 *.bcf
 *.run.xml
+~*
+temp.*
+document/*_*.docx
