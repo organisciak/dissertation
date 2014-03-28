@@ -390,24 +390,44 @@ How would the contribution change if:
 - Contributors had tasks/time quotas to meet for bonuses?
   What if they were forced into these quotas (with tasks automatically moving forward)?
   What if a timer ticked away until their task disappear?
-- contributors were told when they got something wrong? What if you lie to them?
+- Contributors were told when they got something wrong? What if you lie to them?
 
 ### Proposed designs
 
  - So what tweaks will _this study_ measure?
 
 Question: why not studying other properties?
- * Designs to encourage longer engagement from individuals does not appear to be a promising direction.
+
+ * Designs to encourage longer engagement from individuals do not appear to be a promising direction.
    Worker experience was previously measured [@organisciak_evaluating_2012] and found to not be significant for simple tasks.
  * The effect of incentive structures, payment and bonuses, has been studied frequently, notable by @mason_financial_2010. 
  * TODO...
 
+As outlined in the overview of my own doctoral research, a few directions look like promising continuations of my research.
+ * It is still unclear whether simple encoding tasks benefit more from workers using their brain or gut.
+   <!-- TODO: Kahneman and Tversky -->
+   Designs that can change a worker's attentiveness address an interesting problem and may bring potential improvements.
+ * Having previously found that reading instructions slowly is important for properly performing work, it should be seen whether a task can push a worker into internalizing the codebook rather than interpreting it.
+ * Understanding that many reliability errors are introduced by honest workers that intend to do well, it may also be important to keep workers informed of their performance, at least when they are not performing well.
+
+With those considerations in mind, I propose the three interfaces to study for crowdsourced data collection: a training interface, a feedback interface, and a time-limited interface.
 
 #### Basic interface
 
-The basic interface will show workers an item, 
+The basic interface will look like a typical task, following conventions seen in Mechanical Turk usage.
+It will show workers an tasks with a goal, description, and ten items to perform actions on.
+The goal of the interface will be to "identify the topic of a tweet."
+For each item, a multiple-choice question will be posed, with the proper noun phrases provided as options, as well as a free-text "Other" category and an "unknown" option. 
+The description will explain what a "topic" is, and make clear the difference between a topic and simply a mention.
+An example will be included with the description, but as a pop up window behind a "See Example" link that needs to be clicked.
+This is done to conform to the convention that instructions should not be too long, in order not to push the actual action items 'below the fold'.
+Amazon's own advice for designing good tasks (TODO cite) states that the task should not require scrolling to start.
 
-This information will collect... <!-- TODO -->
+TODO
+
+ * Example of item and options
+ * Write description
+ * Mockup of interface
 
 #### Training interface
 
@@ -419,9 +439,27 @@ Incorrect answers will also be given an explanation of why the actual answer is 
 
 The training tasks will hand-designed, based on a random sample of items.
 
+TODO
+
+ * Add figure of mockup
+
 #### Feedback Interface
 
-In the feedback interface, a worker is taught 
+In the feedback interface, a worker is shown feedback about their estimated performance on past tasks.
+The first that they complete is identical to the basic interface.
+Starting with the second task, however, the top of the interface will tell users:
+
+ * Their estimated performance, in terms of agreement with other workers
+ * A visualization of where they fall in the distribution of all workers, from best performing to worst
+   * TODO: add figure (something like:  |--------I--|)
+
+Since the interaction of this interface truly begins on the second task, evaluation of this interface will also focus on users returning after their first task.
+
+TODO
+
+ * Add details of calculation for reliability
+ * Add mockup figure
+ * Calculate stats for another dataset on what percentage of contributions are not the first task done by a user.
 
 <!--
 ##### Rough Notes
@@ -434,18 +472,77 @@ TODO -->
 
 #### Time-Limited Interface
 
-As hinted at during work on <!--TODO CITE MSR, DH -->, not all crowdsourcing contribution cases require a
+As hinted at during work on (<!--TODO CITE MSR, DH -->), not all crowdsourcing contribution cases require more focus:
+sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
 
-The final data collection interface will encourage workers to complete tasks quickly by giving them a timer.
+In contrast to the training and feedback interfaces, which will serve to slow down workers and make them more focused on their contributions, the final data collection interface will pursue the opposite approach.
+The time-limited interface encourages quicker interactions by giving users a timer to complete all tasks.
 
-The timer has been used previously in <!--TODO cite--> to push people into a visceral form of task completion.
+This approach has been previously used in (<!--TODO cite-->) to push people into a visceral form of task completion.
 
+TODO
+
+ * To explain: how does the timer cut off slow workers? (With bonuses that are only given per item of task-set finished within time limit)
+ * What is the time limit? This needs to be measured to determine a good value
+ * Add mackup of interface
 
 ### Evaluation
 
 <!--Talk about Mechanical Turk. -->
 <!--Talk about the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
 
-#### Baselines
+The experiments in this study will be run in a naturalistic setting: running directly on a paid crowdsourcing platform, Amazon Mechanical Turk, with real workers.
+There are trade-offs to this setting.
+It is easy to intrumentalize and properly captures the actual skills and attentiveness of paid crowd workers.
+However, working within the conventions of the system means that some parts cannot be controlled.
+For example, workers cannot be forced to perform multiple tasks, simply encouraged to do so.
+Also, the actual user pools testing the different interfaces are not necessarily the same individuals.
+Thus, it is important that the users are similarly representational: it would be problematic if one interface was used mainly by Indian residents (the second largest nationality on Mechanical Turk) while another was performed mainly by American residents.
 
+For this reason, each interface will be evaluated with temporal and geographic restrictions.
+Workers will be restricted to American workers, and tasks will each be posted during the American work day: between 10am and 1pm Pacific Time during weekdays.
+<!-- Does this narrow my findings too much? There should be work that informs us more about this-->
 
+#### Baseline
+
+The baseline for evaluation is the performance of workers on the basic contribution interface.
+
+#### Measurements
+
+Primary questions
+
+ * Quantitative
+   * What is the mean agreement between workers encoding the same tweet?
+     * Null hypothesis: That the agreement distributions for interface X is equal to or less than the distribution for the basic interface.
+   * What is the internal consistency of workers when they are asked to encode the exact same tweet?
+     * Null hypothesis: That the consistency distributions for interface X is equal to or less than the distribution for the basic interface.
+ * Qualitative
+   * User feedback: all tasks will include optional feedback forms.
+     This will include an free-text field for any communication that workers may want to pass on, and a Likert scale question on how interesting the task was.
+
+Secondary questions 
+
+ * What is the mean time a worker spends on their first task set? What is the amount of time workers spend on ten task sets?
+ * What is the mean number of task sets that workers perform?
+ * (TODO: still working on phrasing for COST question) <!--What is the expected cost per -->
+
+TODO
+
+* Add equations to show how these are calculated
+
+### Implementation Note
+
+The experiments will be performed on Amazon's Mechanical Turk, using an API that allows external pages to be hosted within the Mechanical Turk interface.
+Funds for workers will be provided out of pocket, though I will seek dissertation research funding where available. <!-- TODO look into sources -->
+
+The systems themselves will be developed using JavaScript for the front end, built on top of the Backbone.js model-view library with Require.js used to modularize the code.
+Backbone.js is a strong choice for binding data to arbitrary views, offering flexibility for our comparative interfaces.
+On the back-end, the stack will be run on a Node.js server with MongoDB for data storage.
+These options are not critical, but they are fast for concurrent activities, reducing my server needs.
+
+The software will be developed by myself, but is not drastically different than past systems that I have built.
+Honoring the notion of dissertation work as a public contribution, the system will be developed in a reusable manner, and released with an open-source Apache license at https://github.com/organisciak/crowdy.
+
+## Conclusion
+
+TODO
