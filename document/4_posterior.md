@@ -13,10 +13,11 @@ One person's definition of a 3-star opinion judgment or their threshold for what
 
 In the second of two research chapters, the proposed dissertation will investigate the issue of interpreting the human-introduced variance in already-collected metadata.
 This will 
- a) integrate previously-completed research on improving signal in information retrieval relevance judgments [@organisciak_evaluating_2012] and 
- b) perform new work on normalizing quality judgments in volunteer crowdsourcing, using a test case of crowdsourced contributions on the online craft marketplace Etsy.
 
-In understanding human-introduced variance and low rater inconsistencies, the research that we performed in @organisciak_evaluating_2012 shed light on consensus-building in ground truth tasks.
+ a. provide a treatment of previously-completed research on improving signal in information retrieval relevance judgments [@organisciak_evaluating_2012] and 
+ b. conduct new research on reliably using volunteered crowdsourcing contributions for information retrieval, using a test case of contributions on the online craft marketplace Etsy.
+
+The research that we performed in @organisciak_evaluating_2012 sheds light on a particular problem of human-introduced variance and lower rater reliability: consensus-building in ground truth tasks.
 We studied time, experience, and agreement as indicators of the quality of contributions for a paid relevance feedback task.
 Does the amount of time spent on a contribution correlate to a good or bad task?
 Does the experience of a contributor, either on the task in general or responding to the specific query, reflect the quality of their contributions?
@@ -24,16 +25,10 @@ Can agreement with other contributors be used to measure and potentially correct
 Answering these questions provided valuable insights into how to treat workers and their data when using paid crowdsourcing for building ground truth datasets.
 
 However, normalizing crowds contributions to control for variance and improve inter-coder reliability is a larger issue that affects more than just paid ground truth tasks.
-Various crowdsourced data has been used for understanding information retrieval documents, including page links (<!--TODO cite-->), Twitter discussion (<!--TODO cite-->), social tags (!--TODO cite-->), opinion ratings (<!--TODO cite-->), and explicit relevance feedback (<!--TODO cite-->).
-To study all cases would be unfeasible, but this study will focus on a relevant subset related to crowdsourced data that is already being used in information retrieval.
-Below, I review how various forms of contributions have been used for information retrieval, and subsequently justify additional research on a normalizing opinion contributions in a volunteer crowdsourcing system <!--TODO change this sentence after the lit review, to say *why* rather than to say I 'will justify'-->.
+Various crowdsourced data has been used for understanding information retrieval documents, including page links (<!--TODO cite-->), Twitter discussion (<!--TODO cite-->), social tags (<!--TODO cite-->), opinion ratings (<!--TODO cite-->), and explicit relevance feedback (<!--TODO cite-->).
+To study all possible cases would be unfeasible, so this study will look at a real-world case, __Etsy__, with a typical assortment of crowdsourcing contributions.
 
-<!--Specifically, it will look at the deviation of ratings from normative opinions on business-rating website Yelp.
-First, I will examine when an online rater's perception of their rating task deviates from the popular interpretation.
-This comparison will be done by providing a rater's reviews to other human workers, and asking them what they would expect the rating to be based on the review.
-
-After performing an analysis on the points of disparity between a contributor's rating and the rating others would expect from their review, this study will attempt a method to model the normative opinion by workers.
-The exact approach will be informed by the analysis done in the proposed study, but one potential approach is described below.-->
+Below, I review how various forms of contributions have been used for information retrieval, and subsequently justify additional research on a normalizing opinion contributions in a volunteer crowdsourcing system<!--TODO change this sentence after the lit review, to say *why* rather than to say I 'will justify'-->.
 
 Specifically, I will study how the various crowdsourced elements on craft marketplace Etsy can be leveraged in document representation to improve the quality of information retrieval, comparing baseline weighting schemes with normalized approaches.
 Etsy is a marketplace with a large space of documents, but with a long tail of user focus.
@@ -49,8 +44,9 @@ Again, the use cases being looked at are those with objective goals, with the in
 
 The proposed new research will focus on volunteered data, for a number of reasons.
 First, my existing research has already looked at this problem in paid crowdsourcing environment, and it is generally a well-explored space in research [notably including: @ipeirotis_quality_2010; @raykar_supervised_2009; @eickhoff_increasing_2012; @sheng_get_2008; @welinder_online_2010; @whitehill_whose_2009; @snow_cheap_2008; @novotney_cheap_2010].
-Others have looks at similar situations of consensus-making among exports [@wallace_who_2011].
-Secondly, researching already collected data does not require the same control that researching varying collection designs does, making it more tractable to focus on volunteer systems.
+Others have looked at similar situations of consensus-making among experts [@wallace_who_2011].
+Secondly, in a production information retrieval context, it is more common to design around user needs, leaving the system designer to use the data for retrieval as it comes in.
+<!--As argued in the previous section, collecting new metadata for retrieval is a task more easily approached by paid workers,...-->
 
 ## Problem
 
@@ -96,28 +92,68 @@ A few additional questions need to be asked for discussion in the context of the
 One form of analysis that would be useful but was not originally done is to compare the recoverable signal from artificially smaller contributor groups.
 If data collection had been cut off earlier, how accurate would the various methods for correcting against a worker's reliability be?
 
-# Understanding Deviation from Expectation
+## Understanding Deviation from Expectation
 
 The cornerstone of this chapter will will a study measuring the value of crowdsourced information in improving information retrieval ranking against the data from Etsy.
 
-Etsy is an online marketplace encouraging  <!--TODO: see their definition -->.
-<!-- The cornerstone of this chapter will be a study analyzing the deviation of online ratings from the expectation of other humans.
-_If another person is shown an online review, what rating will they expect?_ -->
+Etsy is an online marketplace allowing individuals or small vendors to sell goods, with a focus on hand-made or custom-made goods.
+They position themselves as an online equivalent of an artisan's market, with arts and crafts central to the goods sold on the website.
+ <!--TODO: see their definition -->
 
 RQ1:
 
 RQ2:
 
-#### Data
+### Data
+
+Data provided by Etsy will be used for this research.
+
+On Etsy, the document unit is a product page.
+There are multiple types of crowdsourcing contributions that can be found per document.
+First, there is the information provided by the vendor.
+Details such as product price are constant, but it is still useful to consider vendors as crowds because there is potential variance between them for information such as:
+
+ * Item name
+ * Item description
+
+These can change in areas such as 
+
+Types of User Contributions:
+
+ * Vendor contributions
+ * User contributions (customers, visitors)
+   * Customer ratings. A five-point star rating scale.
+   * Customer reviews. Text accompanying ratings, potentially justifying the ratings.
+   * Saving / starring. 
+   * Adding to list:
+     * Etsy lists.
+     * Adding to Pinterest. Pinterest is a separate social network for curating lists---_boards_---of images.
+   * Sharing (Twitter, Facebook, email)
 
 
-#### Design
+
+
+The Etsy item space poses some unique challenges for information retrieval.
+
+* The number of unique items is large (<!--TODO counts??-->) but, since many items are handmade and sold at the capacity of a small vendor, the number of consumers for any particular item is quite low.
+* Many items are unique and consumable, such as paintings, making it difficult to collect large numbers of contributions about the item before it is sold and no longer relevant.
+  Presumably they do no want to lose these one-of-a-kind items in their search, obscured by items that have a lot more information.
+* There is much overlap in the types of items that are sold, meaning that there need to be ways to differentiate on quality and style.
+  For example, a search for "knit hat" can easily return many relevant results, making a good ranking important to satisfying a user's information need.
+
+The potentially low number of contributions per item makes it important to maximize the value of individual contributions.
+
+Contributions by users that are customers are limited, making judgements made by visiting users important.
+
+Since the goods
+
+
+##### Design
 
 
 
 
-
-#### Evaluation
+##### Evaluation
 <!--
 What metric?
 	Why?
@@ -128,30 +164,60 @@ What data?
 How is relevance described? By whom?
 -->
 
-The different retrieval models will be evaluated with Normalized Discounted Cumulative Gain (NDCG) with relevance judgements collected on demand.
+Because the nuances of the document space, relevance is a low bar to achieve on Etsy.
+As a result, evaluation will be performed with graded relevance, using relevance judgments collecting on demand and measured with Normalized Discounted Cumulative Gain (NDCG).
 
-The robustness of the ranked retrieval models will be measured against a randomly selected subset of real-world queries, provided by Etsy.
-For each query, a description of relevance will be written by myself, and the relevance of each document will be rated by paid workers on a graded relevance scale.
+Evaluation queries will be a randomly selected subset of real-world queries, provided by Etsy.<!-- TODO doublecheck that this is possible -->
+For each query, a description of what constitute the different levels of relevance will be written by myself, and the relevance of the first one hundred results will be rated by paid workers on a graded relevance scale.
 
-
-
-
-
-### Correcting for Deviation
+<!-- #### Correcting for Deviation
 
 Following from the analysis of how and when contributor habits deviate from expected actions, there will be some research put 
 
-$P(r_s|C)\approx(1-\lambda)(P(r)+\lambda P(r|R)$ <!--_-->
+$P(r_s|C)\approx(1-\lambda)(P(r)+\lambda P(r|R)$ _
 Where, 
-$P(r|R)=\sum_{i=1}^{n}{P(r|t_i}$
+$P(r|R)=\sum_{i=1}^{n}{P(r|t_i}$ -->
 
-#### Evaluation
+##### Baseline
 
-#### Baseline
+The baseline for the system will be the results returned by a system using language modelling with a basic unigram model, with the product title and description used as the document text and smoothing between query and collection likelihood using linear smoothing (i.e. _Jelinek-Mercer_).
+
+Fundamentally, the language modelling approach assumes each document as a generative model, and estimates the probability of any given document $d$ generating a query $q$.
+
+The unigram model makes a couple of simplifying assumptions. 
+First, it assumes that the query-independent probability of a document being relevant, $P(d)$, is constant, meaning it does not affect ranking and can effectively be ignored.
+Also removing the document-independent query constant, it means that
+
+$P(d|q)\propto(P(q|d))$, <!--TODO: unfinished-->
+
+leaving our estimate in the hands of P(q|d).
+The second assumption for the unigram model is that the probability of a document generating a query is the joint probability of each term in the query occurring in the document.
+Thus,
+
+$P(q|d)=\prod\limits_{i=1}^n P(q_i|d)$.
+
+This assumes a conditional independence between terms.
+However, taking a maximum likelihood estimate for $P(q_i|d)$--- dividing term $q_i$'s occurrences in document $d$ by the sum of all terms---suffers some problems.
+First, it heavily punishes documents where a word has not occurred, over-emphasizing seen words in the document's language model.
+Secondly, it fails to account for the general likelihood of a word occurring in the language.
+Thus, we smooth between the query term in the document's language model and its probability in the collections language model ($P(q_i}C)$).
+Smoothing not only de-emphasizes seen words, but also reduces the discriminatory power of common words, akin to the TF-IDF intuition[@zhai_study_2001].
+
+The baseline in this study will use linear smoothing between the two forms of evidence.
+With $\lambda=0.75$ chosen based on a reading of @zhai_study_2001's evaluation of linear smoothing performance,
+
+$P(q_i|d)=(1-\lambda)P(q_i|d)+\lambda P(w|C)$.
 
 
+#### System
 
-## Related questions
+The testing system will be built on top of Apache Lucene.
+Lucene provides high performance for large collections and even underlies Etsy's own stack.<!--todo: properly cite: http://www.slideshare.net/lucenerevolution/solr-lucene-and-hadoop-etsy-->
+The baseline system will use the LMJelinekMercerSimilarity similarity scorer, and subsequent changes will be custom made.
+
+For evaluation, workers from Amazon Mechanical Turk will provide judgments, either using Etsy's internal collection system, or the open-source code developed in the previous chapter. <!--TODO choose one.-->
+
+### Related questions
 
 How does the stylistic variance of contributions change through the lifespan of a system?
 We hypothesize that as crowdsourcing systems grow in size, their contributions also grow less variant in their approach.
@@ -172,3 +238,4 @@ The structure has also enabled efforts such as DBPedia, structured data represen
 It has also informed information retrieval approaches to understanding entities beyond a query, such as with Google's Knowledge Graph and Microsoft's Satori <!-- TODO citations -->.
 
 <!-- TODO: talk about relevance to larger question -->
+
