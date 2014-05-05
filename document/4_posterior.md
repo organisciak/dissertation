@@ -1,7 +1,7 @@
 Correcting for Contributor-Introduced Variance After Contribution 
 ==================================================================
 
-While working to normalize the manner in which users contribute is possible in controlled circumstances, there are cases where either 
+While improving the reliability of raw contributions from users is possible in controlled circumstances, there are cases where either 
  the data is already collected, or 
  where there is a limit to the amount of control a system designer can exert over contributors.
 
@@ -9,7 +9,7 @@ It is common to see differences in the habits of contributors that are trying to
 <!--For example, when providing opinion ratings it is possible to have different contexts of a 'good' or 'bad' rating, when tagging images there are more or less useful types of tags, and ... TODO: citations, final example -->
 Many tasks that assume an objective, correct contribution are nonetheless are subject to interpretation, especially in volunteered contributions where detailed codebooks are deterrents to casual contributions.
 Likewise, even when a task is subjective, where a contribution is understood to be related to each individual's tastes and opinion, there are still problems of reliability beyond differences of opinion.
-One person's definition of a 3-star opinion judgment or their threshold for what is needed to click an approving 'thumbs up' button might be different from another person's, even if their underlying opinions is identical.
+One person's definition of a 3-star opinion judgment or their threshold for what is needed to click an approving 'thumbs up' button might be different from another person's, even if their underlying opinions are identical.
 
 In the second of two research chapters, the proposed dissertation will investigate the issue of interpreting the human-introduced variance in already-collected metadata.
 This will 
@@ -25,10 +25,10 @@ Can agreement with other contributors be used to measure and potentially correct
 Answering these questions provided valuable insights into how to treat workers and their data when using paid crowdsourcing for building ground truth datasets.
 
 However, normalizing crowds contributions to control for variance and improve inter-coder reliability is a larger issue that affects more than just paid ground truth tasks.
-Various crowdsourced data has been used for understanding information retrieval documents, including page links (<!--TODO cite-->), Twitter discussion (<!--TODO cite-->), social tags (<!--TODO cite-->), opinion ratings (<!--TODO cite-->), and explicit relevance feedback (<!--TODO cite-->).
+Various types of crowdsourcing data have been used for understanding information retrieval documents, including page links[@page_pagerank_1999], Twitter discussion (<!--TODO cite-->), social tags[@lamere_social_2008], opinion ratings (<!--TODO cite-->), and explicit relevance feedback (<!--TODO cite-->).
 To study all possible cases would be unfeasible, so this study will look at a real-world case, __Etsy__, with a typical assortment of crowdsourcing contributions.
 
-Below, I review how various forms of contributions have been used for information retrieval, and subsequently justify additional research on a normalizing opinion contributions in a volunteer crowdsourcing system<!--TODO change this sentence after the lit review, to say *why* rather than to say I 'will justify'-->.
+Below, I review how various forms of crowd contributions have been used for information retrieval, and propose additional research on a normalizing contributions in a volunteer crowdsourcing system<!--TODO change this sentence after the lit review, to say *why* rather than to say I 'will justify'-->.
 
 Specifically, I will study how the various crowdsourced elements on craft marketplace Etsy can be leveraged in document representation to improve the quality of information retrieval, comparing baseline weighting schemes with normalized approaches.
 Etsy is a marketplace with a large space of documents, but with a long tail of user focus.
@@ -79,12 +79,7 @@ Much work has been completed in posterior corrections for paid crowdsourcing con
 
 The research covered in this
 
-## ASIS&T Study
-
-
-### Methodology
-
-#### Measuring Reliability of Human Raters
+## Measuring Reliability of Human Raters
 
 The first part of this chapter will outline the work previously completed by @organisciak_evaluating_2012, which is already discussed above.
 
@@ -92,17 +87,21 @@ A few additional questions need to be asked for discussion in the context of the
 One form of analysis that would be useful but was not originally done is to compare the recoverable signal from artificially smaller contributor groups.
 If data collection had been cut off earlier, how accurate would the various methods for correcting against a worker's reliability be?
 
-## Understanding Deviation from Expectation
+TODO: need treatment of that study
 
-The cornerstone of this chapter will will a study measuring the value of crowdsourced information in improving information retrieval ranking against the data from Etsy.
+## Incorporating Normalized Contributions in Information Retrieval
+
+The cornerstone of this chapter will be a study measuring the value of crowdsourced information in improving information retrieval ranking against the data from Etsy.
 
 Etsy is an online marketplace allowing individuals or small vendors to sell goods, with a focus on hand-made or custom-made goods.
 They position themselves as an online equivalent of an artisan's market, with arts and crafts central to the goods sold on the website.
  <!--TODO: see their definition -->
 
-RQ1:
+__RQ1__: How can crowdsourced contributions be incorporated into an retrieval model, and to what effect?
 
-RQ2:
+__RQ2__: Can crowdsourced be improved as evidence by adding contributor-dependent normalization or smoothing techniques?
+
+__RQ3__: How do you account for novelty, controlling for new items without any crowdsourcing contributions?
 
 ### Data
 
@@ -111,19 +110,14 @@ Data provided by Etsy will be used for this research.
 On Etsy, the document unit is a product page.
 There are multiple types of crowdsourcing contributions that can be found per document.
 First, there is the information provided by the vendor.
-Details such as product price are constant, but it is still useful to consider vendors as crowds because there is potential variance between them for information such as:
+Details such as product price are constant, but it is still useful to consider vendors as crowds because there is potential variance between them for information such as the item name and item description.
 
- * Item name
- * Item description
+A second type of user contribution is customer contributions.
+These are contributions from people that have purchased the given item or, more broadly, any item from the vendor.
+The primary type of customer contributions are ratings, on a five-point scale, and reviews, accompanying ratings and potentially justifying the ratings.
+The concern with customer contributions is sparsity: they are valuable because they are a more thorough judgement of the product and the purchasing experience, but for goods that are often hand-made or limited run, each individual object has very little customer data.
 
-These can change in areas such as 
-
-Types of User Contributions:
-
- * Vendor contributions
- * User contributions (customers, visitors)
-   * Customer ratings. A five-point star rating scale.
-   * Customer reviews. Text accompanying ratings, potentially justifying the ratings.
+The final type of customer data is 
    * Saving / starring. 
    * Adding to list:
      * Etsy lists.
@@ -150,7 +144,14 @@ Since the goods
 
 ##### Design
 
+Adopting a language modelling approach for this study, we rank documents by estimating the probability of each document's language model generating the query, and that document's prior probability of being relevant.
 
+$P(d|q)\propto P(q|d)P(d)$
+
+Given a basic case of the unigram model (TODO cite Croft 98), we assume $P(d)$ is a constant for each document and drop it.
+This is the model that I'll be using as a baseline; a more detailed refresher is provided in the baseline section below.
+
+Using crowdsourcing information
 
 
 ##### Evaluation
@@ -169,14 +170,6 @@ As a result, evaluation will be performed with graded relevance, using relevance
 
 Evaluation queries will be a randomly selected subset of real-world queries, provided by Etsy.<!-- TODO doublecheck that this is possible -->
 For each query, a description of what constitute the different levels of relevance will be written by myself, and the relevance of the first one hundred results will be rated by paid workers on a graded relevance scale.
-
-<!-- #### Correcting for Deviation
-
-Following from the analysis of how and when contributor habits deviate from expected actions, there will be some research put 
-
-$P(r_s|C)\approx(1-\lambda)(P(r)+\lambda P(r|R)$ _
-Where, 
-$P(r|R)=\sum_{i=1}^{n}{P(r|t_i}$ -->
 
 ##### Baseline
 

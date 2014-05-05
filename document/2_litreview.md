@@ -3,9 +3,16 @@ Literature Review
 
 ## Intro
 
-## General overview
+Crowdsourcing is a simple concept that has received considerable research attention in the past few years, alongside a realization in the power of the internet for effectively connecting people in great numbers.
+
+Perhaps unsurprisingly, this concept precedes the language that we have developed around it in recent years, and the research in crowdsourcing has not been evenly distributed.
+
+In this section, I provide an overview of crowdsourcing and the notable research within it.
 
 ## Definitions and History
+
+Crowdsourcing broadly describes the use of distributed crowds to complete a task that would otherwise have been done by one or a few people.
+Beneath this large umbrella, there are many concepts that are either in its purview or overlap with it.
 
 ### Crowdsourcing
 
@@ -16,34 +23,35 @@ Nothing about crowdsourcing is fundamentally tied to the internet.
 It is entirely possible to bring together large groups of people in different ways, but the access and efficiency of the internet is both
 what made the concept seem so novel in the 20th century and what gave it value in the various realms where it was applied.
 
-Whereas crowds have been long maligned for their collective simplicity \cite{<!--TODO: CMST101-->},
-irrationality \cite{<!--TODO: Lebon? or next citation? -->},
-or downright ineptness \cite{<!--TODO Mackay-->},
+Whereas crowds have long been noted for their collective simplicity [@le_bon_crowd:_1896]<!--_--> or irrationality [@mackay_memoirs_1852],
 through the internet one can perform human-specific tasks at a scale usually only seen for computational tasks.
 
 To understand crowdsourcing, a brief understanding of its history is necessary.
 The term is recent and has an unambiguous source, but immediately upon introduction, it was adopted and expanded by society.
 
-The term _crowdsourcing_ was coined in a 2006 Wired article by Jeff Howe \cite{<!--TODO cite Howe 2006 1-->}.
+The term _crowdsourcing_ was coined in a 2006 Wired article by Jeff Howe [@howe_rise_2006].
 Howe was writing from a labor perspective, looking at online marketplaces for people to solve problems and create content.
-His focus was on sites like InnoCentive, a site for companies to outsource research and development problems for a bounty, and iStockPhoto, a website that allowed amateur photographers to sell their images as stock photos.
+His focus was on systems like InnoCentive, a site for companies to outsource research and development problems for a bounty, and iStockPhoto, a website that allowed amateur photographers to sell their images as stock photos.
 The article briefly looked at user-generated online content, though in the context of television programs that use online video as content.
 
-However, the term _crowdsourcing_ struck a chord more broadly, and the somewhat narrow term was culturally co-opted.
-This happened very quickly: within nine days Howe noted a jump from three Google results to 189,000 \cite{<!--TODO: birth of a meme-->}.
-Within a month, Howe address the co-opting of the term on his crowdsourcing blog, "noticing that the word is being used somewhat interchangably with Yochai Benkler's concept of commons-based peer production" \cite{<!--TODO-->}.
+Despite the somewhat specific initial definition, the term _crowdsourcing_ struck a chord more broadly and was culturally co-opted.
+This happened very quickly: within nine days Howe noted a jump from three Google results to 189,000 [@howe_birth_2006].
+Within a month, Howe address the co-opting of the term, "noticing that the word is being used somewhat interchangably with Yochai Benkler's concept of commons-based peer production" [@howe_crowdsourcing:_2006]<!--_-->.
 He gives his own definition, but also notes that language is slippery and he's "content to allow the crowd define the term for itself (in no small part because [he's] powerless to stop it.)".
 
 Thus, crowdsourcing was adopted to refer broadly to a series of related concepts, all related to people being connected online.
 These concepts included
- human computation \cite{<!--TODO-->},
- commons-based peer production \cite{<!--TODO cite coase's penguin and benkler book -->},
- free and open-source development [@lakhani_how_2003; @raymond_cathedral_1999],
- and the 'wisdom of the crowds' [@surowiecki_wisdom_2004].
+ the 'wisdom of the crowds'[@surowiecki_wisdom_2004], 
+ human computation[@ahn_labeling_2004],
+ commons-based peer production[@benkler_wealth_2006], and
+ free and open-source development [@lakhani_how_2003; @raymond_cathedral_1999].
 
 ### Wisdom of the Crowds
 
-_The Wisdom of the Crowds_\cite{<!--TODO-->} ...
+_The Wisdom of the Crowds_[@surowiecki_wisdom_2004] is a book written by journalist James Surowiecki in 2004.
+The book observes the strength of human decision-making when one in aggregate, and the term 'wisdom of the crowds' has survived the book to refer to cases that make use of this.
+
+ 
 
 ### Human-Computation
 
@@ -63,7 +71,7 @@ Inversely, human computation does not have to sustained by self-selected workers
 
 ### Open-Source
 
-## User Innovation
+### User Innovation
 
 von Hippel 2003, 2005, 1988
 
@@ -364,12 +372,18 @@ Notable crowdsourcing in the wild
 
 ## Research in Information Retrieval
 
-### Relevance Judgments
+In information retrieval, the focus on crowdsourcing has been predominantly in the use of paid crowds for generating evaluation datasets, though there have been efforts to use crowds to improve document representation or even query specific ranking.
 
-#### Alonso et al.
+### Crowdsourcing for evaluation
 
-### TREC Crowdsourcing track
+- relevance judgments
+- alonso et al.
+- TREC crowdsourcing track
 
+### Crowdsourcing in the machine
+
+- PageRank
+- Lamere - social tagging
 
 ## Research relevant to study
 
