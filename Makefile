@@ -1,7 +1,7 @@
 pandoc_args = -f markdown --bibliography=refs.bib --smart
 name =thesis
 data= logs/stats.csv
-    
+	
 all.md:
 	cat summary.md document/*_*md >all.md
 	
@@ -41,7 +41,18 @@ html: all.md
 docx: all.md
 	pandoc $(pandoc_args) -t docx -o $(name).docx all.md
 
-clean:
+mostlyclean:
 	rm -f all.md
+	rm -f document/[1-5]_*.tex
 	rm -f $(name).docx
 	rm -f $(name).html
+	rm -f $(name).aux
+	rm -f $(name).lof
+	rm -f $(name).lot
+	rm -f $(name).dvi
+	rm -f $(name).bbl
+	rm -f $(name).blg
+	
+clean: mostlyclean
+	rm -f *~
+	rm -f document/*~
