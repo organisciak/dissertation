@@ -1,8 +1,8 @@
 library(ggplot2)
 library(data.table)
 
-# stats = read.csv("../logs/stats.csv", sep='\t')
-stats = read.csv("stdin", sep='\t')
+stats = read.csv("logs/stats.csv", sep='\t')
+#stats = read.csv("stdin", sep='\t')
 stats = data.table(stats)
 stats[,time:=as.POSIXct(time, origin='1970-01-01')]
 dates = as.numeric(unique(stats$time))
