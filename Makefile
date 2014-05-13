@@ -44,9 +44,7 @@ docx: all.md
 mostlyclean:
 	rm -f all.md
 	rm -f document/[1-5]_*.tex
-	rm -f $(name).docx
-	rm -f $(name).html
-	rm -f $(name).aux
+	rm -f *.aux
 	rm -f $(name).lof
 	rm -f $(name).lot
 	rm -f $(name).dvi
@@ -56,3 +54,5 @@ mostlyclean:
 clean: mostlyclean
 	rm -f *~
 	rm -f document/*~
+	rm -f $(name).docx
+	rm -f $(name).html

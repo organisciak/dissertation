@@ -1,21 +1,3 @@
-Abstract
-========
-
-Crowdsourcing offers a valuable method to improve information retrieval indexing by using humans to improve the indexable data about documents or entities.
-
-Human contributions open the door to latent information, subjective judgments, and other encoding of difficult to extract data.
-However, such contributions are also subject to variance from the inconsistencies of human interpretation.
-
-The proposed dissertation studies the problem of such variance, and investigates how it can be controlled both a priori and posterior to data collection.
-Doing so will incorporate the body of existing research, my past work in the area, and two new studies of pertinent sub-problems within the larger research problem.
-
-At the heart of this study is the assumption of honest-but-biased contributors.
-Rather than focusing on finding dishonest or unreliable contributors, a well-studied problem in crowdsourcing, this dissertation focuses on strategies that understand the quirks and inconsistencies of humans in trying to account data reliability problems.
-
-Often, there is a trade-off between well-engaged crowds and the amount of restrictiveness that a task designer can exert on a task.
-This dissertation admits that in practice, the engagement of an accessible and non-restrictive task is more encouraging both to contributors and the health of a community.
-How do you encourage the humanness<!-- I know this is a real word used in literature, but it seems awkwark... --> of contributors while still convincing them to be consistent and reliable, and how do you model the subsequent contributions?
-
 Introduction
 =============
 
@@ -25,7 +7,7 @@ Introduction
 
 The internet is growing increasingly interactive as it matures.
 Rather than simply transmitting information to readers, web pages allow their audience to react and interact with their information.
-The products of these interactions are a trove of qualitative judgements, valuable to understanding information objects.
+The products of these interactions are a trove of qualitative judgements, valuable to modelling information objects.
 In recent years, this form of creation through collaboration has been studied as _crowdsourcing_.
 
 Effective information retrieval depends on reliable, detailed information to index.
@@ -37,22 +19,20 @@ More importantly, crowdsourcing looks at human contribution at scales that are p
 <!-- Broad Research Question -->
 However, humans have predictable and unpredictable biases that make it difficult to systematically adopt their contributions in an information system.
 How do we control and interpret qualitative user contributions in an inherently quantitative system?
-This study looks at the effect of human error on crowdsourcing for document metadata, which I will refer by the shorthand of _descriptive crowdsourcing_, and how it affect the product of human contributions.
+This study looks at the effect of human error on crowdsourcing for document metadata, which I refer to by the shorthand of _descriptive crowdsourcing_, and how it affects information retrieval uses of human contributions.
 
 <!-- Specific Research Question -->
-Particularly, I look at the issue of recoverable variance in such data, or -- viewed from the contributor end -- intercoder reliability.
-Can error in _descriptive crowdsourcing_ be accounted for, either at the time of data collection or afterward, in a manner that maximizes the intercoder reliability of contributions and subsequently the usefulness for information retrieval?
+Particularly, this study looks at the issue of recoverable error in human-contributed data, alternately viewed as intercoder reliability when studied from the data end.
+Can error in descriptive crowdsourcing be accounted for, either at the time of data collection or afterward, in a manner that maximizes the intercoder reliability of contributions and subsequently the usefulness for information retrieval?
 
 <!--### Hypothesis-->
-
-The proposed study makes an assumption that crowd contributors are honest but inherently biased, with the hypothesis that such an assumption leads to 
+I will argue that a reliability of crowdsourced data can be improved by making an assumption that crowd contributors are honest-but-biased[^language]. This is an assumption supported by prior work and not uncommon in research on classification, but understudied in crowd research.
+The proposed study follows the hypothesis that such an assumption leads to 
 a) more algorithmically valuable crowdsourced description and 
 b) a greater proportion of useful contributions.
 
-#### Language clarification
-
-In assuming that humans are biased, the biases referred to are the inclinations, leanings, and tendencies [@_bias_????] of individuals, quirks that affect their worldview and how they understand and perform tasks.
-By this definition, such perceptual differences contribute to a greater variance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias', referring to a model that is overfit, or overly 'biased', to a specific dataset.
+[^language]: In assuming that humans are biased, the biases referred to are the inclinations, leanings, and tendencies [@_bias_????] of individuals, quirks that affect their worldview and how they understand and perform tasks.
+By this definition, such perceptual differences contribute to a greater statisticalvariance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias', referring to a model that is overfit, or overly 'biased', to a specific dataset.
 In information science, this is closely related to _intercoder reliability_, the measure of how similar multiple coders will perform in a given parameterization of a task [@neuendorf_content_2002].
 
 <!--Removed: While competing definitions for the term are unfortunate, inventing new terms where ones exist would potentially make communication more difficult.-->
@@ -70,19 +50,19 @@ Doing so will both adopt work that I have performed during my doctoral studies a
 This study cannot account for all possible situations and methods for accounting for human-introduced variance before and after crowdsourcing collection.
 Rather, each chapter will focus on a more narrowly scoped sub-problem in the area, to give this study the grounding necessary for a thorough exploration of the larger problem space.
 
+In the first sub-study, the performance of workers completing the same task will be compared across different design implementations for collecting that information.
+In the second sub-study, an information retrieval model that incorporates crowdsourced information will be compared to a baseline which does not, then compared to a system that normalizes user contributions against user behavior.
+Both of these stay true to the assumption of honest-but-biased workers in focusing on the responsibilities of a system designer in managing and interpreting the crowd.
 
 ### Take Away
 
 A reader of the proposed dissertation will understand:
 
- * the issues related to using crowdsourcing contributions for information retrieval indexing,
- * the effect of designing collection tasks that are 'quicker' or 'slower' on a paid crowdsourcing platform, with a sense of how this information generalizes to different tasks or collection spaces,
- * corrective measures for variance in already-collected descriptive metadata,
-    particularly corpus-based methods for online review normalization and
-    error-reducing voting techniques for crowdsourced relevance judgments,
+ * the issues related to using crowdsourcing contributions for information retrieval indexing;
+ * the effect of designing collection tasks that are are quicker or slower on a paid crowdsourcing platform, with a sense of how this information generalizes to different tasks or collection spaces;
+ * corrective measures for variance in already-collected descriptive metadata, particularly corpus-based methods for modeling documents for retrieval
    and
  * the tractability of making an assumption of honest-but-biased contributors.
-
 
 ## Crowdsourcing
  
@@ -151,9 +131,8 @@ Much crowdsourcing research makes an adversarial assumption, focusing on removin
 
 For example, @eickhoff_increasing_2012 note that a significant proportion of Mechanical Turk workers sacrifice correctness for speed, in order to maximise their profits.
 
-However, this behaviour is not generalizable. While observable in some cases [<!--TODO cite-->], including suspicious behaviors that we observed during @organisciak_personalized_2013, <!-- TODO FIGURE-->, other studies on contribution conflict it.
-
-In @organisciak_evaluating_2012, we found that the fastest workers generally did not contribute worse labor, except for one case: when workers spent less time on the instructions and first task.
+However, 'sacrificing quality for speed' is not always the case. <!--While observable in some cases[], including suspicious behaviors that we observed during @organisciak_personalized_2013, <!-- TODO FIGURE-->, other studies on contribution conflict it.-->
+For example, in @organisciak_evaluating_2012, we found that the fastest workers generally did not contribute worse labor, except for one case: when workers spent less time on the instructions and first task.
 The fact that time was only significant in this one case suggests that the effect for this particular dataset was not a result of 'cheaters' as much as workers that did not interpret the instructions close enough.
 Similarly, during the research for @organisciak_personalized_2013 we found that slowing workers down resulted in lower quality contributions, both in terms of internal consistency by workers and quality of the data for training a recommendation algorithm.
 
@@ -165,6 +144,13 @@ Contribution = truth + \text{quality error} + \text{perception error}
 
 This simplifying assumption underlies this proposal.
 While keeping in mind the possibility that variance can stem from good or bad quality contributors, this study is pursuing an understanding of that second bias: when contributors introduce variance that is stimulated by differing interpretations of task, ones that deviate from the instructive or normative ways to approach the task.
+
+This assumption is not novel in areas of social research, but is neglected in crowdsourcing research.
+In views on intercoder reliability in tradition social science settings, reliability is treated as the responsibility of both the designer of the work and the workers themselves.
+In fact, bad workers are one of the last considerations when there are data problems.
+
+The inclusion of the researcher/coordinator as a responsible party has not been common in crowdsourcing research.
+Perhaps it is because participants in crowdsourcing are more abstract than a local worker or survey taker, or maybe because the history of the Internet has justifiably encouraged a level of aloofness against dishonestly, but this dissertation hopes to see if this oversight is detrimental.
 
 ### Intercoder reliability
 
