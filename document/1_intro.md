@@ -22,20 +22,30 @@ How do we control and interpret qualitative user contributions in an inherently 
 This study looks at the effect of human error on crowdsourcing for document metadata, which I refer to by the shorthand of _descriptive crowdsourcing_, and how it affects information retrieval uses of human contributions.
 
 <!-- Specific Research Question -->
+Concretely, I am proposing a study in two parts, separated by their focus on _collecting_ descriptive metadata reliably, and on _using_ it in an appropriate information retrieval context.
+
+ 1. In the first half, I will look at the effect of different collection interface designs on the intercoder reliability of the collected data.
+    This is a study motivated by prior work done by myself and others, with a problem often mentioned but, to my knowledge, not pursued formally.
+
+ 2. In the second half of this dissertation, I will look at improving retrieval using already-collected crowdsourcing data.
+    I focus on the system _Pinterest_, because it is a valuable resource of human-encoding descriptive metadata, while sparse in its other textual content.
+    It is also a example of the loosely constrained form of crowdsourcing contribution that is often required to encourage participation, a trade-off that is less structured than a retrieval model may prefer.
+
+<!-- LEFT OFF EDITING HERE-->
 Particularly, this study looks at the issue of recoverable error in human-contributed data, alternately viewed as intercoder reliability when studied from the data end.
 Can error in descriptive crowdsourcing be accounted for, either at the time of data collection or afterward, in a manner that maximizes the intercoder reliability of contributions and subsequently the usefulness for information retrieval?
 
 <!--### Hypothesis-->
-I will argue that a reliability of crowdsourced data can be improved by making an assumption that crowd contributors are honest-but-biased[^language]. This is an assumption supported by prior work and not uncommon in research on classification, but understudied in crowd research.
+I will argue that reliability of crowdsourced data can be improved by making an assumption that crowd contributors are honest-but-biased[^language]. This is an assumption supported by prior work and not uncommon in research on classification, but understudied in crowd research.
 The proposed study follows the hypothesis that such an assumption leads to 
 a) more algorithmically valuable crowdsourced description and 
 b) a greater proportion of useful contributions.
 
+<!-- -->
+
 [^language]: In assuming that humans are biased, the biases referred to are the inclinations, leanings, and tendencies [@_bias_????] of individuals, quirks that affect their worldview and how they understand and perform tasks.
 By this definition, such perceptual differences contribute to a greater statisticalvariance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias', referring to a model that is overfit, or overly 'biased', to a specific dataset.
 In information science, this is closely related to _intercoder reliability_, the measure of how similar multiple coders will perform in a given parameterization of a task [@neuendorf_content_2002].
-
-<!--Removed: While competing definitions for the term are unfortunate, inventing new terms where ones exist would potentially make communication more difficult.-->
 When discussing the processes of humans --and only when doing so-- this study may refer to biases, but discussion of effects on data will solely use statistical and information science language.
 
 ### Approach

@@ -1,6 +1,8 @@
 pandoc_args = -f markdown --bibliography=refs.bib --smart
 name =thesis
 data= logs/stats.csv
+
+all: mostlyclean docx
 	
 all.md:
 	cat summary.md document/*_*md >all.md
