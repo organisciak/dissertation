@@ -1,7 +1,7 @@
 Incorporating user-contributions in document modeling
 ==================================================================
 
-While on-demand collection of information can be invaluable in controlled circumstances, there are cases where either
+While on-demand collection of document metadata can be invaluable in controlled circumstances, there are cases where either
  the data is already collected, or 
  where there is a limit to the amount of control a system designer can exert over contributors before discouraging them.
 
@@ -31,11 +31,9 @@ Below, I review how various forms of crowd contributions have been used for info
 
 ## Scope
 
-The goals of this chapter will stay unchanged,
- focusing on crowdsourcing additional metadata for improved information retrieval indexing,
- with an underlying assumption of honest-but-biased workers.
+The goals of this chapter will stay unchanged, focusing on crowdsourcing additional metadata for improved information retrieval indexing, with an underlying assumption of honest-but-biased workers.
 Again, the use cases being looked at are those with objective goals, with the intention of producing an output with minimal divergence from either the norms of a community or the instructions of a task designer.
-While user-dependent personalization approaches are an equally promising research direction, it is not one that I will explore here.
+While user-dependent personalization approaches are an equally promising research direction, they are not part of the questions being investigated here.
 
 This study focuses on volunteered data, mainly because it is a more novel space.
 My past research has already looked at issues around interpreting a contribution in paid-crowdsourcing, post-collection.
@@ -111,10 +109,17 @@ __RQ3__: How do you account for novelty, allowing for new items without any crow
 
 ### Why Pinterest
 
-Pinterest is 
+Pinterest is a novel crowdsourcing website for studying ways to incorporate crowdsourced information into web retrieval.
+
+ * The organizational form of Pinterest, grouping documents into curated lists called 'boards', is a interface pattern that is relevant to many forms of information repository.
+   Social OPACs, for example, allow library patrons to collect books into similarly uncontrolled lists.
+ * Pinterest contains very little information about the source web document.
+   It is feasible to crawl the full text of the source, but as it stands, a Pinterest 'pin' alone offers a record of a human's interpretation of the source.
+   It is simple, and helps us avoid confounding the focus on crowd contributions.
+ * Since the primary form of Pinterest document is a human reaction to a web document, the user contributions on the site may have possible future use for web retrieval.
 
 In addition, Pinterest is simply interesting.
-Websites with a female-user skew seem to be neglected, but whatever features contribute to pushing back against male-heavy communities are what make them insightful objects of study.
+The user base has a female skew, which is a refreshing change from male-heavy communities and interesting precisely because of the various features that have allowed Pinterest to counter-balance the typical demographics.
 
 ### Data
 
@@ -155,23 +160,9 @@ The explicit forms of descriptive crowdsourcing that are seen on Pinterest are:
  * Describing boards: title, description, category
  * Social contribution: commenting on pins, repinning, 'liking'
 
-There is also meaning in implicit actions, such as the very act of save a web image, when considered in aggregate.
+#### Approach
 
-<!--
-The Etsy item space poses some unique challenges for information retrieval.
-
-* The number of unique items is large () but, since many items are handmade and sold at the capacity of a small vendor, the number of consumers for any particular item is quite low.
-* Many items are unique and consumable, such as paintings, making it difficult to collect large numbers of contributions about the item before it is sold and no longer relevant.
-  Presumably they do no want to lose these one-of-a-kind items in their search, obscured by items that have a lot more information.
-* There is much overlap in the types of items that are sold, meaning that there need to be ways to differentiate on quality and style.
-  For example, a search for "knit hat" can easily return many relevant results, making a good ranking important to satisfying a user's information need.
-
-The potentially low number of contributions per item makes it important to maximize the value of individual contributions.
-
-Contributions by users that are customers are limited, making judgements made by visiting users important.
-
-Since the goods
--->
+This
 
 #### Data Collection
 
@@ -210,7 +201,8 @@ This is the model that I'll be using as a baseline; a more detailed refresher is
 Using crowdsourcing information
 
 
-##### Evaluation
+#### Evaluation
+
 <!--
 What metric?
 	Why?
@@ -221,15 +213,66 @@ What data?
 How is relevance described? By whom?
 -->
 
-Because the nuances of the document space, relevance is a low bar to achieve on Etsy.
-As a result, evaluation will be performed with graded relevance, using relevance judgments collecting on demand and measured with Normalized Discounted Cumulative Gain (NDCG).
+##### Evaluators
+Given that the number of registered users on Pinterest is very high, approximately 107.5 million, it should be feasible to perform a more naturalistic evaluation, recruiting real users as judges for real queries. 
+For evaluation,  I will recruit Pinterest users locally to perform relevance judging.
 
+##### Judgement Design
+
+Users will be asked to judge the relevance of 130 documents for 10 queries on a graded scale from 1 to 10 <!--TODO research on graded relevance-->.
+<!--Documents will be shown in randomized order, mixing results from the baseline system and the  system.-->
+The large number of results judged per query is influenced by the visual format of Pinterest.
+Pinterest's visual interface is quicker to browse than text results, and I expect that the common focus on ten ranked results is too small in a realistic setting.
+Search results on Pinterest's IR system load 65 results initially, though an 'infinite scroll' keeps loading results as a user scrolls down the page. 
+Note that the judging interface format may change following the results of the first half of this dissertation. 
+
+Because of the nuances of the document space, binary relevance is a low bar to achieve on Pinterest.
+Many of the user information needs on Pinterest revolve around taste, and an appropriate evaluation should be sensitive not only to whether a document is a match to the query, but _how good_ of a match it is.
+This is why evaluation will be performed with graded relevance.
+The primary metric for relevance will subsequently be Normalized Discounted Cumulative Gain (NDCG).
+
+<!-- TODO describe NDCG -->
+
+<!--
+How relevant is this to the query
+
+-->
+
+##### Evaluation Queries
+
+The queries being evaluated will be a mix of evaluators' search history -- dependent on what they feel comfortable providing -- and on popular queries collected through the Pinterest query input auto-complete feature.
+
+When an evaluator is recruited that has used Pinterest, they will be provided a script that collects their Pinterest search history.
+They will be asked to cull the list down to queries that they feel comfortable sharing, and to resist the desire to revisit the results until after evaluation.
+
+Additional evaluation queries will be sampled from auto-complete suggestions on Pinterest.
+When a user starts to type in a query, five suggestions appear.
+For example, typing 'r' will suggest 'recipes', 'red hair', 'rings', 'relationship quotes', and 'rustic wedding'.
+These appear to be the five-most probable queries starting with the provided string.
+For an insight of what types of queries are in the sampling frame and more generally what topics are popular among Pinterest users, Table <!--TODO --> lists the auto-complete suggestions when each letter of the alphabet is entered into the search box.
+
+It should be noted, however, that a sample frame of just the most popular terms is too general.
+To shift the sample away from the head of the distribution, the sampling frame will also include 500 queries derived from auto-complete sugestions based on two character strings: specifically, the one hundred most common two-character pairs occurring at the start of the English language.[^twoletter]
+
+<!-- TODO: cite Norvig -->
+
+[^twoletter]: These are: TH, OF, AN, IN, TO, CO, RE, BE, FO, PR, WH, HA, MA, WI, HE, IS, NO, WA, ON, DE, ST, SE, AS, IT, CA, HI, SO, WE, AR, DI, MO, AL, SU, PA, FR, ME, OR, SH, LI, CH, WO, PO, EX, BY, AT, FI, PE, BU, LA, NE, UN, LE, SA, TR, HO, YO, LO, DO, FA, SI, GR, EN, AC, MI, TE, BO, BA, GO, SP, OU, PL, EV, AB, TA, RA, US, BR, CL, DA, GE, TI, FE, AD, MU, IM, AP, RO, NA, SC, PU, EA, CR, VI, CE, OT, AM, AG, UP, RI, VE.
+
+It is likely that Pinterest's own retrieval model incorporates additional implicit feedback from users in the form of click-through data.
+This is a useful indicator of a item's quality
 Evaluation queries will be a randomly selected subset of real-world queries, provided by Etsy.<!-- TODO doublecheck that this is possible -->
 For each query, a description of what constitute the different levels of relevance will be written by myself, and the relevance of the first one hundred results will be rated by paid workers on a graded relevance scale.
 
-##### Baseline
+-----------------------------
+"appetizers, art, ab workout, animals, apartment decorating, appetizers, art, ab workout, animals, apartment decorating, christmas, christmas decorations, chicken recipes, crockpot recipes, christmas crafts, diy, dinner recipes, dresses, desserts, disney, easter, engagement rings, elf on the shelf ideas, eye makeup, easter crafts, food, fashion, funny, funny quotes, fall, garden, gift ideas, gluten free, girls bedroom, gardening, hair styles, hair, healthy recipes, halloween costumes, halloween, inspirational quotes, interior design, ikea, i love you, italy, jewelry, jennifer lawrence, jello shots, jeans, jokes, kitchen, kitchen ideas, kids crafts, kitchen decor, kids, love quotes, love, living room, long hair, lingerie, makeup, medium hair styles for women, mothers day, mothers day gifts, master bedroom, nail art, nails, nail designs, nail art designs, nail art for short nails, ombre hair, organization, organization tips, outfits, organizing, prom dresses, pregnancy, prom hair, paleo, puppies, quotes, quinoa, quinoa recipes, quilts, quotes about change, recipes, red hair, rings, relationship quotes, rustic wedding, spring fashion, shoes, short hair styles for women, short hair, sexy, tattoos, thanksgiving, tattoo ideas, thanksgiving recipes, travel, updos, updo hairstyles, ugly christmas sweater, u�as, updos for medium length hair, valentines ideas, valentines day gifts for him, valentines day, vintage, valentines crafts, wedding, wedding dresses, wedding hair, wedding rings, wedding ideas, xmas, x, xmas crafts, xmas decorations, x rated, yoga, yoga poses, yoga pants, yellow, yoga workout, zucchini recipes, zucchini, zac efron, zara, zucchini bread"
+-----------------------------
 
-The baseline for the system will be the results returned by a system using language modelling with a basic unigram model, with the product title and description used as the document text and smoothing between query and collection likelihood using linear smoothing (i.e. _Jelinek-Mercer_).
+Table: Popular queries on Pinterest, showing the 5 search input auto-complete suggestions for each letter of the alphabet.
+Though Pinterest requires users to be logged-in, this list does not appear to be personalized: the same list was derived when I asked other users to run the collection code.
+
+#### Baseline
+
+The baseline for the system will be a basic unigram model, with the query likelihood based on the terms of a document's title and user description, and smoothed against the collection likelihood with linear smoothing (i.e. _Jelinek-Mercer_).
 
 Fundamentally, the language modelling approach assumes each document as a generative model, and estimates the probability of any given document $d$ generating a query $q$.
 
@@ -258,13 +301,13 @@ With $\lambda=0.75$ chosen based on a reading of @zhai_study_2001's evaluation o
 $P(q_i|d)=(1-\lambda)P(q_i|d)+\lambda P(w|C)$.
 
 
+<!-- What would be a surprise? -->
+
 #### System
 
 The testing system will be built on top of Apache Lucene.
-Lucene provides high performance for large collections and even underlies Etsy's own stack.<!--todo: properly cite: http://www.slideshare.net/lucenerevolution/solr-lucene-and-hadoop-etsy-->
+Lucene provides high performance for large collections.
 The baseline system will use the LMJelinekMercerSimilarity similarity scorer, and subsequent changes will be custom made.
-
-For evaluation, workers from Amazon Mechanical Turk will provide judgments, either using Etsy's internal collection system, or the open-source code developed in the previous chapter. <!--TODO choose one.-->
 
 ### Related questions
 
