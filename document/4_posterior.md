@@ -1,7 +1,7 @@
 Incorporating user-contributions in document modeling
 ==================================================================
 
-While on-demand collection of document metadata can be invaluable in controlled circumstances, there are cases where either
+While on-demand collection of document metadata through crowdsourcing can be invaluable in controlled circumstances, there are cases where either
  the data is already collected, or 
  where there is a limit to the amount of control a system designer can exert over contributors before discouraging them.
 
@@ -39,41 +39,44 @@ This study focuses on volunteered data, mainly because it is a more novel space.
 My past research has already looked at issues around interpreting a contribution in paid-crowdsourcing, post-collection.
 It is also generally a well-explored space in research [notably including: @ipeirotis_quality_2010; @raykar_supervised_2009; @eickhoff_increasing_2012; @sheng_get_2008; @welinder_online_2010; @whitehill_whose_2009; @snow_cheap_2008; @novotney_cheap_2010].
 Others have looked at similar situations of consensus-making among experts [@wallace_who_2011].
-Secondly, in a production information retrieval context, it is more common to design around user needs, leaving the system designer to use the data for retrieval as it comes in.
+Secondly, there is an appeal to pursuing realistic contexts. 
+In a production information retrieval context, it is more common to design around user needs, leaving the system designer to use the data for retrieval as it comes in.
 
-## Problem
+# Problem
 
-How do you normalize for deviations among <!--TODO -->
+How do you model a collection of loosely-structured and subjective human contributions into a normative crowd opinion, one that can be used to describe objects in a corpus?
 
-<!-- Move to problem section, edit out old theme
 It is common to see differences in the habits of contributors that are trying to achieve the same thing.
 Many tasks that assume an objective, correct contribution are nonetheless are subject to interpretation, especially in volunteered contributions where detailed codebooks are deterrents to casual contributions.
 Likewise, even when a task is subjective, where a contribution is understood to be related to each individual's tastes and opinion, there are still problems of reliability beyond differences of opinion.
 One person's definition of a 3-star opinion judgment or their threshold for what is needed to click an approving 'thumbs up' button might be different from another person's, even if their underlying opinions are identical.
--->
 
-## Subjective vs. Objective Assumptions
+<!--## Subjective vs. Objective Assumptions-->
 
-Crowdsourced opinions can be treated either through a personalized approach and a consensus-seeking approach.
+Subjective crowdsourced contributions can be treated either through a personalized approach and a consensus-seeking approach.
 
 For personalization, a system assumes that each opinion is representative of a specific type of user, and that the data can be used to model the individual users.
 Collaborative filtering usually makes this assumption.
 Doing so keeps closer to a user's tastes in highly divisive domains, separating Black Sabbath from Black-Eyed Peas, or Doctor Zhivago from Doctor Doolittle.
 This was the assumption made in [<!--TODO cite hcomp-->].
 
-Another approach to opinion ratings is to seek consensus.
+Another approach to subjectivity is to seek consensus.
 This approach is not as nuanced to the differences of opinions between humans, but has a few benefits.
-First, it is easier to communicate to users a single absolute opinion. 
+First, it is easier to communicate to users a single description or opinion.
+If five out of six users call a film 'funny' but the last person states the opposite, it's easier to tell a user at a glance that the film is 'funny' then trying to communicate the nuance.
 Secondly, it accommodates users that have never been seen before: recommending the option that has the maximum likelihood of satisfy any user is safe for new users.
-It's The Beatles option: even if you admit, rightly, that the context is highly subjective, you still need to consider the global best-guess.
+This is the _Beatles_ option: even if you admit, rightly, that the context is highly subjective, you still need to consider the global best-guess.
 
-It is the latter approach that I will be pursuing in this study.
+In a context like Pinterest, users might search for terms that do not have a single right answer, but rather one that is interpreted or negotiated.
+When a user searches for 'rustic wedding' or 'cute dress', it is difficult to infer what their interpretation of 'rustic' is or what they find to be 'cute' what they consider 'rustic' or 'cute' without knowing anything about the user.
+
+It is this latter approach to representing subjective aspects of document, to seek consensus among many individual 
 
 ## <!--!!!--> Existing Work
 
-Much work has been completed in posterior corrections for paid crowdsourcing contributions.
+<!--Much work has been completed in posterior corrections for paid crowdsourcing contributions.-->
 
-The research covered in this
+<!--The research covered in this-->
 
 <!--## Measuring Reliability of Human Raters
 
@@ -93,7 +96,7 @@ TODO: need treatment of that study
 
 -->
 
-## A Crowd Inside: Interpreting crowd contributed data in Information Retrieval
+# Approach
 
 The cornerstone of this chapter will be a study measuring the value of crowdsourced information in improving information retrieval ranking against the data from Pinterest.
 
@@ -121,7 +124,7 @@ Pinterest is a novel crowdsourcing website for studying ways to incorporate crow
 In addition, Pinterest is simply interesting.
 The user base has a female skew, which is a refreshing change from male-heavy communities and interesting precisely because of the various features that have allowed Pinterest to counter-balance the typical demographics.
 
-### Data
+## Data
 
 <!-- Is there a "what is Pinterest" section above? There should be-->
 
@@ -160,11 +163,8 @@ The explicit forms of descriptive crowdsourcing that are seen on Pinterest are:
  * Describing boards: title, description, category
  * Social contribution: commenting on pins, repinning, 'liking'
 
-#### Approach
 
-This
-
-#### Data Collection
+### Data Collection
 
 Three types of information will be collected from Pinterest:
 
@@ -189,7 +189,7 @@ This is a very large amount of data, and a bottleneck that is likely not necessa
 The exact size of the sample will be determined once I start collecting data.
 As a general rule, I would like to collect as much data as possible, while staying within a manageable file size and collection duration.
 
-##### Design
+#### Design
 
 Adopting a language modelling approach for this study, we rank documents by estimating the probability of each document's language model generating the query, and that document's prior probability of being relevant.
 
@@ -201,7 +201,7 @@ This is the model that I'll be using as a baseline; a more detailed refresher is
 Using crowdsourcing information
 
 
-#### Evaluation
+## Evaluation
 
 <!--
 What metric?
@@ -213,11 +213,11 @@ What data?
 How is relevance described? By whom?
 -->
 
-##### Evaluators
+### Evaluators
 Given that the number of registered users on Pinterest is very high, approximately 107.5 million, it should be feasible to perform a more naturalistic evaluation, recruiting real users as judges for real queries. 
 For evaluation,  I will recruit Pinterest users locally to perform relevance judging.
 
-##### Judgement Design
+### Judgement Design
 
 Users will be asked to judge the relevance of 130 documents for 10 queries on a graded scale from 1 to 10 <!--TODO research on graded relevance-->.
 <!--Documents will be shown in randomized order, mixing results from the baseline system and the  system.-->
@@ -238,7 +238,7 @@ How relevant is this to the query
 
 -->
 
-##### Evaluation Queries
+### Evaluation Queries
 
 The queries being evaluated will be a mix of evaluators' search history -- dependent on what they feel comfortable providing -- and on popular queries collected through the Pinterest query input auto-complete feature.
 
@@ -270,7 +270,7 @@ For each query, a description of what constitute the different levels of relevan
 Table: Popular queries on Pinterest, showing the 5 search input auto-complete suggestions for each letter of the alphabet.
 Though Pinterest requires users to be logged-in, this list does not appear to be personalized: the same list was derived when I asked other users to run the collection code.
 
-#### Baseline
+### Baseline
 
 The baseline for the system will be a basic unigram model, with the query likelihood based on the terms of a document's title and user description, and smoothed against the collection likelihood with linear smoothing (i.e. _Jelinek-Mercer_).
 
@@ -303,13 +303,13 @@ $P(q_i|d)=(1-\lambda)P(q_i|d)+\lambda P(w|C)$.
 
 <!-- What would be a surprise? -->
 
-#### System
+### System
 
 The testing system will be built on top of Apache Lucene.
 Lucene provides high performance for large collections.
 The baseline system will use the LMJelinekMercerSimilarity similarity scorer, and subsequent changes will be custom made.
 
-### Related questions
+## Related questions
 
 How does the stylistic variance of contributions change through the lifespan of a system?
 We hypothesize that as crowdsourcing systems grow in size, their contributions also grow less variant in their approach.

@@ -1,11 +1,9 @@
 Literature Review
 ===================
 
-## Intro
+Crowdsourcing is a simple concept that has received considerable research attention in the past few years, alongside a realization of the power of the internet for effectively connecting people in great numbers.
 
-Crowdsourcing is a simple concept that has received considerable research attention in the past few years, alongside a realization in the power of the internet for effectively connecting people in great numbers.
-
-Perhaps unsurprisingly, this concept precedes the language that we have developed around it in recent years, and the research in crowdsourcing has not been evenly distributed.
+Perhaps unsurprisingly, the concept of crowdsourcing precedes the language that we have developed around it in recent years, and the research in crowdsourcing has not been evenly distributed.
 
 In this section, I provide an overview of crowdsourcing and the notable research within it.
 
@@ -17,17 +15,14 @@ Beneath this large umbrella, there are many concepts that are either in its purv
 ### Crowdsourcing
 
 Crowdsourcing refers to "groups of disparate people, connected through technology, contributing to a common product" [@organisciak_why_2010].
-It is an umbrella term that broadly captures the abilities of the internet, as a communications medium, to efficient connect people.
+It broadly captures the abilities of the internet, as a communications medium, to efficient connect people.
 
 Nothing about crowdsourcing is fundamentally tied to the internet.
 It is entirely possible to bring together large groups of people in different ways, but the access and efficiency of the internet is both
-what made the concept seem so novel in the 20th century and what gave it value in the various realms where it was applied.
-
-Whereas crowds have long been noted for their collective simplicity [@le_bon_crowd:_1896]<!--_--> or irrationality [@mackay_memoirs_1852],
+what made the concept seem so novel and what gave it value in the various realms where it was applied. Whereas crowds have long been noted for their collective simplicity [@le_bon_crowd:_1896]<!--_--> or irrationality [@mackay_memoirs_1852],
 through the internet one can perform human-specific tasks at a scale usually only seen for computational tasks.
 
-To understand crowdsourcing, a brief understanding of its history is necessary.
-The term is recent and has an unambiguous source, but immediately upon introduction, it was adopted and expanded by society.
+The term is recent and has an unambiguous source, but immediately upon introduction, it was adopted and expanded on through public discourse.
 
 The term _crowdsourcing_ was coined in a 2006 Wired article by Jeff Howe [@howe_rise_2006].
 Howe was writing from a labor perspective, looking at online marketplaces for people to solve problems and create content.
@@ -36,7 +31,7 @@ The article briefly looked at user-generated online content, though in the conte
 
 Despite the somewhat specific initial definition, the term _crowdsourcing_ struck a chord more broadly and was culturally co-opted.
 This happened very quickly: within nine days Howe noted a jump from three Google results to 189,000 [@howe_birth_2006].
-Within a month, Howe address the co-opting of the term, "noticing that the word is being used somewhat interchangably with Yochai Benkler's concept of commons-based peer production" [@howe_crowdsourcing:_2006]<!--_-->.
+Within a month, Howe addressed the co-opting of the term, "noticing that the word is being used somewhat interchangably with Yochai Benkler's concept of commons-based peer production" [@howe_crowdsourcing:_2006]<!--_-->.
 He gives his own definition, but also notes that language is slippery and he's "content to allow the crowd define the term for itself (in no small part because [he's] powerless to stop it.)".
 
 Thus, crowdsourcing was adopted to refer broadly to a series of related concepts, all related to people being connected online.
@@ -46,30 +41,42 @@ These concepts included
  commons-based peer production[@benkler_wealth_2006], and
  free and open-source development [@lakhani_how_2003; @raymond_cathedral_1999].
 
+While there have been occasional semantic attempts to redefine crowdsourcing again as a more granular term, its colloquial adoptions seems to have comented its use as a broad concept.
+
 ### Wisdom of the Crowds
 
 _The Wisdom of the Crowds_[@surowiecki_wisdom_2004] is a book written by journalist James Surowiecki in 2004.
 The book observes the strength of human decision-making when one in aggregate, and the term 'wisdom of the crowds' has survived the book to refer to cases that make use of this.
 
- 
-
 ### Human-Computation
 
 _Human Computation_ emerged from from the doctoral dissertation work by Luis von Ahn in 2005, popularized alongside the ESP Game [@ahn_labeling_2004; @von_ahn_games_2006]. <!--_-->
-It refers to a process of computation -- the "mapping of some input representation to some output representation using an explicit, finite set of instruction" [@law_defining_2011] -- performed by humans.
+It refers to a process of computation -- the "mapping of some input representation to some output representation using an explicit, finite set of instruction" [@law_human_2011] -- performed by humans.
 
 In synthesizing the definition of human computation in relation to crowdsourcing, collection intelligence, and social computing, Quinn and Bederson note two characteristics of consensus:
  that "the problems fit the general paradigm of computation, and as such might someday be solvable by computers", and 
  that "the human participation is direction by the computational system or process" [@quinn_human_2011].
 
-As noted by @[TODO cite law], Turing defined the purpose of computers as carrying out operations that humans would normally do.
+As noted by @law_human_2011, Turing defined the purpose of computers as carrying out operations that humans would normally do.
 Human Computation, then, refers to utilizing humans for operations that computers simply are not capable of performed yet.
 
 By this definition, much human computation aligns with crowdsourcing, but large swaths of crowdsourcing are not relevant to human computation.
 For example, the types of large creative crowdsourcing projects like t-shirt design website Threadless and online encyclopedia Wikipedia are not human computation.
-Inversely, human computation does not have to sustained by self-selected workers; a more traditionally hired closed system can suffice [@law_defining_2011].
+Inversely, human computation does not have to sustained by self-selected workers; a more traditionally hired closed system can suffice [@law_human_2011].
 
 ### Open-Source
+
+An early model reflecting the properties of crowdsourcing is open source software development.
+
+With open source, software's underlying source code is freely accessible.
+As a consequence of this form of transparency, open-source development began to adopt some unique properties: users and distributed developers could jump into the code to fix a bug, or add a feature that they wanted to see.
+The significance of this became apparent when Linus Torvalds released Linux in 1992 with a development model that accepted external code contributions heartily, released early and often, and followed the pulse of user needs closely.
+Eric Raymond compared this form of software development to a bazaar, "open to the point of promiscuity", and contrasted it to the traditionally managed 'cathedral' style seen in the commercial world and earlier open source projects [@raymond_cathedral_1999].
+
+The many hands approach to open-source demonstrated that technologically-connected crowds can coherently delegate and create works.
+Like with crowdsourcing, open source software development often does not discriminate on credentials or background; if a contributor is able to make an adequate contribution, it can be used.
+
+Crowdsourcing's roots in open source are noted Jeff Howe's short definition of crowdsourcing, formulated after his Wired article: "the application of Open Source principles to fields outside of software."
 
 ### User Innovation
 

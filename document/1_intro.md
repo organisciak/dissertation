@@ -7,7 +7,7 @@ Introduction
 
 The internet is growing increasingly interactive as it matures.
 Rather than simply transmitting information to readers, web pages allow their audience to react and interact with their information.
-The products of these interactions are a trove of qualitative judgements, valuable to modelling information objects.
+The products of these interactions are a trove of qualitative judgements, valuable to modeling information objects.
 In recent years, this form of creation through collaboration has been studied as _crowdsourcing_.
 
 Effective information retrieval depends on reliable, detailed information to index.
@@ -19,7 +19,7 @@ More importantly, crowdsourcing looks at human contribution at scales that are p
 <!-- Broad Research Question -->
 However, humans have predictable and unpredictable biases that make it difficult to systematically adopt their contributions in an information system.
 How do we control and interpret qualitative user contributions in an inherently quantitative system?
-This study looks at the effect of human error on crowdsourcing for document metadata, which I refer to by the shorthand of _descriptive crowdsourcing_, and how it affects information retrieval uses of human contributions.
+This study looks at crowdsourcing for document metadata, which I refer to by the shorthand of _descriptive crowdsourcing_, and how to interpret this form of human contributed metadata in information retrieval.
 
 <!-- Specific Research Question -->
 Concretely, I am proposing a study in two parts, separated by their focus on _collecting_ descriptive metadata reliably, and on _using_ it in an appropriate information retrieval context.
@@ -29,19 +29,19 @@ Concretely, I am proposing a study in two parts, separated by their focus on _co
 
  2. In the second half of this dissertation, I will look at improving retrieval using already-collected crowdsourcing data.
     I focus on the system _Pinterest_, because it is a valuable resource of human-encoding descriptive metadata, while sparse in its other textual content.
-    It is also a example of the loosely constrained form of crowdsourcing contribution that is often required to encourage participation, a trade-off that is less structured than a retrieval model may prefer.
+    It is also a example of the loosely constrained form of crowdsourcing contribution that is often required to encourage participation, a trade-off that is less structured than would be preferable for retrieval model.
 
 <!-- LEFT OFF EDITING HERE-->
-Particularly, this study looks at the issue of recoverable error in human-contributed data, alternately viewed as intercoder reliability when studied from the data end.
-Can error in descriptive crowdsourcing be accounted for, either at the time of data collection or afterward, in a manner that maximizes the intercoder reliability of contributions and subsequently the usefulness for information retrieval?
+<!-- Particularly, this study looks at the issue of recoverable error in human-contributed data, alternately viewed as intercoder reliability when studied from the data end.
+Can error in descriptive crowdsourcing be accounted for, either at the time of data collection or afterward, in a manner that maximizes the intercoder reliability of contributions and subsequently the usefulness for information retrieval? -->
 
 <!--### Hypothesis-->
-I will argue that reliability of crowdsourced data can be improved by making an assumption that crowd contributors are honest-but-biased[^language]. This is an assumption supported by prior work and not uncommon in research on classification, but understudied in crowd research.
+I argue that the reliability of crowdsourced data can be improved by making an assumption that crowd contributors are honest-but-biased[^language]. This is an assumption supported by prior work and not uncommon in research on classification, such as the literature on intercoder reliability, but is understudied in crowd research.
 The proposed study follows the hypothesis that such an assumption leads to 
 a) more algorithmically valuable crowdsourced description and 
 b) a greater proportion of useful contributions.
 
-<!-- -->
+<!-- TODO: Do my studies answer these questions? I NEED to compare to versions that don't make this assumption -->
 
 [^language]: In assuming that humans are biased, the biases referred to are the inclinations, leanings, and tendencies [@_bias_????] of individuals, quirks that affect their worldview and how they understand and perform tasks.
 By this definition, such perceptual differences contribute to a greater statisticalvariance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias', referring to a model that is overfit, or overly 'biased', to a specific dataset.
@@ -50,28 +50,28 @@ When discussing the processes of humans --and only when doing so-- this study ma
 
 ### Approach
 
-The study of human-introduced variance will be done in two different sites of crowdsourcing:
+The study collecting and modeling document metadata through crowdsourcing will be done in two different sites of crowdsourcing:
 
  * in the design of contribution tasks in order to minimize variance, and
- * in the normalization of contributions after they have already been collected.
+ * in modeling normative meaning of contributions after they have already been collected.
 
 Doing so will both adopt work that I have performed during my doctoral studies and contribute new research.
 
-This study cannot account for all possible situations and methods for accounting for human-introduced variance before and after crowdsourcing collection.
-Rather, each chapter will focus on a more narrowly scoped sub-problem in the area, to give this study the grounding necessary for a thorough exploration of the larger problem space.
+This study cannot account for all possible situations and methods for crowdsourced document enrichment.
+Rather, each chapter will focus on a novel sub-problem within the area, providing a grounding from which I can more thoroughly explore the larger problem space.
 
-In the first sub-study, the performance of workers completing the same task will be compared across different design implementations for collecting that information.
-In the second sub-study, an information retrieval model that incorporates crowdsourced information will be compared to a baseline which does not, then compared to a system that normalizes user contributions against user behavior.
-Both of these stay true to the assumption of honest-but-biased workers in focusing on the responsibilities of a system designer in managing and interpreting the crowd.
+In the first sub-study, the performance of workers completing the same document description task will be compared across different design interface.
+In the second sub-study, I develop strategies for making use of crowdsourced information.
+ Here, an information retrieval model is developed that incorporates a crowdsourcing-heavy system's user contributions in retrieval.
+Both studies stay true to the assumption of honest-but-biased workers, focusing on the responsibilities of a system designer in managing and interpreting the crowd rather than the faults of individuals in the crowd.
 
 ### Take Away
 
 A reader of the proposed dissertation will understand:
 
  * the issues related to using crowdsourcing contributions for information retrieval indexing;
- * the effect of designing collection tasks that are are quicker or slower on a paid crowdsourcing platform, with a sense of how this information generalizes to different tasks or collection spaces;
- * corrective measures for variance in already-collected descriptive metadata, particularly corpus-based methods for modeling documents for retrieval
-   and
+ * the effect of designing crowdsourcing collection tasks that encourage quicker or slower contributions on a paid crowdsourcing platform, with a sense of how this information generalizes to different tasks or collection spaces;
+ * ways to use loosely-structured crowd contributions for retrieval, particularly user curated lists; and
  * the tractability of making an assumption of honest-but-biased contributors.
 
 ## Crowdsourcing
@@ -344,7 +344,7 @@ This form of peripheral collection of data was noted to favour descriptive activ
 ### Human computation
 
 Human computation is a separate but closely related concept to crowdsourcing.
-It refers to activities where humans perform work in a paradigm reminiscent to computing, and which could conceivably one day be done by computers [@law_defining_2011; @quinn_human_2011].
+It refers to activities where humans perform work in a paradigm reminiscent to computing, and which could conceivably one day be done by computers [@law_human_2011; @quinn_human_2011].
 Human computation does not need to be crowdsourced, but many such tasks benefit from crowdsourcing.
 Likewise, while a notable portion of crowdsourcing tasks are creative, such as writing or commenting, human computation represents a large portion of the types of crowdsourcing seen in the wild.
 
@@ -391,3 +391,4 @@ Focusing on an existing use of crowdsourcing for improving information retrieval
 
 
 Details of the proposed study designs for chapters 3 and 4 are provided later in this proposal, and an initial literation review is provided next.
+
