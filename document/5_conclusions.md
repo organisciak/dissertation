@@ -1,20 +1,21 @@
 Conclusions
 =============
 
-Workplan
---------
+## What would surprise me? What can fail? Backup options and fallback.
 
+## Workplan
+
+<!-- TODO: Tasks and Goals -->
 What's necessary?
 
-Design Study
-------------
+## Designing Crowdsourcing Tasks
 
  * Admin
     * IRB Application
-    * Look for funding?
+    * Search for funding opportunity
  * Design Tasks
     1. Additional literature review?
-    2. Find or collect Twtter dataset
+    2. Find or collect Twitter dataset
     3. Annotate gold standard set?
     4. Build measurement instruments
         1. Basic Design
@@ -29,8 +30,20 @@ Design Study
         * Payment amount: determined based on time spent statistics
        
 
-Deviation from Expectation Study
---------------------------------
+## Modeling Document Metadata in Retrieval
 
- *  
- * 
+ * Data collection
+    * Build crawler
+    * Secure disk space and server access. Here, Amazon EC2 is the default.
+ * System development
+    * Prepare baseline system
+    * Develop front-end for evaluation (Connect to work performed for design study.)
+ * Research
+    * Generate a test collection (Mechanical Turk)
+ * Evaluation
+ * Writing
+
+## Publication targets
+
+CIKM, SIGIR, CSCW, HCOMP, ASIS&T, JCDL, 
+<!-- TODO: possible topics for those conferences -->
