@@ -81,7 +81,7 @@ Crowdsourcing's roots in open source are noted Jeff Howe's short definition of c
 ### User Innovation and Commons-Based Peer Production
 
 It should not be surprising that recent cultural observers have noted the behaviours seen in crowdsourcing through various lens.
-Crowdsourcing emerges from various affordances <!--TODO cite affordances (Barry Wellman?-->of modern information networks.
+Crowdsourcing emerges from various affordances <!--TODO1 cite affordances (Barry Wellman?-->of modern information networks.
 Such as seen with open-source software development, networked society encourages new forms of cultural creation, not by intention but by consequence of the type of connectedness it allows.
 
 As networked society has developed and the internet has grown ubiquitous, a great numbers of scholars have noted the cascading consequences in how individuals interact with culture and participate in the creation of cultural objects.
@@ -99,7 +99,7 @@ These users either develop new products to fill their needs, or modify existing 
 Not all crowdsourcing creation is user innovation, though we see echos of von Hippel's work in companies that turn to the Internet for help in conducting their business, whether it is soliciting feedback and suggestions (e.g. MyStarbucksIdea [^Starbucks]), bug reports, or even work at a bounty (e.g. advertising contests).
 User sharing of work performed for themselves is another similar area: for example, when a music service allows users to share their playlists publicly, their realization of a personal need has potential value to other users.
 
-Benkler's work takes a political economy view on what he calls the 'networked information economy', but arrives at a very similar place to von Hippel. <!--TODO: finish thought, then discussion commons-based peer production-->
+Benkler's work takes a political economy view on what he calls the 'networked information economy', but arrives at a very similar place to von Hippel. <!--TODO1: finish thought, then discussion commons-based peer production-->
 
 Benkler[@benkler_wealth_2006] singles out two user behaviors borne out of access to information networks, which in turn underlie the rise of crowdsourcing.
 First, individuals are more empowered to operate autonomously, for themselves with less reliance on mass-market goods.
@@ -107,7 +107,7 @@ At the same time, loose collaborations are easier to organize, allowing individu
 
 [^Starbucks]: http://mystarbucksidea.force.com/
 
-<!-- TODO Benkler-->
+<!-- TODO1 Benkler-->
 
 <!--### Social Computing-->
 <!-- See Law 2011, and see Bederson 2011 -->
@@ -173,8 +173,8 @@ The incentives for contributors to participate in crowdsourcing are complex and 
 
 #### Intrinsic / Extrinsic Motivation
 
-Motivation in crowdsourcing follows related work in the motivations of humans in general (TODO: cite Deci, Maslow, Aldoufer?).
-While a review of that work is beyond the scope of this work, many views<!--(TODO: 'many views' needs citations)--> of crowdsourcing motivation adopt the lens of motivation as a mixture of _intrinsic_ factors and _extrinsic_ factors [@ryan_intrinsic_2000].
+Motivation in crowdsourcing follows related work in the motivations of humans in general (TODO1: cite Deci, Maslow, Aldoufer?).
+While a review of that work is beyond the scope of this work, many views<!--(TODO1: 'many views' needs citations)--> of crowdsourcing motivation adopt the lens of motivation as a mixture of _intrinsic_ factors and _extrinsic_ factors [@ryan_intrinsic_2000].
 In the former, fulfillment is internal to the contributor, psychologically motivated, while in the latter the rewards are external.
 
 The spectrum of intrinsic to extrinsic motivators is commonly paralleled in crowdsourcing literature through dichotomy of paid and volunteer crowdsourcing [].
@@ -183,14 +183,14 @@ Paid and volunteer crowdsourcing are not exclusive, and there are extrinsic moti
 However, this separation is common because of it accounts for some of the starkest differences between how crowdsourcing is implemented and motivated.
 There are differing design implications around people being paid and performing work for other reasons: money is a direct currency for obtaining labor, while convincing volunteers to contribute requires a greater sensitivity of their needs and ultimately more complexity in engineering the crowdsourcing system.
 
-It has been shown that intrinsic motivation still plays a part in paid crowdsourcing [@mason_financial_2010], and some systems mix intrinsically motivated tasks with payment or the chance at renumeration (e.g. Quirky, GasBuddy, 99Designs). <!--TODO: Expand examples -->
+It has been shown that intrinsic motivation still plays a part in paid crowdsourcing [@mason_financial_2010], and some systems mix intrinsically motivated tasks with payment or the chance at renumeration (e.g. Quirky, GasBuddy, 99Designs). <!--TODO1: Expand examples -->
 
 Some taxonomies make a distinction between forms of payment.
 @geiger_managing_2011 makes the distinction between fixed renumeration, with a pre-agreed fee, and success-based renumeration, such as contest winnings or bonus.
 
 #### Specific Motivators
 
-<!-- TODO
+<!-- TODO1
  - commitment/contribution
  - add more from @kraut_building_2011, @kraut_encouraging_2012
 -->
@@ -213,22 +213,22 @@ The primary motivators seen in @organisciak_why_2010 were:
 In the absence of other motivators or where certainty is required, reimbursement will attract contributors.
 However, it also introduces bottlenecks of scale, and negates some of the benefits of intrinsic motivation.
 @mason_financial_2010 note that, while intrinsic motivation still exists on paid crowdsourcing platforms, it is overwhelmed when tasks are too closely tied to reimbursement, resulting in contributions that are done minimally, briskly, and with less enjoyment.
-<!-- TODO Mark Twain quote -->
+<!-- TODO1 Mark Twain quote -->
  * __Interest in the Topic__. Sites that cater to people that have a pre-existing interest in their subject matter or outcomes tend to get longer, more consistent engagement.
 For example, the Australian Newspaper Digitisation Project (now know as a larger project called Trove) found that that amateur genealogists, with pre-existing communities and a willingness to learn new technologies, took “to text correction like ducks to water” @holley_many_2009.
-Similarly, Galaxy Zoo found similar success with amateur astronomers.<!--TODO citation-->
+Similarly, Galaxy Zoo found similar success with amateur astronomers.<!--TODO1 citation-->
  * __Ease of entry and ease of participation__. Low barriers to entry and participation were cited by every single user interviewed for the study.
-Wikipedia has a low barrier to entry – just click ‘Edit’ – but its interface and demanding core community have been criticized in recent years for raising the barrier to participation. <!--TODO cite Angwin and Fowler 2009, Sanger 2009-->. As a result, its new participant numbers have trended downward, a problem identified by the foundation running Wikipedia as high-problem.<!--TODO: cite-->
+Wikipedia has a low barrier to entry – just click ‘Edit’ – but its interface and demanding core community have been criticized in recent years for raising the barrier to participation. <!--TODO1 cite Angwin and Fowler 2009, Sanger 2009-->. As a result, its new participant numbers have trended downward, a problem identified by the foundation running Wikipedia as high-problem.<!--TODO1: cite-->
  * __Altruism and Meaningful contribution__. People like to help if they believe in what they’re helping.
 Writing about Flickr Commons, Library of Congress noted that they "appear to have tapped into the Web community's altruistic substratum by asking people for help.
 People wanted to participate and liked being asked to contribute". [@springer_for_2008].
-With Galaxy Zoo <!-- TODO cite GZ study and my own-->, people often cite the fact that it is a tangible way to contribute to real science.
- * __Sincerity__. <!-- TODO write about sincerity -->
- * __Appeal to knowledge__. <!-- TODO write about appeal to knowledge -->
- * __Appeal to opinions__. <!-- TODO write about appeal to opinions -->
+With Galaxy Zoo <!-- TODO1 cite GZ study and my own-->, people often cite the fact that it is a tangible way to contribute to real science.
+ * __Sincerity__. <!-- TODO1 write about sincerity -->
+ * __Appeal to knowledge__. <!-- TODO1 write about appeal to knowledge -->
+ * __Appeal to opinions__. <!-- TODO1 write about appeal to opinions -->
 
 <!---
-TODO
+TODO1
 Talking through taxonomies
 Centrality
 Sincerity
@@ -252,9 +252,9 @@ The supplemental secondary motivators observed in the study were:
  * __Recommendations and the social__.
  * __Window fixing__.
 
-<!-- TODO: brief descriptions of secondary motivators -->
+<!-- TODO1: brief descriptions of secondary motivators -->
 
-<!-- TODO: Discuss Kraut and Resnick -->
+<!-- TODO1: Discuss Kraut and Resnick -->
 
 ### Aggregation
 
@@ -285,9 +285,9 @@ Autonomous crowdsourcing can be in a centralized location, like a community-writ
 
 Considering the soliciting party as a case of sponsorship or autonomy is useful, though a further distinction should be made between the collective (the _crowd_) and the individual (the _contributors_).
 Crowds collaborate toward a shared goal, as with Wikipedia or a type of open-source software development, while individuals are more self-possessed.
-For example, in citation analysis through web links, as was done with PageRank (<!--TODO cite pagerank paper-->), the large-scale benefits of the crowds are unrelated to what the individuals creating the links are thinking.
+For example, in citation analysis through web links, as was done with PageRank (<!--TODO1 cite pagerank paper-->), the large-scale benefits of the crowds are unrelated to what the individuals creating the links are thinking.
 
-<!-- TODO: next few lines -->
+<!-- TODO1: next few lines -->
 
  - The relationship between the director 
  - My effort vs. my benefit vs. their benefit
@@ -297,14 +297,14 @@ For example, in citation analysis through web links, as was done with PageRank (
 
 ### Object of Interest
 
-<!-- TODO: Creation vs. Reaction -->
+<!-- TODO1: Creation vs. Reaction -->
 * Creation vs. Reaction
 
 ### Criticality of Crowdsourcing
 
-<!-- TODO I used "centrality above, is it better or worse than criticality?-->
+<!-- TODO1 I used "centrality above, is it better or worse than criticality?-->
 
-<!-- TODO Write this section -->
+<!-- TODO1 Write this section -->
  * How important in the crowdsourcing to the larger project? 
  * Peripheral / Core
  * Fairly neglected in literature
@@ -331,18 +331,18 @@ Since @schenk_crowdsourcing:_2009 focus on crowdsourcing when there is a client,
 
 #### Subjective vs. Objective Crowdsourcing
 
-<!-- TODO add research -->
+<!-- TODO1 add research -->
 Another parallel being drawn in recent years is that of objective or subjective crowdsourcing tasks.
 
 Objective tasks are assumed to have an authoritative truth, even if it is unknown.
 For example, in transcribing scanned texts, it is assumed that there is a 'correct' passage in the work that has been scanned.
 
 In contrast, subjective tasks have a variable concept of correctness, as they are are not expected to be consistent between contributors.
-<!--TODO: write more-->
+<!--TODO1: write more-->
 
 Commonly human computation undertakings are objective tasks, while Schenk's split of routine, complex, and creative does not commit to this split in any particular way.
 
-<!-- TODO: citations -->
+<!-- TODO1: citations -->
 
 This designation also applies to aggregation.
 Multiple contributions can be aggregated with an objective assumption, expecting a truth a deviations from it as bad work or data.
@@ -351,37 +351,48 @@ This latter assumption is seen often in opinion ratings, such as film or restaur
 
 ### Type of Crowd
 
-Vukovic and Batolini (TODO proper cite) define two extremes of crowd types: _internal_ and _external_.
+Vukovic and Batolini (TODO1 proper cite) define two extremes of crowd types: _internal_ and _external_.
 Internal crowds are composed solely of contributors from the organization that is crowdsourcing, if it is thus centralized.
 External crowds are members outside of the institution.
 Vukovic and Batolini also note that _mixed_ crowds are observable.
 
 #### Necessary Skills
 
-<!--TODO-->
+<!--TODO1-->
 
  * mentioned briefly in @quinn_human_2011, anywhere else?
 
 ### Quality Control
 
-<!-- TODO -->
+<!-- TODO1 -->
 
 see @quinn_human_2011, others
 
 ### Common Design Patterns
 
-<!-- TODO: This might warrant it's own page. Regardless, more discription than the point form list is in order -->
+A number of design patterns have been established and repeated in crowdsourcing, some organically and some, like the ESP Game, carefully engineered.
+These include:
 
- * Microtasking
- * Gamification
-    * Eickhoff, Harris et. al talk about gamification on MTurk [TODO]
+ * __Microtasking__: the concept of splitting a large task into many smaller parts to be worked on by different people was an important tide change in the history of open-source software [@raymond_cathedral_1999], and the same models have been emulated in crowdsourcing.
+With so-called 'microtasks', the overhead to participation is low, and the pressure or dependence on any one contributor is low.
+
+ * __Gamification__: Gamification is predicated on a reframing of what would traditionally be labour.
+Shirky argues that the appeal ofo 
+Serious games
+
+
+proved successful in the open-source community for collaboration, and has been repeated throughout crowdsourcing.
+
+With the serious games movement, it has
+
+    * Eickhoff, Harris et. al talk about gamification on MTurk [TODO1]
  * Opinion Ratings
  * Platforms
  * Contest
  * Wisdom of crowds
 
 <!--
-TODO: cite elsewhere
+TODO1: cite elsewhere
 
 ### Full Taxonomies
 
@@ -393,7 +404,7 @@ TODO: cite elsewhere
 
 ## Top research in crowdsourcing
 
-<!-- TODO: write -->
+<!-- TODO1: write -->
 
 ### ESP Game
 
@@ -411,11 +422,11 @@ TODO: cite elsewhere
 
 ## Crowdsourcing in the Wild
 
-<!-- TODO -->
+<!-- TODO1 -->
 
 Notable crowdsourcing in the wild
 
-<!-- TODO: Who else? -->
+<!-- TODO1: Who else? -->
 
 ### Wikipedia
 
@@ -432,7 +443,7 @@ Notable crowdsourcing in the wild
 
 ## Failures and Concerns
 
-<!-- TODO, but don't overdo it-->
+<!-- TODO1, but don't overdo it-->
 
 
 ### Ethics
@@ -440,11 +451,11 @@ Notable crowdsourcing in the wild
 
 ## Research in Information Science
 
-<!-- TODO -->
+<!-- TODO1 -->
 
 ## Research in Information Retrieval
 
-<!-- Much TODO -->
+<!-- Much TODO1 -->
 
 In information retrieval, the focus on crowdsourcing has been predominantly in the use of paid crowds for generating evaluation datasets, though there have been efforts to use crowds to improve document representation or even query specific ranking.
 
@@ -464,7 +475,7 @@ In information retrieval, the focus on crowdsourcing has been predominantly in t
 ### Coding Aggregation / Ground Truth generation
 
 
-<!--TODO: Rename header-->
+<!--TODO1: Rename header-->
 
 
 

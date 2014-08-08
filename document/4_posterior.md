@@ -176,12 +176,12 @@ Adopting a language modeling approach for this study, documents are ranked by es
 
 $P(d|q)\propto P(q|d)P(d)$
 
-Given a basic case of the unigram model [<!--(TODO1 cite Croft 98)-->] a document's prior probability of generating the query, $P(d)$, is assumed to be constant across all documents.
+Given a basic case of the unigram model [@ponte_language_1998, @song_general_1999] a document's prior probability of generating the query, $P(d)$, is assumed to be constant across all documents.
 This is the approach used for the baseline system, provided in detail in the baseline section below.
 
 This work approaches $P(q|d)$ as an estimate that may be improved by user-contributed description of the document, and $P(d)$ as an estimate that may be improved by quality judgments.
 
-#### P(q|d)zo
+#### P(q|d)
 
 Most basically, $P(q|d)$ starts with a maximum likelihood estimate of all the terms in the user's pin.
 
@@ -194,14 +194,15 @@ T = bag of unigrams from
 <!-- TODO describe interpolation -->
 
 In this study's approach, we assume that co-occurring pins in lists and other users' pins of the same source content represent additional interpretations of the pin's aboutness.
-By interpolating a pin's  <!-- TODO: finish sentence -->
+By interpolating a pin's language model with models provided by other documents and users, probability mass is dispersed among different 'interpretations' of the aboutness of the document.
+Conceptually, this treatment of multiple subjective interpretations loosens the assumptions of language modeling.
+However, functionally it is the same as treating a language model as an objective but latent generative model without different probabilities assigned for different term occurrences.
 
-While this loosens the assumptions of language modeling, doing so is functionally the same as  
+There are some added complexities that will need to be considered while this study is being conducted.
+One is the proper weights to apply to interpolation: what type of smoothing is necessary between different models?
+This study will evaluate educated guesses based on work performed by @zhai_study_2001, and decide on whether an genetic parameter-learning algorithm is necessary.
 
-smoothing on 
-<!-- TODO
-What about the absence of other information? What do I do then? -->
-
+Two other issues that may need to be considered are occasions when there is an absence of other information, perhaps when a pin is alone in its board and nobody else has saved the same source item, 
 
 #### P(d)
 

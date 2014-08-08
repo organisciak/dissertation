@@ -41,7 +41,7 @@ The proposed study follows the hypothesis that such an assumption leads to
 a) more algorithmically valuable crowdsourced description and 
 b) a greater proportion of useful contributions.
 
-<!-- TODO: Do my studies answer these questions? I NEED to compare to versions that don't make this assumption -->
+<!-- TODO1: Do my studies answer these questions? I NEED to compare to versions that don't make this assumption -->
 
 [^language]: In assuming that humans are biased, the biases referred to are the inclinations, leanings, and tendencies [@_bias_????] of individuals, quirks that affect their worldview and how they understand and perform tasks.
 By this definition, such perceptual differences contribute to a greater statisticalvariance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias', referring to a model that is overfit, or overly 'biased', to a specific dataset.
@@ -93,7 +93,7 @@ Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds
 The growth of digital collections has outpaced the ability to comprehensively clean, transcribe, and annotate the data.
 Similar roadblocks are affecting born-digital information, where the rapid creation of documents often follows from passive or unrestricted forms of creation.
 The lack of strong descriptive metadata poses an obstacle for information retrieval, which must infer the aboutness of a document in order to surface it for an interested user.
-<!-- TODO: there should a good citation on this somewhere... -->
+<!-- TODO1: there should a good citation on this somewhere... -->
 Crowdsourcing is increasing being used to address this problem.
 
 Many of the benefits of crowdsourcing follow from the fact that humans approach tasks in qualitative and abstract ways that are difficult to emulate algorithmically.
@@ -122,18 +122,15 @@ We see large art projects like Star Wars Uncut embrace the quirkiness of humans,
 Coding challenges, like those seen on TopCoder, also are interesting for the widely varying ways that a programming language allows you to express a problem.
 However, in cases where there is a goal to find either an objective truth, manifest or latent, or to gauge the subjective approaches and opinions of people in a comparable way, the breadth of interpretations possible for a task presents a problem for reliably understanding it in aggregate.
 
-<!--When users contribute a binary rating (e.g. thumbs up/thumbs down)-->
-<!-- TODO finish paragraph! See Hu and Lee JCDL paper, on inconsistencies of 100-point scale, and other similar literature-->
-
 The variability seen in human interpretations of complex tasks is not a novel issue.
-It is a problem that we call low _intercoder reliability_, and can result from a variety of problems.
+It is a problem that we call low _intercoder reliability_, and can result from a variety of issues.
 Four 'threats to reliability' that @neuendorf_content_2002 lists echo issues in crowdsourcing document description:
  an insufficient coding scheme,
  inadequate training,
  fatigue,
  and problem coders.
 
-Whereas much research has looked at the fourth problem, when the contributors are the source of low reliability<!--TODO: examples? -->, this study looks at the improvements in crowdsourcing for descriptive metadata that can be recovered from external factors: assuming an honest but biased rater.
+Whereas much research has looked at the fourth problem, when the contributors are the source of low reliability [e.g. @sheng_get_2008,@whitehill_whose_2009, @welinder_online_2010, @raykar_supervised_2009, @organisciak_evaluating_2012], this study looks at the improvements in crowdsourcing for descriptive metadata that can be recovered from external factors: assuming an honest but biased rater.
 
 ### Assumption of Honesty
 
@@ -141,7 +138,7 @@ Much crowdsourcing research makes an adversarial assumption, focusing on removin
 
 For example, @eickhoff_increasing_2012 note that a significant proportion of Mechanical Turk workers sacrifice correctness for speed, in order to maximise their profits.
 
-However, 'sacrificing quality for speed' is not always the case. <!--While observable in some cases[], including suspicious behaviors that we observed during @organisciak_personalized_2013, <!-- TODO FIGURE-->, other studies on contribution conflict it.-->
+However, 'sacrificing quality for speed' is not always the case. <!--While observable in some cases[], including suspicious behaviors that we observed during @organisciak_personalized_2013, other studies on contribution conflict it.-->
 For example, in @organisciak_evaluating_2012, we found that the fastest workers generally did not contribute worse labor, except for one case: when workers spent less time on the instructions and first task.
 The fact that time was only significant in this one case suggests that the effect for this particular dataset was not a result of 'cheaters' as much as workers that did not interpret the instructions close enough.
 Similarly, during the research for @organisciak_personalized_2013 we found that slowing workers down resulted in lower quality contributions, both in terms of internal consistency by workers and quality of the data for training a recommendation algorithm.
@@ -165,7 +162,7 @@ Perhaps it is because participants in crowdsourcing are more abstract than a loc
 ### Intercoder reliability
 
 In crowdsourcing, increasing intercoder reliability is sometimes at odds with the collection strategy.
-The most effective crowdsourcing deals with large numbers of people, and part of maximizing the involvement of contributors, especially those which are volunteers, is to minimize the restrictions on a contribution. <!-- TODO back up w/ references -->
+The most effective crowdsourcing deals with large numbers of people, and part of maximizing the involvement of contributors, especially those which are volunteers, is to minimize the restrictions on a contribution. <!-- TODO1 back up w/ references -->
 To enforce a strong coding scheme or training contributors will reduce the number of individuals willing to perform the task.
 Whether the improvements in quality are worth the losses in contributions will be looked at in the first chapter of new research in this dissertation.
 
@@ -183,7 +180,7 @@ In instances of paid crowdsourcing, there is more control over the way that cont
 #### Subjective Versus Objective Tasks
 
 The variance that exists between different contributors adds noise both to tasks that make a subjective assumption and tasks that make an objective assumption.
-<!--TODO: Haven't really made a case for "the variance that exists"-->
+<!--TODO1: Haven't really made a case for "the variance that exists"-->
 
 In subjective tasks, it is assumed that there is no universally correct form of contribution.
 For example, when crowd contributions are used to inform recommendations, such as for music or film, it often assumed that different types of people enjoy different products.
@@ -192,7 +189,7 @@ In such a case, inter-rater consistency is still important, to make it possible 
 Modern approaches to collaborative filtering commonly normalize ratings against
  a user-specific bias (i.e. "how does this rating compare this user's average rating") and sometimes against 
  an item-specific bias (i.e. "how does this rating compare to what the rest of the community thinks about the item").
-<!--TODO cite cf normalization-->
+<!--TODO1 cite cf normalization-->
 
 #### Manifest Versus Latent Content
 
@@ -212,7 +209,7 @@ With large enough numbers, it doesn't matter.
 Problems of user quality get smoothed over when enough honest people collaborate, while problems stemming from perception biases in many cases will converge on the normative understanding of the task. 
 However, by recovering a cleaner signal from human contributions, a system is reliant on less workers.
 Doing so thus helps keep system less affected by the ebbs and flows of motivating volunteers, or the costs of paying workers.
-Since the attention that contributors is not uniform across all items in a system, usually resembling an inverse power-law distribution [<!--TODO-->], understanding crowdsourced information with less aggregation means more of the middle of the distribution can be represented.
+Since the attention that contributors is not uniform across all items in a system, usually resembling an inverse power-law distribution [<!--TODO1-->], understanding crowdsourced information with less aggregation means more of the middle of the distribution can be represented.
 
 In other words, accounting for cognitive bias seeks to make each individual contribution more valuable.
 
@@ -248,7 +245,7 @@ Similarly, cultural heritage collections have reported past success in using cro
 For example, after a pilot partnership with Flickr, the Library of Congress implemented a workflow for review public comments on images for research or information to integrate back into item records [@springer_for_2008].
 
 Crowd curation is just one example of a use of crowdsourcing to create information.
-Table 1<!--TODO doublecheck numbering--> shows a number of different actions that have been observed for collecting descriptive metadata.<!--TODO... name other examples -->
+Table 1<!--TODO1 doublecheck numbering--> shows a number of different actions that have been observed for collecting descriptive metadata.<!--TODO1... name other examples -->
 
 While crowdsourcing has shown itself as a useful method for enriching information objects, there remains the question of how the method of collection affects the way the data can be used.
 Contributors are self-selected and often without verified reliability, training or expertise.
@@ -277,7 +274,7 @@ Classification / Curation    tagging (e.g. Delicious), labeling, adding to lists
 --------------------------------------------------------------------------------------------
 
 _Table 1: Types of actions seen in descriptive crowdsourcing_ 
-<!-- TODO: format properly; 
+<!-- TODO1: format properly; 
 	   Change examples to focus on information science or library examples;
            note that this was originally observed for incidental crowdsourcing paper 
 -->
@@ -312,12 +309,12 @@ Feedback                 sharing personal knowledge and  Correct problem data, d
 --------------------------------------------------------------------------------------------
 
 _Table 2: Chart comparing user and system uses for a selection of incidental crowdsourcing actions_ 
-<!--TODO: add citations whenever possible, 
+<!--TODO1: add citations whenever possible, 
 	not origin in incidental crowdsourcing independent study 
 	format properly
 -->
 
-<!-- TODO relevance in IR section -->
+<!-- TODO1 relevance in IR section -->
 
 ## Definitions and important distinctions
 
@@ -352,7 +349,7 @@ Likewise, while a notable portion of crowdsourcing tasks are creative, such as w
 
 The space of crowdsourcing is large and the incentives for contributors are varied. 
 The most significant distinction within crowdsourcing is in comparing uses that pay their contributors and those that do not.
-It's valuable to make this distinction because paying a person changes they way that they perform (<!-- TODO cite-->), while also simplifying some of the concerns that are necessary in retaining volunteers.
+It's valuable to make this distinction because paying a person changes they way that they perform (<!-- TODO1 cite-->), while also simplifying some of the concerns that are necessary in retaining volunteers.
 
 In general, I refer to crowd individuals as _contributors_.
 When the distinction is necessary, paid contributors are referred to as _workers_, while elective contributions are made by _volunteers_.

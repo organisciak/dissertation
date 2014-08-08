@@ -5,7 +5,7 @@ Conclusions
 
 ## Workplan
 
-<!-- TODO: Tasks and Goals -->
+<!-- TODO1: Tasks and Goals -->
 What's necessary?
 
 ## Designing Crowdsourcing Tasks
@@ -46,4 +46,4 @@ What's necessary?
 ## Publication targets
 
 CIKM, SIGIR, CSCW, HCOMP, ASIS&T, JCDL, 
-<!-- TODO: possible topics for those conferences -->
+<!-- TODO1: possible topics for those conferences -->
