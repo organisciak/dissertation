@@ -66,7 +66,7 @@ Why is task design important to descriptive crowdsourcing?
 Task design is a concern that has been noted multiple times. <!-- TODO1 cite examples. "X has noted..." -->
 
 Crowdsourcing is increasingly being used for information retrieval.
-Particularly, the on-demand nature of paid crowdsourcing is being embraced for uses such as relevance judgments [@alonso_crowdsourcing_2008], to describing queries [@chen_improving_2013], and to annotating entities []<!--TODO1 cite finin-->.
+Particularly, the on-demand nature of paid crowdsourcing is being embraced for uses such as relevance judgments [@alonso_crowdsourcing_2008], to describing queries [@chen_improving_2013], and to annotating entities [@finin_annotating_2010].
 
 <!-- To cite: post-mortems of failed sites -->
 
@@ -91,7 +91,7 @@ For all other relevance judgments in a task, the amount of time spent was insign
 
 Why are slower workers better for the first judgment in a task set, but not for subsequent items?
 Remembering that the time spent on the first relevance judgment is confounded with the start of the task and reading the description of what is relevant, we found that the effect is actually related to closer reading of instructions.
-Those tasks where a worker spent more time on the first judgment were correlated to better performance overall (Figure<!--TODO1-->), not just on that first judgment.
+Those tasks where a worker spent more time on the first judgment were correlated to better performance overall not just on that first judgment.
 
 It does not matter how much time a worker spends on a task, as long as they spend enough time figuring it out at the beginning.
 How do you encourage this form of behaviour? @organisciak_evaluating_2012 did not explore the design of tasks, but the findings suggest two things.
@@ -101,15 +101,21 @@ If a worker interprets the codebook differently then they will disagree with the
 Nothing here suggests a malicious worker, only a misguided one.
 
 The second implication is that a better designed task can help.
-While much research tends to focus on the honesty and quality of paid crowdsourcing workers <!--TODO1-->, part of the responsibility toward good quality crowdsourcing data is the requesters.
+While much research tends to focus on the honesty and quality of paid crowdsourcing workers, part of the responsibility toward good quality crowdsourcing data is the requesters.
 In a task such as relevance judgments, encouraging better work might require workers to be more aware of their performance or to reassess their understanding of the task when it is necessary. Some possibilities to research might be,
 
 * A training task, where workers are walked through the codebook in relation to actual tasks, and told why specific results are relevant or not relevant.
 * Online feedback, showing workers their estimated performance based on agreement with other workers.
 * Starting tasks with a known item, and alerting workers when they fail that task.
 
-<!-- TODO1: Create a section in the lit review about this -->
-<!-- TODO1: write about ISMIR paper -->
+The importance of designing tasks was also seen in recent unpublished work on collecting human audio similarity judgments.
+I investigated ways to address low intra-coder consistency in the ground truth for the Audio Music Similarity (AMS) task of the  Music Information Retrieval EXchange (MIREX), including a change in the collection design.
+In the original task, similarity judgments were collected on a three-point "broad" scale -- not similar, somewhat similar, and very similar -- and on a 101-point open-ended "fine" scale.
+In comparing the open-ended similarity scores across multiple years, the scores for song pairs did not appear strongly consistent, with a root-mean-squared-error (RMSE) of $16.58$.
+Changing the design to provide more particular naming to ranges of the 101-point scale (i.e. a change to the codebook and how it is communicated) improved agreement on song pair similarity to an RMSE of $11.44$ (an improvement of 31%).
+Paired with other strategies, this enabled an improvement to $RMSE=5.40$, a 66.1% improvement. 
+
+<!-- TODO2: add screenshot of different rating interface -->
 
 #### Dynamic of attention affect the style of contributions 
 
@@ -144,9 +150,9 @@ Though other potential factors may also affect differences between the systems, 
 
 Since most incidental crowdsourcing deals with reaction to existing documents rather than creation of outright new works, the future directions suggested by this work (in addition the work itself) are pertinent to the proposed dissertation's focus on crowdsourcing for information retrieval indexing.
 
-#### What are you _feeling_? The effect of introspection
+#### What are you _feeling_? Introspection changes rating habits
 
-Additional evidence for this was encountered in a peripheral finding while conducting research for @organisciak_personalized_2013.
+Additional evidence for this was encountered in a peripheral finding while conducting research for @organisciak_personalized_2013. [^Note that the result here was not the primary focus of the study and is thus unpublished. Despite being unpublished, this work was purformed for Microsoft Research and should not be considered a contribution of this document.]
 In this case, we were again looking at opinion ratings on a five-point scale, this time on Mechanical Turk. 
 Workers were asked to provide their personal opinions on whether they liked the style of each of 100 salt shakers.
 In one group of workers, this is all they were asked.
@@ -156,31 +162,22 @@ In most other regards the ratings were collected in the same way:
  on Mechanical Turk during the US work day,
  in an interface designed identically -- besides the additional text input boxes for the latter formulation --
  and with the same restrictions on workers.
+The payment for the task was scaled to account for the extra time necessary for completion.
 
-<!-- The payment for the task was scaled to account for the extra time necessary for completion: in the first set of tasks, workers averaged XXX/hr, on the latter, they averaged XXX/hr ... TODO1: what _did_ we do for the money? -->
-
-Figure XXX <!-- TODO1 --> shows the distribution of workers by their average rating.
-In the first set, where workers rated quickly (<!-- (TODO1: time) -->), the workers' average ratings were across the board.
-There were very positive workers, very negative workers, and everything in between.
-While the average worker gave a rating of <!-- TODO1 -->, the standard deviation was <!--TODO1-->.
-
+The figure below shows the distribution of workers by their average rating.
+In the first set, where workers rated quickly, the workers' average ratings were across the board: there were some unambiguously negative raters, some notably positive raters, and everything in-between.
+While the average worker could be expect to give a rating of 2.52 stars, the standard deviation was 0.69.
 In contrast, the workers that were asked to explain their rating tempered their opinions more.
-The distribution of average ratings of individuals was normal (<!--TODO1 normality test results-->) about a mean of <!--TODO1--> with a standard deviation of <!-- TODO1 -->.
+The distribution of average ratings of individuals was normal ($p=0.9644$,Shapiro-Wilk) about a mean of 2.68 with a much lower standard deviation of 0.47.
 
-[] <!-- TODO1: Image -->
-<!-- TODO1: Figure XXX: Comparison of worker rating distributions for preferences in salt shakers.
-In the basic set, workers were asked only for a rating.
-In the detailed set, workers were asked for a rating and an brief explanation of why they chose that rating.-->
-<!-- Unpublished research, (TODO1: text to make clear that it is Microsoft IP, not University's ) -->
+![A comparison of raters' average ratings of salt shaker preferences, when only asked for a preference rating (above) and when also asked to explain the reason for their rating (below)](images/why-dist.png)
 
 It is clear that workers in the set with more introspection performed work differently.
-However, their contributions were also _less_ reliable.
-The contributions were more likely to fail an internal consistency test, with an average deviation of (<!--TODO1-->) stars when given the same item again in a task set.
-In contrast, the 'quick' task group had an average deviation of <!--TODO1--> in the consistency items.
+However, their contributions were also not markedly different in reliability when compared against an internal consistency test, averaging a difference of 0.33 stars when asked to rate the same item, versus an average difference of 0.39 stars.
 
-Figure YYY also shows the distribution of rating values overall.   
-
-<!-- TODO1: What does this mean for this study? -->
+These findings are suggestive of two issues related to this dissertation.
+First, they support the premise that different designs for ostensibly the same task change the contours of the resulting data.
+They also show that simply scaling a task to take more time does not provide corresponding returns in reliability improvements.
 
 ### Motivating and related work
 
@@ -259,45 +256,22 @@ They looked at the information contained in multiple messages sharing the same l
 This study differs in that a human looks at multiple messages to understand the topic then selects the single existing message that is the most informative by itself.
 However, similar data preparation steps will be required, removing expected spam and near-duplicates.
 
-<!-- TODO1: estimates of Twitter duplicates -->
-<!-- TODO1: research hueristics on removing Twitter spam -->
+<!-- TODO2: estimates of Twitter duplicates -->
+<!-- TODO2: research hueristics on removing Twitter spam -->
 
 #### Data
 
-<!-- TODO1 -->
+This study's dataset will be collected from Twitter through their Search API.
+Since we are evaluating the effectiveness of user annotation of Twitter messages, _tweets_, there is no need for a population of tweets, such as the dataset used in the TREC microblogging retrieval track.
 
-__Notes__
+The dataset will compile two types of data.
+The first data type will be random tweets from the stream, with named entity recognition used to identify entities that are potentially, but not necessarily, the topic of the tweet.
+The second data type collected will be all tweets about prominent topics, such as President Obama or musician Justin Bieber, again without prejudice over whether they are the topic of the message or not.
+The actual topic will be chosen later. The size of the dataset will be determined after consideration of typical time per task, statistical power, and their trade-off with cost.
 
- * Building study dataset
-   * Data will be collected from Twitter through Search API
-     * Alternately, is the TREC data accessible?
-   * Data type 1: select random stream tweets 
-   * Data type 2: select all tweets about prominent topics (e.g. Obama, Bieber) - ones where the entity may be mentioned but not necessary the focus
-   * Number of tweets?
-     * Informally, 1000 is a nice number, will need consideration of a) statistical power and b) typical time per task (TODO1)
- * Preparing evaluation corpus
-   * Gold standard set encoded by hand by myself
-   * A second ground truth dataset will be built after the experiments are run, by pooling _all responses_ for a consensus
-   * The second dataset will be compared against my ground truth, and points of disagreement will be re-evaluated
-
-<!--
-
-### Data
-
-This study will look at enriching metadata for records in a cultural heritage collection for information retrieval.
-
- TODO1: Alternately, perhaps adding metadata to untagged tweets 
-
-In library and museum archives, a common problem for information discovery is that many materials are not textual, and catalogue records are described more formally than the language information-seeking users use in queries.
-To overcome the language mismatch, some libraries have incorporated user tags to capture colloquial semantic description 
-
-!!TODO1 cite
-
- TODO1, this should be much higher in the document... Problem section? 
-
-The data that will be used in a randomized collection of image records from... 
-
- TODO1: Where is the data going to come from? It needs to be something that can be evaluated against basic retrieval -->
+For evaluation, a gold standard set will be encoded by myself, as a reliability coder.
+A ground truth dataset will be built after all experiments are run, by pooling all responses for a consensus.
+For additional rigour, the pooled dataset will be compared against my ground truth, so that points of disagreement can be re-evaluation.
 
 ### Task Flow
 
@@ -358,12 +332,11 @@ Which of these can be influenced by external factors?
  * _Skill_. Skill is developed over time and is mostly affected by factors internal to the worker.
    To the extent that we could affect it, most functionality would encourage greater experience.
    Teaching workers by reinforcing their successes and failures might also have an effect.
- - _Self-confidence and decisiveness_.
-    <!-- TODO1 -->
- - _Attentiveness and fatigue_.
- - _Perceived importance of task_. <!--(although this would simply affect the other attributes. e.g. if you need to get the correct answer to diffuse the bomb, time spent will change, probably self-confidence)-->
- - _Time spent on each task_.
-<!--TODO1: add details for all points, or are the latter four self-explanatory? Regardless, it looks odd with two points explained and the others not -->
+ - _Self-confidence and decisiveness_. Contributors or workers that second-guess themselves more often may be less internally consistent. <!-- TODO2: advice from Diane Kelly on lit? -->
+ - _Attentiveness and fatigue_. Environmental distractions or fatigue can change how consistently a task is completed.
+The microtasking design pattern in paid crowdsourcing is meant to negate some of the fatigue seen in traditional classification labour, but there is no way to anticipate other outside factors, such has how many tasks from other requesters were completed. It is possible to affect attentiveness and fatigue within a task, however, with higher- or lower-effort tasks.
+ - _Perceived importance of task_. The perceived importance of a task might affect some other factors, such as attentiveness or self-confidence.
+ - _Time spent on each task_. The time spend on a task does not always translate to an indicator or quality, but might encourage greater numbers of contributions or more decisive contributions when controlled.
 
 In a moment I'll rein in discussion to a smaller set of design interfaces to test.
 However, an exercise to think through the possibilities afforded to us by the features in the previous section will be helpful.
@@ -514,9 +487,9 @@ Workers will be restricted to American workers, and tasks will each be posted du
 
 The baseline for evaluation is the performance of workers on the basic contribution interface.
 
-#### Measurements
+#### Measurement
 
-Primary questions
+##### Primary questions
 
  * Quantitative
    * What is the mean agreement between workers encoding the same tweet?
@@ -527,15 +500,11 @@ Primary questions
    * User feedback: all tasks will include optional feedback forms.
      This will include an free-text field for any communication that workers may want to pass on, and a Likert scale question on how interesting the task was.
 
-Secondary questions 
+##### Secondary questions 
 
  * What is the mean time a worker spends on their first task set? What is the amount of time workers spend on ten task sets?
  * What is the mean number of task sets that workers perform?
- * (TODO1: still working on phrasing for COST question) <!--What is the expected cost per -->
-
-TODO1
-
-* Add equations to show how these are calculated
+ * What is the expected cost per contribution?
 
 ### Implementation
 

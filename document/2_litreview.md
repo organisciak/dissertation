@@ -99,15 +99,16 @@ These users either develop new products to fill their needs, or modify existing 
 Not all crowdsourcing creation is user innovation, though we see echos of von Hippel's work in companies that turn to the Internet for help in conducting their business, whether it is soliciting feedback and suggestions (e.g. MyStarbucksIdea [^Starbucks]), bug reports, or even work at a bounty (e.g. advertising contests).
 User sharing of work performed for themselves is another similar area: for example, when a music service allows users to share their playlists publicly, their realization of a personal need has potential value to other users.
 
-Benkler's work takes a political economy view on what he calls the 'networked information economy', but arrives at a very similar place to von Hippel. <!--TODO1: finish thought, then discussion commons-based peer production-->
+Benkler's work takes a political economy view on what he calls the 'networked information economy', but arrives at a very similar place to von Hippel.
+He argues that the unique landscape of the 'networked information economy' empowers
+individuals to do more for themselves and in collaborative groups outside of established economic spheres [@benkler_wealth_2006].
+This agency allows commons-based peer-production: for innovation and creation to rise out of the commons rather than from firms.
 
 Benkler[@benkler_wealth_2006] singles out two user behaviors borne out of access to information networks, which in turn underlie the rise of crowdsourcing.
 First, individuals are more empowered to operate autonomously, for themselves with less reliance on mass-market goods.
 At the same time, loose collaborations are easier to organize, allowing individual needs to be pursued at scales beyond the capabilities of a single person.
 
 [^Starbucks]: http://mystarbucksidea.force.com/
-
-<!-- TODO1 Benkler-->
 
 <!--### Social Computing-->
 <!-- See Law 2011, and see Bederson 2011 -->
@@ -173,17 +174,18 @@ The incentives for contributors to participate in crowdsourcing are complex and 
 
 #### Intrinsic / Extrinsic Motivation
 
-Motivation in crowdsourcing follows related work in the motivations of humans in general (TODO1: cite Deci, Maslow, Aldoufer?).
+Motivation in crowdsourcing follows related work in the motivations of humans in general [e.g. @maslow_theory_1943; @alderfer_empirical_1969; @ryan_intrinsic_2000].
 While a review of that work is beyond the scope of this work, many views<!--(TODO1: 'many views' needs citations)--> of crowdsourcing motivation adopt the lens of motivation as a mixture of _intrinsic_ factors and _extrinsic_ factors [@ryan_intrinsic_2000].
 In the former, fulfillment is internal to the contributor, psychologically motivated, while in the latter the rewards are external.
 
-The spectrum of intrinsic to extrinsic motivators is commonly paralleled in crowdsourcing literature through dichotomy of paid and volunteer crowdsourcing [].
+The spectrum of intrinsic to extrinsic motivators is commonly paralleled in crowdsourcing literature through dichotomy of paid and volunteer crowdsourcing [<!--TODO1-->].
 
 Paid and volunteer crowdsourcing are not exclusive, and there are extrinsic motivators beyond money.
 However, this separation is common because of it accounts for some of the starkest differences between how crowdsourcing is implemented and motivated.
 There are differing design implications around people being paid and performing work for other reasons: money is a direct currency for obtaining labor, while convincing volunteers to contribute requires a greater sensitivity of their needs and ultimately more complexity in engineering the crowdsourcing system.
 
-It has been shown that intrinsic motivation still plays a part in paid crowdsourcing [@mason_financial_2010], and some systems mix intrinsically motivated tasks with payment or the chance at renumeration (e.g. Quirky, GasBuddy, 99Designs). <!--TODO1: Expand examples -->
+It has been shown that intrinsic motivation still plays a part in paid crowdsourcing [@mason_financial_2010], and some systems mix intrinsically motivated tasks with payment or the chance at renumeration.
+For example, some contest-based marketplaces are popular among users looking to practice their skills, such 99Designs for designers or Quirky for aspiring inventors.
 
 Some taxonomies make a distinction between forms of payment.
 @geiger_managing_2011 makes the distinction between fixed renumeration, with a pre-agreed fee, and success-based renumeration, such as contest winnings or bonus.
@@ -192,7 +194,7 @@ Some taxonomies make a distinction between forms of payment.
 
 <!-- TODO1
  - commitment/contribution
- - add more from @kraut_building_2011, @kraut_encouraging_2012
+ - add more from @kraut_building_2011; @kraut_encouraging_2012
 -->
 
 Taxonomies of specific motivators seen in crowdsourcing have been previously attempted, with varying results that touch on similar issues.
@@ -213,19 +215,18 @@ The primary motivators seen in @organisciak_why_2010 were:
 In the absence of other motivators or where certainty is required, reimbursement will attract contributors.
 However, it also introduces bottlenecks of scale, and negates some of the benefits of intrinsic motivation.
 @mason_financial_2010 note that, while intrinsic motivation still exists on paid crowdsourcing platforms, it is overwhelmed when tasks are too closely tied to reimbursement, resulting in contributions that are done minimally, briskly, and with less enjoyment.
-<!-- TODO1 Mark Twain quote -->
  * __Interest in the Topic__. Sites that cater to people that have a pre-existing interest in their subject matter or outcomes tend to get longer, more consistent engagement.
 For example, the Australian Newspaper Digitisation Project (now know as a larger project called Trove) found that that amateur genealogists, with pre-existing communities and a willingness to learn new technologies, took “to text correction like ducks to water” @holley_many_2009.
-Similarly, Galaxy Zoo found similar success with amateur astronomers.<!--TODO1 citation-->
+Similarly, Galaxy Zoo found similar success with amateur astronomers.<!--TODO2 citation-->
  * __Ease of entry and ease of participation__. Low barriers to entry and participation were cited by every single user interviewed for the study.
-Wikipedia has a low barrier to entry – just click ‘Edit’ – but its interface and demanding core community have been criticized in recent years for raising the barrier to participation. <!--TODO1 cite Angwin and Fowler 2009, Sanger 2009-->. As a result, its new participant numbers have trended downward, a problem identified by the foundation running Wikipedia as high-problem.<!--TODO1: cite-->
+Wikipedia has a low barrier to entry but its interface and demanding community standards have been criticized in recent years for raising the barrier to participation [@angwin_volunteers_2009; @sanger_fate_2009].
  * __Altruism and Meaningful contribution__. People like to help if they believe in what they’re helping.
 Writing about Flickr Commons, Library of Congress noted that they "appear to have tapped into the Web community's altruistic substratum by asking people for help.
 People wanted to participate and liked being asked to contribute". [@springer_for_2008].
-With Galaxy Zoo <!-- TODO1 cite GZ study and my own-->, people often cite the fact that it is a tangible way to contribute to real science.
+With Galaxy Zoo <!-- TODO2 cite GZ study and my own-->, people often cite the fact that it is a tangible way to contribute to real science.
  * __Sincerity__. <!-- TODO1 write about sincerity -->
- * __Appeal to knowledge__. <!-- TODO1 write about appeal to knowledge -->
- * __Appeal to opinions__. <!-- TODO1 write about appeal to opinions -->
+ * __Appeal to knowledge and opinions__. One curious source of motivation observed in the study is simply asking the right people.
+Online visitors presented with a question are often compelled to answer it simply because they know the response, be it part of their knowledge, skills, circumstance, or opinions.
 
 <!---
 TODO1
@@ -297,6 +298,8 @@ For example, in citation analysis through web links, as was done with PageRank (
 
 ### Object of Interest
 
+I
+
 <!-- TODO1: Creation vs. Reaction -->
 * Creation vs. Reaction
 
@@ -351,7 +354,7 @@ This latter assumption is seen often in opinion ratings, such as film or restaur
 
 ### Type of Crowd
 
-Vukovic and Batolini (TODO1 proper cite) define two extremes of crowd types: _internal_ and _external_.
+Vukovic and Batolini [@vukovic_towards_2010] define two extremes of crowd types: _internal_ and _external_.
 Internal crowds are composed solely of contributors from the organization that is crowdsourcing, if it is thus centralized.
 External crowds are members outside of the institution.
 Vukovic and Batolini also note that _mixed_ crowds are observable.
@@ -364,32 +367,41 @@ Vukovic and Batolini also note that _mixed_ crowds are observable.
 
 ### Quality Control
 
-<!-- TODO1 -->
-
-see @quinn_human_2011, others
+The classification of human computation systems by @quinn_human_2011 includes quality control as a primary dimension.
+Here they consider how the system protects against poor contributions, such as reputation systems, input or output agreement, multi-contribution redundancy, a crowd review workflow, expert review, and designs that disincentivize poor quality or obstruct the ability to do so.
 
 ### Common Design Patterns
 
 A number of design patterns have been established and repeated in crowdsourcing, some organically and some, like the ESP Game, carefully engineered.
 These include:
 
- * __Microtasking__: the concept of splitting a large task into many smaller parts to be worked on by different people was an important tide change in the history of open-source software [@raymond_cathedral_1999], and the same models have been emulated in crowdsourcing.
+__Microtasking__: the concept of splitting a large task into many smaller parts to be worked on by different people was an important tide change in the history of open-source software [@raymond_cathedral_1999], and the same models have been emulated in crowdsourcing.
 With so-called 'microtasks', the overhead to participation is low, and the pressure or dependence on any one contributor is low.
 
- * __Gamification__: Gamification is predicated on a reframing of what would traditionally be labour.
-Shirky argues that the appeal ofo 
-Serious games
+__Gamification__: Gamification is predicated on a reframing of what would traditionally be labour into a game-like or leisurely tasks.
+Gamification follows in the philosophy, as Twain wrote, "that work consists of whatever a body is obliged to do, and that play consists of whatever a body is not obliged to do." [@twain_adventures_1920]
+The ethics of gamification have been argued for as an extension of contributors' desire to perform meaningful work.
+Shirky, for example, argues that people have a 'cognitive surplus' to give during their leisure time, a desire to spend their free time doing useful, creative or stimulating tasks.
+Gamification is an extension of serious games -- games meant to do more than simply entertain [@abt_serious_1987; @michael_serious_2005; @ritterfeld_serious_2010].
+In areas of crowdsourcing and human computation, Games with a Purpose [@von_ahn_games_2006] is an extension of serious games in the context of distributed, collaborative crowds.
+Harris and Srinivasan [@harris_applying_2012] consider the applicability of applying games with a purpose to various facets of information retrieval, concluding it is a feasible approach for tasks such as term resolution, document classification, and relevance judgment.
+Eikhoff et al. [@eickhoff_quality_2012] have investigated the gamification of relevance judgements further, augmenting the financial incentive on paid crowdsourcing platforms.
 
+__Opinion Ratings__: A standard and highly familiar activity online is soliciting qualitative judgments from visitors.
+These ratings have different granularities, most commonly 5-level (e.g. 1 to 5 stars) or binary (e.g. thumbs up/thumbs down).
+Unary judgments have grown in popularity as ways of showing support with minimal effort.
+Their popularity seems to stem from when social network Friendfeed implement a unary voting button labelled, succinctly, "I like this" [@taylor_friendfeed_2007] and subsequently when similar wording was adopted by Facebook after acquiring Friendfeed.
 
-proved successful in the open-source community for collaboration, and has been repeated throughout crowdsourcing.
+_Platforms_: There is a cottage industry of services that offer the infrastructure for requesters to crowdsourcing, using in domain-specific ways.
+For example, Kickstarter and Indiegogo ease crowdfunding, 99Designs enables contest-based design tasks, and Mechanical Turk offers the tools and people for microtasks.
 
-With the serious games movement, it has
+_Contests_: In the contest design pattern, a requester offers a bounty to the best solution to a problem or task of their choosing, such as in design (e.g. 99Designs), coding (e.g. TopCoder), and research and development (e.g. Innocentive).
+Here the "crowdsourcing" is simply using internet to connect to many potentially talented individuals, though contests have been integrated into more collaborative workflows.
+For example, with the collaborative product incubator Quirky, the community votes on the best ideas to develop into products, discussing how to improve the ideas openly.
+One reason for this may be that, in addition to the large portion of future profits that an idea originator may earn if it is voted into development, the rest of the community also receive points for supporting the best ideas.
 
-    * Eickhoff, Harris et. al talk about gamification on MTurk [TODO1]
- * Opinion Ratings
- * Platforms
- * Contest
- * Wisdom of crowds
+_Wisdom of crowds_: Wisdom of the crowds is a design pattern which emphasizes the effectiveness of human judgment in aggregate [@surowiecki_wisdom_2004], provided the participants are rationally organized.
+This is embodied by multiple-keying for tasks which are expected to have a real answer, such as classifying galaxies, or averaging opinions for subjective tasks to derive a normative judgment.
 
 <!--
 TODO1: cite elsewhere
@@ -422,13 +434,19 @@ TODO1: cite elsewhere
 
 ## Crowdsourcing in the Wild
 
-<!-- TODO1 -->
+There is a great deal of crowdsourcing "in the wild", including notable successes and failures.
+Some of the successful project provide archetypal blueprints of crowdsourcing dimensions, and will be good to understand moving forward.
 
-Notable crowdsourcing in the wild
+__Wikipedia__ is a collaboratively written encyclopedia, where the majority of contributors are volunteers.
+Wikipedia, formed in 2001 and now containing 4,579,708 articles (as August 13, 2014 [@_wikipedia:size_2014]),<!--_--> has an open editing policy that allows anonymous contributions and only restricts who can edit a page for few special cases where vandalism is likely.
+The policy also ensures that readers are latent editors [@shirky_here_2009], helping police, correct, and improve poor quality content.
 
-<!-- TODO1: Who else? -->
+__Threadless__ is a community of artists that design and vote on t-shirt designs.
+Winning designs are licensed by Threadless to print and sell, providing a commission to the designer and additional profit for subsequent shirt reprintings.
 
-### Wikipedia
+The __Netflix Prize__ was a competition run by film rental (and now streaming) company Netflix, offering a million dollar bounty to the person or team that could improve film recommendation by 10% over the root-mean-squared-error performance of Netflix's own system.
+Claiming the prize required the winner to publish their results but did not require transfer of intellectual property, only a license for Netflix.
+A 2008 New York Times article about the prize noted that the community of participants were notably open in sharing their insights[@thompson_if_2008].
 
 ### Threadless
 

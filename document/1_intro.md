@@ -28,7 +28,7 @@ Concretely, I am proposing a study in two parts, separated by their focus on _co
     This is a study motivated by prior work done by myself and others, with a problem often mentioned but, to my knowledge, not pursued formally.
 
  2. In the second half of this dissertation, I will look at improving retrieval using already-collected crowdsourcing data.
-    I focus on the system _Pinterest_, because it is a valuable resource of human-encoding descriptive metadata, while sparse in its other textual content.
+    I focus on the system _Pinterest_, which is a valuable resource of human-encoded descriptive metadata, while sparse in its other textual content.
     It is also a example of the loosely constrained form of crowdsourcing contribution that is often required to encourage participation, a trade-off that is less structured than would be preferable for retrieval model.
 
 <!-- LEFT OFF EDITING HERE-->
@@ -43,7 +43,7 @@ b) a greater proportion of useful contributions.
 
 <!-- TODO1: Do my studies answer these questions? I NEED to compare to versions that don't make this assumption -->
 
-[^language]: In assuming that humans are biased, the biases referred to are the inclinations, leanings, and tendencies [@_bias_????] of individuals, quirks that affect their worldview and how they understand and perform tasks.
+[^language]: In assuming that humans are biased, the biases referred to are the inclinations, leanings, and tendencies [@_bias_] of individuals, quirks that affect their worldview and how they understand and perform tasks.
 By this definition, such perceptual differences contribute to a greater statisticalvariance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias', referring to a model that is overfit, or overly 'biased', to a specific dataset.
 In information science, this is closely related to _intercoder reliability_, the measure of how similar multiple coders will perform in a given parameterization of a task [@neuendorf_content_2002].
 When discussing the processes of humans --and only when doing so-- this study may refer to biases, but discussion of effects on data will solely use statistical and information science language.
@@ -104,7 +104,7 @@ For example, a user-tagged image in a museum collection can fill in terms that a
 Such information is invaluable in indexing items for information retrieval, where the goal is commonly to infer what a user is searching from their textual attempt to describe it in a query.
 
 Similarly, other uses of crowdsourcing capitalize on humans' abilities to spot when algorithmic attempts at understanding an information object have failed.
-ReCaptcha uses human contributions to transcribe transcriptions of OCR problem text from Google Books and the New York Times [@_what_????].
+ReCaptcha uses human contributions to transcribe transcriptions of OCR problem text from Google Books and the New York Times [@_what_]
 The National Library of Australia's Trove also crowdsources corrections of scanned text, by allowing readers of their scanned newspapers to edit transcript text when they come across problems [@holley_many_2009].
 
 Humans are also being used to encode parsable text descriptions for non-text materials or higher-level latent concepts.
@@ -130,7 +130,7 @@ Four 'threats to reliability' that @neuendorf_content_2002 lists echo issues in 
  fatigue,
  and problem coders.
 
-Whereas much research has looked at the fourth problem, when the contributors are the source of low reliability [e.g. @sheng_get_2008,@whitehill_whose_2009, @welinder_online_2010, @raykar_supervised_2009, @organisciak_evaluating_2012], this study looks at the improvements in crowdsourcing for descriptive metadata that can be recovered from external factors: assuming an honest but biased rater.
+Whereas much research has looked at the fourth problem, when the contributors are the source of low reliability [e.g. @sheng_get_2008; @whitehill_whose_2009; @welinder_online_2010; @raykar_supervised_2009; @organisciak_evaluating_2012], this study looks at the improvements in crowdsourcing for descriptive metadata that can be recovered from external factors: assuming an honest but biased rater.
 
 ### Assumption of Honesty
 
@@ -238,7 +238,7 @@ This crowdsourced information is useful to users directly, but it also provides 
 Inversely, this can return value to users curating content themselves: consider a system that can discover further items for a user that are thematically in line with a group that they have compiled.
 
 New OPACs are increasing giving users the ability to classify and curate content, connecting to user habits that are commonly associated with public libraries.
-For example, BiblioCommons -- employed at the Edmonton and New York Public Libraries -- positions list-making as a “curated topic guide,” a way to “share your expertise with others” [@_lists_????].
+For example, BiblioCommons -- employed at the Edmonton and New York Public Libraries -- positions list-making as a “curated topic guide,” a way to “share your expertise with others” [@_lists_].
 According to one study of social OPACs, the list feature in BiblioCommons is heavily used, many times greater than commenting and more than ratings [@spiteri_social_2011].
 
 Similarly, cultural heritage collections have reported past success in using crowd contributions for increasing discoverability to content, improving metadata quality, or even contributing to item description.

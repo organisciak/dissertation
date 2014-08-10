@@ -22,7 +22,7 @@ The research performed in @organisciak_evaluating_2012 sheds light on a particul
 We studied time, experience, and agreement as indicators of the quality of contributions for a paid relevance feedback task.
 Answering these questions provided valuable insights into how to treat workers and their data when using paid crowdsourcing for building ground truth datasets.
 However, modeling a crowd contribution is an issue that extends beyond paid ground truth generation.
-Various types of crowdsourcing data have been used for understanding information retrieval documents, including page links[@page_pagerank_1999], micro-blogging discussion of the documents[@dong_time_2010], social tags[@lamere_social_2008], opinion ratings (<!--TODO1 cite-->), and explicit relevance feedback (<!--TODO1 cite-->).
+Various types of crowdsourcing data have been used for understanding information retrieval documents, including page links[@page_pagerank_1999], micro-blogging discussion of the documents[@dong_time_2010], social tags[@lamere_social_2008], opinion ratings (<!--TODO1 cite-->), and implicit relevance feedback[@agichtein_improving_2006].
 On contribution-heavy Pinterest, this study will look at how curated lists can expand a system's language model of the typically text-sparse Pinterest documents.
 Equally interesting, it will provide us an opportunity to look at where crowdsourcing information fails, perhaps due to unexpected patterns of contribution or misuse of the system.
 
@@ -98,11 +98,10 @@ TODO1: need treatment of that study
 
 ## Approach
 
-This chapter's core will be a study measuring the value of crowdsourced information in improving information retrieval ranking against the data from Pinterest.
+This chapter's focus will be a study measuring the value of crowdsourced information in improving information retrieval ranking against the data from Pinterest.
 
 Pinterest is an online community for saving visual bookmarks called 'pins' to curated lists called 'boards'.
-On their about page, Pinterest features three primary purposes: saving (as pins), organizing (into boards), and discovery. 
- <!--TODO1: see their definition -->
+On their about page, Pinterest features three primary purposes: saving (as pins), organizing (into boards), and discovery [@_about_].
 
 __RQ1__: How can crowdsourced contributions be incorporated into an generative language retrieval model, and to what effect?
 
@@ -110,12 +109,16 @@ __RQ2__: Can crowdsourced information be improved as evidence by adding contribu
 
 __RQ3__: How do you account for novelty, allowing for new items without any crowdsourcing contributions?
 
-For _RQ1_, this study treats descriptive user contributions as evidence for estimates of <!--TODO1 P(Q|D)-->, and quality judgments as evidence for a document's prior probability, $P(D)$. <!-- TODO1 unclear terminology-->.
+For _RQ1_, this study treats descriptive user contributions as evidence for estimates of $P(Q|D)$.
+As a secondary question in addressing _RQ1_, user contributed quality judgments (i.e. "faves", reshares, sharing to external social networks) are considered as evidence for a document's prior probability, $P(D)$.
+
 The primary contributions is in improving a document's language model by smoothing it against the language model of the curated lists, 'boards', that it belongs to.
 Documents, are treated in two ways: as an individual user's 'pin' -- their visual bookmark of a page on the internet alongside their title, description, and the board they add it to -- and as the meta-document, a collection of all user's pins that same source image.
 
 The variability of human interpretations is embraced in modeling a document, rather than pushed against.
 Not everybody sees the same features in the same document, so user-contributed document metadata is treated as a mixture of interpretations.
+
+<!-- TODO1: RQ: consistency in categories among Pins with identical sources -->
 
 Why study Pinterest?
 Pinterest is a novel website for studying ways to incorporate crowdsourced information into web retrieval.
@@ -127,8 +130,8 @@ Pinterest is a novel website for studying ways to incorporate crowdsourced infor
    It is simple, and helps us avoid confounding the focus on crowd contributions.
  * Since the primary form of Pinterest document is a human reaction to a web document, the user contributions on the site may have possible future use for web retrieval.
 
-Finally, Pinterest is simply interesting.
-Demographically there is a female skew <!--TODO1 cite-->, interesting precisely because of the various features or designs that have allowed it to counter-balance the typical male-heavy community demographic.
+Finally, Pinterest is an interesting but understudied website.
+Demographically there is a female skew, interesting precisely it counter-balance the typical male-heavy community demographic.
 
 ### Data
 
@@ -158,8 +161,6 @@ Boards are user-specific, created by a user with a title, description, category,
 
 Table: Categories for curated lists ('boards') on Pinterest
 
-<!-- TODO1: RQ: consistency in categories among Pins with identical sources -->
-
 There is also the concept of a 'repin', which involves saving a new pin from an existing pin, using the same source URL and image, but applying a new description and saving to a new board.
 A document's repin count can be interpreted as a measure of a document's internal influence among the Pinterest community. Additional community-specific social features include commenting on pins and 'liking', which is a unary voting mechanism.
 
@@ -167,7 +168,7 @@ The explicit forms of descriptive crowdsourcing that are seen on Pinterest are:
 
  * Describing pins: description field, choice of board membership
  * Describing boards: title, description, category, fields
- * Social contribution: commenting on pins, repinning, 'liking', FB/Twitter integration <!--TODO1 confirm FB/Twitter-->
+ * Social contribution: commenting on pins, repinning, 'liking', Facebook integration 
 
 
 ### Design: A Language-modelling approach To curated lists
@@ -176,7 +177,7 @@ Adopting a language modeling approach for this study, documents are ranked by es
 
 $P(d|q)\propto P(q|d)P(d)$
 
-Given a basic case of the unigram model [@ponte_language_1998, @song_general_1999] a document's prior probability of generating the query, $P(d)$, is assumed to be constant across all documents.
+Given a basic case of the unigram model [@ponte_language_1998; @song_general_1999] a document's prior probability of generating the query, $P(d)$, is assumed to be constant across all documents.
 This is the approach used for the baseline system, provided in detail in the baseline section below.
 
 This work approaches $P(q|d)$ as an estimate that may be improved by user-contributed description of the document, and $P(d)$ as an estimate that may be improved by quality judgments.
@@ -203,6 +204,8 @@ One is the proper weights to apply to interpolation: what type of smoothing is n
 This study will evaluate educated guesses based on work performed by @zhai_study_2001, and decide on whether an genetic parameter-learning algorithm is necessary.
 
 Two other issues that may need to be considered are occasions when there is an absence of other information, perhaps when a pin is alone in its board and nobody else has saved the same source item, 
+
+<!-- TODO1: section not done -->
 
 #### P(d)
 
@@ -295,11 +298,9 @@ These appear to be the five-most probable queries starting with the provided str
 For an insight of what types of queries are in the sampling frame and more generally what topics are popular among Pinterest users, Table <!--TODO1 --> lists the auto-complete suggestions when each letter of the alphabet is entered into the search box.
 
 It should be noted, however, that a sample frame of just the most popular terms is too general.
-To shift the sample away from the head of the distribution, the sampling frame will also include 500 queries derived from auto-complete sugestions based on two character strings: specifically, the one hundred most common two-character pairs occurring at the start of the English language.[^twoletter]
+To shift the sample away from the head of the distribution, the sampling frame will also include 500 queries derived from auto-complete suggestions based on two character strings: specifically, the one hundred most common two-character pairs occurring at the start of the English language.[^twoletter]
 
-<!-- TODO1: cite Norvig -->
-
-[^twoletter]: These are: TH, OF, AN, IN, TO, CO, RE, BE, FO, PR, WH, HA, MA, WI, HE, IS, NO, WA, ON, DE, ST, SE, AS, IT, CA, HI, SO, WE, AR, DI, MO, AL, SU, PA, FR, ME, OR, SH, LI, CH, WO, PO, EX, BY, AT, FI, PE, BU, LA, NE, UN, LE, SA, TR, HO, YO, LO, DO, FA, SI, GR, EN, AC, MI, TE, BO, BA, GO, SP, OU, PL, EV, AB, TA, RA, US, BR, CL, DA, GE, TI, FE, AD, MU, IM, AP, RO, NA, SC, PU, EA, CR, VI, CE, OT, AM, AG, UP, RI, VE.
+[^twoletter]: Using the frequencies calculated by @norvig_english_, these are: TH, OF, AN, IN, TO, CO, RE, BE, FO, PR, WH, HA, MA, WI, HE, IS, NO, WA, ON, DE, ST, SE, AS, IT, CA, HI, SO, WE, AR, DI, MO, AL, SU, PA, FR, ME, OR, SH, LI, CH, WO, PO, EX, BY, AT, FI, PE, BU, LA, NE, UN, LE, SA, TR, HO, YO, LO, DO, FA, SI, GR, EN, AC, MI, TE, BO, BA, GO, SP, OU, PL, EV, AB, TA, RA, US, BR, CL, DA, GE, TI, FE, AD, MU, IM, AP, RO, NA, SC, PU, EA, CR, VI, CE, OT, AM, AG, UP, RI, VE.
 
 It is likely that Pinterest's own retrieval model incorporates additional implicit feedback from users in the form of click-through data.
 This is a useful indicator of a item's quality

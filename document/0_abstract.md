@@ -2,11 +2,12 @@ Abstract
 ========
 
 Crowdsourcing offers a valuable method to improve information retrieval indexing by using humans to improve the indexable data about documents or entities.
-
 Human contributions open the door to latent information, subjective judgments, and other encoding of difficult to extract data.
 However, such contributions are also subject to variance from the inconsistencies of human interpretation.
 
-The proposed dissertation studies the problem of such variance in crowdsourcing for information retrieval, and investigates how it can be controlled both in already collected data and in collecting new data.
+The proposed dissertation studies the use of crowdsourcing for collecting descriptive metadata, which I refer to by the shorthand _descriptive crowdsourcing_.
+
+problem of such variance in crowdsourcing for information retrieval, and investigates how it can be controlled both in already collected data and in collecting new data.
 Doing so will incorporate the body of existing research, my past work in the area, and two new studies of pertinent sub-problems within the larger research problem.
 
 At the heart of this study is the assumption of honest-but-biased contributors.

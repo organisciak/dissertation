@@ -11,6 +11,10 @@ stats:
 	# Show chart of word count progress
 	cat logs/stats.csv | Rscript workspace/vis-progress.r
 	
+refs: 
+	perl -pe "s:^(@.*{.*_)\?*:\1:g" refs.bib >refs.bib2
+	mv refs.bib2 refs.bib
+
 report:
 	# Update stats
 
@@ -24,7 +28,7 @@ report:
 	# Visualize
 	# Run stats ./scripts/visualizeStats.sh
 	
-tex:
+tex: refs
 	# Convert Chapters to LaTex
 	ls document/*_*.md | parallel pandoc  -t latex --biblatex $(pandoc_args) --chapters -o {.}.tex {}
 	# Fix underscores in \cite, \autocite, and \textcite commands
@@ -35,12 +39,12 @@ tex:
 	biber thesis
 	TEXINPUTS=document/: pdflatex thesis.tex
 	
-html: all.md
+html: refs all.md
 	pandoc $(pandoc_args) -t html --table-of-contents \
 	--template pandoc-bootstrap-template/template.html \
 	--css pandoc-bootstrap-template/template.css -o $(name).html all.md
 
-docx: all.md
+docx: refs all.md
 	pandoc $(pandoc_args) -t docx -o $(name).docx all.md
 
 mostlyclean:
