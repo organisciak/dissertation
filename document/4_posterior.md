@@ -70,7 +70,7 @@ This is the _Beatles_ option: even if you admit, rightly, that the context is hi
 In a context like Pinterest, users might search for terms that do not have a single right answer, but rather one that is interpreted or negotiated.
 When a user searches for 'rustic wedding' or 'cute dress', it is difficult to infer what their interpretation of 'rustic' is or what they find to be 'cute' what they consider 'rustic' or 'cute' without knowing anything about the user.
 
-It is this latter approach to representing subjective aspects of document, to seek consensus among many individual 
+It is this latter approach to representing subjective aspects of document, to seek consensus among many individual <!--TODO1-->
 
 <!-- TODO1: something's missing. More literature from IR? -->
 
@@ -237,15 +237,12 @@ Pins: 207.5m 	8300 packages of 25k pins -->
 This is a very large amount of data, and a bottleneck that is likely not necessary for this study. Instead, a smaller sample will be collected with the following sampling strategy:
 
  1. A sample of boards is randomly selected
- 2. All pins that belong to the board sample are collected <!-- TODO1: What about other people's ins for the identical product? -->
+ 2. All pins that belong to the board sample are collected <!-- TODO1: What about other people's pins for the identical product? -->
  3. User data for the sample board creators is collected
  4. A second sample of boards is collected, with all the boards that the sampled pins belong to
 
 The exact size of the sample will be determined once I start collecting data.
 As a general rule, I would like to collect as much data as possible, while staying within a manageable file size and collection duration.
-
-<!-- TODO1: Perform gendanken experiments as before -->
-
 
 ### Evaluation
 
@@ -261,15 +258,15 @@ How is relevance described? By whom?
 
 #### Evaluators
 Given that the number of registered users on Pinterest is very high, approximately 107.5 million, it should be feasible to perform a more naturalistic evaluation, recruiting real users as judges for real queries. 
-For evaluation,  I will recruit Pinterest users locally to perform relevance judging.
+For evaluation, I will recruit Pinterest users locally to perform relevance judging.
 
 #### Judgement Design
 
-Users will be asked to judge the relevance of 130 documents for 10 queries on a graded scale from 1 to 10 <!--TODO1 research on graded relevance-->.
-<!--Documents will be shown in randomized order, mixing results from the baseline system and the  system.-->
+Users will be asked to judge the relevance of 130 documents per retrieval model on a graded scale.
+Documents will be shown in randomized order.
 The large number of results judged per query is influenced by the visual format of Pinterest.
 Pinterest's visual interface is quicker to browse than text results, and I expect that the common focus on ten ranked results is too small in a realistic setting.
-Search results on Pinterest's IR system load 65 results initially, though an 'infinite scroll' keeps loading results as a user scrolls down the page. 
+Search results on Pinterest's IR system load 65 results initially, though an 'infinite scroll' keeps loading results as a user scrolls down the page.
 Note that the judging interface format may change following the results of the first half of this dissertation. 
 
 Because of the nuances of the document space, binary relevance is a low bar to achieve on Pinterest.
@@ -277,12 +274,10 @@ Many of the user information needs on Pinterest revolve around taste, and an app
 This is why evaluation will be performed with graded relevance.
 The primary metric for relevance will subsequently be Normalized Discounted Cumulative Gain (NDCG).
 
-<!-- TODO1 describe NDCG -->
-
-<!--
-How relevant is this to the query
-
--->
+One concern with NDCG is that it needs to be estimated when there do not exist judgments for all results.
+This is because, for the normalization, one needs to consider the rank of a document relative to the ideal ranking of all results.
+This study will use the approach used at TREC, of pooling the top results for each algorithm's output, and assuming the result of documents are non-relevant.
+Since I expect a long tail of somewhat relevant queries on Pinterest, during the performance of the study I will also consider the necessity of NDCG estimation based on random sampling, such as infNDCG [@yilmaz_simple_2008].
 
 #### Evaluation Queries
 
@@ -295,7 +290,7 @@ Additional evaluation queries will be sampled from auto-complete suggestions on 
 When a user starts to type in a query, five suggestions appear.
 For example, typing 'r' will suggest 'recipes', 'red hair', 'rings', 'relationship quotes', and 'rustic wedding'.
 These appear to be the five-most probable queries starting with the provided string.
-For an insight of what types of queries are in the sampling frame and more generally what topics are popular among Pinterest users, Table <!--TODO1 --> lists the auto-complete suggestions when each letter of the alphabet is entered into the search box.
+For an insight of what types of queries are in the sampling frame and more generally what topics are popular among Pinterest users, Table 1<!--TODO2 auto-number--> lists the auto-complete suggestions when each letter of the alphabet is entered into the search box.
 
 It should be noted, however, that a sample frame of just the most popular terms is too general.
 To shift the sample away from the head of the distribution, the sampling frame will also include 500 queries derived from auto-complete suggestions based on two character strings: specifically, the one hundred most common two-character pairs occurring at the start of the English language.[^twoletter]
@@ -311,7 +306,7 @@ For each query, a description of what constitute the different levels of relevan
 "appetizers, art, ab workout, animals, apartment decorating, appetizers, art, ab workout, animals, apartment decorating, christmas, christmas decorations, chicken recipes, crockpot recipes, christmas crafts, diy, dinner recipes, dresses, desserts, disney, easter, engagement rings, elf on the shelf ideas, eye makeup, easter crafts, food, fashion, funny, funny quotes, fall, garden, gift ideas, gluten free, girls bedroom, gardening, hair styles, hair, healthy recipes, halloween costumes, halloween, inspirational quotes, interior design, ikea, i love you, italy, jewelry, jennifer lawrence, jello shots, jeans, jokes, kitchen, kitchen ideas, kids crafts, kitchen decor, kids, love quotes, love, living room, long hair, lingerie, makeup, medium hair styles for women, mothers day, mothers day gifts, master bedroom, nail art, nails, nail designs, nail art designs, nail art for short nails, ombre hair, organization, organization tips, outfits, organizing, prom dresses, pregnancy, prom hair, paleo, puppies, quotes, quinoa, quinoa recipes, quilts, quotes about change, recipes, red hair, rings, relationship quotes, rustic wedding, spring fashion, shoes, short hair styles for women, short hair, sexy, tattoos, thanksgiving, tattoo ideas, thanksgiving recipes, travel, updos, updo hairstyles, ugly christmas sweater, u�as, updos for medium length hair, valentines ideas, valentines day gifts for him, valentines day, vintage, valentines crafts, wedding, wedding dresses, wedding hair, wedding rings, wedding ideas, xmas, x, xmas crafts, xmas decorations, x rated, yoga, yoga poses, yoga pants, yellow, yoga workout, zucchini recipes, zucchini, zac efron, zara, zucchini bread"
 -----------------------------
 
-Table: Popular queries on Pinterest, showing the 5 search input auto-complete suggestions for each letter of the alphabet.
+Table 1: Popular queries on Pinterest, showing the 5 search input auto-complete suggestions for each letter of the alphabet.
 Though Pinterest requires users to be logged-in, this list does not appear to be personalized: the same list was derived when I asked other users to run the collection code.
 
 #### Baseline
@@ -358,18 +353,16 @@ The baseline system will use the LMJelinekMercerSimilarity similarity scorer, an
 This study contains some risks on non-results or failures.
 
 Evaluation problems:
-If recruitment for evaluators proves difficult or if the methodology for evaluation is too fatiguing, this study can move to a more reliable albeit less naturalistic evaluation through TODO1 
+If recruitment for evaluators proves difficult or if the methodology for evaluation is too fatiguing, this study can move to a more reliable albeit less naturalistic evaluation through Mechanical Turk. 
 
 Another evaluation concern is that, with the raw number of materials on Pinterest, there will be more than enough relevant results for the more popular topics related to head queries, even for the baseline system.
- 
+The use of NDCG with graded relevance will offer more sensitivity to potential issues.
 
-### Related questions
-
-<!-- TODO1: Pinterest as a knowledge base -->
+### Related question: stylistic congealment in crowdsourcing 
 
 How does the stylistic variance of contributions change through the lifespan of a system?
 We hypothesize that as crowdsourcing systems grow in size, their contributions also grow less variant in their approach.
-This question is related to the primary research questions of the proposed dissertation and this chapter, and it will be useful to consider it.
+This question is related to the research questions of the proposed dissertation and this chapter, and will be useful to consider it.
 
 - Directionality of influence
   - IF structure is being solidified: why is it being systematized?
@@ -383,7 +376,8 @@ One notable example of this type of shift is happening is in Wikipedia.
 Wikipedia does not set explicit rules, but conventions are established and policed by the community.
 For example, after a recommendation in 2006, editors began insisting on well-sourced information underlying all significant statement on the website [@wales_insist_2006].
 The structure has also enabled efforts such as DBPedia, structured data representing the entities in Wikipedia pages.
-It has also informed information retrieval approaches to understanding entities beyond a query, such as with Google's Knowledge Graph and Microsoft's Satori <!-- TODO1 citations -->.
+It has also informed information retrieval approaches to understanding entities beyond a query, such as with Google's Knowledge Graph and Microsoft's Satori.
 
-<!-- TODO1: talk about relevance to larger question -->
+### Conclusions
 
+Many crowdsourcing contributions are <!-- TODO1 -->

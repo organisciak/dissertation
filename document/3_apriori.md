@@ -13,13 +13,12 @@ In a controlled set up, crowdsourcing in information retrieval usually follows a
 This type of design is common for creating custom evaluation datasets through relevance judgments [@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [<!--TODO1 cite twitter, others -->].
 <!-- Removed: Some exceptions to this approach have been attempted with success[].-->
 
-Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008, @organisciak_evaluating_2012; @howe_crowdsourcing:_2008; @organisciak_incidental_2013].<!--_ TODO1: cite more-->
+Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @organisciak_evaluating_2012; @howe_crowdsourcing:_2008; @organisciak_incidental_2013].<!--_ TODO1: cite more-->
 The manner to improve on a basic task/description/items interface design is not immediately clear, though: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO1 cite -->.
 
 In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will compare the effect of task design on collected information retrieval data.
 Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval -- a typical encoding task performed by paid crowds, the following questions will be pursued:
 
-<!-- TODO1: Do this same thing for chapter 4--> 
  * __RQ1__: Which approaches to collection interface designs are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
 
  * __RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?
@@ -38,7 +37,7 @@ RQ2 and RQ3 are the primary questions being explored in this chapter of the prop
 While this dissertation is explicitly pursuing the former question, collecting computationally useful contributions needs to be understood in the context of contributor satisfaction.
 The trade-off between contributions that crowds want to make and the reliability of the data is a central consideration for fostering sustainable, or alternately affordable, crowdsourcing.
 
-RQ4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be addressed as thorougly as possible.
+RQ4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be addressed as thoroughly as possible.
 
 ### Overview of proposed research design
 
@@ -212,7 +211,7 @@ The metadata encoding task being controlled for is a microblog annotation task.
 
 Microblogging messages, in this case from Twitter, are notably truncated.
 Since Twitter messages are limited to 140 characters, messages often are brief, missing context, and heavily abbreviated.
-This creates problems for parsing the topic of an individual message.<!-- TODO1: citations for microblog search... both Jaime and Miles have them-->
+This creates problems for parsing the topic of an individual message.
 On Twitter, the use of microblogging is so ephemeral and diverse that many information retrieval needs are completely new when introduced and only exist for a short period of time [@chen_improving_2013].
 
 Microblogging users partially address this problem by occasionally encoding metadata into messages in a structured way.
@@ -512,12 +511,12 @@ The experiments will be performed on Amazon's Mechanical Turk, using an API that
 Funds for workers will be provided out of pocket, though I will seek dissertation research funding where available.
 The Graduate College at Illinois lists grant funding opportunities that may be worth pursuing [^grants1].
 
-The systems themselves will be developed using JavaScript for the front end, built on top of the Backbone.js model-view library with Require.js used to modularize the code.
+The systems themselves will be developed using JavaScript for the front end, built on top of the Backbone.js model-view library with require.js used to modularize the code.
 Backbone.js is a strong choice for binding data to arbitrary views, offering flexibility for our comparative interfaces.
 On the back-end, the stack will be run on a Node.js server with MongoDB for data storage.
 These options are not critical, but they are fast for concurrent activities, reducing my server needs.
 
-The software will be developed by myself, but is not drastically different than past systems that I have built.
+The software will be developed by myself, but is not drastically different than past systems that I have built and should not present any difficulties beyond time commitment.
 Honoring the notion of dissertation work as a public contribution, all development will be performed in a reusable manner, and released with an open-source Apache license[^crowdy].
 
 [^crowdy]: https://github.com/organisciak/crowdy
@@ -525,5 +524,6 @@ Honoring the notion of dissertation work as a public contribution, all developme
 
 ## Conclusion
 
-TODO1
-
+Crowdsourcing is a promising approach for collecting descriptive document metadata.
+We have seen that the contribution changes as the instrument does, but there has not been much study into the effect of design on the reliability and consistency of contributions.
+This chapter of the dissertation allows these issues to be explored, stimulated by a study comparing the data from various designs of a microblog message encoding task.
