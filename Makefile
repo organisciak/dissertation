@@ -12,7 +12,7 @@ stats:
 	cat logs/stats.csv | Rscript workspace/vis-progress.r
 	
 refs: 
-	perl -pe "s:^(@.*{.*_)\?*:\1:g" refs.bib >refs.bib2
+	perl -pe "s:^(@.*{.*_)\?*:\1:g" refs.bib | perl -pe "s/^(@.*{.*):_/\1_/g" >refs.bib2
 	mv refs.bib2 refs.bib
 
 report:
@@ -33,11 +33,12 @@ tex: refs
 	ls document/*_*.md | parallel pandoc  -t latex --biblatex $(pandoc_args) --chapters -o {.}.tex {}
 	# Fix underscores in \cite, \autocite, and \textcite commands
 	# ls document/*_*.md | parallel "perl -i -p -e 's{cite{.*}}{$& =~ s/_/\\\_/gr}ge' {}"
-
+	
 	# Compile to PDF and view
-	TEXINPUTS=document/: pdflatex thesis.tex
+	export TEXINPUTS=document//:
+	pdflatex --include-directory=document thesis.tex
 	biber thesis
-	TEXINPUTS=document/: pdflatex thesis.tex
+	pdflatex --include-directory=document thesis.tex
 	
 html: refs all.md
 	pandoc $(pandoc_args) -t html --table-of-contents \
