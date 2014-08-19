@@ -111,7 +111,7 @@
 \def\author#1{\gdef\@author{#1}\MakeUppercase{\protect\@mkupauthor{#1}}}
 \newcommand{\otherdoctorate}[2]{\def\@degree{#1}
     \def\degree{#2}
-    \def\@thesisname{DISSERTATION}
+    \def\@thesisname{DISSERTATION PROPOSAL}
     \@doctoraltrue
     }
 \newcommand{\othermasters}[2]{\def\@degree{#1}
@@ -222,7 +222,7 @@
 %%%        {\lc@selectfont \@thesisname}\\[12pt]
         \@thesisname\\[12pt] % [12pt] added back 3.08
         Submitted in partial fulfillment of the requirements\\
-        for the degree of \@degree\ in \@dept\\
+        for the degree of \@degree\ at the \@dept\\
         in the \@college\ of the\\
         University of Illinois at Urbana-Champaign, \@degreeyear}%\vfil}%
      \vskip-0.60in %% ECE: edit to adjust title page spacing (SR)
