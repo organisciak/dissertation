@@ -19,7 +19,7 @@ It broadly captures the abilities of the internet, as a communications medium, t
 
 Nothing about crowdsourcing is fundamentally tied to the internet.
 It is entirely possible to bring together large groups of people in different ways, but the access and efficiency of the internet is both
-what made the concept seem so novel and what gave it value in the various realms where it was applied. Whereas crowds have long been noted for their collective simplicity [@le_bon_crowd:_1896]<!--_--> or irrationality [@mackay_memoirs_1852],
+what made the concept seem so novel and what gave it value in the various realms where it was applied. Whereas crowds have long been noted for their collective simplicity [@le_bon_crowd_1896] or irrationality [@mackay_memoirs_1852],
 through the internet one can perform human-specific tasks at a scale usually only seen for computational tasks.
 
 The term is recent and has an unambiguous source, but immediately upon introduction, it was adopted and expanded on through public discourse.
@@ -31,7 +31,7 @@ The article briefly looked at user-generated online content, though in the conte
 
 Despite the somewhat specific initial definition, the term _crowdsourcing_ struck a chord more broadly and was culturally co-opted.
 This happened very quickly: within nine days Howe noted a jump from three Google results to 189,000 [@howe_birth_2006].
-Within a month, Howe addressed the co-opting of the term, "noticing that the word is being used somewhat interchangably with Yochai Benkler's concept of commons-based peer production" [@howe_crowdsourcing:_2006]<!--_-->.
+Within a month, Howe addressed the co-opting of the term, "noticing that the word is being used somewhat interchangably with Yochai Benkler's concept of commons-based peer production" [@howe_crowdsourcing_2006].
 He gives his own definition, but also notes that language is slippery and he's "content to allow the crowd define the term for itself (in no small part because [he's] powerless to stop it.)".
 
 Thus, crowdsourcing was adopted to refer broadly to a series of related concepts, all related to people being connected online.
@@ -259,7 +259,7 @@ The supplemental secondary motivators observed in the study were:
 
 ### Aggregation
 
-@schenk_crowdsourcing:_2009 and @geiger_managing_2011 discuss two types of aggregation: _integrative_ and _selective_.
+@schenk_crowdsourcing_2009 and @geiger_managing_2011 discuss two types of aggregation: _integrative_ and _selective_.
 Integrative aggregation pools contributions into a common product, like a wiki, while selective aggregation tries to choose the best contributions, such as in contests.
 
 This simple separation hides some of the complexity seen in aggregation approaches.
@@ -277,12 +277,12 @@ I argue the following finer views on integrative aggregation are useful:
 
 Who directs the crowdsourcing activities and who benefits from the contributions?
 
-Considering the director of a crowdsourcing task, @zwass_cocreation:_2010 distinguishes between _autonomous_ and _sponsored_ forms of crowdsourcing.
+Considering the director of a crowdsourcing task, @zwass_cocreation_2010 distinguishes between _autonomous_ and _sponsored_ forms of crowdsourcing.
 
 _Sponsored_ crowdsourcing is when there is a entity at the top soliciting the contributions: a client of sorts. 
 In contrast _autonomous_ crowdsourcing serves the community itself.
 Autonomous crowdsourcing can be in a centralized location, like a community-written wiki or video-sharing website, or exist loosely, as in blogs.
-@zwass_cocreation:_2010 explains: "Marketable value is not necessarily consigned to the market—it may be placed in the commons, as is the case with Wikipedia."
+@zwass_cocreation_2010 explains: "Marketable value is not necessarily consigned to the market—it may be placed in the commons, as is the case with Wikipedia."
 
 Considering the soliciting party as a case of sponsorship or autonomy is useful, though a further distinction should be made between the collective (the _crowd_) and the individual (the _contributors_).
 Crowds collaborate toward a shared goal, as with Wikipedia or a type of open-source software development, while individuals are more self-possessed.
@@ -325,27 +325,24 @@ Creative crowdsourcing might take the form of artistic human expression, such as
 Opinion or judgement-based crowdsourcing often does not have a definitive answer, and is seen in areas such as movie reviews or product ratings.
 More complex critical thinking tasks do not fit the paradigm of computation and are much more complex, such as Wikipedia or protein-folding project FoldIt.
 
-@schenk_crowdsourcing:_2009 distinguish between three types of crowdsourcing.
+@schenk_crowdsourcing_2009 distinguish between three types of crowdsourcing.
 First are routine tasks, such as crowdsourcing of OCR text correction with ReCaptcha.
 The majority of human computation tasks would likely fall within this category of rote tasks.
 Second are complex tasks, such are open-source software development.
 Finally, they suggest creative tasks. An examples would be a system like MyStarbucksIdea, where people suggest changes they would like to see at the coffee chain Starbucks.
-Since @schenk_crowdsourcing:_2009 focus on crowdsourcing when there is a client, usually a corporate client, they do not consider the wider space of creative crowdsourcing tasks.
+Since @schenk_crowdsourcing_2009 focus on crowdsourcing when there is a client, usually a corporate client, they do not consider the wider space of creative crowdsourcing tasks.
 
 #### Subjective vs. Objective Crowdsourcing
 
-<!-- TODO1 add research -->
+<!-- TODO2 add research -->
 Another parallel being drawn in recent years is that of objective or subjective crowdsourcing tasks.
 
 Objective tasks are assumed to have an authoritative truth, even if it is unknown.
 For example, in transcribing scanned texts, it is assumed that there is a 'correct' passage in the work that has been scanned.
 
 In contrast, subjective tasks have a variable concept of correctness, as they are are not expected to be consistent between contributors.
-<!--TODO1: write more-->
 
-Commonly human computation undertakings are objective tasks, while Schenk's split of routine, complex, and creative does not commit to this split in any particular way.
-
-<!-- TODO1: citations -->
+Human computation undertakings are commonly objective tasks, and taxonomic effort of human computation -- such as Schenk's split of routine, complex, and creative -- does not touch on the subjective/objective separation in a direct way [@schenk_crowdsourcing_2009].
 
 This designation also applies to aggregation.
 Multiple contributions can be aggregated with an objective assumption, expecting a truth a deviations from it as bad work or data.
@@ -361,9 +358,10 @@ Vukovic and Batolini also note that _mixed_ crowds are observable.
 
 #### Necessary Skills
 
-<!--TODO1-->
-
- * mentioned briefly in @quinn_human_2011, anywhere else?
+A potential separation between crowd methods is the skills required to perform the work.
+_Unskilled_, _locally training_, and _specialized_ are all seen among crowdsourcing systems.
+Where unskilled labour encourages contributions from anybody at anytime, systems that use methods for authority control leave certain tasks to long-term, involved contributors.
+For example, on Stack Overflow, a user's administrative ability grows more open as they contribute more to the management of the system, a way of ensuring that those users have learned the proper management of the site.
 
 ### Quality Control
 
@@ -403,21 +401,19 @@ One reason for this may be that, in addition to the large portion of future prof
 _Wisdom of crowds_: Wisdom of the crowds is a design pattern which emphasizes the effectiveness of human judgment in aggregate [@surowiecki_wisdom_2004], provided the participants are rationally organized.
 This is embodied by multiple-keying for tasks which are expected to have a real answer, such as classifying galaxies, or averaging opinions for subjective tasks to derive a normative judgment.
 
-<!--
-TODO1: cite elsewhere
-
-### Full Taxonomies
+### Other Taxonomies
 
 @geiger_managing_2011 identify crowdsourcing processes by four defining characteristics: the pre-selection process for contributors, the accessibility of peer contributions, the aggregation of contributions, and the form of renumeration for contributors.
+While these are all valid ways of viewing crowdsourcing, I believe more qualitative or naturalistic separations are also necessary in order to understand crowdsourcing websites, such as motivation or centrality.
 
-@quinn_human_2011 look at crowdsourcing along six facets: motivation, quality control, aggregation, human skill, process order, and task-request cardinality.
+@quinn_human_2011 provide a taxonomy of human computation along six facets: motivation, quality control, aggregation, human skill, process order, and task-request cardinality.
+Their taxonomy is thorough and relevant to crowdsourcing in general.
 
--->
-
+<!--
 ## Top research in crowdsourcing
 
 <!-- TODO1: write -->
-
+<!--
 ### ESP Game
 
 ### VizWiz
@@ -430,7 +426,7 @@ TODO1: cite elsewhere
 
 
 ### Benkler - Wealth of Networks
-
+-->
 
 ## Crowdsourcing in the Wild
 
@@ -448,34 +444,36 @@ The __Netflix Prize__ was a competition run by film rental (and now streaming) c
 Claiming the prize required the winner to publish their results but did not require transfer of intellectual property, only a license for Netflix.
 A 2008 New York Times article about the prize noted that the community of participants were notably open in sharing their insights[@thompson_if_2008].
 
-### Threadless
-
 ### Academic
-
+<!-- TODO1 Academic Projects
 #### Zooniverse
 
 #### FoldIt
 
 #### ReCaptcha
+-->
 
-
+<!-- TODO2
 ## Failures and Concerns
 
-<!-- TODO1, but don't overdo it-->
+ but don't overdo it-->
 
-
+<!-- TODO2
 ### Ethics
+-->
 
 
 ## Research in Information Science
 
 <!-- TODO1 -->
 
-## Research in Information Retrieval
-
 <!-- Much TODO1 -->
 
 In information retrieval, the focus on crowdsourcing has been predominantly in the use of paid crowds for generating evaluation datasets, though there have been efforts to use crowds to improve document representation or even query specific ranking.
+
+The benefit of paid crowds for relevance judgments is that it allows on-demand evaluation datasets to exist.
+This has been a costly and exhausting process in the past, making it difficult to perform IR research on more novel datasets than the judged sets available from TREC.
+Relevance judgments benefit from the agreement among multiple human
 
 ### Crowdsourcing for evaluation
 

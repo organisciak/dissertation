@@ -171,7 +171,7 @@ The explicit forms of descriptive crowdsourcing that are seen on Pinterest are:
  * Social contribution: commenting on pins, repinning, 'liking', Facebook integration 
 
 
-### Design: A Language-modelling approach To curated lists
+### Design: A Language-modelling approach to curated lists
 
 Adopting a language modeling approach for this study, documents are ranked by estimating the probability of each document's language model generating the query, and that document's prior probability of being relevant.
 
@@ -192,7 +192,7 @@ $P(q|C)$ - Collection likelihood
 
 T = bag of unigrams from 
 
-<!-- TODO describe interpolation -->
+<!-- TODO1 describe interpolation -->
 
 In this study's approach, we assume that co-occurring pins in lists and other users' pins of the same source content represent additional interpretations of the pin's aboutness.
 By interpolating a pin's language model with models provided by other documents and users, probability mass is dispersed among different 'interpretations' of the aboutness of the document.
@@ -206,12 +206,12 @@ This study will evaluate educated guesses based on work performed by @zhai_study
 Two other issues that may need to be considered are occasions when there is an absence of other information, perhaps when a pin is alone in its board and nobody else has saved the same source item, 
 
 <!-- TODO1: section not done -->
-
+<!--
 #### P(d)
 
 One potential problem of this evidence is that is biases 
 
-<!-- TODO1 keep going -->
+<!-- TODO1 keep going
 
 As an additionally model, P(d) will be modelled
 
@@ -290,7 +290,7 @@ Additional evaluation queries will be sampled from auto-complete suggestions on 
 When a user starts to type in a query, five suggestions appear.
 For example, typing 'r' will suggest 'recipes', 'red hair', 'rings', 'relationship quotes', and 'rustic wedding'.
 These appear to be the five-most probable queries starting with the provided string.
-For an insight of what types of queries are in the sampling frame and more generally what topics are popular among Pinterest users, Table 1<!--TODO2 auto-number--> lists the auto-complete suggestions when each letter of the alphabet is entered into the search box.
+For an insight of what types of queries are in the sampling frame and more generally what topics are popular among Pinterest users, Table 1<!--TODO1 auto-number--> lists the auto-complete suggestions when each letter of the alphabet is entered into the search box.
 
 It should be noted, however, that a sample frame of just the most popular terms is too general.
 To shift the sample away from the head of the distribution, the sampling frame will also include 500 queries derived from auto-complete suggestions based on two character strings: specifically, the one hundred most common two-character pairs occurring at the start of the English language.[^twoletter]
@@ -303,11 +303,12 @@ Evaluation queries will be a randomly selected subset of real-world queries, pro
 For each query, a description of what constitute the different levels of relevance will be written by myself, and the relevance of the first one hundred results will be rated by paid workers on a graded relevance scale.
 
 -----------------------------
-"appetizers, art, ab workout, animals, apartment decorating, appetizers, art, ab workout, animals, apartment decorating, christmas, christmas decorations, chicken recipes, crockpot recipes, christmas crafts, diy, dinner recipes, dresses, desserts, disney, easter, engagement rings, elf on the shelf ideas, eye makeup, easter crafts, food, fashion, funny, funny quotes, fall, garden, gift ideas, gluten free, girls bedroom, gardening, hair styles, hair, healthy recipes, halloween costumes, halloween, inspirational quotes, interior design, ikea, i love you, italy, jewelry, jennifer lawrence, jello shots, jeans, jokes, kitchen, kitchen ideas, kids crafts, kitchen decor, kids, love quotes, love, living room, long hair, lingerie, makeup, medium hair styles for women, mothers day, mothers day gifts, master bedroom, nail art, nails, nail designs, nail art designs, nail art for short nails, ombre hair, organization, organization tips, outfits, organizing, prom dresses, pregnancy, prom hair, paleo, puppies, quotes, quinoa, quinoa recipes, quilts, quotes about change, recipes, red hair, rings, relationship quotes, rustic wedding, spring fashion, shoes, short hair styles for women, short hair, sexy, tattoos, thanksgiving, tattoo ideas, thanksgiving recipes, travel, updos, updo hairstyles, ugly christmas sweater, u�as, updos for medium length hair, valentines ideas, valentines day gifts for him, valentines day, vintage, valentines crafts, wedding, wedding dresses, wedding hair, wedding rings, wedding ideas, xmas, x, xmas crafts, xmas decorations, x rated, yoga, yoga poses, yoga pants, yellow, yoga workout, zucchini recipes, zucchini, zac efron, zara, zucchini bread"
+"appetizers, art, ab workout, animals, apartment decorating, appetizers, art, ab workout, animals, apartment decorating, christmas, christmas decorations, chicken recipes, crockpot recipes, christmas crafts, diy, dinner recipes, dresses, desserts, disney, easter, engagement rings, elf on the shelf ideas, eye makeup, easter crafts, food, fashion, funny, funny quotes, fall, garden, gift ideas, gluten free, girls bedroom, gardening, hair styles, hair, healthy recipes, halloween costumes, halloween, inspirational quotes, interior design, ikea, i love you, italy, jewelry, jennifer lawrence, jello shots, jeans, jokes, kitchen, kitchen ideas, kids crafts, kitchen decor, kids, love quotes, love, living room, long hair, lingerie, makeup, medium hair styles for women, mothers day, mothers day gifts, master bedroom, nail art, nails, nail designs, nail art designs, nail art for short nails, ombre hair, organization, organization tips, outfits, organizing, prom dresses, pregnancy, prom hair, paleo, puppies, quotes, quinoa, quinoa recipes, quilts, quotes about change, recipes, red hair, rings, relationship quotes, rustic wedding, spring fashion, shoes, short hair styles for women, short hair, sexy, tattoos, thanksgiving, tattoo ideas, thanksgiving recipes, travel, updos, updo hairstyles, ugly christmas sweater, updos for medium length hair, valentines ideas, valentines day gifts for him, valentines day, vintage, valentines crafts, wedding, wedding dresses, wedding hair, wedding rings, wedding ideas, xmas, x, xmas crafts, xmas decorations, x rated, yoga, yoga poses, yoga pants, yellow, yoga workout, zucchini recipes, zucchini, zac efron, zara, zucchini bread"
 -----------------------------
-
+<!-- TODO1: proper width -->
 Table 1: Popular queries on Pinterest, showing the 5 search input auto-complete suggestions for each letter of the alphabet.
 Though Pinterest requires users to be logged-in, this list does not appear to be personalized: the same list was derived when I asked other users to run the collection code.
+<!-- TODO1: proper table number-->
 
 #### Baseline
 
@@ -331,7 +332,7 @@ This assumes a conditional independence between terms.
 However, taking a maximum likelihood estimate for $P(q_i|d)$--- dividing term $q_i$'s occurrences in document $d$ by the sum of all terms---suffers some problems.
 First, it heavily punishes documents where a word has not occurred, over-emphasizing seen words in the document's language model.
 Secondly, it fails to account for the general likelihood of a word occurring in the language.
-Thus, we smooth between the query term in the document's language model and its probability in the collections language model ($P(q_i}C)$).
+Thus, we smooth between the query term in the document's language model and its probability in the collections language model ($P(q_i)C)$).
 Smoothing not only de-emphasizes seen words, but also reduces the discriminatory power of common words, akin to the TF-IDF intuition[@zhai_study_2001].
 
 The baseline in this study will use linear smoothing between the two forms of evidence.

@@ -13,8 +13,8 @@ In a controlled set up, crowdsourcing in information retrieval usually follows a
 This type of design is common for creating custom evaluation datasets through relevance judgments [@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [<!--TODO1 cite twitter, others -->].
 <!-- Removed: Some exceptions to this approach have been attempted with success[].-->
 
-Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @organisciak_evaluating_2012; @howe_crowdsourcing:_2008; @organisciak_incidental_2013].<!--_ TODO1: cite more-->
-The manner to improve on a basic task/description/items interface design is not immediately clear, though: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO1 cite -->.
+Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @organisciak_evaluating_2012; @howe_crowdsourcing_2008; @organisciak_incidental_2013].
+The manner to improve on a basic task/description/items interface design is not immediately clear, though: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO2 cite -->.
 
 In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will compare the effect of task design on collected information retrieval data.
 Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval -- a typical encoding task performed by paid crowds, the following questions will be pursued:
@@ -29,7 +29,7 @@ Scoped to a reasonable parameterization of crowdsourcing as it is commonly pract
 
 RQ1 is the question of design, on synthesizing prior work and brainstorming directions to explore.
 It is a partially subjective question, but one still worth pursuing with diligence.
-As research by (TODO1 <!--cite-- CHI 2013-->) found, the effects seen in traditional user studies are still present in online crowd markets.
+As research by @komarov_crowdsourcing_2013 found, the effects seen in traditional user studies are still present in online crowd markets.
 Their finding suggests that non-crowdsourcing research in human-computer interaction is informative for our purposes.
 This proposal chapter explores some possible design decisions and argues why they should be studied.
 
@@ -178,18 +178,18 @@ These findings are suggestive of two issues related to this dissertation.
 First, they support the premise that different designs for ostensibly the same task change the contours of the resulting data.
 They also show that simply scaling a task to take more time does not provide corresponding returns in reliability improvements.
 
-### Motivating and related work
+<!--### Motivating and related work
 
-<!-- TODO1: lots of lit review here!! -->
+ <!--TODO1: lots of lit review here!!
 
 __Notes__
 
  * On-demand data collection for IR in increasingly common
- * Others have warned that design plays an important role (e.g. Alonso and Lease, Howe, others) <!--TODO1-->
+ * Others have warned that design plays an important role (e.g. Alonso and Lease, Howe, others) <!--TODO1
    * That being said research on the area of design is sparse
      * TREC track? 
      * Research on Games with a Purpose is the exception
-
+-->
 ## Scope
 
 In looking at the design of contribution tasks, I will be focusing on paid crowdsourcing.
@@ -236,8 +236,9 @@ Such a task is useful, but potentially easy to misinterpret by contributors conf
 <!-- TODO2: Is there research around the topic - primary, tertiary in a sentence -->
 To keep focused, all designs will collect this topic identification tasks.
 
+<!--
 For example, ... <!-- TODO1 use Obama examples... -->
-
+<!--
 __TODO1: remove below task__, but first it's worth considering what do do with it. I like it.
 
 The second task will be a summarization task:
@@ -254,7 +255,7 @@ Understanding a topic based on multiple tweets has previously been performed by 
 They looked at the information contained in multiple messages sharing the same link.
 This study differs in that a human looks at multiple messages to understand the topic then selects the single existing message that is the most informative by itself.
 However, similar data preparation steps will be required, removing expected spam and near-duplicates.
-
+-->
 <!-- TODO2: estimates of Twitter duplicates -->
 <!-- TODO2: research hueristics on removing Twitter spam -->
 
@@ -306,7 +307,6 @@ Ways that these can change from task to task include:
     * Bonuses.
     * Number of tasks available.
  * __Goal__
-    * ?? -  (TODO1)
  * __Instructions__
     * Clarity.
     * Restrictive vs. interpretable.
@@ -427,17 +427,17 @@ In the feedback interface, a worker is shown feedback about their estimated perf
 The first that they complete is identical to the basic interface.
 Starting with the second task, however, the top of the interface will tell users:
 
- * Their estimated performance, in terms of agreement with other workers
- * A visualization of where they fall in the distribution of all workers, from best performing to worst
-   * TODO1: add figure (something like:  |--------I--|)
+ * Their estimated performance, in terms of agreement with other workers.
+ * A visualization of where they fall in the distribution of all workers, from best performing to worst, 
+
+![Example of showing feedback to workers](images/why-dist.png)
 
 Since the interaction of this interface truly begins on the second task, evaluation of this interface will also focus on users returning after their first task.
 
-TODO1
-
- * Add details of calculation for reliability
+<!--TODO2
  * Add mockup figure
  * Calculate stats for another dataset on what percentage of contributions are not the first task done by a user.
+-->
 
 <!--
 ##### Rough Notes
