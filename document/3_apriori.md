@@ -62,7 +62,7 @@ A task where more information in encoding about the document is a more appropria
 ## Motivation
 
 Why is task design important to descriptive crowdsourcing?
-Task design is a concern that has been noted multiple times. <!-- TODO1 cite examples. "X has noted..." -->
+Task design has been noted on multiple occasions as an intuitively important consideration, but has only been studied in limited formal circumstances [e.g. @alonso_design_2011; @grady_crowdsourcing_2010].
 
 Crowdsourcing is increasingly being used for information retrieval.
 Particularly, the on-demand nature of paid crowdsourcing is being embraced for uses such as relevance judgments [@alonso_crowdsourcing_2008], to describing queries [@chen_improving_2013], and to annotating entities [@finin_annotating_2010].
@@ -118,8 +118,6 @@ Paired with other strategies, this enabled an improvement to $RMSE=5.40$, a 66.1
 
 #### Dynamic of attention affect the style of contributions 
 
-<!-- TODO1 mention low-effor crowdsourcing research -->
-
 In @organisciak_incidental_2013, I looked at a facet of crowdsourcing that I called _incidental crowdsourcing_ (IC).
 
 Incidental crowdsourcing refers to crowdsourcing in the periphery.
@@ -148,6 +146,8 @@ however, while Google's store allows them to offer this rating quickly and witho
 Though other potential factors may also affect differences between the systems, this cursory comparison suggests that the attentiveness and introspection required of a crowdsourcing contribution affects what that contribution will look like.
 
 Since most incidental crowdsourcing deals with reaction to existing documents rather than creation of outright new works, the future directions suggested by this work (in addition the work itself) are pertinent to the proposed dissertation's focus on crowdsourcing for information retrieval indexing.
+
+<!-- TODO2 mention low-effor crowdsourcing research -->
 
 #### What are you _feeling_? Introspection changes rating habits
 
@@ -367,15 +367,14 @@ How would the contribution change if:
 Some of these ideas of exciting, others are unfeasible.
 Designs to encourage longer engagement from individuals do not appear to be a promising direction.
 Worker experience was previously measured [@organisciak_evaluating_2012] and found to not be significant for simple tasks.
-Other areas are already well-tread. The effect of incentive structures, payment and bonuses, has been studied frequently, notable by @mason_financial_2010. 
+Other areas are already well-tread. The effect of incentive structures, payment and bonuses, has been studied frequently, notably by @mason_financial_2010. 
 
 ### Proposed designs
 So what tweaks will this study measure?
 
 As outlined in the overview of my own doctoral research, a few directions look like promising continuations of my research.
 
- * It is still unclear whether simple encoding tasks benefit more from workers using their brain or gut.
-   <!-- TODO1: Kahneman and Tversky -->
+ * It is still unclear whether simple encoding tasks benefit more from workers' gut instincts or careful consideration.
    Designs that can change a worker's attentiveness address an interesting problem and may bring potential improvements.
  * Having previously found that reading instructions slowly is important for properly performing work, it should be seen whether a task can push a worker into internalizing the codebook rather than interpreting it.
  * Understanding that many reliability errors are introduced by honest workers that intend to do well, it may also be important to keep workers informed of their performance, at least when they are not performing well.
@@ -458,12 +457,13 @@ The time-limited interface encourages quicker interactions by giving users a tim
 
 This approach has been previously used in (<!--TODO1 cite-->) to push people into a visceral form of task completion.
 
+<!--
 TODO1
  
  * Cite Kahneman & Tversky
  * To explain: how does the timer cut off slow workers? (With bonuses that are only given per item of task-set finished within time limit)
  * What is the time limit? This needs to be measured to determine a good value
- * Add mackup of interface
+ * Add mockup of interface-->
 
 ### Evaluation
 

@@ -175,10 +175,10 @@ The incentives for contributors to participate in crowdsourcing are complex and 
 #### Intrinsic / Extrinsic Motivation
 
 Motivation in crowdsourcing follows related work in the motivations of humans in general [e.g. @maslow_theory_1943; @alderfer_empirical_1969; @ryan_intrinsic_2000].
-While a review of that work is beyond the scope of this work, many views<!--(TODO1: 'many views' needs citations)--> of crowdsourcing motivation adopt the lens of motivation as a mixture of _intrinsic_ factors and _extrinsic_ factors [@ryan_intrinsic_2000].
+While a review of that work is beyond the scope of this work, many views of crowdsourcing motivation adopt the lens of motivation as a mixture of _intrinsic_ factors and _extrinsic_ factors [@ryan_intrinsic_2000].
 In the former, fulfillment is internal to the contributor, psychologically motivated, while in the latter the rewards are external.
 
-The spectrum of intrinsic to extrinsic motivators is commonly paralleled in crowdsourcing literature through dichotomy of paid and volunteer crowdsourcing [<!--TODO1-->].
+The spectrum of intrinsic to extrinsic motivators is commonly paralleled in crowdsourcing literature through dichotomy of paid and volunteer crowdsourcing[@rouse_preliminary_2010; @geiger_managing_2011; @kraut_building_2011; @schenk_crowdsourcing:_2009].<!--_-->
 
 Paid and volunteer crowdsourcing are not exclusive, and there are extrinsic motivators beyond money.
 However, this separation is common because of it accounts for some of the starkest differences between how crowdsourcing is implemented and motivated.
@@ -188,74 +188,80 @@ It has been shown that intrinsic motivation still plays a part in paid crowdsour
 For example, some contest-based marketplaces are popular among users looking to practice their skills, such 99Designs for designers or Quirky for aspiring inventors.
 
 Some taxonomies make a distinction between forms of payment.
-@geiger_managing_2011 makes the distinction between fixed renumeration, with a pre-agreed fee, and success-based renumeration, such as contest winnings or bonus.
+@geiger_managing_2011 makes the distinction between fixed remuneration, with a pre-agreed fee, and success-based remuneration, such as contest winnings or bonus.
 
 #### Specific Motivators
-
-<!-- TODO1
- - commitment/contribution
- - add more from @kraut_building_2011; @kraut_encouraging_2012
--->
 
 Taxonomies of specific motivators seen in crowdsourcing have been previously attempted, with varying results that touch on similar issues.
 In @organisciak_why_2010, I identified a series of primary and secondary motivators from a diverse set of crowdsourcing websites.
 Below I adopt the categories from that study, as they accommodate related work well.
 
-_Primary motivators_ are those that are considered critical parts of a system's interaction.
+_Primary motivators_ are those that are considered critical parts of a system's interact?ion.
 Systems do not require all of them, but to attract and retain contributions, they need one or more of them.
 In contrast, _secondary motivators_ are system mechanics that generally were not observed as necessary components of a system, but were elements that encourage increased interaction by people that are already contributors.
-@kraut_building_2011 similarly differentiate between encouraging contributions, and encouraging commitment.
+@kraut_building_2011 parallel the primary/secondary split by differentiating between encouraging contributions and encouraging commitment.
 
 The motivators in @organisciak_why_2010 were observed from a content analysis of 13 crowdsourcing websites and subsequent user interviews.
 For sampling, 300 websites most commonly described as 'crowdsourcing' in online bookmarks were classified with a bottom-up ontology, then the 13 final sites were selected through purposive stratified sampling, to represent the breadth of the types of crowdsourcing seen.
 
-The primary motivators seen in @organisciak_why_2010 were:
+Below is a list of primary motivators seen in @organisciak_why_2010, but also paralleled and supported by the similar broad view social study published by @kraut_building_2011.
+<!-- TODO2: split up @kraut_building_2011 by chapter? -->
 
  * __Money and extrinsic reward__. Paying crowds is not particularly novel, but it is the most reliable approach for collecting contributions.
 In the absence of other motivators or where certainty is required, reimbursement will attract contributors.
 However, it also introduces bottlenecks of scale, and negates some of the benefits of intrinsic motivation.
 @mason_financial_2010 note that, while intrinsic motivation still exists on paid crowdsourcing platforms, it is overwhelmed when tasks are too closely tied to reimbursement, resulting in contributions that are done minimally, briskly, and with less enjoyment.
+@kraut_building_2011 point to psychology research that shows the ability of reward in other settings to subvert intrinsic motivation, leading to less interested contributors.
  * __Interest in the Topic__. Sites that cater to people that have a pre-existing interest in their subject matter or outcomes tend to get longer, more consistent engagement.
 For example, the Australian Newspaper Digitisation Project (now know as a larger project called Trove) found that that amateur genealogists, with pre-existing communities and a willingness to learn new technologies, took “to text correction like ducks to water” @holley_many_2009.
 Similarly, Galaxy Zoo found similar success with amateur astronomers.<!--TODO2 citation-->
+Kraut and Resnick likewise argue that asking people to perform tasks that interest them results in more engagement than asking people at random.
  * __Ease of entry and ease of participation__. Low barriers to entry and participation were cited by every single user interviewed for the study.
 Wikipedia has a low barrier to entry but its interface and demanding community standards have been criticized in recent years for raising the barrier to participation [@angwin_volunteers_2009; @sanger_fate_2009].
+"Simple requests" generally lead to more productive contributions, according to Kraut and Resnick.
  * __Altruism and Meaningful contribution__. People like to help if they believe in what they’re helping.
 Writing about Flickr Commons, Library of Congress noted that they "appear to have tapped into the Web community's altruistic substratum by asking people for help.
 People wanted to participate and liked being asked to contribute". [@springer_for_2008].
 With Galaxy Zoo <!-- TODO2 cite GZ study and my own-->, people often cite the fact that it is a tangible way to contribute to real science.
- * __Sincerity__. <!-- TODO1 write about sincerity -->
+@kraut_building_2011 argue that appeals to the value of a contributions are more effective for people that care about the domain.
+ * __Sincerity__. 
+"People are more likely to comply with requests the more they like the requestor," @kraut_building_2011 note.
+A recurring theme among interview participants in @organisciak_why_2010 was whether a project seems sincere or exploitative.
+Since crowd contributions often exist as a parallel to labour, crowds are often weary of anything that smells like them being taken advantage of.
  * __Appeal to knowledge and opinions__. One curious source of motivation observed in the study is simply asking the right people.
 Online visitors presented with a question are often compelled to answer it simply because they know the response, be it part of their knowledge, skills, circumstance, or opinions.
-
-<!---
-TODO1
-Talking through taxonomies
-Centrality
-Sincerity
-Seen in academia with scholars getting weary of free work for Elsevier
-Novelty
-vs. curiosity?
-
-Appeal to knowledge
-Implicit vs. explicit
-irritation as implicit appeal to knowledge: Mike’s first Wikipedia contribution
-
---> 
+The 'appeal' itself can be explicit or implicit.
+@kraut_building_2011 refer to this sort of appeal as "Ask and Ye Shall Receive", asserting that online communities stand to benefit from easily accessible lists of what work needs to be done.
+They also assert that direct requests for contribution are better than broadcast.
+<!-- Notes: irritation as stimulant for Mike's first Wikipedia contribution -->
 
 One motivator overlooked in @organisciak_why_2010 is _novelty_.
-Novelty is ephemeral and unsustainable, but nonetheless a unique idea can attract contributions for a short amount of time.
+Novelty or curiosity is ephemeral and unsustainable, but nonetheless a unique idea can attract contributions for a short amount of time.
+@kraut_building_2011 also note structure, goals, and deadlines as incentives.
+Such an effect is strongly felt on Kickstarter, where the tenor of crowdfunding for projects changes relative to the funding end date. <!-- TODO2: cite stats from the japanese book on Kickstarter -->
 
 The supplemental secondary motivators observed in the study were:
 
  * __"Cred": External indicators of progress and reputation__.
+Using games, badges, or leaderboards encourages more contribution among certain people.<!--TODO2: HCOMP keynote last year-->
+An important caveat is that this form of performance feedback needs to be perceived as sincere [@kraut_building_2011].
  * __Feedback and impression of change__.
+Showing the contribution in the system or conveying how it fits into the whole.
+@kraut_building_2011 tie feedback to goals, emphasizing the importance of showing progress relative to personal or site-wide goals. <!-- TODO2: screenshot of transcribe bentham -->
  * __Recommendations and the social__.
+Prodding by friends, colleagues, and like-minded individuals.
+Simply seeing that other people have contributed makes a person more likely to contribute [@kraut_building_2011].
  * __Window fixing__.
+Nurturing a well-maintained community where the members are compelled to support it's health.
 
-<!-- TODO1: brief descriptions of secondary motivators -->
+### Centrality
 
-<!-- TODO1: Discuss Kraut and Resnick -->
+How central, or necessary, is the crowdsourcing to the task at hand?
+Is it _peripheral_, or _core_?
+
+The work in @organisciak_incidental_2013 tried to counterbalance a perceived focus on whole-hog crowdsourcing -- the large, highly novel initiatives like Wikipedia -- by introducing _incidental crowdsourcing_.
+Incidental crowdsourcing focused on types of crowdsourcing -- like rating, commenting, or tagging -- that are peripheral and non-critical.
+The shift to an incidental mode brings with it its own design tendencies, such as lower bandwidth forms of contribution and fallback strategies for low engagement cases.
 
 ### Aggregation
 
@@ -286,34 +292,17 @@ Autonomous crowdsourcing can be in a centralized location, like a community-writ
 
 Considering the soliciting party as a case of sponsorship or autonomy is useful, though a further distinction should be made between the collective (the _crowd_) and the individual (the _contributors_).
 Crowds collaborate toward a shared goal, as with Wikipedia or a type of open-source software development, while individuals are more self-possessed.
-For example, in citation analysis through web links, as was done with PageRank (<!--TODO1 cite pagerank paper-->), the large-scale benefits of the crowds are unrelated to what the individuals creating the links are thinking.
+For example, in citation analysis through web links, as was done with PageRank [@page_pagerank_1999], the large-scale benefits of the crowds are unrelated to what the individuals creating the links are thinking.
 
-<!-- TODO1: next few lines -->
-
- - The relationship between the director 
- - My effort vs. my benefit vs. their benefit
-
- - Symbiosis (both benefit) vs. Parasitism (one benefits at the expense of the other) vs. Commensalism (relationship between two organisms where one organism benefits without affecting the other)
-
+One way to view this relationship between contributor and director is in light of effort against benefit.
+Do both director and contributor benefit (symbiosis)?
+Does one benefit at the expense of the other (parasitism)?
+Or is it a case commensalism, where both benefit without affecting each other?
 
 ### Object of Interest
 
-I
-
 <!-- TODO1: Creation vs. Reaction -->
 * Creation vs. Reaction
-
-### Criticality of Crowdsourcing
-
-<!-- TODO1 I used "centrality above, is it better or worse than criticality?-->
-
-<!-- TODO1 Write this section -->
- * How important in the crowdsourcing to the larger project? 
- * Peripheral / Core
- * Fairly neglected in literature
- * Relates to incidental crowdsourcing, which looked at the space of 'peripheral and non-critical' crowdsourcing [@organisciak_incidental_2013]
- * Notes
-   * Soylent: is Soylent incidental or full-system?
 
 ### Type of Work
 
@@ -444,10 +433,20 @@ The __Netflix Prize__ was a competition run by film rental (and now streaming) c
 Claiming the prize required the winner to publish their results but did not require transfer of intellectual property, only a license for Netflix.
 A 2008 New York Times article about the prize noted that the community of participants were notably open in sharing their insights[@thompson_if_2008].
 
-### Academic
-<!-- TODO1 Academic Projects
-#### Zooniverse
+__Kickstarter__ is a microfunding platform that enables patronage of artists and creators in their project through small but plentiful contributions.
+A project creator on Kickstarter proposes a project and offers tiers of rewards for backers that contribute varying amounts.
+When researched in @organisciak_why_2010, the balance between the altruistic support-based motivation and opportunistic reward-based incentives seemed to weigh slightly more toward the former, though I expect this has changed in recent years as more products have been offered on the site.
+Regardless, the model of small contributions from many has been seen in many other so-called crowdfunding contexts, including charity, politics [@fung_larry_], and small business [@cortese_proposal_2011; @cortese_crowdfunding_2013].
 
+### Academic
+
+__Zooniverse__ is a series of crowdsourcing projects that started with Galaxy Zoo.
+Galaxy Zoo allowed the general public to classify images of galaxies from the Sloan Digital Sky Survey, many being seen for the first time, at a pace much quicker than any one human could perform.
+Another popular project, Old Weather, transcribes weather logs from old ship's journals.
+In Snapshot Serengheti, participants classify animals photographed in camera traps.
+Many of the Zooniverse projects follow a similar pattern: encoding of curious, novel, or interesting images while contributing to real research.
+
+<!-- TODO1 Academic Projects
 #### FoldIt
 
 #### ReCaptcha
@@ -456,30 +455,27 @@ A 2008 New York Times article about the prize noted that the community of partic
 <!-- TODO2
 ## Failures and Concerns
 
- but don't overdo it-->
-
-<!-- TODO2
 ### Ethics
 -->
 
 
 ## Research in Information Science
 
-<!-- TODO1 -->
-
-<!-- Much TODO1 -->
 
 In information retrieval, the focus on crowdsourcing has been predominantly in the use of paid crowds for generating evaluation datasets, though there have been efforts to use crowds to improve document representation or even query specific ranking.
 
-The benefit of paid crowds for relevance judgments is that it allows on-demand evaluation datasets to exist.
+The benefit of paid crowds for relevance judgments is that it allows for on-demand evaluation datasets [@alonso_crowdsourcing_2008].
 This has been a costly and exhausting process in the past, making it difficult to perform IR research on more novel datasets than the judged sets available from TREC.
-Relevance judgments benefit from the agreement among multiple human
+Relevance judgments benefit from the agreement among multiple humans, since the concept of 'relevance' is not clear-cut but rather normative.
+The ability to attract a breadth of rater types also positions paid crowdsourcing as an effective means to collecting evaluation data.
 
-### Crowdsourcing for evaluation
+<!-- Much TODO1 -->
+For three years, TREC has run a crowdsourcing track that emphasizes the collection of high quality relevance judgments through paid crowds [@].
+While much of the focus was on identifying and accounting for lower quality workers, there were also some efforts which 
 
-- relevance judgments
-- alonso et al.
 - TREC crowdsourcing track
+* Fill in citations
+* 
 
 ### Crowdsourcing in the machine
 

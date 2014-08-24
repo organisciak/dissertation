@@ -92,7 +92,7 @@ A few additional questions need to be asked for discussion in the context of the
 One form of analysis that would be useful but was not originally done is to compare the recoverable signal from artificially smaller contributor groups.
 If data collection had been cut off earlier, how accurate would the various methods for correcting against a worker's reliability be?
 
-TODO1: need treatment of that study
+TODO2: need treatment of that study
 
 -->
 
@@ -118,7 +118,7 @@ Documents, are treated in two ways: as an individual user's 'pin' -- their visua
 The variability of human interpretations is embraced in modeling a document, rather than pushed against.
 Not everybody sees the same features in the same document, so user-contributed document metadata is treated as a mixture of interpretations.
 
-<!-- TODO1: RQ: consistency in categories among Pins with identical sources -->
+<!-- TODO2: RQ: consistency in categories among Pins with identical sources -->
 
 Why study Pinterest?
 Pinterest is a novel website for studying ways to incorporate crowdsourced information into web retrieval.
@@ -171,20 +171,23 @@ The explicit forms of descriptive crowdsourcing that are seen on Pinterest are:
  * Social contribution: commenting on pins, repinning, 'liking', Facebook integration 
 
 
-### Design: A Language-modelling approach to curated lists
+### Design: A Language-modeling approach to curated lists
 
 Adopting a language modeling approach for this study, documents are ranked by estimating the probability of each document's language model generating the query, and that document's prior probability of being relevant.
+Estimating document $d$ for query $q$,
 
-$P(d|q)\propto P(q|d)P(d)$
+$P(d|q)\propto P(q|d)P(d)$,
+
+where $q$ is a set of terms $t$.
 
 Given a basic case of the unigram model [@ponte_language_1998; @song_general_1999] a document's prior probability of generating the query, $P(d)$, is assumed to be constant across all documents.
-This is the approach used for the baseline system, provided in detail in the baseline section below.
+This is the approach used for the baseline system, _provided in detail in the baseline section below_.
 
-This work approaches $P(q|d)$ as an estimate that may be improved by user-contributed description of the document, and $P(d)$ as an estimate that may be improved by quality judgments.
+This work approaches $P(q|d)$ as an estimate that may be improved by user-contributed description of the document and, of secondary focus, $P(d)$ as an estimate that may be improved by quality judgments.
 
 #### P(q|d)
 
-Most basically, $P(q|d)$ starts with a maximum likelihood estimate of all the terms in the user's pin.
+Most basically, $P(q|d)$ starts with a maximum likelihood estimate of all the query terms occurring in the user's pin: $P(t|d)$.
 
 $P(q|b)$ - The likelihood that the member board would have created the query
 
@@ -290,7 +293,7 @@ Additional evaluation queries will be sampled from auto-complete suggestions on 
 When a user starts to type in a query, five suggestions appear.
 For example, typing 'r' will suggest 'recipes', 'red hair', 'rings', 'relationship quotes', and 'rustic wedding'.
 These appear to be the five-most probable queries starting with the provided string.
-For an insight of what types of queries are in the sampling frame and more generally what topics are popular among Pinterest users, Table 1<!--TODO1 auto-number--> lists the auto-complete suggestions when each letter of the alphabet is entered into the search box.
+For an insight of what types of queries are in the sampling frame and more generally what topics are popular among Pinterest users, Table \ref{pop_pinterest} lists the auto-complete suggestions when each letter of the alphabet is entered into the search box.
 
 It should be noted, however, that a sample frame of just the most popular terms is too general.
 To shift the sample away from the head of the distribution, the sampling frame will also include 500 queries derived from auto-complete suggestions based on two character strings: specifically, the one hundred most common two-character pairs occurring at the start of the English language.[^twoletter]
@@ -298,29 +301,47 @@ To shift the sample away from the head of the distribution, the sampling frame w
 [^twoletter]: Using the frequencies calculated by @norvig_english_, these are: TH, OF, AN, IN, TO, CO, RE, BE, FO, PR, WH, HA, MA, WI, HE, IS, NO, WA, ON, DE, ST, SE, AS, IT, CA, HI, SO, WE, AR, DI, MO, AL, SU, PA, FR, ME, OR, SH, LI, CH, WO, PO, EX, BY, AT, FI, PE, BU, LA, NE, UN, LE, SA, TR, HO, YO, LO, DO, FA, SI, GR, EN, AC, MI, TE, BO, BA, GO, SP, OU, PL, EV, AB, TA, RA, US, BR, CL, DA, GE, TI, FE, AD, MU, IM, AP, RO, NA, SC, PU, EA, CR, VI, CE, OT, AM, AG, UP, RI, VE.
 
 It is likely that Pinterest's own retrieval model incorporates additional implicit feedback from users in the form of click-through data.
-This is a useful indicator of a item's quality
-Evaluation queries will be a randomly selected subset of real-world queries, provided by Etsy.<!-- TODO1 doublecheck that this is possible -->
+This is a useful indicator of a item's quality <!--TODO1: this section looks old-->
 For each query, a description of what constitute the different levels of relevance will be written by myself, and the relevance of the first one hundred results will be rated by paid workers on a graded relevance scale.
 
------------------------------
-"appetizers, art, ab workout, animals, apartment decorating, appetizers, art, ab workout, animals, apartment decorating, christmas, christmas decorations, chicken recipes, crockpot recipes, christmas crafts, diy, dinner recipes, dresses, desserts, disney, easter, engagement rings, elf on the shelf ideas, eye makeup, easter crafts, food, fashion, funny, funny quotes, fall, garden, gift ideas, gluten free, girls bedroom, gardening, hair styles, hair, healthy recipes, halloween costumes, halloween, inspirational quotes, interior design, ikea, i love you, italy, jewelry, jennifer lawrence, jello shots, jeans, jokes, kitchen, kitchen ideas, kids crafts, kitchen decor, kids, love quotes, love, living room, long hair, lingerie, makeup, medium hair styles for women, mothers day, mothers day gifts, master bedroom, nail art, nails, nail designs, nail art designs, nail art for short nails, ombre hair, organization, organization tips, outfits, organizing, prom dresses, pregnancy, prom hair, paleo, puppies, quotes, quinoa, quinoa recipes, quilts, quotes about change, recipes, red hair, rings, relationship quotes, rustic wedding, spring fashion, shoes, short hair styles for women, short hair, sexy, tattoos, thanksgiving, tattoo ideas, thanksgiving recipes, travel, updos, updo hairstyles, ugly christmas sweater, updos for medium length hair, valentines ideas, valentines day gifts for him, valentines day, vintage, valentines crafts, wedding, wedding dresses, wedding hair, wedding rings, wedding ideas, xmas, x, xmas crafts, xmas decorations, x rated, yoga, yoga poses, yoga pants, yellow, yoga workout, zucchini recipes, zucchini, zac efron, zara, zucchini bread"
------------------------------
-<!-- TODO1: proper width -->
-Table 1: Popular queries on Pinterest, showing the 5 search input auto-complete suggestions for each letter of the alphabet.
-Though Pinterest requires users to be logged-in, this list does not appear to be personalized: the same list was derived when I asked other users to run the collection code.
-<!-- TODO1: proper table number-->
+-------------------------------------------------------------------------------
+appetizers, art, ab workout, animals, apartment decorating, appetizers, art,
+ab workout, animals, apartment decorating, christmas, christmas decorations,
+chicken recipes, crockpot recipes, christmas crafts, diy, dinner recipes,
+dresses, desserts, disney, easter, engagement rings, elf on the shelf ideas,
+eye makeup, easter crafts, food, fashion, funny, funny quotes, fall, garden,
+gift ideas, gluten free, girls bedroom, gardening, hair styles, hair, healthy
+recipes, halloween costumes, halloween, inspirational quotes, interior design,
+ikea, i love you, italy, jewelry, jennifer lawrence, jello shots, jeans, jokes,
+kitchen, kitchen ideas, kids crafts, kitchen decor, kids, love quotes, love,
+living room, long hair, lingerie, makeup, medium hair styles for women, mothers
+day, mothers day gifts, master bedroom, nail art, nails, nail designs, nail art
+designs, nail art for short nails, ombre hair, organization, organization tips,
+outfits, organizing, prom dresses, pregnancy, prom hair, paleo, puppies, quotes,
+quinoa, quinoa recipes, quilts, quotes about change, recipes, red hair, rings,
+relationship quotes, rustic wedding, spring fashion, shoes, short hair styles
+for women, short hair, sexy, tattoos, thanksgiving, tattoo ideas, thanksgiving
+recipes, travel, updos, updo hairstyles, ugly christmas sweater, updos for
+medium length hair, valentines ideas, valentines day gifts for him, valentines
+day, vintage, valentines crafts, wedding, wedding dresses, wedding hair,
+wedding rings, wedding ideas, xmas, x, xmas crafts, xmas decorations, x rated,
+yoga, yoga poses, yoga pants, yellow, yoga workout, zucchini recipes, zucchini,
+zac efron, zara, zucchini bread
+
+-------------------------------------------------------------------------------
+Table: Popular queries on Pinterest, showing the 5 search input auto-complete suggestions for each letter of the alphabet. Though Pinterest requires users to be logged-in, this list does not appear to be personalized: the same list was derived when I asked other users to run the collection code. \label{pop_pinterest}
 
 #### Baseline
 
-The baseline for the system will be a basic unigram model, with the query likelihood based on the terms of a document's title and user description, and smoothed against the collection likelihood with linear smoothing (i.e. _Jelinek-Mercer_).
+The baseline for the system will be a unigram language model, with the query likelihood based on the terms of a document's title and user description, and smoothed against the collection likelihood with linear smoothing (i.e. _Jelinek-Mercer_).
 
 Fundamentally, the language modelling approach assumes each document as a generative model, and estimates the probability of any given document $d$ generating a query $q$.
 
 The unigram model makes a couple of simplifying assumptions. 
-First, it assumes that the query-independent probability of a document being relevant, $P(d)$, is constant, meaning it does not affect ranking and can effectively be ignored.
+First, it assumes that the query-independent probability of a document being relevant, $P(d)$, is uniform, meaning it does not affect ranking and can effectively be ignored.
 Also removing the document-independent query constant, it means that
 
-$P(d|q)\propto(P(q|d))$, <!--TODO1: unfinished-->
+$P(d|q)\propto(P(q|d))$, 
 
 leaving our estimate in the hands of P(q|d).
 The second assumption for the unigram model is that the probability of a document generating a query is the joint probability of each term in the query occurring in the document.
@@ -329,14 +350,14 @@ Thus,
 $P(q|d)=\prod\limits_{i=1}^n P(q_i|d)$.
 
 This assumes a conditional independence between terms.
-However, taking a maximum likelihood estimate for $P(q_i|d)$--- dividing term $q_i$'s occurrences in document $d$ by the sum of all terms---suffers some problems.
+However, taking a maximum likelihood estimate for $P(q_i|d)$---dividing term $q_i$'s occurrences in document $d$ by the sum of all terms---suffers from some problems.
 First, it heavily punishes documents where a word has not occurred, over-emphasizing seen words in the document's language model.
 Secondly, it fails to account for the general likelihood of a word occurring in the language.
-Thus, we smooth between the query term in the document's language model and its probability in the collections language model ($P(q_i)C)$).
+Thus, we smooth between the query term in the document's language model and its probability in the collections language model ($P(q_i|C)$).
 Smoothing not only de-emphasizes seen words, but also reduces the discriminatory power of common words, akin to the TF-IDF intuition[@zhai_study_2001].
 
 The baseline in this study will use linear smoothing between the two forms of evidence.
-With $\lambda=0.75$ chosen based on a reading of @zhai_study_2001's evaluation of linear smoothing performance,
+With $\lambda=0.75$ chosen based on a reading of @zhai_study_2001's evaluation of linear smoothing performance, the baseline will use the following estimation of $P(q_i|d)$:
 
 $P(q_i|d)=(1-\lambda)P(q_i|d)+\lambda P(w|C)$.
 
