@@ -457,19 +457,24 @@
   }
 \newcommand{\sectiontitlefont}{\Large} %% (SR)
 \newcommand{\subsectiontitlefont}{\large} %% (SR)
-\newcommand{\subsubsectiontitlefont}{\normalsize} %% (SR)
-\renewcommand\section{\@startsection {section}{1}{\z@}%
+\newcommand{\subsubsectiontitlefont}{\normalsize\bf} %% (PO)
+\newcommand{\subsubsubsectiontitlefont}{\normalsize\sc} %% (PO)
+\renewcommand\section{\@startsection{section}{1}{\z@}%
   {-3.5ex \@plus -1ex \@minus -.2ex}%
-  {2.3ex \@plus.2ex}%
+  {2.3ex \@plus .2ex}%
   {\singlespacing\raggedright\normalfont\sectiontitlefont}} %% (SR)
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
   {-3.25ex\@plus -1ex \@minus -.2ex}%
   {1.5ex \@plus .2ex}%
   {\singlespacing\raggedright\normalfont\subsectiontitlefont}} %% (SR)
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {-3.25ex \@plus -1ex \@minus -.2ex}%
   {1.5ex \@plus .2ex}%
   {\singlespacing\raggedright\normalfont\subsubsectiontitlefont}} %% (SR)
+%\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+%  {-3.25ex\@plus -1ex \@minus -.2ex}%
+%  {1.5ex \@plus .2ex}%
+%  {\singlespacing\raggedright\normalfont\subsubsectiontitlefont}} %% (SR)
 \let\thesis@appendix\appendix
 \renewcommand\appendix{\thesis@appendix\@ifstar{\gdef\thechapter{}}{}}
 \renewcommand\bibname{\if@mixc@sech@p References\else REFERENCES\fi} %% JSC

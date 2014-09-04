@@ -10,7 +10,7 @@ However, when using crowd contributions to inform an algorithmic system, as in i
 In the first of two research chapters, the proposed dissertation will investigate how the design of crowdsourcing tasks for collecting useful metadata for information retrieval metadata affects the quality of the content.
 
 In a controlled set up, crowdsourcing in information retrieval usually follows a typical design: a task, description, and a set of one or more documents that are reacted to.
-This type of design is common for creating custom evaluation datasets through relevance judgments [@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [<!--TODO1 cite twitter, others -->].
+This type of design is common for creating custom evaluation datasets through relevance judgments [@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [e.g. @chen_improving_2013].
 <!-- Removed: Some exceptions to this approach have been attempted with success[].-->
 
 Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @organisciak_evaluating_2012; @howe_crowdsourcing_2008; @organisciak_incidental_2013].
@@ -67,7 +67,7 @@ Task design has been noted on multiple occasions as an intuitively important con
 Crowdsourcing is increasingly being used for information retrieval.
 Particularly, the on-demand nature of paid crowdsourcing is being embraced for uses such as relevance judgments [@alonso_crowdsourcing_2008], to describing queries [@chen_improving_2013], and to annotating entities [@finin_annotating_2010].
 
-<!-- To cite: post-mortems of failed sites -->
+<!-- TODO2 To cite: post-mortems of failed sites -->
 
 Particularly, my past doctoral-level research motivates this chapter, suggesting the importance of the problem and making this study a logical extension of my doctoral work.
 
@@ -169,7 +169,7 @@ While the average worker could be expect to give a rating of 2.52 stars, the sta
 In contrast, the workers that were asked to explain their rating tempered their opinions more.
 The distribution of average ratings of individuals was normal ($p=0.9644$,Shapiro-Wilk) about a mean of 2.68 with a much lower standard deviation of 0.47.
 
-![A comparison of raters' average ratings of salt shaker preferences, when only asked for a preference rating (above) and when also asked to explain the reason for their rating (below)](images/why-dist.png)
+![A comparison of raters' average ratings of salt shaker preferences, when only asked for a preference rating (above) and when also asked to explain the reason for their rating (below)](images/why-dist300DPI.png)
 
 It is clear that workers in the set with more introspection performed work differently.
 However, their contributions were also not markedly different in reliability when compared against an internal consistency test, averaging a difference of 0.33 stars when asked to rate the same item, versus an average difference of 0.39 stars.
@@ -180,12 +180,12 @@ They also show that simply scaling a task to take more time does not provide cor
 
 <!--### Motivating and related work
 
- <!--TODO1: lots of lit review here!!
+ <!--TODO2: lots of lit review here!!
 
 __Notes__
 
  * On-demand data collection for IR in increasingly common
- * Others have warned that design plays an important role (e.g. Alonso and Lease, Howe, others) <!--TODO1
+ * Others have warned that design plays an important role (e.g. Alonso and Lease, Howe, others)
    * That being said research on the area of design is sparse
      * TREC track? 
      * Research on Games with a Purpose is the exception
@@ -199,7 +199,7 @@ to financial means.
 However, it is easier to control for because it sidesteps much of the complexities of motivation.
 Information retrieval researchers are using the predictability of paid crowd markets like Amazon's Mechanical Turk to generate on-demand data, making design for those systems important.
 
-## Design
+## Approach 
 
 In this chapter, I will investigate the effect of different parameterizations of a microblogging encoding task.
 
@@ -230,16 +230,14 @@ The task will be a topic identification task:
 Workers are shown a tweet that contains the terms of a query, $Q$, where $Q$ represents an extracted entity.
 Their task will be to describe whether the entity is the topic of the tweet, or simply mentioned.
 
-
 Such a task is useful, but potentially easy to misinterpret by contributors conflating a term being the topic of a tweet with merely being mentioned in the tweet.
 
 <!-- TODO2: Is there research around the topic - primary, tertiary in a sentence -->
-To keep focused, all designs will collect this topic identification tasks.
 
 <!--
-For example, ... <!-- TODO1 use Obama examples... -->
+For example, ... TODO2 use Obama examples...
 <!--
-__TODO1: remove below task__, but first it's worth considering what do do with it. I like it.
+__TODO2: remove below task__, but first it's worth considering what do do with it. I like it.
 
 The second task will be a summarization task:
  "Find the most self-explanatory tweet from Set A"
@@ -365,9 +363,10 @@ How would the contribution change if:
 - Contributors were told when they got something wrong? What if you lie to them?
 
 Some of these ideas of exciting, others are unfeasible.
-Designs to encourage longer engagement from individuals do not appear to be a promising direction.
+Designs to encourage longer-term engagement from individuals do not appear to be a promising direction.
 Worker experience was previously measured [@organisciak_evaluating_2012] and found to not be significant for simple tasks.
 Other areas are already well-tread. The effect of incentive structures, payment and bonuses, has been studied frequently, notably by @mason_financial_2010. 
+With regards to designs that mislead workers about their performance, there are ethical and trust issues that limit such an approach, in addition to the warning by @kraut_building_2011 that feedback is only effective when contributors believe it is sincere.
 
 ### Proposed designs
 So what tweaks will this study measure?
@@ -392,11 +391,11 @@ An example will be included with the description, but as a pop up window behind 
 This is done to conform to the convention that instructions should not be too long, in order not to push the actual action items 'below the fold'.
 Amazon's own advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011]. <!--\_-->
 
-TODO1
+<!--TODO2
 
  * Example of item and options
  * Mockup of interface
-
+-->
 <!--TODOAFTER
 
  * Write description
@@ -409,16 +408,14 @@ As they complete the tasks, their answers are evaluated against a gold standard 
 Incorrect answers will also be given an explanation of why the actual answer is correct.
 
 <!-- TODO2 Justification for this design: who else has done it? 
-
 Ask Mike, possible Jaime for advice, my lit review is failing.
-
 -->
 
-The training tasks will hand-designed, based on a random sample of items.
+The training tasks will be hand-designed, based on a random sample of items.
 
-TODO1
+<!--TODO2
 
- * Add figure of mockup
+ * Add figure of mockup -->
 
 #### Feedback Interface
 
@@ -429,38 +426,39 @@ Starting with the second task, however, the top of the interface will tell users
  * Their estimated performance, in terms of agreement with other workers.
  * A visualization of where they fall in the distribution of all workers, from best performing to worst, 
 
-![Example of showing feedback to workers](images/why-dist.png)
+![Example of showing feedback to workers](images/comparison-of-average-ratings.png)
 
 Since the interaction of this interface truly begins on the second task, evaluation of this interface will also focus on users returning after their first task.
 
+@mccreadie_crowdsourcing_2011 attempted a similar approach, where contributors were shown a sidebar color-coding all their contributions based on their agreement with other raters and the authors.
+Showing this information with such granularity encourages workers to go back to reconsider debated answers, whereas this study's take tries to encourage more care and competition moving forward.
+
 <!--TODO2
+ * email McCreadie about permission to include figure
  * Add mockup figure
  * Calculate stats for another dataset on what percentage of contributions are not the first task done by a user.
--->
 
-<!--
-##### Rough Notes
+Rough Notes
 
 If you're doing voting, then a score is possible based on agreement with other workers:
 ^Score=Avg. StdDev from Mean of Ratings 
-$TODO1$
-TODO1 -->
+-->
 
 
 #### Time-Limited Interface
 
-As hinted at during work on (<!--TODO1 CITE MSR, DH -->), not all crowdsourcing contribution cases require more focus:
-sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
+As hinted at during my past work, not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
 
 In contrast to the training and feedback interfaces, which will serve to slow down workers and make them more focused on their contributions, the final data collection interface will pursue the opposite approach.
 The time-limited interface encourages quicker interactions by giving users a timer to complete all tasks.
 
-This approach has been previously used in (<!--TODO1 cite-->) to push people into a visceral form of task completion.
+It is important not to distress the worker when trying to push them into a visceral form of task completion, as this might have the opposite effect.
+Instead, this design should encourage flow, where a user moves seamlessly through the tasks without over-thinking their answers.
+To avoid the potentially distress of thinking about what is to come, this interface will not show a list of tasks to complete (e.g. "complete these ten tasks in a minute").
+Instead, tasks will be shown one at a time (e.g."See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers.
 
 <!--
-TODO1
- 
- * Cite Kahneman & Tversky
+TODO2
  * To explain: how does the timer cut off slow workers? (With bonuses that are only given per item of task-set finished within time limit)
  * What is the time limit? This needs to be measured to determine a good value
  * Add mockup of interface-->
@@ -472,7 +470,7 @@ TODO1
 
 The experiments in this study will be run in a naturalistic setting: running directly on a paid crowdsourcing platform, Amazon Mechanical Turk, with real workers.
 There are trade-offs to this setting.
-It is easy to intrumentalize and properly captures the actual skills and attentiveness of paid crowd workers.
+It is easy to instrumentalize and properly captures the actual skills and attentiveness of paid crowd workers.
 However, working within the conventions of the system means that some parts cannot be controlled.
 For example, workers cannot be forced to perform multiple tasks, simply encouraged to do so.
 Also, the actual user pools testing the different interfaces are not necessarily the same individuals.
@@ -488,7 +486,7 @@ The baseline for evaluation is the performance of workers on the basic contribut
 
 #### Measurement
 
-##### Primary questions
+Primary questions
 
  * Quantitative
    * What is the mean agreement between workers encoding the same tweet?
@@ -499,7 +497,7 @@ The baseline for evaluation is the performance of workers on the basic contribut
    * User feedback: all tasks will include optional feedback forms.
      This will include an free-text field for any communication that workers may want to pass on, and a Likert scale question on how interesting the task was.
 
-##### Secondary questions 
+Secondary questions
 
  * What is the mean time a worker spends on their first task set? What is the amount of time workers spend on ten task sets?
  * What is the mean number of task sets that workers perform?

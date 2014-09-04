@@ -1,6 +1,8 @@
 Modeling user-contributed document metadata
 ==================================================================
 
+## Introduction
+
 While on-demand collection of document metadata through crowdsourcing can be invaluable in controlled circumstances, there are cases where either
  the data is already collected, or 
  where there is a limit to the amount of control a system designer can exert over contributors before discouraging them.
@@ -22,12 +24,11 @@ The research performed in @organisciak_evaluating_2012 sheds light on a particul
 We studied time, experience, and agreement as indicators of the quality of contributions for a paid relevance feedback task.
 Answering these questions provided valuable insights into how to treat workers and their data when using paid crowdsourcing for building ground truth datasets.
 However, modeling a crowd contribution is an issue that extends beyond paid ground truth generation.
-Various types of crowdsourcing data have been used for understanding information retrieval documents, including page links[@page_pagerank_1999], micro-blogging discussion of the documents[@dong_time_2010], social tags[@lamere_social_2008], opinion ratings (<!--TODO1 cite-->), and implicit relevance feedback[@agichtein_improving_2006].
+Various types of crowdsourcing data have been used for understanding information retrieval documents, including page links[@page_pagerank_1999], microblogging discussion of the documents[@dong_time_2010], social tags[@lamere_social_2008], <!-- TODO2: having trouble finding reasearch for this, but there has to be something out there about using "opinion ratings" in IR--> and implicit relevance feedback[@agichtein_improving_2006].
 On contribution-heavy Pinterest, this study will look at how curated lists can expand a system's language model of the typically text-sparse Pinterest documents.
 Equally interesting, it will provide us an opportunity to look at where crowdsourcing information fails, perhaps due to unexpected patterns of contribution or misuse of the system.
 
-<!--
-Below, I review how various forms of crowd contributions have been used for information retrieval, and propose additional research on a normalizing contributions in a volunteer crowdsourcing system<!--TODO1 change this sentence after the lit review, to say *why* rather than to say I 'will justify'-->
+In this chapter, I will review how various forms of crowd contributions have been used for information retrieval and other modelling uses, focusing on both volunteer and paid contributions and grounded by a study on Pinterest information retrieval.
 
 ## Scope
 
@@ -42,7 +43,7 @@ Others have looked at similar situations of consensus-making among experts [@wal
 Secondly, there is an appeal to pursuing realistic contexts. 
 In a production information retrieval context, it is more common to design around user needs, leaving the system designer to use the data for retrieval as it comes in.
 
-## Problem
+## Motivation 
 
 How do you model a collection of loosely-structured and subjective human contributions into a normative crowd opinion, one that can be used to describe objects in a corpus?
 
@@ -50,6 +51,8 @@ It is common to see differences in the habits of contributors that are trying to
 Many tasks that assume an objective, correct contribution are nonetheless are subject to interpretation, especially in volunteered contributions where detailed codebooks are deterrents to casual contributions.
 Likewise, even when a task is subjective, where a contribution is understood to be related to each individual's tastes and opinion, there are still problems of reliability beyond differences of opinion.
 One person's definition of a 3-star opinion judgment or their threshold for what is needed to click an approving 'thumbs up' button might be different from another person's, even if their underlying opinions are identical.
+
+Speaking about tagging in the context of information retrieval, @zhou_exploring_2008 warn that "a tag represents an abstract of the document from a _single_ perspective of a _single_ user."
 
 <!--## Subjective vs. Objective Assumptions-->
 
@@ -70,14 +73,10 @@ This is the _Beatles_ option: even if you admit, rightly, that the context is hi
 In a context like Pinterest, users might search for terms that do not have a single right answer, but rather one that is interpreted or negotiated.
 When a user searches for 'rustic wedding' or 'cute dress', it is difficult to infer what their interpretation of 'rustic' is or what they find to be 'cute' what they consider 'rustic' or 'cute' without knowing anything about the user.
 
-It is this latter approach to representing subjective aspects of document, to seek consensus among many individual <!--TODO1-->
-
-<!-- TODO1: something's missing. More literature from IR? -->
+It is this latter approach to representing subjective aspects of document, to seek consensus among many individuals, which is the focus of this study.
+When using crowdsourced information to inform a general understanding of a document, how do you model the variety of interpretations and what are the pitfalls to avoid?
 
 <!--Much work has been completed in posterior corrections for paid crowdsourcing contributions.-->
-
-<!--The research covered in this-->
-
 <!--## Measuring Reliability of Human Raters
 
 Before performing the study on Pinterest, I the first part of this chapter will outline the work previously completed by @organisciak_evaluating_2012.
@@ -86,13 +85,9 @@ Does the amount of time spent on a contribution correlate to a good or bad task?
 Does the experience of a contributor, either on the task in general or responding to the specific query, reflect the quality of their contributions?
 Can agreement with other contributors be used to measure and potentially correct for quality differences?
 
-, which is already discussed above.
-
 A few additional questions need to be asked for discussion in the context of the proposed dissertation.
 One form of analysis that would be useful but was not originally done is to compare the recoverable signal from artificially smaller contributor groups.
 If data collection had been cut off earlier, how accurate would the various methods for correcting against a worker's reliability be?
-
-TODO2: need treatment of that study
 
 -->
 
@@ -187,39 +182,26 @@ This work approaches $P(q|d)$ as an estimate that may be improved by user-contri
 
 #### P(q|d)
 
-Most basically, $P(q|d)$ starts with a maximum likelihood estimate of all the query terms occurring in the user's pin: $P(t|d)$.
-
-$P(q|b)$ - The likelihood that the member board would have created the query
-
-$P(q|C)$ - Collection likelihood
-
-T = bag of unigrams from 
-
-<!-- TODO1 describe interpolation -->
+Most basically, $P(q|d)$ starts with a maximum likelihood estimate of all the query terms occurring in the user's pin: $P_{ml}(t_i|d)$, where $P(q|d)=\prod_{i=1}^{|q|}{P(t_i|d)}$.
 
 In this study's approach, we assume that co-occurring pins in lists and other users' pins of the same source content represent additional interpretations of the pin's aboutness.
-By interpolating a pin's language model with models provided by other documents and users, probability mass is dispersed among different 'interpretations' of the aboutness of the document.
-Conceptually, this treatment of multiple subjective interpretations loosens the assumptions of language modeling.
-However, functionally it is the same as treating a language model as an objective but latent generative model without different probabilities assigned for different term occurrences.
+This will inform a model for boards, $P(t_i|b)$, which can be used as a fallback model, as well as a language model of other user's saves of the same document, $P(t_i|D)$.
+Thus, $P_{ml}(t|d)$ provides an estimate on seen words, but smoothing against $P(t_i|b)$ and $P(t_i|D)$ adds information on unseen but potentially likely words, and smoothing against the collection model provides general insight on term probabilities across the Pinterest corpus.
+These will be incorporated into a document's language model used the cluster approach seen in @liu_cluster-based_2004.
+
+By smoothing a pin's language model with models provided by other documents and users, probability mass is dispersed among different interpretations of the aboutness of the document.
+This treatment of multiple subjective interpretations loosens the assumptions of language modeling.
+However, functionally it is the same as treating a language model as an objective but latent generative model with different probabilities assigned for different term occurrences.
 
 There are some added complexities that will need to be considered while this study is being conducted.
 One is the proper weights to apply to interpolation: what type of smoothing is necessary between different models?
 This study will evaluate educated guesses based on work performed by @zhai_study_2001, and decide on whether an genetic parameter-learning algorithm is necessary.
 
-Two other issues that may need to be considered are occasions when there is an absence of other information, perhaps when a pin is alone in its board and nobody else has saved the same source item, 
+Two other issues that may need to be considered are occasions when there is an absence of other information, perhaps when a pin is alone in its board and nobody else has saved the same source item.
+In instances like this, it is important not to overly rely on a single user's interpretation, since taken alone it is a biases description.
 
-<!-- TODO1: section not done -->
-<!--
-#### P(d)
-
-One potential problem of this evidence is that is biases 
-
-<!-- TODO1 keep going
-
-As an additionally model, P(d) will be modelled
-
-<!--TODO1: Related works: delicious tags-->
-
+As described earlier in the literature review, this approaches closest parallel is in research on retrieval over folksonomies [e.g. @zhou_exploring_2008; @bao_optimizing_2007
+; @hotho_information_2006; @bischoff_can_2008].
 
 ### Data Collection
 
@@ -240,12 +222,13 @@ Pins: 207.5m 	8300 packages of 25k pins -->
 This is a very large amount of data, and a bottleneck that is likely not necessary for this study. Instead, a smaller sample will be collected with the following sampling strategy:
 
  1. A sample of boards is randomly selected
- 2. All pins that belong to the board sample are collected <!-- TODO1: What about other people's pins for the identical product? -->
- 3. User data for the sample board creators is collected
- 4. A second sample of boards is collected, with all the boards that the sampled pins belong to
+ 2. All pins that belong to the board sample are collected
+ 3. All pins that save the same source images are collected
+ 4. User data for the creators of the sampled boards is collected
+ 5. A second sample of boards is collected, with all the boards that the sampled pins belong to
 
 The exact size of the sample will be determined once I start collecting data.
-As a general rule, I would like to collect as much data as possible, while staying within a manageable file size and collection duration.
+As a general rule, I would like to collect as much data as possible, while staying within a manageable file size and crawling timeline. 
 
 ### Evaluation
 
@@ -300,9 +283,10 @@ To shift the sample away from the head of the distribution, the sampling frame w
 
 [^twoletter]: Using the frequencies calculated by @norvig_english_, these are: TH, OF, AN, IN, TO, CO, RE, BE, FO, PR, WH, HA, MA, WI, HE, IS, NO, WA, ON, DE, ST, SE, AS, IT, CA, HI, SO, WE, AR, DI, MO, AL, SU, PA, FR, ME, OR, SH, LI, CH, WO, PO, EX, BY, AT, FI, PE, BU, LA, NE, UN, LE, SA, TR, HO, YO, LO, DO, FA, SI, GR, EN, AC, MI, TE, BO, BA, GO, SP, OU, PL, EV, AB, TA, RA, US, BR, CL, DA, GE, TI, FE, AD, MU, IM, AP, RO, NA, SC, PU, EA, CR, VI, CE, OT, AM, AG, UP, RI, VE.
 
-It is likely that Pinterest's own retrieval model incorporates additional implicit feedback from users in the form of click-through data.
-This is a useful indicator of a item's quality <!--TODO1: this section looks old-->
 For each query, a description of what constitute the different levels of relevance will be written by myself, and the relevance of the first one hundred results will be rated by paid workers on a graded relevance scale.
+
+It is likely that Pinterest's own retrieval model incorporates additional implicit feedback from users in the form of click-through data.
+This is a useful indicator of a item's quality, itself a form of crowd-contributed retrieval evidence, but is well-studied and too removed from the scope of this study to undertake.
 
 -------------------------------------------------------------------------------
 appetizers, art, ab workout, animals, apartment decorating, appetizers, art,
@@ -387,7 +371,7 @@ We hypothesize that as crowdsourcing systems grow in size, their contributions a
 This question is related to the research questions of the proposed dissertation and this chapter, and will be useful to consider it.
 
 - Directionality of influence
-  - IF structure is being solidified: why is it being systematized?
+  - _If_ structure is being solidified: why is it being systematized?
 - Contribution attrition 
 - Simplicity vs. Hand-holding
 
@@ -400,6 +384,8 @@ For example, after a recommendation in 2006, editors began insisting on well-sou
 The structure has also enabled efforts such as DBPedia, structured data representing the entities in Wikipedia pages.
 It has also informed information retrieval approaches to understanding entities beyond a query, such as with Google's Knowledge Graph and Microsoft's Satori.
 
-### Conclusions
+## Conclusion
 
-Many crowdsourcing contributions are <!-- TODO1 -->
+Descriptive crowdsourcing provides metadata about information objects that has the potential to increase our computation models of them.
+However, crowds are human, biased in hard to predict ways.
+This chapter considers the issues involved in modelling crowd contributions, centered around an information retrieval study on Pinterest.

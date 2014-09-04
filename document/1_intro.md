@@ -50,9 +50,9 @@ When discussing the processes of humans --and only when doing so-- this study ma
 
 ### Approach
 
-The study collecting and modeling document metadata through crowdsourcing will be done in two different sites of crowdsourcing:
+The study of collecting and modeling document metadata through crowdsourcing will be done in two different sites of crowdsourcing:
 
- * in the design of contribution tasks in order to minimize variance, and
+ * in the design of effective contribution tasks, and
  * in modeling normative meaning of contributions after they have already been collected.
 
 Doing so will both adopt work that I have performed during my doctoral studies and contribute new research.
@@ -69,8 +69,8 @@ Both studies stay true to the assumption of honest-but-biased workers, focusing 
 
 A reader of the proposed dissertation will understand:
 
- * the issues related to using crowdsourcing contributions for information retrieval indexing;
- * the effect of designing crowdsourcing collection tasks that encourage quicker or slower contributions on a paid crowdsourcing platform, with a sense of how this information generalizes to different tasks or collection spaces;
+ * the issues related to using crowdsourcing contributions for improving document metadata, particularly for information retrieval indexing;
+ * the effect of different designs of crowdsourcing collection tasks on the resulting reliability and consistency of the collected data, particularly designs that train workers, give them feedback, or hurry them;
  * ways to use loosely-structured crowd contributions for retrieval, particularly user curated lists; and
  * the tractability of making an assumption of honest-but-biased contributors.
 
@@ -93,7 +93,6 @@ Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds
 The growth of digital collections has outpaced the ability to comprehensively clean, transcribe, and annotate the data.
 Similar roadblocks are affecting born-digital information, where the rapid creation of documents often follows from passive or unrestricted forms of creation.
 The lack of strong descriptive metadata poses an obstacle for information retrieval, which must infer the aboutness of a document in order to surface it for an interested user.
-<!-- TODO1: there should a good citation on this somewhere... -->
 Crowdsourcing is increasing being used to address this problem.
 
 Many of the benefits of crowdsourcing follow from the fact that humans approach tasks in qualitative and abstract ways that are difficult to emulate algorithmically.
@@ -135,7 +134,6 @@ Whereas much research has looked at the fourth problem, when the contributors ar
 ### Assumption of Honesty
 
 Much crowdsourcing research makes an adversarial assumption, focusing on removing variability by detecting or smoothing over cheaters.
-
 For example, @eickhoff_increasing_2012 note that a significant proportion of Mechanical Turk workers sacrifice correctness for speed, in order to maximise their profits.
 
 However, 'sacrificing quality for speed' is not always the case. <!--While observable in some cases[], including suspicious behaviors that we observed during @organisciak_personalized_2013, other studies on contribution conflict it.-->
@@ -162,25 +160,25 @@ Perhaps it is because participants in crowdsourcing are more abstract than a loc
 ### Intercoder reliability
 
 In crowdsourcing, increasing intercoder reliability is sometimes at odds with the collection strategy.
-The most effective crowdsourcing deals with large numbers of people, and part of maximizing the involvement of contributors, especially those which are volunteers, is to minimize the restrictions on a contribution. <!-- TODO1 back up w/ references -->
+The most effective crowdsourcing deals with large numbers of people, and part of maximizing the involvement of contributors, especially those which are volunteers, is to minimize the restrictions on a contribution.
 To enforce a strong coding scheme or training contributors will reduce the number of individuals willing to perform the task.
 Whether the improvements in quality are worth the losses in contributions will be looked at in the first chapter of new research in this dissertation.
 
 Other times, controlling the circumstances under which the contribution is created is not possible, such as in information retrieval over web documents.
-The second chapter of new research will look at such a case: how can you make sense of existing data that appears to have low intercoder reliability?
+<!--The second chapter of new research will look at such a case: how can you make sense of already-collected contribution data-->
 For tasks where the contribution is numeric and ordinally or continuously coded, methods exist for interpreting when coders are similar but operating with different frame.
 These include using covariation instead of agreement [@neuendorf_content_2002], and normalizing by a user mean [@hofmann_latent_2004; @bell_bellkor_2008].
+A later chapter of the proposed dissertation will look at modeling sparse textual data on the crowdsourced website Pinterest, by smoothing -- among other approaches --document models against other users' 'interpretations' of the same items.
 
+<!--
 Also, in a traditional setting such as that seen in cataloguing, few coders are making many contributions with a strong overlap between them.
 In contrast, crowdsourcing deals with many contributors submitting generally few contributions and with little overlap.
 In instances of paid crowdsourcing, there is more control over the way that contributions are made, but since contributors are usually self-selected, it is still possible to run into fatigue, misunderstanding, or inattentiveness.
+-->
 
-### Contributor variance
+### Contribution variance
 
-#### Subjective Versus Objective Tasks
-
-The variance that exists between different contributors adds noise both to tasks that make a subjective assumption and tasks that make an objective assumption.
-<!--TODO1: Haven't really made a case for "the variance that exists"-->
+Variance that exists between different contributors adds noise both to tasks that make a subjective assumption and tasks that make an objective assumption.
 
 In subjective tasks, it is assumed that there is no universally correct form of contribution.
 For example, when crowd contributions are used to inform recommendations, such as for music or film, it often assumed that different types of people enjoy different products.
@@ -189,9 +187,6 @@ In such a case, inter-rater consistency is still important, to make it possible 
 Modern approaches to collaborative filtering commonly normalize ratings against
  a user-specific bias (i.e. "how does this rating compare this user's average rating") and sometimes against 
  an item-specific bias (i.e. "how does this rating compare to what the rest of the community thinks about the item").
-<!--TODO1 cite cf normalization-->
-
-#### Manifest Versus Latent Content
 
 For objective tasks, @neuendorf_content_2002 differentiates between two types: manifest and latent.
 
@@ -204,18 +199,16 @@ As @neuendorf_content_2002 notes, "objectivity is a much tougher criterion to ac
 
 ### Benefits of Recovering Error from Crowd Contributions 
 
-Why standardize crowdsourcing collection?
+Why try to account for human error in crowdsourcing collection?
 With large enough numbers, it doesn't matter.
 Problems of user quality get smoothed over when enough honest people collaborate, while problems stemming from perception biases in many cases will converge on the normative understanding of the task. 
 However, by recovering a cleaner signal from human contributions, a system is reliant on less workers.
 Doing so thus helps keep system less affected by the ebbs and flows of motivating volunteers, or the costs of paying workers.
-Since the attention that contributors is not uniform across all items in a system, usually resembling an inverse power-law distribution [<!--TODO1-->], understanding crowdsourced information with less aggregation means more of the middle of the distribution can be represented.
+Since the attention that contributors is not uniform across all items in a system, usually resembling an inverse power-law distribution, understanding crowdsourced information with less aggregation means more of the middle of the distribution can be represented.
 
-In other words, accounting for cognitive bias seeks to make each individual contribution more valuable.
+In other words, accounting for individual biases seeks to make each individual contribution more valuable.
 
 ## Relevance
-
-### Practical application
 
 The contribution of this work is in the application of corrective techniques to the crowd-based encoding of metadata about existing information objects, and the broader understanding of the nature of such contributions.
 
@@ -245,7 +238,7 @@ Similarly, cultural heritage collections have reported past success in using cro
 For example, after a pilot partnership with Flickr, the Library of Congress implemented a workflow for review public comments on images for research or information to integrate back into item records [@springer_for_2008].
 
 Crowd curation is just one example of a use of crowdsourcing to create information.
-Table 1<!--TODO1 doublecheck numbering--> shows a number of different actions that have been observed for collecting descriptive metadata.<!--TODO1... name other examples -->
+Table \ref{crowd_actions} shows a number of different actions that have been observed for collecting descriptive metadata.
 
 While crowdsourcing has shown itself as a useful method for enriching information objects, there remains the question of how the method of collection affects the way the data can be used.
 Contributors are self-selected and often without verified reliability, training or expertise.
@@ -273,12 +266,7 @@ Classification / Curation    tagging (e.g. Delicious), labeling, adding to lists
 
 --------------------------------------------------------------------------------------------
 
-_Table 1: Types of actions seen in descriptive crowdsourcing_ 
-<!-- TODO1: format properly; 
-	   Change examples to focus on information science or library examples;
-           note that this was originally observed for incidental crowdsourcing paper 
--->
-
+_Table: Types of actions seen in descriptive crowdsourcing_ \label{crowd_actions}
 
 --------------------------------------------------------------------------------------------
      Action              User Use                        System Use
@@ -316,11 +304,11 @@ _Table 2: Chart comparing user and system uses for a selection of incidental cro
 
 <!-- TODO1 relevance in IR section -->
 
-## Definitions and important distinctions
+## Definitions
 
 Before proceeding, the terminology of this study should be established. As this work spans multiple domains, and makes reference to recently introduced concepts, it is important to establish a shared understanding of language within these pages.
 
-Note that the treatment here is cursory; a more in-depth look can be found in Chapter 2.
+Note that the treatment here is cursory; a more in-depth look can be found in the literature review.
 
 ### Descriptive crowdsourcing
 This paper focuses on crowdsourcing for descriptive metadata.
@@ -334,7 +322,7 @@ One example of this is T-shirt design contests on Threadless[^1].
 
 [^1]: http://www.threadless.com
 
-This approach to crowdsourcing was looked at in  @organisciak_incidental_2013 when defining the concept of _incidental crowdsourcing_.
+This approach to crowdsourcing was looked at in @organisciak_incidental_2013 when defining the concept of _incidental crowdsourcing_.
 Incidental crowdsourcing is an approach to crowdsourcing that is unobtrusive and non-critical.
 This form of peripheral collection of data was noted to favour descriptive activities. 
 
@@ -349,7 +337,7 @@ Likewise, while a notable portion of crowdsourcing tasks are creative, such as w
 
 The space of crowdsourcing is large and the incentives for contributors are varied. 
 The most significant distinction within crowdsourcing is in comparing uses that pay their contributors and those that do not.
-It's valuable to make this distinction because paying a person changes they way that they perform (<!-- TODO1 cite-->), while also simplifying some of the concerns that are necessary in retaining volunteers.
+It's valuable to make this distinction because paying a person changes they way that they perform, while also simplifying some of the concerns that are necessary in retaining volunteers.
 
 In general, I refer to crowd individuals as _contributors_.
 When the distinction is necessary, paid contributors are referred to as _workers_, while elective contributions are made by _volunteers_.
@@ -367,25 +355,33 @@ Subsequently, the assumption of honest but biased contributors will be outlined,
 #### Literature review
 
 The literation review will serve as a comprehensive review of the field around the research.
-It consist of the following sections, some of which have already been performed for this proposal:
-* define all the necessary concepts in crowdsourcing and provide their history,
-* provide an extensive taxonomy of crowdsourcing,
-* discuss the existing research into using crowdsourcing information for improving retrieval,
-* discuss the most notable research in library and information science,
-* list the most notable projects to utilize crowdsourcing, and
-* provide a "greatest hits" list crowdsourcing research that any interested reader should be familiar with.
+It consists of the following sections, some of which have already been performed for this proposal:
+ * define all the necessary concepts in crowdsourcing and provide their history,
+ * provide an extensive taxonomy of crowdsourcing,
+ * discuss the existing research into using crowdsourcing information for improving retrieval,
+ * discuss the most notable research in library and information science,
+ * list the most notable projects to utilize crowdsourcing, and
+ * provide a "greatest hits" list crowdsourcing research that any interested reader should be familiar with.
 
-#### Increasing reliability at collection time: the "Design Study"
+#### Collecting crowdsourcing data: the effect of task design on resulting quality
 
 Not all crowdsourcing designs are equal, and the resulting differences in contributions from different designs is an often neglected issue in crowdsourcing.
 The third chapter will look at the ways that task design changes the nature of contributions.
 Focusing on an existing use of crowdsourcing for improving information retrieval -- annotating microblogging messages -- this chapter will run multiple controlled studies with different interface design options.
 
-#### Increasing reliability in collected data: the "Deviation from Expectation Study"
+#### Using crowdsourcing data: modeling documents from crowdsourced information
 
+To complement a treatment on collecting contributions, the fourth chapter considers how to use them.
+This chapter will be structured around an information retrieval study around the website Pinterest.
+Viewed one way, Pinterest is a website of commentary about web images or pages: potentially a trove of additional 'aboutness' information, but sparse and unstructured when viewed as individual contributions.
+In line with where the value of the proposed dissertation lies, the Pinterest study is intended as a foil to the larger discussion of interpreting crowd contributions.
 
 #### Discussion and conclusions
 
+The last chapter of the dissertation will summarize the findings of the previous two chapters, and take a high-level look at descriptive crowdsourcing in information science.
+This chapter will serve as a shorthand reference of the full document, which future readers can consult for the main points.
+Doubtless, there will likely be a number of new research questions which emerge from the proposed dissertation; they will also be collected in the final chapter.
 
+----------
 Details of the proposed study designs for chapters 3 and 4 are provided later in this proposal, and an initial literation review is provided next.
 

@@ -39,6 +39,8 @@ tex: refs
 	pdflatex --include-directory=document thesis.tex
 	biber thesis
 	pdflatex --include-directory=document thesis.tex
+	# Check if I'm using any ill-advised subsubsubheadings
+	# grep -q "#####" document/*md 
 	
 html: refs all.md
 	pandoc $(pandoc_args) -t html --table-of-contents \
