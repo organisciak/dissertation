@@ -1,15 +1,15 @@
 Literature Review
 ===================
 
-Crowdsourcing is a simple concept that has received considerable research attention in the past few years, alongside a realization of the power of the internet for effectively connecting people in great numbers.
+Crowdsourcing is a simple concept that has received considerable research attention in the past few years, alongside a realization of the power of the internet for effectively connecting people in large numbers.
 
-Perhaps unsurprisingly, the concept of crowdsourcing precedes the language that we have developed around it in recent years, and the research in crowdsourcing has not been evenly distributed.
+Perhaps unsurprisingly, the concept of crowdsourcing precedes the language that has developed around it in recent years, and the research in crowdsourcing has been uneven.
 
-In this section, I provide an overview of crowdsourcing and the notable research within it.
+This section provides an initial overview of crowdsourcing and the notable research within it.
 
 ## Definitions and History
 
-Crowdsourcing broadly describes the use of distributed crowds to complete a task that would otherwise have been done by one or a few people.
+Crowdsourcing broadly describes the use of distributed crowds to complete a task that would otherwise be by one or a few people.
 Beneath this large umbrella, there are many concepts that are either in its purview or overlap with it.
 
 ### Crowdsourcing
@@ -19,20 +19,20 @@ It broadly captures the abilities of the internet, as a communications medium, t
 
 Nothing about crowdsourcing is fundamentally tied to the internet.
 It is entirely possible to bring together large groups of people in different ways, but the access and efficiency of the internet is both
-what made the concept seem so novel and what gave it value in the various realms where it was applied. Whereas crowds have long been noted for their collective simplicity [@le_bon_crowd_1896] or irrationality [@mackay_memoirs_1852],
-through the internet one can perform human-specific tasks at a scale usually only seen for computational tasks.
+what makes the concept seem so novel and what gives it value in the various realms where it is applied. Whereas crowds have long been noted for their collective simplicity [@le_bon_crowd_1896] or irrationality [@mackay_memoirs_1852],
+through the internet, one can perform human-specific tasks at a scale usually only seen for computational tasks.
 
-The term is recent and has an unambiguous source, but immediately upon introduction, it was adopted and expanded on through public discourse.
+The term is recent and has an unambiguous source, but immediately upon its introduction, it was adopted and expanded on through public discourse.
 
-The term _crowdsourcing_ was coined in a 2006 Wired article by Jeff Howe [@howe_rise_2006].
+The term _crowdsourcing_ comes from a 2006 Wired article by Jeff Howe [@howe_rise_2006].
 Howe was writing from a labor perspective, looking at online marketplaces for people to solve problems and create content.
 His focus was on systems like InnoCentive, a site for companies to outsource research and development problems for a bounty, and iStockPhoto, a website that allowed amateur photographers to sell their images as stock photos.
 The article briefly looked at user-generated online content, though in the context of television programs that use online video as content.
 
-Despite the somewhat specific initial definition, the term _crowdsourcing_ struck a chord more broadly and was culturally co-opted.
-This happened very quickly: within nine days Howe noted a jump from three Google results to 189,000 [@howe_birth_2006].
+Despite the narrow initial definition, the term _crowdsourcing_ struck a chord more broadly and was culturally co-opted.
+the definitional appropriation happened very quickly: within nine days Howe noted a jump from three Google results to 189,000 [@howe_birth_2006].
 Within a month, Howe addressed the co-opting of the term, "noticing that the word is being used somewhat interchangeably with Yochai Benkler's concept of commons-based peer production" [@howe_crowdsourcing_2006].
-He gives his own definition, but also notes that language is slippery and he's "content to allow the crowd define the term for itself (in no small part because [he's] powerless to stop it.)".
+He gives his definition, but also notes that language is slippery, and he is "content to allow the crowd define the term for itself (in no small part because [he is] powerless to stop it.)."
 
 Thus, crowdsourcing was adopted to refer broadly to a series of related concepts, all related to people being connected online.
 These concepts included
@@ -41,28 +41,28 @@ These concepts included
  commons-based peer production[@benkler_wealth_2006], and
  free and open-source development [@lakhani_how_2003; @raymond_cathedral_1999].
 
-While there have been occasional semantic attempts to redefine crowdsourcing again as a more granular term, its colloquial adoptions seems to have commented its use as a broad concept.
+While there have been occasional semantic attempts to redefine crowdsourcing again as a more granular term, its colloquial adoptions seem to have cemented its use as a broad concept.
 
 ### Wisdom of the Crowds
 
 _The Wisdom of the Crowds_[@surowiecki_wisdom_2004] is a book written by journalist James Surowiecki in 2004.
-The book observes the strength of human decision-making when one in aggregate, and the term 'wisdom of the crowds' has survived the book to refer to cases that make use of this.
+The book observes the strength of human decision-making when done in aggregate, and the term 'wisdom of the crowds' has survived the book to refer to cases that make use of this.
 
 ### Human-Computation
 
 _Human Computation_ emerged from from the doctoral dissertation work by Luis von Ahn in 2005, popularized alongside the ESP Game [@ahn_labeling_2004; @von_ahn_games_2006]. <!--_-->
-It refers to a process of computation -- the "mapping of some input representation to some output representation using an explicit, finite set of instructions" [@law_human_2011] -- performed by humans.
+It refers to the process of computation -- the "mapping of some input representation to some output representation using an explicit, finite set of instructions" [@law_human_2011] -- performed by humans.
 
 In synthesizing the definition of human computation in relation to crowdsourcing, collection intelligence, and social computing, Quinn and Bederson note two characteristics of consensus:
  that "the problems fit the general paradigm of computation, and as such might someday be solvable by computers", and 
  that "the human participation is direction by the computational system or process" [@quinn_human_2011].
 
 As noted by @law_human_2011, Turing defined the purpose of computers as carrying out operations that humans would normally do.
-Human Computation, then, refers to utilizing humans for operations that computers simply are not capable of performed yet.
+Human Computation, then, refers to utilizing humans for operations that computers are not capable of performing yet.
 
 By this definition, much human computation aligns with crowdsourcing, but large swaths of crowdsourcing are not relevant to human computation.
-For example, the types of large creative crowdsourcing projects like T-shirt design website Threadless and online encyclopedia Wikipedia are not human computation.
-Inversely, human computation does not have to sustained by self-selected workers; a more traditionally hired closed system can suffice [@law_human_2011].
+For example, creative crowdsourcing projects like T-shirt design website Threadless and online encyclopedia Wikipedia are not human computation.
+Inversely, human computation does not have to be sustained by self-selected workers; a more traditionally hired closed system can suffice [@law_human_2011].
 
 ### Open-Source
 
@@ -70,11 +70,11 @@ An early model reflecting the properties of crowdsourcing is open source softwar
 
 With open source, software's underlying source code is freely accessible.
 As a consequence of this form of transparency, open-source development began to adopt some unique properties: users and distributed developers could jump into the code to fix a bug, or add a feature that they wanted to see.
-The significance of this became apparent when Linus Torvalds released Linux in 1992 with a development model that accepted external code contributions heartily, released early and often, and followed the pulse of user needs closely.
+The significance of this became apparent when Linus Torvalds released Linux in 1992 with a development model that accepted external code contributions heartily, released early and often, and followed the pulse of user's needs.
 Eric Raymond compared this form of software development to a bazaar, "open to the point of promiscuity", and contrasted it to the traditionally managed 'cathedral' style seen in the commercial world and earlier open source projects [@raymond_cathedral_1999].
 
 The many hands approach to open-source demonstrated that technologically-connected crowds can coherently delegate and create works.
-Like with crowdsourcing, open source software development often does not discriminate on credentials or background; if a contributor is able to make an adequate contribution, it can be used.
+Like with crowdsourcing, open source software development often does not discriminate on credentials or background; if a contributor can make an adequate contribution, it can be used.
 
 The roots of crowdsourcing in open source are noted Jeff Howe's short definition formulated after his Wired article: "the application of Open Source principles to fields outside of software."
 
@@ -84,19 +84,19 @@ It should not be surprising that recent cultural observers have noted the behavi
 Crowdsourcing emerges from various affordances <!--TODO2 cite affordances (Barry Wellman?-->of modern information networks.
 Such as seen with open-source software development, networked society encourages new forms of cultural creation, not by intention but by consequence of the type of connectedness it allows.
 
-As networked society has developed and the internet has grown ubiquitous, a great numbers of scholars have noted the cascading consequences in how individuals interact with culture and participate in the creation of cultural objects.
+As networked society has developed and the internet has grown ubiquitous, numerous scholars have noted the cascading consequences in how individuals interact with culture and participate in the creation of cultural objects.
 Two such streams of study are von Hippel's work on _user innovation_ and Benkler's study of the networked information economy, including his concept of _commons-based peer production_.
 Both of these borrow from economic and market-driven theory rather than sociological theory, but they offer valuable language for understanding crowdsourcing as a cultural phenomenon.[^consequence]
 
-[^consequence]: One might argue for the term _consequence_ rather then _phenomenon_, because it positions crowdsourcing as neither an accident nor a product of intention, but acknowledges a history for it where it is a side-effect of external influences.
+[^consequence]: One might argue for the term _consequence_ rather than _phenomenon_, because it positions crowdsourcing as neither an accident nor a product of intention, but acknowledges a history for it where it is a side-effect of external influences.
 
 If crowdsourcing is a generalized version of open source principles, von Hippel's work on user innovation[@von_hippel_sources_1988;@von_hippel_democratizing_2006] was an early observation of the trend toward a greater user focus in computer tools and services.
 
 With user innovation, new information products or physical products are generated by users -- those that benefit from using rather than selling the product.
-Particularly, von Hippel focuses on 'lead users', users with specific needs that precede broader trends.
-These users either develop new products to fill their needs, or modify existing products.
+Notably, von Hippel focuses on 'lead users,' users with specific needs that precede broader trends.
+These users either develop new products to fill their needs or modify existing products.
 
-Not all crowdsourcing creation is user innovation, though we see echoes of von Hippel's work in companies that turn to the Internet for help in conducting their business, whether it is soliciting feedback and suggestions (e.g. MyStarbucksIdea [^Starbucks]), bug reports, or even work at a bounty (e.g. advertising contests).
+Not all crowdsourcing creation is user innovation, though there are echoes of von Hippel's work in companies that turn to the Internet for help in conducting their business, whether it is soliciting feedback and suggestions (e.g. MyStarbucksIdea [^Starbucks]), bug reports, or even work at a bounty (e.g. advertising contests).
 User sharing of work performed for themselves is another similar area: for example, when a music service allows users to share their playlists publicly, their realization of a personal need has potential value to other users.
 
 Benkler's work takes a political economy view on what he calls the 'networked information economy', but arrives at a very similar place to von Hippel.
@@ -106,7 +106,7 @@ This agency allows commons-based peer-production: for innovation and creation to
 
 Benkler[@benkler_wealth_2006] singles out two user behaviors borne out of access to information networks, which in turn underlie the rise of crowdsourcing.
 First, individuals are more empowered to operate autonomously, for themselves with less reliance on mass-market goods.
-At the same time, loose collaborations are easier to organize, allowing individual needs to be pursued at scales beyond the capabilities of a single person.
+At the same time, loose collaborations are easier to organize, allowing the pursuit of individual needs at scales beyond the capabilities of a single person.
 
 [^Starbucks]: http://mystarbucksidea.force.com/
 
@@ -116,17 +116,17 @@ At the same time, loose collaborations are easier to organize, allowing individu
 ### Collective Intelligence
 
 <!-- also see law and bederson papers -->
--->
 
+<!--
 ### Classical Work on crowds
 
 #### Extraodinary Madness of the Crowds (Mackay [sp?])
 
-#### The Crowd (LeBon)
+#### The Crowd (LeBon)-->
 
 ## Taxonomies of Crowdsourcing
 
-The space of crowdsourcing is large, and there have been a number of attempts to organize the sub-concepts within it or to reconcile it in a space alongside other areas of research.
+The space of crowdsourcing is large, and there have been a number of attempts to organize the sub-concepts within it or to reconcile it alongside other areas of research.
 Some of the most important questions in differentiating crowdsourcing include:
 
 <!--Contributors-->
@@ -176,7 +176,7 @@ The incentives for contributors to participate in crowdsourcing are complex and 
 
 Motivation in crowdsourcing follows related work in the motivations of humans in general [e.g. @maslow_theory_1943; @alderfer_empirical_1969; @ryan_intrinsic_2000].
 While a review of that work is beyond the scope of this work, many views of crowdsourcing motivation adopt the lens of motivation as a mixture of _intrinsic_ factors and _extrinsic_ factors [@ryan_intrinsic_2000].
-In the former, fulfillment is internal to the contributor, psychologically motivated, while in the latter the rewards are external.
+With intrinsic factors, fulfillment is internal to the contributor --psychologically motivated -- while with extrinsic factors the rewards are external.
 
 The spectrum of intrinsic to extrinsic motivators is commonly paralleled in crowdsourcing literature through dichotomy of paid and volunteer crowdsourcing[@rouse_preliminary_2010; @geiger_managing_2011; @kraut_building_2011; @schenk_crowdsourcing:_2009].<!--_-->
 
@@ -196,9 +196,9 @@ Taxonomies of specific motivators seen in crowdsourcing have been previously att
 In @organisciak_why_2010, I identified a series of primary and secondary motivators from a diverse set of crowdsourcing websites.
 Below I adopt the categories from that study, as they accommodate related work well.
 
-_Primary motivators_ are those that are considered critical parts of a system's interact?ion.
+_Primary motivators_ are those that are considered critical parts of a system's interaction.
 Systems do not require all of them, but to attract and retain contributions, they need one or more of them.
-In contrast, _secondary motivators_ are system mechanics that generally were not observed as necessary components of a system, but were elements that encourage increased interaction by people that are already contributors.
+In contrast, _secondary motivators_ are system mechanics that were not observed as necessary components of systems, but were elements that encourage increased interaction by people that are already contributors.
 @kraut_building_2011 parallel the primary/secondary split by differentiating between encouraging contributions and encouraging commitment.
 
 The motivators in @organisciak_why_2010 were observed from a content analysis of 13 crowdsourcing websites and subsequent user interviews.
@@ -465,7 +465,7 @@ With ReCaptcha, online visitors prove they are human and help digitize scanned a
 
 ## Research in Information Science
 
-In information retrieval, the focus on crowdsourcing has been predominantly in the use of paid crowds for generating evaluation datasets, though there have been efforts to use crowds to improve document representation or even query specific ranking.
+In information retrieval, the focus on crowdsourcing has been predominantly in the use of paid crowds for generating evaluation datasets, though there have been efforts to use crowds to improve document representation or even query-specific ranking.
 
 The benefit of paid crowds for relevance judgments is that it allows for on-demand evaluation datasets [@alonso_crowdsourcing_2008].
 This has been a costly and exhausting process in the past, making it difficult to perform IR research on more novel datasets than the judged sets available from TREC.
