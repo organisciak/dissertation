@@ -6,14 +6,14 @@ Introduction
 <!--## Introduction-->
 
 The internet is growing increasingly interactive as it matures.
-Rather than simply transmitting information to readers, web pages allow their audience to react and interact with their information.
+Rather than merely transmitting information to readers, web pages allow their audience to react and interact with their information.
 The products of these interactions are a trove of qualitative judgements, valuable to modeling information objects.
 In recent years, this form of creation through collaboration has been studied as _crowdsourcing_.
 
 Effective information retrieval depends on reliable, detailed information to index.
 Crowdsourcing has the potential to improve retrieval over web documents by having humans produce descriptive metadata about documents.
-Humans are able to provide latent information about documents that would not be possible to ascertain computationally, such as quality judgments or higher-level thematic description.
-They are also good at critical actions such as correcting, describing in different language, or inferring relationships with other documents.
+Humans can provide latent information about documents that would not be possible to ascertain computationally, such as quality judgments or higher-level thematic description.
+They are also adept at critical actions such as correcting, describing in different language, or inferring relationships with other documents.
 More importantly, crowdsourcing looks at human contribution at scales that are potentially useful for retrieval.
 
 <!-- Broad Research Question -->
@@ -32,7 +32,7 @@ Concretely, I am proposing a study in two parts, separated by their focus on _co
     It is also a example of the loosely constrained form of crowdsourcing contribution that is often required to encourage participation, a trade-off that is less structured than would be preferable for retrieval model.
 
 <!-- LEFT OFF EDITING HERE-->
-<!-- Particularly, this study looks at the issue of recoverable error in human-contributed data, alternately viewed as intercoder reliability when studied from the data end.
+<!-- In particular, this study looks at the issue of recoverable error in human-contributed data, alternately viewed as intercoder reliability when studied from the data end.
 Can error in descriptive crowdsourcing be accounted for, either at the time of data collection or afterward, in a manner that maximizes the intercoder reliability of contributions and subsequently the usefulness for information retrieval? -->
 
 <!--### Hypothesis-->
@@ -44,7 +44,7 @@ b) a greater proportion of useful contributions.
 <!-- TODO1: Do my studies answer these questions? I NEED to compare to versions that don't make this assumption -->
 
 [^language]: In assuming that humans are biased, the biases referred to are the inclinations, leanings, and tendencies [@_bias_] of individuals, quirks that affect their worldview and how they understand and perform tasks.
-By this definition, such perceptual differences contribute to a greater statisticalvariance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias', referring to a model that is overfit, or overly 'biased', to a specific dataset.
+By this definition, such perceptual differences contribute to a greater statistical variance than if all contributions were expected to be identical, and should not be confused with the statistical definition of 'bias', referring to a model that is overfit, or overly 'biased,' to a particular dataset.
 In information science, this is closely related to _intercoder reliability_, the measure of how similar multiple coders will perform in a given parameterization of a task [@neuendorf_content_2002].
 When discussing the processes of humans --and only when doing so-- this study may refer to biases, but discussion of effects on data will solely use statistical and information science language.
 
@@ -71,7 +71,7 @@ A reader of the proposed dissertation will understand:
 
  * the issues related to using crowdsourcing contributions for improving document metadata, particularly for information retrieval indexing;
  * the effect of different designs of crowdsourcing collection tasks on the resulting reliability and consistency of the collected data, particularly designs that train workers, give them feedback, or hurry them;
- * ways to use loosely-structured crowd contributions for retrieval, particularly user curated lists; and
+ * ways to use loosely-structured crowd contributions for retrieval, particularly user-curated lists; and
  * the tractability of making an assumption of honest-but-biased contributors.
 
 ## Crowdsourcing
@@ -91,7 +91,7 @@ Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds
 ## Problem
 
 The growth of digital collections has outpaced the ability to comprehensively clean, transcribe, and annotate the data.
-Similar roadblocks are affecting born-digital information, where the rapid creation of documents often follows from passive or unrestricted forms of creation.
+Similar roadblocks are affecting born-digital information, where the rapid creation of documents often follows from passive or unrestricted forms of production.
 The lack of strong descriptive metadata poses an obstacle for information retrieval, which must infer the aboutness of a document in order to surface it for an interested user.
 Crowdsourcing is increasing being used to address this problem.
 
@@ -111,7 +111,7 @@ In libraries, this approach is being adopted with crowd transcription of materia
 For example, the Bentham Project at University College London has a pilot project for crowdsourcing the transcription of Jeremy Bentham’s letters [@moyle_manuscript_2010; @causer_transcription_2012].
 
 More than typical description, additional useful information can be reactionary or critical.
-Indexing human judgments of a document's quality, for example, can enable a information retrieval system to rank the best version of multiple similarly relevant document.
+Indexing human judgments of a document's quality, for example, can enable an information retrieval system to rank the best version of multiple similarly relevant documents.
 
 While the complex qualitative actions of human contributions are the cornerstone of such contributions' usefulness, they present a challenge for algorithmic use because they can be highly variable.
 
@@ -155,7 +155,7 @@ In views on intercoder reliability in tradition social science settings, reliabi
 In fact, bad workers are one of the last considerations when there are data problems.
 
 The inclusion of the researcher/coordinator as a responsible party has not been common in crowdsourcing research.
-Perhaps it is because participants in crowdsourcing are more abstract than a local worker or survey taker, or maybe because the history of the Internet has justifiably encouraged a level of aloofness against dishonestly, but this dissertation hopes to see if this oversight is detrimental.
+Perhaps it is because participants in crowdsourcing are more abstract than a local worker or survey taker, or maybe because the history of the Internet has justifiably encouraged a level of aloofness against dishonesty, but this dissertation hopes to see if this oversight is detrimental.
 
 ### Intercoder reliability
 
@@ -298,8 +298,8 @@ Feedback                 sharing personal knowledge and  Correct problem data, d
 
 _Table 2: Chart comparing user and system uses for a selection of incidental crowdsourcing actions_ 
 <!--TODO1: add citations whenever possible, 
-	not origin in incidental crowdsourcing independent study 
-	format properly
+    not origin in incidental crowdsourcing independent study 
+    format properly
 -->
 
 <!-- TODO1 relevance in IR section -->
@@ -354,7 +354,7 @@ Subsequently, the assumption of honest but biased contributors will be outlined,
 
 #### Literature review
 
-The literation review will serve as a comprehensive review of the field around the research.
+The literature review will serve as a comprehensive review of the field around the research.
 It consists of the following sections, some of which have already been performed for this proposal:
  * define all the necessary concepts in crowdsourcing and provide their history,
  * provide an extensive taxonomy of crowdsourcing,
@@ -383,5 +383,4 @@ This chapter will serve as a shorthand reference of the full document, which fut
 Doubtless, there will likely be a number of new research questions which emerge from the proposed dissertation; they will also be collected in the final chapter.
 
 ----------
-Details of the proposed study designs for chapters 3 and 4 are provided later in this proposal, and an initial literation review is provided next.
-
+Details of the proposed study designs for chapters 3 and 4 are provided later in this proposal, and an initial literature review is provided next.
