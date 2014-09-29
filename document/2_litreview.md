@@ -144,29 +144,73 @@ Some of the most important questions in differentiating crowdsourcing include:
  * Is the crowdsourcing central to the system?
  * How is quality controlled for?
 
-### Overview
+<!--### Overview-->
 
- * Motivation
-   * Primary/Secondary, Contribution/commitment
-   * Extrinsic/Intrinsic
-   * Paid/Volunteer
-     * Form of remuneration
- * Type of Work
-   * Creative / Reactive
- * Aggregation
-  * Selective
-  * Integrative
-     * Summative / Iterative / Averaged
- * Type of Crowd 
- * Beneficiary
-   * Autonomous / sponsored
-   * Requester/contributor relationship: Symbiosis / parasitism / commensalism
- * Object of Interest
- * Centrality 
-   * Core / Peripheral (incidental)
- * Quality Control
+\begin{table}[h]
+
+\begin{tabular}{p{3cm}p{6cm}p{6cm}} %This sets the number of columns, one l per column
+\toprule
+Category &
+Description &
+Sub-categories \\
+\midrule
 
 
+Motivation &
+How are contributors incentivized? &
+Primary/Secondary \autocite{organisciak_why_2010}, Contribution/commitment \autocite{kraut_building_2011} \\
+&
+&
+Extrinsic/Intrinsic \\
+\midrule
+
+
+Centrality &
+How central is the crowdsourcing to the overall project? &
+Core / Peripheral \autocite{organisciak_incidental_2013} \\
+\midrule
+
+
+Beneficiary &
+Who benefits? What is their relationship to contributors? &
+Autonomous / sponsored \autocite{zwass_cocreation_2010}\\
+&
+&
+Crowd / individual \\
+\midrule
+
+
+Aggregation &
+How are diverse contributions reconciled into a common product? &
+Selective /Integrative \autocite{geiger_managing_2011, schenk_crowdsourcing_2009}\\
+&
+&
+Summative / Iterative / Averaged \\
+\midrule
+
+
+Type of Work &
+What is the nature of the work? &
+Human computation / Creative \\
+&
+&
+Generative / Reactive \\
+&
+&
+Subjective / Objective \\
+\midrule
+
+
+Type of Crowd &
+What are the dimensions of the crowd and how they are expected to perform? &
+Unskilled, locally trained, specialized \\
+&
+&
+heterogenous / diverse \\
+\bottomrule
+\end{tabular}
+\caption{Overview of crowdsourcing taxonomy} %This sets the table's title
+\end{table}
 
 ### Motivation
 
@@ -178,7 +222,7 @@ Motivation in crowdsourcing follows related work in the motivations of humans in
 While a review of that work is beyond the scope of this work, many views of crowdsourcing motivation adopt the lens of motivation as a mixture of _intrinsic_ factors and _extrinsic_ factors [@ryan_intrinsic_2000].
 With intrinsic factors, fulfillment is internal to the contributor --psychologically motivated -- while with extrinsic factors the rewards are external.
 
-The spectrum of intrinsic to extrinsic motivators is commonly paralleled in crowdsourcing literature through dichotomy of paid and volunteer crowdsourcing[@rouse_preliminary_2010; @geiger_managing_2011; @kraut_building_2011; @schenk_crowdsourcing:_2009].<!--_-->
+The spectrum of intrinsic to extrinsic motivators is commonly paralleled in crowdsourcing literature through dichotomy of paid and volunteer crowdsourcing[@rouse_preliminary_2010; @geiger_managing_2011; @kraut_building_2011; @schenk_crowdsourcing_2009].
 
 Paid and volunteer crowdsourcing are not exclusive, and there are extrinsic motivators beyond money.
 However, this separation is common because of it accounts for some of the starkest differences between how crowdsourcing is implemented and motivated.
@@ -405,7 +449,7 @@ Here I offer a brief overview of some of the research that will be discussed.
 
 The ESP Game[@von_ahn_games_2006] demonstrated an effective and fun way to support research data through games.
 
-Soylent[@bernstein_soylent:_2010]<!--_--> integrated paid crowdsourcing into word-processing tools.
+Soylent[@bernstein_soylent_2010] integrated paid crowdsourcing into word-processing tools.
 In the process, the study termed the Find-Fix-Verify design pattern.
 
 @mason_financial_2010 found that increasing wages on paid crowdsourcing sites did not improve quality of results, just quantity of contributions, due to an anchoring effect whereby perceived value of the task also grew with payment.

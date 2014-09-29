@@ -24,7 +24,7 @@ This study looks at crowdsourcing for document metadata, which I refer to by the
 <!-- Specific Research Question -->
 Concretely, I am proposing a study in two parts, separated by their focus on _collecting_ descriptive metadata reliably, and on _using_ it in an appropriate information retrieval context.
 
- 1. In the first half, I will look at the effect of different collection interface designs on the intercoder reliability of the collected data.
+ 1. In the first half, I will look at the effect of different designs for collection of descriptive metadata on the intercoder reliability of the collected data.
     This is a study motivated by prior work done by myself and others, with a problem often mentioned but, to my knowledge, not pursued formally.
 
  2. In the second half of this dissertation, I will look at improving retrieval using already-collected crowdsourcing data.
@@ -356,6 +356,7 @@ Subsequently, the assumption of honest but biased contributors will be outlined,
 
 The literature review will serve as a comprehensive review of the field around the research.
 It consists of the following sections, some of which have already been performed for this proposal:
+
  * define all the necessary concepts in crowdsourcing and provide their history,
  * provide an extensive taxonomy of crowdsourcing,
  * discuss the existing research into using crowdsourcing information for improving retrieval,
