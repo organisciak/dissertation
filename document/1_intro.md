@@ -29,9 +29,8 @@ Concretely, I am proposing a study in two parts, separated by their focus on _co
 
  2. In the second half of this dissertation, I will look at improving retrieval using already-collected crowdsourcing data.
     I focus on the system _Pinterest_, which is a valuable resource of human-encoded descriptive metadata, while sparse in its other textual content.
-    It is also a example of the loosely constrained form of crowdsourcing contribution that is often required to encourage participation, a trade-off that is less structured than would be preferable for retrieval model.
+    It is also an example of the loosely constrained form of crowdsourcing contribution that is often required to encourage participation, a trade-off that is less structured than would be preferable for retrieval model.
 
-<!-- LEFT OFF EDITING HERE-->
 <!-- In particular, this study looks at the issue of recoverable error in human-contributed data, alternately viewed as intercoder reliability when studied from the data end.
 Can error in descriptive crowdsourcing be accounted for, either at the time of data collection or afterward, in a manner that maximizes the intercoder reliability of contributions and subsequently the usefulness for information retrieval? -->
 

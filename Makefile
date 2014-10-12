@@ -15,6 +15,13 @@ refs:
 	perl -pe "s:^(@.*{.*_)\?*:\1:g" refs.bib | perl -pe "s/^(@.*{.*):_/\1_/g" >refs.bib2
 	mv refs.bib2 refs.bib
 
+defense:
+	pandoc -t revealjs \
+		-s proposal-defense/talk.md \
+		-o proposal-defense/talk.html \
+		--slide-level=2 \
+		-V theme=moon
+
 report:
 	# Update stats
 

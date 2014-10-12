@@ -426,7 +426,7 @@ Starting with the second task, however, the top of the interface will tell users
  * Their estimated performance, in terms of agreement with other workers.
  * A visualization of where they fall in the distribution of all workers, from best performing to worst, 
 
-![Example of showing feedback to workers](images/comparison-of-average-ratings.png)
+![Example of showing feedback to workers](images/progress-bar-mockup.png)
 
 Since the interaction of this interface truly begins on the second task, evaluation of this interface will also focus on users returning after their first task.
 
