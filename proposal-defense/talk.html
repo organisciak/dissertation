@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Peter Organisciak" />
+  <title>Crowdsourcing metadata</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <link rel="stylesheet" media="print" href="reveal.js/css/print/pdf.css" />
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Crowdsourcing metadata</h1>
+    <h2 class="author"><em>Peter Organisciak</em></h2>
+    <h3 class="date">Oct 15, 2014</h3>
+</section>
+
+<section class="slide level2">
+
+<p><em>Committee</em></p>
+<ul>
+<li>Chair: Michael B. Twidale</li>
+<li>Miles Efron</li>
+<li>J. Stephen Downie</li>
+<li>Jaime Teevan</li>
+</ul>
+<!--% Reliably augmenting documents by collecting and interpreting amateur contributions-->
+
+</section>
+<section><section id="introduction" class="titleslide slide level1"><h1>Introduction</h1></section><section id="crowdsourcing" class="slide level2">
+<h1>Crowdsourcing</h1>
+<ul>
+<li class="fragment">When groups of people, connected by technology, contribute to a common product</li>
+</ul>
+<aside class="notes">
+Today I’m going to talk about when people create things online. I’m referring, of course, to crowdsourcing. You may already know this term; Wolf Blitzer knows it, and your parents may too. If you’re unfamiliar with it, that’s okay, I’ll explain more as I go along. Most basically, it refers to when many people, connected by technology, contribute to a common product. Sometimes this is as volunteers – an act as deliberate as Wikipedia editing or reviewing products on Amazon, or as incidental as teaching Facebook about quality posts by clicking the ‘like’ button. Other times, crowdsourcing involves paid crowds, such as those that participate in the micro-task marketplace called Mechanical Turk.
+</aside>
+</section><section id="crowdsourcing-for-metadata" class="slide level2">
+<h1>Crowdsourcing for Metadata</h1>
+<p>Crowdsourcing as a <em>reactive</em> act, capturing human interpretations and reactions to information</p>
+<aside class="notes">
+Today, however, I’m talking about a specific use of crowdsourcing: to teach us more about existing information objects. Our focus today is on place crowdsourcing as a <em>reactive</em> act, capturing human interpretations and reactions to information, teaching us more about the nature of the object.
+</aside>
+</section><section id="why" class="slide level2">
+<h1>Why <!-- Problem --></h1>
+<ul>
+<li>Digitized and born-digital information is outpacing our ability to clean, annotate, organize it <!-- TODO cite --></li>
+<li>Poses problems for information retrieval, for connecting information-seeking users to the proper content<br /><br />Crowdsourcing is increasingly being used to address these problems</li>
+</ul>
+<aside class="notes">
+<p>This is becoming increasingly important The growth of digital collections has outpaced the ability to comprehensively clean, transcribe, and annotate the data.</p>
+<p>Make no mistake, this lack of restriction is often good; the laissez-faire approach of the world wide web, for example, is what made it so appealing over the alternatives.</p>
+However, the lack of strong descriptive metadata poses an obstacle for information retrieval, which must infer the aboutness of a document in order to surface it for an interested user. Crowdsourcing is increasing being used to address this problem.
+</aside>
+</section><section class="slide level2">
+
+<p>Many of the benefits of crowdsourcing follow from the fact that humans approach tasks in qualitative and abstract ways</p>
+<p>Humans are good at things algorithms aren’t</p>
+<aside class="notes">
+While there is a whole area on so-called human computation, with humans performing tasks in the mode of computing and which can conceivably be automated one day, even there there is an underlying understanding that humans are very complex.
+</aside>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/quora-sm.jpg" alt="Quora" /><figcaption>Quora</figcaption>
+</figure>
+<p><em>question and answers website</em></p>
+<aside class="notes">
+A mixture of fact-based and opinion-based questions; not restricted to “right” answers.
+</aside>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/turkit1.jpg" />
+</figure>
+<figure>
+<img src="images/turkit2.jpg" alt="Little et al. (2009)" /><figcaption><span class="citation" data-cites="little_turkit_2009">Little et al. (2009)</span></figcaption>
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="images/happyfeet1.jpg" alt="Amazon customer reviews, and helpfulness ratings of reviews" /><figcaption>Amazon customer reviews, and helpfulness ratings of reviews</figcaption>
+</figure>
+</section><section class="slide level2">
+
+<p>In cultural heritage institutions, crowds can…</p>
+<ul>
+<li>contribute classifications that better reflect the information needs of users
+<ul>
+<li>user-tagged images better match colloquial user needs than professional classification <span class="citation" data-cites="springer_for_2008 trant_investigating_2006">(Springer et al. 2008; Trant and Wyman 2006)</span></li>
+</ul></li>
+</ul>
+<ul>
+<li class="fragment">fill in where algorithms fail <span class="citation" data-cites="von_ahn_recaptcha_2008 holley_many_2009">(e.g. Von Ahn et al. 2008; Holley 2009)</span></li>
+</ul>
+<ul>
+<li class="fragment">parse non-text materials <span class="citation" data-cites="moyle_manuscript_2010 causer_transcription_2012">(e.g. Moyle, Tonra, and Wallace 2010; Causer, Tonra, and Wallace 2012)</span> or higher-level latent concepts</li>
+</ul>
+<ul>
+<li class="fragment">judge or react to content quality</li>
+</ul>
+</section><section id="transcribe-bentham" class="slide level2" data-background="images/bentham1.jpg">
+<h1>Transcribe Bentham</h1>
+<p><span class="citation" data-cites="moyle_manuscript_2010 causer_transcription_2012">(Moyle, Tonra, and Wallace 2010; Causer, Tonra, and Wallace 2012)</span></p>
+</section><section id="section" class="slide level2" data-background="images/bibliocommons2.jpg">
+<h1></h1>
+<p><br /><br /><br />-</p>
+<h3 id="bibliocommons">Bibliocommons</h3>
+<p>Comparison of social OPACs: <span class="citation" data-cites="spiteri_social_2011">Spiteri (2011)</span></p>
+</section><section id="pagerank" class="slide level2">
+<h1>PageRank</h1>
+<figure>
+<img src="images/pagerank1-sm.jpg" alt="Page et al. (1999)" /><figcaption><span class="citation" data-cites="page_pagerank_1999">Page et al. (1999)</span></figcaption>
+</figure>
+<p>Classic example of humans for quality judgment, trustworthiness (by proxy) in addition to aboutness</p>
+</section><section class="slide level2">
+
+<p>Benefits to libraries <span class="citation" data-cites="holley_crowdsourcing_2010">(Holley 2010)</span>:</p>
+<ul>
+<li>Achieving goals the library would never have the time, financial or staff resource to achieve on its own.</li>
+<li>Achieving goals in a much faster timeframe than the library may be able to achieve if it worked on its own.</li>
+<li>Building new virtual communities and user groups.</li>
+<li>Actively involving and engaging the community with the library and its other users and collections.</li>
+<li>Utilising the knowledge, expertise and interest of the community.</li>
+<li>Improving the quality of data/resource (e.g. by text, or catalogue corrections), resulting in more accurate searching.</li>
+<li>Adding value to data (e.g. by addition of comments, tags, ratings, reviews). Making data discoverable in different ways for a more diverse audience (e.g. by tagging).</li>
+</ul>
+</section><section class="slide level2">
+
+<p>Benefits to libraries <span class="citation" data-cites="holley_crowdsourcing_2010">(Holley 2010)</span>:</p>
+<ul>
+<li>Gaining first-hand insight on user desires and the answers to difficult questions by asking and then listening to the crowd.</li>
+<li>Demonstrating the value and relevance of the library in the community by the high level of public involvement.</li>
+<li>Strengthening and building trust and loyalty of the users to the library. Users do not feel taken advantage of because libraries are non-profit making.</li>
+<li>Encouraging a sense of public ownership and responsibility towards cultural heritage collections, through user’s contributions and collaborations.</li>
+</ul>
+</section><section id="in-sum" class="slide level2">
+<h1>In sum,</h1>
+<p>Online crowds are useful because they’re <em>quick</em> and <em>accessible at large-scales</em>, but also</p>
+<ul>
+<li>perceptive</li>
+<li>clever</li>
+<li>critical</li>
+</ul>
+<aside class="notes">
+Humans can provide latent information about documents that would not be possible to ascertain computationally, such as quality judgments or higher-level thematic description. They are also adept at critical actions such as correcting, describing in different language, or inferring relationships with other documents. More importantly, crowdsourcing looks at human contribution at scales that are potentially useful for retrieval.
+</aside>
+</section></section>
+<section><section id="in-other-words-human" class="titleslide slide level1"><h1>In other words, <em>human</em></h1></section><section id="the-question" class="slide level2" data-background="rgba(200,60,60,1)">
+<h1><em>The</em> Question</h1>
+<p>How do we collect and interpret qualitative user contributions in an inherently quantitative system?</p>
+<aside class="notes">
+<p>This creates difficulties in collecting and using their contributions in an algorithmic way, however.</p>
+This, of course, is a large, overarching question, and I’ll get into my study’s particular scope in a moment. What I’m hinting at here, however, is that
+</aside>
+</section><section id="study-in-two-parts" class="slide level2">
+<h1>Study in two parts</h1>
+<ol type="1">
+<li>On <em>collecting</em> reliable contributions</li>
+</ol>
+<blockquote>
+<p>How does the way you ask change the contributions you receive?</p>
+</blockquote>
+<p><br /> 2. On <em>using</em> crowd contributions</p>
+<blockquote>
+<p>How should a system interpret crowd contributions?</p>
+</blockquote>
+<aside class="notes">
+<ol type="1">
+<li>How does the way you ask change the contribution you receive?</li>
+</ol>
+<ul>
+<li>Here, this work will perform a comparative study of crowdsourcing task design for the same task, looking at the effect of changes to the consistency and reliability of user-contributed information.</li>
+<li>This is a problem that has been noted often by other studies, but not directly measured.</li>
+</ul>
+<ol start="2" type="1">
+<li>How should a system interpret crowd contributions?</li>
+</ol>
+<ul>
+<li>Here, this work will focus on information retrieval for a system that is heavy on user contributions but light on other textual information.</li>
+<li>The system I look at, image bookmarking site Pinterest, is also an example of the loosely constrained form of crowdsourcing contribution that is often required to encourage participation, a trade-off that is less structured than would be preferable for retrieval model.</li>
+</ul>
+</aside>
+<!-- REMOVED
+## Goals
+
+To provide a comprehensive resource for understanding crowdsourcing for descriptive metadata, tying together existing research, while filling knowledge dark spots with new research.
+-->
+
+</section><section id="assumptions-scoping-and-biases" class="slide level2">
+<h1>Assumptions, Scoping, and Biases</h1>
+<p>A humanistic system-end view of crowds, colored by my environment in information science and my focus on information retrieval.</p>
+</section><section id="assumptions-scoping-and-biases-1" class="slide level2">
+<h1>Assumptions, Scoping, and Biases</h1>
+<p>This study works within an assumption of <em>honest-but-biased</em> crowds.</p>
+<ul>
+<li class="fragment">Bad, malicious, and inattentive contributors are a reality in crowdsourcing, but a well-studied reality. <span class="citation" data-cites="sheng_get_2008 whitehill_whose_2009 welinder_online_2010 raykar_supervised_2009 organisciak_evaluating_2012">(e.g. Sheng, Provost, and Ipeirotis 2008; Whitehill et al. 2009; Welinder and Perona 2010; Raykar et al. 2009; Organisciak et al. 2012)</span></li>
+</ul>
+<ul>
+<li class="fragment">In other “threats to reliability”, the director is responsible: bad codebooks, inadequate training, or fatigued <span class="citation" data-cites="neuendorf_content_2002">(Neuendorf 2002)</span></li>
+</ul>
+<!-- # Crowdsourcing { data-background="images/mountains3-glitched.png" }
+
+* Alonso
+* Watts -->
+
+</section></section>
+<section><section id="collecting-crowd-contributions" class="titleslide slide level1" data-background="images/mountains2-glitched.png"><h1>Collecting crowd contributions</h1></section><section id="on-demand-crowd-contributions" class="slide level2">
+<h1>On-demand crowd contributions</h1>
+<p>Controlled metadata collection increasingly being done on paid crowdsourcing platforms</p>
+<ul>
+<li>custom evaluation datasets (i.e. relevance judgments) - see <span class="citation" data-cites="alonso_crowdsourcing_2008">Alonso, Rose, and Stewart (2008)</span></li>
+<li>Also used for collecting metadata, such as by <span class="citation" data-cites="chen_improving_2013">Chen and Jain (2013)</span> and <span class="citation" data-cites="finin_annotating_2010">Finin et al. (2010)</span></li>
+</ul>
+<p>These tasks tend to be make <em>objective</em> or <em>normative</em> assumptions.</p>
+<aside class="notes">
+<p>In information science and especially information retrieval, there is an increased use of paid crowdsourcing through services like Mechnical Turk, where you pay people to do part of your task.</p>
+Beyond some recent work, these tasks tend to be make <em>objective</em> or <em>normative</em> assumptions
+</aside>
+</section><section class="slide level2">
+
+<ul>
+<li class="fragment"><span class="citation" data-cites="howe_crowdsourcing_2008">Howe (2008)</span> discussed real-world examples where tweaking the text soliciting contributions had notably effects on the how many contributions were made</li>
+<li class="fragment"><span class="citation" data-cites="mason_financial_2010">Mason and Watts (2010)</span> find that tying tasks too closely to financial incentives results in less enjoyment by the contributors</li>
+</ul>
+<aside class="notes">
+What we’re seeing, however, is that the conclusions you come to change based on how you ask it
+</aside>
+</section><section class="slide level2">
+
+<h3 id="how-do-we-understand-qualitative-user-contributions-in-a-quantitative-system">How do we understand qualitative user contributions in a quantitative system?</h3>
+</section><section class="slide level2">
+
+<blockquote>
+<p>This is the most important part of the [Mechanical Turk] experiment design: how to ask the right questions in the best possible way. At first, this looks pretty straightforward, but in practice the outcome can be disastrous if this is performed in an ad-hoc manner.</p>
+</blockquote>
+<p><span class="citation" data-cites="alonso_design_2011">Alonso and Baeza-Yates (2011)</span></p>
+<ul>
+<li class="fragment">Study found it’s own adverse effects of design</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>They go on to advise starting from the Mechanical Turk UI guidelines</li>
+</ul>
+<p>Even in the study where they discuss this, on designing relevance judgment tasks, they found their own adverse effect from interface design: Making a feedback form mandatory resulted in shorter, less helpful answers</p>
+</aside>
+</section><section class="slide level2">
+
+<h3 id="this-direction-follows-from-my-own-work">This direction follows from my own work</h3>
+<ul>
+<li class="fragment">Workers that spend more time reading instructions do a better job <span class="citation" data-cites="organisciak_evaluating_2012">(Organisciak et al. 2012)</span></li>
+<li class="fragment">Asking people to explain their actions <em>changes</em> how they act: they are more moderated, less extreme in their opinions <span class="citation" data-cites="organisciak_personalized_2013">(incidental finding from Organisciak et al. 2013)</span></li>
+<li class="fragment">Rating distributions for the same products are different between two systems: one with an easy interface, and one with additional hurdles <span class="citation" data-cites="organisciak_incidental_2013">(Organisciak 2013)</span></li>
+<li class="fragment">Attaching finer instruction to a rating interface improves the quality of music similarity judgements (unpublished recent work)</li>
+</ul>
+</section><section class="slide level2">
+
+<p>This chapter asks,</p>
+<h3 id="what-effect-does-task-design-have-on-the-shape-of-the-resulting-data">What effect does task design have on the shape of the resulting data?</h3>
+<p>▼</p>
+<p><strong>RQ</strong>: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?</p>
+<aside class="notes">
+Secondary research questions will look at satisfaction and generalizability.
+</aside>
+</section><section id="approach" class="slide level2">
+<h1>Approach</h1>
+<p>Compare a metadata encoding task, with identical data and goals, but collecting in different manners</p>
+</section><section id="the-control-task" class="slide level2">
+<h1>The “control” task</h1>
+<p>Twitter topic classification task</p>
+<blockquote>
+<p>“Is this tweet about topic <span class="math">\(X\)</span>?”</p>
+</blockquote>
+<p>Twitter is a notably truncated, colloquial, and timely medium, posing difficulties for understanding the aboutness of a tweet</p>
+<ul>
+<li>Hashtags are used by users to describe the topic, theme, or context of a tweet <span class="citation" data-cites="efron_hashtag_2010">(Efron 2010)</span> - this usage is uncontrolled and informal</li>
+<li>Twitter internally uses paid crowds to identify the context of newly introduced concepts for IR and ad purposes <span class="citation" data-cites="chen_improving_2013">(Chen and Jain 2013)</span></li>
+<li><span class="citation" data-cites="finin_annotating_2010">Finin et al. (2010)</span> have used paid crowdsourcing for annotating named entities on Twitter</li>
+</ul>
+<aside class="notes">
+For context, the control task will be to identify the topic of a short message, a realistic task similar to things done at Twitter and in other studies.
+</aside>
+<!--## Typical metadata encoding tasks-->
+
+</section><section id="four-interfaces" class="slide level2">
+<h1>Four interfaces</h1>
+<ul>
+<li>Baseline interface</li>
+<li>Training interface</li>
+<li>Feedback interface</li>
+<li>Time-limited interface</li>
+</ul>
+<aside class="notes">
+Based on what complements other work, this chapter compares:
+</aside>
+</section><section id="baseline-interface" class="slide level2">
+<h1>Baseline interface</h1>
+<p>Following the standard layout of encoding tasks in crowdsourcing:</p>
+<ul>
+<li><strong>Goal</strong> statement/question. <em>e.g. “Is this page relevant to query <code>q</code>?”, “Find the topic of a tweet.”</em></li>
+<li><strong>Instructions</strong> for performing the task.</li>
+<li>one or more <strong>Items</strong> that worker responds to. <em>e.g. webpage snippets, microblogging messages</em></li>
+<li><strong>Action</strong>, one per item: the data collection mechanism.</li>
+</ul>
+<!---
+## Steps for worker
+
+ 1. Worker $w$ arrives at task page
+ 2. $w$ is shown a preview of task $t$
+ 3. Worker $w$ accepts the task $t$ 
+ 4. Work performs task $t$ and submits
+ 5. A new task $t'$ is chosen and, worker is taken back to _step 2_ or _step 3_
+
+
+## Facets on which a task can change 
+
+ * __Task__
+    * Payment.
+    * Bonuses. 
+    * Number of tasks available.
+ * __Goal__
+ * __Instructions__
+    * Clarity.
+    * Restrictive vs. interpretable.
+    * Length.
+ * __Item__
+    * Number of items in a task.
+ * __Action__
+    * Complexity of action. e.g. granularity.
+
+<div class=notes>
+You can imagine task designs can change significa
+</div>
+
+----
+
+- Experience
+- Skill
+- Self-confidence and decisiveness
+- Attentiveness and fatigue
+- Perceived importance of task
+- Time spent on task
+
+---
+
+- @grady_crowdsourcing_2010 looked at modifying _pay_, _bonus_, _terminology_ (formal vs casual), and _query_ (short versus descriptive)
+- @mason_financial_2010 looked at retention and satisfaction relative to pay, effect of pay per task set vs pay per individual task
+- @organisciak_evaluating_2012 and @grady_crowdsourcing_2010 notes negligible effect of worker experience per task
+
+<div class=notes>
+Other studies have looked a parameterization: what if I change the payment, or the bonus, or the wording.
+</div>
+
+## Basic Interface
+
+Show workers goal, description, and ten items to classify -->
+
+</section><section id="training-interface" class="slide level2">
+<h1>Training Interface</h1>
+<p>First task set will test and adjust worker’s perception of the task</p>
+<blockquote>
+<p>Answers on the first task evaluated against a gold standard, correctness will shown, and incorrect selections will be accompanied by an explanation of why they are wrong</p>
+</blockquote>
+<aside class="notes">
+Following from my past work, finding that workers sometimes have different contects of ‘correctness’ than desired…
+</aside>
+</section><section id="feedback-interface" class="slide level2">
+<h1>Feedback Interface</h1>
+<p>Workers are shown feedback about their estimated performance</p>
+<blockquote>
+<p>Honest-but-biased: does feedback encourage workers to think more carefully about their contributions? Does it make them competitive? Does it have the effect of surveillance?</p>
+</blockquote>
+</section><section id="time-limited-interface" class="slide level2">
+<h1>Time-limited Interface</h1>
+<p>Workers try to complete as many tasks as they can in a minute</p>
+<blockquote>
+<p>A push toward visceral contribution and flow</p>
+</blockquote>
+<aside class="notes">
+Whereas the last one tries to make workers more careful, measured, this one pushes contributing from the gut.
+</aside>
+</section><section id="evaluation" class="slide level2">
+<h1>Evaluation</h1>
+<ul>
+<li>Mean agreement between workers</li>
+<li>Internal consistency</li>
+<li>Qualitative: satisfaction<br /> </li>
+</ul>
+<h3 id="secondary-questions">Secondary questions</h3>
+<ul>
+<li>Time spent</li>
+<li>Longevity of interaction</li>
+<li>Cost per paid contribution</li>
+</ul>
+</section></section>
+<section><section id="using-crowd-contributions-in-an-online-system" class="titleslide slide level1" data-background="images/mountains3-glitched.png"><h1>Using crowd contributions in an online system</h1></section><section class="slide level2">
+
+<p>What if you already have data, and have less control over how it was collected?</p>
+<aside class="notes">
+This is more common in volunteer crowdsourcing
+</aside>
+</section><section class="slide level2">
+
+<p>This chapter asks,</p>
+<h3 id="how-do-you-model-a-collection-of-loosely-structured-and-subjective-human-contributions-into-a-normative-crowd-opinion-one-that-can-be-used-to-describe-objects-in-a-corpus">How do you model a collection of loosely-structured and subjective human contributions into a normative crowd opinion, one that can be used to describe objects in a corpus?</h3>
+<p>▼</p>
+<p><strong>RQ</strong>: How can crowdsourced metadata be incorporated into an information retrieval model, and to what effect?</p>
+<aside class="notes">
+<p>It’s common to see differences in the habits of contributors that are trying to achieve the same thing.</p>
+Which, viewed through the lens of information retrieval…
+</aside>
+</section><section id="crowdsourcing-for-information-retrieval-in-the-wild" class="slide level2">
+<h1>Crowdsourcing for information retrieval in the wild</h1>
+<ul>
+<li>linking behaviors as proxy for trust <span class="citation" data-cites="page_pagerank_1999">(Page et al. 1999)</span></li>
+<li>microblogging discussion of the web documents as additional information <span class="citation" data-cites="dong_time_2010">(Dong et al. 2010)</span></li>
+<li>social tags for retrieval <span class="citation" data-cites="lamere_social_2008">(Lamere 2008)</span></li>
+<li>implicit relevance feedback for identifying ranking problems <span class="citation" data-cites="agichtein_improving_2006">(Agichtein, Brill, and Dumais 2006)</span></li>
+</ul>
+</section><section class="slide level2">
+
+<p>Speaking about tagging in the context of information retrieval, <span class="citation" data-cites="zhou_exploring_2008">Zhou et al. (2008)</span> warn that “a tag represents an abstract of the document from a <em>single</em> perspective of a <em>single</em> user.”</p>
+</section><section id="approach-1" class="slide level2">
+<h1>Approach</h1>
+<p>On a website composed of crowd-contributed data <em>about other content</em>, develop and compare retrieval models for reconciling individual “perspectives” into a larger crowd classification.</p>
+<aside class="notes">
+Callback to <span class="citation" data-cites="zhou_exploring_2008">Zhou et al. (2008)</span> on perspectives
+</aside>
+</section><section id="data" class="slide level2">
+<h1>Data</h1>
+<aside class="notes">
+I considered a number of websites to study, briefly pursuing the social Library Catalogue of NYPL, before settling on…
+</aside>
+</section><section id="data-1" class="slide level2" data-background="images/pinterest.jpg">
+<h1>Data</h1>
+<p>Pinterest: a website of curated images (“visual bookmarking”)</p>
+<aside class="notes">
+<ul>
+<li>majority of content is crowd contributed information about websites or online images</li>
+<li>organized into “pins”, consisting of image, url, title, and uncontrolled text description</li>
+<li>pins grouped into “boards”, consisting of a title, description, and category</li>
+<li>also ‘repin’, ‘like’, social integration</li>
+</ul>
+Sample out of <em>107.5 million users, 571 million boards, and 207.5 million pins</em>
+</aside>
+</section><section class="slide level2">
+
+<ul>
+<li>Boards are curated lists, akin to:</li>
+</ul>
+<figure>
+<img src="images/bibliolists1.jpg" />
+</figure>
+<p>The explicit forms of descriptive crowdsourcing that are seen on Pinterest are:</p>
+</section><section id="descriptive-crowd-activities" class="slide level2">
+<h1>Descriptive crowd activities</h1>
+<ul>
+<li>Describing pins: description field, choice of board membership</li>
+<li>Describing boards: title, description, category, fields</li>
+<li>Social contribution: commenting on pins, repinning, ‘liking’, Facebook integration</li>
+</ul>
+</section><section id="baseline" class="slide level2">
+<h1>Baseline</h1>
+<p>Basic unigram model <span class="citation" data-cites="ponte_language_1998 song_general_1999">(Ponte and Croft 1998; Song and Croft 1999)</span>:</p>
+<ul>
+<li>document language model <span class="math">\(P(q|d)\)</span> assumed to be a distribution based on the description+title text for each pin</li>
+<li><span class="math">\(P(d)\)</span> assumed constant</li>
+<li><span class="math">\(P(term|corpus)\)</span> used as fallback model for unseen terms</li>
+<li>Linear smoothing between <span class="math">\(P(term|document)\)</span> and <span class="math">\(P(term|corpus)\)</span>, using <span class="math">\(\lambda\)</span> based on <span class="citation" data-cites="zhai_study_2001">Zhai and Lafferty (2001)</span></li>
+</ul>
+</section><section id="assuming-list-relationships" class="slide level2">
+<h1>Assuming list relationships</h1>
+<p>Co-occurring documents in lists (i.e. pins in boards) assumed to give more information about the given document</p>
+<ul>
+<li><span class="math">\(P(term|board)\)</span>, smoothed against <span class="math">\(P(term|corpus)\)</span> used as fallback model for unseen terms</li>
+<li><p>Based on cluster approach seen in <span class="citation" data-cites="liu_cluster-based_2004">Liu and Croft (2004)</span></p></li>
+<li><p><span class="math">\(P(t|d)=[\lambda*P_{ml}(t|d)+(1-\lambda)(\beta*P_{ml}(t|b)+[1-\beta]P(t|C))]\)</span></p></li>
+</ul>
+<figure>
+<img src="images/illustration2-sm.png" />
+</figure>
+</section><section id="assuming-item-relationships" class="slide level2">
+<h1>Assuming item relationships</h1>
+<p>Quirks of individual users smoothed by their text contributions with other user’s own interpretations of the same items</p>
+<ul>
+<li><span class="math">\(P_{ml}(t|d_i)\)</span> replaced with <span class="math">\(\frac{1}{n} \sum_{j=1}^{n} P(t|d_{i,j})\)</span></li>
+</ul>
+<p>Where <span class="math">\(N\)</span> is the number of different user-specific pins for that source document.</p>
+<figure>
+<img src="images/illustration1-sm.png" />
+</figure>
+</section><section id="sharing-as-qualitative-judgment" class="slide level2">
+<h1>Sharing as qualitative judgment</h1>
+<p><span class="math">\(P(d)\)</span> is estimated as proportional to times saved, repinned, or liked</p>
+</section><section id="evaluation-1" class="slide level2">
+<h1>Evaluation</h1>
+<ul>
+<li>Measured using Normalized Discounted Cumulative Gain (against pooled results)</li>
+<li>Because of the scale of the data, binary relevance is a low bar; graded relevance is more sensitive to better performance</li>
+</ul>
+<!--## Queries
+
+-------------------------------------------------------------------------------
+appetizers, art,
+ab workout, animals, apartment decorating, christmas, christmas decorations,
+chicken recipes, crockpot recipes, christmas crafts, diy, dinner recipes,
+dresses, desserts, disney, easter, engagement rings, elf on the shelf ideas,
+eye makeup, easter crafts, food, fashion, funny, funny quotes, fall, garden,
+gift ideas, gluten free, girls bedroom, gardening, hair styles, hair, healthy
+recipes, halloween costumes, halloween, inspirational quotes, interior design,
+ikea, i love you, italy, jewelry, jennifer lawrence, jello shots, jeans, jokes,
+kitchen, kitchen ideas, kids crafts, kitchen decor, kids, love quotes, love,
+living room, long hair, lingerie, makeup, medium hair styles for women, mothers
+day, mothers day gifts, master bedroom, nail art, nails, nail designs, nail art
+designs, nail art for short nails, ombre hair, organization, organization tips,
+outfits, organizing, prom dresses, pregnancy, prom hair, paleo, puppies, quotes,
+quinoa, quinoa recipes, quilts, quotes about change, recipes, red hair, rings,
+relationship quotes, rustic wedding, spring fashion, shoes, short hair styles
+for women, short hair, sexy, tattoos, thanksgiving, tattoo ideas, thanksgiving
+recipes, travel, updos, updo hairstyles, ugly christmas sweater, updos for
+medium length hair, valentines ideas, valentines day gifts for him, valentines
+day, vintage, valentines crafts, wedding, wedding dresses, wedding hair,
+wedding rings, wedding ideas, xmas, x, xmas crafts, xmas decorations, x rated,
+yoga, yoga poses, yoga pants, yellow, yoga workout, zucchini recipes, zucchini,
+zac efron, zara, zucchini bread
+
+-------------------------------------------------------------------------------
+Popular queries on Pinterest
+-->
+
+</section></section>
+<section><section id="conclusion" class="titleslide slide level1"><h1>Conclusion</h1></section><section id="takeaway" class="slide level2">
+<h1>Takeaway</h1>
+<p>A reader of the proposed work will understand the issues related to using crowdsourcing contributions for improving document metadata, particularly for information retrieval; particularly</p>
+<ol type="1">
+<li>the effect of different designs of crowdsourcing collection tasks the collected data</li>
+</ol>
+<ul>
+<li>particularly designs that train workers, give them feedback, or hurry them</li>
+</ul>
+<ol start="2" type="1">
+<li>ways to use loosely-structured crowd contributions for retrieval,</li>
+</ol>
+<ul>
+<li>particularly user-curated lists</li>
+</ul>
+</section></section>
+<section><section id="thank-you" class="titleslide slide level1" data-background="images/14892129119_97860d8a3d_k-glitched-a99-s74-i8-q90.png"><h1>Thank You</h1></section><section id="image-credits" class="slide level2">
+<h1>Image Credits</h1>
+<ul>
+<li>Melodysheep - https://www.flickr.com/photos/melodysheep/4918358272</li>
+<li>David See - https://www.flickr.com/photos/dave_see/9231275034</li>
+</ul>
+</section></section>
+<section><section id="references" class="titleslide slide level1"><h1>References</h1></section><section class="slide level2">
+
+<p><br /></p>
+<div class="references">
+<p>Agichtein, Eugene, Eric Brill, and Susan Dumais. 2006. “Improving Web Search Ranking by Incorporating User Behavior Information.” In <em>Proceedings of the 29th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, 19–26. SIGIR ’06. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/1148170.1148177">10.1145/1148170.1148177</a>. <a href="http://doi.acm.org/10.1145/1148170.1148177">http://doi.acm.org/10.1145/1148170.1148177</a>.</p>
+<p>Alonso, Omar, and Ricardo Baeza-Yates. 2011. “Design and Implementation of Relevance Assessments Using Crowdsourcing.” In <em>Advances in Information Retrieval</em>, edited by Paul Clough, Colum Foley, Cathal Gurrin, Gareth J. F. Jones, Wessel Kraaij, Hyowon Lee, and Vanessa Mudoch, 153–164. Lecture Notes in Computer Science 6611. Springer Berlin Heidelberg. <a href="http://link.springer.com.proxy2.library.illinois.edu/chapter/10.1007/978-3-642-20161-5_16">http://link.springer.com.proxy2.library.illinois.edu/chapter/10.1007/978-3-642-20161-5_16</a>.</p>
+<p>Alonso, Omar, Daniel E. Rose, and Benjamin Stewart. 2008. “Crowdsourcing for Relevance Evaluation.” <em>SIGIR Forum</em> 42 (2) (November): 9–15. doi:<a href="http://dx.doi.org/10.1145/1480506.1480508">10.1145/1480506.1480508</a>. <a href="http://doi.acm.org/10.1145/1480506.1480508">http://doi.acm.org/10.1145/1480506.1480508</a>.</p>
+<p>Causer, Tim, Justin Tonra, and Valerie Wallace. 2012. “Transcription Maximized; Expense Minimized? Crowdsourcing and Editing the Collected Works of Jeremy Bentham.” <em>Literary and Linguistic Computing</em> 27 (2) (June 1): 119–137. doi:<a href="http://dx.doi.org/10.1093/llc/fqs004">10.1093/llc/fqs004</a>. <a href="http://llc.oxfordjournals.org/content/27/2/119">http://llc.oxfordjournals.org/content/27/2/119</a>.</p>
+<p>Chen, Edwin, and Alpa Jain. 2013. “Improving Twitter Search with Real-Time Human Computation. Twitter Engineering Blog.” January 8. <a href="https://blog.twitter.com/2013/improving-twitter-search-real-time-human-computation">https://blog.twitter.com/2013/improving-twitter-search-real-time-human-computation</a>.</p>
+<p>Dong, Anlei, Ruiqiang Zhang, Pranam Kolari, Jing Bai, Fernando Diaz, Yi Chang, Zhaohui Zheng, and Hongyuan Zha. 2010. “Time Is of the Essence: Improving Recency Ranking Using Twitter Data.” In <em>Proceedings of the 19th International Conference on World Wide Web</em>, 331–340. WWW ’10. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/1772690.1772725">10.1145/1772690.1772725</a>. <a href="http://doi.acm.org/10.1145/1772690.1772725">http://doi.acm.org/10.1145/1772690.1772725</a>.</p>
+<p>Efron, Miles. 2010. “Hashtag Retrieval in a Microblogging Environment.” In <em>Proceedings of the 33rd International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, 787–788. SIGIR ’10. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/1835449.1835616">10.1145/1835449.1835616</a>. <a href="http://doi.acm.org.proxy2.library.illinois.edu/10.1145/1835449.1835616">http://doi.acm.org.proxy2.library.illinois.edu/10.1145/1835449.1835616</a>.</p>
+<p>Finin, Tim, Will Murnane, Anand Karandikar, Nicholas Keller, Justin Martineau, and Mark Dredze. 2010. “Annotating Named Entities in Twitter Data with Crowdsourcing.” In <em>Proceedings of the NAACL HLT 2010 Workshop on Creating Speech and Language Data with Amazon’s Mechanical Turk</em>, 80–88. CSLDAMT ’10. Stroudsburg, PA, USA: Association for Computational Linguistics. <a href="http://dl.acm.org/citation.cfm?id=1866696.1866709">http://dl.acm.org/citation.cfm?id=1866696.1866709</a>.</p>
+<p>Holley, Rose. 2009. “Many Hands Make Light Work: Public Collaborative OCR Text Correction in Australian Historic Newspapers.” National Library of Australia. <a href="http://www-prod.nla.gov.au/openpublish/index.php/nlasp/article/viewArticle/1406">http://www-prod.nla.gov.au/openpublish/index.php/nlasp/article/viewArticle/1406</a>.</p>
+<p>———. 2010. “Crowdsourcing: How and Why Should Libraries Do It?” <em>D-Lib Magazine</em> 16 (3) (March). doi:<a href="http://dx.doi.org/10.1045/march2010-holley">10.1045/march2010-holley</a>. <a href="http://www.dlib.org/dlib/march10/holley/03holley.html">http://www.dlib.org/dlib/march10/holley/03holley.html</a>.</p>
+<p>Howe, Jeff. 2008. <em>Crowdsourcing: Why the Power of the Crowd Is Driving the Future of Business</em>. 1st ed. Crown Business.</p>
+<p>Lamere, Paul. 2008. “Social Tagging and Music Information Retrieval.” <em>Journal of New Music Research</em> 37 (2): 101–114. <a href="http://www.tandfonline.com.proxy2.library.illinois.edu/doi/abs/10.1080/09298210802479284">http://www.tandfonline.com.proxy2.library.illinois.edu/doi/abs/10.1080/09298210802479284</a>.</p>
+<p>Little, Greg, Lydia B. Chilton, Max Goldman, and Robert C. Miller. 2009. “TurKit: Tools for Iterative Tasks on Mechanical Turk.” In <em>Proceedings of the ACM SIGKDD Workshop on Human Computation</em>, 29–30. HCOMP ’09. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/1600150.1600159">10.1145/1600150.1600159</a>. <a href="http://doi.acm.org/10.1145/1600150.1600159">http://doi.acm.org/10.1145/1600150.1600159</a>.</p>
+<p>Liu, Xiaoyong, and W. Bruce Croft. 2004. “Cluster-Based Retrieval Using Language Models.” In <em>Proceedings of the 27th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, 186–193. SIGIR ’04. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/1008992.1009026">10.1145/1008992.1009026</a>. <a href="http://doi.acm.org/10.1145/1008992.1009026">http://doi.acm.org/10.1145/1008992.1009026</a>.</p>
+<p>Mason, Winter, and Duncan J. Watts. 2010. “Financial Incentives and the ‘Performance of Crowds’.” <em>SIGKDD Explor. Newsl.</em> 11 (2) (May): 100–108. doi:<a href="http://dx.doi.org/10.1145/1809400.1809422">10.1145/1809400.1809422</a>. <a href="http://doi.acm.org/10.1145/1809400.1809422">http://doi.acm.org/10.1145/1809400.1809422</a>.</p>
+<p>Moyle, M., J. Tonra, and V. Wallace. 2010. “Manuscript Transcription by Crowdsourcing: Transcribe Bentham.” <em>LIBER Quarterly</em> 20 (3). <a href="http://liber.library.uu.nl/publish/issues/2010-3_4/index.html?000514">http://liber.library.uu.nl/publish/issues/2010-3_4/index.html?000514</a>.</p>
+<p>Neuendorf, Kimberly A. 2002. <em>The Content Analysis Guidebook</em>. Thousand Oaks, CA, USA: Sage Publications.</p>
+<p>Organisciak, Peter. 2013. “Incidental Crowdsourcing: Crowdsourcing in the Periphery.” In Lincoln, Nebraska. <a href="http://dh2013.unl.edu/abstracts/ab-273.html">http://dh2013.unl.edu/abstracts/ab-273.html</a>.</p>
+<p>Organisciak, Peter, Miles Efron, Katrina Fenlon, and Megan Senseney. 2012. “Evaluating Rater Quality and Rating Difficulty in Online Annotation Activities.” <em>Proceedings of the American Society for Information Science and Technology</em> 49 (1): 1–10. doi:<a href="http://dx.doi.org/10.1002/meet.14504901166">10.1002/meet.14504901166</a>. <a href="http://onlinelibrary.wiley.com/doi/10.1002/meet.14504901166/abstract">http://onlinelibrary.wiley.com/doi/10.1002/meet.14504901166/abstract</a>.</p>
+<p>Organisciak, Peter, Jaime Teevan, Susan Dumais, Robert C. Miller, and Adam Tauman Kalai. 2013. “Personalized Human Computation.” In Palm Spring, CA.</p>
+<p>Page, Lawrence, Sergey Brin, Rajeev Motwani, and Terry Winograd. 1999. “The PageRank Citation Ranking: Bringing Order to the Web.” Technical Report 1999-66. Stanford InfoLab. <a href="http://ilpubs.stanford.edu:8090/422/">http://ilpubs.stanford.edu:8090/422/</a>.</p>
+<p>Ponte, Jay M., and W. Bruce Croft. 1998. “A Language Modeling Approach to Information Retrieval.” In <em>Proceedings of the 21st Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, 275–281. SIGIR ’98. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/290941.291008">10.1145/290941.291008</a>. <a href="http://doi.acm.org/10.1145/290941.291008">http://doi.acm.org/10.1145/290941.291008</a>.</p>
+<p>Raykar, Vikas C., Shipeng Yu, Linda H. Zhao, Anna Jerebko, Charles Florin, Gerardo Hermosillo Valadez, Luca Bogoni, and Linda Moy. 2009. “Supervised Learning from Multiple Experts: whom to Trust When Everyone Lies a Bit.” In <em>Proceedings of the 26th Annual International Conference on Machine Learning</em>, 889–896. ICML ’09. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/1553374.1553488">10.1145/1553374.1553488</a>. <a href="http://doi.acm.org.proxy2.library.illinois.edu/10.1145/1553374.1553488">http://doi.acm.org.proxy2.library.illinois.edu/10.1145/1553374.1553488</a>.</p>
+<p>Sheng, Victor S., Foster Provost, and Panagiotis G. Ipeirotis. 2008. “Get Another Label? improving Data Quality and Data Mining Using Multiple, Noisy Labelers.” In <em>Proceedings of the 14th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em>, 614–622. KDD ’08. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/1401890.1401965">10.1145/1401890.1401965</a>. <a href="http://doi.acm.org.proxy2.library.illinois.edu/10.1145/1401890.1401965">http://doi.acm.org.proxy2.library.illinois.edu/10.1145/1401890.1401965</a>.</p>
+<p>Song, Fei, and W. Bruce Croft. 1999. “A General Language Model for Information Retrieval.” In <em>Proceedings of the Eighth International Conference on Information and Knowledge Management</em>, 316–321. CIKM ’99. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/319950.320022">10.1145/319950.320022</a>. <a href="http://doi.acm.org/10.1145/319950.320022">http://doi.acm.org/10.1145/319950.320022</a>.</p>
+<p>Spiteri, Louise F. 2011. “Social Discovery Tools: Cataloguing Meets User Convenience.” In <em>Proceedings from North American Symposium on Knowledge Organization</em>. Vol. 3. <a href="http://journals.lib.washington.edu/index.php/nasko/article/view/12790">http://journals.lib.washington.edu/index.php/nasko/article/view/12790</a>.</p>
+<p>Springer, Michelle, Beth Dulabahn, Phil Michel, Barbara Natanson, David W. Reser, Nicole B. Ellison, Helena Zinkham, and David Woodward. 2008. “For the Common Good: The Library of Congress Flickr Pilot Project.” In <a href="http://www.loc.gov/rr/print/flickr_report_final.pdf">http://www.loc.gov/rr/print/flickr_report_final.pdf</a>.</p>
+<p>Trant, Jennifer, and Bruce Wyman. 2006. “Investigating Social Tagging and Folksonomy in Art Museums with Steve. Museum.” In <em>Proceedings of the WWW’06 Collaborative Web Tagging Workshop</em>. <a href="http://www.ra.ethz.ch/cdstore/www2006/www.rawsugar.com/www2006/4.pdf">http://www.ra.ethz.ch/cdstore/www2006/www.rawsugar.com/www2006/4.pdf</a>.</p>
+<p>Von Ahn, Luis, Benjamin Maurer, Colin <span>McMillen</span>, David Abraham, and Manuel Blum. 2008. “recaptcha: Human-Based Character Recognition via Web Security Measures.” <em>Science</em> 321 (5895): 1465–1468. <a href="http://www.sciencemag.org/content/321/5895/1465.short">http://www.sciencemag.org/content/321/5895/1465.short</a>.</p>
+<p>Welinder, P., and P. Perona. 2010. “Online Crowdsourcing: Rating Annotators and Obtaining Cost-Effective Labels.” In <em>2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</em>, 25–32. IEEE. doi:<a href="http://dx.doi.org/10.1109/CVPRW.2010.5543189">10.1109/CVPRW.2010.5543189</a>.</p>
+<p>Whitehill, J., P. Ruvolo, T. Wu, J. Bergsma, and J. Movellan. 2009. “Whose Vote Should Count More: Optimal Integration of Labels from Labelers of Unknown Expertise.” <em>Advances in Neural Information Processing Systems</em> 22: 2035–2043.</p>
+<p>Zhai, Chengxiang, and John Lafferty. 2001. “A Study of Smoothing Methods for Language Models Applied to Ad Hoc Information Retrieval.” In <em>Proceedings of the 24th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, 334–342. SIGIR ’01. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/383952.384019">10.1145/383952.384019</a>. <a href="http://doi.acm.org/10.1145/383952.384019">http://doi.acm.org/10.1145/383952.384019</a>.</p>
+<p>Zhou, Ding, Jiang Bian, Shuyi Zheng, Hongyuan Zha, and C. Lee Giles. 2008. “Exploring Social Annotations for Information Retrieval.” In <em>Proceedings of the 17th International Conference on World Wide Web</em>, 715–724. WWW ’08. New York, NY, USA: ACM. doi:<a href="http://dx.doi.org/10.1145/1367497.1367594">10.1145/1367497.1367594</a>. <a href="http://doi.acm.org/10.1145/1367497.1367594">http://doi.acm.org/10.1145/1367497.1367594</a>.</p>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: 'moon', // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+  </body>
+</html>
