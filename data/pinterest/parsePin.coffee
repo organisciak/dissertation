@@ -3,7 +3,6 @@
 request = require 'request'
 cheerio = require 'cheerio'
 fs = require 'fs'
-console.log process.argv
 stringify = require 'csv-stringify'
 generate = require 'csv-generate'
 util = require 'util'
@@ -45,6 +44,9 @@ parseData = (script) ->
     # Assign shorthand references
     meta = P.scout.data.page_info.meta
     start = P.start.data.tree.data
+    if !(start?)
+      util.debug("This URL no longer exists: " + url)
+      return
 
     pinData = {
       id: start.id
