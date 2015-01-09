@@ -1,0 +1,17 @@
+# Sampling
+
+# Sample 1/1000th of pins
+#
+cat pins.txt | /share/apps/bin/parallel -j16 ./sampleFromPinFile.sh {} 2>pinsampling.error >pinSampleLevel1Urls.txt & 
+
+# Randomize order and split into 10 pieces
+mkdir -p links/level1pins
+sort -R pinSampleLevel1Urls.txt >links/level1pins/pinSampleLevel1UrlsRand.txt
+split --lines=20000 links/level1pins/pinSampleLevel1UrlsRand.txt links/level1pins/pinLevel1Sample.
+rm pinSampleLevel1Urls.txt 
+
+
+# Load Pins from each sample, one at a time with a minimum 2 second delay
+#cat PinSample.txt | parallel -j1 -n1 --delay 2 /share/apps/bin/coffee parsePin.coffee {} >testSampling.log 2>testSampling.err & 
+#
+cat links/level1pins/pinLevel1Sample.aa | parallel -j1 -n1 --delay 2 /share/apps/bin/coffee parsePin.coffee {} --basePath=../level1pins/aa/ >../logs/pin.level1.aa.log 2>..logs/pin.level1.aa.err &

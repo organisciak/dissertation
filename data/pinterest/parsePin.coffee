@@ -1,4 +1,4 @@
-# Usage: coffee parsPin.coffee [pin url] --save-heading
+# Usage: coffee parsPin.coffee pin_url [--save-heading]
 #
 request = require 'request'
 cheerio = require 'cheerio'
@@ -13,7 +13,18 @@ if not url or url.substring(0,4) != 'http'
   util.debug url
   return
 
-saveHeading = (if process.argv[3] and process.argv[3] == '--save-heading' then true else false)
+opts = {
+  saveHeading: false
+  basePath: "."
+}
+
+for arg in process.argv
+  if arg == '--save-heading'
+    opts.saveHeading = true
+  if arg.indexOf("=") != -1
+    kwarg = arg.split("=")
+    if kwarg[0] == "--basePath"
+      opts.basePath = kwarg[1]
 
 request(url, (err, res, body) ->
   if err
@@ -83,7 +94,6 @@ parseData = (script) ->
     pinJoinData = [start.pin_join]
     boardData = [start.board]
 
-
     # Flatten all comments and collect additional users of interest
     commentsData = []
     for comment in start.comments.data
@@ -108,22 +118,25 @@ parseData = (script) ->
     P.scout.data.routes = null
     P.scout.data.context = null
 
-    saveCSV([pinData], 'pinData.txt', saveHeading)
-    saveCSV(commentsData, 'commentsData.txt', saveHeading)
-    saveCSV(userData, 'userData.txt', saveHeading)
-    saveCSV(boardData, 'boardData.txt', saveHeading)
-    saveCSV(pinJoinData, 'pinJoinData.txt', saveHeading)
+    saveCSV([pinData], 'pinData.csv', opts)
+    saveCSV(commentsData, 'commentsData.csv', opts)
+    saveCSV(userData, 'userData.csv', opts)
+    saveCSV(boardData, 'boardData.csv', opts)
+    saveCSV(pinJoinData, 'pinJoinData.csv', opts)
 
-saveCSV = (data, path, saveHeadingInstead=false) ->
+saveCSV = (data, path, opts) ->
   if data.length == 0
     return
-  if saveHeadingInstead
+  if opts.saveHeading
     # An easy way to write out the heading for a CSV file
     values = ((k for k,v of arr) for arr in data)
   else
     values = ((v for k,v of arr) for arr in data)
+
+  modPath = opts.basePath + "/" + path
+
   stringify(values, (err, output) ->
-      fs.appendFile(path, output, (err) ->
+      fs.appendFile(modPath, output, (err) ->
         if err
           util.debug err
       )
