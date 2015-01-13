@@ -138,7 +138,7 @@ Though the most common type of pin is saved from an external website, it is also
 The 'descriptions' are required but free-text, meaning they do not necessarily _describe_ the image.
 
 Pins are sorted into curated lists, referred to as 'boards'.
-Like pins, classification into board is not controlled.
+Like pins, classification into boards is not controlled.
 While adding a pin to a board is an act of classification, the classes are user-defined and can be created for various reason, such as quality judgments (e.g. "Neat stuff"), thematically descriptive (e.g. "dream wedding"), or miscellany of various sorts (e.g. "inspiration", "funny").
 Boards are user-specific, created by a user with a title, description, category, and optional map.
 
@@ -289,7 +289,7 @@ It is likely that Pinterest's own retrieval model incorporates additional implic
 This is a useful indicator of a item's quality, itself a form of crowd-contributed retrieval evidence, but is well-studied and too removed from the scope of this study to undertake.
 
 -------------------------------------------------------------------------------
-appetizers, art, ab workout, animals, apartment decorating, appetizers, art,
+appetizers, art,
 ab workout, animals, apartment decorating, christmas, christmas decorations,
 chicken recipes, crockpot recipes, christmas crafts, diy, dinner recipes,
 dresses, desserts, disney, easter, engagement rings, elf on the shelf ideas,

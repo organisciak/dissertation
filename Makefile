@@ -12,7 +12,7 @@ stats:
 	cat logs/stats.csv | Rscript workspace/vis-progress.r
 	
 refs: 
-	perl -pe "s:^(@.*{.*_)\?*:\1:g" refs.bib | perl -pe "s/^(@.*{.*):_/\1_/g" >refs.bib2
+	perl -pe "s:^(@.*{.*_)\?*:\1:g" refs.bib | perl -pe "s/^(@.*{.*):_/\1_/g" | perl -pe "s/co-cre/cocre/g" >refs.bib2
 	mv refs.bib2 refs.bib
 
 defense:
@@ -20,7 +20,20 @@ defense:
 		-s proposal-defense/talk.md \
 		-o proposal-defense/talk.html \
 		--slide-level=2 \
-		-V theme=moon
+		-V theme=moon \
+		--filter pandoc-citeproc \
+		--mathjax \
+		$(pandoc_args)
+
+defensepdf:
+	pandoc -t beamer \
+		-s proposal-defense/talk.md \
+		-o proposal-defense/talk.pdf \
+		--filter pandoc-citeproc \
+		--mathjax \
+		$(pandoc_args)
+
+
 
 report:
 	# Update stats

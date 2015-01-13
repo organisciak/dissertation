@@ -39,3 +39,5 @@ temp.*
 document/*_*.docx
 data/yelp
 Thumbs.db
+.RData
+thesis.docx

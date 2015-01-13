@@ -19,7 +19,7 @@ The manner to improve on a basic task/description/items interface design is not 
 In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will compare the effect of task design on collected information retrieval data.
 Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval -- a typical encoding task performed by paid crowds, the following questions will be pursued:
 
- * __RQ1__: Which approaches to collection interface designs are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
+ * __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
 
  * __RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?
 
@@ -74,7 +74,7 @@ Particularly, my past doctoral-level research motivates this chapter, suggesting
  * In @organisciak_evaluating_2012 we found evidence that at least some error in crowdsourced relevance judgments stems from differing but not necessarily malicious interpretations of the task, suggesting that improved quality can follow from tweaks in design.
  * During research on @organisciak_personalized_2013, we found that asking people to reflect on their response changed the nature of their response, with less internal consistency.
  * In a sample study comparing the space of incidental crowdsourcing across two systems [@organisciak_incidental_2013], I found that an 'easy' rating interface -- one that puts up less hurdles to contribution -- results in a shifted distribution of ratings than a 'hard' interface.
- * In recently-completed research (submitted paper pending), I looked at low grader consistency in the ground truth for the Audio Music Similarity (AMS) task in the Music Information Retrieval Exchange (MIREX). One of the results found that redesigning the task to attach finer instruction to the rating improved the quality of judgments by crowdsourced judges.
+ * In recently-completed research, I looked at low grader consistency in the ground truth for the Audio Music Similarity (AMS) task in the Music Information Retrieval Exchange (MIREX). One of the results found that redesigning the task to attach finer instruction to the rating improved the quality of judgments by crowdsourced judges.
 
 #### Better workers read codebooks
 
@@ -383,7 +383,7 @@ With those considerations in mind, I propose the three interfaces to study for c
 #### Basic interface
 
 The basic interface will resemble an archetypal task, following conventions seen in Mechanical Turk usage.
-It will show workers an tasks with a goal, description, and ten items to perform actions on.
+It will show workers a task with a goal, description, and ten items to perform actions on.
 The goal of the interface will be to "identify the topic of a tweet."
 For each item, a multiple-choice question will be posed, with the proper noun phrases provided as options, as well as a free-text "Other" category and an "unknown" option. 
 The description will explain what a "topic" is, and make clear the difference between a topic and simply a mention.

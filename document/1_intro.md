@@ -103,7 +103,7 @@ Such information is invaluable in indexing items for information retrieval, wher
 
 Similarly, other uses of crowdsourcing capitalize on humans' abilities to spot when algorithmic attempts at understanding an information object have failed.
 ReCaptcha uses human contributions to transcribe transcriptions of OCR problem text from Google Books and the New York Times [@_what_]
-The National Library of Australia's Trove also crowdsources corrections of scanned text, by allowing readers of their scanned newspapers to edit transcript text when they come across problems [@holley_many_2009].
+The National Library of Australia's Trove also crowdsources corrections of scanned text, by allowing readers of their scanned newspapers to edit transcribed text when they come across problems [@holley_many_2009].
 
 Humans are also being used to encode parsable text descriptions for non-text materials or higher-level latent concepts.
 In libraries, this approach is being adopted with crowd transcription of materials which are too difficult for computer vision, such as digitized letters.
