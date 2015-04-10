@@ -41,3 +41,4 @@ data/yelp
 Thumbs.db
 .RData
 thesis.docx
+*.gz
