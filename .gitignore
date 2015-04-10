@@ -42,3 +42,6 @@ Thumbs.db
 .RData
 thesis.docx
 *.gz
+iConf-crowd-taxonomy/papers/
+*.zip
+desktop.ini
