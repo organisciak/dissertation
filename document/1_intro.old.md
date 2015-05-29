@@ -3,43 +3,6 @@ Introduction
 
 > In these democratic days, any investigation in the trustworthiness and peculiarities of popular judgments is of interest -- @galton_vox_1907
 
-<!--## Introduction-->
-
-The internet is growing increasingly interactive as it matures.
-Rather than merely transmitting information to readers, web pages allow their audience to react and interact with their information.
-The products of these interactions are a trove of qualitative judgements, valuable to modeling information objects.
-In recent years, this form of creation through collaboration has been studied as _crowdsourcing_.
-
-Effective information retrieval depends on reliable, detailed information to index.
-Crowdsourcing has the potential to improve retrieval over web documents by having humans produce descriptive metadata about documents.
-Humans can provide latent information about documents that would not be possible to ascertain computationally, such as quality judgments or higher-level thematic description.
-They are also adept at critical actions such as correcting, describing in different language, or inferring relationships with other documents.
-More importantly, crowdsourcing looks at human contribution at scales that are potentially useful for retrieval.
-
-<!-- Broad Research Question -->
-However, humans have predictable and unpredictable biases that make it difficult to systematically adopt their contributions in an information system.
-How do we control and interpret qualitative user contributions in an inherently quantitative system?
-This study looks at crowdsourcing for document metadata, which I refer to by the shorthand of _descriptive crowdsourcing_, and how to interpret this form of human contributed metadata in information retrieval.
-
-<!-- Specific Research Question -->
-Concretely, I am proposing a study in two parts, separated by their focus on _collecting_ descriptive metadata reliably, and on _using_ it in an appropriate information retrieval context.
-
- 1. In the first half, I will look at the effect of different designs for collection of descriptive metadata on the intercoder reliability of the collected data.
-    This is a study motivated by prior work done by myself and others, with a problem often mentioned but, to my knowledge, not pursued formally.
-
- 2. In the second half of this dissertation, I will look at improving retrieval using already-collected crowdsourcing data.
-    I focus on the system _Pinterest_, which is a valuable resource of human-encoded descriptive metadata, while sparse in its other textual content.
-    It is also an example of the loosely constrained form of crowdsourcing contribution that is often required to encourage participation, a trade-off that is less structured than would be preferable for retrieval model.
-
-<!-- In particular, this study looks at the issue of recoverable error in human-contributed data, alternately viewed as intercoder reliability when studied from the data end.
-Can error in descriptive crowdsourcing be accounted for, either at the time of data collection or afterward, in a manner that maximizes the intercoder reliability of contributions and subsequently the usefulness for information retrieval? -->
-
-<!--### Hypothesis-->
-I argue that the reliability of crowdsourced data can be improved by making an assumption that crowd contributors are honest-but-biased[^language]. This is an assumption supported by prior work and not uncommon in research on classification, such as the literature on intercoder reliability, but is understudied in crowd research.
-The proposed study follows the hypothesis that such an assumption leads to 
-a) more algorithmically valuable crowdsourced description and 
-b) a greater proportion of useful contributions.
-
 <!-- TODO1: Do my studies answer these questions? I NEED to compare to versions that don't make this assumption -->
 
 [^language]: In assuming that humans are biased, the biases referred to are the inclinations, leanings, and tendencies [@_bias_] of individuals, quirks that affect their worldview and how they understand and perform tasks.
@@ -74,13 +37,13 @@ A reader of the proposed dissertation will understand:
  * the tractability of making an assumption of honest-but-biased contributors.
 
 ## Crowdsourcing
- 
+
 Crowdsourcing is the distributed, large-scale collaboration of users contributing to a common product.
 Significantly, the term describes the _act_ of a system opening up for contributions from distributed users.
 Users do not necessarily collaborate directly with each other -- though they can -- so the crowd in the term refers broadly to the collective users of the system.
 Sourcing describes the act of soliciting user contribution, regardless of whether it is successfully executed or not.
 
-Crowdsourcing is an umbrella term preceded by a number of more narrowly scoped concepts, such as 
+Crowdsourcing is an umbrella term preceded by a number of more narrowly scoped concepts, such as
 commons-based peer production [@benkler_wealth_2006],
 open source software development [@raymond_cathedral_1999; @lakhani_how_2003],
 and human computation [@von_ahn_games_2006; @law_human_2011].<!--_-->
@@ -184,7 +147,7 @@ For example, when crowd contributions are used to inform recommendations, such a
 We thus see approaches to recommendation such as collaborative filtering, where users are matched to similar users based on the overlap between their tastes rather than a global definition of 'good' or 'bad' products.
 In such a case, inter-rater consistency is still important, to make it possible to identify similar users.
 Modern approaches to collaborative filtering commonly normalize ratings against
- a user-specific bias (i.e. "how does this rating compare this user's average rating") and sometimes against 
+ a user-specific bias (i.e. "how does this rating compare this user's average rating") and sometimes against
  an item-specific bias (i.e. "how does this rating compare to what the rest of the community thinks about the item").
 
 For objective tasks, @neuendorf_content_2002 differentiates between two types: manifest and latent.
@@ -194,13 +157,13 @@ Correcting or transcribing text from a scanned image would be grouped in the cat
 
 In contrast, latent tasks are assumed to have a theoretical truth, but one that is not outwardly stated.
 When a person tags a photograph with a free-text label or a worker classifies the sentiment of an opinionated tweet, they are interpreting the content.
-As @neuendorf_content_2002 notes, "objectivity is a much tougher criterion to achieve with latent than with manifest variables". 
+As @neuendorf_content_2002 notes, "objectivity is a much tougher criterion to achieve with latent than with manifest variables".
 
-### Benefits of Recovering Error from Crowd Contributions 
+### Benefits of Recovering Error from Crowd Contributions
 
 Why try to account for human error in crowdsourcing collection?
 With large enough numbers, it doesn't matter.
-Problems of user quality get smoothed over when enough honest people collaborate, while problems stemming from perception biases in many cases will converge on the normative understanding of the task. 
+Problems of user quality get smoothed over when enough honest people collaborate, while problems stemming from perception biases in many cases will converge on the normative understanding of the task.
 However, by recovering a cleaner signal from human contributions, a system is reliant on less workers.
 Doing so thus helps keep system less affected by the ebbs and flows of motivating volunteers, or the costs of paying workers.
 Since the attention that contributors is not uniform across all items in a system, usually resembling an inverse power-law distribution, understanding crowdsourced information with less aggregation means more of the middle of the distribution can be represented.
@@ -219,12 +182,12 @@ This study reflects my own field of information retrieval, and more broadly in i
 Information science deals with the representation of information objects, giving crowdsourcing considerable potential as a tool for item description.
 
 By way of example, consider crowd curation of materials.
-In the presence of large collections of information objects, information-seeking and discovery can be aided by user-curated lists of thematically-similar objects. 
+In the presence of large collections of information objects, information-seeking and discovery can be aided by user-curated lists of thematically-similar objects.
 Sites like Amazon, LibraryThing and the new Delicious let people create lists of products, books, and websites, respectively.
-The themes binding the lists are also user-defined, so a list can be about 
- quality (e.g. "favorites", "worst of"), 
- thematic (e.g. "teen vampire romance novels"), 
- or administrative (e.g. "to buy", "read this year"). 
+The themes binding the lists are also user-defined, so a list can be about
+ quality (e.g. "favorites", "worst of"),
+ thematic (e.g. "teen vampire romance novels"),
+ or administrative (e.g. "to buy", "read this year").
 This crowdsourced information is useful to users directly, but it also provides high-quality information for understanding the content in a collection and its relationship to other materials.
 
 Inversely, this can return value to users curating content themselves: consider a system that can discover further items for a user that are thematically in line with a group that they have compiled.
@@ -246,16 +209,16 @@ Agreement is sometimes a useful metric for objective information, but sometimes 
 --------------------------------------------------------------------------------------------
            Action            Examples
 ---------------------------- ---------------------------------------------------------------
-           Rating            Rating helpfulness of online comments or reviews (e.g. Amazon), 
-                             rating the quality of online content (e.g. items on Youtube, 
+           Rating            Rating helpfulness of online comments or reviews (e.g. Amazon),
+                             rating the quality of online content (e.g. items on Youtube,
                              Netflix, LibraryThing, etc)
 
 Classification / Curation    tagging (e.g. Delicious), labeling, adding to lists
 
-   Saving / Recommending     Starring, liking/recommending (i.e. Facebook), adding to 
+   Saving / Recommending     Starring, liking/recommending (i.e. Facebook), adding to
                              favourites (e.g. Flickr)
 
-         Editing             Translations (e.g. Facebook), Corrections (e.g. National 
+         Editing             Translations (e.g. Facebook), Corrections (e.g. National
                              Library of Australia)
 
          Feedback            Marking online comments as inappropriate (e.g. ABC News),
@@ -274,7 +237,7 @@ Tagging a photo /        Easy personal retrieval,        Improved search, improv
 bookmark                 appeal of collecting,
                          item grouping for easy sharing
 
-Rating an product        Sharing opinion                 improved recommendations, 
+Rating an product        Sharing opinion                 improved recommendations,
                                                          prioritize good values
 
 Rating a digitally       sharing opinion, communicating  Identifying and promoting quality
@@ -295,9 +258,9 @@ Feedback                 sharing personal knowledge and  Correct problem data, d
 
 --------------------------------------------------------------------------------------------
 
-_Table 2: Chart comparing user and system uses for a selection of incidental crowdsourcing actions_ 
-<!--TODO1: add citations whenever possible, 
-    not origin in incidental crowdsourcing independent study 
+_Table 2: Chart comparing user and system uses for a selection of incidental crowdsourcing actions_
+<!--TODO1: add citations whenever possible,
+    not origin in incidental crowdsourcing independent study
     format properly
 -->
 
@@ -317,13 +280,13 @@ There is an information object that already exists, and crowdsourcing workers ad
 The response can be subjective, such as ratings or interpretations, or objective, such as descriptions or corrections.
 
 Crowdsourcing descriptive metadata stands in contrast to crowdsourcing that _creates_, introducing new information objects into the world.
-One example of this is T-shirt design contests on Threadless[^1]. 
+One example of this is T-shirt design contests on Threadless[^1].
 
 [^1]: http://www.threadless.com
 
 This approach to crowdsourcing was looked at in @organisciak_incidental_2013 when defining the concept of _incidental crowdsourcing_.
 Incidental crowdsourcing is an approach to crowdsourcing that is unobtrusive and non-critical.
-This form of peripheral collection of data was noted to favour descriptive activities. 
+This form of peripheral collection of data was noted to favour descriptive activities.
 
 ### Human computation
 
@@ -334,7 +297,7 @@ Likewise, while a notable portion of crowdsourcing tasks are creative, such as w
 
 ### Worker, volunteer, contributor
 
-The space of crowdsourcing is large and the incentives for contributors are varied. 
+The space of crowdsourcing is large and the incentives for contributors are varied.
 The most significant distinction within crowdsourcing is in comparing uses that pay their contributors and those that do not.
 It's valuable to make this distinction because paying a person changes they way that they perform, while also simplifying some of the concerns that are necessary in retaining volunteers.
 
