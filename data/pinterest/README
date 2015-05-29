@@ -10,8 +10,36 @@ sort -R pinSampleLevel1Urls.txt >links/level1pins/pinSampleLevel1UrlsRand.txt
 split --lines=20000 links/level1pins/pinSampleLevel1UrlsRand.txt links/level1pins/pinLevel1Sample.
 rm pinSampleLevel1Urls.txt 
 
-
 # Load Pins from each sample, one at a time with a minimum 2 second delay
 #cat PinSample.txt | parallel -j1 -n1 --delay 2 /share/apps/bin/coffee parsePin.coffee {} >testSampling.log 2>testSampling.err & 
 #
 cat links/level1pins/pinLevel1Sample.aa | parallel -j1 -n1 --delay 2 /share/apps/bin/coffee parsePin.coffee {} --basePath=../level1pins/aa/ >../logs/pin.level1.aa.log 2>..logs/pin.level1.aa.err &
+
+# Download images
+cat ../level1pins/pinDataHeader.csv ../level1pins/aa/pinData.csv | csvcut -c image236 | tail -n +1 | parallel --eta -n100 -j90% --delay 10 wget -i - -x --directory-prefix=../images/
+
+Probably don't need all images, though.
+
+
+# Sample for Tags
+
+A 100 photo sample from Pinterest.
+First, a number of pinData.json files were randomly sampled. Each file was randomized and truncated (1000 from file), then combined and randomized again.
+
+```
+find ../level1pins/a*/pinData.csv | parallel sort -R random '|' head -n 1000 | sort -R >testing-sample.csv
+cat ../level1pins/pinDataHeader.csv testing-sample.csv >testing-sample2.csv
+mv testing-sample2.csv testing-sample.csv
+```
+
+Clean the file with csvclean from csvkit, which outputs testing-sample_out.csv (fixed) and testing-sample_err.csv (errors).
+
+```
+csvclean testing-sample.csv
+```
+
+Now, trim the sample to something meaningful. Only keep pins without a price, and which have >0 repins and >0 likes (for quality reasons), then truncate to 100 items and save as JSON.
+
+```
+cat testing-sample_out.csv | csvgrep -c price -r "^0"$ | csvgrep -c likes -r "^[1-9]" | csvgrep -c repins -r "^[1-9]" | csvcut -C price,price_currency | csvjson >testing-sample.json
+```
