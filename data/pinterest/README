@@ -41,5 +41,5 @@ csvclean testing-sample.csv
 Now, trim the sample to something meaningful. Only keep pins without a price, and which have >0 repins and >0 likes (for quality reasons), then truncate to 100 items and save as JSON.
 
 ```
-cat testing-sample_out.csv | csvgrep -c price -r "^0"$ | csvgrep -c likes -r "^[1-9]" | csvgrep -c repins -r "^[1-9]" | csvcut -C price,price_currency | csvjson >testing-sample.json
+cat testing-sample_out.csv | csvgrep -c price -r "^0"$ | csvgrep -c is_banned -k "^$" | csvgrep -c likes -r "^[1-9]" | csvgrep -c repins -r "^[1-9]" | csvcut -C price,price_currency | csvjson >testing-sample.json
 ```
