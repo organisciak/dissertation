@@ -15,5 +15,4 @@ Rather than focusing on finding dishonest or unreliable contributors, a well-stu
 
 Often, there is a trade-off between well-engaged crowds and the amount of restrictiveness that a task designer can exert on a task.
 This dissertation admits that in practice, the engagement of an accessible and non-restrictive task is more encouraging both to contributors and the health of a community.
-How do you encourage the humanness<!-- I know this is a real word used in literature, but it seems awkwark... --> of contributors while still convincing them to be consistent and reliable, and how do you model the subsequent contributions?
-
+How do you encourage the humanness<!-- I know this is a real word used in literature, but it seems awkward... --> of contributors while still convincing them to be consistent and reliable, and how do you model the subsequent contributions?
