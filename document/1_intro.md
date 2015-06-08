@@ -15,27 +15,29 @@ People can provide latent information about documents that would not be possible
 They are also adept at critical actions such as correcting, describing in different language, or inferring relationships with other documents.
 Most importantly, crowdsourcing looks at human contribution at scales that are difficult to attain in alternate ways.
 
-<!-- Broad Research Question -->
+<!-- Broad Research Question --><!--TODO add sidenote about Broad research Questions-->
 \newthought{However}, humans have predictable and unpredictable biases that make it difficult to systematically adopt their contributions in an information system.
 How do we control and interpret qualitative user contributions in an inherently quantitative system?
 
 This work focuses on understanding the characteristics of data collected through crowdsourcing, toward two ends: awareness and data quality.
 As will be demonstrated, crowdsourcing research is sensitive to various circumstances of instrumentation, context, and community.
-In the space of awareness, this work seeks to _understand_ the intricacies of these biases: looking at how tasks are completed when they are more or less engaging, restrictive, or subjective.
+This work seeks to _understand_ the intricacies of these biases: looking at how tasks are completed when they are more or less engaging, restrictive, or subjective.
 Valid research needs to be aware of how circumstance affects crowds, as well as know what information is important to report for reproducibility.
 Understanding leads to practical recommendations for maximizing data quality in crowdsourced data, and this study focuses on a priori instrumentation choices and posterior data normalization for improving how both subjective and objective tasks are collected.
 
 <!-- Scoping -->
 
 \newthought{This work focuses on} a particular type of crowd production -- metadata about existing information objects -- and a particular form of collection: microtasks in paid crowd platforms.
-It does look at both subjective and objective types of tasks however.
+These are viewed in the space of subjective and objective types of tasks.
 
 It is important to stay aware of the broader space of crowdsourcing and how characteristics of paid microtasks generalize to it.
-However, as the typology presented in Chapter 3 makes clear, crowdsourcing is an overly broad space; the treatment here is controlled a subset pertinent to information science research.
+However, as the typology presented in Chapter 3 makes clear, crowdsourcing is an overly broad space; the treatment here is controlled to a subset pertinent to information science research.
 
 Details of each part of this scope will follow -- crowdsourcing metadata, microtasks, paid crowd platforms, and subjective/objective crowdsourcing -- but it is important to lay the tracks first.
 
 ## Overview
+
+### Research Questions
 
 ### Take Away
 
@@ -52,15 +54,11 @@ A reader of this work will understand:
 
 ### Methodology
 
-## Information Science
+Outlin
 
-Biases and ...
+## Context
 
-## Methodology
-
-Outline each chapter
-
-## Crowdsourcing
+### Crowdsourcing
 
 Crowdsourcing is the distributed, large-scale collaboration of users contributing to a common product.
 Significantly, the term describes the _act_ of a system opening up for contributions from distributed users.
@@ -73,6 +71,11 @@ open source software development [@raymond_cathedral_1999; @lakhani_how_2003],
 and human computation [@von_ahn_games_2006; @law_human_2011].<!--_-->
 
 Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds’ [@surowiecki_wisdom_2004]; one way to interpret crowdsourcing is the process of trying to utilize that wisdom.
+
+### Information Science
+
+Biases and ...
+
 
 ## Scoping in Detail
 
@@ -150,19 +153,171 @@ Four 'threats to reliability' that @neuendorf_content_2002 lists echo issues in 
 
 \newthought{How do you account} for the variability of human contributions in leveraging online crowds? This study looks to understand the threats to reliability in the context of paid crowdsourcing, in three spaces: error introduced by contributors (e.g. problem coders), error owing to the external factors (e.g. an insufficient coding scheme, inadequate training), and error owing to the task (i.e. subjective or non-normative tasks treated objectively).
 
-### Research Questions
 
 ## Relevance
+
+The contribution of this work is in the application of corrective techniques to the crowd-based encoding of metadata about existing information objects, and the broader understanding of the nature of such contributions.
+
+There are many ways to apply a lens to such research.
+This study reflects my own field of information retrieval, and more broadly in information science.
+
+### Relevance in Information Science
+
+Information science deals with the representation of information objects, giving crowdsourcing considerable potential as a tool for item description.
+
+By way of example, consider crowd curation of materials.
+In the presence of large collections of information objects, information-seeking and discovery can be aided by user-curated lists of thematically-similar objects.
+Sites like Amazon, LibraryThing and the new Delicious let people create lists of products, books, and websites, respectively.
+The themes binding the lists are also user-defined, so a list can be about
+ quality (e.g. "favorites", "worst of"),
+ thematic (e.g. "teen vampire romance novels"),
+ or administrative (e.g. "to buy", "read this year").
+This crowdsourced information is useful to users directly, but it also provides high-quality information for understanding the content in a collection and its relationship to other materials.
+
+Inversely, this can return value to users curating content themselves: consider a system that can discover further items for a user that are thematically in line with a group that they have compiled.
+
+New OPACs are increasing giving users the ability to classify and curate content, connecting to user habits that are commonly associated with public libraries.
+For example, BiblioCommons -- employed at the Edmonton and New York Public Libraries -- positions list-making as a “curated topic guide,” a way to “share your expertise with others” [@_lists_].
+According to one study of social OPACs, the list feature in BiblioCommons is heavily used, many times greater than commenting and more than ratings [@spiteri_social_2011].
+
+Similarly, cultural heritage collections have reported past success in using crowd contributions for increasing discoverability to content, improving metadata quality, or even contributing to item description.
+For example, after a pilot partnership with Flickr, the Library of Congress implemented a workflow for review public comments on images for research or information to integrate back into item records [@springer_for_2008].
+
+Crowd curation is just one example of a use of crowdsourcing to create information.
+Table \ref{crowd_actions} shows a number of different actions that have been observed for collecting descriptive metadata.
+
+While crowdsourcing has shown itself as a useful method for enriching information objects, there remains the question of how the method of collection affects the way the data can be used.
+Contributors are self-selected and often without verified reliability, training or expertise.
+Agreement is sometimes a useful metric for objective information, but sometimes there is meaning in disagreement, such as in collaborative filtering.
+
+--------------------------------------------------------------------------------------------
+           Action            Examples
+---------------------------- ---------------------------------------------------------------
+           Rating            Rating helpfulness of online comments or reviews (e.g. Amazon),
+                             rating the quality of online content (e.g. items on Youtube,
+                             Netflix, LibraryThing, etc)
+
+Classification / Curation    tagging (e.g. Delicious), labeling, adding to lists
+
+   Saving / Recommending     Starring, liking/recommending (i.e. Facebook), adding to
+                             favourites (e.g. Flickr)
+
+         Editing             Translations (e.g. Facebook), Corrections (e.g. National
+                             Library of Australia)
+
+         Feedback            Marking online comments as inappropriate (e.g. ABC News),
+                             “Did you find this helpful?” (e.g. Edmunds)
+
+          Other              Commenting, sharing, encoding
+
+--------------------------------------------------------------------------------------------
+
+_Table: Types of actions seen in descriptive crowdsourcing_ \label{crowd_actions}
+
+--------------------------------------------------------------------------------------------
+     Action              User Use                        System Use
+------------------------ ------------------------------- -----------------------------------
+Tagging a photo /        Easy personal retrieval,        Improved search, improved browsing
+bookmark                 appeal of collecting,
+                         item grouping for easy sharing
+
+Rating an product        Sharing opinion                 improved recommendations,
+                                                         prioritize good values
+
+Rating a digitally       sharing opinion, communicating  Identifying and promoting quality
+digested item i.e.       approval
+video, Comment
+
+Flagging content         cleaning windows for the        Higher signal-to-noise in editorial
+                         community, catharsis            maintenance
+
+Starring                 communicating approval,         Identifying quality content
+                         saving for future reference
+
+Sharing                  showing items to friends,       Identifying popular/interesting
+                         referring or curating content   content
+
+Feedback                 sharing personal knowledge and  Correct problem data, discover system
+                         opinions, altruism              issues
+
+--------------------------------------------------------------------------------------------
+
+_Table 2: Chart comparing user and system uses for a selection of incidental crowdsourcing actions_
+<!--TODO1: add citations whenever possible,
+    not origin in incidental crowdsourcing independent study
+    format properly
+-->
+
+<!-- TODO1 relevance in IR section -->
+
+## Definitions
+
+Before proceeding, the terminology of this study should be established. As this work spans multiple domains, and makes reference to recently introduced concepts, it is important to establish a shared understanding of language within these pages.
+
+Note that the treatment here is cursory; a more in-depth look can be found in the literature review.
+
+### Descriptive crowdsourcing
+This paper focuses on crowdsourcing for descriptive metadata.
+
+The distinction here is that the human contributions are reactive.
+There is an information object that already exists, and crowdsourcing workers add information about it.
+The response can be subjective, such as ratings or interpretations, or objective, such as descriptions or corrections.
+
+Crowdsourcing descriptive metadata stands in contrast to crowdsourcing that _creates_, introducing new information objects into the world.
+One example of this is T-shirt design contests on Threadless[^1].
+
+[^1]: http://www.threadless.com
+
+This approach to crowdsourcing was looked at in @organisciak_incidental_2013 when defining the concept of _incidental crowdsourcing_.
+Incidental crowdsourcing is an approach to crowdsourcing that is unobtrusive and non-critical.
+This form of peripheral collection of data was noted to favour descriptive activities.
+
+### Human computation
+
+Human computation is a separate but closely related concept to crowdsourcing.
+It refers to activities where humans perform work in a paradigm reminiscent to computing, and which could conceivably one day be done by computers [@law_human_2011; @quinn_human_2011].
+Human computation does not need to be crowdsourced, but many such tasks benefit from crowdsourcing.
+Likewise, while a notable portion of crowdsourcing tasks are creative, such as writing or commenting, human computation represents a large portion of the types of crowdsourcing seen in the wild.
+
+### Worker, volunteer, contributor
+
+The space of crowdsourcing is large and the incentives for contributors are varied.
+The most significant distinction within crowdsourcing is in comparing uses that pay their contributors and those that do not.
+It's valuable to make this distinction because paying a person changes they way that they perform, while also simplifying some of the concerns that are necessary in retaining volunteers.
+
+In general, I refer to crowd individuals as _contributors_.
+When the distinction is necessary, paid contributors are referred to as _workers_, while elective contributions are made by _volunteers_.
+
+
+
+## Approach
+
+
+## Intercoder reliability
+
+In crowdsourcing, increasing intercoder reliability is sometimes at odds with the collection strategy.
+The most effective crowdsourcing deals with large numbers of people, and part of maximizing the involvement of contributors, especially those which are volunteers, is to minimize the restrictions on a contribution.
+Enforcing a strong coding scheme or vigorously training contributors is also likely to reduce the number of individuals willing to perform the task.
+Whether the improvements in quality are worth the losses in contributions will be considered during this study.
+
+Other times, controlling the circumstances under which the contribution is created is not possible, such as in information retrieval over web documents.
+<!--The second chapter of new research will look at such a case: how can you make sense of already-collected contribution data-->
+For tasks where the contribution is numeric and ordinally or continuously coded, methods exist for interpreting when coders are similar but operating with different frame.
+These include using covariation instead of agreement [@neuendorf_content_2002], and normalizing by a user mean [@hofmann_latent_2004; @bell_bellkor_2008].
+A later chapter of the proposed dissertation will look at modeling sparse textual data on the crowdsourced website Pinterest, by smoothing -- among other approaches --document models against other users' 'interpretations' of the same items.
+
+
+
 ## Chapter Outline
 
 The following dissertation is organized into seven chapters:
   three chapters contextualizing this dissertation and crowdsourcing in general,
   three chapters contributing original research,
-  and a summative conclusion chapter.
+  and a concluding chapter to tie it all together.
 
 After the current introduction chapter, which discusses this project's research questions, scoping, rationale, and relevance, __Chapter 2__ provides a general overview of crowdsourcing.
 Here, a reader less familiar with the history and significant general research in the area will be introduced to them.
-  Chapter 2 presents, essentially, what the first few weeks of an introduction to crowdsourcing course would offer.
+  Chapter 2 presents what would amount to the first few weeks of an introductory crowdsourcing course.
   _Chapter 3_ subsequently provides a typology of crowdsourcing, tailored to understanding the breadth of online crowd systems through an information science lens.
   As in the previous chapter, the typology is general, intended to provide a language for speaking about crowdsourcing in the reset of the dissertation.
 
