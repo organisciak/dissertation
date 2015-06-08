@@ -1,0 +1,7 @@
+document/1_intro.md
+document/2_crowdsourcing.md
+document/3_typology.md
+document/4_apriori_objective.md
+document/5_posterior_objective.md
+document/6_subjective.md
+document/7_conclusions.md

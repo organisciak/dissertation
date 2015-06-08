@@ -1,5 +1,6 @@
 pandoc_args = -f markdown --bibliography=refs.bib --smart
-name =thesis
+#name =thesis
+name=thesis-tufte
 data= logs/stats.csv
 
 all: mostlyclean docx
@@ -33,7 +34,8 @@ defensepdf:
 		--mathjax \
 		$(pandoc_args)
 
-
+count:
+	cat writing-files.txt | parallel wc -w | awk '{total+=$$0}END{print total}'
 
 report:
 	# Update stats
@@ -56,9 +58,9 @@ tex: refs
 	
 	# Compile to PDF and view
 	export TEXINPUTS=document//:
-	pdflatex --include-directory=document thesis.tex
-	biber thesis
-	pdflatex --include-directory=document thesis.tex
+	pdflatex --include-directory=document $(name)
+	biber $(name)
+	pdflatex --include-directory=document $(name)
 	# Check if I'm using any ill-advised subsubsubheadings
 	# grep -q "#####" document/*md 
 	
