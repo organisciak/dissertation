@@ -4,15 +4,15 @@ name=thesis-tufte
 data= logs/stats.csv
 
 all: mostlyclean docx
-	
+
 all.md:
 	cat summary.md document/*_*md >all.md
-	
+
 stats:
 	# Show chart of word count progress
 	cat logs/stats.csv | Rscript workspace/vis-progress.r
-	
-refs: 
+
+refs:
 	perl -pe "s:^(@.*{.*_)\?*:\1:g" refs.bib | perl -pe "s/^(@.*{.*):_/\1_/g" | perl -pe "s/co-cre/cocre/g" >refs.bib2
 	mv refs.bib2 refs.bib
 
@@ -49,21 +49,21 @@ report:
 
 	# Visualize
 	# Run stats ./scripts/visualizeStats.sh
-	
+
 tex: refs
 	# Convert Chapters to LaTex
-	ls document/*_*.md | parallel pandoc  -t latex --biblatex $(pandoc_args) --chapters -o {.}.tex {}
+	cat writing-files.txt | parallel pandoc  -t latex --biblatex $(pandoc_args) --chapters -o {.}.tex {}
 	# Fix underscores in \cite, \autocite, and \textcite commands
 	# ls document/*_*.md | parallel "perl -i -p -e 's{cite{.*}}{$& =~ s/_/\\\_/gr}ge' {}"
-	
+
 	# Compile to PDF and view
 	export TEXINPUTS=document//:
 	pdflatex --include-directory=document $(name)
 	biber $(name)
 	pdflatex --include-directory=document $(name)
 	# Check if I'm using any ill-advised subsubsubheadings
-	# grep -q "#####" document/*md 
-	
+	# grep -q "#####" document/*md
+
 html: refs all.md
 	pandoc $(pandoc_args) -t html --table-of-contents \
 	--template pandoc-bootstrap-template/template.html \
@@ -81,7 +81,7 @@ mostlyclean:
 	rm -f $(name).dvi
 	rm -f $(name).bbl
 	rm -f $(name).blg
-	
+
 clean: mostlyclean
 	rm -f *~
 	rm -f document/*~
