@@ -29,31 +29,6 @@ _Study Tasks_
     7. Analysis. How variable is the data? How accurate is it, relative to the gold and silver standards? How quickly do users perform the task, and how much do they enjoy it? What do the free text feedback forms say? How can the trade-off between cost/speed and quality (reliability/consistency/accuracy) be fairly compared.
     8. Writing.
 
-\begin{ganttchart}[
-hgrid,
-vgrid={*6{draw=none}, dotted},
-x unit=0.5mm,
-time slot format=isodate
-]{2014-09-01}{2015-05-15}
-\gantttitlecalendar{year, month} \\
-
-\ganttgroup{Admin}{2014-09-05}{2014-10-01} \\
-\ganttbar{1. IRB}{2014-09-05}{2014-09-15} \\
-\ganttbar{2. Funding}{2014-09-05}{2014-10-01} \\
-
-\ganttgroup	{Study}	{2014-09-05}{2015-05-01} \\
-\ganttbar		{1. Feedback}	{2014-09-05}{2014-11-05} \\
-\ganttbar		{2. Dataset}	{2014-09-05}{2014-10-05} \\
-
-\ganttlinkedbar	{3. Annotate}	{2014-10-05}{2014-11-05} \\
-\ganttbar		{4. Instrument}	{2014-09-05}{2014-11-25} \\
-\ganttlinkedbar	{5. Testing}	{2014-11-25}{2014-12-05} \\
-\ganttlinkedbar	{6. Collection}	{2014-12-05}{2015-01-15} \\
-\ganttlinkedbar	{7. Analysis}	{2015-01-01}{2015-03-01} \\
-\ganttbar	{8. Writing}	{2014-11-15}{2015-05-01}
-\ganttlink{elem1}{elem8}
-\end{ganttchart}
-
 ### Modeling Crowd-contributed Document Metadata in Retrieval
 
 _Administrative_
@@ -77,27 +52,6 @@ _Study_
     * Collect relevance judgments
  5. Analysis. Which approaches worked? Which didn't? What types of documents are favoured? What's being neglected? What types of queries do the retrieval models fail on?
  6. Writing
-
-\begin{ganttchart}[
-hgrid,
-vgrid={*6{draw=none}, dotted},
-x unit=0.5mm,
-time slot format=isodate
-]{2014-09-01}{2015-05-15}
-\gantttitlecalendar{year, month} \\
-
-\ganttgroup{Admin}{2014-09-05}{2014-09-25} \\
-\ganttbar{1. Server}{2014-09-05}{2014-09-25} \\
-
-\ganttgroup	{Study}	{2014-10-15}{2015-05-01} \\
-\ganttbar		{1. Feedback}	{2014-10-15}{2014-12-05} \\
-\ganttbar		{2. Dataset}	{2014-10-15}{2015-01-10} \\
-\ganttlink{elem1}{elem4}
-\ganttbar	{3. Modeling}	{2014-11-15}{2015-02-10} \\
-\ganttlinkedbar		{4. Evaluation}	{2015-02-10}{2015-03-20} \\
-\ganttlinkedbar	{5 Analysis}	{2015-03-15}{2015-04-15} \\
-\ganttbar	{6. Writing}	{2014-11-15}{2015-05-01}
-\end{ganttchart}
 
 
 ### Other Tasks
