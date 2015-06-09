@@ -3,18 +3,7 @@ Designing Reliable Tasks for Descriptive Crowdsourcing
 
 ## Introduction
 
-Humans don't operate with the formality of computers.
-Many of the benefits of crowdsourcing follow from that fact: human contributions are valuable specifically because they are not easily automated.
-However, when using crowd contributions to inform an algorithmic system, as in information retrieval, the inconsistencies of human work present a challenge.
 
-In the first of two research chapters, the proposed dissertation will investigate how the design of crowdsourcing tasks for collecting useful metadata for information retrieval metadata affects the quality of the content.
-
-In a controlled set up, crowdsourcing in information retrieval usually follows a typical design: a task, description, and a set of one or more documents that are reacted to.
-This type of design is common for creating custom evaluation datasets through relevance judgments [@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [e.g. @chen_improving_2013].
-<!-- Removed: Some exceptions to this approach have been attempted with success[].-->
-
-Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @organisciak_evaluating_2012; @howe_crowdsourcing_2008; @organisciak_incidental_2013].
-The manner to improve on a basic task/description/items interface design is not immediately clear, though: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO2 cite -->.
 
 In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will compare the effect of task design on collected information retrieval data.
 Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval -- a typical encoding task performed by paid crowds, the following questions will be pursued:
@@ -25,7 +14,7 @@ Scoped to a reasonable parameterization of crowdsourcing as it is commonly pract
 
  * __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
 
- * __RQ4__: Do the questions above generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)? 
+ * __RQ4__: Do the questions above generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?
 
 RQ1 is the question of design, on synthesizing prior work and brainstorming directions to explore.
 It is a partially subjective question, but one still worth pursuing with diligence.
@@ -112,11 +101,11 @@ I investigated ways to address low intra-coder consistency in the ground truth f
 In the original task, similarity judgments were collected on a three-point "broad" scale -- not similar, somewhat similar, and very similar -- and on a 101-point open-ended "fine" scale.
 In comparing the open-ended similarity scores across multiple years, the scores for song pairs did not appear strongly consistent, with a root-mean-squared-error (RMSE) of $16.58$.
 Changing the design to provide more particular naming to ranges of the 101-point scale (i.e. a change to the codebook and how it is communicated) improved agreement on song pair similarity to an RMSE of $11.44$ (an improvement of 31%).
-Paired with other strategies, this enabled an improvement to $RMSE=5.40$, a 66.1% improvement. 
+Paired with other strategies, this enabled an improvement to $RMSE=5.40$, a 66.1% improvement.
 
 <!-- TODO2: add screenshot of different rating interface -->
 
-#### Dynamic of attention affect the style of contributions 
+#### Dynamic of attention affect the style of contributions
 
 In @organisciak_incidental_2013, I looked at a facet of crowdsourcing that I called _incidental crowdsourcing_ (IC).
 
@@ -152,7 +141,7 @@ Since most incidental crowdsourcing deals with reaction to existing documents ra
 #### What are you _feeling_? Introspection changes rating habits
 
 Additional evidence for this was encountered in a peripheral finding while conducting research for @organisciak_personalized_2013. [^Note that the result here was not the primary focus of the study and is thus unpublished. Despite being unpublished, this work was purformed for Microsoft Research and should not be considered a contribution of this document.]
-In this case, we were again looking at opinion ratings on a five-point scale, this time on Mechanical Turk. 
+In this case, we were again looking at opinion ratings on a five-point scale, this time on Mechanical Turk.
 Workers were asked to provide their personal opinions on whether they liked the style of each of 100 salt shakers.
 In one group of workers, this is all they were asked.
 In another group, we also asked workers to explain why they gave that rating.
@@ -187,7 +176,7 @@ __Notes__
  * On-demand data collection for IR in increasingly common
  * Others have warned that design plays an important role (e.g. Alonso and Lease, Howe, others)
    * That being said research on the area of design is sparse
-     * TREC track? 
+     * TREC track?
      * Research on Games with a Purpose is the exception
 -->
 ## Scope
@@ -199,7 +188,7 @@ to financial means.
 However, it is easier to control for because it sidesteps much of the complexities of motivation.
 Information retrieval researchers are using the predictability of paid crowd markets like Amazon's Mechanical Turk to generate on-demand data, making design for those systems important.
 
-## Approach 
+## Approach
 
 In this chapter, I will investigate the effect of different parameterizations of a microblogging encoding task.
 
@@ -279,7 +268,7 @@ Commonly, a paid crowdsourcing worker goes through the following steps:
 
  1. Worker $w$ arrives at task page
  2. $w$ is shown a preview of task $t$
- 3. Worker $w$ accepts the task $t$ 
+ 3. Worker $w$ accepts the task $t$
  4. Work performs task $t$ and submits
  5. A new task $t'$ is chosen and, worker is taken back to _step 2_ or _step 3_
 
@@ -322,7 +311,7 @@ The possibilities are endless for adding parts to the basic task.
 To inspire useful ones, it is helpful to consider one final, naturalistic set of factors that may affect the outcome of a paid crowdsourcing task: worker behaviours.
 
 A worker's contribution may be affected by a myriad of factors, such as experience, skill, time spent per task, and attentiveness.
-Which of these can be influenced by external factors? 
+Which of these can be influenced by external factors?
 
  - _Experience_. Experience is a product of sustained interaction with the current type of task.
    It can affecting indirectly by focusing on methods to extend the length of a user's interaction, such as bonus payments for staying around.
@@ -341,7 +330,7 @@ However, an exercise to think through the possibilities afforded to us by the fe
 Consider this study's Twitter encoding task.
 How would the contribution change if:
 
-- Tasks were 100 items long? 
+- Tasks were 100 items long?
   200? 1000? Only 1?
 * Instructions were written very tersely?
   Verbosely, with many examples?
@@ -365,7 +354,7 @@ How would the contribution change if:
 Some of these ideas of exciting, others are unfeasible.
 Designs to encourage longer-term engagement from individuals do not appear to be a promising direction.
 Worker experience was previously measured [@organisciak_evaluating_2012] and found to not be significant for simple tasks.
-Other areas are already well-tread. The effect of incentive structures, payment and bonuses, has been studied frequently, notably by @mason_financial_2010. 
+Other areas are already well-tread. The effect of incentive structures, payment and bonuses, has been studied frequently, notably by @mason_financial_2010.
 With regards to designs that mislead workers about their performance, there are ethical and trust issues that limit such an approach, in addition to the warning by @kraut_building_2011 that feedback is only effective when contributors believe it is sincere.
 
 ### Proposed designs
@@ -385,7 +374,7 @@ With those considerations in mind, I propose the three interfaces to study for c
 The basic interface will resemble an archetypal task, following conventions seen in Mechanical Turk usage.
 It will show workers a task with a goal, description, and ten items to perform actions on.
 The goal of the interface will be to "identify the topic of a tweet."
-For each item, a multiple-choice question will be posed, with the proper noun phrases provided as options, as well as a free-text "Other" category and an "unknown" option. 
+For each item, a multiple-choice question will be posed, with the proper noun phrases provided as options, as well as a free-text "Other" category and an "unknown" option.
 The description will explain what a "topic" is, and make clear the difference between a topic and simply a mention.
 An example will be included with the description, but as a pop up window behind a "See Example" link that needs to be clicked.
 This is done to conform to the convention that instructions should not be too long, in order not to push the actual action items 'below the fold'.
@@ -407,7 +396,7 @@ In the training interface, the worker is walked through their first task slowly.
 As they complete the tasks, their answers are evaluated against a gold standard and they are informed if they completed it correctly or incorrectly.
 Incorrect answers will also be given an explanation of why the actual answer is correct.
 
-<!-- TODO2 Justification for this design: who else has done it? 
+<!-- TODO2 Justification for this design: who else has done it?
 Ask Mike, possible Jaime for advice, my lit review is failing.
 -->
 
@@ -424,7 +413,7 @@ The first that they complete is identical to the basic interface.
 Starting with the second task, however, the top of the interface will tell users:
 
  * Their estimated performance, in terms of agreement with other workers.
- * A visualization of where they fall in the distribution of all workers, from best performing to worst, 
+ * A visualization of where they fall in the distribution of all workers, from best performing to worst,
 
 ![Example of showing feedback to workers](images/progress-bar-mockup.png)
 
@@ -441,7 +430,7 @@ Showing this information with such granularity encourages workers to go back to 
 Rough Notes
 
 If you're doing voting, then a score is possible based on agreement with other workers:
-^Score=Avg. StdDev from Mean of Ratings 
+^Score=Avg. StdDev from Mean of Ratings
 -->
 
 
