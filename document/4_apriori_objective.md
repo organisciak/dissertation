@@ -16,9 +16,11 @@ This type of design is common for creating custom evaluation datasets through re
 Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @organisciak_evaluating_2012; @howe_crowdsourcing_2008; @ @organisciak_incidental_2013].<!--TODO better citations, remove citations to work being reported here -->
 The manner to improve on a basic task/description/items interface design is not immediately clear, though: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO2 cite -->.
 
+<!-- TODO: the gilbert 2015 argument would do well here: improving quality through design is a low-cost solution, compared to many of the posterior approaches to data quality. -->
+
 ## Related Work
 
-## Tagging
+### Tagging
 
 @sen_quest_2007 study the quality of community tags in the MovieLens film recommendation system, toward methods to prioritize tags in the interface.
 They find that high-quality tags, as determined by survey, are not necessarily the most-applied tags, likely because the most common tags are locally useful 'personal' tags.
@@ -34,13 +36,33 @@ While this form of usage-based quality indicator does not help in collecting goo
 
 <!--#### Tagging-->
 
+- problem
+
+Why tagging
+- Limited metadata
+  - information overload
+ Difficult to model formats (non-text)
+
+Why paid
+- Volunteer practice
+   - Many volunteers tag poorly
+     - @springer_for_2008 find that tags were the least fulfilling type of information contributed to the Library of Congress account on Flickr. <!--Add sidenote about Flickr, and perhaps the commons--> ...
+In a look at social features used in library online catalogues, @spiteri_social_2011 finds tagging to be among the least used.
+While the complexities of why this is the case and how closely tied the result is to the implementation, the finding does suggest that features which are arguably more self-serving, such as curating lists of library materials and starring liked works, are easier to collect than more pragmatic features for item description.
+
+
+<!-- TODO discuss -->
+
+- RQ:
+
 - subjective vs. objective
   - desire some sort of variability
 However, it would be ill-advised to view tagging as a fully relativist activity.
-It has been found that tagging begins to converge on a set of popular, common tags <!--TODO cite, Golder and Huberman 2006, Cattuto 2006 -->, and there certainly are notions of 'good' or 'bad' tags [@sen_quest_2007]. <!-- TODO cite.. what else?-->.
+It has been found that tagging begins to converge on a set of popular, common tags [@golder_usage_2006]<!--TODO cite Cattuto 2006 -->, and there certainly are notions of 'good' or 'bad' tags [@sen_quest_2007]. <!-- TODO cite.. what else?-->.
 
-When @sen_tagging_2006 compared different approaches to collect tags -- an interface where prior tags are seen, an interface where only popular prior tags are seen, an interface that shows recommended prior tags -- the interface that did not show prior tags had a much larger proportion of never before seen tags.
+When @sen_tagging_2006 compared different approaches to collecting tags -- an interface where prior tags are seen, an interface where only popular prior tags are seen, an interface that shows recommended prior tags -- the interface that did not show prior tags had a much larger proportion of never before seen tags.
 This is an unsurprising phenomenon, given that tagging habits appear to be influenced by the community [@golder_structure_2007; @sen_tagging_2006]; however, it is a factor influencing our approach to tag collection through paid crowdsourcing.
+
 A crowd marketplace is emphatically not a community, at least not in the service of a requester's particular task, and generally the pragmatic system-oriented uses
 are underlied by a desire for convergence and minimal redundancy.
 This is to say, a requester looking to pay for image tags may not want a vocabulary explosion, but also may be looking to avoid the added complexity and cost of collecting prior tags to show to workers.
@@ -51,8 +73,18 @@ This is to say, a requester looking to pay for image tags may not want a vocabul
 
 <!-- What is a 'good' tag, what is a bad tag? -->
 
-If the goal is to collect high quality tags, it must first be clear what a 'good' or 'bad' tag is.
+\newthought{If the goal is to collect high quality tags}, it must first be clear what a 'good' or 'bad' tag is.
 When studying tag quality in a film recommendation system, @sen_quest_2007 found that only 21% of tags are worthy of display to other users.
+
+This study looks to augment image record data and metadata with additional information that cannot be trivially inferred without human contribution.
+Particularly, we look to information retrieval uses, to help in findability, filtering, and organization. 
+
+One typology for types of tags was offered for tagged bookmarks by @golder_usage_2006.
+They present seven kinds of bookmarking tags: those for identifying what the item is about (i.e. topical), for identifying what the item is (e.g. blog), for identifying the creator of the item, for qualifying or refining other tags, for labeling subjective characteristics of the content, for establishing a relationship to the tagger (e.g. 'my post'), and for organization.
+
+How might Golder and Huberman's tags apply to images?i <!-- TODO -->
+
+<!-- Studies on Flickr tagging-->
 
 @sen_tagging_2006 collapse the seven classes from @golder_structure_2007 into three: _factual_ tags conveying objective information, _subjective_ tags conveying opinions, and _personal_ tags that are intended only for the tagger.
 As expected, factual tags were found to be most generally useful, particularly for learning and finding, although personal and subjective tags were useful for self-expression and organizing, respectively.
@@ -60,6 +92,10 @@ These are uses that matter to users of online communities, though for the organi
 
 In a survey related to the display of prior tags [@sen_quest_2007], users found personal tags less useful.
 
+<!-- Tags used in IR.. what kind -->
+
+Finally, tagging has been used in practice for cultural heritage uses, and preferred types of tags have been discussed, even when actual practice does not yield those ideals.
+<!- TODO LIS literature on tagging ->
 
 <!--##### Tagging - Training Interface-->
 
