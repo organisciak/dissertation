@@ -26,12 +26,13 @@
 % Biblatex via biber
 \usepackage[english]{babel}% Recommended
 \usepackage[babel]{csquotes} % Recommended
-\usepackage[style=authoryear]{biblatex}
+\usepackage[backend=biber,bibencoding=utf8,style=authoryear]{biblatex}
 \bibliography{refs.bib}
 
 %%
 
 %%
+\usepackage{tabularx}
 % For nicely typeset tabular material
 \usepackage{booktabs}
 
@@ -211,7 +212,7 @@ Copyright \copyright\ \the\year\ \thanklessauthor
 
 \include{2_crowdsourcing}
 
-%\include{3_typology}
+\include{3_typology}
 
 \include{4_apriori_objective}
 
