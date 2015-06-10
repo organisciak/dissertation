@@ -2,11 +2,9 @@ Design Facet of Crowdsourcing: A Typology for Information Science
 ===================================================================
 
 
-_This paper was previously presented at iConference 2015._
+\marginnote{This paper was previously presented at iConference 2015.}
 
-## Introduction
-
-Crowdsourcing is a production model where many people, often
+\newthought{Crowdsourcing is a production model} where many people, often
 non-professionals, contribute to a common product. The pattern is
 potentially very useful for information science, because the ability for
 large numbers of diverse people to react to and enrich information items
@@ -24,19 +22,15 @@ overwhelming amounts of materials that can be manageably annotated with
 help from many hands, and the relationship that cultural heritage
 collections hold with their audience can potentially be strengthened by
 pursuing meaningful collaboration between the two. Holley
-[-@holley_crowdsourcing:_2010] notes some potential uses to
+[-@holley_crowdsourcing:_2010]<!--_--> notes some potential uses to
 crowdsourcing, including tapping into the expertise of the community,
 building loyalty of users while tapping into their altruistic
 tendencies, adding value to data such as with quality ratings, and
 improving information access to materials.
 
-There have been earlier attempts at crowd taxonomies, such as
-\<e.g.,\><span>geiger~m~anaging~2~011, vukovic~t~owards~2~010,
-schenk~c~rowdsourcing:~2~009, rouse~p~reliminary~2~010</span>. However,
-these have primarily emerged from other domains, with a focus on
-economic or quantitative variables. Perhaps the most valuable prior work
-is in Quinn and Bederson’s taxonomy of human computation
-[-@quinn_human_2011], a field focusing on humans performed work in the
+There have been earlier attempts at crowd taxonomies [e.g. @geiger_managing_2011; @vukovic_towards_2010; @schenk_crowdsourcing:_2009; @rouse_preliminary_2010].
+However, these have primarily emerged from other domains, with a focus on economic or quantitative variables. Perhaps the most valuable prior work
+is in Quinn and Bederson’s taxonomy of human computation [-@quinn_human_2011], a field focusing on humans performed work in the
 mode of computing. Human computation often overlaps with crowdsourcing
 but focuses on a more narrow type of labor and is not necessarily
 performed by distributed crowds.
@@ -45,16 +39,16 @@ This work collects and builds on prior studies of crowdsourcing,
 including earlier typologies, while offering new facets which aid in a
 more human-centric treatment of crowdsourcing.
 
-## Crowdsourcing
 
-Crowdsourcing is broad term referring to the collaboration of large
+\newthought{Crowdsourcing is broad term} referring to the collaboration of large
 numbers of distributed people on a common product, usually organized
 through information technology and generally invited through an open
 call.
+<!-- TDOD: does this overlap with the previous chapter-->
 
-The term was coined in 2006 @howe_rise_2006, initially scoped to
+The term was coined in 2006 [@howe_rise_2006], initially scoped to
 business uses of the term but quickly co-opted to its current,
-wide-ranging usage @howe_birth_2006. There are a number of concepts
+wide-ranging usage [@howe_birth_2006]. There are a number of concepts
 under the umbrella of crowdsourcing that have been studied individually,
 including:
 
@@ -62,25 +56,24 @@ including:
     with the sharing of software source code for interested parties, but
     underwent a sea change with the popularity of Linux in the early
     nineties, which heartily accepted code contributions and bug ‘fixes
-    from whoever had the talent to make them @raymond_cathedral_1999.
+    from whoever had the talent to make them [@raymond_cathedral_1999].
     This model of distributed collaboration showed that, with the right
     communication tools, crowds had the capacity to work more
-    intelligently than traditionally given credit for
-    \<e.g.,\><span>mackay~m~emoirs~1~852, le~b~on~c~rowd:~1~896</span>.
+    intelligently than traditionally given credit for [e.g. @mackay_memoirs_1852; @le_bon_crowd:_1896].
     The journalist that introduced the term ’crowdsourcing’ offers one
     definition as “The application of Open Source principles to fields
-    outside of software” @howe_crowdsourcing:_2006.
+    outside of software” [@howe_crowdsourcing:_2006].
 
 -   **Commons-based peer production**. In *Wealth of Networks*, Benkler
     takes a political economy view on what he calls the networked
     information economy, arguing that its properties of increasingly
     low-cost access and efficient organization of communities would
-    empower the commons @benkler_wealth_2006. He discusses commons-based
+    empower the commons [@benkler_wealth_2006]. He discusses commons-based
     peer production as an alternative to firms for economic and cultural
     value creation. Earlier, von Hippel introduced *user innovation*,
     predicting a similar effect of technology: a shift of innovation
     away from those selling products to those using products
-    @von_hippel_sources_1988 [@von_hippel_democratizing_2006].
+    [@von_hippel_sources_1988; @von_hippel_democratizing_2006].
 
 -   **Citizen science**. Citizen science refers to collaboration between
     scientific communities and members of the public on research. Early
@@ -93,7 +86,7 @@ including:
     projects.
 
 -   **Wisdom of the crowds**. *The Wisdom of the Crowds*
-    @surowiecki_wisdom_2004 observed the collected effectiveness of
+    [@surowiecki_wisdom_2004] observed the collected effectiveness of
     crowds when properly aggregated. Building from Francis Galton’s *Vox
     Populi* [-@galton_vox_1907], where Galton aggregated guesses at a
     steer weight guessing competition and found that the median guess
@@ -108,10 +101,10 @@ including:
 -   **Human computation**. Human computation was introduced in the
     doctoral work of von Ahn, accompanying work on the *ESP Game*, a
     game where the players tag online images during the course of
-    playing @ahn_labeling_2004 [@von_ahn_games_2006]. Human computation
+    playing [@ahn_labeling_2004; @von_ahn_games_2006]. Human computation
     refers to work performed by humans in the style of computation: the
     “mapping of some input representation to some output representation
-    using an explicit, finite set of instructions” @law_human_2011.
+    using an explicit, finite set of instructions” [@law_human_2011].
     offer a taxonomy of human computation that overlaps with our
     treatment of crowdsourcing in places, classifying along dimensions
     of motivation, quality control, aggregation, human skill, process
@@ -142,16 +135,15 @@ materials.
 Not all crowdsourcing uses involve new systems: sometimes valuable
 contributions are gathered incidentally. For example, the Library of
 Congress found that user comments on archival photos provided a valuable
-source of additional information about the holding @springer_for_2008,
+source of additional information about the holding [@springer_for_2008],
 and steve.museum has researched the ability of free-text tagging for
 providing descriptive keywords more inline with the language which
-information-seeking individuals use @trant_investigating_2006.
+information-seeking individuals use [@trant_investigating_2006].
 
 In addition to the aforementioned typology of citizen science
-@wiggins_goals_2012 and taxonomy of human computation @quinn_human_2011,
+[@wiggins_goals_2012] and taxonomy of human computation [@quinn_human_2011],
 attempts to provide the same for crowdsourcing have been attempted
-@geiger_managing_2011
-[@vukovic_towards_2010; @schenk_crowdsourcing:_2009; @rouse_preliminary_2010].
+[@geiger_managing_2011; @vukovic_towards_2010; @schenk_crowdsourcing:_2009; @rouse_preliminary_2010].
 
 identify crowdsourcing processes by four defining characteristics: the
 pre-selection process for contributors, the accessibility of peer
@@ -211,54 +203,87 @@ the next section, we consider existing work more thoroughly, adapting it
 into our typology, explain how we reinterpret it, and argue for new
 facets not present in non-IS taxonomies or classifications.
 
-<span>p<span>3cm</span>p<span>6cm</span>p<span>6cm</span></span>
-Category & Description & Sub-categories\
 
-Motivation & How are contributors incentivized? & Primary/Secondary
-@organisciak_why_2010, Contribution/commitment @kraut_building_2011\
-& & Extrinsic/Intrinsic\
 
-Centrality & How central is the crowdsourcing to the overall project? &
-Core / Peripheral @organisciak_incidental_2013\
+\bigskip
+\begin{center}
+\footnotesize
 
-Beneficiary & Who benefits? What is their relationship to contributors?
-& Autonomous / sponsored @zwass_co-creation:_2010\
-& & Crowd / individual\
+\begin{table}[h]
+\begin{tabular}{p{3cm}p{6cm}p{6cm}}
+\toprule
+Category & Description & Sub-categories \\
+\midrule
+Motivation &
+How are contributors incentivized? &
+Primary/Secondary \cite{organisciak_why_2010}, Contribution/commitment \cite{kraut_building_2011} \\
+&
+&
+Extrinsic/Intrinsic \\
+\midrule
+Centrality &
+How central is the crowdsourcing to the overall project? &
+Core / Peripheral \cite{organisciak_incidental_2013} \\
+\midrule
+Beneficiary &
+Who benefits? What is their relationship to contributors? &
+Autonomous / sponsored \cite{zwass_co-creation:_2010} \\
+&
+&
+Crowd / individual \\
+\midrule
+Aggregation &
+How are diverse contributions reconciled into a common product? &
+Selective /Integrative \cite{geiger_managing_2011, schenk_crowdsourcing:_2009} \\
+&
+&
+Summative / Iterative / Averaged \\
+\midrule
 
-Aggregation & How are diverse contributions reconciled into a common
-product? & Selective /Integrative @geiger_managing_2011
-[@schenk_crowdsourcing:_2009]\
-& & Summative / Iterative / Averaged\
 
-Type of Work & What is the nature of the work? & Human computation /
-Creative\
-& & Generative / Reactive\
-& & Subjective / Objective\
+Type of Work &
+What is the nature of the work? &
+Human computation / Creative \\
+&
+&
+Generative / Reactive \\
+&
+&
+Subjective / Objective \\
+\midrule
+Type of Crowd &
+What are the dimensions of the crowd and how they are expected to perform? &
+Unskilled, locally trained, specialized \\
+&
+&
+heterogeneous / diverse \\
+\bottomrule
+\end{tabular}
+\caption{Overview of facets in our crowdsourcing typology}
+\end{table}
+\end{center}
+<!--_-->
 
-Type of Crowd & What are the dimensions of the crowd and how they are
-expected to perform? & Unskilled, locally trained, specialized\
-& & heterogenous / diverse\
 
 ### Motivation
 
 The incentives for contributors to participate in crowdsourcing are
 complex and not always consistent from contributor to contributor.
 
-#### Intrinsic / Extrinsic Motivation
-
-Motivation in crowdsourcing follows related work in the motivations of
+\marginnote{Intrinsic / Extrinsic Motivation}
+\newthought{Motivation in crowdsourcing} follows related work in the motivations of
 humans in general @maslow_theory_1943
 [@alderfer_empirical_1969; @ryan_intrinsic_2000]. While a review of that
 work is beyond the scope of this paper, many views of crowdsourcing
 motivation adopt the lens of motivation as a mixture of *intrinsic*
-factors and *extrinsic* factors @ryan_intrinsic_2000. In the former,
+factors and *extrinsic* factors [@ryan_intrinsic_2000]. In the former,
 fulfillment is internal to the contributor, psychologically motivated,
 while in the latter the rewards are external.
 
 The spectrum of intrinsic to extrinsic motivators is commonly paralleled
 in crowdsourcing literature through a dichotomy of paid and volunteer
-crowdsourcing@rouse_preliminary_2010
-[@geiger_managing_2011; @kraut_building_2011; @schenk_crowdsourcing:_2009].
+crowdsourcing
+[@rouse_preliminary_2010; @geiger_managing_2011; @kraut_building_2011; @schenk_crowdsourcing:_2009].
 
 Paid and volunteer crowdsourcing are not exclusive, and there are
 extrinsic motivators beyond money. However, this separation is common
@@ -271,7 +296,7 @@ their needs and ultimately more complexity in engineering the
 crowdsourcing system.
 
 It has been shown that intrinsic motivation still plays a part in paid
-crowdsourcing @mason_financial_2010, and some systems mix intrinsically
+crowdsourcing [@mason_financial_2010], and some systems mix intrinsically
 motivated tasks with payment or the chance at remuneration. For example,
 some contest-based marketplaces are popular among users looking to
 practice their skills, such 99Designs for designers or Quirky for
@@ -281,9 +306,9 @@ Some taxonomies make a distinction between forms of payment. makes the
 distinction between fixed remuneration, with a pre-agreed fee, and
 success-based remuneration, such as contest winnings or bonus.
 
-#### Specific Motivators
+\marginnote{Specific Motivators}
 
-Taxonomies of specific motivators seen in crowdsourcing have been
+\newthought{Taxonomies of specific motivators} seen in crowdsourcing have been
 previously attempted, with varying results that touch on similar issues.
 identified a series of primary and secondary motivators from a diverse
 set of crowdsourcing websites. We adopt the categories from that study
@@ -295,11 +320,11 @@ and retain contributions, they need one or more of them. In contrast,
 *secondary motivators* are system mechanics that generally were not
 observed as necessary components of a system, but were elements that
 encourage increased interaction by people that are already contributors.
-@kraut_building_2011 parallel the primary/secondary split by
+[@kraut_building_2011] parallel the primary/secondary split by
 differentiating between encouraging contributions and encouraging
 commitment.
 
-The motivators in @organisciak_why_2010 were observed from a content
+The motivators in [@organisciak_why_2010] were observed from a content
 analysis of 13 crowdsourcing websites and subsequent user interviews.
 For sampling, 300 websites most commonly described as ‘crowdsourcing’ in
 online bookmarks were classified with a bottom-up ontology, then the 13
@@ -328,7 +353,7 @@ supported by the similar broad view social study published by .
     Newspaper Digitisation Project (now part of a larger project called
     *Trove*) found that that amateur genealogists, with pre-existing
     communities and a willingness to learn new technologies, took “to
-    text correction like ducks to water” @holley_many_2009. Similarly,
+    text correction like ducks to water” [@holley_many_2009]. Similarly,
     Galaxy Zoo found similar success with amateur astronomers helping
     annotate galaxies. Kraut and Resnick likewise argue that asking
     people to perform tasks that interest them results in more
@@ -347,7 +372,7 @@ supported by the similar broad view social study published by .
     Library of Congress noted that they “appear to have tapped into the
     Web community’s altruistic substratum by asking people for help.
     People wanted to participate and liked being asked to contribute”
-    @springer_for_2008. With Galaxy Zoo, the appeal for many
+    [@springer_for_2008]. With Galaxy Zoo, the appeal for many
     contributors that that it offers a tangible way to contribute to
     real science. also argues for altruism’s place in a taxonomy of
     crowd motivation. argue that appeals to the value of a contributions
@@ -384,7 +409,7 @@ engagement but not initial contribution, are:
 -   **External indicators of progress and reputation**. Using games,
     badges, or leaderboards encourages more contribution among certain
     people. An important caveat is that this form of performance
-    feedback needs to be perceived as sincere @kraut_building_2011.
+    feedback needs to be perceived as sincere [@kraut_building_2011].
 
 -   **Feedback and impression of change**. Showing the contribution in
     the system or conveying how it fits into the whole.
@@ -395,7 +420,7 @@ engagement but not initial contribution, are:
 -   **Recommendations and the social**. Prodding by friends, colleagues,
     and like-minded individuals. Simply seeing that other people have
     contributed makes a person more likely to contribute
-    @kraut_building_2011. This motivator factors into the taxonomy by as
+    [@kraut_building_2011]. This motivator factors into the taxonomy by as
     *social status*.
 
 -   **Window fixing**. Nurturing a well-maintained community where the
@@ -464,11 +489,11 @@ useful:
 
 A consideration related to aggregation is that of quality control,
 something other typologies have considered as a top-level dimension in
-its own right. consider how the system protects against poor
+its own right. @quinn_human_2011 consider how the system protects against poor
 contributions, such as reputation systems, input or output agreement,
 multi-contribution redundancy, a crowd review workflow, expert review,
 and designs that disincentive poor quality or obstruct the ability to do
-so. likewise look at quality assurance, noting the large focus on
+so. @quinn_human_2011 likewise look at quality assurance, noting the large focus on
 improving quality for quantifiable contributions.
 
 In our typology, we consider quality as a best practice issue that
@@ -483,8 +508,7 @@ projects or with the concept of watching pages and reversions on
 Wikipedia. As noted, averaged aggregation recieves a lot of focus
 because it lends itself to quantification, and numerous studies focus on
 the quality increases of adding redundant contributors or methods to
-identify low-quality contributors \<e.g.,\><span>sheng~g~et~2~008,
-snow~c~heap~2~008, welinder~o~nline~2~010, wallace~w~ho~2~011</span>.
+identify low-quality contributors [@sheng_get_2008; @snow_cheap_2008; @wei_lda-based_2006; @wallace_who_2011].
 
 ### Director / Beneficiary
 
@@ -508,7 +532,7 @@ collective (the *crowd*) and the individual (the *contributors*). Crowds
 collaborate toward a shared goal, as with Wikipedia or certain kinds of
 open-source software development, while individuals are more
 self-motivated. For example, in citation analysis through web links, as
-was done with PageRank @page_pagerank_1999, the large-scale benefits of
+was done with PageRank [@page_pagerank_1999], the large-scale benefits of
 the crowds are unrelated to what the individuals creating the links are
 thinking. offers a similar designation in the beneficiary, between
 individual, crowd, and a mix of the two.
@@ -524,12 +548,12 @@ mutually exclusive ways.
 The type of work performed by crowds can vary greatly in its complexity
 and style.
 
-#### Human Computation vs. Creative
+\marginnote{Human Computation vs. Creative}
 
-One notable form of crowdsourced work is represented by the concept of
+\newthought{One notable form of crowdsourced work} is represented by the concept of
 human computation, where “the problems fit the general paradigm of
 computation, and as such might someday be solvable by computers”
-@quinn_human_2011. Understanding that crowdsourcing is not solely human
+[@quinn_human_2011]. Understanding that crowdsourcing is not solely human
 computation tasks, the inferred corollary to these types of tasks are
 those that are expected to be too complex for computers: creative,
 judgment-based, or requiring critical thinking. Creative crowdsourcing
@@ -553,10 +577,10 @@ they would like to see at the coffee chain Starbucks. Since focus on
 crowdsourcing when there is a client, usually a corporate client, they
 do not consider the wider space of creative crowdsourcing tasks.
 
-#### Generative vs. Reactive
+\marginnote{Generative vs. Reactive}
 
-Another view that touches on the nature of the contribution is
-*generative* versus *reactive*. In the former, new intellectual products
+\newthought{Another view that touches on the nature of the contribution is
+*generative* versus *reactive*}. In the former, new intellectual products
 are created. With reactive work, the work is a reaction or
 interpretation of an existing information object: reviews, ratings,
 encoding.
@@ -569,10 +593,9 @@ expended in archiving, enriching, appreciating, and sharing works, and a
 reactive view of crowdsourcing products places the public within this
 tradition.
 
-#### Subjective vs. Objective Crowdsourcing
+\marginnote{Subjective vs. Objective Crowdsourcing}
 
-Another parallel being drawn in recent years is that of objective or
-subjective crowdsourcing tasks.
+\newthought{Another parallel being drawn in recent years is that of objective or subjective} crowdsourcing tasks.
 
 Objective tasks are assumed to have an authoritative truth, even if it
 is unknown. For example, in transcribing scanned texts, it is assumed
@@ -609,15 +632,16 @@ disagree and that they are not incorrect for doing so.
 
 ### Type of Crowd
 
+<!-- TODO missing citation -->
 define two extremes of crowd types: *internal* and *external*. Internal
 crowds are composed solely of contributors from the organization that is
 crowdsourcing, if it is thus centralized. External crowds are members
 outside of the institution. @vukovic_towards_2010 also note that *mixed*
 crowds are observable.
 
-#### Necessary Skills
+\marginnote{Necessary Skills}
 
-A point of separation between crowd methods is the skills required to
+\newthought{A point of separation between crowd methods} is the skills required to
 perform the work. *Unskilled*, *locally training*, and *specialized* are
 all seen among crowdsourcing systems. Where unskilled labour encourages
 contributions from anybody at anytime, systems that use methods for
@@ -627,9 +651,9 @@ Overflow*, a user’s administrative ability grows more open as they
 contribute more to the management of the system, a way of ensuring that
 those users have learned the proper management of the site.
 
-#### Diversity
+\marginnote{Diversity}
 
-In additional to what the crowd is, there is a distinction to be made on
+\newthought{In additional to what the crowd is}, there is a distinction to be made on
 what the crowd is desired to be. Here, it is helpful to think of a
 spectrum between *diverse* and *homogeneous* crowds. In some cases, the
 crowdsourcing task benefits from multiple unique viewpoints. When online
@@ -648,7 +672,7 @@ engineered. These include:
 
 *Microtasking*. the concept of splitting a large task into many smaller
 parts to be worked on by different people was an important tide change
-in the history of open-source software @raymond_cathedral_1999, and the
+in the history of open-source software [@raymond_cathedral_1999], and the
 same models have been emulated in crowdsourcing. With so-called
 ‘microtasks’, the overhead to participation is low, and the pressure or
 dependence on any one contributor is low.
@@ -664,10 +688,10 @@ argues that people have a ‘cognitive surplus’ to give during their
 leisure time, a desire to spend their free time doing useful, creative
 or stimulating tasks [-@shirky_here_2009]. Gamification is an extension
 of serious games – games meant to do more than simply entertain
-@abt_serious_1987 [@michael_serious_2005; @ritterfeld_serious_2010]. In
+[@abt_serious_1987; @michael_serious_2005; @ritterfeld_serious_2010]. In
 areas of crowdsourcing and human computation, Games with a Purpose
-@von_ahn_games_2006 is an extension of serious games in the context of
-distributed, collaborative crowds. Harris and Srinivasan
+[@von_ahn_games_2006] is an extension of serious games in the context of
+distributed, collaborative crowds.
 @harris_applying_2012 consider the applicability of applying games with
 a purpose to various facets of information retrieval, concluding it is a
 feasible approach for tasks such as term resolution, document
@@ -682,7 +706,7 @@ binary (e.g. thumbs up/thumbs down). Unary judgments have grown in
 popularity as ways of showing support with minimal effort. Their
 popularity seems to stem from when social network *Friendfeed* implement
 a unary voting button labelled, succinctly, “I like this”
-@taylor_friendfeed_2007 and subsequently when similar wording was
+[@taylor_friendfeed_2007] and subsequently when similar wording was
 adopted by Facebook after acquiring Friendfeed.
 
 *Platforms*. There is a cottage industry of services that offer the
@@ -706,7 +730,7 @@ points for supporting the best ideas.
 
 *Wisdom of crowds*. Wisdom of the crowds is a design pattern which
 emphasizes the effectiveness of human judgment in aggregate
-@surowiecki_wisdom_2004, provided the participants are rationally
+[@surowiecki_wisdom_2004], provided the participants are rationally
 organized. This is embodied by multiple-keying for tasks which are
 expected to have a real answer, such as classifying galaxies, or
 averaging opinions for subjective tasks to derive a normative judgment.
@@ -765,7 +789,7 @@ themselves?*
     underutilized, but are most popular in cases where participants are
     creating things for themselves: compiling list bibliographies,
     personal collection bibliographies, or use a “save for later”
-    feature @spiteri_social_2011.
+    feature [@spiteri_social_2011].
 
 **Q:** *Does your project have any primary motivators to incentivize
 contributions, such as an existing community of interest or a
@@ -780,10 +804,10 @@ compelling, easy to answer question?*
     interesting data, it is possible to hire on-demand workers through a
     platform like *Mechanical Turk*. Examples of efficient routing on
     these sorts of systems include *Soylent* – crowdsourced writing
-    assistance @bernstein_soylent:_2010 – and *VizWiz*, an accessibility
+    assistance [@bernstein_soylent:_2010] – and *VizWiz*, an accessibility
     application that allows visually impaired users to receive
     transcribed descriptions of photos that they take
-    @bigham_vizwiz:_2010.
+    [@bigham_vizwiz:_2010].
 
 ## Conclusion
 
