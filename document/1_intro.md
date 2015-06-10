@@ -1,9 +1,8 @@
 Introduction
 ==============
 
-_In <140 characters: Maximizing data quality in using paid crowds for objective and subjective encoding tasks_
-
-## Intro
+\marginnote{In the style of modern mass communications, this work described in under 140 characters:
+\em{Maximizing data quality in using paid crowds for objective and subjective encoding tasks} }
 
 \newthought{The internet} is growing increasingly interactive as it matures.
 Rather than merely transmitting information to readers, web pages allow their audience to react and interact with their information.
@@ -17,9 +16,9 @@ Most importantly, crowdsourcing looks at human contribution at scales that are d
 
 <!-- Broad Research Question --><!--TODO add sidenote about Broad research Questions-->
 \newthought{However}, humans have predictable and unpredictable biases that make it difficult to systematically adopt their contributions in an information system.
-How do we control and interpret qualitative user contributions in an inherently quantitative system?
+How do we control and interpret qualitative user contributions in a quantified system?
 
-This work focuses on understanding the characteristics of data collected through crowdsourcing, toward two ends: awareness and data quality.
+This work focuses on understanding the characteristics of data collected through crowdsourcing, toward two ends: awareness of potentially unanticipated biases in crowd data collection, and ways to improve the quality of crowd-collected data. data quality.
 As will be demonstrated, crowdsourcing research is sensitive to various circumstances of instrumentation, context, and community.
 This work seeks to _understand_ the intricacies of these biases: looking at how tasks are completed when they are more or less engaging, restrictive, or subjective.
 Valid research needs to be aware of how circumstance affects crowds, as well as know what information is important to report for reproducibility.
@@ -27,7 +26,7 @@ Understanding leads to practical recommendations for maximizing data quality in 
 
 <!-- Scoping -->
 
-\newthought{This work focuses on} a particular type of crowd production -- metadata about existing information objects -- and a particular form of collection: microtasks in paid crowd platforms.
+\newthought{This work is scoped}  to a particular type of crowd production  -- metadata about existing information objects -- and a particular form of collection: microtasks in paid crowd platforms.
 These are viewed in the space of subjective and objective types of tasks.
 
 It is important to stay aware of the broader space of crowdsourcing and how characteristics of paid microtasks generalize to it.
@@ -38,6 +37,33 @@ Details of each part of this scope will follow -- crowdsourcing metadata, microt
 ## Overview
 
 ### Research Questions
+
+Broad Research Question 1:
+
+Broad Research Question 2:
+
+Chapter 6 focuses on completing subjective tasks through paid crowdsourcing, again focusing on maximizing quality through a priori design and instrumentation choices.
+Subjective tasks are rarely done in paid contexts, so _personalized crowdsourcing_ is introduced as a way to formalize and argue for the approach.
+Two protocols for personalized crowdsourcing are then presented, referred to as _taste-matching_ and _taste-grokking_, and compared.
+Finally, the design manipulations evaluated in Chapter 4 are evaluated in personalized crowdsourcing.
+
+<!- Reminder: update any changes here and in the actually chapter -->
+RQ 3.1: Is it feasible to apply paid crowdsourcing to subjective problems?
+RQ 3.2: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
+RQ 3.3: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
+RQ 3.4: How do different types of subjective tasks affect the efficacy of personalized crowdsourcing approaches?
+RQ 3.5: How do task design manipulations affect the quality of crowd contributions?
+
+- CHAPTER 4: Designing Objective/Normative Tasks for Paid Crowdsourcing (Effect of design manipulations on data)
+  - Literature review (introduce past in a way that my new research naturally follows. It should be clear 'why')
+  - 4.1 Difference in rating distributions between differently designed Google and Amazon app stores (DH 2012, brief)
+  - Image relevance judgments (new work)
+  - 4.2: Recovering error from music similarity judgments (JCDL 2015)
+  - 4.3: Design manipulations for tagging Pinterest (new work)
+- CHAPTER 5: Interpreting Objective/Normative Tasks for Paid Crowdsourcing (how do you find and account for quality problems?)
+  - 5.1: Literature review
+  - 5.2: Recovering error from relevant judgments (ASIS&T 2012)
+  - 5.3: Normalization section of MIR study
 
 ### Take Away
 
@@ -367,3 +393,4 @@ TODO
 - CHAPTER 7: Conclusions
   - RQs
   - Summary of findings (bold headings, easy to read: this should be the skimmable chapter of the dissertation)
+
