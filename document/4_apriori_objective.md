@@ -1,5 +1,5 @@
-Designing Objective Tasks
-===========================
+Designing Tasks for Objective Needs
+=====================================
 
 ## Introduction
 
@@ -16,7 +16,44 @@ This type of design is common for creating custom evaluation datasets through re
 Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @organisciak_evaluating_2012; @howe_crowdsourcing_2008; @ @organisciak_incidental_2013].<!--TODO better citations, remove citations to work being reported here -->
 The manner to improve on a basic task/description/items interface design is not immediately clear, though: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO2 cite -->.
 
+## What are the sources of error in crowdsourcing contributions?
+<!-- TODO more relevant in introductory chapter? -->
+
+
+\newthought{If we consider crowdsourcing data quality} as something that can be addressed not only through post-collection modeling but through the choices made in designing the collection task, the latter approach is surely the lesser studied problem.
+
+However, in cost-time considerations, design promises more efficient improvements.
+A design that is more interesting to workers or less prone to error may result in better contributions at no extra cost, while designs that offer bonuses or training include short term costs.
+When studying intrinsic motivation in Mechanical Turk tasks, [<!--Mason and Watts-->] found that a small change in instrumentation -- changing renumermation to less tightly govern the task -- resulted in more work contributed with happier contributors.
+<!-- TODO is there work about whether it is better to go cheaper with a bonus, or higher with no bonus?
+-->
+
 <!-- TODO: the gilbert 2015 argument would do well here: improving quality through design is a low-cost solution, compared to many of the posterior approaches to data quality. -->
+
+## Research questions
+
+In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will compare the effect of task design on collected information retrieval data.
+Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval -- a typical encoding task performed by paid crowds, the following questions will be pursued:
+
+ * __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
+
+ * __RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?
+
+ * __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
+
+ * __RQ4__: Do the questions above generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?
+
+RQ1 is the question of design, on synthesizing prior work and brainstorming directions to explore.
+It is a partially subjective question, but one still worth pursuing with diligence.
+As research by @komarov_crowdsourcing_2013 found, the effects seen in traditional user studies are still present in online crowd markets.
+Their finding suggests that non-crowdsourcing research in human-computer interaction is informative for our purposes.
+This proposal chapter explores some possible design decisions and argues why they should be studied.
+
+RQ2 and RQ3 are the primary questions being explored in this chapter of the proposed dissertation, on quality for computational use and on satisfaction.
+While this dissertation is explicitly pursuing the former question, collecting computationally useful contributions needs to be understood in the context of contributor satisfaction.
+The trade-off between contributions that crowds want to make and the reliability of the data is a central consideration for fostering sustainable, or alternately affordable, crowdsourcing.
+
+RQ4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be addressed as thoroughly as possible.
 
 ## Related Work
 
@@ -77,7 +114,7 @@ This is to say, a requester looking to pay for image tags may not want a vocabul
 When studying tag quality in a film recommendation system, @sen_quest_2007 found that only 21% of tags are worthy of display to other users.
 
 This study looks to augment image record data and metadata with additional information that cannot be trivially inferred without human contribution.
-Particularly, we look to information retrieval uses, to help in findability, filtering, and organization. 
+Particularly, we look to information retrieval uses, to help in findability, filtering, and organization.
 
 One typology for types of tags was offered for tagged bookmarks by @golder_usage_2006.
 They present seven kinds of bookmarking tags: those for identifying what the item is about (i.e. topical), for identifying what the item is (e.g. blog), for identifying the creator of the item, for qualifying or refining other tags, for labeling subjective characteristics of the content, for establishing a relationship to the tagger (e.g. 'my post'), and for organization.

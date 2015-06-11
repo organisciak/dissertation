@@ -3,8 +3,6 @@ Designing Reliable Tasks for Descriptive Crowdsourcing
 
 ## Introduction
 
-
-
 In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will compare the effect of task design on collected information retrieval data.
 Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval -- a typical encoding task performed by paid crowds, the following questions will be pursued:
 
