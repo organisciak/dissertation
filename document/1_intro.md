@@ -103,6 +103,9 @@ Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds
 Biases and ...
 
 
+## What are the sources of error in crowdsourcing contributions?
+<!-- TODO more relevant in introductory chapter? -->
+
 ## Scoping in Detail
 
 - Reactive
@@ -393,4 +396,3 @@ TODO
 - CHAPTER 7: Conclusions
   - RQs
   - Summary of findings (bold headings, easy to read: this should be the skimmable chapter of the dissertation)
-

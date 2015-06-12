@@ -1,50 +1,6 @@
 Designing Reliable Tasks for Descriptive Crowdsourcing
 ====================================================================
 
-## Introduction
-
-In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will compare the effect of task design on collected information retrieval data.
-Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval -- a typical encoding task performed by paid crowds, the following questions will be pursued:
-
- * __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
-
- * __RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?
-
- * __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
-
- * __RQ4__: Do the questions above generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?
-
-RQ1 is the question of design, on synthesizing prior work and brainstorming directions to explore.
-It is a partially subjective question, but one still worth pursuing with diligence.
-As research by @komarov_crowdsourcing_2013 found, the effects seen in traditional user studies are still present in online crowd markets.
-Their finding suggests that non-crowdsourcing research in human-computer interaction is informative for our purposes.
-This proposal chapter explores some possible design decisions and argues why they should be studied.
-
-RQ2 and RQ3 are the primary questions being explored in this chapter of the proposed dissertation, on quality for computational use and on satisfaction.
-While this dissertation is explicitly pursuing the former question, collecting computationally useful contributions needs to be understood in the context of contributor satisfaction.
-The trade-off between contributions that crowds want to make and the reliability of the data is a central consideration for fostering sustainable, or alternately affordable, crowdsourcing.
-
-RQ4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be addressed as thoroughly as possible.
-
-### Overview of proposed research design
-
-In this chapter, I will evaluate two interfaces for encouraging less deviation between human contributors by providing training and feedback mechanisms, respectively.
-These interfaces, motivated by efforts in my earlier work,  are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
-They will be compared to a baseline basic interface, as well as an alternative system that encourages quicker responses.
-
-Since the focus is on design for crowdsourcing in information retrieval, I will adopt an established information retrieval problem to control for the task:
- enriching terse microblogging messages through paid crowdsourcing.
-What is being completed is not as central to this study as how it is done, but this is a task that is structured similar to many on-demand crowdsourced information retrieval tasks.
-
-Workers will identify the topic of a microblogging message from Twitter -- a tweet.
-This is a task where the information object is sparse and the topics are often short-lived and previously unseen, making crowdsourcing a promising approach to improve information retrieval across the data.
-It is also a realistic task that has been attempted with crowdsourcing in the past.
-<!-- Why?? Discussed later? -->
-
-While a more common use of paid crowdsourcing is for evaluation dataset creation, this dissertation looks as crowdsourcing for document metadata.
-A task where more information in encoding about the document is a more appropriate task to study in this context, even though evaluation can be considered loosely relevant.
-
-<!-- formerly labeled 'Problem'.. still need a problem section, or was the intro chapter's section sufficient? -->
 
 ## Motivation
 
@@ -60,8 +16,7 @@ Particularly, my past doctoral-level research motivates this chapter, suggesting
 
  * In @organisciak_evaluating_2012 we found evidence that at least some error in crowdsourced relevance judgments stems from differing but not necessarily malicious interpretations of the task, suggesting that improved quality can follow from tweaks in design.
  * During research on @organisciak_personalized_2013, we found that asking people to reflect on their response changed the nature of their response, with less internal consistency.
- * In a sample study comparing the space of incidental crowdsourcing across two systems [@organisciak_incidental_2013], I found that an 'easy' rating interface -- one that puts up less hurdles to contribution -- results in a shifted distribution of ratings than a 'hard' interface.
- * In recently-completed research, I looked at low grader consistency in the ground truth for the Audio Music Similarity (AMS) task in the Music Information Retrieval Exchange (MIREX). One of the results found that redesigning the task to attach finer instruction to the rating improved the quality of judgments by crowdsourced judges.
+
 
 #### Better workers read codebooks
 
@@ -354,101 +309,6 @@ Designs to encourage longer-term engagement from individuals do not appear to be
 Worker experience was previously measured [@organisciak_evaluating_2012] and found to not be significant for simple tasks.
 Other areas are already well-tread. The effect of incentive structures, payment and bonuses, has been studied frequently, notably by @mason_financial_2010.
 With regards to designs that mislead workers about their performance, there are ethical and trust issues that limit such an approach, in addition to the warning by @kraut_building_2011 that feedback is only effective when contributors believe it is sincere.
-
-### Proposed designs
-So what tweaks will this study measure?
-
-As outlined in the overview of my own doctoral research, a few directions look like promising continuations of my research.
-
- * It is still unclear whether simple encoding tasks benefit more from workers' gut instincts or careful consideration.
-   Designs that can change a worker's attentiveness address an interesting problem and may bring potential improvements.
- * Having previously found that reading instructions slowly is important for properly performing work, it should be seen whether a task can push a worker into internalizing the codebook rather than interpreting it.
- * Understanding that many reliability errors are introduced by honest workers that intend to do well, it may also be important to keep workers informed of their performance, at least when they are not performing well.
-
-With those considerations in mind, I propose the three interfaces to study for crowdsourced data collection: a training interface, a feedback interface, and a time-limited interface.
-
-#### Basic interface
-
-The basic interface will resemble an archetypal task, following conventions seen in Mechanical Turk usage.
-It will show workers a task with a goal, description, and ten items to perform actions on.
-The goal of the interface will be to "identify the topic of a tweet."
-For each item, a multiple-choice question will be posed, with the proper noun phrases provided as options, as well as a free-text "Other" category and an "unknown" option.
-The description will explain what a "topic" is, and make clear the difference between a topic and simply a mention.
-An example will be included with the description, but as a pop up window behind a "See Example" link that needs to be clicked.
-This is done to conform to the convention that instructions should not be too long, in order not to push the actual action items 'below the fold'.
-Amazon's own advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011]. <!--\_-->
-
-<!--TODO2
-
- * Example of item and options
- * Mockup of interface
--->
-<!--TODOAFTER
-
- * Write description
--->
-
-#### Training interface
-
-In the training interface, the worker is walked through their first task slowly.
-As they complete the tasks, their answers are evaluated against a gold standard and they are informed if they completed it correctly or incorrectly.
-Incorrect answers will also be given an explanation of why the actual answer is correct.
-
-<!-- TODO2 Justification for this design: who else has done it?
-Ask Mike, possible Jaime for advice, my lit review is failing.
--->
-
-The training tasks will be hand-designed, based on a random sample of items.
-
-<!--TODO2
-
- * Add figure of mockup -->
-
-#### Feedback Interface
-
-In the feedback interface, a worker is shown feedback about their estimated performance on past tasks.
-The first that they complete is identical to the basic interface.
-Starting with the second task, however, the top of the interface will tell users:
-
- * Their estimated performance, in terms of agreement with other workers.
- * A visualization of where they fall in the distribution of all workers, from best performing to worst,
-
-![Example of showing feedback to workers](images/progress-bar-mockup.png)
-
-Since the interaction of this interface truly begins on the second task, evaluation of this interface will also focus on users returning after their first task.
-
-@mccreadie_crowdsourcing_2011 attempted a similar approach, where contributors were shown a sidebar color-coding all their contributions based on their agreement with other raters and the authors.
-Showing this information with such granularity encourages workers to go back to reconsider debated answers, whereas this study's take tries to encourage more care and competition moving forward.
-
-<!--TODO2
- * email McCreadie about permission to include figure
- * Add mockup figure
- * Calculate stats for another dataset on what percentage of contributions are not the first task done by a user.
-
-Rough Notes
-
-If you're doing voting, then a score is possible based on agreement with other workers:
-^Score=Avg. StdDev from Mean of Ratings
--->
-
-
-#### Time-Limited Interface
-
-As hinted at during my past work, not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
-
-In contrast to the training and feedback interfaces, which will serve to slow down workers and make them more focused on their contributions, the final data collection interface will pursue the opposite approach.
-The time-limited interface encourages quicker interactions by giving users a timer to complete all tasks.
-
-It is important not to distress the worker when trying to push them into a visceral form of task completion, as this might have the opposite effect.
-Instead, this design should encourage flow, where a user moves seamlessly through the tasks without over-thinking their answers.
-To avoid the potentially distress of thinking about what is to come, this interface will not show a list of tasks to complete (e.g. "complete these ten tasks in a minute").
-Instead, tasks will be shown one at a time (e.g."See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers.
-
-<!--
-TODO2
- * To explain: how does the timer cut off slow workers? (With bonuses that are only given per item of task-set finished within time limit)
- * What is the time limit? This needs to be measured to determine a good value
- * Add mockup of interface-->
 
 ### Evaluation
 

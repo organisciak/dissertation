@@ -1,8 +1,49 @@
 Designing Tasks for Objective Needs
 =====================================
 
-## Introduction
+<!-- Planned structure
 
+Introduction
+Problem
+  Why design matters
+Overview
+
+Related Work
+  Financial Tweaking
+  Bonuses
+  Task Description
+
+Research Questions
+
+Design Space (RQ1)
+    Gedanken Experiments
+    So, what do I study
+
+
+Approach
+  Training Interface (TRN)
+  Feedback Interface (FEED)
+  Fast Interface (FAST)
+  Other, small experiments
+    Performance Bonus (BON)  
+
+Experiment #1: Tagging
+  Data
+  Measurements
+    Quality, Variance
+    Cost
+    Satisfaction
+Experiment #2: Relevance Judgments
+  Data
+  Measurements
+    Quality, Variance
+    Cost
+    Satisfaction
+Experiment #3: Music Similarity Judgments
+
+-->
+
+<!-- Introduction -->
 \newthought{Humans don't operate with the formality of computers}.
 Many of the benefits of crowdsourcing follow from that fact: human contributions are valuable specifically because they are not easily automated.
 However, when using crowd contributions to inform an algorithmic system, as in information retrieval, the inconsistencies of human work present a challenge.
@@ -16,23 +57,48 @@ This type of design is common for creating custom evaluation datasets through re
 Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @organisciak_evaluating_2012; @howe_crowdsourcing_2008; @ @organisciak_incidental_2013].<!--TODO better citations, remove citations to work being reported here -->
 The manner to improve on a basic task/description/items interface design is not immediately clear, though: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO2 cite -->.
 
-## What are the sources of error in crowdsourcing contributions?
-<!-- TODO more relevant in introductory chapter? -->
-
-
 \newthought{If we consider crowdsourcing data quality} as something that can be addressed not only through post-collection modeling but through the choices made in designing the collection task, the latter approach is surely the lesser studied problem.
-
-However, in cost-time considerations, design promises more efficient improvements.
+  However, in cost-time considerations, design promises more efficient improvements.
 A design that is more interesting to workers or less prone to error may result in better contributions at no extra cost, while designs that offer bonuses or training include short term costs.
-When studying intrinsic motivation in Mechanical Turk tasks, [<!--Mason and Watts-->] found that a small change in instrumentation -- changing renumermation to less tightly govern the task -- resulted in more work contributed with happier contributors.
+When studying intrinsic motivation in Mechanical Turk tasks, [<!--Mason and Watts-->] found that a small change in instrumentation -- changing remunermation to less tightly govern the task -- resulted in more work contributed with happier contributors.
 <!-- TODO is there work about whether it is better to go cheaper with a bonus, or higher with no bonus?
 -->
 
-<!-- TODO: the gilbert 2015 argument would do well here: improving quality through design is a low-cost solution, compared to many of the posterior approaches to data quality. -->
+[<!--Gilbert paper-->]
+
+## Problem
+
+## Overview
+
+In this chapter, multiple interfaces for encouraging less deviation between contributors are evaluated against identical controlled tasks.
+Two design manipulations are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
+A third design encourages quicker responses.[^whyint]
+These are compared to a realistic baseline interface which follows typical Mechanical Turk conventions.
+Afterward, an applied experiment is presented, where both apriori and posterior methods are applied to a music information retrieval evaluation. The design changes that are made improve the quality of results drastically, with negligible cost differences.
+
+[^whyint]: Why are these design manipulations chosen? Later in this chapter, the possibilities for design manipulation are considered, and compared to the existing literature. As will be seen, prior work has lent insight on the effect of 'parameter manipulations' such as payment variation <!-- TODO CITE--> and wording changes<!-- TODO CITE LEASE paper-->, while more drastic design manipulations are only beginning to be studied in the context of crowds.<!--TODO cite Gilbert-->
+
+
+
+Since the focus is on design for crowdsourcing in information retrieval, I will adopt an established information retrieval problem to control for the task:
+ enriching terse microblogging messages through paid crowdsourcing.
+What is being completed is not as central to this study as how it is done, but this is a task that is structured similar to many on-demand crowdsourced information retrieval tasks.
+
+Workers will identify the topic of a microblogging message from Twitter -- a tweet.
+This is a task where the information object is sparse and the topics are often short-lived and previously unseen, making crowdsourcing a promising approach to improve information retrieval across the data.
+It is also a realistic task that has been attempted with crowdsourcing in the past.
+<!-- Why?? Discussed later? -->
+
+While a more common use of paid crowdsourcing is for evaluation dataset creation, this dissertation looks as crowdsourcing for document metadata.
+A task where more information in encoding about the document is a more appropriate task to study in this context, even though evaluation can be considered loosely relevant.
+
+<!-- formerly labeled 'Problem'.. still need a problem section, or was the intro chapter's section sufficient? -->
+
+
 
 ## Research questions
 
-In keeping with goals of the proposed dissertation to explore and develop methods for controlling intercoder reliability, this sub-study will compare the effect of task design on collected information retrieval data.
+This chapter compares the effect of task design on the quality of crowdsourced objective data.
 Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval -- a typical encoding task performed by paid crowds, the following questions will be pursued:
 
  * __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
@@ -66,6 +132,102 @@ While this form of usage-based quality indicator does not help in collecting goo
 
 
 ## Approach
+
+So what tweaks will this study measure?
+
+As outlined in the overview of my own doctoral research, a few directions look like promising continuations of my research.
+
+ * It is still unclear whether simple encoding tasks benefit more from workers' gut instincts or careful consideration.
+   Designs that can change a worker's attentiveness address an interesting problem and may bring potential improvements.
+ * Having previously found that reading instructions slowly is important for properly performing work, it should be seen whether a task can push a worker into internalizing the codebook rather than interpreting it.
+ * Understanding that many reliability errors are introduced by honest workers that intend to do well, it may also be important to keep workers informed of their performance, at least when they are not performing well.
+
+With those considerations in mind, I propose the three interfaces to study for crowdsourced data collection: a training interface, a feedback interface, and a time-limited interface.
+
+#### Basic interface
+
+The basic interface will resemble an archetypal task, following conventions seen in Mechanical Turk usage.
+It will show workers a task with a goal, description, and ten items to perform actions on.
+The goal of the interface will be to "identify the topic of a tweet."
+For each item, a multiple-choice question will be posed, with the proper noun phrases provided as options, as well as a free-text "Other" category and an "unknown" option.
+The description will explain what a "topic" is, and make clear the difference between a topic and simply a mention.
+An example will be included with the description, but as a pop up window behind a "See Example" link that needs to be clicked.
+This is done to conform to the convention that instructions should not be too long, in order not to push the actual action items 'below the fold'.
+Amazon's own advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011]. <!--\_-->
+
+<!--TODO2
+
+ * Example of item and options
+ * Mockup of interface
+-->
+<!--TODOAFTER
+
+ * Write description
+-->
+
+#### Training interface
+
+In the training interface, the worker is walked through their first task slowly.
+As they complete the tasks, their answers are evaluated against a gold standard and they are informed if they completed it correctly or incorrectly.
+Incorrect answers will also be given an explanation of why the actual answer is correct.
+
+<!-- TODO2 Justification for this design: who else has done it?
+Ask Mike, possible Jaime for advice, my lit review is failing.
+-->
+
+The training tasks will be hand-designed, based on a random sample of items.
+
+<!--TODO2
+
+ * Add figure of mockup -->
+
+#### Feedback Interface
+
+In the feedback interface, a worker is shown feedback about their estimated performance on past tasks.
+The first that they complete is identical to the basic interface.
+Starting with the second task, however, the top of the interface will tell users:
+
+ * Their estimated performance, in terms of agreement with other workers.
+ * A visualization of where they fall in the distribution of all workers, from best performing to worst,
+
+![Example of showing feedback to workers](images/progress-bar-mockup.png)
+
+Since the interaction of this interface truly begins on the second task, evaluation of this interface will also focus on users returning after their first task.
+
+@mccreadie_crowdsourcing_2011 attempted a similar approach, where contributors were shown a sidebar color-coding all their contributions based on their agreement with other raters and the authors.
+Showing this information with such granularity encourages workers to go back to reconsider debated answers, whereas this study's take tries to encourage more care and competition moving forward.
+
+<!--TODO2
+ * email McCreadie about permission to include figure
+ * Add mockup figure
+ * Calculate stats for another dataset on what percentage of contributions are not the first task done by a user.
+
+Rough Notes
+
+If you're doing voting, then a score is possible based on agreement with other workers:
+^Score=Avg. StdDev from Mean of Ratings
+-->
+
+
+#### Time-Limited Interface
+
+As hinted at during my past work, not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
+
+In contrast to the training and feedback interfaces, which will serve to slow down workers and make them more focused on their contributions, the final data collection interface will pursue the opposite approach.
+The time-limited interface encourages quicker interactions by giving users a timer to complete all tasks.
+
+It is important not to distress the worker when trying to push them into a visceral form of task completion, as this might have the opposite effect.
+Instead, this design should encourage flow, where a user moves seamlessly through the tasks without over-thinking their answers.
+To avoid the potentially distress of thinking about what is to come, this interface will not show a list of tasks to complete (e.g. "complete these ten tasks in a minute").
+Instead, tasks will be shown one at a time (e.g."See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers.
+
+<!--
+TODO2
+ * To explain: how does the timer cut off slow workers? (With bonuses that are only given per item of task-set finished within time limit)
+ * What is the time limit? This needs to be measured to determine a good value
+ * Add mockup of interface-->
+
+
 
 ## Design Conditions
 
@@ -151,3 +313,13 @@ The quality of these tags was determined through a Mechanical Turk task, where w
   - In rating tag quality, both positive and negative ratings are important [@sen_quest_2007]
 
 ### Tagging
+
+
+## Experiment #3: Music Similarity Judgments
+
+\marginnote{This work was previous reported in <!-- TODO cite-->}
+
+### Old text
+
+* In a sample study comparing the space of incidental crowdsourcing across two systems [@organisciak_incidental_2013], I found that an 'easy' rating interface -- one that puts up less hurdles to contribution -- results in a shifted distribution of ratings than a 'hard' interface.
+* In recently-completed research, I looked at low grader consistency in the ground truth for the Audio Music Similarity (AMS) task in the Music Information Retrieval Exchange (MIREX). One of the results found that redesigning the task to attach finer instruction to the rating improved the quality of judgments by crowdsourced judges.
