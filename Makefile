@@ -2,6 +2,7 @@ pandoc_args = -f markdown --bibliography=refs.bib --smart
 #name =thesis
 name=thesis-tufte
 data= logs/stats.csv
+progressfile='../dissertation-progress/data.csv'
 
 all: mostlyclean docx
 
@@ -35,7 +36,8 @@ defensepdf:
 		$(pandoc_args)
 
 count:
-	cat writing-files.txt | parallel wc -w | awk '{total+=$$0}END{print total}'
+	./count.sh >> $(progressfile)
+	tail $(progressfile)
 
 report:
 	# Update stats
