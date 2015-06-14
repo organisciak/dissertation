@@ -6,6 +6,7 @@ Designing Tasks for Objective Needs
 Introduction
 Problem
   Why design matters
+
 Overview
 
 Related Work
@@ -18,7 +19,6 @@ Research Questions
 Design Space (RQ1)
     Gedanken Experiments
     So, what do I study
-
 
 Approach
   Training Interface (TRN)
@@ -232,10 +232,9 @@ They find that high-quality tags, as determined by survey, are not necessarily t
 However, tags that are applied by many _unique_ users are more likely to be useful, as are tags that are clicked by many unique users.
 While this form of usage-based quality indicator does not help in collecting good tags, it does affect how to determine quality tags for ground truth in this study.
 
-
 ## Approach
 
-So what tweaks will this study measure?
+So what design manipulations does this study measure?
 
 As outlined in the overview of my own doctoral research, a few directions look like promising continuations of my research.
 
@@ -329,11 +328,45 @@ TODO2
  * What is the time limit? This needs to be measured to determine a good value
  * Add mockup of interface-->
 
+ ### Evaluation
+
+ <!--Talk about Mechanical Turk. -->
+ <!--Talk about the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
+
+ The experiments in this study will be run in a naturalistic setting: running directly on a paid crowdsourcing platform, Amazon Mechanical Turk, with real workers.
+ There are trade-offs to this setting.
+ It is easy to instrumentalize and properly captures the actual skills and attentiveness of paid crowd workers.
+ However, working within the conventions of the system means that some parts cannot be controlled.
+ For example, workers cannot be forced to perform multiple tasks, simply encouraged to do so.
+ Also, the actual user pools testing the different interfaces are not necessarily the same individuals.
+ Thus, it is important that the users are similarly representational: it would be problematic if one interface was used mainly by Indian residents while another was performed mainly by American residents (the second and first larges nationalities on Mechanical Turk, respectively).
+
+ For this reason, each interface will be evaluated with temporal and geographic restrictions.
+ Workers will be restricted to American workers, and tasks will each be posted during the American work day: between 10am and 1pm Pacific Time during weekdays.
+ <!-- Does this narrow my findings too much? There should be work that informs us more about this-->
+
+### Implementation
+
+The experiments were performed on Amazon's Mechanical Turk, using an API that allows external pages to be hosted within the Mechanical Turk interface.
+
+The system for design manipulation was developed using JavaScript on the front end, built on top of the Angular JS library.
+The software is released with an open-source MIT license[^crowdy].
+
+The back-end of the stack also runs on Javascript, with a Node.js server run on the Express web application framework.
+Data storage uses the MongoDB database.
+The task serving code is also released online[^crowdybackend].
+
+Details of the experimental system, including design documents, model descriptions, and logic, are provided in the Appendices. <!-- TODO2 add proper link. -->
+
+[^angularjs]: https://angularjs.org/
+[^nodejs]: https://nodejs.org/
+[^express]: http://expressjs.com
+[^mongodb]: https://www.mongodb.com
+[^crowdy]: https://github.com/organisciak/crowdy
+[^crowdybackend]: https://github.com/organisciak/crowdy-backend
 
 
-## Design Conditions
-
-### Tasks
+## Experiment  #1: Tagging
 
 <!--#### Tagging-->
 
@@ -415,6 +448,9 @@ The quality of these tags was determined through a Mechanical Turk task, where w
   - In rating tag quality, both positive and negative ratings are important [@sen_quest_2007]
 
 ### Tagging
+
+
+## Experiment #2: Relevance Judgments
 
 
 ## Experiment #3: Music Similarity Judgments

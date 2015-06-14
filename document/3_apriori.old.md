@@ -213,119 +213,9 @@ For evaluation, a gold standard set will be encoded by myself, as a reliability 
 A ground truth dataset will be built after all experiments are run, by pooling all responses for a consensus.
 For additional rigour, the pooled dataset will be compared against my ground truth, so that points of disagreement can be re-evaluation.
 
-### Task Flow
-
-Before parameterizing the designs of the microblogging task to be studied, a brief exploration of the design space will help discussion.
-
-Commonly, a paid crowdsourcing worker goes through the following steps:
-
- 1. Worker $w$ arrives at task page
- 2. $w$ is shown a preview of task $t$
- 3. Worker $w$ accepts the task $t$
- 4. Work performs task $t$ and submits
- 5. A new task $t'$ is chosen and, worker is taken back to _step 2_ or _step 3_
-
-The above steps are the model used by Amazon Mechanical Turk when a task is followed through to completion.
-Workers are also given escape options, to skip, reject or return tasks.
-
-Metadata encoding tasks generally consist of the following parts:
-
- * __Goal__ statement/question. _e.g. "Is this page relevant to query `q`?", "Find the topic of a tweet."_
- * __Instructions__ for performing the task.
- * one or more __Items__ that worker responds to. _e.g. webpage snippets, microblogging messages_
- * __Action__, one per item: the data collection mechanism.
 
 
-### Gedanken Experiments
 
-Within this framework, a number of factors are observable that may potentially affect how our microblog encoding task is completed.
-First are the parameterizations of the task within its existing structure -- changes to the goal, instructions, item, action, and even the task itself.
-Ways that these can change from task to task include:
-
- * __Task__
-    * Payment.
-    * Bonuses.
-    * Number of tasks available.
- * __Goal__
- * __Instructions__
-    * Clarity.
-    * Restrictive vs. interpretable.
-    * Length.
- * __Item__
-    * Number of items in a task.
- * __Action__
-    * Complexity of action. e.g. granularity.
-
-Of course, we're not constrained to the task structure provided above.
-We can add elements to the task design before the task is accepted, at the start of the task, during or in response to individual interactions, or after the task is completed.
-Taking away elements might also be possible, such as the instructions, though it is hard to imagine that doing would would have a positive effect on the reliability or variance of the data.
-
-The possibilities are endless for adding parts to the basic task.
-To inspire useful ones, it is helpful to consider one final, naturalistic set of factors that may affect the outcome of a paid crowdsourcing task: worker behaviours.
-
-A worker's contribution may be affected by a myriad of factors, such as experience, skill, time spent per task, and attentiveness.
-Which of these can be influenced by external factors?
-
- - _Experience_. Experience is a product of sustained interaction with the current type of task.
-   It can affecting indirectly by focusing on methods to extend the length of a user's interaction, such as bonus payments for staying around.
- * _Skill_. Skill is developed over time and is mostly affected by factors internal to the worker.
-   To the extent that we could affect it, most functionality would encourage greater experience.
-   Teaching workers by reinforcing their successes and failures might also have an effect.
- - _Self-confidence and decisiveness_. Contributors or workers that second-guess themselves more often may be less internally consistent. <!-- TODO2: advice from Diane Kelly on lit? -->
- - _Attentiveness and fatigue_. Environmental distractions or fatigue can change how consistently a task is completed.
-The microtasking design pattern in paid crowdsourcing is meant to negate some of the fatigue seen in traditional classification labour, but there is no way to anticipate other outside factors, such has how many tasks from other requesters were completed. It is possible to affect attentiveness and fatigue within a task, however, with higher- or lower-effort tasks.
- - _Perceived importance of task_. The perceived importance of a task might affect some other factors, such as attentiveness or self-confidence.
- - _Time spent on each task_. The time spend on a task does not always translate to an indicator or quality, but might encourage greater numbers of contributions or more decisive contributions when controlled.
-
-In a moment I'll rein in discussion to a smaller set of design interfaces to test.
-However, an exercise to think through the possibilities afforded to us by the features in the previous section will be helpful.
-
-Consider this study's Twitter encoding task.
-How would the contribution change if:
-
-- Tasks were 100 items long?
-  200? 1000? Only 1?
-* Instructions were written very tersely?
-  Verbosely, with many examples?
-- Contributors were tested on the instructions at the beginning of the task?
-  If there were gold label items throughout the task?
-  If everything had a known answer and workers were inconvenienced (e.g. with a time delay) when they got an answer wrong?
-- Contributors were asked to volunteer their time?
-  Were paid 1c per task? Were paid 10c per task?
-  Were paid by the hour?
-* Contributors were paid bonuses for performance against a ground truth or internal consistency?
-  For continued task completion?
-  For difficulty of their classification?
-* Contributors were shown their performance (or estimated performance)?
-  What if they were ranked against other workers?
-  What if they gained levels or earned badges for performance?
-- Contributors had tasks/time quotas to meet for bonuses?
-  What if they were forced into these quotas (with tasks automatically moving forward)?
-  What if a timer ticked away until their task disappear?
-- Contributors were told when they got something wrong? What if you lie to them?
-
-Some of these ideas of exciting, others are unfeasible.
-Designs to encourage longer-term engagement from individuals do not appear to be a promising direction.
-Worker experience was previously measured [@organisciak_evaluating_2012] and found to not be significant for simple tasks.
-Other areas are already well-tread. The effect of incentive structures, payment and bonuses, has been studied frequently, notably by @mason_financial_2010.
-With regards to designs that mislead workers about their performance, there are ethical and trust issues that limit such an approach, in addition to the warning by @kraut_building_2011 that feedback is only effective when contributors believe it is sincere.
-
-### Evaluation
-
-<!--Talk about Mechanical Turk. -->
-<!--Talk about the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
-
-The experiments in this study will be run in a naturalistic setting: running directly on a paid crowdsourcing platform, Amazon Mechanical Turk, with real workers.
-There are trade-offs to this setting.
-It is easy to instrumentalize and properly captures the actual skills and attentiveness of paid crowd workers.
-However, working within the conventions of the system means that some parts cannot be controlled.
-For example, workers cannot be forced to perform multiple tasks, simply encouraged to do so.
-Also, the actual user pools testing the different interfaces are not necessarily the same individuals.
-Thus, it is important that the users are similarly representational: it would be problematic if one interface was used mainly by Indian residents while another was performed mainly by American residents (the second and first larges nationalities on Mechanical Turk, respectively).
-
-For this reason, each interface will be evaluated with temporal and geographic restrictions.
-Workers will be restricted to American workers, and tasks will each be posted during the American work day: between 10am and 1pm Pacific Time during weekdays.
-<!-- Does this narrow my findings too much? There should be work that informs us more about this-->
 
 #### Baseline
 
@@ -352,20 +242,23 @@ Secondary questions
 
 ### Implementation
 
-The experiments will be performed on Amazon's Mechanical Turk, using an API that allows external pages to be hosted within the Mechanical Turk interface.
-Funds for workers will be provided out of pocket, though I will seek dissertation research funding where available.
-The Graduate College at Illinois lists grant funding opportunities that may be worth pursuing [^grants1].
+The experiments were performed on Amazon's Mechanical Turk, using an API that allows external pages to be hosted within the Mechanical Turk interface.
 
-The systems themselves will be developed using JavaScript for the front end, built on top of the Backbone.js model-view library with require.js used to modularize the code.
-Backbone.js is a strong choice for binding data to arbitrary views, offering flexibility for our comparative interfaces.
-On the back-end, the stack will be run on a Node.js server with MongoDB for data storage.
-These options are not critical, but they are fast for concurrent activities, reducing my server needs.
+The system for design manipulation was developed using JavaScript on the front end, built on top of the Angular JS library.
+The software is released with an open-source MIT license[^crowdy].
 
-The software will be developed by myself, but is not drastically different than past systems that I have built and should not present any difficulties beyond time commitment.
-Honoring the notion of dissertation work as a public contribution, all development will be performed in a reusable manner, and released with an open-source Apache license[^crowdy].
+The back-end of the stack also runs on Javascript, with a Node.js server run on the Express web application framework.
+Data storage uses the MongoDB database.
+The task serving code is also released online[^crowdybackend].
 
+Details of the experimental system, including design documents, model descriptions, and logic, are provided in the Appendices. <!-- TODO2 add proper link. --> 
+
+[^angularjs]: https://angularjs.org/
+[^nodejs]: https://nodejs.org/
+[^express]: http://expressjs.com
+[^mongodb]: https://www.mongodb.com
 [^crowdy]: https://github.com/organisciak/crowdy
-[^grants1]: http://nres.illinois.edu/graduate/funding-your-research
+[^crowdybackend]: https://github.com/organisciak/crowdy-backend
 
 ## Conclusion
 
