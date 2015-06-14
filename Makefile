@@ -7,7 +7,7 @@ progressfile='../dissertation-progress/data.csv'
 all: mostlyclean docx
 
 all.md:
-	cat summary.md document/*_*md >all.md
+	cat writing-files.txt | parallel cat >all.md
 
 stats:
 	# Show chart of word count progress

@@ -5,3 +5,4 @@ document/4_apriori_objective.md
 document/5_posterior_objective.md
 document/6_subjective.md
 document/7_conclusions.md
+document/appendix_code.md
