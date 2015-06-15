@@ -28,27 +28,6 @@ In contrast, crowdsourcing deals with many contributors submitting generally few
 In instances of paid crowdsourcing, there is more control over the way that contributions are made, but since contributors are usually self-selected, it is still possible to run into fatigue, misunderstanding, or inattentiveness.
 -->
 
-### Contribution variance
-
-Variance that exists between different contributors adds noise both to tasks that make a subjective assumption and tasks that make an objective assumption.
-
-In subjective tasks, it is assumed that there is no universally correct form of contribution.
-For example, when crowd contributions are used to inform recommendations, such as for music or film, it often assumed that different types of people enjoy different products.
-We thus see approaches to recommendation such as collaborative filtering, where users are matched to similar users based on the overlap between their tastes rather than a global definition of 'good' or 'bad' products.
-In such a case, inter-rater consistency is still important, to make it possible to identify similar users.
-Modern approaches to collaborative filtering commonly normalize ratings against
- a user-specific bias (i.e. "how does this rating compare this user's average rating") and sometimes against
- an item-specific bias (i.e. "how does this rating compare to what the rest of the community thinks about the item").
-
-For objective tasks, @neuendorf_content_2002 differentiates between two types: manifest and latent.
-
-In a simplified comparison, tasks with manifest content are ones where there is a clear correct contribution.
-Correcting or transcribing text from a scanned image would be grouped in the category.
-
-In contrast, latent tasks are assumed to have a theoretical truth, but one that is not outwardly stated.
-When a person tags a photograph with a free-text label or a worker classifies the sentiment of an opinionated tweet, they are interpreting the content.
-As @neuendorf_content_2002 notes, "objectivity is a much tougher criterion to achieve with latent than with manifest variables".
-
 ### Benefits of Recovering Error from Crowd Contributions
 
 Why try to account for human error in crowdsourcing collection?
@@ -59,13 +38,3 @@ Doing so thus helps keep system less affected by the ebbs and flows of motivatin
 Since the attention that contributors is not uniform across all items in a system, usually resembling an inverse power-law distribution, understanding crowdsourced information with less aggregation means more of the middle of the distribution can be represented.
 
 In other words, accounting for individual biases seeks to make each individual contribution more valuable.
-
-## Chapter Outline
-
-The proposed dissertation follows the below structure, delineated by chapters.
-
-#### Introduction
-
-The first chapter will introduce the use of crowdsourcing for information retrieval and outline the problems of variance and low intercoder reliability in crowdsourced data.
-The scope will be drawn out as this document has done, making clear that the focus within crowdsourcing is on uses that augment our knowledge of existing information objects, and the focus in information retrieval is in improving retrieval, rather than evaluation, in a reliable manner.
-Subsequently, the assumption of honest but biased contributors will be outlined, and the hypothesis on this assumption will be outlined along with the two studies that will be pursued to test it.

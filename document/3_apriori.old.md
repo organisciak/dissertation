@@ -143,10 +143,6 @@ Information retrieval researchers are using the predictability of paid crowd mar
 
 ## Approach
 
-In this chapter, I will investigate the effect of different parameterizations of a microblogging encoding task.
-
-<!-- There will be two tasks, both related to encoding microblogging messages, and four different designs for collecting information for them. -->
-
 ### Task
 
 The metadata encoding task being controlled for is a microblog annotation task.
@@ -165,57 +161,11 @@ Twitter, the company, uses Mechanical Turk in this way to understand the context
 When there is a spike in search volume, human classifiers are able to differentiate between possible interpretations of the query [@chen_improving_2013].
 For example, when "Big Bird" began trending after a political candidate made a polarizing comment about public television funding, it was easily identified as a political query.
 
-<!--Two types of microblogging metadata tasks will be pursued in this study.-->
-
-The task will be a topic identification task:
- "Is this tweet about topic X?"
-Workers are shown a tweet that contains the terms of a query, $Q$, where $Q$ represents an extracted entity.
-Their task will be to describe whether the entity is the topic of the tweet, or simply mentioned.
-
-Such a task is useful, but potentially easy to misinterpret by contributors conflating a term being the topic of a tweet with merely being mentioned in the tweet.
-
-<!-- TODO2: Is there research around the topic - primary, tertiary in a sentence -->
-
-<!--
-For example, ... TODO2 use Obama examples...
-<!--
-__TODO2: remove below task__, but first it's worth considering what do do with it. I like it.
-
-The second task will be a summarization task:
- "Find the most self-explanatory tweet from Set A"
-Workers will be shown ten microblogging messages from a trending topic and asked to identify the one tweet that best communicates the topic.
-
-Trending topics are a designation on Twitter denoting suddenly popular discussion topics.
-They are usually a short query or a hashtag.
-Hashtags are likely to represent a discussion topic borne on Twitter itself rather than discussion on an external topic.
-A cursory look at trending topics suggests that they are more likely to be self-evident, whereas regular terms tend to react to a notable news event.
-For this reason, the tweets will be sampled from non-hashtag trending topics, where the need for explaining what is being referenced appears to be greater.
-
-Understanding a topic based on multiple tweets has previously been performed by @shiells_generating_2010.
-They looked at the information contained in multiple messages sharing the same link.
-This study differs in that a human looks at multiple messages to understand the topic then selects the single existing message that is the most informative by itself.
-However, similar data preparation steps will be required, removing expected spam and near-duplicates.
--->
-<!-- TODO2: estimates of Twitter duplicates -->
-<!-- TODO2: research hueristics on removing Twitter spam -->
-
 #### Data
-
-This study's dataset will be collected from Twitter through their Search API.
-Since we are evaluating the effectiveness of user annotation of Twitter messages, _tweets_, there is no need for a population of tweets, such as the dataset used in the TREC microblogging retrieval track.
-
-The dataset will compile two types of data.
-The first data type will be random tweets from the stream, with named entity recognition used to identify entities that are potentially, but not necessarily, the topic of the tweet.
-The second data type collected will be all tweets about prominent topics, such as President Obama or musician Justin Bieber, again without prejudice over whether they are the topic of the message or not.
-The actual topic will be chosen later. The size of the dataset will be determined after consideration of typical time per task, statistical power, and their trade-off with cost.
 
 For evaluation, a gold standard set will be encoded by myself, as a reliability coder.
 A ground truth dataset will be built after all experiments are run, by pooling all responses for a consensus.
 For additional rigour, the pooled dataset will be compared against my ground truth, so that points of disagreement can be re-evaluation.
-
-
-
-
 
 #### Baseline
 
@@ -239,26 +189,6 @@ Secondary questions
  * What is the mean time a worker spends on their first task set? What is the amount of time workers spend on ten task sets?
  * What is the mean number of task sets that workers perform?
  * What is the expected cost per contribution?
-
-### Implementation
-
-The experiments were performed on Amazon's Mechanical Turk, using an API that allows external pages to be hosted within the Mechanical Turk interface.
-
-The system for design manipulation was developed using JavaScript on the front end, built on top of the Angular JS library.
-The software is released with an open-source MIT license[^crowdy].
-
-The back-end of the stack also runs on Javascript, with a Node.js server run on the Express web application framework.
-Data storage uses the MongoDB database.
-The task serving code is also released online[^crowdybackend].
-
-Details of the experimental system, including design documents, model descriptions, and logic, are provided in the Appendices. <!-- TODO2 add proper link. --> 
-
-[^angularjs]: https://angularjs.org/
-[^nodejs]: https://nodejs.org/
-[^express]: http://expressjs.com
-[^mongodb]: https://www.mongodb.com
-[^crowdy]: https://github.com/organisciak/crowdy
-[^crowdybackend]: https://github.com/organisciak/crowdy-backend
 
 ## Conclusion
 

@@ -279,6 +279,25 @@ _Table 2: Chart comparing user and system uses for a selection of incidental cro
 
 <!-- TODO1 relevance in IR section -->
 
+Variance that exists between different contributors adds noise both to tasks that make a subjective assumption and tasks that make an objective assumption.
+
+In subjective tasks, it is assumed that there is no universally correct form of contribution.
+For example, when crowd contributions are used to inform recommendations, such as for music or film, it often assumed that different types of people enjoy different products.
+We thus see approaches to recommendation such as collaborative filtering, where users are matched to similar users based on the overlap between their tastes rather than a global definition of 'good' or 'bad' products.
+In such a case, inter-rater consistency is still important, to make it possible to identify similar users.
+Modern approaches to collaborative filtering commonly normalize ratings against
+ a user-specific bias (i.e. "how does this rating compare this user's average rating") and sometimes against
+ an item-specific bias (i.e. "how does this rating compare to what the rest of the community thinks about the item").
+
+For objective tasks, @neuendorf_content_2002 differentiates between two types: manifest and latent.
+
+In a simplified comparison, tasks with manifest content are ones where there is a clear correct contribution.
+Correcting or transcribing text from a scanned image would be grouped in the category.
+
+In contrast, latent tasks are assumed to have a theoretical truth, but one that is not outwardly stated.
+When a person tags a photograph with a free-text label or a worker classifies the sentiment of an opinionated tweet, they are interpreting the content.
+As @neuendorf_content_2002 notes, "objectivity is a much tougher criterion to achieve with latent than with manifest variables".
+
 ## Definitions
 
 Before proceeding, the terminology of this study should be established. As this work spans multiple domains, and makes reference to recently introduced concepts, it is important to establish a shared understanding of language within these pages.
