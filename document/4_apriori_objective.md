@@ -245,7 +245,7 @@ As outlined in the overview of my own doctoral research, a few directions look l
 
 With those considerations in mind, I propose the three interfaces to study for crowdsourced data collection: a training interface, a feedback interface, and a time-limited interface.
 
-#### Basic interface
+### Basic interface
 
 The basic interface will resemble an archetypal task, following conventions seen in Mechanical Turk usage.
 It will show workers a task with a goal, description, and ten items to perform actions on.
@@ -266,7 +266,7 @@ Amazon's own advice for designing good tasks states that the task should not req
  * Write description
 -->
 
-#### Training interface
+### Training interface
 
 In the training interface, the worker is walked through their first task slowly.
 As they complete the tasks, their answers are evaluated against a gold standard and they are informed if they completed it correctly or incorrectly.
@@ -282,7 +282,7 @@ The training tasks will be hand-designed, based on a random sample of items.
 
  * Add figure of mockup -->
 
-#### Feedback Interface
+### Feedback Interface
 
 In the feedback interface, a worker is shown feedback about their estimated performance on past tasks.
 The first that they complete is identical to the basic interface.
@@ -310,7 +310,7 @@ If you're doing voting, then a score is possible based on agreement with other w
 -->
 
 
-#### Time-Limited Interface
+### Time-Limited Interface
 
 As hinted at during my past work, not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
 
@@ -418,7 +418,7 @@ They present seven kinds of bookmarking tags: those for identifying what the ite
 
 How might Golder and Huberman's tags apply to images?i <!-- TODO -->
 
-<!-- Studies on Flickr tagging-->
+<!-- TODO: look at studies on Flickr tagging-->
 
 @sen_tagging_2006 collapse the seven classes from @golder_structure_2007 into three: _factual_ tags conveying objective information, _subjective_ tags conveying opinions, and _personal_ tags that are intended only for the tagger.
 As expected, factual tags were found to be most generally useful, particularly for learning and finding, although personal and subjective tags were useful for self-expression and organizing, respectively.
