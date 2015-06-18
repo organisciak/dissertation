@@ -35,7 +35,8 @@ This chapter makes the following contributions:
 
 The scope of this study is in relevance assessment for information retrieval related to the IMLS DCC cultural heritage aggregation. Relevance assessments are a vital part of information retrieval evaluation and help in addressing the unique search challenges faced by large aggregators of cultural heritage content.
 
-# Problem
+
+## Problem
 
 Online annotation generally takes the form of short, fragmented tasks.
 To capitalize on the scale and ephemerality of online users, services such as Amazon's Mechanical Turk (AMT) have emerged, which encourage the short task model as a form of on-demand human work.
@@ -51,3 +52,27 @@ As AMT has grown, however, the appeal of cheating has also grown.^[TODO: demogra
 The workforce, who was originally a mix between those looking to pass time and those looking to earn money, has been shifting primarily to the latter[@eickhoff_increasing_2012]. Since reimbursement is done per task rather than per hour, contributors have a monetary incentive to complete tasks as quickly as possible. The site's continued growth may attract more cheaters in the future, making it more important to be able to properly identify them within classification data.
 
 [^Training]: The next chapter considers whether a small localized training can be effective on AMT, and whether it can be cost effective.
+
+Even among non-malicious workers, there is still the potential problem of varying expertise.
+Workers begin a task with no prior experience and grow more experienced over time.
+When there may be hundreds or thousands of workers, each one potentially following a learning curve, the effect of inexperience should be taken more seriously than in traditional settings with only one or a few workers.
+Making decisions from majority voting is quite robust in many cases.
+However, to safeguard against the presence of cheaters and their strengthened influence in low-consensus tasks, a less naive decision-making process may be valuable.
+
+The problem of reconciling ground truth votes from unvetted and potentially unreliable raters is not limited to the use of Mechanical Turk.
+Digital libraries now have the ability to interact with their users in ways that crowdsource the creation of new content or metadata.[^TODO these are statements that should be backed up by references]
+Volunteer contributions may provide entirely new content – such as suggested labels or corrections – or feedback on existing content – such as rating the quality of an item's metadata.
+While unpaid engagement does not have the same financial motivation for malicious raters, contributions that are open to the public are still susceptible to low-quality results: whether through recklessness, misunderstanding, mischief, or simply spam. Furthermore, even when the ratings or annotations from unvetted semi-anonymous online raters are of a high quality, there is nonetheless a need to justify the quality of those ratings.
+
+## Motivation
+
+The impetus for the research in this chapter was a desire to improve the effectiveness of an information retrieval system for the Institute of Museum and Library Services Digital Collections and Content project (IMLS DCC).
+The IMLS DCC is a large aggregation of digital cultural heritage materials from museums, libraries, and archives across the country. 
+Originally launched in 2002 as a point of access to digital collections supported by the IMLS through National Leadership Grants and LSTA funding, it has since expanded its scope to provide more inclusive coverage of American history collections, regardless of funding source.
+As a result of its position among the largest cultural heritage aggregations in the U.S., research through the IMLS DCC looks at the problems associated with reconciling content from thousands of different providers, including metadata interoperability, collection-item relationships, and access to materials.
+One of the difficulties that IMLS DCC must address is information retrieval when the metadata records in its aggregation are of inconsistent length, style, and informativeness.
+Overcoming these types of problems in order to improve subject access to the breadth of materials is an active problem [e.g. @efron_building_2011; @efron_improving_2012].
+In doing so, human relevance ratings are an invaluable resource for evaluating document relevance in a given query.
+
+## Related Work ^[Or, _what we already know_]
+
