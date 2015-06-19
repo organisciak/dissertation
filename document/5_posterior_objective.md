@@ -76,3 +76,27 @@ In doing so, human relevance ratings are an invaluable resource for evaluating d
 
 ## Related Work ^[Or, _what we already know_]
 
+As non-expert classification has become more common, there have been a number of studies into the quality of its raters.
+Generally, such studies have found that, while a single rater does not match the quality of an expert, aggregating votes from multiple earnest raters can match the quality of an expert. 
+
+@snow_cheap_2008, found that for natural language processing tasks, only a few redundant classifications are necessary to emulate expert quality – their task required an average of four labels.
+Similarly, @novotney_cheap_2010, looking at online transcription, found that the increase in quality from adding redundant annotations was small, and recommended allocation resources to collecting new data.
+Additionally, they noted that disagreement measures are more effective for identifying and correcting for bad workers than they are for finding good workers, due to false positives among highly ranked raters.
+
+In understanding the role of non-expert raters, a number of studies have taken differing approaches to ranking rater reliability and dealing with noise. Some have attempted to model rater noise against gold standard labels [@hsueh_data_2009; @eickhoff_increasing_2012].
+However, more commonly, researchers look at ways to understand rater quality without the presence of ground truth data. 
+One common approach to separate the latent variable of rater quality from task difficulty enlists the Expectation Maximization (EM) algorithm, weighing rater judgments based on past performance [@whitehill_whose_2009; @welinder_online_2010]^[TODO cite Wang et al 2011].
+The approach taken in this study is similar in principle to the EM algorithm. 
+
+@donmez_probabilistic_2010 take a different approach, using a variant of Sequential Bayesian Estimation to estimate incremental changes in raters by building posterior probability density functions.
+
+Raters have been treated as a mix good or bad, where the nature of the problem is to identify the latter for removal [@dekel_vox_2009].
+Other work has treated reliability not as an issue of replacing users, but rather of identifying low quality ratings to reinforce with additional ratings [@sheng_get_2008].
+^[TODO insert screenshot from original paper]
+
+One notably unique concept of user quality was the assumption by @donmez_probabilistic_2010 that the quality of raters changes over time.
+In other words, rater quality was considered a distribution over time, rather than an overall score.
+Notable about this approach is that there are no assumptions about the direction of quality change by raters, allowing them to account not only for inexperience but also for occasional patches of low quality ratings by a rater.
+
+Alongside prior work in representing non-expert annotators, research has also considered using the information for deciding on future actions.
+This has been considered both as an act of choosing the next tasks for a rater [@wallace_who_2011; @welinder_multidimensional_2010], and alternately an act of choosing the next raters for a task [@donmez_efficiently_2009][^TODO: or was this donmez 2010??].
