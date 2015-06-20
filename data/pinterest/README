@@ -43,3 +43,10 @@ Now, trim the sample to something meaningful. Only keep pins without a price, an
 ```
 cat testing-sample_out.csv | csvgrep -c price -r "^0"$ | csvgrep -c is_banned -k "^$" | csvgrep -c likes -r "^[1-9]" | csvgrep -c repins -r "^[1-9]" | csvcut -C price,price_currency | csvjson >testing-sample.json
 ```
+
+# Download images
+
+```
+#{isolate image colume from csv} | {remove csv header} | {download to public/images, while forcing directory structure from original url}
+csvcut -c image ../dissertation/data/pinterest/taggingSample.csv | tail -n +2 | parallel wget -P ./public/images -x {}
+```
