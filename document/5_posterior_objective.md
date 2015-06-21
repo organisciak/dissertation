@@ -156,4 +156,35 @@ Annotations were collected through Amazon's Mechanical Turk service, using a cus
 When a rater accepted a judgment task, they were shown a page with a query, description of the task, description of the coding manual (i.e. what types of documents should be rated as relevant), and up to ten ribbons of documents to rate (see Figure 1[^TODO insert figure]).
 The structured form of digital item records lends itself well to such tasks, which we represented through the title, description, and related image thumbnail. To aid the task of scrolling through ratings and decrease the time spent on tasks, our interface automatically scrolled to the next tasks once the previous one was rated.
 
+## Approach
+
+[^TODO: this chapter needs to be normalizd for language... 'workers' vs. 'contributors' vs 'raters' vs 'annotators']
+The documents in the rating tasks were brief collection metadata documents, which workers annotated according to their relevance to a given query.
+Workers contributed ratings ten items at a time.
+The task set size was chose for two reasons.
+First, this allowed for less time loading and adjusting to new tasks.
+If there was a learning curve for each query – as this study finds to be present, albeit minor – it seemed sensible to allow raters some time to rate once they grew comfortable with a task.
+The second reason was to create a minimum usable profile of a rater's performance, which would have been difficult with fewer tasks.
+Note that not all sets of tasks had ten items, as our system would track tasks that were completed or in progress, serving fewer than ten when ten were not available.
+
+Originally $17700$ data points were collected, though this was later increased to just under $23000$.
+The average amount of time spent on each individual item was $4.8$ seconds, with half of all ratings being done in less than $1.8$ seconds and full rating sets being completed in an average time of $37.3$ seconds.
+
+There were 157 unique workers that contributed ratings, rating an average of 141.9 tasks.
+The most dedicated rater completed a total of 1404 ratings.
+The distribution for contribution count resembles an inverse power law, a distribution commonly seen among contributions from online users (see Figure 3[^TODO insert figure]).
+For comparison with other tasks, a second dataset was also analyzed, in which raters classified the tone of a number of political tweets. This Twitter sentiment dataset it included more classification options - raters rated the tweet as having positive, negative, or neutral tone or whether it was incoherent or spam.
+
+For both the primary and secondary datasets, there was an accompanying set of ground truth oracle judgments.
+These were used for evaluation.
+
+## Factors
+
+### Temporality [^TODO: rewrite to include RQs more explicitly]
+Among the statistics collected for the relevance judgment dataset was _dwell time_: the time spent on each rating.
+The hypothesis motivating this metric was that dwell time was not significant when understood independently, but might indicate the quality of raters when taking into account the order in which tasks were completed.
+Since tasks were done in sets of ten, the order referred to where in this set they occurred.
+Order served as a useful grouping factor because the time spent on the first rating is confounded with the time spent reading the rating instructions, which is to say that the two are inseparable.
+Figure 4[^TODO] shows the distribution of rater performance by dwell time alone.
+As expected, while there is a slight shift upward in time spent of rating which turn out to be correct, we do not have enough evidence to reject the null hypothesis of equal distributions and conclude that dwell time is insignificant to performance when taken independently (Wilcoxon rank sum $p=0.064$; $p=0.154$ when excluding extreme outliers).
 
