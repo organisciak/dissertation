@@ -42,6 +42,21 @@ Broad Research Question 1:
 
 Broad Research Question 2:
 
+Chapter 4 takes a post-collection look at crowdsourcing error, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
+
+<!-- TODO: Battery about to die, but need to describe this chapter soon -->
+
+The chapter is largely analytic, hoping to understand what we can infer from crowd behaviors about the strength of their contributions and evaluating what strategies are promising for better paid crowdsourcing.
+By taking this approach, this chapter seeds some of the expected outcomes driving later chapters.
+
+RQ 1.1
+RQ 1.2
+
+<!--- TODO search for all references to chapters 4 and 5, to make sure that the order it correct -->
+
+Chapter 5 
+
+
 Chapter 6 focuses on completing subjective tasks through paid crowdsourcing, again focusing on maximizing quality through a priori design and instrumentation choices.
 Subjective tasks are rarely done in paid contexts, so _personalized crowdsourcing_ is introduced as a way to formalize and argue for the approach.
 Two protocols for personalized crowdsourcing are then presented, referred to as _taste-matching_ and _taste-grokking_, and compared.
