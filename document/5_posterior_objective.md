@@ -184,7 +184,31 @@ These were used for evaluation.
 Among the statistics collected for the relevance judgment dataset was _dwell time_: the time spent on each rating.
 The hypothesis motivating this metric was that dwell time was not significant when understood independently, but might indicate the quality of raters when taking into account the order in which tasks were completed.
 Since tasks were done in sets of ten, the order referred to where in this set they occurred.
+
 Order served as a useful grouping factor because the time spent on the first rating is confounded with the time spent reading the rating instructions, which is to say that the two are inseparable.
 Figure 4[^TODO] shows the distribution of rater performance by dwell time alone.
-As expected, while there is a slight shift upward in time spent of rating which turn out to be correct, we do not have enough evidence to reject the null hypothesis of equal distributions and conclude that dwell time is insignificant to performance when taken independently (Wilcoxon rank sum $p=0.064$; $p=0.154$ when excluding extreme outliers).
+As expected, a correct classifications do tend to take slightly more time, 
+there is not enough evidence to reject the null hypothesis of equal distributions.
+Thus, for this the setting of cultural heritage retrieval relevance judgments, dwell time alone is insignificant to performance (Wilcoxon rank sum $p=0.064$; $p=0.154$ when excluding extreme outliers).
 
+However, dwell time considered alongside the order or task completion (i.e. how much time was spent on the first task? On the second?) tells a more complete story.
+
+Consider first the amount of time that is spent on each $n^{th}$ task.
+Pairwise Wilcoxon Rank Sum tests show that the amount of time spent on the first rating in a set is significantly different from all other ratings ($p<0.001$, with Bonferroni adjustment), as were all pairwise comparisons with the second rating in a set ($p=0.02$ vs order 3, $p<0.001$ vs all others; Bonferroni adjustment).
+Notably, however, we fail to reject the null hypothesis for all other ratings in a set.
+
+This means that there is extremely little difference in time spent between a rater's third and tenth ratings, as well as all comparisons in between.
+This is more abrupt than the gradual decline that was expected, and suggests that the learning curve for a rater to rate comfortably is only the first two ratings.[^TODO sidenote reinforcing this point]
+
+Comparing the accuracy of ratings by dwell time, the time spent on the first rating of a set is significantly higher for ratings that are correct than those that are incorrect (Wilcoxon Rank Sum one-sided $p=0.01$).
+This stands in contrast to every rating after the first one, none of which show significant difference in time spent on ratings that are true and ones that are false.
+
+The measurement of dwell time for the first item in an item set is confounding with the readying of instructions[^Which is to say, we had no measurement for when a worker's attentions turn away from the background material at the start of a task toward the first task in the set of ten.]
+The fact that a rater spending more time on the first rating indicates a higher likelihood of correctness suggests that there is a latent effect in how closely people read the description, 
+
+If this is in fact what accounts for the significant different, it should be an effect that lingers across the full set of data.
+
+Figure 6[^TODO insert image] shows this to be the case, with raters that make a correct rating on the first item are much more reliable in the rest of the rating set.
+
+As part of the rating instructions, raters were presented with a description of what types of results are relevant to the given query (see screenshot in Figure [^TODO figure]).
+If a rater does not read this section carefully, their ratings would be more interpretive, possibly resulting in inconsistencies with raters that followed the instructions more carefully.
