@@ -212,3 +212,72 @@ Figure 6[^TODO insert image] shows this to be the case, with raters that make a 
 
 As part of the rating instructions, raters were presented with a description of what types of results are relevant to the given query (see screenshot in Figure [^TODO figure]).
 If a rater does not read this section carefully, their ratings would be more interpretive, possibly resulting in inconsistencies with raters that followed the instructions more carefully.
+
+## Experience
+Does rater quality increase with practice?
+An extension of the order grouping factor, the next factor considered was the long-term experience of a rater.
+Experience was looked at in two forms: lifetime experience and query experience.
+
+_Lifetime experience_ is the overall number of tasks that a rater has completed.[^_Lifetime_ refers to the task type, such as _all relevance judgments_, not all tasks completed on the platform.]
+Is a rater's 100th task more likely to be correct than their first task?
+The hypothesis motivating this was that over time raters would grow more reliable.
+However, this hypothesis proved to be incorrect.
+
+Figure 5[^TODO] shows the distribution of accuracy ratings across lifetime experience.
+Each point represents the percentage of the $n^{th}$ ratings that were correctly rated.
+If a point at position $x$ shows an accuracy of 0.80, this means that 80% of tasks which were raters' $x^{th}$ rating agreed with the majority, our estimated value for the correct label.
+The second measure of experience, query experience, refers to the number of tasks that a rater has completed within a single topical domain.
+In information retrieval relevance judgments, raters are asked to judge whether a document is relevant to a given query; thus, the query experience.
+Similarly, in the secondary dataset of Twitter sentiment ratings, raters were asked to annotate the opinion of the tweet regarding a given topic.
+
+Query experience proved to be an indicator of rater quality among the most experienced users.
+For approximately the first thirty tasks which raters completed with a single query, they did not demonstrate any meaningful difference in quality.
+As demonstrated in Figure 7[^TODO], however, ratings beyond that point showed a sharp increase in quality.
+
+[^TODO discuss _why_]
+
+## Rater Agreement and Task Difficulty
+
+Finally, in addition to worker experience and time spent per tasks, this chapter looked at the ability of rater agreement and task difficulty to discern the accuracy of ratings.
+The reason that these were considered together is that they are invariably confounded: a task has as little as three ratings informing any estimates of the quality, and those ratings are each biased by the quality of the specific raters involved.
+There were two approaches looked at: identifying and replacing low quality workers, and an iterative algorithm for weighing workers and tasks.
+
+### Replacing Problem Workers
+One of the immediate problems with our primary data was a low rater agreement (Fleiss' Kappa = 0.264).
+In our first attempt to improve the agreement between raters, we identified low-quality raters and replaced their contributions.
+First, a confusion matrix was calculated for all raters and an accuracy rate was taken as a measure of a rater's reliability.
+Raters below a certain threshold were removed and new raters replaced their ratings. The threshold chosen was $0.67$, meaning raters whose ratings agreed with their co-raters on a task less than two-thirds of the time were removed.
+
+The threshold for removing workers was supported by a simulation where an undiscerning rater was emulated, replacing randomly selected classifications in the data with its own random ratings.
+While a rater in an environment completely populated by random raters would be in the majority two-thirds of the time, inserting random raters alongside the real raters in the data provides a more realistic estimate. Across $100$ runs, the mean accuracy rate of the random rater was $0.680$, with a median of $0.677$ and standard deviation of $0.080$.
+In other words, the raters whose data was removed -- with an accuracy less than 67% -- were less likely to be in the majority opinion on a rating than a randomized bot.
+This accuracy rate also puts our data in perspective, falling somewhere between the $0.75$ agreement that would be expected of a random rater in a completely random triple-redundancy labeling system and the $0.50$ agreement expected of a random rater in an ideal human setting with all other raters agreeing on ratings.
+
+There were $23$ raters below or at the threshold that were removed, accounting for $2377$ ratings ($0.1769$ of the data).
+Notably, there were $10$ raters with a total of $1069$ ratings that had accuracy rates right at the threshold, meaning that nearly half of removed ratings would not have been taken out with a slightly lower threshold.
+
+After removing problem workers, there was an increase in kappa score from $0.264$ to $0.358$.
+The increase in intercoder agreement is expected, given that our metric for problematic raters is how much they agreed with other raters.
+However, since these raters were by definition already in the minority much of the time, their influence on actual votes was not high.
+Thus, the assumption to test is whether, when low-agreement raters do end up in the majority, they cause damage by influencing votes in the wrong direction.
+
+In fact, the negative quality impact of problem raters proved to be very small.
+The accuracy rate of final votes after replacing them increased from $0.856$ to $0.862$.
+In contrast, an alternative to selective replacement of problem raters is selective redundancy.
+Rather than removing data, one can take the approach of adding more labels, as encouraged by @sheng_get_2008.
+This approach resulted in an increase to $0.859$, a smaller increase than that of removing problem workers.
+In other words, majority rating proved fairly efficient at smoothing over individual bad raters, limiting their influence.
+
+In order to further increase rater agreement, one could presumably run the replacement process again.
+However, when non-expert labels are being paid for, removing problematic raters can grow quite costly – especially given the low payoff in accuracy.
+A cheating or sloppy rater can also rate a large number of ratings quickly, making the potential lost profit even higher.
+However, the removal and blocking of low-agreement raters can be automated fairly easily, making it possible to incorporate in real time within a rating interface. 
+
+Why were some workers correct – or at least in the majority opinion of what a correct rating is – less than chance?
+One possibility is sincere raters misunderstanding the task. Wang et al. (2011)[^TODO add this to reference list] refer to such situations as recoverable error and offer a method for identifying consistently incorrect raters and correcting their votes.
+In the case of binary data such as our relevance judgments, this would simply mean inverting relevant votes to non-relevant, and vice-versa.
+However, none of the raters in our data would improve with such an approach, and it seems like an unlikely occurrence for a rater to make such a drastic mistake systematically.
+However, it is possible that less drastic misinterpretations can lead to problems with difficult tasks due to misunderstanding the delineation between categories.
+
+As we found in our tests on dwell time, raters that appear to spend less time on instructions tend to make more errors. [^TODO: this is out of place, did I accidentally separate it from somewhere?]
+
