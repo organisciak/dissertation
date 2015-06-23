@@ -1,0 +1,90 @@
+udo yum -y update
+# add mongo repo and install
+	echo "[mongodb-org-3.0]
+	name=MongoDB Repository
+	baseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/3.0/x86_64/
+	gpgcheck=0
+	enabled=1" | sudo tee -a /etc/yum.repos.d/mongodb.repo
+	# If command line added period to the sarts of lines, sudo vim
+	# /etc/yum.repos.d/mongodb.repo
+	sudo yum install -y mongodb-org-server mongodb-org-shell
+mongodb-org-tools
+# Attach EBS drive
+	# ONLY if new drive: sudo mkfs -t ext4 /dev/xvdf
+	# file -s /dev/xvdf should say more than 'data'
+	sudo mkdir /data
+	sudo chown ec2-user /data
+	sudo mount /dev/sdf /data
+	# For mount on system start, edit /etc/fstab with this line
+	# /dev/sdf    /data       ext4    defaults,nofail 0   2
+# Set up Mongo
+	sudo mkdir -p /data/db /data/log/ /data/mongodb/
+	sudo vim /etc/mongod.conf
+		#where to log
+#logpath=/data/log/mongod.log
+#logappend=true
+#dbpath=/data/db
+#pidfilepath=/data/mongodb/mongod.pid
+	sudo chown mongod:mongod /data/db /data/log /data/mongodb
+	# HACK.. Work around permission error with very generous permissions
+	sudo chmod 777 mongod:mongod /data/db /data/log /data/mongodb
+	
+	# Set adequate ulimit settings
+		sudo /etc/security/limits.conf
+		#* soft nofile 64000
+		#* hard nofile 64000
+		#* soft nproc 32000
+		#* hard nproc 32000
+		sudo /etc/security/limits.d/90-nproc.conf
+		#* soft nproc 32000
+		#* hard nproc 32000
+	# Adjust read-ahead settings
+		sudo blockdev --setra 32 /dev/xvdf
+		# Make persistant
+		echo 'ACTION=="add", KERNEL=="xvdf",
+ATTR{bdi/read_ahead_kb}="16"' | sudo tee -a /etc/udev/rules.d/85-ebs.rules
+	# Start mongod
+	sudo service mongod restart
+	# note I had to rm everything in /data/dir first
+	# Set to start on startup
+	sudo chkconfig mongod on
+# Other dependencies
+	sudo yum install git
+	sudo yum install nodejs npm --enablerepo=epel
+	Sudo npm install -g coffee-script nodemon
+	# Clone crowd-backend
+	git clone https://github.com/organisciak/crowdy-backend.git
+	cd crowdy-backend
+	# Install dependencies
+	npm install
+	# Compile coffee scripts
+	coffee -bc *.coffee && coffee -bc */*.coffee
+# Set up server
+	### REMOVED THIS BECAUSE I'M USING ELASTIC LOAD BALANCER
+	## Set up Port forwarding from 8080 to 80
+	#sudo vim /etc/sysctl.conf
+	## net.ipv4.ip_forward = 1
+	#sudo sysctl -p /etc/sysctl.conf
+	## Below should return '1'
+	#cat /proc/sys/net/ipv4/ip_forward
+	#sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 443 -j
+REDIRECT --to-port 8080
+	#sudo iptables -A INPUT -p tcp -m tcp --sport 443 -j ACCEPT
+	#sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
+	#sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j
+REDIRECT --to-port 8080
+	#sudo iptables -A INPUT -p tcp -m tcp --sport 80 -j ACCEPT
+	#sudo iptables -A OUTPUT -p tcp -m tcp --dport 80 -j ACCEPT
+	########
+	# Run Express on 8080
+	Export PORT = 8080
+# Clone dissertation repo
+	git clone https://github.com/organisciak/dissertation.git
+# Set up tasks
+	# Load HIT into Mongo
+		cd /crowdy-backend
+		coffee ./scripts/saveJSONtoMongo.coffee --model hit --json
+../dissertation/data/turk/pin-tagging-basic-basic1.json 
+	# start server
+	npm start
+
