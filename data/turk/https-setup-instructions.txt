@@ -1,0 +1,24 @@
+# HTTPS Setup instructions
+
+1. Set up elastic load balancer to forward HTTPS to port 8080
+
+Trickiest part here is creating a private key, then a certificate request, then getting it signed (or signing my own). Instructions
+for this were here: http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-create-https-ssl-load-balancer.html#configure-https-listener
+
+If Health check isn't passing for the underlying EC2 machine, visit that machine's public DNS on port 8080 (make 8080 public in web security) and see if it works
+
+2. Get the DNS name for the ELB
+It should open to the same place as the public ec2 server
+
+3. (if necessary): Switch your domain service to use Amazon S3 as its DNS (I did this to my Google Domains registered domain)
+http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html
+
+4. Create a Hosted Zone, then add a Record set that aliases to the load balancer
+http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html
+
+5. Try the domain: does it work?
+
+## NOTE: THE EC2 SERVER IS STILL PUBLIC (AND ACCESSIBLE THROUGH 8080…)
+if this matters, it should be on a private subnet in the VC, only visible to
+the load balancer
+http://stackoverflow.com/questions/21713851/aws-load-balancer-security-groups
