@@ -278,6 +278,42 @@ One possibility is sincere raters misunderstanding the task. Wang et al. (2011)[
 In the case of binary data such as our relevance judgments, this would simply mean inverting relevant votes to non-relevant, and vice-versa.
 However, none of the raters in our data would improve with such an approach, and it seems like an unlikely occurrence for a rater to make such a drastic mistake systematically.
 However, it is possible that less drastic misinterpretations can lead to problems with difficult tasks due to misunderstanding the delineation between categories.
+As we found in our tests on dwell time, raters that appear to spend less time on instructions tend to make more errors: perhaps subtle misunderstandings can lead to consistently poor performance.
 
-As we found in our tests on dwell time, raters that appear to spend less time on instructions tend to make more errors. [^TODO: this is out of place, did I accidentally separate it from somewhere?]
+### Iterative Optimization Algorithm
+While removing raters based on their error rate has a positive effect on the data, it does not take into account the difficulty of the task that is being completed by the rater.
+If a rater has the misfortune of being assigned a particularly difficult or debatable set of results to rate, their error rate may prove to be quite high.
+More unfortunate still, a rater may be rating alongside numerous low quality raters.
+If two low quality raters disagree with one higher quality rater, the dissenting rater's reliability should reflect the circumstances.
+There may be latent variables that are not accounted by our system which adversely affect the data.
+
+To account for unknown variables and separate out signal from noise, an iterative algorithm was developed to simultaneously weigh rater votes and the difficulty of the task.
+In line with the purpose of this study, this approach allows one to not only evaluate raters, but to separate out the effect of the task itself.
+
+The algorithm iterates over two steps.
+
+In the first step, an expected truth for each document is calculated, given the information that is available about that document, the possible labels for that document, and the raters evaluating that document.
+Early on, that information is limited: while it is known how often each option was chosen for each document rating and how often each rater used each option, there is no information about the quality of the ratings or the raters making them.
+
+In the second stage of the algorithm, the assigned labels of the expected votes are used to update the parameters that are used in step one.
+This involves assigning values of confidence for the results and determining rater quality based on that confidence value.
+After this stage, the algorithm was iterated again, returning to the first stage for voting on the expected true value.
+
+This algorithm converges or approaches a convergence limit after a number of iterations.
+The number of iterations that are required before the data converges varies, but only a few are generally needed for relatively simple data such as information retrieval relevance judgments.
+
+The anticipated benefit to this approach is that rater quality is less dependent on circumstance.
+Consider the follow scenarios:
+
+- A rater makes a dissenting rating on a difficult task.
+To form an opinion only on whether they agreed or disagreed with other raters would be unfair to this rater and possibly remove authority from a good rater.
+For example, in an instance with five raters, there is a difference in whether a rater is the lone dissenter against a majority of four or one of two dissenters against a majority of three.
+In the latter case, there is a more uncertainty in what the truth value really is.
+Unfortunately, this scenario is limited for instances with only two categories and three raters, such as a large portion of this study's relevance judgment dataset.
+
+- A cheating rater is correct by chance.
+As the earlier simulation found, a random voting rater will be correct 67% of the time in the relevance judgment dataset.
+By weighing this rater's vote according to their overall reliability, their votes, even if correct, will hold less sway.
+By setting their reliability score based on the confidence in their ratings, their influence will be even lower in subsequent iterations.
+
 
