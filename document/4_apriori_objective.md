@@ -390,6 +390,13 @@ While the complexities of why this is the case and how closely tied the result i
 - RQ:
 
 - subjective vs. objective
+
+There are different interpretations on tagging, what types are desired, how much variance is acceptable, and what the role of tagging is.
+
+For museums, tagging is considered not only in pragmatic subject access terms, but as a medium for critical value and engagement, according to @trant_investigating_2006.
+Indeed, they note the value in tagging for understanding the tagger: a way to understand how patrons react and interact with museum collections.
+
+
   - desire some sort of variability
 However, it would be ill-advised to view tagging as a fully relativist activity.
 It has been found that tagging begins to converge on a set of popular, common tags [@golder_usage_2006]<!--TODO cite Cattuto 2006 -->, and there certainly are notions of 'good' or 'bad' tags [@sen_quest_2007]. <!-- TODO cite.. what else?-->.
