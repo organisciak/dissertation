@@ -56,6 +56,11 @@ RQ 1.2
 
 Chapter 5 
 
+MIREX AMS Study RQs
+RQ1: Are grader differences responsible for inter-grader inconsistency?
+RQ2: Are problem graders responsible for inter-grader inconsistency?
+RQ3: Is subjectivity or disagreement of the grading task responsible for inter-grader inconsistency?
+RQ4: Does the task design affect the quality of contributions
 
 Chapter 6 focuses on completing subjective tasks through paid crowdsourcing, again focusing on maximizing quality through a priori design and instrumentation choices.
 Subjective tasks are rarely done in paid contexts, so _personalized crowdsourcing_ is introduced as a way to formalize and argue for the approach.
