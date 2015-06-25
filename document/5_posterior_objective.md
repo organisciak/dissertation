@@ -14,6 +14,8 @@ These findings may inform large-scale digital collections’ use of non-expert r
 \end{fullwidth}
 
 \marginnote{This paper was previously presented at ASIS\&T 2012:\\TODO citation}
+
+
 Work supported through online volunteer contributions or micropayment-based labor presents a strikingly different mode for annotating information items.
 The accessibility of large groups of contributors online -- in the form of either interested volunteers or paid workers -- allows for large-scale annotation tasks to be completed quickly.
 However, this approach also introduces new problems of reliability by problematizing assumptions about expertise and work quality.
@@ -28,12 +30,19 @@ This goal is pursued for tasks with an expected truth -- that is, objective task
 However, a key assumption is made: that of a negotiated "ground truth" over an objective one.
 By assuming that the truth-value is a negotiated truth, rater disagreement is not in itself a sign of bad raters, but should be considered in light of the agreement among raters.
 
+\marginnote{
+This work was supported by Institute of Museum and Library Services LG-06-07-0020 and costed by the Center for Informatics Research in Science and Scholarship (CIRSS).
+
+In addition to the coauthors on @organisciak_evaluating_2012, other contributing members include Timothy W. Cole, Thomas Habing, Jacob Jett, Carole L. Palmer, and Saral L. Shreeves.
+} [^TODO mimic this acknowledgement style for other chapters]
+
 This chapter makes the following contributions:
 - Description of the problem of reconciling annotation contributions or work by non-expert, semi-anonymous raters.
 - Evaluation of a number of approaches for separating rater quality from rating difficulty, including dwell time, rater experience, task difficulty, and agreement with other raters. 
 - Introduction of an iterative algorithm that allows task difficulty (inherent disagreement) to be disambiguated from rater reliability (i.e. synthetic disagreement).
 
-The scope of this study is in relevance assessment for information retrieval related to the IMLS DCC cultural heritage aggregation. Relevance assessments are a vital part of information retrieval evaluation and help in addressing the unique search challenges faced by large aggregators of cultural heritage content.
+The scope of this study is in relevance assessment for information retrieval related to the IMLS DCC cultural heritage aggregation.
+Relevance assessments are a vital part of information retrieval evaluation and help in addressing the unique search challenges faced by large aggregators of cultural heritage content.
 
 
 ## Problem
@@ -48,8 +57,12 @@ The workers are non-expert raters.
 However, their lack of domain or even task expertise is not inherently a problem: past studies have found that only a few parallel annotations are required to reach expert quality [@snow_cheap_2008] and that increasing the amount of parallel labor per item offers diminishing returns[@novotney_cheap_2010].
 Training is possible on AMT, but the large workforce and transience of individual workers means that training conflicts with the cost and speed benefits of micropayment-based labor.[^Training]
 
-As AMT has grown, however, the appeal of cheating has also grown.^[TODO: demographic studies seem to show this change over time, but I don't recall the sources. TODO FIND. Also, recent work seems to suggest that this is swinging back -- Eric Gilbert's 2015 CHI paper made this anecdotal observation]
-The workforce, who was originally a mix between those looking to pass time and those looking to earn money, has been shifting primarily to the latter[@eickhoff_increasing_2012]. Since reimbursement is done per task rather than per hour, contributors have a monetary incentive to complete tasks as quickly as possible. The site's continued growth may attract more cheaters in the future, making it more important to be able to properly identify them within classification data.
+As AMT has grown, however, the appeal of cheating has also grown.^[TODO: demographic studies seem to show this change over time, but I don't recall the sources.
+TODO FIND.
+Also, recent work seems to suggest that this is swinging back -- Eric Gilbert's 2015 CHI paper made this anecdotal observation]
+The workforce, who was originally a mix between those looking to pass time and those looking to earn money, has been shifting primarily to the latter[@eickhoff_increasing_2012].
+Since reimbursement is done per task rather than per hour, contributors have a monetary incentive to complete tasks as quickly as possible.
+The site's continued growth may attract more cheaters in the future, making it more important to be able to properly identify them within classification data.
 
 [^Training]: The next chapter considers whether a small localized training can be effective on AMT, and whether it can be cost effective.
 
@@ -62,7 +75,8 @@ However, to safeguard against the presence of cheaters and their strengthened in
 The problem of reconciling ground truth votes from unvetted and potentially unreliable raters is not limited to the use of Mechanical Turk.
 Digital libraries now have the ability to interact with their users in ways that crowdsource the creation of new content or metadata.[^TODO these are statements that should be backed up by references]
 Volunteer contributions may provide entirely new content – such as suggested labels or corrections – or feedback on existing content – such as rating the quality of an item's metadata.
-While unpaid engagement does not have the same financial motivation for malicious raters, contributions that are open to the public are still susceptible to low-quality results: whether through recklessness, misunderstanding, mischief, or simply spam. Furthermore, even when the ratings or annotations from unvetted semi-anonymous online raters are of a high quality, there is nonetheless a need to justify the quality of those ratings.
+While unpaid engagement does not have the same financial motivation for malicious raters, contributions that are open to the public are still susceptible to low-quality results: whether through recklessness, misunderstanding, mischief, or simply spam.
+Furthermore, even when the ratings or annotations from unvetted semi-anonymous online raters are of a high quality, there is nonetheless a need to justify the quality of those ratings.
 
 ## Motivation
 
@@ -83,7 +97,8 @@ Generally, such studies have found that, while a single rater does not match the
 Similarly, @novotney_cheap_2010, looking at online transcription, found that the increase in quality from adding redundant annotations was small, and recommended allocation resources to collecting new data.
 Additionally, they noted that disagreement measures are more effective for identifying and correcting for bad workers than they are for finding good workers, due to false positives among highly ranked raters.
 
-In understanding the role of non-expert raters, a number of studies have taken differing approaches to ranking rater reliability and dealing with noise. Some have attempted to model rater noise against gold standard labels [@hsueh_data_2009; @eickhoff_increasing_2012].
+In understanding the role of non-expert raters, a number of studies have taken differing approaches to ranking rater reliability and dealing with noise.
+Some have attempted to model rater noise against gold standard labels [@hsueh_data_2009; @eickhoff_increasing_2012].
 However, more commonly, researchers look at ways to understand rater quality without the presence of ground truth data. 
 One common approach to separate the latent variable of rater quality from task difficulty enlists the Expectation Maximization (EM) algorithm, weighing rater judgments based on past performance [@whitehill_whose_2009; @welinder_online_2010]^[TODO cite Wang et al 2011].
 The approach taken in this study is similar in principle to the EM algorithm. 
@@ -105,7 +120,8 @@ This has been considered both as an act of choosing the next tasks for a rater [
 
 In 2011, the Text Retrieval Conference (TREC) held a Crowdsourcing track for the first time, which dealt directly with the evaluation of search engines by non-expert raters hired through micropayment services.
 Teams looked at one or both of two tasks.
-The first task was to effectively collect high-quality relevance judgments. The second task, in line with the goals of this study, was to “compute consensus (aka. ‘label aggregation’) over a set of individual worker labels” [@lease_overview_2011].
+The first task was to effectively collect high-quality relevance judgments.
+The second task, in line with the goals of this study, was to “compute consensus (aka. ‘label aggregation’) over a set of individual worker labels” [@lease_overview_2011].
 
 There were two evaluation sets used with the second task of the TREC Crowdsourcing Track: one of consensus labels from among all the participating teams and one of ground truth gold labels done by professional assessors.
 Accuracy rates – the number of properly labeled ratings divided by all ratings – spanned from 0.35 to 0.94 with a median of 0.835 against the crowdsourced consensus labels, while the runs against the gold labels spanned from 0.44 to 0.70 with a median of 0.66.
@@ -122,14 +138,17 @@ In the context of paid microtask labor, this study looks to simultaneously inter
 
 The factors that we consider are in the following three areas: 
 
-- _Experience_. Do raters grow more reliable over time?
+- _Experience_.
+Do raters grow more reliable over time?
 Can you account for the rating distribution given the rater's experience? In this study, tasks are grouped topically, by "queries".
 Raters were asked 'is this metadata record relevant to Query X' or 'what is the tone of Query X?'
 As such, we also looked at whether a rater's experience with a query affects their performance.
 
-- _Temporality_. Does the length of time that a rater spends on a question reflect the quality of their rating?
+- _Temporality_.
+Does the length of time that a rater spends on a question reflect the quality of their rating?
 
-- _Agreement_. Does a rater's agreement or disagreement with other raters reflect their overall quality as a rater?
+- _Agreement_.
+Does a rater's agreement or disagreement with other raters reflect their overall quality as a rater?
 We also investigated ways to quantify disagreement and to correct for it.
 
 Most of the evaluations are measured through accuracy, which is percentage of correct classifications that are made:
@@ -154,7 +173,8 @@ The unknown option was considered a skipped option and the data was removed from
 
 Annotations were collected through Amazon's Mechanical Turk service, using a custom rating interface.
 When a rater accepted a judgment task, they were shown a page with a query, description of the task, description of the coding manual (i.e. what types of documents should be rated as relevant), and up to ten ribbons of documents to rate (see Figure 1[^TODO insert figure]).
-The structured form of digital item records lends itself well to such tasks, which we represented through the title, description, and related image thumbnail. To aid the task of scrolling through ratings and decrease the time spent on tasks, our interface automatically scrolled to the next tasks once the previous one was rated.
+The structured form of digital item records lends itself well to such tasks, which we represented through the title, description, and related image thumbnail.
+To aid the task of scrolling through ratings and decrease the time spent on tasks, our interface automatically scrolled to the next tasks once the previous one was rated.
 
 ## Approach
 
@@ -173,7 +193,8 @@ The average amount of time spent on each individual item was $4.8$ seconds, with
 There were 157 unique workers that contributed ratings, rating an average of 141.9 tasks.
 The most dedicated rater completed a total of 1404 ratings.
 The distribution for contribution count resembles an inverse power law, a distribution commonly seen among contributions from online users (see Figure 3[^TODO insert figure]).
-For comparison with other tasks, a second dataset was also analyzed, in which raters classified the tone of a number of political tweets. This Twitter sentiment dataset it included more classification options - raters rated the tweet as having positive, negative, or neutral tone or whether it was incoherent or spam.
+For comparison with other tasks, a second dataset was also analyzed, in which raters classified the tone of a number of political tweets.
+This Twitter sentiment dataset it included more classification options - raters rated the tweet as having positive, negative, or neutral tone or whether it was incoherent or spam.
 
 For both the primary and secondary datasets, there was an accompanying set of ground truth oracle judgments.
 These were used for evaluation.
@@ -246,10 +267,12 @@ There were two approaches looked at: identifying and replacing low quality worke
 One of the immediate problems with our primary data was a low rater agreement (Fleiss' Kappa = 0.264).
 In our first attempt to improve the agreement between raters, we identified low-quality raters and replaced their contributions.
 First, a confusion matrix was calculated for all raters and an accuracy rate was taken as a measure of a rater's reliability.
-Raters below a certain threshold were removed and new raters replaced their ratings. The threshold chosen was $0.67$, meaning raters whose ratings agreed with their co-raters on a task less than two-thirds of the time were removed.
+Raters below a certain threshold were removed and new raters replaced their ratings.
+The threshold chosen was $0.67$, meaning raters whose ratings agreed with their co-raters on a task less than two-thirds of the time were removed.
 
 The threshold for removing workers was supported by a simulation where an undiscerning rater was emulated, replacing randomly selected classifications in the data with its own random ratings.
-While a rater in an environment completely populated by random raters would be in the majority two-thirds of the time, inserting random raters alongside the real raters in the data provides a more realistic estimate. Across $100$ runs, the mean accuracy rate of the random rater was $0.680$, with a median of $0.677$ and standard deviation of $0.080$.
+While a rater in an environment completely populated by random raters would be in the majority two-thirds of the time, inserting random raters alongside the real raters in the data provides a more realistic estimate.
+Across $100$ runs, the mean accuracy rate of the random rater was $0.680$, with a median of $0.677$ and standard deviation of $0.080$.
 In other words, the raters whose data was removed -- with an accuracy less than 67% -- were less likely to be in the majority opinion on a rating than a randomized bot.
 This accuracy rate also puts our data in perspective, falling somewhere between the $0.75$ agreement that would be expected of a random rater in a completely random triple-redundancy labeling system and the $0.50$ agreement expected of a random rater in an ideal human setting with all other raters agreeing on ratings.
 
@@ -274,7 +297,8 @@ A cheating or sloppy rater can also rate a large number of ratings quickly, maki
 However, the removal and blocking of low-agreement raters can be automated fairly easily, making it possible to incorporate in real time within a rating interface. 
 
 Why were some workers correct – or at least in the majority opinion of what a correct rating is – less than chance?
-One possibility is sincere raters misunderstanding the task. Wang et al. (2011)[^TODO add this to reference list] refer to such situations as recoverable error and offer a method for identifying consistently incorrect raters and correcting their votes.
+One possibility is sincere raters misunderstanding the task.
+Wang et al. (2011)[^TODO add this to reference list] refer to such situations as recoverable error and offer a method for identifying consistently incorrect raters and correcting their votes.
 In the case of binary data such as our relevance judgments, this would simply mean inverting relevant votes to non-relevant, and vice-versa.
 However, none of the raters in our data would improve with such an approach, and it seems like an unlikely occurrence for a rater to make such a drastic mistake systematically.
 However, it is possible that less drastic misinterpretations can lead to problems with difficult tasks due to misunderstanding the delineation between categories.
@@ -316,49 +340,137 @@ As the earlier simulation found, a random voting rater will be correct 67% of th
 By weighing this rater's vote according to their overall reliability, their votes, even if correct, will hold less sway.
 By setting their reliability score based on the confidence in their ratings, their influence will be even lower in subsequent iterations.
 
-For confidence scores $C_{i} \in C_{i1},C_{i2},...C_{il}$ where $l$ is a set of all possible labels – $L \in {0,1}$ for the cultural heritage relevance judgements and $L \in {0,1,2,3,4}$ for the Twitter sentiment ratings – the truth value vote is always chosen as the highest confidence label: 
+For confidence scores $C_{i} \in C_{i1},C_{i2},\ldotsC_{il}$ where $l$ is a set of all possible labels – $L \in {0,1}$ for the cultural heritage relevance judgements and $L \in {0,1,2,3,4}$ for the Twitter sentiment ratings – the truth value vote is always chosen as the highest confidence label: 
 
-$V_i=\max{j}{C_}$
+$V_i=\max{j}{C_i}$
 
 As the vote can change in subsequent iterations, it is a _soft label_.
 
 Since voting is always done on the highest confidence label, a number of methods were evaluated for assigning a confidence value to a rating.
 For calculating vote confidence, we looked at the following approaches:
 
-- Probability of rater agreement for label j of rating task i.
-  This approach represents simple majority voting and was used for comparison.
-  It counts the number of i category labels, |l_i |, and divides it by the total number of labels received by the task:
-  C_ij=(|l_ij |)/(|l_i |)
+-   Probability of rater agreement for label $j$ of rating task $i$.
+    This approach represents simple majority voting and was used
+    for comparison.
+It counts the number of $i$ category labels,
+    $|l_{i}|$, and divides it by the total number of labels received by
+    the task:
 
-- Due to the lack of rater influence in the expression, this does not require iteration, as it will not change.
-  Probability of rater agreement for task i given a rater of quality U.
-  This approach, taken before in @sheng_get_2008, weighs confidence $C$ according to the mean rater reliability scores of the raters choosing each label:
-  C_ij=∑_j▒U_ij   (|l_ij |)/(|l_i |)
+$$C_{\text{ij}} = \frac{|l_{\text{ij}}|}{|l_{i}|}$$
 
-- A weighted ranking function previously described in [^TODO Organisciak 2012]. This approach accounts for higher numbers of redundant raters, while also offering diminishing returns on each rater added.
-  C_ij=log⁡(1+|l_ij |*∏_(k=1)^(|l_i |)▒|l_i |/(|l_i |+|l_ik |*U_ik )) [^TODO this is ugly... I should probably remove this?]
+> Due to the lack of rater influence in the expression, this does not
+> require iteration, as it will not change.
 
-In addition to task confidence, we considered a number of approaches to weigh rater scores.
+-   Probability of rater agreement for task $i$ given a rater of quality
+    $U$.
+This approach, taken before in @sheng_get_2008, weighs confidence
+    $C$ according to the mean rater reliability scores of the raters
+    choosing each label:
+
+$$C_{\text{ij}} = \sum_{j}^{}U_{\text{ij}}\frac{|l_{\text{ij}}|}{|l_{i}|}$$
+
+-   A weighted ranking function previously described in @organisciak_iterative_2012. 
+    This heuristically-determined approach accounts for higher numbers of
+    redundant raters, while also offering diminishing returns on each rater added.
+
+$$C_{\text{ij}} = log(1 + \left| l_{\text{ij}} \right|*\prod_{k = 1}^{|l_{i}|}\frac{\left| l_{i} \right|}{\left| l_{i} \right| + \left| l_{\text{ik}} \right|*U_{\text{ik}}})$$
+
+
+In addition to task confidence, numerous approaches were evaluated for weighing rater scores.
 The basic approach is to use the mean confidence for every single rating that a rater has made before.
 However, there are two problems with doing so.
-First, since task confidence is bounded between zero and one, setting raters' scores based on confidence alone will result in continuously declining rater reliability scores between iterations, without any sort of convergence.
+First, since task confidence is bound between zero and one, setting raters' scores based on confidence alone will result in continuously declining rater reliability scores between iterations, without any sort of convergence.
 Such an inequality would also be unevenly distributed, algorithmically punishing raters with more completed tasks.
 Secondly, since a random rater has an average accuracy of 0.67 in our dataset, the range between good and bad raters is small and skewed upward, making it ineffective for weighing votes.
 Ideally, on a task where two theoretical cheaters disagree with a near-perfect rater, an early iteration should flip the vote in favor of the better voter.
 
 Rater quality was weighed in the following ways:
 
-- Exponential decay. Reliability scores are calculated by the mean confidence of a rater's tasks and then raised exponential, to the power of two or three, depending on how aggressively the algorithm's confidence weighting is. A decay function can disrupt an algorithm's convergence and requires lower boundaries.
+- Exponential decay.
+Reliability scores are calculated by the mean confidence of a rater's tasks and then raised exponential, to the power of two or three, depending on how aggressively the algorithm's confidence weighting is.
+A decay function can disrupt an algorithm's convergence and requires lower boundaries.
 
-- Reliability score normalization. The mean of all reliability scores is normalized to a value of 1.0. This weighting is calculated as the sum of all reliability scores divided by the number of raters: 
-U_i¬¬=U_i  1/(|U|) ∑_j▒U_j 
+- Reliability score normalization.
+The mean of all reliability scores is normalized to a value of 1.0.
+This weighting is calculated as the sum of all reliability scores divided by the number of raters: 
 
-- Relative scoring. Reliability scores are calculated on the confidence of their ratings relative to the highest rating in each set.
+$U_{i} = U_{i}\frac{1}{|U|}\sum_{j}^{}U_{j}$
+
+- Relative scoring.
+Reliability scores are calculated on the confidence of their ratings relative to the highest rating in each set.
 
 For comparison, we also ran a rater reliability scoring function as described in [^TODO cite wang et al 2011], which is based on the accuracy rate of the raters (i.e., how many they rated correctly compared to incorrectly) without any weight given to the confidence in the tasks that they completed.
 The various techniques for calculating confidence and setting rater reliability scores were combined in sensible ways and evaluated. 
 
 Accuracy rates were recorded for the number of correct labels applied at the fifth iteration of each algorithm. 
 
-Robustness was also tested, by emulating malicious raters. Bots replaced random raters' ratings with their own undiscerning ratings. The false ratings consisted of 5% of the data and were used to see whether there were differences in how the algorithms handled clear cheaters. 
+Robustness was also tested, by emulating malicious raters.
+Bots replaced random raters' ratings with their own undiscerning ratings.
+The false ratings consisted of 5% of the data and were used to see whether there were differences in how the algorithms handled clear cheaters. 
 
+The algorithm combinations were as follows:
+
+*Majority*: The baseline vote based on majority labels.
+
+*Basic Algorithm*: Described in [^TODO cite Wang et al (2011)].
+Confidence is weighed by rater reliability, and rater reliability is dependent on basic accuracy rate.
+
+*Basic with Reliability Decay*: Modification of basic algorithm, with exponential rater reliability score decay.
+
+*Regular with Reliability Decay / Normalized / Relative Scoring*:
+Confidence is weighed by rater reliability, and rater reliability is weighed in one of the ways introduced above.
+
+*Alternate Algorithm*: Confidence is calculated using the approach previously described in @organisciak_iterative_2012.
+
+Table 1[^TODO] displays the accuracy ratings for the various runs.
+This can inform a number of observations.
+
+Once again majority voting appears to be quite effective.
+Consider the baseline majority accuracy of 0.8573 in comparison to the similar task of relevance judgment in the TREC Crowdsourcing Track, where the best algorithms peaked at $0.70$ accuracy [@lease_overview_2011] of the gold label set, and it becomes clear that our dataset is fairly clean from the start.
+The effectiveness of the baseline majority vote for the primary data is also accentuated by the relatively small gains in accuracy that is gained by the algorithm combinations.
+
+In contrast, the Twitter sentiment dataset has a much lower baseline.
+The bandwidth of contribution with this data is considerably more spread out — where with the binary categories the worst case scenario for three raters is agreement between only two, the five-category Twitter data can result in nobody agreeing.
+With the Twitter data, raters also showed an aversion to administrative categories: when the oracle rater would rate a message as “spam” or “incoherent”, the online raters avoided doing so.
+In our IMLS DCC data, this rater coyness was seen with the "I don't know" ratings, but those were treated as missing data and removed.
+
+For its lower starting point accuracy, the Twitter data showed greater improvements in accuracy with the iterative algorithms than the relevance ratings.
+Similarly the iterative algorithms proved more robust against the cheaters that were artificially inserted into the data.
+This seems to point to their usefulness with particularly problematic data.
+
+The iterative algorithms did not have the same effects, however.
+Notably, the basic algorithm with an exponential decay performed better than expected.
+This algorithm weighs voting according to rater reliability scores, but rather than weighing rater reliability by the confidence in the rating that the rater makes, it simply uses the rater's accuracy rate.
+By applying an exponential decay to the rater reliability scores, it gives the generally conservative algorithm more power to pull down low quality raters.
+Still, one possibility for this surprising result is that it is not as aggressive in separating out raters as the other versions.
+A future direction worth exploring would be a deeper look into the individual votes that flip or do not flip with these algorithms, and how often good votes are accidentally overturned.
+
+Investigating an iterative algorithm for optimizing rater quality and task difficulty, we found that it held limited usefulness for three-annotator two-category annotation.
+This is likely due to the limited amount of variance allowed by the structure.
+There are only two states of majority opinion –three-rater consensus or a two agree/one disagree– meaning that when a rater disagrees there is little information on whether it is because they are a bad rater or because it is inherently a difficulty to agree-upon tasks.
+More information can become available by including more categories or increasing the number of raters.
+However, including more raters also has a positive effect on quality.
+Thus, the experience of this study is that for binary labels, majority rating is generally robust enough.
+
+# Conclusion
+
+This study looked at the growth of online annotation microtasks and the problems of non-expert raters, looking at indicators of performance among non-expert performance.
+
+Most significantly, we found that raters who spend more time on the first rating of a task set are significantly better performers on that task.
+This points to a latent variable in the instructions of the task.
+Indeed, the effect of extra time on the first rating seems to follow throughout a task, and *raters that are correct on the first task are more likely to be correct on subsequent tasks in a set*.
+
+We also looked at the effect of experience on a rater.
+Generally, the amount of overall rating experience a rater had at the point of a rating did not reflect on their quality.
+However, a rater's *query* experience does result in better performance, though after some time.
+
+Finally, this study looked at agreement as an indicator of rater quality.
+For simple tasks, there is a notable robustness in the basic agreement measure of whether a rater is in the majority opinion of a multi-rater annotation.
+For more complex tasks or noisier data, an iterative algorithm can offer slight improvements on majority opinion.
+
+Just because there is disagreement does not mean that the data is problematic, however.
+We found that high disagreement among non-expert raters is not necessarily indicative of problematic results.
+Low inter-rater agreement may indicate a difficult task or individual rogue raters.
+While inter-rater agreement can be increased significantly by replacing the work of low quality raters, the improvement in accuracy is less defined.
+
+We hope that these finding may inform future activities in digital libraries, whether by offering an understanding of the nature of online raters or as a stepping stone toward further work.
