@@ -316,4 +316,49 @@ As the earlier simulation found, a random voting rater will be correct 67% of th
 By weighing this rater's vote according to their overall reliability, their votes, even if correct, will hold less sway.
 By setting their reliability score based on the confidence in their ratings, their influence will be even lower in subsequent iterations.
 
+For confidence scores $C_{i} \in C_{i1},C_{i2},...C_{il}$ where $l$ is a set of all possible labels – $L \in {0,1}$ for the cultural heritage relevance judgements and $L \in {0,1,2,3,4}$ for the Twitter sentiment ratings – the truth value vote is always chosen as the highest confidence label: 
+
+$V_i=\max{j}{C_}$
+
+As the vote can change in subsequent iterations, it is a _soft label_.
+
+Since voting is always done on the highest confidence label, a number of methods were evaluated for assigning a confidence value to a rating.
+For calculating vote confidence, we looked at the following approaches:
+
+- Probability of rater agreement for label j of rating task i.
+  This approach represents simple majority voting and was used for comparison.
+  It counts the number of i category labels, |l_i |, and divides it by the total number of labels received by the task:
+  C_ij=(|l_ij |)/(|l_i |)
+
+- Due to the lack of rater influence in the expression, this does not require iteration, as it will not change.
+  Probability of rater agreement for task i given a rater of quality U.
+  This approach, taken before in @sheng_get_2008, weighs confidence $C$ according to the mean rater reliability scores of the raters choosing each label:
+  C_ij=∑_j▒U_ij   (|l_ij |)/(|l_i |)
+
+- A weighted ranking function previously described in [^TODO Organisciak 2012]. This approach accounts for higher numbers of redundant raters, while also offering diminishing returns on each rater added.
+  C_ij=log⁡(1+|l_ij |*∏_(k=1)^(|l_i |)▒|l_i |/(|l_i |+|l_ik |*U_ik )) [^TODO this is ugly... I should probably remove this?]
+
+In addition to task confidence, we considered a number of approaches to weigh rater scores.
+The basic approach is to use the mean confidence for every single rating that a rater has made before.
+However, there are two problems with doing so.
+First, since task confidence is bounded between zero and one, setting raters' scores based on confidence alone will result in continuously declining rater reliability scores between iterations, without any sort of convergence.
+Such an inequality would also be unevenly distributed, algorithmically punishing raters with more completed tasks.
+Secondly, since a random rater has an average accuracy of 0.67 in our dataset, the range between good and bad raters is small and skewed upward, making it ineffective for weighing votes.
+Ideally, on a task where two theoretical cheaters disagree with a near-perfect rater, an early iteration should flip the vote in favor of the better voter.
+
+Rater quality was weighed in the following ways:
+
+- Exponential decay. Reliability scores are calculated by the mean confidence of a rater's tasks and then raised exponential, to the power of two or three, depending on how aggressively the algorithm's confidence weighting is. A decay function can disrupt an algorithm's convergence and requires lower boundaries.
+
+- Reliability score normalization. The mean of all reliability scores is normalized to a value of 1.0. This weighting is calculated as the sum of all reliability scores divided by the number of raters: 
+U_i¬¬=U_i  1/(|U|) ∑_j▒U_j 
+
+- Relative scoring. Reliability scores are calculated on the confidence of their ratings relative to the highest rating in each set.
+
+For comparison, we also ran a rater reliability scoring function as described in [^TODO cite wang et al 2011], which is based on the accuracy rate of the raters (i.e., how many they rated correctly compared to incorrectly) without any weight given to the confidence in the tasks that they completed.
+The various techniques for calculating confidence and setting rater reliability scores were combined in sensible ways and evaluated. 
+
+Accuracy rates were recorded for the number of correct labels applied at the fifth iteration of each algorithm. 
+
+Robustness was also tested, by emulating malicious raters. Bots replaced random raters' ratings with their own undiscerning ratings. The false ratings consisted of 5% of the data and were used to see whether there were differences in how the algorithms handled clear cheaters. 
 
