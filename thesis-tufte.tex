@@ -47,7 +47,14 @@
 \usepackage{fancyvrb}
 \fvset{fontsize=\normalsize}
 
-%%
+%% CUSTOM ADDED
+%% PANDOC-specific
+\providecommand{\tightlist}{%
+	  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%%%%%%
+
+ %% TUFTE COMMANDS
 % Prints argument within hanging parentheses (i.e., parentheses that take
 % up no horizontal space).  Useful in tabular environments.
 \newcommand{\hangp}[1]{\makebox[0pt][r]{(}#1\makebox[0pt][l]{)}}
@@ -62,6 +69,8 @@
 \usepackage{xspace}
 
 %%
+
+
 
 % Prints the month name (e.g., January) and the year (e.g., 2008)
 \newcommand{\monthyear}{%
