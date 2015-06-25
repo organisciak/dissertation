@@ -48,5 +48,7 @@ cat testing-sample_out.csv | csvgrep -c price -r "^0"$ | csvgrep -c is_banned -k
 
 ```
 #{isolate image colume from csv} | {remove csv header} | {download to public/images, while forcing directory structure from original url}
-csvcut -c image ../dissertation/data/pinterest/taggingSample.csv | tail -n +2 | parallel wget -P ./public/images -x {}
+csvcut -c image ../dissertation/data/pinterest/taggingSample.csv | tail -n +2 | parallel --eta wget -P ./public/images -x {}
+csvcut -c image236 ../dissertation/data/pinterest/taggingSample.csv | tail -n +2 | parallel --eta wget -P ./public/images -x {}
+
 ```
