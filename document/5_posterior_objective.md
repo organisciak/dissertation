@@ -33,10 +33,10 @@ By assuming that the truth-value is a negotiated truth, rater disagreement is no
 \marginnote{
 This work was supported by Institute of Museum and Library Services LG-06-07-0020 and costed by the Center for Informatics Research in Science and Scholarship (CIRSS).
 
-In addition to the coauthors on @organisciak_evaluating_2012, other contributing members include Timothy W. Cole, Thomas Habing, Jacob Jett, Carole L. Palmer, and Saral L. Shreeves.
-} [^TODO mimic this acknowledgement style for other chapters]
+In addition to the coauthors on Organisciak et al. 2012, other contributing members include Timothy W. Cole, Thomas Habing, Jacob Jett, Carole L. Palmer, and Saral L. Shreeves.
+}
 
-This chapter makes the following contributions:
+This chapter makes the following contributions: [^TODO mimic this acknowledgement style for other chapters]
 - Description of the problem of reconciling annotation contributions or work by non-expert, semi-anonymous raters.
 - Evaluation of a number of approaches for separating rater quality from rating difficulty, including dwell time, rater experience, task difficulty, and agreement with other raters. 
 - Introduction of an iterative algorithm that allows task difficulty (inherent disagreement) to be disambiguated from rater reliability (i.e. synthetic disagreement).
@@ -340,7 +340,7 @@ As the earlier simulation found, a random voting rater will be correct 67% of th
 By weighing this rater's vote according to their overall reliability, their votes, even if correct, will hold less sway.
 By setting their reliability score based on the confidence in their ratings, their influence will be even lower in subsequent iterations.
 
-For confidence scores $C_{i} \in C_{i1},C_{i2},\ldotsC_{il}$ where $l$ is a set of all possible labels – $L \in {0,1}$ for the cultural heritage relevance judgements and $L \in {0,1,2,3,4}$ for the Twitter sentiment ratings – the truth value vote is always chosen as the highest confidence label: 
+For confidence scores $C_{i} \in C_{i1},C_{i2},\ldots C_{il}$ where $l$ is a set of all possible labels – $L \in {0,1}$ for the cultural heritage relevance judgements and $L \in {0,1,2,3,4}$ for the Twitter sentiment ratings – the truth value vote is always chosen as the highest confidence label: 
 
 $V_i=\max{j}{C_i}$
 
@@ -356,7 +356,7 @@ It counts the number of $i$ category labels,
     $|l_{i}|$, and divides it by the total number of labels received by
     the task:
 
-$$C_{\text{ij}} = \frac{|l_{\text{ij}}|}{|l_{i}|}$$
+$C_{ij} = \frac{|l_{ij}|}{|l_{i}|}$
 
 > Due to the lack of rater influence in the expression, this does not
 > require iteration, as it will not change.
@@ -367,13 +367,15 @@ This approach, taken before in @sheng_get_2008, weighs confidence
     $C$ according to the mean rater reliability scores of the raters
     choosing each label:
 
-$$C_{\text{ij}} = \sum_{j}^{}U_{\text{ij}}\frac{|l_{\text{ij}}|}{|l_{i}|}$$
+$C_{ij} = \sum_{j}U_{ij}\frac{|l_{ij}|}{|l_{i}|}$
+
+[^TODO cross-reference equations with original paper]
 
 -   A weighted ranking function previously described in @organisciak_iterative_2012. 
     This heuristically-determined approach accounts for higher numbers of
     redundant raters, while also offering diminishing returns on each rater added.
 
-$$C_{\text{ij}} = log(1 + \left| l_{\text{ij}} \right|*\prod_{k = 1}^{|l_{i}|}\frac{\left| l_{i} \right|}{\left| l_{i} \right| + \left| l_{\text{ik}} \right|*U_{\text{ik}}})$$
+$C_{ij} = log(1 + \left| l_{ij} \right|*\prod_{k = 1}^{|l_{i}|}\frac{\left| l_{i} \right|}{\left| l_{i} \right| + \left| l_{ik} \right|*U_{ik}})$
 
 
 In addition to task confidence, numerous approaches were evaluated for weighing rater scores.
