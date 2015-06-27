@@ -225,13 +225,6 @@ With regards to designs that mislead workers about their performance, there are 
 
 ## Related Work
 
-### Tagging
-
-@sen_quest_2007 study the quality of community tags in the MovieLens film recommendation system, toward methods to prioritize tags in the interface.
-They find that high-quality tags, as determined by survey, are not necessarily the most-applied tags, likely because the most common tags are locally useful 'personal' tags.
-However, tags that are applied by many _unique_ users are more likely to be useful, as are tags that are clicked by many unique users.
-While this form of usage-based quality indicator does not help in collecting good tags, it does affect how to determine quality tags for ground truth in this study.
-
 ## Approach
 
 So what design manipulations does this study measure?
@@ -368,14 +361,18 @@ Details of the experimental system, including design documents, model descriptio
 
 ## Experiment  #1: Tagging
 
-<!--#### Tagging-->
-
+Tagging is a type of free-text social 
 - problem
 
 Why tagging
 - Limited metadata
+
+Trant and Wyman argue that tagging from online users "appears to fill gaps in current documentation practice" [~@trant_investigating_2006].
+
   - information overload
  Difficult to model formats (non-text)
+
+ - vocabulary problem
 
 Why paid
 - Volunteer practice
@@ -383,6 +380,17 @@ Why paid
      - @springer_for_2008 find that tags were the least fulfilling type of information contributed to the Library of Congress account on Flickr. <!--Add sidenote about Flickr, and perhaps the commons--> ...
 In a look at social features used in library online catalogues, @spiteri_social_2011 finds tagging to be among the least used.
 While the complexities of why this is the case and how closely tied the result is to the implementation, the finding does suggest that features which are arguably more self-serving, such as curating lists of library materials and starring liked works, are easier to collect than more pragmatic features for item description.
+
+While it has been suggested that the most generally useful tags also tend to be those that are applied by the most _different_ users [@sen_quest_2007], volunteer tagging does not necessarily reflect that diversity.
+On Flickr Commons, it was noted that 40% of the tags were contributed by 10 'power taggers'; nonetheless, with over 59 thousand tags contributed, this still meant that other users still contributed a notable amount [@springer_for_2008].
+
+### Related Work
+
+@sen_quest_2007 study the quality of community tags in the MovieLens film recommendation system, toward methods to prioritize tags in the interface.
+They find that high-quality tags, as determined by survey, are not necessarily the most-applied tags, likely because the most common tags are locally useful 'personal' tags.
+However, tags that are applied by many _unique_ users are more likely to be useful, as are tags that are clicked by many unique users.
+While this form of usage-based quality indicator does not help in collecting good tags, it does affect how to determine quality tags for ground truth in this study.
+
 
 
 <!-- TODO discuss -->
@@ -394,7 +402,9 @@ While the complexities of why this is the case and how closely tied the result i
 There are different interpretations on tagging, what types are desired, how much variance is acceptable, and what the role of tagging is.
 
 For museums, tagging is considered not only in pragmatic subject access terms, but as a medium for critical value and engagement, according to @trant_investigating_2006.
-Indeed, they note the value in tagging for understanding the tagger: a way to understand how patrons react and interact with museum collections.
+Indeed, they note the value in tagging for understanding the tagger: a way to understand how patrons react and interact with museum collections.^[TagAssert]
+
+^[TagAssert]: "A tag is a user's assertion that a work of art is about something." - @trant_investigating_2006
 
 
   - desire some sort of variability
@@ -423,7 +433,13 @@ Particularly, we look to information retrieval uses, to help in findability, fil
 One typology for types of tags was offered for tagged bookmarks by @golder_usage_2006.
 They present seven kinds of bookmarking tags: those for identifying what the item is about (i.e. topical), for identifying what the item is (e.g. blog), for identifying the creator of the item, for qualifying or refining other tags, for labeling subjective characteristics of the content, for establishing a relationship to the tagger (e.g. 'my post'), and for organization.
 
-How might Golder and Huberman's tags apply to images?i <!-- TODO -->
+How might Golder and Huberman's categiries of tags apply to images?i <!-- TODO -->
+
+<!-- quotes 
+
+"Some tags that would not typically be provided by Library catalogers are obviously more important in a social media site like Flickr, where photos may be sought out for reuse based on such attributes as predominate colors." (Springer et al 2008:24)
+
+-->
 
 <!-- TODO: look at studies on Flickr tagging-->
 
@@ -437,6 +453,22 @@ In a survey related to the display of prior tags [@sen_quest_2007], users found 
 
 Finally, tagging has been used in practice for cultural heritage uses, and preferred types of tags have been discussed, even when actual practice does not yield those ideals.
 <!- TODO LIS literature on tagging ->
+
+In their report on The Commons [^TODO make sure I use the proper name throughout the document, not "Flickr Commons], @springer_for_2008 analyzed a sample of tags and derived a number of non-exclusive categories for image tags:
+
+- tags derived from the description;
+- new descriptive keywords, including tags for place, format, photographic technique, time period, or creator name;
+new subject words, such as items seen in the image, associations/symbolism,  commentary (e.g. 'Sunday best'), transcription of words in the image, topical tags and humour;
+- emotional/aesthetic responses (e.g. 'ugly');
+- personal knowledge or research;
+- machine tags;
+- variant forms;
+- foreign language tags; and
+- miscellaneous tags [@springer_for_2008]
+
+Of these, description-derived and image subject tags were the most common.
+
+The relative usefulness of the 
 
 <!--##### Tagging - Training Interface-->
 
@@ -460,7 +492,10 @@ The quality of these tags was determined through a Mechanical Turk task, where w
 ## Experiment #2: Relevance Judgments
 
 
-## Experiment #3: Music Similarity Judgments
+## Experiment #3: Music Similarity Judgments [^TODO extract to it's own half-chapter]
+
+The next chapter will turn to more subjective subjective settings.
+Before continuing, however, it is worth reported on one more study of objective task design, one which has been extracted to its own section because the study looks at both posterior data correction and task design corrections, as discussed in the two chapters prior, while the findings bridge the shift in focus from objective task design to subjective.
 
 \marginnote{This work was previous reported in <!-- TODO cite-->}
 

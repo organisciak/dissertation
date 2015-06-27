@@ -68,6 +68,7 @@ Two protocols for personalized crowdsourcing are then presented, referred to as 
 Finally, the design manipulations evaluated in Chapter 4 are evaluated in personalized crowdsourcing.
 
 <!- Reminder: update any changes here and in the actually chapter -->
+
 RQ 3.1: Is it feasible to apply paid crowdsourcing to subjective problems?
 RQ 3.2: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
 RQ 3.3: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
@@ -404,6 +405,7 @@ Building on work developed in <!--TODO cite-->, we present methods to perform su
 TODO
 
 -------
+
 
 # Notes
 
