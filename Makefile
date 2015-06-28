@@ -2,7 +2,7 @@ pandoc_args = -f markdown --bibliography=refs.bib --smart
 #name =thesis
 name=thesis-tufte
 data= logs/stats.csv
-progressfile='../dissertation-progress/data.csv'
+progressfile='./progress/data.csv'
 
 all: mostlyclean docx
 

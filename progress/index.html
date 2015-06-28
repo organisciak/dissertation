@@ -1,0 +1,41 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="bower_components/cal-heatmap/cal-heatmap.css" />
+</head>
+
+<body>
+
+<div id="cal-heatmap"></div>
+
+<script type="text/javascript" src="bower_components/d3/d3.min.js"></script>
+<script type="text/javascript" src="bower_components/cal-heatmap/cal-heatmap.js"></script>
+<script type="text/javascript">
+	var cal = new CalHeatMap();
+	cal.init({
+		data: "data.csv",
+		dataType: "csv",
+		afterLoadData: function(d) {
+			/* 
+			Convert format from
+				{ [ {"Date": ..., "Words": ..}]}
+			to
+				{ "{{timestamp}}": {{value}}, ... }
+			*/
+			newd = {}
+			for (i in d){
+				timestamp = (new Date(d[i].Date)).getTime()/1000;
+				newd[timestamp.toString()] = parseInt(d[i].Words);
+			}
+			return newd;
+		},
+		legend: [300, 600, 900, 1200, 1500],
+		start: new Date(2015, 4, 25),
+		domain: "month",
+		sumDomain: "day",
+		itemName: ["word", "words"]
+	});
+</script>
+
+
+</body>
+</html>
