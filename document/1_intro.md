@@ -18,7 +18,7 @@ Most importantly, crowdsourcing looks at human contribution at scales that are d
 \newthought{However}, humans have predictable and unpredictable biases that make it difficult to systematically adopt their contributions in an information system.
 How do we control and interpret qualitative user contributions in a quantified system?
 
-This work focuses on understanding the characteristics of data collected through crowdsourcing, toward two ends: awareness of potentially unanticipated biases in crowd data collection, and ways to improve the quality of crowd-collected data. data quality.
+This work focuses on understanding the characteristics of data collected through crowdsourcing, toward two ends: awareness of potentially unanticipated biases in crowd data collection, and ways to improve the quality of crowd-collected data.
 As will be demonstrated, crowdsourcing research is sensitive to various circumstances of instrumentation, context, and community.
 This work seeks to _understand_ the intricacies of these biases: looking at how tasks are completed when they are more or less engaging, restrictive, or subjective.
 Valid research needs to be aware of how circumstance affects crowds, as well as know what information is important to report for reproducibility.
@@ -26,13 +26,18 @@ Understanding leads to practical recommendations for maximizing data quality in 
 
 <!-- Scoping -->
 
-\newthought{This work is scoped}  to a particular type of crowd production  -- metadata about existing information objects -- and a particular form of collection: microtasks in paid crowd platforms.
-These are viewed in the space of subjective and objective types of tasks.
+\newthought{This work is scoped} to a particular type of crowd production -- metadata^[metadata] about existing information objects -- and a particular form of collection: microtasks^[microtask] in paid crowd platforms^[paidplatforms].
+These are viewed in the space of subjective and objective^[objective] types of tasks.
+
+^[metadata]: An important albeit rarely formalized distinction in crowdsourcing contributions is whether the crowd _creates_ new intellectual works, or whether they _react_ to existing information objections. Generally, the uses of crowdsourcing of interest to information scientists, librarians, and information retrieval researchers are in the latter category.
+^[microtask]: A microtask refers to the common practice of breaking tasks down to small practical units, which both simplifies the task distribution process in a Fordist style and accommodates the short interaction style that is common online.
+^[paidplatforms]:
+^[objective]:
 
 It is important to stay aware of the broader space of crowdsourcing and how characteristics of paid microtasks generalize to it.
-However, as the typology presented in Chapter 3 makes clear, crowdsourcing is an overly broad space; the treatment here is controlled to a subset pertinent to information science research.
+However, as the typology presented in Chapter 3 makes clear, crowdsourcing is a broad expanse; the treatment here is controlled to a subset pertinent to information science research.
 
-Details of each part of this scope will follow -- crowdsourcing metadata, microtasks, paid crowd platforms, and subjective/objective crowdsourcing -- but it is important to lay the tracks first.
+Details of each part of this scope will follow -- crowdsourcing metadata, microtasks, paid crowd platforms, and subjective/objective crowdsourcing -- but it is important to lay the track first.
 
 ## Overview
 
