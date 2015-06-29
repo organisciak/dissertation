@@ -38,6 +38,8 @@ Clean the file with csvclean from csvkit, which outputs testing-sample_out.csv (
 csvclean testing-sample.csv
 ```
 
+Remove risque or potentially offensive images, by a quick sight scan (this step I did after downloading all the images for this sample, see below).
+
 Now, trim the sample to something meaningful. Only keep pins without a price, and which have >0 repins and >0 likes (for quality reasons), then truncate to 100 items and save as JSON.
 
 ```
