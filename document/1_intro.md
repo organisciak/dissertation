@@ -31,8 +31,8 @@ These are viewed in the space of subjective and objective^[objective] types of t
 
 ^[metadata]: An important albeit rarely formalized distinction in crowdsourcing contributions is whether the crowd _creates_ new intellectual works, or whether they _react_ to existing information objections. Generally, the uses of crowdsourcing of interest to information scientists, librarians, and information retrieval researchers are in the latter category.
 ^[microtask]: A microtask refers to the common practice of breaking tasks down to small practical units, which both simplifies the task distribution process in a Fordist style and accommodates the short interaction style that is common online.
-^[paidplatforms]:
-^[objective]:
+^[paidplatforms]:TODO short sentence
+^[objective]:TODO short sentence n subjective/objective normative
 
 It is important to stay aware of the broader space of crowdsourcing and how characteristics of paid microtasks generalize to it.
 However, as the typology presented in Chapter 3 makes clear, crowdsourcing is a broad expanse; the treatment here is controlled to a subset pertinent to information science research.
@@ -77,7 +77,7 @@ Finally, the design manipulations evaluated in Chapter 4 are evaluated in person
 RQ 3.1: Is it feasible to apply paid crowdsourcing to subjective problems?
 RQ 3.2: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
 RQ 3.3: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
-RQ 3.4: How do different types of subjective tasks affect the efficacy of personalized crowdsourcing approaches?
+RQ 3.4: How do different types of subjective tasks affect the effricacy of personalized crowdsourcing approaches?
 RQ 3.5: How do task design manipulations affect the quality of crowd contributions?
 
 - CHAPTER 4: Designing Objective/Normative Tasks for Paid Crowdsourcing (Effect of design manipulations on data)

@@ -96,24 +96,26 @@ A task where more information in encoding about the document is a more appropria
 
 
 
-## Research questions
+## Related Work
+
+## Research Questions
 
 This chapter compares the effect of task design on the quality of crowdsourced objective data.
-Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information retrieval -- a typical encoding task performed by paid crowds, the following questions will be pursued:
+Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information science -- a typical encoding task performed by paid crowds, the following questions will be pursued:
 
- * __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
+ * __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?[^The _design space_ question.]
 
- * __RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?
+ * __RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces? [^The primary _data quality_ question.]
 
- * __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
+ * __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task? [^The secondary _satisfaction_ question.]
 
- * __RQ4__: Do the questions above generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?
+ * __RQ4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)? [^The _generalizability_ question.]
 
 RQ1 is the question of design, on synthesizing prior work and brainstorming directions to explore.
 It is a partially subjective question, but one still worth pursuing with diligence.
 As research by @komarov_crowdsourcing_2013 found, the effects seen in traditional user studies are still present in online crowd markets.
 Their finding suggests that non-crowdsourcing research in human-computer interaction is informative for our purposes.
-This proposal chapter explores some possible design decisions and argues why they should be studied.
+This chapter explores some possible design decisions and argues why they should be studied.
 
 RQ2 and RQ3 are the primary questions being explored in this chapter of the proposed dissertation, on quality for computational use and on satisfaction.
 While this dissertation is explicitly pursuing the former question, collecting computationally useful contributions needs to be understood in the context of contributor satisfaction.
@@ -223,28 +225,28 @@ Other areas are already well-tread. The effect of incentive structures, payment 
 
 With regards to designs that mislead workers about their performance, there are ethical and trust issues that limit such an approach, in addition to the warning by @kraut_building_2011 that feedback is only effective when contributors believe it is sincere.
 
-## Related Work
-
 ## Approach
 
-So what design manipulations does this study measure?
+While parameterization studies have compared how shifts in description or payment structure affect contribution, very few studies looking at more drastic design manipulations have been performed on a controlled task [^The recent paper by @mitra_comparing_2015 a notable exception].
 
-As outlined in the overview of my own doctoral research, a few directions look like promising continuations of my research.
+Still, some unresolved questions in the area are necessary to understand in the pursuit of quality crowd contributions.
+For example, it is still unclear whether simple encoding tasks benefit more from workers' gut instincts or careful consideration.
+Designs that can change a worker's attentiveness may help -- or perhaps hinder -- the quality of contributions.
 
- * It is still unclear whether simple encoding tasks benefit more from workers' gut instincts or careful consideration.
-   Designs that can change a worker's attentiveness address an interesting problem and may bring potential improvements.
- * Having previously found that reading instructions slowly is important for properly performing work, it should be seen whether a task can push a worker into internalizing the codebook rather than interpreting it.
- * Understanding that many reliability errors are introduced by honest workers that intend to do well, it may also be important to keep workers informed of their performance, at least when they are not performing well.
+Having found in the previous chapter that reading instructions slowly is important for properly performing work, it should be seen whether a task can push a worker into internalizing the codebook rather than interpreting it.
+Understanding that many reliability errors are introduced by honest workers that intend to do well, it may also be important to keep workers informed of their performance, at least when they are not performing well. Other work, to be reported in later chapters, finds that a task redesign for an evaluation task can improve collected data immensely at little extra cost, while in the case of simple item ratings, over-thinking the task is actually detrimental.
 
-With those considerations in mind, I propose the three interfaces to study for crowdsourced data collection: a training interface, a feedback interface, and a time-limited interface.
+With those considerations in mind, this study compares data collected through three interfaces for crowdsourced data collection: a training interface, a feedback interface, and a time-limited interface.
+The training interface takes more care to slow down the task and walk new workers through the codebook and the style of a good contribution.
+The feedback interface tries to reflect performance back to workers, to check their understanding of the codebook.
+Finally, the time-limited interface contrasts the introspective approach of the other interface by encouraging quicker contributions.
 
 ### Basic interface
 
-The basic interface will resemble an archetypal task, following conventions seen in Mechanical Turk usage.
-It will show workers a task with a goal, description, and ten items to perform actions on.
-The goal of the interface will be to "identify the topic of a tweet."
-For each item, a multiple-choice question will be posed, with the proper noun phrases provided as options, as well as a free-text "Other" category and an "unknown" option.
-The description will explain what a "topic" is, and make clear the difference between a topic and simply a mention.
+The basic interface resembles an archetypal task, following conventions seen in Mechanical Turk usage.
+It shows workers a task with a goal, description, and ten items to perform actions on.
+
+i[^TODO explain current interface]The description will explain what a "topic" is, and make clear the difference between a topic and simply a mention.
 An example will be included with the description, but as a pop up window behind a "See Example" link that needs to be clicked.
 This is done to conform to the convention that instructions should not be too long, in order not to push the actual action items 'below the fold'.
 Amazon's own advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011]. <!--\_-->
