@@ -76,7 +76,7 @@ A third design encourages quicker responses.[^whyint]
 These are compared to a realistic baseline interface which follows typical Mechanical Turk conventions.
 Afterward, an applied experiment is presented, where both apriori and posterior methods are applied to a music information retrieval evaluation. The design changes that are made improve the quality of results drastically, with negligible cost differences.
 
-[^whyint]: Why are these design manipulations chosen? Later in this chapter, the possibilities for design manipulation are considered, and compared to the existing literature. As will be seen, prior work has lent insight on the effect of 'parameter manipulations' such as payment variation <!-- TODO CITE--> and wording changes<!-- TODO CITE LEASE paper-->, while more drastic design manipulations are only beginning to be studied in the context of crowds.<!--TODO cite Gilbert-->
+[^whyint]: Why are these design manipulations chosen? Later in this chapter, various possibilities for design manipulation are considered, and compared to the existing literature. As will be seen, prior work has lent insight on the effect of 'parameter manipulations' such as payment variation <!-- TODO CITE--> and wording changes<!-- TODO CITE LEASE paper-->, while more drastic design manipulations are only beginning to be studied in the context of crowds.<!--TODO cite Gilbert-->
 
 
 
@@ -361,12 +361,19 @@ Details of the experimental system, including design documents, model descriptio
 [^crowdybackend]: https://github.com/organisciak/crowdy-backend
 
 
-## Experiment  #1: Tagging
+### Tagging
 
-Tagging is a type of free-text social 
-- problem
+## Experiment #1: Relevance Judgments
 
-Why tagging
+## Experiment  #2: Tagging
+
+<!--Why tagging-->
+Tagging is a type of free-text labelling often applied in online social context.
+It allows a system to collect more metadata about its records than the system may have, and representing different _types_ of description.
+Such open-ended contribution can grow unwieldy and hard to protect against vandalism, but public good institutions such as libraries and museums 
+For example, on business recommendation system Yelp, tags allow users to contribute data about the type of business [^A competing service, Foursquare, also uses tags, but in a more structured way. ]
+their libraries and museums to collect more metadata about their
+
 - Limited metadata
 
 Trant and Wyman argue that tagging from online users "appears to fill gaps in current documentation practice" [~@trant_investigating_2006].
@@ -376,7 +383,7 @@ Trant and Wyman argue that tagging from online users "appears to fill gaps in cu
 
  - vocabulary problem
 
-Why paid
+<!--Why paid-->
 - Volunteer practice
    - Many volunteers tag poorly
      - @springer_for_2008 find that tags were the least fulfilling type of information contributed to the Library of Congress account on Flickr. <!--Add sidenote about Flickr, and perhaps the commons--> ...
@@ -488,10 +495,6 @@ The quality of these tags was determined through a Mechanical Turk task, where w
   - tags that are applied by many unique users are likely to be better tags [@sen_quest_2007]
   - In rating tag quality, both positive and negative ratings are important [@sen_quest_2007]
 
-### Tagging
-
-
-## Experiment #2: Relevance Judgments
 
 
 ## Experiment #3: Music Similarity Judgments [^TODO extract to it's own half-chapter]
