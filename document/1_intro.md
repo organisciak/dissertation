@@ -31,8 +31,8 @@ These are viewed in the space of subjective and objective^[objective] types of t
 
 ^[metadata]: An important albeit rarely formalized distinction in crowdsourcing contributions is whether the crowd _creates_ new intellectual works, or whether they _react_ to existing information objections. Generally, the uses of crowdsourcing of interest to information scientists, librarians, and information retrieval researchers are in the latter category.
 ^[microtask]: A microtask refers to the common practice of breaking tasks down to small practical units, which both simplifies the task distribution process in a Fordist style and accommodates the short interaction style that is common online.
-^[paidplatforms]:TODO short sentence
-^[objective]:TODO short sentence n subjective/objective normative
+^[paidplatforms]: Paid crowdousrcing platforms are markets for on-demand online labour. They reduce much of the overhead seen in volunteer crowdsourcing related to attracting and motivating users, replacing intrinsic motivation with financial incentive. The most popular platform, and the one used to run experiments in this study, is Amazon's Mechanical Turk.
+^[objective]: Objective tasks assume the existence of a universal ground truth, while subjective tasks have truth relative to different individuals. A median category is considered in this study, that of _normative_ tasks: ones that do not have a factual 'truth' but have an expectation of an agreed-upon truth.
 
 It is important to stay aware of the broader space of crowdsourcing and how characteristics of paid microtasks generalize to it.
 However, as the typology presented in Chapter 3 makes clear, crowdsourcing is a broad expanse; the treatment here is controlled to a subset pertinent to information science research.
@@ -40,6 +40,8 @@ However, as the typology presented in Chapter 3 makes clear, crowdsourcing is a 
 Details of each part of this scope will follow -- crowdsourcing metadata, microtasks, paid crowd platforms, and subjective/objective crowdsourcing -- but it is important to lay the track first.
 
 ## Overview
+
+
 
 ### Research Questions
 
@@ -49,13 +51,12 @@ Broad Research Question 2:
 
 Chapter 4 takes a post-collection look at crowdsourcing error, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
 
-<!-- TODO: Battery about to die, but need to describe this chapter soon -->
-
 The chapter is largely analytic, hoping to understand what we can infer from crowd behaviors about the strength of their contributions and evaluating what strategies are promising for better paid crowdsourcing.
 By taking this approach, this chapter seeds some of the expected outcomes driving later chapters.
 
-RQ 1.1
-RQ 1.2
+RQ 1.1: Do worker contributions improve with experience in a predictable way?
+RQ 1.2: Do workers that spend more time on a task contribute better work?
+RQ 1.3: 
 
 <!--- TODO search for all references to chapters 4 and 5, to make sure that the order it correct -->
 

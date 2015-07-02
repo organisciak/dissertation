@@ -454,7 +454,7 @@ More information can become available by including more categories or increasing
 However, including more raters also has a positive effect on quality.
 Thus, the experience of this study is that for binary labels, majority rating is generally robust enough.
 
-# Conclusion
+## Conclusion
 
 This study looked at the growth of online annotation microtasks and the problems of non-expert raters, looking at indicators of performance among non-expert performance.
 
