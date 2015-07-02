@@ -9,7 +9,10 @@
 
 2. Load pins into DB
 
-``` coffee ../crowdy-backend/scripts/loadPinsToMongo.coffee --pinData ../dissertation/data/pinterest/taggingSample100.json ```
+```
+perl -pe "s:https\://s-m:https\://crowdycrowdy.com/images/s-m:g"  ../dissertation/data/pinterest/taggingSample100.json >../dissertation/data/pinterest/taggingSample100-selfhost.json
+coffee ../crowdy-backend/scripts/loadPinsToMongo.coffee --pinData ../dissertation/data/pinterest/taggingSample100-selfhost.json
+```
 
 3. Create HIT properties
 
@@ -26,4 +29,6 @@ $mongo --eval "a=db.hits.find({},{_id:1, name:1}).sort({"_id":-1}).limit(1).toAr
 >>> ObjectId('5585b9ed4104be14504bd568')
 ```
 
-5.  
+5. Create HIT on Turk
+
+Add hit id to params in ~/crowdy-backend/turk/create-hit.js 
