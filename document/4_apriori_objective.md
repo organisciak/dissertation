@@ -504,7 +504,107 @@ Before continuing, however, it is worth reported on one more study of objective 
 
 \marginnote{This work was previous reported in <!-- TODO cite-->}
 
-### Old text
+## Introduction
+Judging the similarity of audio is a difficult and time-consuming task.
+Since 2006, the Music Information Retrieval Evaluation eXchange (MIREX)
+has been using volunteer human graders for evaluating the performance of
+music systems submitted to the Audio Music Similarity and Retrieval
+(AMS) task.
 
-* In a sample study comparing the space of incidental crowdsourcing across two systems [@organisciak_incidental_2013], I found that an 'easy' rating interface -- one that puts up less hurdles to contribution -- results in a shifted distribution of ratings than a 'hard' interface.
-* In recently-completed research, I looked at low grader consistency in the ground truth for the Audio Music Similarity (AMS) task in the Music Information Retrieval Exchange (MIREX). One of the results found that redesigning the task to attach finer instruction to the rating improved the quality of judgments by crowdsourced judges.
+After analyzing four years of crowd judgments from AMS, finding that the consistency across different raters and years is remarkably poor, this study looks at the role of crowdsourcing design and modeling choices in this data variable.
+Specifically, this chapter pursuing user normalization, collection instrument design changes, and multiple independent judgments.
+
+The primary contribution here is an better understanding of data issues that stem from crowdsourced music evaluation datasets, and methods to avoid data quality pitfalls.
+Particularly, our case study of music information retrieval judgments generalizes to a class of evaluation tasks that are subjective-biased.
+
+Music similarity is desired by music digital library users @lee_survey_2004, and other digital libraries deal with a comparable form of *normative* task where there is no absolutely correct ground truth but a desire to reach a consensus or
+a generally agreeable classification; e.g. item similarity ratings,
+information quality judgments, and information retrieval relevance
+judgments.
+The findings are also important to understanding the reliability of Audio Music Similarity evaluation, and we provide recommendations to improve future tasks.
+
+## Background
+
+MIREX is an annual evaluation event where techniques tailored to a variety of Music Digital Library (MDL) and Music Information Retrieval
+(MIR) tasks are submitted by research laboratories from all over the world.
+
+The Audio Music Similarity and Retrieval (AMS) task was started in 2006.
+AMS resembles a classic information retrieval scenario, whereby the systems being evaluated are expected to return a ranked list of audio items that are considered similar to a given query [@downie_music_2010].
+It is also desired by digital library users: in a survey of MDL users, 54% said they were likely to use music similarity functions [@lee_survey_2004].
+AMS relies on human judgments for evaluation, recruiting volunteers each year to judge the similarity of song “candidates” to randomly selected queries.
+
+For each query song, each retrieval system under evaluation gives MIREX a list of candidate similar songs.
+These query–candidate sets are presented randomly to evaluators in a judging system called 'Evalutron 6000' (E6K) [@downie_music_2006; @gruzd_evalutron_2007].
+To avoid exhaustion, E6K saves judgments continuously, so that graders can step away and return without losing data.
+
+## Data
+
+$26024$ human judgments of audio similarity were compiled, comprising four years of MIREX’s AMS judgments.
+The candidate songs were selected for judgment by 8 submitted systems in 2010, 18 in 2011, 10 in 2012, and 8 in 2013.
+Until 2011, 100 queries were evaluated each year, after which MIREX shifted to 50 queries per year.
+
+All the candidates for a query were graded on two scales of similarity:
+ - The __BROAD__ scale is a categorical ranking from three choices: "not similar", "somewhat similar", and "very similar".
+ - The __FINE__ scale is a 101-point numerical rating, from 0-100.
+
+The graders were generally trusted volunteers from the MIR community, and multiple keying was not done.
+
+To understand the consistency of judgments across years of MIREX, we need to look at song pairs that have recurred in judging.
+Since AMS evaluation queries are randomly selected each year, there are only two instances where a query has recurred.
+However, $80\%$ of queries have also occurred as candidates for other songs.
+As a result, there are
+$156$ judgments of the same song pairs across the years, with the caveat that the query-candidate relationship is inverted.
+
+## Problem
+
+There is a concerning lack of agreement between judges in the set of reciprocal song pairs, shown in Figure \[fig:recip-fine\].[^TODO]
+The slope shows the expected relationship if similarity was an agreeable metric independent of “which song is listened to first” order effects – an assumption implicitly made in treating similarity as something that can be evaluated.
+
+The noise presented here suggests a great deal of circumstance and randomness in evaluating music similarity algorithms for MIREX.
+Since our best prediction for the true similarity of two songs is the mean of both judgments, we can measure the deviation from the expected value as
+Root Mean Squared Error.
+
+In this case, $RMSE=16.58$ against a prediction assuming symmetric similarity.
+Comparing the BROAD category of reciprocal pairs tells a similar story (Table \[tab:broad-counts\]): only $35\%$ of graders agreed on the category and nearly half was agreement on “somewhat similar” items.
+While some of this is to be expected, it also suggests that *SS* functions as a catch-all category where graders hedge their bets.
+This is supported by its much wider range (Figure
+\[fig:all-dist\]). [^TODO]
+
+  -- ------------------ ---- ---- ----
+                                  
+                         NS   SS   VS
+     Not Similar (NS)    5    —    —
+                         20   14   —
+                         10   21   8
+  -- ------------------ ---- ---- ----
+
+  : Relationship of categorical judgments for pairs of songs when judged
+  again.<span data-label="tab:broad-counts"></span>
+
+The weak correlation in re-judging makes it difficult to assess the extent to which the evaluation is actually reflecting the ‘truth’ of what songs are similar.
+
+What are the reasons for this weak correlation?
+This study considers this question in the context of crowdsourcing choices, looking at collection format and data treatment as possible sources for the variance.
+First, let’s consider some possible explanations.
+
+**Order and priming effects**.
+Perhaps there is an order effect based on either which song a judge listens to first, or a priming effect caused by a judge listening consecutively to a set of song pairs with the same query.
+Research in other contexts has noted the possibility of asymmetrical effects [@tversky_features_1977,@polk_rating_2002; @hiatt_role_2013].
+
+**Different interpretations of the scale**.
+Do different people treat the rating scale differently? This would be a user bias, but a predictable one.
+
+**Bad intercoder reliability due to task design**.
+Perhaps the E6K system does a poor job controlling for consistency?
+
+**Bad graders**.
+Much crowd research looks at malicious or unreliable contributors.
+This is possible, but unlikely to happen systematically since the volunteers are trusted members of the MIR community.
+
+**An inherently subjective task**: Does this task present challenges to agreement?
+
+It is likely that the noisy, high-variance MIREX music similarity judgments stem from multiple sources.
+In line with the thrust of this dissertation, I focus on measuring how much of that is recoverable: what can be improved by changes to practice.
+The rest of this chapter will at consider 1) corrections for user-specific biases, 2) multiple-keyed judgments, and 3) a task design.
+While order effect are not focused on, partially because their measurement is possibly confounded by the other issues, this chapter's positive results -- showing improved judgment consistency -- provide a better sense of the magnitude at which such effects might exist.
+
