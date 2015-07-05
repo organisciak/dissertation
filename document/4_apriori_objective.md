@@ -507,7 +507,7 @@ Before continuing, however, it is worth reported on one more study of objective 
 ## Introduction
 Judging the similarity of audio is a difficult and time-consuming task.
 Since 2006, the Music Information Retrieval Evaluation eXchange (MIREX)
-has been using volunteer human graders for evaluating the performance of
+has been using volunteer human judges for evaluating the performance of
 music systems submitted to the Audio Music Similarity and Retrieval
 (AMS) task.
 
@@ -535,7 +535,7 @@ AMS relies on human judgments for evaluation, recruiting volunteers each year to
 
 For each query song, each retrieval system under evaluation gives MIREX a list of candidate similar songs.
 These query–candidate sets are presented randomly to evaluators in a judging system called 'Evalutron 6000' (E6K) [@downie_music_2006; @gruzd_evalutron_2007].
-To avoid exhaustion, E6K saves judgments continuously, so that graders can step away and return without losing data.
+To avoid exhaustion, E6K saves judgments continuously, so that judges can step away and return without losing data.
 
 ## Data
 
@@ -547,7 +547,7 @@ All the candidates for a query were graded on two scales of similarity:
  - The __BROAD__ scale is a categorical ranking from three choices: "not similar", "somewhat similar", and "very similar".
  - The __FINE__ scale is a 101-point numerical rating, from 0-100.
 
-The graders were generally trusted volunteers from the MIR community, and multiple keying was not done.
+The judges were generally trusted volunteers from the MIR community, and multiple keying was not done.
 
 To understand the consistency of judgments across years of MIREX, we need to look at song pairs that have recurred in judging.
 Since AMS evaluation queries are randomly selected each year, there are only two instances where a query has recurred.
@@ -557,29 +557,30 @@ $156$ judgments of the same song pairs across the years, with the caveat that th
 
 ## Problem
 
-There is a concerning lack of agreement between judges in the set of reciprocal song pairs, shown in Figure \[fig:recip-fine\].[^TODO]
-The slope shows the expected relationship if similarity was an agreeable metric independent of “which song is listened to first” order effects – an assumption implicitly made in treating similarity as something that can be evaluated.
+There is a concerning lack of agreement between judges in the set of reciprocal song pairs.
+Since our best prediction for the true similarity of two songs is the mean of both judgments, we can measure the deviation from the expected value as Root Mean Squared Error (RMSE).
+In this case, $RMSE=16.58$ against a prediction assuming symmetric similarity.
+
+RMSE is generally meaningful in comparison, but for a sense of the variance with an RMSE of 16.58, consider that it is in the same unit as the scale, which only has a max range of 101 points^[STDdev].
+Alternately, the FINE scale judgements are plotted in Figure {@fig:recip-fine}.[^TODO]
+The slope shows the expected relationship if similarity was an agreeable metric independent of "which song is listened to first" order effects – an assumption implicitly made in treating similarity as something that can be evaluated.
+
+^[STDdev]: It  may be helpful in approximating the severity of the problem to remember that RMSE aligns with sample standard deviation.
 
 The noise presented here suggests a great deal of circumstance and randomness in evaluating music similarity algorithms for MIREX.
-Since our best prediction for the true similarity of two songs is the mean of both judgments, we can measure the deviation from the expected value as
-Root Mean Squared Error.
 
-In this case, $RMSE=16.58$ against a prediction assuming symmetric similarity.
-Comparing the BROAD category of reciprocal pairs tells a similar story (Table \[tab:broad-counts\]): only $35\%$ of graders agreed on the category and nearly half was agreement on “somewhat similar” items.
-While some of this is to be expected, it also suggests that *SS* functions as a catch-all category where graders hedge their bets.
-This is supported by its much wider range (Figure
-\[fig:all-dist\]). [^TODO]
+Comparing the BROAD category of reciprocal pairs tells a similar story (Table {@tbl:amscorr}): only $35\%$ of judges agreed on the category and nearly half was agreement on “somewhat similar” item.
+While some of this is to be expected, it also suggests that *SS* functions as a catch-all category where judges hedge their bets.
+This is supported by its much wider range (@fig:all-dist). [^TODO]
 
-  -- ------------------ ---- ---- ----
-                                  
+  ---------------------- ---- ---- ----
                          NS   SS   VS
-     Not Similar (NS)    5    —    —
-                         20   14   —
-                         10   21   8
-  -- ------------------ ---- ---- ----
+  Not Similar (NS)       5    —    —
+  Somewhat Similar (SS)  20   14   —
+  Very Similar (VS)      10   21   8
+  ---------------------- ---- ---- ----
 
-  : Relationship of categorical judgments for pairs of songs when judged
-  again.<span data-label="tab:broad-counts"></span>
+Table: Relationship of categorical judgments for pairs of songs that have been judged twice over a four-year span of AMS. {#tbl:amscorr}
 
 The weak correlation in re-judging makes it difficult to assess the extent to which the evaluation is actually reflecting the ‘truth’ of what songs are similar.
 
@@ -597,7 +598,7 @@ Do different people treat the rating scale differently? This would be a user bia
 **Bad intercoder reliability due to task design**.
 Perhaps the E6K system does a poor job controlling for consistency?
 
-**Bad graders**.
+**Bad judges**.
 Much crowd research looks at malicious or unreliable contributors.
 This is possible, but unlikely to happen systematically since the volunteers are trusted members of the MIR community.
 
@@ -607,4 +608,104 @@ It is likely that the noisy, high-variance MIREX music similarity judgments stem
 In line with the thrust of this dissertation, I focus on measuring how much of that is recoverable: what can be improved by changes to practice.
 The rest of this chapter will at consider 1) corrections for user-specific biases, 2) multiple-keyed judgments, and 3) a task design.
 While order effect are not focused on, partially because their measurement is possibly confounded by the other issues, this chapter's positive results -- showing improved judgment consistency -- provide a better sense of the magnitude at which such effects might exist.
+
+## Related Work
+
+The feasibility of scoring melodic similarity has been challenged by
+@marsden_interrogating_2012, who noted high variation in MIREX 2005 similarity judgments.
+Though on different MIREX data, our study is able to identify collection instrument design as one such factor source of variance.
+
+An alternative to the form of graded similarity judgment that MIREX uses is partially ordered lists, introduced by @typke_ground_2005.
+This form of judgment has been shown to be effective for judging the relative similarity of candidates to a query.
+However, it is more time-consuming to create, a factor in the decision to use a graded scale for MIREX.
+Also, it suffers from similar inconsistency problems to what we observe in this paper
+[@urbano_crowdsourcing_2010].
+
+Despite the inconsistency observed in this study, research into the power of AMS evaluation for an year not overlapping with our study concluded that the relative rankings of AMS systems in MIREX are sound, with contention on about 4% of pairwise system comparisons [@urbano_audio_2011].
+This chapter turn to Mechanical Turk for additional judgments, an option shown as a viable approach to music similarity judgments in multiple studies [@urbano_crowdsourcing_2010; @lee_crowdsourcing_2010].
+
+@urbano_crowdsourcing_2010 looked to paid crowdsourcing for lowering the difficulty of finding human labor for *ranked* similarity judgments.
+They use an approach similar to ordered lists, inferring an order through pairwise preference judgments, whereby judges choose the more similar option between two candidates.
+Additional research has also looked at *graded* similarity judgments in the context of the AMS task @lee_crowdsourcing_2010, finding that the MIREX style of evaluation does not suffer significant drops in quality with paid workers.
+
+## Approach
+
+To address possible sources of the error in MIREX’s crowdsourced relevance judgments, four approaches are taken:
+
+ 1. normalizing workers by their personal habits;
+ 2. asking new, different judges for judgments;
+ 3. adding additional redundant judges^[languageAMS];
+ 4. testing an alternate interface that gives judges more guidance on what rating is appropriate.
+
+^[languageAMS]: Since this chapter involves volunteer contributions, contributors are not uniformly referred to as _workers_, as in the other chapters, except when discussion paid contributors.
+
+## Normalizing for Grader-Specific Effects {#normalizing-workers}
+
+*RQ1: Are intra-judge inconsistencies responsible for the lack of reciprocation in AMS similarity judgments?*
+
+The human judges are given a large amount of leeway regarding how they perform a task.
+We set out to see if this contributes to superficial variance, and whether correcting for it can address the poor reciprocation in AMS.
+While the BROAD categories are fairly clear, the
+FINE scale does not constrain judges to follow a specific codebook.
+This is appears to be done by design: workers are told, "You have the freedom to make whatever associations you desire ... we expect to see variations across evaluators as this is a normal part of human subjectivity." Differences in judges’ interpretations of a task can contribute to different internal scales.
+This type of error is commonly seen in collaborative filtering for recommendation, where users’ opinions are often treated as a mixture of their nominal rating, adjusted by user-specific and item-specific biases @koren_bellkor_2009.
+To normalize judges against their specific biases, FINE judgments were translated to z-score values, represented as standard deviations from the judge’s mean rating habit.
+This approach was previously seen in
+@hofmann_latent_2004; in our case, adjusted ratings were blocked by a judge’s BROAD score, resulting in three values for each judge: deviation from their typical FINE score for "not similar", "somewhat similar", and "very similar" candidates.
+
+The adjusted rating $r^{'}_{u,b}$ for judge $u$ and BROAD category $b$ was calculated in the following way:
+
+$$r^{'}_{u,b} = \sqrt{\frac{1}{N}* \sum\nolimits_{i=1}^N{ r_{u,b} - \mu_{u,b} } }$$
+ where $b \in B$ and $B=\left\{ {``NS'',``SS'',``VS''}\right\}$.
+Since this normalization provides ratings against three different scales, we mapped it back into a new FINE score by assuming a normal distribution for each category.
+With this mapping, 95% of not similar ratings occur between $FINE=0-27.63$; somewhat similar ratings between $30.21-67.80$; and very similar ratings between $68.74-92.17$.
+
+### Results
+
+Normalizing user FINE judgments weighted against their BROAD judgments resulted in variance of $RMSE=16.15$, a non-significant change.
+Thus, there is no evidence that greatly different internal scales by judges were the reason for the low consistency.
+In other words, the notion that judges were internally consistent in a way that can be normalized globally is not tractable.
+
+## Verifying Judgments with New Graders
+
+*RQ2: Are problem judges responsible for inconsistent reciprocal ratings?*
+
+*RQ3: Is subjectivity or disagreement of the grading task responsible for inconsistent reciprocal ratings?*
+
+Would the same low consistent been seen if new judges were asked?
+Getting a second opinion addresses two possibilities: expected error (good judges, biased task) and unexpected error (agreeable task, bad judges).
+
+To answer these two research questions, $156$ tasks were posted on Mechanical Turk.
+Asking paid workers *individually* provides an insight into MIREX judge quality, while asking *multiple* workers helps to see if it is simply a task that is not easily agreed upon, regardless of how well-intentioned a judge is.
+
+In parameterizing the task for this study, worker judges were presented with a query and a single candidate.
+The audio files were the same clips used in MIREX.
+
+Restrictions were not placed how fully the clips were listened to, and in fact the average task time was lower than the length of the clips.
+The task was carefully designed were also careful to mimic the question phrasing and level of guidance from the original task.
+As a result, Turk workers are potentially less fatigued [@lee_crowdsourcing_2010], but may also be less experienced.
+This was done both due to the conventions of Mechanical Turk and because our MIREX data was not rich enough to emulate the order or continuity of task sets.
+Thus, any priming effects from the series of songs would not translate here.
+
+### Results
+
+Asking individual paid amateur judges to provide judgments yielded an average $RMSE=15.53$, a comparable level of inconsistency.
+With regards to *RQ2*, the low consistency when asking a new group of judges for judgments suggests that the MIREX volunteers are not unreliable compared to other workers.
+
+In contrast, aggregating multiple worker judgments toward a normative opinion results in drastic improvements: aggregating two workers by mean judgment improved the RMSE to $9.72$ ($41.4\%$ improvement), while three judge judgments improved the RMSE to $7.45$
+($55.1\%$ improvement).
+This means that, as asked in *RQ3*, the task is too subjective to trust a single judge and has a high natural variance in judgment.
+
+  Approach                                         RMSE       
+  ------------------------------------------ ---------------- --
+  Baseline (AMS Graders)                          16.58       
+  Normalizing Graders                         16.15 (-0.03%)  
+  Second-opinion (Individual turk workers)    15.53 (-6.3%)   
+  Aggregating workers: 2 votes/judgment       9.72 (-41.4%)   
+  Aggregating workers: 3 votes/judgment       7.45 (-55.1%)   
+  Alternate design (individual judgments)     11.44 (-31.0%)  
+  Alternate design (2 votes/judgments)        7.55 (-54.5%)   
+  Alternate design (3 votes/judgments)        5.40 (-66.1%)   
+
+Table : Deviation (in RMSE) of similarity judgments from expectation.{#tbl:rmse-vals}
 
