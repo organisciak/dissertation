@@ -1,4 +1,4 @@
-pandoc_args = -f markdown --bibliography=refs.bib --smart
+pandoc_args = -f markdown --filter pandoc-tablenos --filter pandoc-fignos --bibliography=refs.bib --smart
 #name =thesis
 name=thesis-tufte
 data= logs/stats.csv
@@ -23,7 +23,6 @@ defense:
 		-o proposal-defense/talk.html \
 		--slide-level=2 \
 		-V theme=moon \
-		--filter pandoc-citeproc \
 		--mathjax \
 		$(pandoc_args)
 
@@ -31,7 +30,6 @@ defensepdf:
 	pandoc -t beamer \
 		-s proposal-defense/talk.md \
 		-o proposal-defense/talk.pdf \
-		--filter pandoc-citeproc \
 		--mathjax \
 		$(pandoc_args)
 
@@ -54,7 +52,7 @@ report:
 
 tex: refs
 	# Convert Chapters to LaTex
-	cat writing-files.txt | parallel pandoc  -t latex --biblatex $(pandoc_args) --chapters -o {.}.tex {}
+	cat writing-files.txt | parallel pandoc  -t latex $(pandoc_args) --biblatex --chapters -o {.}.tex {}
 	# Fix underscores in \cite, \autocite, and \textcite commands
 	# ls document/*_*.md | parallel "perl -i -p -e 's{cite{.*}}{$& =~ s/_/\\\_/gr}ge' {}"
 
