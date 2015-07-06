@@ -516,7 +516,7 @@ Specifically, user normalization, collection instrument design changes, and mult
 The primary contribution here is an better understanding of data issues that stem from crowdsourced music evaluation datasets, and methods to avoid data quality pitfalls.
 Particularly, our case study of music information retrieval judgments generalizes to a class of evaluation tasks that are subjective-biased.
 
-Music similarity is desired by music digital library users @lee_survey_2004, and other digital libraries deal with a comparable form of *normative* task where there is no absolutely correct ground truth but a desire to reach a consensus or
+Music similarity is desired by music digital library users [@lee_survey_2004], and other digital libraries deal with a comparable form of *normative* task where there is no absolutely correct ground truth but a desire to reach a consensus or
 a generally agreeable classification; e.g. item similarity ratings,
 information quality judgments, and information retrieval relevance
 judgments.
@@ -562,11 +562,13 @@ There is a concerning lack of agreement between judges in the set of reciprocal 
 Since our best prediction for the true similarity of two songs is the mean of both judgments, we can measure the deviation from the expected value as Root Mean Squared Error (RMSE).
 In this case, $RMSE=16.58$ against a prediction assuming symmetric similarity.
 
-RMSE is generally meaningful in comparison, but for a sense of the variance with an RMSE of 16.58, consider that it is in the same unit as the scale, which only has a max range of 101 points^[STDdev].
+RMSE is generally meaningful in comparison, but for a sense of the variance with an RMSE of 16.58, consider that it is in the same unit as the scale, which only has a max range of 101 points[^STDdev].
 Alternately, the FINE scale judgements are plotted in Figure {@fig:recip-fine}.[^TODO]
 The slope shows the expected relationship if similarity was an agreeable metric independent of "which song is listened to first" order effects – an assumption implicitly made in treating similarity as something that can be evaluated.
 
-^[STDdev]: It  may be helpful in approximating the severity of the problem to remember that RMSE aligns with sample standard deviation.
+![Fig Test](images/reciprocal-scores.png) {#fig:recip-fine}
+
+[^STDdev]: It  may be helpful in approximating the severity of the problem to remember that RMSE aligns with sample standard deviation.
 
 The noise presented here suggests a great deal of circumstance and randomness in evaluating music similarity algorithms for MIREX.
 
@@ -591,7 +593,7 @@ First, lets consider some possible explanations.
 
 **Order and priming effects**.
 Perhaps there is an order effect based on either which song a judge listens to first, or a priming effect caused by a judge listening consecutively to a set of song pairs with the same query.
-Research in other contexts has noted the possibility of asymmetrical effects [@tversky_features_1977,@polk_rating_2002; @hiatt_role_2013].
+Research in other contexts has noted the possibility of asymmetrical effects [@tversky_features_1977; @polk_rating_2002; @hiatt_role_2013].
 
 **Different interpretations of the scale**.
 Do different people treat the rating scale differently? This would be a user bias, but a predictable one.
@@ -627,7 +629,7 @@ This chapter turn to Mechanical Turk for additional judgments, an option shown a
 
 @urbano_crowdsourcing_2010 looked to paid crowdsourcing for lowering the difficulty of finding human labor for *ranked* similarity judgments.
 They use an approach similar to ordered lists, inferring an order through pairwise preference judgments, whereby judges choose the more similar option between two candidates.
-Additional research has also looked at *graded* similarity judgments in the context of the AMS task @lee_crowdsourcing_2010, finding that the MIREX style of evaluation does not suffer significant drops in quality with paid workers.
+Additional research has also looked at *graded* similarity judgments in the context of the AMS task [@lee_crowdsourcing_2010], finding that the MIREX style of evaluation does not suffer significant drops in quality with paid workers.
 
 ## Approach
 
@@ -731,7 +733,7 @@ Following from earlier discussion, we turn to the effect of a task’s design on
 New judgments are again collected on Mechanical Turk.
 In contrast to the previous evaluation’s fidelity to the original collection interface, here the task design is changed to more carefully guide graders.
 
-Previous literature notes that the similarity ratings can be biased because the perceived distance between points in a rating scale is not linear, and word choice can affect interpretation of the task [@katter_influence_1968, @eisenberg_measuring_1988].
+Previous literature notes that the similarity ratings can be biased because the perceived distance between points in a rating scale is not linear, and word choice can affect interpretation of the task [@katter_influence_1968; @eisenberg_measuring_1988].
 This motivated us to measure some changes to the rating scale: BROAD scores were no longer collected, and FINE scores gave textual descriptions for ranges of the 0-100 scale, serving as anchors.
 We also tested this interface with colloquial language to make the instructions more broadly accessible.[^TODO; I have space to explain more]
 
@@ -746,10 +748,10 @@ As seen in Table @tbl:rmse-vals, this means that the alternate design offered co
 The poor consistency in crowdsourced similarity judgments in MIREX results can be greatly attributed to difficulties inherent to the task of grading music.
 This set of experiments show that MIREX does not have a problem with poor or misguided judges.
 However, notable improvements to the evaluation data quality can be made by changes to the collection and treatment of judgments.
-For AMS and similarly semi-subjective tasks, there are two changes that can be implemented to greatly imprve the evaluation quality:
+For AMS and similarly semi-subjective tasks, there are two changes that can be implemented to greatly improve the evaluation quality:
 
 **Collecting multiple judgments.** Despite the added complexity or cost of collecting multiple judgments for each query-candidate pair, it is an important step toward collecting consistent results.
-While finding enough volunteer judges in the MIR community is a restricting factor, amateur paid crowds offer similar performance [@lee_crowdsourcing_2010,@urbano_crowdsourcing_2010] and may be one way to augment the volunteer judgments. 
+While finding enough volunteer judges in the MIR community is a restricting factor, amateur paid crowds offer similar performance [@lee_crowdsourcing_2010;@urbano_crowdsourcing_2010] and may be one way to augment the volunteer judgments. 
 
 **Providing a more specific codebook.** While it is important to acknowledge the subjectivity of similarity judging, providing structure for graders to anchor their interpretations into a score improves the reliability of their contributions.
 [^There was purportedly great discussion at the conception of the AMS task around the expected subjectivity, which may have motivated the loose instructions stating that "we expect to see variations accross evaluators... as this is a normal part of human subjectivity." However, I would argue, in light of the results here, that there is a confounding between natural, expected subjectivity of the task, and artificial variance stemming from the treatment of the task itself.]
@@ -763,8 +765,7 @@ However, when graders were provided a rating scale that gave them more guidance,
 Why did the former not improve consistency, while the latter did?
 One possibility is that, in addition to intra-grader differences in interpreting the FINE scale, graders were also internally less strict, something that the task design might have corrected.
 
-Conclusions
-===========
+## Conclusion
 
 Finding human graders for a time-consuming task is difficult.
 However, since music similarity tries to derive a consensus for a quality that people do not always agree on, it is imperative to collect multiple judgments for reliable evaluation.
