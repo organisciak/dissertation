@@ -45,18 +45,19 @@ Details of each part of this scope will follow -- crowdsourcing metadata, microt
 
 ### Research Questions
 
-Broad Research Question 1:
+Broad Research Question 1: What are the sources of error for microtasks
 
-Broad Research Question 2:
+Broad Research Question 2: 
 
 Chapter 4 takes a post-collection look at crowdsourcing error, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
 
 The chapter is largely analytic, hoping to understand what we can infer from crowd behaviors about the strength of their contributions and evaluating what strategies are promising for better paid crowdsourcing.
 By taking this approach, this chapter seeds some of the expected outcomes driving later chapters.
 
-RQ 1.1: Do worker contributions improve with experience in a predictable way?
-RQ 1.2: Do workers that spend more time on a task contribute better work?
-RQ 1.3: 
+ - RQ 1.1: Do worker contributions improve with experience in a predictable way?
+ - _RQ 1.2_: Does the length of time that a worker spends on a question reflect the quality of their rating?
+ - _RQ 1.3_: Does a worker's agreement or disagreement with other workers reflect their overall quality as a worker?
+ - _RQ 1.4_: If so, can disagreement be used for data improvements?
 
 <!--- TODO search for all references to chapters 4 and 5, to make sure that the order it correct -->
 
@@ -76,9 +77,13 @@ Finally, the design manipulations evaluated in Chapter 4 are evaluated in person
 <!- Reminder: update any changes here and in the actually chapter -->
 
 RQ 3.1: Is it feasible to apply paid crowdsourcing to subjective problems?
+
 RQ 3.2: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
+
 RQ 3.3: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
+
 RQ 3.4: How do different types of subjective tasks affect the effricacy of personalized crowdsourcing approaches?
+
 RQ 3.5: How do task design manipulations affect the quality of crowd contributions?
 
 - CHAPTER 4: Designing Objective/Normative Tasks for Paid Crowdsourcing (Effect of design manipulations on data)
