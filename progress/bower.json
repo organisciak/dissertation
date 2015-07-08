@@ -1,0 +1,27 @@
+{
+  "name": "dissertation-progress",
+  "version": "0.0.0",
+  "authors": [
+    "Peter Organisciak <organisciak@gmail.com>"
+  ],
+  "description": "Visualization of daily dissertation progress\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dwriting progress",
+  "main": "index.html",
+  "keywords": [
+    "visualization",
+    "writing",
+    "productivity"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.porganized.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.5.5",
+    "cal-heatmap": "~3.5.2"
+  }
+}
