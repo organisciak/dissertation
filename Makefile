@@ -52,10 +52,11 @@ report:
 
 tex: refs
 	# Convert Chapters to LaTex
-	cat writing-files.txt | parallel pandoc  -t latex $(pandoc_args) --biblatex --chapters -o {.}.tex {}
+	cat writing-files.txt | parallel pandoc  -t latex $(pandoc_args) --id-prefix={.} --biblatex --chapters -o {.}.tex {}
 	# Fix underscores in \cite, \autocite, and \textcite commands
 	# ls document/*_*.md | parallel "perl -i -p -e 's{cite{.*}}{$& =~ s/_/\\\_/gr}ge' {}"
 
+pdf: refs tex
 	# Compile to PDF and view
 	export TEXINPUTS=document//:
 	pdflatex --include-directory=document $(name)
