@@ -45,11 +45,13 @@ Details of each part of this scope will follow -- crowdsourcing metadata, microt
 
 ### Research Questions
 
+[^TODO: I should create a quick reference page that links to sections like this one. This will help the reader keep the path in mind.]
+
 Broad Research Question 1: What are the sources of error for microtasks
 
 Broad Research Question 2: 
 
-Chapter 4 takes a post-collection look at crowdsourcing error, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
+i\newthought{Chapter 4} takes a post-collection look at crowdsourcing error, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
 
 The chapter is largely analytic, hoping to understand what we can infer from crowd behaviors about the strength of their contributions and evaluating what strategies are promising for better paid crowdsourcing.
 By taking this approach, this chapter seeds some of the expected outcomes driving later chapters.
@@ -62,6 +64,13 @@ By taking this approach, this chapter seeds some of the expected outcomes drivin
 <!--- TODO search for all references to chapters 4 and 5, to make sure that the order it correct -->
 
 Chapter 5 
+
+Considering the data quality of crowdsourcing as an immutable set of contributions is an important avenue toward properly analyzing and controlling  crowd data, and also pays proper reverence toward a popular stream of crowdsourcing research.
+
+This is not the only frame for crowdsourcing contributions, however.
+Chapter 5 turns our attention toward the less-explored corollary of post-collection data modelling: the effect of the collection instrument on the resultant contributions, and 
+
+Chapter 5 is presented in two parts, both studies conducted for this dissertation, one published previously and one presenting work for the first time.
 
 MIREX AMS Study RQs
 RQ1: Are grader differences responsible for inter-grader inconsistency?
