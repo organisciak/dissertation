@@ -31,7 +31,7 @@ These are viewed in the space of subjective and objective^[objective] types of t
 
 ^[metadata]: An important albeit rarely formalized distinction in crowdsourcing contributions is whether the crowd _creates_ new intellectual works, or whether they _react_ to existing information objections. Generally, the uses of crowdsourcing of interest to information scientists, librarians, and information retrieval researchers are in the latter category.
 ^[microtask]: A microtask refers to the common practice of breaking tasks down to small practical units, which both simplifies the task distribution process in a Fordist style and accommodates the short interaction style that is common online.
-^[paidplatforms]: Paid crowdousrcing platforms are markets for on-demand online labour. They reduce much of the overhead seen in volunteer crowdsourcing related to attracting and motivating users, replacing intrinsic motivation with financial incentive. The most popular platform, and the one used to run experiments in this study, is Amazon's Mechanical Turk.
+^[paidplatforms]: Paid crowdsourcing platforms are markets for on-demand online labour. They reduce much of the overhead seen in volunteer crowdsourcing related to attracting and motivating users, replacing intrinsic motivation with financial incentive. The most popular platform, and the one used to run experiments in this study, is Amazon's Mechanical Turk.
 ^[objective]: Objective tasks assume the existence of a universal ground truth, while subjective tasks have truth relative to different individuals. A median category is considered in this study, that of _normative_ tasks: ones that do not have a factual 'truth' but have an expectation of an agreed-upon truth.
 
 It is important to stay aware of the broader space of crowdsourcing and how characteristics of paid microtasks generalize to it.
@@ -51,7 +51,7 @@ Broad Research Question 1: What are the sources of error for microtasks
 
 Broad Research Question 2: 
 
-i\newthought{Chapter 4} takes a post-collection look at crowdsourcing error, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
+i\newthought{Chapter 4 takes a post-collection look} at crowdsourcing error, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
 
 The chapter is largely analytic, hoping to understand what we can infer from crowd behaviors about the strength of their contributions and evaluating what strategies are promising for better paid crowdsourcing.
 By taking this approach, this chapter seeds some of the expected outcomes driving later chapters.
@@ -63,14 +63,16 @@ By taking this approach, this chapter seeds some of the expected outcomes drivin
 
 <!--- TODO search for all references to chapters 4 and 5, to make sure that the order it correct -->
 
-Chapter 5 
-
-Considering the data quality of crowdsourcing as an immutable set of contributions is an important avenue toward properly analyzing and controlling  crowd data, and also pays proper reverence toward a popular stream of crowdsourcing research.
+\newthought{Considering the data quality of crowdsourcing} as an immutable set of contributions is an important avenue toward properly analyzing and controlling  crowd data, and also pays proper reverence toward a popular stream of crowdsourcing research.
 
 This is not the only frame for crowdsourcing contributions, however.
-Chapter 5 turns our attention toward the less-explored corollary of post-collection data modelling: the effect of the collection instrument on the resultant contributions, and 
+Chapter 5 turns our attention toward the less-explored corollary of post-collection data modelling: the effect of the collection instrument on the resultant contributions, toward understanding and potentially optimizing the contribution collection process.
+This is about how you ask, and how it affects what you are told.
 
 Chapter 5 is presented in two parts, both studies conducted for this dissertation, one published previously and one presenting work for the first time.
+The first part selects two control tasks, and measures the effect of three different design manipulations on the makeup of the data -- consistency and quality, but also contribution patterns.
+These design manipulations are looked at again over a subjective context in Chapter 6.
+The second part bridges chapters 4 and 5 in a real world setting, applying post-collection corrections as well as collection-time task manipulations to the human judgments used in evaluating audio similarity for the Music Information Retrieval Exchange (MIREX).
 
 MIREX AMS Study RQs
 RQ1: Are grader differences responsible for inter-grader inconsistency?
@@ -78,22 +80,18 @@ RQ2: Are problem graders responsible for inter-grader inconsistency?
 RQ3: Is subjectivity or disagreement of the grading task responsible for inter-grader inconsistency?
 RQ4: Does the task design affect the quality of contributions
 
-Chapter 6 focuses on completing subjective tasks through paid crowdsourcing, again focusing on maximizing quality through a priori design and instrumentation choices.
+\newthought{Chapter 6 focuses on completing subjective tasks} through paid crowdsourcing, again focusing on maximizing quality through a priori design and instrumentation choices.
 Subjective tasks are rarely done in paid contexts, so _personalized crowdsourcing_ is introduced as a way to formalize and argue for the approach.
 Two protocols for personalized crowdsourcing are then presented, referred to as _taste-matching_ and _taste-grokking_, and compared.
 Finally, the design manipulations evaluated in Chapter 4 are evaluated in personalized crowdsourcing.
 
-<!- Reminder: update any changes here and in the actually chapter -->
+<!- Reminder: update any changes here and in the actual chapter -->
 
-RQ 3.1: Is it feasible to apply paid crowdsourcing to subjective problems?
-
-RQ 3.2: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
-
-RQ 3.3: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
-
-RQ 3.4: How do different types of subjective tasks affect the effricacy of personalized crowdsourcing approaches?
-
-RQ 3.5: How do task design manipulations affect the quality of crowd contributions?
+ - RQ 3.1: Is it feasible to apply paid crowdsourcing to subjective problems?
+ - RQ 3.2: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
+ - RQ 3.3: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
+ - RQ 3.4: How do different types of subjective tasks affect the efficacy of personalized crowdsourcing approaches?
+ - RQ 3.5: How do task design manipulations affect the quality of crowd contributions?
 
 - CHAPTER 4: Designing Objective/Normative Tasks for Paid Crowdsourcing (Effect of design manipulations on data)
   - Literature review (introduce past in a way that my new research naturally follows. It should be clear 'why')
