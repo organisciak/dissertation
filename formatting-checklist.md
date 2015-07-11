@@ -199,26 +199,29 @@ Minimum requirements for main text
 
 ### Margins
 
-- [ ]  For every page in the thesis, margins must be a minimum of (but may
+- [x]  For every page in the thesis, margins must be a minimum of (but may
     be greater than) 1 inch on all sides.
 - [ ]  Theses with any material (other than page numbers) extending into
     the 1-inch margin on one or more sides will not be accepted
     for deposit.
 
+ - [ ] __PO NOTE: Top header (chapter heading+page number) is outside the margin...___ 
+
 ### Fonts
 
-- [ ]  Font size for body text may be from 10- [ ]to 12-point and should
-    remain consistent throughout the front matter and main text and must
+- [x]  Font size for body text may be from 10- to 12-point and ...
+- [ ] ... should remain consistent throughout the front matter and main text and must
     be easily legible.
-- [ ]  Font size and type may differ for footnotes, figure captions, table
+- [x]  Font size and type may differ for footnotes, figure captions, table
     data, references, and material in an appendix and may be as small
-    as 7-point.
-- [ ]  Script and ornamental fonts will not be accepted.
+    as 7-point. _PO: minimum in my stle file is 8-point, /small is 9-point)_
+- [x]  Script and ornamental fonts will not be accepted. _(PO: Never!)_
 
 ### Line Spacing
 
-- [ ]  Spacing of the body text may be from 1.5 lines to Double and must
+- [x]  Spacing of the body text may be from 1.5 lines to Double and must
     remain consistent throughout the main text.
+    - _PO Note: It's unclear what "1.5 lines" translates to, so I used the setspace package with /onehalfspacing _
 - [ ]  Single-spacing within the main text is allowed for titles, headings,
     footnotes, endnotes, references, lengthy quotations, bulleted or
     numbered lists, figure or table captions, or material in
