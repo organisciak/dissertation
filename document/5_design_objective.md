@@ -243,13 +243,29 @@ Finally, the time-limited interface contrasts the introspective approach of the 
 
 ### Basic interface
 
-The basic interface resembles an archetypal task, following conventions seen in Mechanical Turk usage.
+The basic interface resembles an archetypal task, following conventions seen in Mechanical Turk usage.[^TODO reference]
 It shows workers a task with a goal, description, and ten items to perform actions on.
+Prior to submission, there is also an optional feedback form.
+
+The _goal_ is the summative statement for the task requires, such as 'Tag images with descriptive words' or 'judge the relevance of documents in a search'.
+
+The _instructions_ describe, clearly but succinctly, the parameters of the task and any necessary details about completing the task.
+This includes guidelines: what a good contributions is, what a poor contributions is, what possible edge cases to look out for.
+The reason that instructions are intended to be succinct is again by convention.
+Amazon's advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011]. <!--\_-->
+
+Following the advice laid out by the unofficial Guidelines for Academic Requesters[^Workers], a time estimate was also provided.[]
+The time estimate was determined based on testing and updated following an initial batch of tasks.
+
+[^Workers]: These unofficial guidelines, on the Dynamo Wiki, were written collaboratively by academic researchers and Mechanical Turk workers.
+
+The _task set_ of items to perform work on, again followed best practices for the basic, archetypal interface.
+The tasks were each small and did not require context shifting [@_re
+
+]
 
 i[^TODO explain current interface]The description will explain what a "topic" is, and make clear the difference between a topic and simply a mention.
 An example will be included with the description, but as a pop up window behind a "See Example" link that needs to be clicked.
-This is done to conform to the convention that instructions should not be too long, in order not to push the actual action items 'below the fold'.
-Amazon's own advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011]. <!--\_-->
 
 <!--TODO2
 
