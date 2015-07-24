@@ -252,15 +252,15 @@ The _goal_ is the summative statement for the task requires, such as 'Tag images
 The _instructions_ describe, clearly but succinctly, the parameters of the task and any necessary details about completing the task.
 This includes guidelines: what a good contributions is, what a poor contributions is, what possible edge cases to look out for.
 The reason that instructions are intended to be succinct is again by convention.
-Amazon's advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011]. <!--\_-->
+Amazon's advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011].
 
-Following the advice laid out by the unofficial Guidelines for Academic Requesters[^Workers], a time estimate was also provided.[]
+Following the advice laid out by the unofficial Guidelines for Academic Requesters [@_guidelines_2014] [^Workers], a time estimate for task completion was also provided.
 The time estimate was determined based on testing and updated following an initial batch of tasks.
 
 [^Workers]: These unofficial guidelines, on the Dynamo Wiki, were written collaboratively by academic researchers and Mechanical Turk workers.
 
 The _task set_ of items to perform work on, again followed best practices for the basic, archetypal interface.
-The tasks were each small and did not require context shifting [@_re
+The tasks were each small and did not require context shifting [@_requ
 
 ]
 
