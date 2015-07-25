@@ -253,19 +253,32 @@ The _instructions_ describe, clearly but succinctly, the parameters of the task 
 This includes guidelines: what a good contributions is, what a poor contributions is, what possible edge cases to look out for.
 The reason that instructions are intended to be succinct is again by convention.
 Amazon's advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011].
+In addition to conciseness, the instructions for this study's basic interface strove to follow other recommendations in a conservative and uncontroversial manner: specificity, examples, and clarity about poor work [@_requester_2011, @_guidelines_2014].
+
+Still, it is difficult to balance the various needs of a good instruction set.
+With concern to succinctness and ease of readability, key information was italicized, examples were added as mouse-over popups, and secondary information (e.g. 'Tips') was hidden behind a tab.
+
+[^TaggingInterface]: TODO: Add figure of instructions from basic condition of tagging task. The substance of the instructions is discussed in the Tag Task section.
 
 Following the advice laid out by the unofficial Guidelines for Academic Requesters [@_guidelines_2014] [^Workers], a time estimate for task completion was also provided.
 The time estimate was determined based on testing and updated following an initial batch of tasks.
 
+It is recommended to be clear about what work is rejected [@_requester_2011, @_guidelines_2014].
+Given that an underlying premise of this chapter is investigating whether the work requester is sometimes to blame for poor work, it would be a troublesome foregone conclusion to actually reject work, so for ethical reasons no work was rejected.
+Instead, even for the basic interface, improper work that would have been rejected in other settings was validated by the system when possible.
+For example, workers were asked for a minimum of two tags in the tagging task; as shown in Figure TODO, they could not submit before entering two tags.
+To account for instances where a second tag was too difficult to create, they could add a placeholder 'TOOHARD' tag, which the interface alerted a worker too if their cursor was inactive for a few seconds [FIGURE TODO].
+
+[^Validation1]: TODO - Add figure of validation
+
+[^Validation2]: TODO - Add info popup
+
 [^Workers]: These unofficial guidelines, on the Dynamo Wiki, were written collaboratively by academic researchers and Mechanical Turk workers.
 
 The _task set_ of items to perform work on, again followed best practices for the basic, archetypal interface.
-The tasks were each small and did not require context shifting [@_requ
+The tasks were each small and did not require context shifting, as Amazon recommends [@_requester_2011].
 
-]
 
-i[^TODO explain current interface]The description will explain what a "topic" is, and make clear the difference between a topic and simply a mention.
-An example will be included with the description, but as a pop up window behind a "See Example" link that needs to be clicked.
 
 <!--TODO2
 
