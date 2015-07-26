@@ -516,6 +516,23 @@ The quality of these tags was determined through a Mechanical Turk task, where w
 <!--TODO this hasn't been done yet... aspirational text -->
 <!-- TODO details -->
 
+<!--##Fast Interface-->
+
+\newthought{For the timed interface}, ...
+
+<!--#### Fast Interface design-->
+<!--#### Fast Interface Payment-->
+The payment structure was developed to approximate the payment of the basic interface if completion behaviors were equal.
+That is, since the first batch of basic tagging contributions averaged 23 seconds each for 10 tasks at $\$0.50$, the payment for the timed interface was intended to match that reimbursement rate at 4 tasks
+<!-- TODO: trailed off while writing... go back in the morning and finish-->
+
+
+### Results
+
+\newthought{In completion time}, the most drastic difference was in the fast condition.
+
+\newthought{In the fast interface}, the payment struc
+
 
 ## Evaluation
 
