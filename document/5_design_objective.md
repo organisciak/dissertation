@@ -52,15 +52,14 @@ This chapter investigates how the design of crowdsourcing tasks for collecting u
 
 In a controlled set up, crowdsourcing in information retrieval usually follows a typical design: a task, description, and a set of one or more documents that are reacted to.
 This type of design is common for creating custom evaluation datasets through relevance judgments [@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [e.g. @chen_improving_2013].
-<!-- Removed: Some exceptions to this approach have been attempted with success[].-->
 
-Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @organisciak_evaluating_2012; @howe_crowdsourcing_2008; @ @organisciak_incidental_2013].<!--TODO better citations, remove citations to work being reported here -->
+Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @howe_crowdsourcing_2008; @mason_financial_2010; @mitra_comparing_2015;].<!--TODO better citations, remove citations to work being reported here -->
 The manner to improve on a basic task/description/items interface design is not immediately clear, though: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO2 cite -->.
 
 \newthought{If we consider crowdsourcing data quality} as something that can be addressed not only through post-collection modeling but through the choices made in designing the collection task, the latter approach is surely the lesser studied problem.
   However, in cost-time considerations, design promises more efficient improvements.
 A design that is more interesting to workers or less prone to error may result in better contributions at no extra cost, while designs that offer bonuses or training include short term costs.
-When studying intrinsic motivation in Mechanical Turk tasks, [<!--Mason and Watts-->] found that a small change in instrumentation -- changing remunermation to less tightly govern the task -- resulted in more work contributed with happier contributors.
+When studying intrinsic motivation in Mechanical Turk tasks, @mason_financial_2010 found that a small change in instrumentation -- changing remuneration to less tightly govern the task -- resulted in more work contributed with happier contributors.
 <!-- TODO is there work about whether it is better to go cheaper with a bonus, or higher with no bonus?
 -->
 
@@ -227,7 +226,7 @@ With regards to designs that mislead workers about their performance, there are 
 
 ## Approach
 
-While parameterization studies have compared how shifts in description or payment structure affect contribution, very few studies looking at more drastic design manipulations have been performed on a controlled task [^The recent paper by @mitra_comparing_2015 a notable exception].
+While parameterization studies have compared how shifts in description [e.g. @grady_crowdsourcing_2010] or payment structure [e.g. @mason_financial_2010] affect contribution, very few studies looking at more drastic design manipulations have been performed on a controlled task [^The recent paper by @mitra_comparing_2015 a notable exception].[^TODO add more citations above]
 
 Still, some unresolved questions in the area are necessary to understand in the pursuit of quality crowd contributions.
 For example, it is still unclear whether simple encoding tasks benefit more from workers' gut instincts or careful consideration.
@@ -244,20 +243,18 @@ Finally, the time-limited interface contrasts the introspective approach of the 
 ### Basic interface
 
 The basic interface resembles an archetypal task, following conventions seen in Mechanical Turk usage.
-It shows workers a task with a goal, description, and ten items to perform actions on.
+It shows workers a task with a goal, description, and up to ten items to perform actions on.
 
-i[^TODO explain current interface]The description will explain what a "topic" is, and make clear the difference between a topic and simply a mention.
-An example will be included with the description, but as a pop up window behind a "See Example" link that needs to be clicked.
+The description explain what a good contribution is: that is, delineating between good and bad tags in the tagging task, or explaining what a relevant or non-relevant document is for the relevance judgment task.
+Examples are provided, but behind pop-up windows.
 This is done to conform to the convention that instructions should not be too long, in order not to push the actual action items 'below the fold'.
 Amazon's own advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011]. <!--\_-->
 
 <!--TODO2
 
  * Example of item and options
- * Mockup of interface
 -->
 <!--TODOAFTER
-
  * Write description
 -->
 
@@ -307,7 +304,9 @@ If you're doing voting, then a score is possible based on agreement with other w
 
 ### Time-Limited Interface
 
-As hinted at during my past work, not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
+
+Not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
+This was the case in an incidental finding reported in Chapter 6, where asking workers performing subjective opinion-based tasks to explain their judgement seemed to change the judgment habits themselves.
 
 In contrast to the training and feedback interfaces, which will serve to slow down workers and make them more focused on their contributions, the final data collection interface will pursue the opposite approach.
 The time-limited interface encourages quicker interactions by giving users a timer to complete all tasks.
