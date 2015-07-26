@@ -1,0 +1,14 @@
+{
+	"params": {
+		"hit_id": "55a48ddcc8f17da574db50b7"
+	},
+	"url": "https://crowdycrowdy.com/#/tag/fast",
+	"title": "Tag online images [Short task, with bonuses]",
+	"description": "In 90 seconds, tag online images with descriptive words or phrases. Bonuses increase per task.",
+	"keywords": ["tagging", "images", "image tagging"],
+	"frame_height": 650,
+	"amount": 0.12,
+	"annotation": "dissertation/data/turk/pin-tagging-fast-fast1.json",
+	"max_assignments": 3,
+	"num_hits": 28
+}
