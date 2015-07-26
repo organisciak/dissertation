@@ -252,7 +252,7 @@ The _description_ describes, clearly but succinctly, the parameters of the task 
 Part of doing so is explaining what a good contribution is: that is, delineating between good and bad tags in the tagging task, or explaining what a relevant or non-relevant document is for the relevance judgment task.
 The reason that instructions are intended to be succinct is again by convention.
 Amazon's advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011].
-In addition to conciseness, the instructions for this study's basic interface strive to follow other recommendations in a conservative and uncontroversial manner: specificity, examples, and clarity about poor work [@_requester_2011, @_guidelines_2014].
+In addition to conciseness, the instructions for this study's basic interface strive to follow other recommendations in a conservative and uncontroversial manner: specificity, examples, and clarity about poor work [@_requester_2011; @_guidelines_2014].
 
 It is difficult to balance the various needs of a good instruction set.
 With concern to succinctness and ease of readability, key information was italicized, examples were added as mouse-over popups, and secondary information (e.g. 'Tips') was hidden behind a tab.
@@ -262,16 +262,18 @@ Collapsible instructions have be recommended previous by Chen (TODO cite Edwin C
 
 [^TaggingInterface]: TODO: Add figure of instructions from basic condition of tagging task. The substance of the instructions is discussed in the Tag Task section.
 
-[^Collapse]: This option was tweaking after the first batch of data was already collected. It was considered a convenience feature and does not appear to have notably changed t <!--TODO verify. Check the time difference for parts of the task that weren't actively being measured, and eyeball the difference in feedback-->
+[^Collapse]: This option was tweaked after the first batch of data was already collected. It was considered a convenience feature that had little little effect on how a worker considers and completes a task, and does not appear to have notably changed the collected data. <!--TODO verify. Check the time difference for parts of the task that weren't actively being measured, and eyeball the difference in feedback-->
 
 Following the advice laid out by the unofficial Guidelines for Academic Requesters [@_guidelines_2014] [^Workers], a time estimate for task completion was also provided.
 The time estimate was determined based on testing and updated following an initial batch of tasks.
 
-It is recommended to be clear about what work is rejected [@_requester_2011, @_guidelines_2014].
+It is recommended to be clear about what work is rejected [@_requester_2011; @_guidelines_2014].
 Given that an underlying premise of this chapter is investigating whether the work requester is sometimes to blame for poor work, it would be a troublesome foregone conclusion to actually reject work, so for ethical reasons no work was rejected.
 Instead, even for the basic interface, improper work that would have been rejected in other settings was validated by the system when possible.
 For example, workers were asked for a minimum of two tags in the tagging task; as shown in Figure TODO, they could not submit before entering two tags.
-To account for instances where a second tag was too difficult to create, workers could also add a placeholder 'TOOHARD' tag, which the interface alerted a worker to if their cursor was inactive for a few seconds [FIGURE TODO].
+To account for instances where a second tag was too difficult to create, workers could also add a placeholder 'TOOHARD' tag, which the interface alerted a worker to if their cursor was inactive for a few seconds (Figure @fig:tippopup).
+
+![An example of the suggestion message in the basic condition of the tagging task, which appears after the input field is active for a small period of time.](images/design-basic-tippopup.png) {#fig:tippopup}
 
 [^Validation1]: TODO - Add figure of validation
 

@@ -67,9 +67,6 @@ Regardless of implementation, the _pertinent and valuable contribution_ is under
 The chapter is largely analytical, hoping to understand what we can infer from crowd behaviors about the strength of their contributions and evaluating what strategies are promising for better paid crowdsourcing.
 By taking this approach, this chapter seeds some of the expected outcomes driving later chapters.
 
-
-\em{Maximizing data quality in using paid crowds for objective and subjective encoding tasks} }
-
 [^TODO: I should create a quick reference page that links to sections like this one. This will help the reader keep the path in mind.]
 
  - RQ 1.1: Do worker contributions improve with experience in a predictable way?
