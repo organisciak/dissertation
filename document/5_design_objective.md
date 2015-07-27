@@ -52,15 +52,14 @@ This chapter investigates how the design of crowdsourcing tasks for collecting u
 
 In a controlled set up, crowdsourcing in information retrieval usually follows a typical design: a task, description, and a set of one or more documents that are reacted to.
 This type of design is common for creating custom evaluation datasets through relevance judgments [@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [e.g. @chen_improving_2013].
-<!-- Removed: Some exceptions to this approach have been attempted with success[].-->
 
-Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @organisciak_evaluating_2012; @howe_crowdsourcing_2008; @ @organisciak_incidental_2013].<!--TODO better citations, remove citations to work being reported here -->
+Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions[@alonso_crowdsourcing_2008; @howe_crowdsourcing_2008; @mason_financial_2010; @mitra_comparing_2015;].<!--TODO better citations, remove citations to work being reported here -->
 The manner to improve on a basic task/description/items interface design is not immediately clear, though: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers<!-- TODO2 cite -->.
 
 \newthought{If we consider crowdsourcing data quality} as something that can be addressed not only through post-collection modeling but through the choices made in designing the collection task, the latter approach is surely the lesser studied problem.
   However, in cost-time considerations, design promises more efficient improvements.
 A design that is more interesting to workers or less prone to error may result in better contributions at no extra cost, while designs that offer bonuses or training include short term costs.
-When studying intrinsic motivation in Mechanical Turk tasks, [<!--Mason and Watts-->] found that a small change in instrumentation -- changing remunermation to less tightly govern the task -- resulted in more work contributed with happier contributors.
+When studying intrinsic motivation in Mechanical Turk tasks, @mason_financial_2010 found that a small change in instrumentation -- changing remuneration to less tightly govern the task -- resulted in more work contributed with happier contributors.
 <!-- TODO is there work about whether it is better to go cheaper with a bonus, or higher with no bonus?
 -->
 
@@ -227,7 +226,7 @@ With regards to designs that mislead workers about their performance, there are 
 
 ## Approach
 
-While parameterization studies have compared how shifts in description or payment structure affect contribution, very few studies looking at more drastic design manipulations have been performed on a controlled task [^The recent paper by @mitra_comparing_2015 a notable exception].
+While parameterization studies have compared how shifts in description [e.g. @grady_crowdsourcing_2010] or payment structure [e.g. @mason_financial_2010] affect contribution, very few studies looking at more drastic design manipulations have been performed on a controlled task [^The recent paper by @mitra_comparing_2015 a notable exception].[^TODO add more citations above]
 
 Still, some unresolved questions in the area are necessary to understand in the pursuit of quality crowd contributions.
 For example, it is still unclear whether simple encoding tasks benefit more from workers' gut instincts or careful consideration.
@@ -243,17 +242,17 @@ Finally, the time-limited interface contrasts the introspective approach of the 
 
 ### Basic interface
 
-The basic interface resembles an archetypal task, following conventions seen in Mechanical Turk usage.[^TODO reference]
+The basic interface resembles an archetypal task, following conventions seen in Mechanical Turk usage.
 It shows workers a task with a goal, description, and ten items to perform actions on.
 Prior to submission, there is also an optional feedback form.
 
 The _goal_ is the summarized statement for the task requirement, such as 'Tag images with descriptive words' or 'judge the relevance of documents in a search'.
 
-The _instructions_ describe, clearly but succinctly, the parameters of the task and any necessary details about completing the task.
-This includes guidelines: what a good contributions is, what a poor contributions is, what possible edge cases to look out for.
+The _description_ describes, clearly but succinctly, the parameters of the task and any necessary details about completing the task.
+Part of doing so is explaining what a good contribution is: that is, delineating between good and bad tags in the tagging task, or explaining what a relevant or non-relevant document is for the relevance judgment task.
 The reason that instructions are intended to be succinct is again by convention.
 Amazon's advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011].
-In addition to conciseness, the instructions for this study's basic interface strive to follow other recommendations in a conservative and uncontroversial manner: specificity, examples, and clarity about poor work [@_requester_2011, @_guidelines_2014].
+In addition to conciseness, the instructions for this study's basic interface strive to follow other recommendations in a conservative and uncontroversial manner: specificity, examples, and clarity about poor work [@_requester_2011; @_guidelines_2014].
 
 It is difficult to balance the various needs of a good instruction set.
 With concern to succinctness and ease of readability, key information was italicized, examples were added as mouse-over popups, and secondary information (e.g. 'Tips') was hidden behind a tab.
@@ -263,16 +262,18 @@ Collapsible instructions have be recommended previous by Chen (TODO cite Edwin C
 
 [^TaggingInterface]: TODO: Add figure of instructions from basic condition of tagging task. The substance of the instructions is discussed in the Tag Task section.
 
-[^Collapse]: This option was tweaking after the first batch of data was already collected. It was considered a convenience feature and does not appear to have notably changed t <!--TODO verify. Check the time difference for parts of the task that weren't actively being measured, and eyeball the difference in feedback-->
+[^Collapse]: This option was tweaked after the first batch of data was already collected. It was considered a convenience feature that had little little effect on how a worker considers and completes a task, and does not appear to have notably changed the collected data. <!--TODO verify. Check the time difference for parts of the task that weren't actively being measured, and eyeball the difference in feedback-->
 
 Following the advice laid out by the unofficial Guidelines for Academic Requesters [@_guidelines_2014] [^Workers], a time estimate for task completion was also provided.
 The time estimate was determined based on testing and updated following an initial batch of tasks.
 
-It is recommended to be clear about what work is rejected [@_requester_2011, @_guidelines_2014].
+It is recommended to be clear about what work is rejected [@_requester_2011; @_guidelines_2014].
 Given that an underlying premise of this chapter is investigating whether the work requester is sometimes to blame for poor work, it would be a troublesome foregone conclusion to actually reject work, so for ethical reasons no work was rejected.
 Instead, even for the basic interface, improper work that would have been rejected in other settings was validated by the system when possible.
 For example, workers were asked for a minimum of two tags in the tagging task; as shown in Figure TODO, they could not submit before entering two tags.
-To account for instances where a second tag was too difficult to create, workers could also add a placeholder 'TOOHARD' tag, which the interface alerted a worker to if their cursor was inactive for a few seconds [FIGURE TODO].
+To account for instances where a second tag was too difficult to create, workers could also add a placeholder 'TOOHARD' tag, which the interface alerted a worker to if their cursor was inactive for a few seconds (Figure @fig:tippopup).
+
+![An example of the suggestion message in the basic condition of the tagging task, which appears after the input field is active for a small period of time.](images/design-basic-tippopup.png) {#fig:tippopup}
 
 [^Validation1]: TODO - Add figure of validation
 
@@ -335,7 +336,9 @@ If you're doing voting, then a score is possible based on agreement with other w
 
 ### Time-Limited Interface
 
-As hinted at during my past work, not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
+
+Not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
+This was the case in an incidental finding reported in Chapter 6, where asking workers performing subjective opinion-based tasks to explain their judgement seemed to change the judgment habits themselves.
 
 In contrast to the training and feedback interfaces, which will serve to slow down workers and make them more focused on their contributions, the final data collection interface will pursue the opposite approach.
 The time-limited interface encourages quicker interactions by giving users a timer to complete all tasks.
