@@ -226,7 +226,7 @@ With regards to designs that mislead workers about their performance, there are 
 
 ## Approach
 
-While parameterization studies have compared how shifts in description [e.g. @grady_crowdsourcing_2010] or payment structure [e.g. @mason_financial_2010] affect contribution, very few studies looking at more drastic design manipulations have been performed on a controlled task [^The recent paper by @mitra_comparing_2015 a notable exception].[^TODO add more citations above]
+While parameterization studies have compared how shifts in description [e.g. @grady_crowdsourcing_2010] or payment structure [e.g. @mason_financial_2010] affect contribution, very few studies looking at more drastic design manipulations have been performed on a controlled task ^[The recent paper by @mitra_comparing_2015 a notable exception].^[TODO add more citations above]
 
 Still, some unresolved questions in the area are necessary to understand in the pursuit of quality crowd contributions.
 For example, it is still unclear whether simple encoding tasks benefit more from workers' gut instincts or careful consideration.
@@ -240,15 +240,16 @@ The training interface takes more care to slow down the task and walk new worker
 The feedback interface tries to reflect performance back to workers, to check their understanding of the codebook.
 Finally, the time-limited interface contrasts the introspective approach of the other interface by encouraging quicker contributions.
 
-### Basic interface
+### Basic interface (Baseline)
 
 The basic interface resembles an archetypal task, following conventions seen in Mechanical Turk usage.
 It shows workers a task with a goal, description, and ten items to perform actions on.
 Prior to submission, there is also an optional feedback form.
+Though it is a baseline, it is not a hobbled baseline, designed around recommended practices.
 
 The _goal_ is the summarized statement for the task requirement, such as 'Tag images with descriptive words' or 'judge the relevance of documents in a search'.
 
-The _description_ describes, clearly but succinctly, the parameters of the task and any necessary details about completing the task.
+The _instructions_ describe, clearly but succinctly, the parameters of the task and any necessary details about completing the task.
 Part of doing so is explaining what a good contribution is: that is, delineating between good and bad tags in the tagging task, or explaining what a relevant or non-relevant document is for the relevance judgment task.
 The reason that instructions are intended to be succinct is again by convention.
 Amazon's advice for designing good tasks states that the task should not require scrolling to start [@_requester_2011].
@@ -257,25 +258,31 @@ In addition to conciseness, the instructions for this study's basic interface st
 It is difficult to balance the various needs of a good instruction set.
 With concern to succinctness and ease of readability, key information was italicized, examples were added as mouse-over popups, and secondary information (e.g. 'Tips') was hidden behind a tab.
 Another tab held a reference copy of the IRB disclosure (which, for this condition and all others, was shown fully when a worker was previewing the task before acceptance).
-Finally, an empty 'tab' to collapse[^Collapse] the instructions completely was added. This is not a common feature of archetypal tasks, but given the difficulty of scrolling in the embedded window on Mechanical Turk, was deemed a humane addition [^TODO add screenshot of interface on turk].
-Collapsible instructions have be recommended previous by Chen (TODO cite Edwin Chen post).
+Finally, an empty 'tab' to collapse[^Collapse] the instructions completely was added. This is not a common feature of archetypal tasks, but given the difficulty of scrolling in the embedded window on Mechanical Turk, was deemed a humane addition.
+Figure {@fig:basic-inturk} shows the limited task space when it is embedded within the Mechanical Turk interface.[^TagDifficulty]
+Collapsible instructions have been recommended previously by Chen (TODO cite Edwin Chen post) and by the Twitter Turk platform which Chen work on (TODO cite Clockwork Raven).
+
+![Screenshot of task within the Mechanical Turk interface.](images/design-basic-inturk.png) {#fig:basic-inturk}
+
+[^TaggingInterface]: Incidentally, Figure {@fig:basic-inturk} also shows some of the more challenges images to tag. How would you tag them? 
 
 [^TaggingInterface]: TODO: Add figure of instructions from basic condition of tagging task. The substance of the instructions is discussed in the Tag Task section.
 
 [^Collapse]: This option was tweaked after the first batch of data was already collected. It was considered a convenience feature that had little little effect on how a worker considers and completes a task, and does not appear to have notably changed the collected data. <!--TODO verify. Check the time difference for parts of the task that weren't actively being measured, and eyeball the difference in feedback-->
 
-Following the advice laid out by the unofficial Guidelines for Academic Requesters [@_guidelines_2014] [^Workers], a time estimate for task completion was also provided.
+Following the advice laid out by the unofficial Guidelines for Academic Requesters[@_guidelines_2014][^Workers], a time estimate for task completion was also provided.
 The time estimate was determined based on testing and updated following an initial batch of tasks.
 
 It is recommended to be clear about what work is rejected [@_requester_2011; @_guidelines_2014].
 Given that an underlying premise of this chapter is investigating whether the work requester is sometimes to blame for poor work, it would be a troublesome foregone conclusion to actually reject work, so for ethical reasons no work was rejected.
 Instead, even for the basic interface, improper work that would have been rejected in other settings was validated by the system when possible.
-For example, workers were asked for a minimum of two tags in the tagging task; as shown in Figure TODO, they could not submit before entering two tags.
+For example, workers were asked for a minimum of two tags in the tagging task; as shown in Figure {@fig:basic-validation}, they could not submit before entering two tags.
 To account for instances where a second tag was too difficult to create, workers could also add a placeholder 'TOOHARD' tag, which the interface alerted a worker to if their cursor was inactive for a few seconds (Figure @fig:tippopup).
 
 ![An example of the suggestion message in the basic condition of the tagging task, which appears after the input field is active for a small period of time.](images/design-basic-tippopup.png) {#fig:tippopup}
 
 [^Validation1]: TODO - Add figure of validation
+![Screenshot of contribution validation, which informas contributors of issues before submission](images/design-basic-validation.png) {#fig:basic-validation}
 
 [^Validation2]: TODO - Add info popup
 
@@ -288,7 +295,7 @@ Finally, the basic interface included an open-ended feedback form at the end.
 While this is far from a standard convention, many have recommended it as a standard element in task design [<!-- TODO cite Chen, cite dynamo, cite alonso? -->].
 The ability to respond easily provides valuable information on worker satisfaction and task problems.[^feedback]
 
-[^feedback]: Based on my own experiences, I have treated feedback forms as a necessity for the past few year. Interestingly, as noted early, when @alonso_design_2011 tried to mandate the feedback form responses, they found that their quality fell.
+[^feedback]: Based on my own experiences, I have treated feedback forms as a necessity for the past few years. Interestingly, as noted early, when @alonso_design_2011 tried to mandate the feedback form responses, they found that their quality fell.
 
 ### Training interface
 
