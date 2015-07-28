@@ -273,7 +273,7 @@ Collapsible instructions have been recommended previously by Chen (TODO cite Edw
 Following the advice laid out by the unofficial Guidelines for Academic Requesters[@_guidelines_2014][^Workers], a time estimate for task completion was also provided.
 The time estimate was determined based on testing and updated following an initial batch of tasks.
 
-It is recommended to be clear about what work is rejected [@_requester_2011; @_guidelines_2014].
+It is recommended to be clear about what work is rejected [@_requester_2011; @_guidelines_2014].<!--_-->
 Given that an underlying premise of this chapter is investigating whether the work requester is sometimes to blame for poor work, it would be a troublesome foregone conclusion to actually reject work, so for ethical reasons no work was rejected.
 Instead, even for the basic interface, improper work that would have been rejected in other settings was validated by the system when possible.
 For example, workers were asked for a minimum of two tags in the tagging task; as shown in Figure {@fig:basic-validation}, they could not submit before entering two tags.
@@ -347,13 +347,15 @@ If you're doing voting, then a score is possible based on agreement with other w
 Not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
 This was the case in an incidental finding reported in Chapter 6, where asking workers performing subjective opinion-based tasks to explain their judgement seemed to change the judgment habits themselves.
 
-In contrast to the training and feedback interfaces, which will serve to slow down workers and make them more focused on their contributions, the final data collection interface will pursue the opposite approach.
+In contrast to the training and feedback interfaces, which served, in a way, to slow down workers and make them more focused on their contributions, the final data collection interface pursues the opposite approach.
 The time-limited interface encourages quicker interactions by giving users a timer to complete all tasks.
 
+The goal and instructions do not differ greatly from that of the basic interface, with the exception of texts saying 
+
 It is important not to distress the worker when trying to push them into a visceral form of task completion, as this might have the opposite effect.
-Instead, this design should encourage flow, where a user moves seamlessly through the tasks without over-thinking their answers.
-To avoid the potentially distress of thinking about what is to come, this interface will not show a list of tasks to complete (e.g. "complete these ten tasks in a minute").
-Instead, tasks will be shown one at a time (e.g."See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers.
+Instead, this design encourages _flow_ ^[TODO citation], where a user moves seamlessly through the tasks without over-thinking their answers.
+To avoid the potential distress of thinking about what is to come, this interface does not show a list of tasks to complete (e.g. "complete these ten tasks in a minute").
+Instead, tasks are shown one at a time (e.g."See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers.
 
 <!--
 TODO2
