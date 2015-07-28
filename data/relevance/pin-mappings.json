@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "doc": {
+      "properties": {
+	"board": {
+	  "type": "string"
+	},
+        "title": {
+          "type":       "string",
+          "similarity": "BM25" 
+        },
+        "description": {
+          "type":       "string",
+          "similarity": "BM25" 
+        },
+	"pin_join": {
+	  "type": "string"
+	}
+      }
+    }
+  }
+}
