@@ -343,7 +343,6 @@ If you're doing voting, then a score is possible based on agreement with other w
 
 ### Time-Limited Interface
 
-
 Not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
 This was the case in an incidental finding reported in Chapter 6, where asking workers performing subjective opinion-based tasks to explain their judgement seemed to change the judgment habits themselves.
 
@@ -404,6 +403,27 @@ Details of the experimental system, including design documents, model descriptio
 ### Tagging
 
 ## Experiment #1: Relevance Judgments
+
+Lowering the barrier to custom evaluation is one of the most important uses of crowdsourcing for information retrieval research.
+While production systems benefit from actual humans in the machine to identify topics and correct algorithmic quirks^[TODO cite Twitter, Google, Bing], research aiming to improve pure information retrieval performance still needs ways to appropriately evaluate different models and approaches.
+Paid crowdsourcing platforms offer a way to tap into large and diverse groups of people for relevance judgments, making custom evaluation datasets -- and subsequently research over novel corpora -- greatly more accessible.^[Previously]
+
+^[Previously]: The role and value of crowdsourcing for information retrieval evaluation was discussed at length in the previous chapter.
+  For brevity, it is only lightly recalled here.
+
+To judge the effect of design manipulations on relevant judgment collection, a set of experiments were set up for image information retrieval results.
+
+### Related Work
+
+### Data
+
+The dataset being evaluated consisted of XXX^[TODO] query -- image document pairs, evaluating 20 results each^[TODO confirm] for 15 queries, against a corpus of XXXXXX ^[TODO confirm] Pinterest documents.
+
+queries, was a collection of [^TODO update with final number].
+
+### Evaluation
+
+### Results
 
 ## Experiment  #2: Tagging
 
