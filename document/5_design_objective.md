@@ -451,6 +451,29 @@ Demographically there is a female skew, interesting precisely it counter-balance
 
 <!-- TODO talk about TREC crowdsourcing track -->
 
+<!-- data collection-->
+Two types of information were collected from Pinterest for this experiment: pins and boards.
+
+Sampling was done according to Pinterest's provided sitemap.
+An initial survey (August 2014) suggested that Pinterest had approximately 107.5 million users, with 207.5 million pins and 572 million boards containing those pins.
+
+<!--
+Users: 107.5m 	4300 packages of 25000 users, 1.1 MB each
+Boards: 571.95m 22878 packages of 25k boards
+Pins: 207.5m 	8300 packages of 25k pins --> 
+
+This is a very large amount of data, and only a sample was needed for this study. For the sample, 
+
+- Random 25000 pin sitemap listings were downloaded
+- A process randomly pulled out pin listings, with each listing holding a 1% of being preserved
+- The collected pins were randomly ordered, and the full metadata of pins was collected against this master list.
+
+For the information retrieval system underlying this experiment's relevance judgments, a sample of 20k pins was collected and indexed.^[Attrition]
+
+^[Attrition]: This sample was collected in 40k pin batches, and not all at once. As a result, the final number of pins successfully downloaded was lower, at TODO. The time difference between batches provides a sense of attrition on Pinterest.
+  The first two batches of pins were collected against a five-month old sitemap, and 1.4-1.5k pins were no longer accessible per batch ($~3.4%$). 
+  Another batch was scraped when the sample list was 9 months old, and $6.4%$ of the links were no longer active, the final two batches were collected 2 months later, with $TODO UPDATE$ links missing.
+  TODO update after last batch
 
 ### Evaluation
 
