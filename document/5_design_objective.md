@@ -418,8 +418,39 @@ To judge the effect of design manipulations on relevant judgment collection, a s
 ### Data
 
 The dataset being evaluated consisted of XXX^[TODO] query -- image document pairs, evaluating 20 results each^[TODO confirm] for 15 queries, against a corpus of XXXXXX ^[TODO confirm] Pinterest documents.
+All the data, control and experiments, were collected specifically for this study, allowing for a fair comparison of design manipulations against a baseline that was competently implemented.
 
-queries, was a collection of [^TODO update with final number].
+<!-- What is pinterest -->
+\newthought{Pinterest is a social network} centered on the saving, sharing, and curation of online images.
+It is built entirely on crowd contributions.
+On Pinterest, the document unit is a 'pin': an image, associated with a web URL and page title, and a required text description provided by the user.
+Though the most common type of pin is saved from an external website, it is also possible to upload personal content.
+The 'descriptions' are required but free-text, meaning they do not necessarily _describe_ the image.
+
+Pins are sorted into curated lists, referred to as 'boards'.
+Like pins, classification into boards is not controlled.
+While adding a pin to a board is an act of classification, the classes are user-defined and can be created for various reason, such as quality judgments (e.g. "Neat stuff"), thematically descriptive (e.g. "dream wedding"), or miscellany of various sorts (e.g. "inspiration", "funny").
+Boards are user-specific, created by a user with a title, description, category, and optional map.
+
+<!--Why study Pinterest?-->
+i\newthought{Pinterest is a novel website} for studying ways to incorporate crowdsourced information into web retrieval.
+This study, concerned with the methodology of crowdsourcing, is not dependent on Pinterest, but Pinterest is nonetheless an appropriate site to underpin it.
+Structurally, it resembles the archival form of many library and museum systems, albeit at a larger scale, it is itself a product of [volunteer] crowdsourcing, and it deals in the type of sparse, simple content that crowdsourcing is appropriate for.
+
+ * The organizational form of Pinterest, grouping documents into curated lists called 'boards', is a interface pattern that is relevant to many forms of information repository.
+   Social OPACs, for example, allow library patrons to collect books into similarly uncontrolled lists.
+ * Pinterest contains very little information about the source web document.
+   It is feasible to crawl the full text of the source, but as it stands, a Pinterest 'pin' alone offers a record of a _human's interpretation_ of the source.
+   It is simple, and helps us avoid confounding the focus on crowd contributions.
+ * Since the primary form of Pinterest document is a human reaction to a web document, the user contributions on the site may have possible future use for web retrieval.
+ * For the purpose of this study, collecting relevance judgments for retrieved pins, the image-centric form is the type of task that crowds should be capable at.
+   Good tasks should focus on one thing, with little context switching [@_guidelines_2014], and understanding an image is a quick, natural activity for people.^[Even when it is not so for machines (TODO citation].
+
+Finally, Pinterest is an interesting but understudied website.
+Demographically there is a female skew, interesting precisely it counter-balances the typical male-heavy community demographic.
+
+<!-- TODO talk about TREC crowdsourcing track -->
+
 
 ### Evaluation
 
