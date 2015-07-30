@@ -49,3 +49,11 @@ curl -XGET 'http://localhost:9200/pinterest/pin/_search' -d "{ \"query\": {\"mat
 QUERY2=$(curl --silent -XGET 'http://localhost:9200/pinterest/pin/_search' -d "{ \"query\": {\"match\":{\"_all\": \"$QUERY\"}}}" | jq -j '.hits.hits[]._source | "\(.title) \(.description) "' | tr -d '\n' | perl -pe "s/[^\w\d]+/ /g")
 curl -XGET 'http://localhost:9200/pinterest/pin/_search' -d "{ \"query\": {\"match\":{\"_all\": \"$QUERY\"}}}"
 ```
+
+_or_ 
+
+```
+QUERY2=$(./expand-query.sh localhost:9200/pinterest/pin/_search $QUERY)
+...
+```
+
