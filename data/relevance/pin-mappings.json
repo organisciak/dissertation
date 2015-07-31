@@ -1,17 +1,25 @@
 {
+  "settings": {
+	  "similarity": {
+		  "my_lm": {
+			  "type":"LMDirichlet",
+			  "mu": 2000
+		  }
+	  }
+  },
   "mappings": {
-    "doc": {
+    "pin": {
       "properties": {
 	"board": {
 	  "type": "string"
 	},
         "title": {
           "type":       "string",
-          "similarity": "BM25" 
+          "similarity": "my_lm" 
         },
         "description": {
           "type":       "string",
-          "similarity": "BM25" 
+          "similarity": "my_lm" 
         },
 	"pin_join": {
 	  "type": "string"

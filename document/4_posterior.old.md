@@ -3,49 +3,21 @@ Modeling user-contributed document metadata
 
 ## Introduction
 
-While on-demand collection of document metadata through crowdsourcing can be invaluable in controlled circumstances, there are cases where either
- the data is already collected, or 
- where there is a limit to the amount of control a system designer can exert over contributors before discouraging them.
-
-In the second of two research chapters, the proposed dissertation will investigate the issue of interpreting human-contributed metadata in an information retrieval context, viewed through the lens of an ranked retrieval study on the online community _Pinterest_.
-Whereas the previous chapter looks at issues related to _collecting_ document information from a crowd, this chapter will consider the ways that this form of information is _used_.
-
 The focus of this chapter will be ranked retrieval over content in the online community _Pinterest_, a system for users to publicly save web images in curated lists.
 Pinterest is a heavily user-generated website where the majority of crowd contributions fit into the descriptive or curatorial mode that this dissertation is concerned with.
-It is an appropriate focus for this study because Pinterest generates new information about existing information object, and does so in a very loosely constrained manner.
+It is an appropriate focus for this study because Pinterest generates new information about existing information objects, and does so in a very loosely constrained manner.
 Studying retrieval in the context of Pinterest allows broader exploration of interpreting abstract contributions in concrete ways more broadly.
 
-The fundamental difficulty in incorporating user-contributed evidence into an information retrieval model is that often it is subjective in nature.
-While this is the type of contribution that sets human contributors apart, it also presents difficulties for interpreting it in a computational way.
-This chapter treats the description of 'pins' -- community created visual bookmarks on Pinterest -- as mixtures of human interpretations on their aboutness.
-Documents are treated as generative language models, where the actual text of a pin is smoothed against language from co-occurring pins in member lists and language from other users' pins of the source material.
-
-The research performed in @organisciak_evaluating_2012 sheds light on a particular problem of interpreting human contributions: consensus-building in ground truth tasks.
-We studied time, experience, and agreement as indicators of the quality of contributions for a paid relevance feedback task.
-Answering these questions provided valuable insights into how to treat workers and their data when using paid crowdsourcing for building ground truth datasets.
-However, modeling a crowd contribution is an issue that extends beyond paid ground truth generation.
 Various types of crowdsourcing data have been used for understanding information retrieval documents, including page links[@page_pagerank_1999], microblogging discussion of the documents[@dong_time_2010], social tags[@lamere_social_2008], <!-- TODO2: having trouble finding reasearch for this, but there has to be something out there about using "opinion ratings" in IR--> and implicit relevance feedback[@agichtein_improving_2006].
 On contribution-heavy Pinterest, this study will look at how curated lists can expand a system's language model of the typically text-sparse Pinterest documents.
-Equally interesting, it will provide us an opportunity to look at where crowdsourcing information fails, perhaps due to unexpected patterns of contribution or misuse of the system.
-
-In this chapter, I will review how various forms of crowd contributions have been used for information retrieval and other modelling uses, focusing on both volunteer and paid contributions and grounded by a study on Pinterest information retrieval.
 
 ## Scope
 
-The goals of this chapter will stay unchanged, focusing on crowdsourcing additional metadata for improved information retrieval indexing, with an underlying assumption of honest-but-biased workers.
-Again, the use cases being looked at are those with objective goals, with the intention of producing an output with minimal divergence from either the norms of a community or the instructions of a task designer.
-While user-dependent personalization approaches are an equally promising research direction, they are not part of the questions being investigated here.
-
-This study focuses on volunteered data, mainly because it is a more novel space.
 My past research has already looked at issues around interpreting a contribution in paid-crowdsourcing, post-collection.
 It is also generally a well-explored space in research [notably including: @ipeirotis_quality_2010; @raykar_supervised_2009; @eickhoff_increasing_2012; @sheng_get_2008; @welinder_online_2010; @whitehill_whose_2009; @snow_cheap_2008; @novotney_cheap_2010].
 Others have looked at similar situations of consensus-making among experts [@wallace_who_2011].
-Secondly, there is an appeal to pursuing realistic contexts. 
-In a production information retrieval context, it is more common to design around user needs, leaving the system designer to use the data for retrieval as it comes in.
 
 ## Motivation 
-
-How do you model a collection of loosely-structured and subjective human contributions into a normative crowd opinion, one that can be used to describe objects in a corpus?
 
 It is common to see differences in the habits of contributors that are trying to achieve the same thing.
 Many tasks that assume an objective, correct contribution are nonetheless are subject to interpretation, especially in volunteered contributions where detailed codebooks are deterrents to casual contributions.
@@ -93,8 +65,6 @@ If data collection had been cut off earlier, how accurate would the various meth
 
 ## Approach
 
-This chapter's focus will be a study measuring the value of crowdsourced information in improving information retrieval ranking against the data from Pinterest.
-
 Pinterest is an online community for saving visual bookmarks called 'pins' to curated lists called 'boards'.
 On their about page, Pinterest features three primary purposes: saving (as pins), organizing (into boards), and discovery [@_about_].
 
@@ -115,32 +85,7 @@ Not everybody sees the same features in the same document, so user-contributed d
 
 <!-- TODO2: RQ: consistency in categories among Pins with identical sources -->
 
-Why study Pinterest?
-Pinterest is a novel website for studying ways to incorporate crowdsourced information into web retrieval.
-
- * The organizational form of Pinterest, grouping documents into curated lists called 'boards', is a interface pattern that is relevant to many forms of information repository.
-   Social OPACs, for example, allow library patrons to collect books into similarly uncontrolled lists.
- * Pinterest contains very little information about the source web document.
-   It is feasible to crawl the full text of the source, but as it stands, a Pinterest 'pin' alone offers a record of a _human's interpretation_ of the source.
-   It is simple, and helps us avoid confounding the focus on crowd contributions.
- * Since the primary form of Pinterest document is a human reaction to a web document, the user contributions on the site may have possible future use for web retrieval.
-
-Finally, Pinterest is an interesting but understudied website.
-Demographically there is a female skew, interesting precisely it counter-balance the typical male-heavy community demographic.
-
 ### Data
-
-This study will be performed on Pinterest, a website of curated images.
-
-Pinterest is built entirely on crowd contributions.
-On Pinterest, the document unit is a 'pin': an image, associated with a web URL and page title, and a required text description provided by the user.
-Though the most common type of pin is saved from an external website, it is also possible to upload personal content.
-The 'descriptions' are required but free-text, meaning they do not necessarily _describe_ the image.
-
-Pins are sorted into curated lists, referred to as 'boards'.
-Like pins, classification into boards is not controlled.
-While adding a pin to a board is an act of classification, the classes are user-defined and can be created for various reason, such as quality judgments (e.g. "Neat stuff"), thematically descriptive (e.g. "dream wedding"), or miscellany of various sorts (e.g. "inspiration", "funny").
-Boards are user-specific, created by a user with a title, description, category, and optional map.
 
 -------------------------- ------------------- --------------- --------------------
   Animals                   Architecture        Art             Cars & Motorcycles  

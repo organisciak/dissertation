@@ -343,7 +343,6 @@ If you're doing voting, then a score is possible based on agreement with other w
 
 ### Time-Limited Interface
 
-
 Not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
 This was the case in an incidental finding reported in Chapter 6, where asking workers performing subjective opinion-based tasks to explain their judgement seemed to change the judgment habits themselves.
 
@@ -404,6 +403,81 @@ Details of the experimental system, including design documents, model descriptio
 ### Tagging
 
 ## Experiment #1: Relevance Judgments
+
+Lowering the barrier to custom evaluation is one of the most important uses of crowdsourcing for information retrieval research.
+While production systems benefit from actual humans in the machine to identify topics and correct algorithmic quirks^[TODO cite Twitter, Google, Bing], research aiming to improve pure information retrieval performance still needs ways to appropriately evaluate different models and approaches.
+Paid crowdsourcing platforms offer a way to tap into large and diverse groups of people for relevance judgments, making custom evaluation datasets -- and subsequently research over novel corpora -- greatly more accessible.^[Previously]
+
+^[Previously]: The role and value of crowdsourcing for information retrieval evaluation was discussed at length in the previous chapter.
+  For brevity, it is only lightly recalled here.
+
+To judge the effect of design manipulations on relevant judgment collection, a set of experiments were set up for image information retrieval results.
+
+### Related Work
+
+### Data
+
+The dataset being evaluated consisted of XXX^[TODO] query -- image document pairs, evaluating 20 results each^[TODO confirm] for 15 queries, against a corpus of XXXXXX ^[TODO confirm] Pinterest documents.
+All the data, control and experiments, were collected specifically for this study, allowing for a fair comparison of design manipulations against a baseline that was competently implemented.
+
+<!-- What is pinterest -->
+\newthought{Pinterest is a social network} centered on the saving, sharing, and curation of online images.
+It is built entirely on crowd contributions.
+On Pinterest, the document unit is a 'pin': an image, associated with a web URL and page title, and a required text description provided by the user.
+Though the most common type of pin is saved from an external website, it is also possible to upload personal content.
+The 'descriptions' are required but free-text, meaning they do not necessarily _describe_ the image.
+
+Pins are sorted into curated lists, referred to as 'boards'.
+Like pins, classification into boards is not controlled.
+While adding a pin to a board is an act of classification, the classes are user-defined and can be created for various reason, such as quality judgments (e.g. "Neat stuff"), thematically descriptive (e.g. "dream wedding"), or miscellany of various sorts (e.g. "inspiration", "funny").
+Boards are user-specific, created by a user with a title, description, category, and optional map.
+
+<!--Why study Pinterest?-->
+i\newthought{Pinterest is a novel website} for studying ways to incorporate crowdsourced information into web retrieval.
+This study, concerned with the methodology of crowdsourcing, is not dependent on Pinterest, but Pinterest is nonetheless an appropriate site to underpin it.
+Structurally, it resembles the archival form of many library and museum systems, albeit at a larger scale, it is itself a product of [volunteer] crowdsourcing, and it deals in the type of sparse, simple content that crowdsourcing is appropriate for.
+
+ * The organizational form of Pinterest, grouping documents into curated lists called 'boards', is a interface pattern that is relevant to many forms of information repository.
+   Social OPACs, for example, allow library patrons to collect books into similarly uncontrolled lists.
+ * Pinterest contains very little information about the source web document.
+   It is feasible to crawl the full text of the source, but as it stands, a Pinterest 'pin' alone offers a record of a _human's interpretation_ of the source.
+   It is simple, and helps us avoid confounding the focus on crowd contributions.
+ * Since the primary form of Pinterest document is a human reaction to a web document, the user contributions on the site may have possible future use for web retrieval.
+ * For the purpose of this study, collecting relevance judgments for retrieved pins, the image-centric form is the type of task that crowds should be capable at.
+   Good tasks should focus on one thing, with little context switching [@_guidelines_2014], and understanding an image is a quick, natural activity for people.^[Even when it is not so for machines (TODO citation].
+
+Finally, Pinterest is an interesting but understudied website.
+Demographically there is a female skew, interesting precisely it counter-balances the typical male-heavy community demographic.
+
+<!-- TODO talk about TREC crowdsourcing track -->
+
+<!-- data collection-->
+Two types of information were collected from Pinterest for this experiment: pins and boards.
+
+Sampling was done according to Pinterest's provided sitemap.
+An initial survey (August 2014) suggested that Pinterest had approximately 107.5 million users, with 207.5 million pins and 572 million boards containing those pins.
+
+<!--
+Users: 107.5m 	4300 packages of 25000 users, 1.1 MB each
+Boards: 571.95m 22878 packages of 25k boards
+Pins: 207.5m 	8300 packages of 25k pins --> 
+
+This is a very large amount of data, and only a sample was needed for this study. For the sample, 
+
+- Random 25000 pin sitemap listings were downloaded
+- A process randomly pulled out pin listings, with each listing holding a 1% of being preserved
+- The collected pins were randomly ordered, and the full metadata of pins was collected against this master list.
+
+For the information retrieval system underlying this experiment's relevance judgments, a sample of 20k pins was collected and indexed.^[Attrition]
+
+^[Attrition]: This sample was collected in 40k pin batches, and not all at once. As a result, the final number of pins successfully downloaded was lower, at TODO. The time difference between batches provides a sense of attrition on Pinterest.
+  The first two batches of pins were collected against a five-month old sitemap, and 1.4-1.5k pins were no longer accessible per batch ($~3.4%$). 
+  Another batch was scraped when the sample list was 9 months old, and $6.4%$ of the links were no longer active, the final two batches were collected 2 months later, with $TODO UPDATE$ links missing.
+  TODO update after last batch
+
+### Evaluation
+
+### Results
 
 ## Experiment  #2: Tagging
 
