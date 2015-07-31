@@ -96,6 +96,23 @@ A task where more information in encoding about the document is a more appropria
 
 
 ## Related Work
+<!-- TODO
+Explain various conditions _before_ related work
+Move other lit review (i.e. for feedback) to this section.
+More lit review on training, on feedback (Mitra has some suggestions)
+
+Or.. should I move /this/ section /into/ the more granular sections?
+
+-->
+@mitra_comparing_2015 have taken a similar approach to this chapter, in pursuing "person-oriented strategies" over process-oriented strategies".
+Their study is a unique precedent for a controlled experiment of different collection-time strategies for paid crowdsourcing contributions.
+They consider the following strategies: (1) screening workers, (2) providing examples and training workers, (3) offering financial incentives for improved quality (bonuses), and (4) aggregating or filtering multiple independent workers.
+
+Screening (1) and aggregation (4) are strategies discussed further and employed respectively in the previous and next chapter, and performance bonuses (3) are a parameterization manipulation that has been studied before<!-- TODO, cite refs from mitra paper, and others-->. ^[We also used a performance-based bonus in the 'taste-grokking' personalization approach detailed in Chapter 6. Though we hypothesized it may have a self-competitive effect, it was not the focus of that study and a controlled comparison was not performed to see if it was exerted an inordinate bias on the results. Appropriately, @mitra_comparing_2015 did not find this type of incentive to improve quality, for the most part.]
+Pertinent to this study, however, @mitra_comparing_2015 found that training contributors on task expectations improved contribution quality on nearly all tasks, generally compounding improvements on top of other conditions.
+Similar this study, @mitra_comparing_2015 compare interaction against a set of tasks that range in their subjectivity.
+<!-- TODO how do we differ?-->
+
 
 ## Research Questions
 
@@ -417,8 +434,16 @@ To judge the effect of design manipulations on relevant judgment collection, a s
 
 ### Data
 
-The dataset being evaluated consisted of XXX^[TODO] query -- image document pairs, evaluating 20 results each^[TODO confirm] for 15 queries, against a corpus of XXXXXX ^[TODO confirm] Pinterest documents.
+The dataset being evaluated consisted of XXX^[TODO] query -- image document pairs, evaluating 20 results each^[TODO confirm] for 15 queries, against a corpus of 185.6k documents from image-sharing social network Pinterest.
 All the data, control and experiments, were collected specifically for this study, allowing for a fair comparison of design manipulations against a baseline that was competently implemented.
+
+This section details the process of developing the test corpus.
+Basically, the process was as follows:
+ - Collecting a large randomized sample of documents from Pinterest (_pins_).
+ - Sampling realistic queries, collected from Pinterest's query auto-suggestions.
+ - Implementing a retrieval system with the sampled documents, and retrieving results against the sampled queries.
+
+ The retrieval results are used for measuring the efficacy of 
 
 <!-- What is pinterest -->
 \newthought{Pinterest is a social network} centered on the saving, sharing, and curation of online images.
@@ -468,12 +493,30 @@ This is a very large amount of data, and only a sample was needed for this study
 - A process randomly pulled out pin listings, with each listing holding a 1% of being preserved
 - The collected pins were randomly ordered, and the full metadata of pins was collected against this master list.
 
-For the information retrieval system underlying this experiment's relevance judgments, a sample of 20k pins was collected and indexed.^[Attrition]
+For the information retrieval system underlying this experiment's relevance judgments, a sample of 195k pins was collected and indexed.^[Attrition]
 
-^[Attrition]: This sample was collected in 40k pin batches, and not all at once. As a result, the final number of pins successfully downloaded was lower, at TODO. The time difference between batches provides a sense of attrition on Pinterest.
-  The first two batches of pins were collected against a five-month old sitemap, and 1.4-1.5k pins were no longer accessible per batch ($~3.4%$). 
-  Another batch was scraped when the sample list was 9 months old, and $6.4%$ of the links were no longer active, the final two batches were collected 2 months later, with $TODO UPDATE$ links missing.
-  TODO update after last batch
+^[Attrition]: This sample was collected in 40k pin batches, and not all at once.
+  As a result, the final number of pins successfully downloaded was lower, at 184583 document. The time difference between batches provides a sense of attrition on Pinterest.
+  The first two batches of pins were collected against a five-month old sitemap, and 1.4-1.5k pins were no longer accessible per batch ($~3.4\%$ attrition). 
+  Another batch was scraped when the sample list was 9 months old, and $6.4\%$ of the links were no longer active, the final two batches were collected 2 months later, with $7.2\%$ links missing.
+
+\newthought{Queries were sampled} from auto-complete suggestions on Pinterest.
+When a user starts to type in a query, five suggestions appear.
+For example, typing 'r' will suggest 'recipes', 'red hair', 'rings', 'relationship quotes', and 'rustic wedding'.
+These appear to be the most probable queries starting with the provided string.
+For an insight of what types of queries are in the sampling frame and more generally what topics are popular among Pinterest users, Table {@tab:pop-pinterest} \ref{pop_pinterest} lists the auto-complete suggestions when each letter of the alphabet is entered into the search box.
+
+It should be noted, however, that a sample frame of just the most popular terms is too general.
+To shift the sample away from the head of the distribution, the sampling frame will also include 500 queries derived from auto-complete suggestions based on two character strings: specifically, the one hundred most common two-character pairs occurring at the start of the English language.[^twoletter]
+
+[^twoletter]: Using the frequencies calculated by @norvig_english_, these are: TH, OF, AN, IN, TO, CO, RE, BE, FO, PR, WH, HA, MA, WI, HE, IS, NO, WA, ON, DE, ST, SE, AS, IT, CA, HI, SO, WE, AR, DI, MO, AL, SU, PA, FR, ME, OR, SH, LI, CH, WO, PO, EX, BY, AT, FI, PE, BU, LA, NE, UN, LE, SA, TR, HO, YO, LO, DO, FA, SI, GR, EN, AC, MI, TE, BO, BA, GO, SP, OU, PL, EV, AB, TA, RA, US, BR, CL, DA, GE, TI, FE, AD, MU, IM, AP, RO, NA, SC, PU, EA, CR, VI, CE, OT, AM, AG, UP, RI, VE.
+
+For each query, a description of what constitute the different levels of relevance will be written by myself, and the relevance of the first one hundred results will be rated by paid workers on a graded relevance scale.
+
+It is likely that Pinterest's own retrieval model incorporates additional implicit feedback from users in the form of click-through data.
+This is a useful indicator of a item's quality, itself a form of crowd-contributed retrieval evidence, but is well-studied and too removed from the scope of this study to undertake.
+
+
 
 ### Evaluation
 
