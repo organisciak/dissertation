@@ -113,85 +113,9 @@ The explicit forms of descriptive crowdsourcing that are seen on Pinterest are:
 
 ### Design: A Language-modeling approach to curated lists
 
-Adopting a language modeling approach for this study, documents are ranked by estimating the probability of each document's language model generating the query, and that document's prior probability of being relevant.
-Estimating document $d$ for query $q$,
-
-$P(d|q)\propto P(q|d)P(d)$,
-
-where $q$ is a set of terms $t$.
-
-Given a basic case of the unigram model [@ponte_language_1998; @song_general_1999] a document's prior probability of generating the query, $P(d)$, is assumed to be constant across all documents.
-This is the approach used for the baseline system, _provided in detail in the baseline section below_.
-
-This work approaches $P(q|d)$ as an estimate that may be improved by user-contributed description of the document and, of secondary focus, $P(d)$ as an estimate that may be improved by quality judgments.
-
-#### P(q|d)
-
-Most basically, $P(q|d)$ starts with a maximum likelihood estimate of all the query terms occurring in the user's pin: $P_{ml}(t_i|d)$, where $P(q|d)=\prod_{i=1}^{|q|}{P(t_i|d)}$.
-
-In this study's approach, we assume that co-occurring pins in lists and other users' pins of the same source content represent additional interpretations of the pin's aboutness.
-This will inform a model for boards, $P(t_i|b)$, which can be used as a fallback model, as well as a language model of other user's saves of the same document, $P(t_i|D)$.
-Thus, $P_{ml}(t|d)$ provides an estimate on seen words, but smoothing against $P(t_i|b)$ and $P(t_i|D)$ adds information on unseen but potentially likely words, and smoothing against the collection model provides general insight on term probabilities across the Pinterest corpus.
-These will be incorporated into a document's language model used the cluster approach seen in @liu_cluster-based_2004.
-
-By smoothing a pin's language model with models provided by other documents and users, probability mass is dispersed among different interpretations of the aboutness of the document.
-This treatment of multiple subjective interpretations loosens the assumptions of language modeling.
-However, functionally it is the same as treating a language model as an objective but latent generative model with different probabilities assigned for different term occurrences.
-
-There are some added complexities that will need to be considered while this study is being conducted.
-One is the proper weights to apply to interpolation: what type of smoothing is necessary between different models?
-This study will evaluate educated guesses based on work performed by @zhai_study_2001, and decide on whether an genetic parameter-learning algorithm is necessary.
-
-Two other issues that may need to be considered are occasions when there is an absence of other information, perhaps when a pin is alone in its board and nobody else has saved the same source item.
-In instances like this, it is important not to overly rely on a single user's interpretation, since taken alone it is a biases description.
-
-As described earlier in the literature review, this approaches closest parallel is in research on retrieval over folksonomies [e.g. @zhou_exploring_2008; @bao_optimizing_2007
-; @hotho_information_2006; @bischoff_can_2008].
-
 ### Data Collection
 
-Three types of information will be collected from Pinterest:
-
- * pins
- * boards
- * users 
-
-This will be collected according to the listings of all pins, boards, and users in Pinterest's provided sitemap.
-Based on an initial survey of the sitemaps, I expect approximately 107.5 million users on the website, 207.5 million pins, and 571.95 million boards.
-
-<!--
-Users: 107.5m 	4300 packages of 25000 users, 1.1 MB each
-Boards: 571.95m 22878 packages of 25k boards
-Pins: 207.5m 	8300 packages of 25k pins --> 
-
-This is a very large amount of data, and a bottleneck that is likely not necessary for this study. Instead, a smaller sample will be collected with the following sampling strategy:
-
- 1. A sample of boards is randomly selected
- 2. All pins that belong to the board sample are collected
- 3. All pins that save the same source images are collected
- 4. User data for the creators of the sampled boards is collected
- 5. A second sample of boards is collected, with all the boards that the sampled pins belong to
-
-The exact size of the sample will be determined once I start collecting data.
-As a general rule, I would like to collect as much data as possible, while staying within a manageable file size and crawling timeline. 
-
 ### Evaluation
-
-<!--
-What metric?
-	Why?
-	What are the alternatives? Why not those?
-What data?
-	How is it collected?
-	What queries is it run against? Why?
-How is relevance described? By whom?
--->
-
-#### Evaluators
-Given that the number of registered users on Pinterest is very high, approximately 107.5 million, it should be feasible to perform a more naturalistic evaluation, recruiting real users as judges for real queries. 
-For evaluation, I will recruit Pinterest users locally to perform relevance judging.
-
-#### Judgement Design
 
 Users will be asked to judge the relevance of 130 documents per retrieval model on a graded scale.
 Documents will be shown in randomized order.
@@ -200,22 +124,7 @@ Pinterest's visual interface is quicker to browse than text results, and I expec
 Search results on Pinterest's IR system load 65 results initially, though an 'infinite scroll' keeps loading results as a user scrolls down the page.
 Note that the judging interface format may change following the results of the first half of this dissertation. 
 
-Because of the nuances of the document space, binary relevance is a low bar to achieve on Pinterest.
-Many of the user information needs on Pinterest revolve around taste, and an appropriate evaluation should be sensitive not only to whether a document is a match to the query, but _how good_ of a match it is.
-This is why evaluation will be performed with graded relevance.
-The primary metric for relevance will subsequently be Normalized Discounted Cumulative Gain (NDCG).
-
-One concern with NDCG is that it needs to be estimated when there do not exist judgments for all results.
-This is because, for the normalization, one needs to consider the rank of a document relative to the ideal ranking of all results.
-This study will use the approach used at TREC, of pooling the top results for each algorithm's output, and assuming the result of documents are non-relevant.
-Since I expect a long tail of somewhat relevant queries on Pinterest, during the performance of the study I will also consider the necessity of NDCG estimation based on random sampling, such as infNDCG [@yilmaz_simple_2008].
-
 #### Evaluation Queries
-
-The queries being evaluated will be a mix of evaluators' search history -- dependent on what they feel comfortable providing -- and on popular queries collected through the Pinterest query input auto-complete feature.
-
-When an evaluator is recruited that has used Pinterest, they will be provided a script that collects their Pinterest search history.
-They will be asked to cull the list down to queries that they feel comfortable sharing, and to resist the desire to revisit the results until after evaluation.
 
 Additional evaluation queries will be sampled from auto-complete suggestions on Pinterest.
 When a user starts to type in a query, five suggestions appear.
