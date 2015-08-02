@@ -1,0 +1,25 @@
+{
+  "name": "dissertation",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Peter Organisciak",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/organisciak/dissertation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/organisciak/dissertation/issues"
+  },
+  "homepage": "https://github.com/organisciak/dissertation",
+  "dependencies": {
+    "coffee-script": "^1.9.3"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-exec": "^0.4.6",
+    "grunt-newer": "^1.1.1",
+    "grunt-panda": "^0.2.9"
+  }
+}
