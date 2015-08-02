@@ -119,13 +119,13 @@ Similar this study, @mitra_comparing_2015 compare interaction against a set of t
 This chapter compares the effect of task design on the quality of crowdsourced objective data.
 Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information science -- a typical encoding task performed by paid crowds, the following questions will be pursued:
 
- * __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?[^The _design space_ question.]
+ * __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?^[The _design space_ question.]
 
- * __RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces? [^The primary _data quality_ question.]
+ * __RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?^[The primary _data quality_ question.]
 
- * __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task? [^The secondary _satisfaction_ question.]
+ * __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?^[The secondary _satisfaction_ question.]
 
- * __RQ4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)? [^The _generalizability_ question.]
+ * __RQ4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?^[The _generalizability_ question.]
 
 RQ1 is the question of design, on synthesizing prior work and brainstorming directions to explore.
 It is a partially subjective question, but one still worth pursuing with diligence.
@@ -281,7 +281,7 @@ Collapsible instructions have been recommended previously by Chen (TODO cite Edw
 
 ![Screenshot of task within the Mechanical Turk interface.](images/design-basic-inturk.png) {#fig:basic-inturk}
 
-[^TaggingInterface]: Incidentally, Figure {@fig:basic-inturk} also shows some of the more challenges images to tag. How would you tag them? 
+[^TagDifficulty]: Incidentally, Figure {@fig:basic-inturk} also shows some of the more challenges images to tag. How would you tag them? 
 
 [^TaggingInterface]: TODO: Add figure of instructions from basic condition of tagging task. The substance of the instructions is discussed in the Tag Task section.
 
@@ -312,7 +312,9 @@ Finally, the basic interface included an open-ended feedback form at the end.
 While this is far from a standard convention, many have recommended it as a standard element in task design [<!-- TODO cite Chen, cite dynamo, cite alonso? -->].
 The ability to respond easily provides valuable information on worker satisfaction and task problems.[^feedback]
 
-[^feedback]: Based on my own experiences, I have treated feedback forms as a necessity for the past few years. Interestingly, as noted early, when @alonso_design_2011 tried to mandate the feedback form responses, they found that their quality fell.
+[^feedback]: I have treated feedback forms as a necessity for the past few years.
+ Based on my experiences, feedback forms provide a space for critical information, such as broken tasks, and qualitative information, such as worker satisfaction. Most importantly, they provide a qualitative connection to workers, which is contrary to Amazon's purposes as 'artificial artificial intelligence' but which encourages requesters to respect their workers.
+ Interestingly, as noted earlier, when @alonso_design_2011 tried to mandate feedback form responses, they found that their quality fell relative to volunteered feedback.
 
 ### Training interface
 
@@ -620,7 +622,7 @@ In a survey related to the display of prior tags [@sen_quest_2007], users found 
 Finally, tagging has been used in practice for cultural heritage uses, and preferred types of tags have been discussed, even when actual practice does not yield those ideals.
 <!- TODO LIS literature on tagging ->
 
-In their report on The Commons [^TODO make sure I use the proper name throughout the document, not "Flickr Commons], @springer_for_2008 analyzed a sample of tags and derived a number of non-exclusive categories for image tags:
+In their report on The Commons ^[TODO make sure I use the proper name throughout the document, not "Flickr Commons], @springer_for_2008 analyzed a sample of tags and derived a number of non-exclusive categories for image tags:
 
 - tags derived from the description;
 - new descriptive keywords, including tags for place, format, photographic technique, time period, or creator name;
