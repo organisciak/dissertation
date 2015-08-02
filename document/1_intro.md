@@ -26,20 +26,8 @@ Understanding leads to practical recommendations for maximizing data quality in 
 
 <!-- Scoping -->
 
-\newthought{This work is scoped} to a particular type of crowd production -- metadata[^metadata] about existing information objects -- and a particular form of collection: microtasks[^microtask] in paid crowd platforms[^paidplatforms].
-These are viewed in the space of subjective and objective[^objective] types of tasks.
-
-[^metadata]: An important albeit rarely formalized distinction in crowdsourcing contributions is whether the crowd _creates_ new intellectual works, or whether they _react_ to existing information objections. Generally, the uses of crowdsourcing of interest to information scientists, librarians, and information retrieval researchers are in the latter category.
-  
-
-[^microtask]: A microtask refers to the common practice of breaking tasks down to small practical units, which both simplifies the task distribution process in a Fordist style and accommodates the short interaction style that is common online.
-  
-
-[^paidplatforms]: Paid crowdsourcing platforms are markets for on-demand online labour. They reduce much of the overhead seen in volunteer crowdsourcing related to attracting and motivating users, replacing intrinsic motivation with financial incentive. The most popular platform, and the one used to run experiments in this study, is Amazon's Mechanical Turk.
-  
-
-[^objective]: Objective tasks assume the existence of a universal ground truth, while subjective tasks have truth relative to different individuals. An intermediate category is considered in this study, that of _normative_ tasks: ones that do not have a factual 'truth' but have an expectation of an agreed-upon truth.
-  
+\newthought{This work is scoped} to a particular type of crowd production -- metadata about existing information objects -- and a particular form of collection: microtasks in paid crowd platforms.
+These are viewed in the space of subjective and objective types of tasks.
 
 It is important to stay aware of the broader space of crowdsourcing and how characteristics of paid microtasks generalize to it.
 However, as the typology presented in _Chapter 3_ makes clear, crowdsourcing is a broad expanse; the treatment here is controlled to a subset pertinent to information science research.
@@ -52,6 +40,18 @@ The growth of digital collections has outpaced the ability to comprehensively cl
 Similar roadblocks are affecting born-digital information, where the rapid creation of documents often follows from passive or unrestricted forms of production.
 The lack of strong descriptive metadata poses an obstacle for information retrieval, which must infer the aboutness of a document in order to surface it for an interested user.
 Crowdsourcing is increasingly being used to address this problem.
+
+Crowdsourcing is the distributed, large-scale collaboration of users contributing to a common product.
+It describes the _act_[^CrowdVerb] of a system opening up for contributions from distributed users.
+Users do not necessarily collaborate directly with each other -- though they can -- so the crowd in the term refers broadly to the collective users of the system.
+
+[^CrowdVerb]: Crowdsourcing as a verb is a technical point worth noting. Sourcing describes the act of soliciting user contribution, regardless of whether it is successfully executed or not.
+
+It is an umbrella term preceded by a number of more narrowly scoped concepts, such as
+commons-based peer production [@benkler_wealth_2006],
+open source software development [@raymond_cathedral_1999; @lakhani_how_2003],
+and human computation [@von_ahn_games_2006; @law_human_2011].<!--_-->
+Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds’ [~@surowiecki_wisdom_2004]; one way to interpret crowdsourcing is _the process of trying to utilize that wisdom_.
 
 Many of the benefits of crowdsourcing follow from the fact that humans approach tasks in qualitative and abstract ways that are difficult to emulate algorithmically.
 A human can respond to complex questions on a Q&A website, judge the quality of a restaurant/product/film, or decipher a sloppy piece of handwriting.
@@ -124,7 +124,7 @@ The questions this chapter asks are the following:
 
 \newthought{Considering the data quality of crowdsourcing} as an immutable set of contributions is an important avenue toward properly analyzing and controlling  crowd data, and also pays proper reverence toward a popular stream of crowdsourcing research.
 
-However, in many circumstances, contributions _are not_ a hallowed set of data, bestowed upon a researcher to work with.
+However, in many circumstances, contributions are _not_ a hallowed set of data, bestowed upon a researcher to work with.
 They are collected, and as such the _way they are collected_ can change what they look like at the end.
 Chapter 5 turns our attention toward this less-explored corollary of post-collection data modelling: the effect of the collection instrument on the resultant contributions, toward understanding and potentially optimizing the contribution collection process.
 This is about how you ask, and how it affects what you are told.
@@ -132,6 +132,7 @@ This is about how you ask, and how it affects what you are told.
 Chapter 5 is presented in two parts, both studies conducted for this dissertation, one published previously and one presenting work for the first time.
 
 The first part (5.1) selects two control tasks, and measures the effect of three different design manipulations on the makeup of the data -- consistency and quality, but also contribution patterns.
+Looking at interfaces that give users training, performance feedback, or timer-driven nudges, it asks:
 <!--These design manipulations are looked at again over a subjective context in Chapter 6.-->
 
  * __RQ 2.1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
@@ -143,16 +144,17 @@ The first part (5.1) selects two control tasks, and measures the effect of three
  * __RQ 2.4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?
 
 The second part of Chapter 5 (5.2) bridges chapters 4 and 5 in a real world setting, applying post-collection corrections as well as collection-time task manipulations to the human judgments used in evaluating audio similarity for the Music Information Retrieval Exchange (MIREX).
+Finding the inter-grader consistency to be very low, this small chapters asks:
 
- - __RQ 2.5__: Are grader differences responsible for inter-grader inconsistency in MIREX judgments?
- - __RQ 2.6__: Are problem graders responsible for inter-grader inconsistency?
- - __RQ 2.7__: Is subjectivity or disagreement of the grading task responsible for inter-grader inconsistency?
+ - __RQ 2.5__: Are grader differences responsible for low inter-grader consistency in MIREX judgments?
+ - __RQ 2.6__: Are problem graders responsible for low inter-grader consistency?
+ - __RQ 2.7__: Is subjectivity or disagreement of the grading task responsible for low inter-grader consistency?
  - __RQ 2.8__: Does the task design affect the quality of contributions?
 
 \newthought{Chapter 6 focuses on completing subjective tasks} through paid crowdsourcing, again focusing on maximizing quality through a priori design and instrumentation choices.
 Subjective tasks are rarely done in paid contexts, so _personalized crowdsourcing_ is introduced as a way to formalize and argue for the approach.
 Two protocols for personalized crowdsourcing are then presented, referred to as _taste-matching_ and _taste-grokking_, and compared.
-Finally, the design manipulations evaluated in Chapter 4 are evaluated in personalized crowdsourcing.
+<!--TODO Finally, the design manipulations evaluated in Chapter 4 are evaluated in personalized crowdsourcing.-->
 
 <!-- Reminder: update any changes here and in the actual chapter -->
 
@@ -160,7 +162,7 @@ Finally, the design manipulations evaluated in Chapter 4 are evaluated in person
  - __RQ3.2__: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
  - __RQ 3.3__: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
  - __RQ 3.4__: How do different types of subjective tasks affect the efficacy of personalized crowdsourcing approaches?
- - __RQ 3.5__: How do task design manipulations affect the quality of crowd contributions?
+ <!-- - __RQ 3.5__: How do task design manipulations affect the quality of crowd contributions?-->
 
 ### Goal
 
@@ -175,23 +177,25 @@ A reader of this work will understand:
  * sources of contributor-specific error in information retrieval evaluation tasks; and
  * how these findings may assist future working in information science and cultural heritage.
 
-### Methodology
 
-## Context
+## Scope
 
-### Crowdsourcing
+As mentioned at the outset, this work focuses on a particular, but pertinent, corner of crowdsourcing.
+The form of crowd production studied is metadata about existing work, and the type of collection is microtasks in paid crowd platforms.
+Both subjective and objective types of tasks are considered, however, given that they manifest very distinctly and this....
 
-Crowdsourcing is the distributed, large-scale collaboration of users contributing to a common product.
-Significantly, the term describes the _act_ of a system opening up for contributions from distributed users.
-Users do not necessarily collaborate directly with each other -- though they can -- so the crowd in the term refers broadly to the collective users of the system.
-Sourcing describes the act of soliciting user contribution, regardless of whether it is successfully executed or not.
+\newthought{This work is scoped} to a particular type of crowd production -- metadata about existing information objects -- and a particular form of collection: microtasks in paid crowd platforms.
 
-Crowdsourcing is an umbrella term preceded by a number of more narrowly scoped concepts, such as
-commons-based peer production [@benkler_wealth_2006],
-open source software development [@raymond_cathedral_1999; @lakhani_how_2003],
-and human computation [@von_ahn_games_2006; @law_human_2011].<!--_-->
+These are viewed in the space of subjective and objective types of tasks.
 
-Surowiecki discussed aggregate crowd intelligence as the ‘wisdom of the crowds’ [@surowiecki_wisdom_2004]; one way to interpret crowdsourcing is the process of trying to utilize that wisdom.
+An important albeit rarely formalized distinction in crowdsourcing contributions is whether the crowd _creates_ new intellectual works, or whether they _react_ to existing information objections. Generally, the uses of crowdsourcing of interest to information scientists, librarians, and information retrieval researchers are in the latter category.
+
+A microtask refers to the common practice of breaking tasks down to small practical units, which both simplifies the task distribution process in a Fordist style and accommodates the short interaction style that is common online.
+
+Paid crowdsourcing platforms are markets for on-demand online labour. They reduce much of the overhead seen in volunteer crowdsourcing related to attracting and motivating users, replacing intrinsic motivation with financial incentive. The most popular platform, and the one used to run experiments in this study, is Amazon's Mechanical Turk.
+
+Objective tasks assume the existence of a universal ground truth, while subjective tasks have truth relative to different individuals. An intermediate category is considered in this study, that of _normative_ tasks: ones that do not have a factual 'truth' but have an expectation of an agreed-upon truth.
+
 
 ### Information Science
 
