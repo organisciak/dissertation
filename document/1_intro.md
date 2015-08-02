@@ -1,22 +1,22 @@
 Introduction
 ==============
 
-\marginnote{In the style of modern mass communications, this work described in under 140 characters:
-\em{Maximizing data quality in using paid crowds for objective and subjective encoding tasks} }
-
 \newthought{The internet} is growing increasingly interactive as it matures.
 Rather than merely transmitting information to readers, web pages allow their audience to react and interact with their information.
 The products of these interactions are a trove of qualitative judgments, valuable to modeling information objects.
-In recent years, this form of creation through collaboration has been studied as _crowdsourcing_.
+In recent years, this form of creation-through-collaboration has been studied as _crowdsourcing_.
 
-There are many circumstances where access to human encoding and human judgments is invaluable to information science, such as in transcribing scanned material, organizing or judging the quality of documents within a collection, building evaluation datasets for information retrieval, or preparing training data for better inferential algorithms.
+\marginnote{In the style of modern mass communications, this work described in under 140 characters:
+\em{Maximizing data quality in using paid crowds for objective and subjective encoding tasks} }
+
+There are many circumstances where access to human encoding and human judgments is invaluable to information science, whether it is in transcribing scanned material, organizing or judging the quality of documents within a collection, building evaluation datasets for information retrieval, or preparing training data for better inferential algorithms.
 People can provide latent information about documents that would not be possible to ascertain computationally, such as quality judgments or higher-level thematic description.
 They are also adept at critical actions such as correcting, describing in different language, or inferring relationships with other documents.
 Most importantly, crowdsourcing looks at human contribution at scales that are difficult to attain in alternate ways.
 
 <!-- Broad Research Question --><!--TODO add sidenote about Broad research Questions-->
-\newthought{However}, humans have predictable and unpredictable biases that make it difficult to systematically adopt their contributions in an information system.
-How do we control and interpret qualitative user contributions in a quantified system?
+\newthought{However, humans have predictable and unpredictable biases} that make it difficult to systematically adopt their contributions in an information system.
+_How do we control and interpret qualitative user contributions in a quantified system?_
 
 This work focuses on understanding the characteristics of data collected through crowdsourcing, toward two ends: awareness of potentially unanticipated biases in crowd data collection, and ways to improve the quality of crowd-collected data.
 As will be demonstrated, crowdsourcing research is sensitive to various circumstances of instrumentation, context, and community.
@@ -30,84 +30,141 @@ Understanding leads to practical recommendations for maximizing data quality in 
 These are viewed in the space of subjective and objective[^objective] types of tasks.
 
 [^metadata]: An important albeit rarely formalized distinction in crowdsourcing contributions is whether the crowd _creates_ new intellectual works, or whether they _react_ to existing information objections. Generally, the uses of crowdsourcing of interest to information scientists, librarians, and information retrieval researchers are in the latter category.
+  
 
 [^microtask]: A microtask refers to the common practice of breaking tasks down to small practical units, which both simplifies the task distribution process in a Fordist style and accommodates the short interaction style that is common online.
+  
 
 [^paidplatforms]: Paid crowdsourcing platforms are markets for on-demand online labour. They reduce much of the overhead seen in volunteer crowdsourcing related to attracting and motivating users, replacing intrinsic motivation with financial incentive. The most popular platform, and the one used to run experiments in this study, is Amazon's Mechanical Turk.
+  
 
-[^objective]: Objective tasks assume the existence of a universal ground truth, while subjective tasks have truth relative to different individuals. A median category is considered in this study, that of _normative_ tasks: ones that do not have a factual 'truth' but have an expectation of an agreed-upon truth.
+[^objective]: Objective tasks assume the existence of a universal ground truth, while subjective tasks have truth relative to different individuals. An intermediate category is considered in this study, that of _normative_ tasks: ones that do not have a factual 'truth' but have an expectation of an agreed-upon truth.
+  
 
 It is important to stay aware of the broader space of crowdsourcing and how characteristics of paid microtasks generalize to it.
-However, as the typology presented in Chapter 3 makes clear, crowdsourcing is a broad expanse; the treatment here is controlled to a subset pertinent to information science research.
+However, as the typology presented in _Chapter 3_ makes clear, crowdsourcing is a broad expanse; the treatment here is controlled to a subset pertinent to information science research.
 
-Details of each part of this scope will follow -- crowdsourcing metadata, microtasks, paid crowd platforms, and subjective/objective crowdsourcing -- but it is important to establish the set pieces first.
+Details of each part of this scope will follow -- crowdsourcing metadata, microtasks, paid crowd platforms, and subjective/objective crowdsourcing -- but it is important to understand why it matters first.
+
+## Problem
+
+The growth of digital collections has outpaced the ability to comprehensively clean, transcribe, and annotate them.
+Similar roadblocks are affecting born-digital information, where the rapid creation of documents often follows from passive or unrestricted forms of production.
+The lack of strong descriptive metadata poses an obstacle for information retrieval, which must infer the aboutness of a document in order to surface it for an interested user.
+Crowdsourcing is increasingly being used to address this problem.
+
+Many of the benefits of crowdsourcing follow from the fact that humans approach tasks in qualitative and abstract ways that are difficult to emulate algorithmically.
+A human can respond to complex questions on a Q&A website, judge the quality of a restaurant/product/film, or decipher a sloppy piece of handwriting.
+
+Since many information systems are intended to serve an information-seeking user, the information that crowdsourcing collects can better reflect the needs of users.
+For example, a user-tagged image in a museum collection can fill in terms that are more colloquial than the formal vocabulary employed by a cataloguer [@springer_for_2008; @trant_investigating_2006].
+Such information is invaluable in indexing items for information retrieval, where the goal is commonly to infer what a user is searching from their textual attempt to describe it in a query.
+
+Similarly, other uses of crowdsourcing capitalize on humans' abilities to spot when algorithmic attempts at understanding an information object have failed.
+ReCaptcha uses human contributions to transcribe transcriptions of OCR problem text from Google Books and the New York Times [@_what_]
+The National Library of Australia's Trove also crowdsources corrections of scanned text, by allowing readers of their scanned newspapers to edit transcribed text when they come across problems [@holley_many_2009].
+
+Humans are also being used to encode parseable text descriptions for non-text materials or higher-level latent concepts.
+In libraries, this approach is being adopted with crowd transcription of materials which are too difficult for computer vision, such as digitized letters.
+For example, the Bentham Project at University College London has a pilot project for crowdsourcing the transcription of Jeremy Bentham’s letters [@moyle_manuscript_2010; @causer_transcription_2012].
+
+More than typical description, additional useful information can be reactionary or critical.
+Indexing human judgments of a document's quality, for example, can enable an information retrieval system to rank the best version of multiple similar documents.^[TODO citation]
+
+While the complex qualitative actions of human contributions are the cornerstone of such contributions' usefulness, they present a challenge for algorithmic use because they can be highly variable.
+
+A task becomes more open to interpretation the more complex it becomes.
+Some projects revel in the broad interpretive nature of complex tasks.
+We see large art projects like Star Wars Uncut^[http://www.starwarsuncut.com/] embrace the quirkiness of humans, where hundred of people re-filmed small snippets of Star Wars in a charming hodgepodge of styles.
+Coding challenges, like those seen on TopCode^[https://www.topcoder.com/], also are interesting for the widely varying ways that a programming language allows you to express a problem.
+
+However, in cases where there is a goal to find either an objective truth, manifest or latent, or to gauge the subjective approaches and opinions of people in a comparable way, the breadth of interpretations possible for a task presents a problem for reliably understanding it in aggregate.
+
+The variability seen in human interpretations of complex tasks is not a novel issue.
+It is a problem that we call low _intercoder reliability_, and can result from a variety of issues.
+Four 'threats to reliability' that @neuendorf_content_2002 lists echo issues in crowdsourcing document description: an insufficient coding scheme, inadequate training, fatigue, and problem coders.
+
+\newthought{How do you account} for the variability of human contributions in leveraging online crowds? This study looks to understand the threats to reliability in the context of paid crowdsourcing, in three spaces: error introduced by contributors (e.g. problem coders), error owing to the external factors (e.g. an insufficient coding scheme, inadequate training), and error owing to the task (i.e. subjective or non-normative tasks treated objectively).
 
 ## Overview
 
-
-
-### Research Questions
-
-\newthought{What are the properties} of data collected from paid crowds for objective and subjective information system tasks, and how can the quality of data -- in terms of consistency and variance -- be optimized?
+What are the properties of data collected from paid crowds for objective and subjective information system tasks, and how can the quality of data -- in terms of consistency and variance -- be optimized?
 
 Each research chapter turns the lens on a piece of this question.
 The broad research questions informing the chapters are as follows:
 
-- Broad Research Question 1: What are the _post-collection_ indicators of quality in worker-contributed objective task data, and can these be leveraged for improved data modelling? [^Reported at in Chapter 4, with an additional approach comprising part of Chapter 5.2.]
+- __Broad Research Question 1__: What are the _post-collection_ indicators of quality in worker-contributed objective task data, and can these be leveraged for improved data modelling? ^[Reported in Chapter 4, with an additional approach comprising part of Chapter 5.2.]
 
-- Broad Research Question 2: What are the biases inherent to the task design for objective or non-normative tasks (i.e. the data collection instrument), and can design manipulations correct for them at _collection time_? [^Reported at in both parts of Chapter 5.]
+- __RQ 2__: What are the biases inherent to the task design for objective or non-normative tasks (i.e. the data collection instrument), and can design manipulations correct for them at _collection time_? ^[Reported in both parts of Chapter 5.]
 
-- Broad Research Question 3: What are the quality losses when treating non-normative tasks in objective ways, and can collection-time framing or post-collection modeling approaches reduce these? [^Reported in Chapter 6.]
+- __RQ 3__: What are the quality losses when treating non-normative tasks in objective ways, and can collection-time framing or post-collection modeling approaches reduce these? ^[Reported in Chapter 6.]
 
-Though potential solutions are evaluated each time, the first step of each question is to understand the scope of the problem.
-Regardless of implementation, the _pertinent and valuable contribution_ is understanding some of the ways that crowdsourced data may have unexpected and perhaps overlooked variance, bias, and low-consistency.
+Though in each chapter there are concrete solutions proposed and evaluated, the first step of each research question is to understand the scope of the problem.
+Regardless of implementation, this dissertation's _pertinent and valuable contribution_ is in understanding some of the ways that crowdsourced data may have unexpected and perhaps overlooked variance, bias, and low-consistency.
 
-\newthought{Chapter 4 takes a post-collection look} at crowdsourcing error, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
+\newthought{Before conducting our own experiments}, Chapters 2 and 3 present a in-depth look at crowdsourcing.
+
+Chapter 2 presents a brief overview of crowdsourcing.
+One can can consider this chapter the seed of what might be taught in the first two weeks of a course on crowdsourcing.
+
+Chapter 3 then presents an information-science typology of crowdsourcing, a necessity for appreciating the expansive area of crowdsourcing and this study's particular scoping.
+Both of these chapters are general, and literature reviews pertinent to the experiments in this study are reported in the relevant research chapters.
+
+\newthought{Chapter 4 applies a post-collection lens to crowdsourcing error}, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
 
 The chapter is largely analytical, hoping to understand what we can infer from crowd behaviors about the strength of their contributions and evaluating what strategies are promising for better paid crowdsourcing.
 By taking this approach, this chapter seeds some of the expected outcomes driving later chapters.
 
-[^TODO: I should create a quick reference page that links to sections like this one. This will help the reader keep the path in mind.]
+The questions this chapter asks are the following:
 
- - RQ 1.1: Do worker contributions improve with experience in a predictable way?
- - _RQ 1.2_: Does the length of time that a worker spends on a question reflect the quality of their rating?
- - _RQ 1.3_: Does a worker's agreement or disagreement with other workers reflect their overall quality as a worker?
- - _RQ 1.4_: If so, can disagreement be used for data improvements?
-
-<!--- TODO search for all references to chapters 4 and 5, to make sure that the order it correct -->
+ - __RQ 1.1__: Do worker contributions improve with experience in a predictable way?
+ - __RQ 1.2__: Does the length of time that a worker spends on a question reflect the quality of their rating?
+ - __RQ 1.3__: Does a worker's agreement or disagreement with other workers reflect their overall quality as a worker?
+ - __RQ 1.4__: If so, can disagreement be used for data improvements?
 
 \newthought{Considering the data quality of crowdsourcing} as an immutable set of contributions is an important avenue toward properly analyzing and controlling  crowd data, and also pays proper reverence toward a popular stream of crowdsourcing research.
 
-This is not the only frame for crowdsourcing contributions, however.
-Chapter 5 turns our attention toward the less-explored corollary of post-collection data modelling: the effect of the collection instrument on the resultant contributions, toward understanding and potentially optimizing the contribution collection process.
+However, in many circumstances, contributions _are not_ a hallowed set of data, bestowed upon a researcher to work with.
+They are collected, and as such the _way they are collected_ can change what they look like at the end.
+Chapter 5 turns our attention toward this less-explored corollary of post-collection data modelling: the effect of the collection instrument on the resultant contributions, toward understanding and potentially optimizing the contribution collection process.
 This is about how you ask, and how it affects what you are told.
 
 Chapter 5 is presented in two parts, both studies conducted for this dissertation, one published previously and one presenting work for the first time.
-The first part selects two control tasks, and measures the effect of three different design manipulations on the makeup of the data -- consistency and quality, but also contribution patterns.
-These design manipulations are looked at again over a subjective context in Chapter 6.
-The second part bridges chapters 4 and 5 in a real world setting, applying post-collection corrections as well as collection-time task manipulations to the human judgments used in evaluating audio similarity for the Music Information Retrieval Exchange (MIREX).
 
- - _RQ_ 2.2.1: Are grader differences responsible for inter-grader inconsistency?
- - _RQ_ 2.2.2: Are problem graders responsible for inter-grader inconsistency?
- - _RQ_ 2.2.3: Is subjectivity or disagreement of the grading task responsible for inter-grader inconsistency?
- - _RQ_ 2.2.4: Does the task design affect the quality of contributions?
+The first part (5.1) selects two control tasks, and measures the effect of three different design manipulations on the makeup of the data -- consistency and quality, but also contribution patterns.
+<!--These design manipulations are looked at again over a subjective context in Chapter 6.-->
+
+ * __RQ 2.1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
+
+ * __RQ 2.2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?
+
+ * __RQ 2.3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
+
+ * __RQ 2.4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?
+
+The second part of Chapter 5 (5.2) bridges chapters 4 and 5 in a real world setting, applying post-collection corrections as well as collection-time task manipulations to the human judgments used in evaluating audio similarity for the Music Information Retrieval Exchange (MIREX).
+
+ - __RQ 2.5__: Are grader differences responsible for inter-grader inconsistency in MIREX judgments?
+ - __RQ 2.6__: Are problem graders responsible for inter-grader inconsistency?
+ - __RQ 2.7__: Is subjectivity or disagreement of the grading task responsible for inter-grader inconsistency?
+ - __RQ 2.8__: Does the task design affect the quality of contributions?
 
 \newthought{Chapter 6 focuses on completing subjective tasks} through paid crowdsourcing, again focusing on maximizing quality through a priori design and instrumentation choices.
 Subjective tasks are rarely done in paid contexts, so _personalized crowdsourcing_ is introduced as a way to formalize and argue for the approach.
 Two protocols for personalized crowdsourcing are then presented, referred to as _taste-matching_ and _taste-grokking_, and compared.
 Finally, the design manipulations evaluated in Chapter 4 are evaluated in personalized crowdsourcing.
 
-<!- Reminder: update any changes here and in the actual chapter -->
+<!-- Reminder: update any changes here and in the actual chapter -->
 
- - RQ 3.1: Is it feasible to apply paid crowdsourcing to subjective problems?
- - RQ 3.2: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
- - RQ 3.3: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
- - RQ 3.4: How do different types of subjective tasks affect the efficacy of personalized crowdsourcing approaches?
- - RQ 3.5: How do task design manipulations affect the quality of crowd contributions?
+ - __RQ 3.1__: Is it feasible to apply paid crowdsourcing to subjective problems?
+ - __RQ3.2__: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
+ - __RQ 3.3__: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
+ - __RQ 3.4__: How do different types of subjective tasks affect the efficacy of personalized crowdsourcing approaches?
+ - __RQ 3.5__: How do task design manipulations affect the quality of crowd contributions?
 
-### Take Away
+### Goal
 
-A reader of the proposed dissertation will understand how online crowds can reliably generate metadata about information system objects, both for subjective or objective ends.
+The goal of this work is to leave you, the reader, with an understanding of how online crowds can reliably generate metadata about information system objects, both for subjective or objective ends.
 The main contribution of this study is _methodological_: understanding issues related to proper -- or improper -- crowdsourcing in information sciences.
 It is written in the service of uncovering issues and answering them in a thorough manner, where a reader may develop realistic expectations or hypotheses for tasks beyond the tasks used for this study's experiments.
 
@@ -119,8 +176,6 @@ A reader of this work will understand:
  * how these findings may assist future working in information science and cultural heritage.
 
 ### Methodology
-
-Outlin
 
 ## Context
 
@@ -177,50 +232,6 @@ The proposed study follows the hypothesis that such an assumption leads to
 a) more algorithmically valuable crowdsourced description and
 b) a greater proportion of useful contributions.
 
-
-## Problem
-
-The growth of digital collections has outpaced the ability to comprehensively clean, transcribe, and annotate the data.
-Similar roadblocks are affecting born-digital information, where the rapid creation of documents often follows from passive or unrestricted forms of production.
-The lack of strong descriptive metadata poses an obstacle for information retrieval, which must infer the aboutness of a document in order to surface it for an interested user.
-Crowdsourcing is increasingly being used to address this problem.
-
-Many of the benefits of crowdsourcing follow from the fact that humans approach tasks in qualitative and abstract ways that are difficult to emulate algorithmically.
-A human can respond to complex questions on a Q&A website, judge the quality of a restaurant/product/film, or decipher a sloppy piece of handwriting.
-
-Since many information systems are intended to serve an information-seeking user, the information that crowdsourcing collects can better reflect the needs of users.
-For example, a user-tagged image in a museum collection can fill in terms that are more colloquial than the formal vocabulary employed by a cataloguer [@springer_for_2008; trant_investigating_2006].
-Such information is invaluable in indexing items for information retrieval, where the goal is commonly to infer what a user is searching from their textual attempt to describe it in a query.
-
-Similarly, other uses of crowdsourcing capitalize on humans' abilities to spot when algorithmic attempts at understanding an information object have failed.
-ReCaptcha uses human contributions to transcribe transcriptions of OCR problem text from Google Books and the New York Times [@_what_]
-The National Library of Australia's Trove also crowdsources corrections of scanned text, by allowing readers of their scanned newspapers to edit transcribed text when they come across problems [@holley_many_2009].
-
-Humans are also being used to encode parseable text descriptions for non-text materials or higher-level latent concepts.
-In libraries, this approach is being adopted with crowd transcription of materials which are too difficult for computer vision, such as digitized letters.
-For example, the Bentham Project at University College London has a pilot project for crowdsourcing the transcription of Jeremy Bentham’s letters [@moyle_manuscript_2010; @causer_transcription_2012].
-
-More than typical description, additional useful information can be reactionary or critical.
-Indexing human judgments of a document's quality, for example, can enable an information retrieval system to rank the best version of multiple similarly relevant documents.
-
-While the complex qualitative actions of human contributions are the cornerstone of such contributions' usefulness, they present a challenge for algorithmic use because they can be highly variable.
-
-A task becomes more open to interpretation the more complex it becomes.
-Some projects revel in the broad interpretive nature of complex tasks.
-We see large art projects like Star Wars Uncut<!--TODO sidenote--> embrace the quirkiness of humans, where hundred of people re-filmed small snippets of Star Wars in a charming hodgepodge of styles.
-Coding challenges, like those seen on TopCoder<!--TODO sidenote-->, also are interesting for the widely varying ways that a programming language allows you to express a problem.
-However, in cases where there is a goal to find either an objective truth, manifest or latent, or to gauge the subjective approaches and opinions of people in a comparable way, the breadth of interpretations possible for a task presents a problem for reliably understanding it in aggregate.
-
-The variability seen in human interpretations of complex tasks is not a novel issue.
-It is a problem that we call low _intercoder reliability_, and can result from a variety of issues.
-Four 'threats to reliability' that @neuendorf_content_2002 lists echo issues in crowdsourcing document description:
-
-- an insufficient coding scheme,
-- inadequate training,
-- fatigue, and
-- problem coders.
-
-\newthought{How do you account} for the variability of human contributions in leveraging online crowds? This study looks to understand the threats to reliability in the context of paid crowdsourcing, in three spaces: error introduced by contributors (e.g. problem coders), error owing to the external factors (e.g. an insufficient coding scheme, inadequate training), and error owing to the task (i.e. subjective or non-normative tasks treated objectively).
 
 
 ## Relevance
