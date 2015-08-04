@@ -57,3 +57,14 @@ QUERY2=$(./expand-query.sh localhost:9200/pinterest/pin/_search $QUERY)
 ...
 ```
 
+# Addendum
+
+The actual commands used for this study.
+
+```
+
+curl -XPUT localhost:9200/pinterest -d @pin-mappings.json
+cat ../pinterest/pinDataHeader.csv ../pinterest/samples/level1pins/**/pinData.csv | csvcut -c id,url,description,title,image,image60,image236,likes,repins,board,pin_join | csvjson --stream | parallel --eta -j90% -n1 ./add-doc.sh 'http://localhost:9200/pinterest/pin/'
+head -n13 final-query-sample.txt | parallel --eta -j2 ./search_expanded.sh localhost:9200/pinterest/pin {} "| python -mjson.tool >results/expanded-{}.json"
+
+```

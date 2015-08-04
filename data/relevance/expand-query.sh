@@ -2,9 +2,10 @@
 # This can be used as an expanded query for a second search.
 uri=$1
 query=$2
-results=1000
+# Expanding from the text of the top 20 results
+results=20
 
-curl -XGET $uri -d "{ \"size\": $results, \"query\": {\"match\":{\"_all\": \"$query\"}}}" |\
+curl --silent -XGET $uri/_search -d "{ \"size\": $results, \"query\": {\"match\":{\"_all\": \"$query\"}}}" |\
        	jq -j '.hits.hits[]._source | "\(.title) \(.description) "' |\
 	# remove newlines
        	tr -d '\n' |\
