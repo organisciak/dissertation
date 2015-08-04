@@ -53,7 +53,7 @@ curl -XGET 'http://localhost:9200/pinterest/pin/_search' -d "{ \"query\": {\"mat
 _or_ 
 
 ```
-QUERY2=$(./expand-query.sh localhost:9200/pinterest/pin/_search $QUERY)
+QUERY2=$(./expand-query.sh localhost:9200/pinterest/pin/_search "$QUERY")
 ...
 ```
 
@@ -64,7 +64,19 @@ The actual commands used for this study.
 ```
 
 curl -XPUT localhost:9200/pinterest -d @pin-mappings.json
+
 cat ../pinterest/pinDataHeader.csv ../pinterest/samples/level1pins/**/pinData.csv | csvcut -c id,url,description,title,image,image60,image236,likes,repins,board,pin_join | csvjson --stream | parallel --eta -j90% -n1 ./add-doc.sh 'http://localhost:9200/pinterest/pin/'
+
 head -n13 final-query-sample.txt | parallel --eta -j2 ./search_expanded.sh localhost:9200/pinterest/pin {} "| python -mjson.tool >results/expanded-{}.json"
 
+# Add query results to ../turk/image-relevance-basic-basic1.json, manually based on this output:
+find results/*json | parallel "echo {}; cat {} | jq -s \".[].hits.hits[]._id | tonumber\" | jq -sc ."
+# DL Images
+cat results/* | grep -P "\"image\d" | grep -oP "https.*jpg" | parallel --eta -n100 -j90% --delay 10 wget -i - -x --directory-prefix=/home/ec2-user/crowdy-backend/public/images/
+# Load Pins to DB
+cat results/expanded-*.json | jq -s . | jq ".[] | .hits.hits[]._source" | jq -s "." | perl -pe "s:s-media-cache:crowdycrowdy.com/images/s-media-cache:g" >pinsForCrowdy.json
+cd ~/crowdy-backend/
+coffee scripts/loadPinsToMongo.coffee --pinData ~/dissertation/data/relevance/pinsForCrowdy.json
+# Add Hit to DB
+coffee scripts/saveJSONtoMongo.coffee --model hit --json ~/dissertation/data/turk/image-relevance-basic-basic1.json
 ```
