@@ -1,0 +1,135 @@
+{
+    "name": "Test Relevance HIT",
+    "condition": { 
+        "firstTask": "basic", 
+	"laterTasks": "basic"  
+    },
+    "type": "relevance judgments",
+    "itemModel": "pin",
+    "items": [],
+    "facets": [
+	    {
+		"meta":{
+		    	"query": "islam",
+		    	"good": "images relating to Islamic religion or Islamic culture, such as prayer or religious congregation; passages of scripture or inspirational quotes related to Islam; information about the Islamic religion",
+		    	"ok": "images showing architecture or landmarks from places related to the religion; images of people who happen to be muslim",
+			"poor": "images that don't appear related to Islam without any accompanying text; images that disparage or would offend a person interested in Islam"
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "no bake cookies",
+		    	"good": "images of no-bake cookies (cookies that are not meant to be baked before eating)",
+		    	"ok": "recipes for no-bake cookies",
+			"poor": "images showing cookies that need to be oven-baked"
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "jennifer lawrence",
+		    	"good": "images of the actress Jennifer Lawrence",
+		    	"ok": "illustrations of Jennifer Lawrence or characters that she plays;",
+			"poor": "images of other actors, even if from the same films "
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "feather tattoo",
+		    	"good": "tattoos of feathers (photographed)",
+		    	"ok": "illustrations of feathers; tattoos of birds",
+			"poor": "other tattoos"
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "window treatments",
+		    	"good": "images of interior window decorations; images of blinds, curtains, drapes or shades on windows",
+		    	"ok": "exterior images of windows; images of special window glass, such as stained or frosted glass",
+			"poor": "illustrations of windows; photos only showing fabric"
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "christmas ideas",
+		    	"good": "ideas for christmas decorations or crafts, christmas-oriented gifts, or christmas cooking",
+			"ok": "recipes or images of big meals or snacks that might be appropriate for Christmas but are not Christmas-themed",
+		    	"poor": "general gift ideas that are not clearly related to Christmas"
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "upcycle",
+		    	"good": "",
+		    	"ok": "",
+			"poor": ""
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "easter crafts",
+		    	"good": "",
+		    	"ok": "",
+			"poor": ""
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "puppies",
+		    	"good": "",
+		    	"ok": "",
+			"poor": ""
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "rose tattoo",
+		    	"good": "",
+		    	"ok": "",
+			"poor": ""
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "buffalo chicken dip",
+		    	"good": "",
+		    	"ok": "",
+			"poor": ""
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "thanksgiving decorations",
+		    	"good": "",
+		    	"ok": "",
+			"poor": ""
+	    	},
+		"items":[]
+	    },
+	    {
+		"meta":{
+		    	"query": "agape",
+		    	"good": "",
+		    	"ok": "",
+			"poor": ""
+	    	},
+		"items":[]
+	    }
+    
+    ],
+    "facetType": "query",
+    "payment": 0.30,
+    "setsPerItem": 5, 
+    "maxSetSize": 10,
+    "itemTimeEstimate": 15
+}
