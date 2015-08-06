@@ -79,4 +79,8 @@ cd ~/crowdy-backend/
 coffee scripts/loadPinsToMongo.coffee --pinData ~/dissertation/data/relevance/pinsForCrowdy.json
 # Add Hit to DB
 coffee scripts/saveJSONtoMongo.coffee --model hit --json ~/dissertation/data/turk/image-relevance-basic-basic1.json
+# Create hit for Amazon
+vim ~/dissertation/data/turk/rel-basic-task1.json
+# Post to sandbox
+
 ```
