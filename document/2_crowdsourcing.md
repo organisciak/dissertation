@@ -7,22 +7,20 @@ The language of crowdsourcing has developed fairly recently, but the ideas it re
 Perhaps it is not surprising then that research in crowdsourcing has been uneven and discussion scattered.
 After all, this is a term that seemingly sprung from a very specific place, on a specific date, and yet what _is_ crowdsourcing has been largely appropriated and defined by collective imagination.
 
-As an introduction to key concepts of crowdsourcing, this chapter provides an overview of the concept and the notable research that has stemmed from it.
+As an introduction to key concepts of crowdsourcing, this chapter provides an overview and the notable research that has stemmed from it.
 
 \newthought{Crowdsourcing broadly describes} the use of distributed crowds to complete a task that would otherwise be done by one or a few people.
+It broadly captures the abilities of the internet as a communication medium in efficiently connecting people.
 Many concepts exist within or overlapping with this broad mandate.
-
-Crowdsourcing refers to "groups of disparate people, connected through technology, contributing to a common product" [@organisciak_why_2010].^[TODO use somebody else's one liner.]
-It broadly captures the abilities of the internet as a communications medium in efficiently connecting people.
 
 Nothing about crowdsourcing is fundamentally tied to the internet, however.
 It is entirely possible to bring together large groups of people in different ways, but the access and efficiency of the internet is both
-what makes the concept seem so novel and what gives it value in the various realms where it is applied.
+what makes the concept seem so novel and what makes it valuable in the various realms where it is applied.
 Whereas crowds have long been noted for their collective simplicity [@le_bon_crowd_1896] or irrationality [@mackay_memoirs_1852],
 through the internet one can perform human-specific tasks at a scale usually only seen for computational tasks.
 
 
-The term _crowdsourcing_ comes from a 2006 Wired article by Jeff Howe [~@howe_rise_2006].
+The term _crowdsourcing_ comes from a 2006 Wired article by Jeff Howe [-@howe_rise_2006].
 While the word is recent and has an unambiguous source, immediately upon its introduction it was adopted and expanded on through public discourse.
 Howe was writing from a labor perspective, looking at online marketplaces for people to solve problems and create content.
 His focus was on systems like InnoCentive^[http://www.innocentive.com/], a site for companies to outsource research and development problems for a bounty, and iStockPhoto^[http://www.istockphoto.com/], a website that allowed amateur photographers to sell their images as stock photos.
@@ -31,7 +29,9 @@ The article briefly looked at user-generated online content, though in the conte
 Despite the narrowness and brevity of the initial definition, the term _crowdsourcing_ struck a chord more broadly and was culturally co-opted.
 The definitional appropriation happened very quickly: within nine days Howe noted a jump from three Google results to 189,000 [@howe_birth_2006].
 Within a month, Howe addressed the co-opting of the term, "noticing that the word is being used somewhat interchangeably with Yochai Benkler's concept of commons-based peer production" [@howe_crowdsourcing_2006].
-He gives his definition, but also notes that language is slippery, and he is "content to allow the crowd define the term for itself (in no small part because [he is] powerless to stop it.)."
+He gives his definition[^HoweDefinition], but also notes that language is slippery, and he is "content to allow the crowd define the term for itself (in no small part because [he is] powerless to stop it.)."
+
+[^HoweDefinition]: "For the purposes of the article... we would only look at case studies involving big established companies. For the purposes of [Howe's crowdsourcing blog] ... I interpret crowdsourcing to be taking place any time a company makes a choice to employ the crowd to perform labor that could alternatively be performed by an assigned group of employees or contractors". To not leave the journalist with his 2006 definition, Howe's definition expanded further as time went on, away from top-down companies doing the outsourcing, and eventually to "content created by amateurs", a movement influence by the open source software movement [@howe_crowdsourcing_2008].
 
 Thus, crowdsourcing was adopted to refer broadly to a series of related concepts, all related to people being connected online.
 These concepts included
@@ -39,30 +39,26 @@ These concepts included
  human computation [@ahn_labeling_2004],
  commons-based peer production [@benkler_wealth_2006], and
  free and open-source development [@lakhani_how_2003; @raymond_cathedral_1999].
+Further, is overlaps with the content of user-generated content, at least to the extent that user-generated content is used toward a common production or purpose.
 
-While there have been occasional semantic attempts to redefine crowdsourcing again as a more granular term, its colloquial adoptions seem to have cemented its use as a broad concept.
+## Related Concepts
 
-## Concepts
-
-### Wisdom of the Crowds
-
-_The Wisdom of the Crowds_ [@surowiecki_wisdom_2004] is a book written by journalist James Surowiecki in 2004.
-The book observes the strength of human decision-making when done in aggregate, and the term 'wisdom of the crowds' has survived the book to refer to cases that make use of this.
+\newthought{Like crowdsourcing, the wisdom of the crowd} emerged as a popular, rather than academic concept, from the eponymous book written by journalist James Surowiecki [-@surowiecki_wisdom_2004].
+The book observes the strength of human decision-making when done in aggregate, and the term 'wisdom of the crowds' has survived the book to refer to instances that make use of this form of collective wisdom.
 
 Part of the wisdom of the crowd is simply statistical.
 In one of Surowiecki's examples, he points to the quiz-based game show _Who Wants to be a Millionaire?_
 On the show, contestants unsure about their response can poll the audience.
-This polling is remarkably effective, but not surprising: even if most of the audience does not know the answer and the probability of choosing one of the four choices in ignorance is roughly equal, then only a few people that are informed of the answer can sway the "crowd's" response in the right direction.
+The audience poll turned out to be remarkably effective, but not surprising: even if most of the audience does not know the answer and the probability of choosing one of the four choices in ignorance is roughly equal, then only a few people that are informed of the answer can sway the "crowd" response in the right direction.
 
-This is a fitting anecdote, given that many bona fide crowdsourcing efforts do come down to connecting to the right individual from the mass of candidates.
-This is seen most clearly in cases such as question and answer websites (e.g. Stack Overflow, Ask Metafilter, Quora).
-However, increasing the pool applies in much more than cases of 'wisdom': many successful websites receive the built of their contributions from a small core group of contributors [e.g. Wikipedia (TODO CITATION); Transcribe Bentham - @causer_transcription_2012; The Commons - @springer_for_2008] and the benefit of opening up their projects to public contributions is in increasingly the likelihood of a "power user" [@springer_for_2008].
+This is a fitting anecdote, given that many crowdsourcing efforts do come down to connecting to the right individual from the mass of candidates.
+It is seen most clearly in cases such as question and answer websites (e.g. Stack Overflow, Ask Metafilter, Quora).
+However, increasing the pool applies in much more than cases of 'wisdom': many successful websites receive the built of their contributions from a small core group of contributors [e.g. Wikipedia - @muchnik_origins_2013; Transcribe Bentham - @causer_transcription_2012; The Commons - @springer_for_2008] and the benefit of opening up their projects to public contributions is in increasingly the likelihood of a "power user" [@springer_for_2008].
 
 The second lesson that permeates crowdsourcing is the idea of aggregation that results in a product better than the sum of its parts. Grand projects like Wikipedia and FoldIt^[An online research-supporting game that looks for the most efficient ways to fold proteins.] [@khatib_algorithm_2011] allow contributions to build on the work of past contributors.
 
-### Human-Computation
-
-Human Computation emerged from the doctoral dissertation work by Luis von Ahn in 2005, popularized alongside the ESP Game [@ahn_labeling_2004; @von_ahn_games_2006]. <!--_-->
+\newthought{Human Computation} emerged from the doctoral dissertation work by Luis von Ahn in 2005, popularized alongside the ESP Game [@ahn_labeling_2004; @von_ahn_games_2006]. <!--_-->
+If the wisdom of the crowds refers to the unique abilities of human intelligence in aggregate, human computation focuses on human abilities as distinct from computational methods -- for so long as they are distinct -- and aims to formalize methods to organize humans in manners akin to automation.
 It refers to the process of computation -- the "mapping of some input representation to some output representation using an explicit, finite set of instructions" [@law_human_2011] -- performed by humans.
 
 In synthesizing the definition of human computation in relation to crowdsourcing, collection intelligence, and social computing, @quinn_human_2011 note two characteristics of consensus:
@@ -76,9 +72,7 @@ By this definition, much human computation aligns with crowdsourcing, but large 
 For example, creative crowdsourcing projects like T-shirt design website Threadless are not human computation.
 Inversely, human computation does not have to be sustained by self-selected workers; a more traditionally hired closed system can suffice [@law_human_2011].
 
-### Open-Source
-
-An early model precedent to crowdsourcing is open source software development.
+\newthought{An early model precedent to crowdsourcing} is open source software development.
 
 With open source, software's underlying source code is freely accessible.
 Distributed collaboration was not initially a tenet of this openness, but it followed as a consequence.
@@ -89,27 +83,25 @@ Eric Raymond compared this form of software development to a bazaar, "open to th
 The many hands approach to open-source demonstrated that technologically-connected crowds can coherently delegate and create works.
 Like with crowdsourcing, open source software development often does not discriminate on credentials or background; if a contributor can make an adequate contribution, it can be used.
 
-The roots of crowdsourcing in open source are noted Jeff Howe's short definition formulated after his Wired article: "the application of Open Source principles to fields outside of software" [@howe_crowdsourcing:_2006].
+The roots of crowdsourcing in open source are credited in @howe_crowdsourcing_2008 and also compose Howe's "soundbyte" definition: "the application of Open Source principles to fields outside of software" [sidebar, http://www.crowdsourcing.com/].
 
-### User Innovation and Commons-Based Peer Production
-
-It should not be surprising that recent cultural observers have noted the behaviours seen in crowdsourcing through various lens.
-Crowdsourcing emerges from various affordances <!--TODO2 cite affordances (Barry Wellman?-->of modern information networks.
-Such as seen with open-source software development, networked society encourages new forms of cultural creation, not by intention but by consequence of the type of connectedness it allows.
+\newthought{It should not be surprising} that recent cultural observers have noted the behaviours seen in crowdsourcing through various lens.
+Crowdsourcing emerges from various affordances -- both technical and social [@wellman_social_2003] -- of modern information networks.
+Such as was seen with open-source software development, networked society encourages new forms of cultural creation, not by intention but by consequence of the type of connectedness it allows.
 
 As networked society has developed and the internet has grown ubiquitous, numerous scholars have noted the cascading consequences in how individuals interact with culture and participate in the creation of cultural objects.
 Two such streams of study are von Hippel's work on _user innovation_ and Benkler's study of the networked information economy, including his concept of _commons-based peer production_.
 Both of these borrow from economic and market-driven theory rather than sociological theory, but they offer valuable language for understanding crowdsourcing as a cultural phenomenon.[^consequence]
 
-[^consequence]: One might argue for the term _consequence_ rather than _phenomenon_, because it positions crowdsourcing as neither an accident nor a product of intention, but acknowledges a history for it where it is a side-effect of external influences.
+[^consequence]: One might argue for the term _consequence_ rather than _phenomenon_, because it positions crowdsourcing as neither an accident nor a product of intention, but acknowledges a history for it where it is a side effect of external influences.
 
-If crowdsourcing is a generalized version of open source principles, von Hippel's work on user innovation[@von_hippel_sources_1988;@von_hippel_democratizing_2006] was an early observation of the trend toward a greater user focus in computer tools and services.
+If crowdsourcing is a generalized version of open source principles, von Hippel's work on user innovation [@von_hippel_sources_1988;@von_hippel_democratizing_2006] was an early observation of the trend toward a greater user focus in computer tools and services.
 
 With user innovation, new information products or physical products are generated by users -- those that benefit from using rather than selling the product.
 Notably, von Hippel focuses on 'lead users,' users with specific needs that precede broader trends.
 These users either develop new products to fill their needs or modify existing products.
 
-Not all crowdsourcing creation is user innovation, though there are echoes of von Hippel's work in companies that turn to the Internet for help in conducting their business, whether it is soliciting feedback and suggestions (e.g. MyStarbucksIdea [^Starbucks]), bug reports, or even work at a bounty (e.g. advertising contests).
+Not all crowdsourcing creation is user innovation, though there are echoes of von Hippel's work in companies that turn to the Internet for help in conducting their business, whether it is soliciting feedback and suggestions (e.g. MyStarbucksIdea [^Starbucks]), bug reports, or even work at a bounty (e.g. 99Designs^[http://99designs.com]).
 User sharing of work performed for themselves is another similar area: for example, when a music service allows users to share their playlists publicly, their realization of a personal need has potential value to other users.
 
 Benkler's work takes a political economy view on what he calls the 'networked information economy', but arrives at a very similar place to von Hippel.
@@ -117,8 +109,8 @@ He argues that the unique landscape of the 'networked information economy' empow
 individuals to do more for themselves and in collaborative groups outside of established economic spheres [@benkler_wealth_2006].
 This agency allows commons-based peer-production: for innovation and creation to rise out of the commons rather than from firms.
 
-Benkler[@benkler_wealth_2006] singles out two user behaviors borne out of access to information networks, which in turn underlie the rise of crowdsourcing.
-First, individuals are more empowered to operate autonomously, for themselves with less reliance on mass-market goods.
+Benkler [-@benkler_wealth_2006] singles out two user behaviors borne out of access to information networks, which in turn underlie the rise of crowdsourcing.
+First, individuals are more empowered to operate autonomously, for themselves and with less reliance on mass-market goods.
 At the same time, loose collaborations are easier to organize, allowing the pursuit of individual needs at scales beyond the capabilities of a single person.
 
 [^Starbucks]: http://mystarbucksidea.force.com/
@@ -130,43 +122,13 @@ At the same time, loose collaborations are easier to organize, allowing the purs
 
 <!-- also see law and bederson papers -->
 
-<!--
-### Classical Work on crowds
+## Notable Research
 
-#### Extraodinary Madness of the Crowds (Mackay [sp?])
+A greatest hits of crowdsourcing is beyond the scope of this study, though ^[TODO this section]
 
-#### The Crowd (LeBon)-->
+The ESP Game [@von_ahn_games_2006] demonstrated an effective and fun way to support research data through games.
 
-## Taxonomies of Crowdsourcing
-
-The space of crowdsourcing is large, and there have been a number of attempts to organize the sub-concepts within it or to reconcile it alongside other areas of research.
-Some of the most important questions in differentiating crowdsourcing include:
-
-<!--Contributors-->
- * Who are the contributors? What are their skills?
- * How are contributors motivated? Are they paid or do they volunteer for other incentives?
-<!--Contributions-->
- * Are contributions new, or do they react to existing documents or entities?
- * Are contributions presented or used as a whole, or are they combined into a larger contribution?
- * What do the contributions look like? Are they subjective or objective?
-<!--Beneficiaries and directors -->
- * Who is asking for the contributions? Who is benefiting?
-<!--Collaboration-->
- * Is the collaboration indirect (i.e. contributors work on parts independently) or manifest?
-<!--Design-->
- * Is the crowdsourcing central to the system?
- * How is quality controlled for?
-
-
-
-## Top Research in Crowdsourcing
-
-The lit review of the proposed dissertation will include a treatment of the most notable research in crowdsourcing: a "greatest hits" of sorts.
-Here I offer a brief overview of some of the research that will be discussed.
-
-The ESP Game[@von_ahn_games_2006] demonstrated an effective and fun way to support research data through games.
-
-Soylent[@bernstein_soylent_2010] integrated paid crowdsourcing into word-processing tools.
+Soylent [@bernstein_soylent_2010] integrated paid crowdsourcing into word-processing tools.
 In the process, the study termed the Find-Fix-Verify design pattern.
 
 @mason_financial_2010 found that increasing wages on paid crowdsourcing sites did not improve quality of results, just quantity of contributions, due to an anchoring effect whereby perceived value of the task also grew with payment.
@@ -183,48 +145,67 @@ VizWiz
 ## Crowdsourcing in the Wild
 
 There is a great deal of crowdsourcing "in the wild", including notable successes and failures.
-Some of the successful project provide archetypal blueprints of crowdsourcing dimensions, and will be good to understand moving forward.
-Below I describe a few projects to aid in understanding the possibilities of crowdsourcing; more detail will be provided in the proposed dissertation literature review.
+The successful projects are particularly worth looking at for clues as to what distinguishes them in the face of less successful or failed site.
+Below is a selection of projects that have lasted.
+This small list is chosen in a somewhat arbitrary manner but in the service of a few points.
 
-__Wikipedia__ is a collaboratively written encyclopedia, where the majority of contributors are volunteers.
-Wikipedia, formed in 2001 and now containing 4,579,708 articles (as August 13, 2014 [@_wikipedia:size_2014]),<!--_--> has an open editing policy that allows anonymous contributions and only restricts who can edit a page for few special cases where vandalism is likely.
+Many of these projects are approaching or have surpassed a decade of existence: an eon for the networked age.
+The age shows, however, which certainly adds dimension: novelty wears off and communities gentrify.
+A project such as Wikipedia or LibraryThing has a very different makeup than a new and novel project as the British Library's _LibCrowds_ [@chiesura_introducing_2015].
+
+Additionally, the small selection of examples below is chosen for breadth.
+This dissertation focuses on a small corner of crowdsourcing, but there are many models for online contribution that have been tried, so it is good to have concrete anchors to go by.
+
+Still, looking at crowdsourcing _web sites_ misses part of the legacy of crowdsourcing.
+To assume a speculative post for a moment, it appears that many of the design patterns that will survive from the past decade of experimentation with crowdsourcing will be in the augmentative, supportive roles it can play: community-contributed translations or subtitles; qualitative contributions like flagging, rating, or 'likes'; casual filtering activities like up/down voting.
+Likewise, the best new projects are ephemeral: they are not intended to last by design.
+The point has been made that the amount of human effort and leisure-time labour on the Internet is endless [@shirky_here_2009;@mcgonigal_reality_2011]; however, attention is scare.
+
+Projects like those from exemplar Zooniverse, discussed below, or LibCrowds, or from NYPL Labs: they develop single-serving projects to symbiotically engage communities with their collections in focuses, short-term ways, rather than grandiose 'digitize all of history' projects.
+In revisiting my past work on motivations of crowds [@organisciak_why_2010] for the next chapter's crowdsourcing typology, I add a motivation that was previously avoided: novelty. Novelty is ephemeral, but short-term design may make that alright.
+
+With that in mind, below are some notable examples in the wild and as a whole, while the next chapter's typology provides a contrasting view of crowdsourcing in its parts.
+
+\newthought{Wikipedia is a collaboratively-written encyclopedia}, where the majority of contributors are volunteers.
+Wikipedia, formed in 2001 and now containing 4,579,708 articles (as August 13, 2014 [@_wikipedia:size_2014]), has an open editing policy that allows anonymous contributions and only restricts who can edit a page for few special cases where vandalism is likely.
 The policy also ensures that readers are latent editors [@shirky_here_2009], helping police, correct, and improve poor quality content.
+
+Despite being a notable success, the maturing of the community and the increased difficulty of contribution that comes with more community rules has been blamed for falling numbers of new users [@angwin_volunteers_2009]. 
+Wikipedia also has a high gender bias, and it has been argued that the exclusionary effects of the increasingly strict community (or at the least the perception of such) disproportionally turn away women contributors [@gardner_nine_2011].
 
 __Threadless__ is a community of artists that design and vote on T-shirt designs.
 Winning designs are licensed by Threadless to print and sell, providing a commission to the designer and additional profit for subsequent shirt reprintings.
 
+Threadless was one of the examples discussed in the initial treatment of crowdsourcing by @howe_rise_2006, and it has stayed remarkably similar in the ensuing nine years.
+Despite also becoming a platform that commissions designs from professionals, the central model still hinges on anybody-can-contribute, anybody-can-vote design contests.
+
 The __Netflix Prize__ was a competition run by film rental (and now streaming) company Netflix, offering a million dollar bounty to the person or team that could improve film recommendation by 10% over the root-mean-squared-error performance of Netflix's own system.
 Claiming the prize required the winner to publish their results but did not require transfer of intellectual property, only a license for Netflix.
-A 2008 New York Times article about the prize noted that the community of participants were notably open in sharing their insights[@thompson_if_2008].
+A 2008 New York Times article about the prize noted that the community of participants were notably open in sharing their insights [@thompson_if_2008].
+
+Underlying the Netflix Prize was another type of crowdsourcing: modeling the quality of Netflix's collection through user-contributed rating.
+This use of user-generated content for prediction and recommendation is an area known as collaborative filtering [@resnick_grouplens_1994; @hofmann_latent_2004].
+The relevance of this point to the Netflix Prize (beyond the contributions that it made to CF research, particularly the progress prize and final prize papers [@bell_bellkor_2008; @koren_bellkor_2009]) is in the postscript to the Netflix Prize. When Netflix tried to run a second challenge, they were criticized and sued for sharing too much of the contributor data: a success in one form of crowdsourcing followed by a failure in another.
 
 __Kickstarter__ is a microfunding platform that enables patronage of artists and creators in their project through small but plentiful contributions.
 A project creator on Kickstarter proposes a project and offers tiers of rewards for backers that contribute varying amounts.
 When researched in @organisciak_why_2010, the balance between the altruistic support-based motivation and opportunistic reward-based incentives seemed to weigh slightly more toward the former, though I expect this has changed in recent years as more products have been offered on the site.
 Regardless, the model of small contributions from many has been seen in many other so-called crowdfunding contexts, including charity, politics [@fung_larry_], and small business [@cortese_proposal_2011; @cortese_crowdfunding_2013].
 
-### Academic
-
 __Zooniverse__ is a series of crowdsourcing projects that started with Galaxy Zoo.
-Galaxy Zoo allowed the general public to classify images of galaxies from the Sloan Digital Sky Survey, many being seen for the first time, at a pace much quicker than any one human could perform.
-Another popular project, Old Weather, transcribes weather logs from old ship's journals.
-In Snapshot Serengeti, participants classify animals photographed in camera traps.
+Galaxy Zoo allowed the public to classify images of galaxies from the Sloan Digital Sky Survey, many being seen for the first time, at a pace much quicker than any one human could perform.
+Another popular project, Old Weather [@eveleigh_i_2013], transcribes weather logs from old ship's journals.
+In Snapshot Serengeti [@swanson_historical_1988], participants classify animals photographed in camera traps.
 Many of the Zooniverse projects follow a similar pattern: encoding of curious, novel, or interesting images while contributing to real research.
 
-_FoldIt_ is a game where users try to develop the most efficient folding of a protein [@khatib_algorithm_2011].
+__FoldIt__ is a game where users try to develop the most efficient folding of a protein [@khatib_algorithm_2011].
 Folds are scored and placed on a leaderboard, adding a competitive edge.
 FoldIt shows that, when well matched to competitive impulses, complex problems can be tackled through semi-anonymous online workers.
 
-_ReCaptcha_ [@von_ahn_recaptcha:_2008]<!--_--> cleverly took a system intended to distinguish humans from bots -- obfuscated text transcription with Captchas -- and combined it with a problem that by definition only humans can do: fixing scanned text that computational techniques failed at.
+__ReCaptcha__ [@von_ahn_recaptcha:_2008]<!--_--> cleverly took a system intended to distinguish humans from bots -- obfuscated text transcription with Captchas -- and combined it with a problem that by definition only humans can do: fixing scanned text that computational techniques failed at.
 With ReCaptcha, online visitors prove they are human and help digitize scanned archives at the same time.
 
-<!-- TODO2
-## Failures and Concerns
-
-### Ethics
--->
-
-
-## Research in Information Science
+## In Information Science
 
 In information retrieval, the focus on crowdsourcing has been predominantly in the use of paid crowds for generating evaluation datasets, though there have been efforts to use crowds to improve document representation or even query-specific ranking.
 
@@ -238,9 +219,9 @@ While much of the focus was on identifying and accounting for lower quality work
 For example, the Glasgow team encourage fast turnaround, reducing rating click counts, pre-loading pages, and floating the assessment question [@mccreadie_university_2011].
 Earlier, the same team crowdsourced judgments for the TREC Blog track with a design that color coded completed tasks based on whether they matched other raters and a gold standard [@mccreadie_university_2011].
 
-Grady and Lease also explored the effect of changing human factors on information retrieval relevance judging through Mechanical Turk [-@grady_crowdsourcing_2010]. They considered four factors: terminology, base pay, offered bonus, and query wording. Though their findings were inconclusive, their study provides guidance on the issues related to this form of study. The proposed dissertation builds upon Grady and Lease's work, as well as other parameterization studies like Mason and Watts [-@mason_financial_2010], by evaluating more drastic deviations from the core structure of a paid crowdsourcing task.
+Grady and Lease also explored the effect of changing human factors on information retrieval relevance judging through Mechanical Turk [-@grady_crowdsourcing_2010]. They considered four factors: terminology, base pay, offered bonus, and query wording. Though their findings were inconclusive, their study provides guidance on the issues related to this form of study. This dissertation builds upon Grady and Lease's work, as well as other parameterization studies like Mason and Watts [-@mason_financial_2010], by evaluating more drastic deviations from the core structure of a paid crowdsourcing task.
 
-The effect of wording and terminology, one of Grady and Lease's focal points, has often been alluded to as a factor in crowdsourcing, including in Library and Information Science work. In writing about The Commons, a successful museum crowdsourcing project with Flickr, the Library of Congress reported that the "text announcing the Commons ("This is for the good of humanity, dude!!') struck just the right chord" [@springer_for_2008].
+The effect of wording and terminology, one of Grady and Lease's focal points, has often been alluded to as a factor in crowdsourcing, including in Library and Information Science work. In writing about The Commons, a successful museum crowdsourcing project with Flickr, the Library of Congress reported that the "text announcing the Commons ('This is for the good of humanity, dude!!') struck just the right chord" [@springer_for_2008].
 
 Alonso and Baeza-Yates have also written about the effect of different parameterizations of paid crowdsourcing tasks, considering the quality of relevance judgments with varying numbers of contributors evaluation each task, topics per task, and documents per query. In doing so, they cite interface design as the most important part of experimental design on Mechanical Turk and recommend following survey design guidelines and provided clear, colloquial instructions [@alonso_design_2011]. This study agrees with their sentiment, and strives to formally understand and articulate the differences that interface design influences in crowdsourcing.
 
@@ -260,8 +241,6 @@ While their approach has limited success as a generalized retrieval approach, th
 Their model categorizes users by expertise domain and builds domain topics from related annotations.
 These are linearly smoothed with document and query language models.
 In the context of del.icio.us, their approach improves over traditional unigram models over the document text.
-Their model parallels some of the approaches proposed for this dissertation's study over Pinterest.
-The proposed study makes similar assumptions on the meaning of an individual annotation, but differs in that it makes no assumptions about the expertise about a user and relies on the interpretations from user curated groupings rather than inferred topics.
 
 Finally, @harris_applying_2012 provide a comprehensive overview of ways that crowdsourcing and games with a purpose can be incorporated in the information retrieval workflow.
 While crowdsourcing is noted as highly feasible for evaluation, it is also noted as an approach which can help in building document collections, identifying information needs, and query refinement.
@@ -273,4 +252,4 @@ While crowdsourcing is noted as highly feasible for evaluation, it is also noted
 
 Crowdsourcing is a phenomenon with a wide umbrella and a broad range of parameterizations.
 For information science, it is potentially very valuable for its ability to efficiently gather extra-textual information about existing objects.
-The next two chapters propose two studies for learning more about this quality.
+The next chapter presents a typology, again focused on broad crowdsourcing, before turning back to focus on information science crowdsourcing with the subsequently original research chapters.
