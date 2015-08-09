@@ -5,11 +5,11 @@ Design Facets of Crowdsourcing: A Typology for Information Science
 \newthought{Crowdsourcing is a production model} where many people, often non-professionals, contribute to a common product.
 The pattern is potentially very useful for information science, because the ability for large numbers of diverse people to react to and enrich information items offers new ways to represent them.
 
-[^iConfCite]: A version of this chapter was previously presented at iConference 2015 [@organisciak_design_2015].
-
-
 The scope of crowdsourcing is broad, however, and the myriad approaches to collaboration among distributed crowds lend a lack of coherence which may intimidate a practitioner.
-In order to address this, this chapter presents a typology of crowdsourcing for information science.
+In order to address this, this chapter presents a typology of crowdsourcing for information science.[^iConfCite]
+
+[^iConfCite]: A version of this chapter was previously presented at iConference 2015 with co-author Michael B. Twidale [@organisciak_design_2015].
+ For this and other co-authored work described in this dissertation, material contributions credited to co-authors, such as data and tables, are attributed where necessary. What is not noted at granularity is the valuable advising and editing contributions co-authors have made, and in each instance of collaboration this should be expected.
 
 Crowdsourcing, the collaboration of distributed contributors on a common product, promises value to library and information science in a variety of ways.
 Information systems and digital repositories deal with overwhelming amounts of materials that can be annotated with help from many hands, and the relationship that cultural heritage collections hold with their audience can potentially be strengthened by pursuing meaningful collaboration between the two.
