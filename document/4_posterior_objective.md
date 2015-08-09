@@ -86,7 +86,7 @@ Furthermore, even when the ratings or annotations from unvetted semi-anonymous o
 The impetus for the research in this chapter was a desire to improve the effectiveness of an information retrieval system for the Institute of Museum and Library Services Digital Collections and Content project (IMLS DCC).
 The IMLS DCC is a large aggregation of digital cultural heritage materials from museums, libraries, and archives across the country. 
 Originally launched in 2002 as a point of access to digital collections supported by the IMLS through National Leadership Grants and LSTA funding, it has since expanded its scope to provide more inclusive coverage of American history collections, regardless of funding source.
-As a result of its position among the largest cultural heritage aggregations in the U.S., research through the IMLS DCC looks at the problems associated with reconciling content from thousands of different providers, including metadata interoperability, collection-item relationships, and access to materials.
+As a result of its position among the largest cultural heritage aggregations in the US, research through the IMLS DCC looks at the problems associated with reconciling content from thousands of different providers, including metadata interoperability, collection-item relationships, and access to materials.
 One of the difficulties that IMLS DCC must address is information retrieval when the metadata records in its aggregation are of inconsistent length, style, and informativeness.
 Overcoming these types of problems in order to improve subject access to the breadth of materials is an active problem [e.g. @efron_building_2011; @efron_improving_2012].
 In doing so, human relevance ratings are an invaluable resource for evaluating document relevance in a given query.
@@ -119,7 +119,7 @@ This has been considered both as an act of choosing the next tasks for a worker 
 In 2011, the Text Retrieval Conference (TREC) held a Crowdsourcing track for the first time, which dealt directly with the evaluation of search engines by non-expert workers hired through micropayment services.
 Teams looked at one or both of two tasks.
 The first task was to effectively collect high-quality relevance judgments.
-The second task, in line with the goals of this study, was to "compute consensus (aka. ‘label aggregation') over a set of individual worker labels" [@lease_overview_2011].
+The second task, in line with the goals of this study, was to "compute consensus (aka ‘label aggregation') over a set of individual worker labels' [@lease_overview_2011].
 
 There were two evaluation sets used with the second task of the TREC Crowdsourcing Track: one of consensus labels from among all the participating teams and one of ground truth gold labels done by professional assessors.
 Accuracy rates – the number of properly labeled ratings divided by all ratings – spanned from 0.35 to 0.94 with a median of 0.835 against the crowdsourced consensus labels, while the runs against the gold labels spanned from 0.44 to 0.70 with a median of 0.66.
@@ -167,7 +167,7 @@ The cleaner set of ground truth data is a set of oracle ratings done by myself a
 Since the authors are of known reliability and have a close understanding of both the rating task and the data being rated, the oracle judgments serve as an effective measure for evaluating the accuracy of the majority votes themselves.
 
 ## Data
-Crowdsourced annotation is studied over two two datasets in this study. 
+Crowdsourced annotation is studied over two datasets in this study. 
 
 In the dataset of primary focus, workers contributed judgements of the relevance of cultural heritage documents to a given query.
 This data was rated with three-annotator redundancy, which means that for each document, there were three workers that completed the rating task.
@@ -220,7 +220,7 @@ Since tasks were done in sets of ten, the order referred to where in this set th
 
 Order served as a useful grouping factor because the time spent on the first rating is confounded with the time spent reading the rating instructions, which is to say that the two are inseparable.
 Figure @fig:ch3-dwell1 shows the distribution of worker performance by dwell time alone.
-As expected, a correct classifications do tend to take slightly more time, 
+As expected, a correct classification do tend to take slightly more time, 
 there is not enough evidence to reject the null hypothesis of equal distributions.
 Thus, for this the setting of cultural heritage retrieval relevance judgments, dwell time alone is insignificant to performance (Wilcoxon rank sum $p=0.064$; $p=0.154$ when excluding extreme outliers).
 
@@ -242,8 +242,6 @@ The fact that a worker spending more time on the first rating indicates a higher
 If this is in fact what accounts for the significant different, it should be an effect that lingers across the full set of data.
 
 ![Accuracy of workers on ratings after then first one, shown as density distribution of all workers. Dotted line shows workers that are correct on the first task, solid line shows workers that are incorrect.](images/ch3-prob-after-first.png) {#fig:ch3-prob-after-first}
-
-<!-- TODO.. why did I start labelling these ch3 when it's chapter four?! Oh well, own it.-->
 
 Figure @fig:ch3-prob-after-first shows this to be the case, with workers that make a correct rating on the first item are much more reliable in the rest of the rating set.
 
@@ -330,7 +328,7 @@ In other words, majority rating proved fairly efficient at smoothing over indivi
 
 In order to further increase worker agreement, one could presumably run the replacement process again.
 However, when non-expert labels are being paid for, removing problematic workers can grow quite costly – especially given the low payoff in accuracy.
-A cheating or sloppy worker can also rate a large number of ratings quickly, making the potential lost profit even higher.
+A cheating or sloppy worker can also rate many ratings quickly, making the potential lost profit even higher.
 However, the removal and blocking of low-agreement workers can be automated fairly easily, making it possible to incorporate in real time within a rating interface. 
 
 Why were some workers correct – or at least in the majority opinion of what a correct rating is – less than chance?
@@ -365,7 +363,7 @@ This algorithm converges or approaches a convergence limit after a number of ite
 The number of iterations that are required before the data converges varies, but only a few are generally needed for relatively simple data such as information retrieval relevance judgments.
 
 The anticipated benefit to this approach is that worker quality is less dependent on circumstance.
-Consider the follow scenarios:
+Consider the following scenarios:
 
 - A worker makes a dissenting rating on a difficult task.
 To form an opinion only on whether they agreed or disagreed with other workers would be unfair to this worker and possibly remove authority from a good worker.
@@ -438,7 +436,7 @@ $U_{i} = U_{i}\frac{1}{|U|}\sum_{j}^{}U_{j}$
 - Relative scoring.
 Reliability scores are calculated on the confidence of their ratings relative to the highest rating in each set.
 
-For comparison, we also ran a worker reliability scoring function as described in [^TODO cite wang et al 2011], which is based on the accuracy rate of the workers (i.e., how many they rated correctly compared to incorrectly) without any weight given to the confidence in the tasks that they completed.
+For comparison, we also ran a worker reliability scoring function as described in @wang_managing_2011, which is based on the accuracy rate of the workers (i.e., how many they rated correctly compared to incorrectly) without any weight given to the confidence in the tasks that they completed.
 The various techniques for calculating confidence and setting worker reliability scores were combined in sensible ways and evaluated. 
 
 Accuracy rates were recorded for the number of correct labels applied at the fifth iteration of each algorithm. 
@@ -492,17 +490,17 @@ Table: Accuracy rates of iterative algorithms on different datasets. All iterate
 Table @tbl:ch4-accuracy displays the accuracy ratings for the various runs.
 This can inform a number of observations.
 
-Once again majority voting appears to be quite effective.
+Again, the majority voting appears to be quite effective.
 Consider the baseline majority accuracy of 0.8573 in comparison to the similar task of relevance judgment in the TREC Crowdsourcing Track, where the best algorithms peaked at $0.70$ accuracy [@lease_overview_2011] of the gold label set, and it becomes clear that our dataset is fairly clean from the start.
 The effectiveness of the baseline majority vote for the primary data is also accentuated by the relatively small gains in accuracy that is gained by the algorithm combinations.
 
 In contrast, the Twitter sentiment dataset has a much lower baseline.
-The bandwidth of contribution with this data is considerably more spread out — where with the binary categories the worst case scenario for three workers is agreement between only two, the five-category Twitter data can result in nobody agreeing.
+The bandwidth of contribution with this data is considerably more spread out — where with the binary categories the worst case scenario for three workers is agreement between only two, the five-category Twitter data can result in no agreement.
 With the Twitter data, workers also showed an aversion to administrative categories: when the oracle worker would rate a message as "spam" or "incoherent", the online workers avoided doing so.
 In our IMLS DCC data, this worker coyness was seen with the "I don't know" ratings, but those were treated as missing data and removed.
 
 For its lower starting point accuracy, the Twitter data showed greater improvements in accuracy with the iterative algorithms than the relevance ratings.
-Similarly the iterative algorithms proved more robust against the cheaters that were artificially inserted into the data.
+Similarly, the iterative algorithms proved more robust against the cheaters that were artificially inserted into the data.
 This seems to point to their usefulness with particularly problematic data.
 
 The iterative algorithms did not have the same effects, however.
@@ -519,8 +517,8 @@ More information can become available by including more categories or increasing
 However, including more workers also has a positive effect on quality.
 Thus, the experience of this study is that for binary labels, majority rating is generally robust enough.
 
-With regards to RQ3: agreement does seem to indicate quality for objective-normative tasks. However, while removing high disagreement workers improves, well, measures of agreement, for low granularity tasks like relevance judgments it more more fruitful to collect multiple independent contributions rather that seeking to punish the black sheep workers.
-Still for more complex data, like the Twitter sentiment ratings, correcting judgments based on measures of a worker's quality (by proxy of agreement) is effective.
+With regards to RQ3: agreement does seem to indicate quality for objective-normative tasks. However, while removing high disagreement workers improves, well, measures of agreement, for low granularity tasks like relevance judgments it more fruitful to collect multiple independent contributions rather that seeking to punish the black sheep workers.
+Still, for more complex data like the Twitter sentiment ratings, correcting judgments based on measures of a worker's quality (by proxy of agreement) is effective.
 
 ## Conclusion
 
@@ -543,4 +541,4 @@ It was found that high disagreement among non-expert workers is not necessarily 
 Low inter-rater agreement may indicate a difficult task or individual rogue workers.
 While inter-rater agreement can be increased significantly by replacing the work of low quality workers, the improvement in accuracy is less defined.
 
-\newthought{These results shed light on [TODO but..]}
+\newthought{These results shed light on} the characteristics of workers on a simple relevance judgment tasks. However, the most interesting finding seems to suggest the important of a worker's time spent internalizing the codebook. Are there ways to encourage this sort of behavior? What other changes can we make through collection-time tweaks? The next chapter shifts focus to these issues.
