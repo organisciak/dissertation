@@ -57,7 +57,7 @@ While these are all valid ways of viewing crowdsourcing, more qualitative or nat
 First, crowdsourcing is distinguished by how work is collaborated on: in an integrative or selective manner.
 Secondly, the type of work that is performed is faceted into routine, complex, and creative tasks.
 @vukovic_towards_2010 take yet another frame, of business-centric crowdsourcing uses.
-Crowd type, incentives, quality assurance,government and legal, and social factors play into a parsing of crowdsourcing in this scope.
+Crowd type, incentives, quality assurance, government and legal, and social factors play into a parsing of crowdsourcing in this scope.
 Finally, @rouse_preliminary_2010 propose a taxonomy based on the nature of the crowdsourcing, focusing on capabilities (simple, moderate,
 sophisticated), benefits (community, individual, or mixed), and motivation.
 Their hierarchical taxonomy notes motivations relative to the other two conditions.
@@ -82,7 +82,7 @@ Some of the most important questions in differentiating crowdsourcing include:
     they combined into a larger contribution?
 
 -   What do the contributions look like? Are they subjective (involving
-    opinions or ranking) or objective (there is an agreed upon best
+    opinions or ranking) or objective (there is an agreed best
     response)?
 
 -   Who is asking for the contributions? Who is benefiting?
@@ -200,7 +200,7 @@ Below is a list of primary motivators seen in @organisciak_why_2010, but also pa
     approach for collecting contributions, and is an option in the
     absence of other motivators or where certainty is required.
     However,
-    it also introduces bottlenecks of scale, and negates some of the
+    it also introduces bottlenecks of scale, and negates some
     benefits of intrinsic motivation.
     @mason_financial_2010 note that, while intrinsic
     motivation still exists on paid crowdsourcing platforms, it is
@@ -240,13 +240,14 @@ Low barriers to entry
 -   **Altruism and Meaningful contribution**.
     People like to help if
     they believe in what they’re helping.
-    Writing about Flickr Commons, Library of Congress noted that they "appear to have tapped into the Web community's altruistic substratum by asking people for help.People wanted to participate and liked being asked to contribute" [@springer_for_2008].
+    Writing about Flickr Commons, Library of Congress noted that they "appear to have tapped into the Web community's altruistic substratum by asking people for help.
+    People wanted to participate and liked being asked to contribute" [@springer_for_2008].
     With Galaxy Zoo, the appeal for many
-    contributors that that it offers a tangible way to contribute to
+    contributors that it offers a tangible way to contribute to
     real science.
     @rouse_preliminary_2010 also argues for altruism's place in a taxonomy of
     crowd motivation.
-    @kraut_building_2011 argue that appeals to the value of a contributions
+    @kraut_building_2011 argue that appeals to the value of a contribution
     are more effective for people that care about the domain.
 
 -   **Sincerity**.
@@ -308,7 +309,7 @@ This motivator factors into the taxonomy by as
 
 -   **Window fixing**.
 Nurturing a well-maintained community where the
-    members are compelled to support it’s health.
+    members are compelled to support its health.
 
 ### Centrality
 
@@ -328,7 +329,7 @@ Peripheral crowdsourcing also often accompanies a pattern of reacting to existin
 @schenk_crowdsourcing_2009 and @geiger_managing_2011 discuss two types of aggregation: *integrative* and *selective*.
 Integrative aggregation pools contributions into a common product, like a wiki, while selective aggregation tries to choose the best contributions, such as in contests.
 
-This simple separation hides some of the complexity seen in aggregation approaches.
+This simple separation hides some complexity seen in aggregation approaches.
 Reconciling multiple different contributions can be difficult, and integrative aggregation can be approached in a number of ways.
 We argue the following finer views on integrative aggregation are useful:
 
@@ -372,7 +373,7 @@ multi-contribution redundancy, a crowd review workflow, expert review,
 and designs that disincentive poor quality or obstruct the ability to do so.
 @quinn_human_2011 likewise look at quality assurance, noting the large focus on improving quality for quantifiable contributions.
 
-In our typology, we consider quality as a best practice issue that follows from how users are aggregated.
+In our typology, we consider quality as a best practices issue that follows from how users are aggregated.
 With summative aggregation, for example, quality is often pursued by a separate crowdsourcing step:
 allowing online visitors to flag low-quality or otherwise problematic contributions.
 Other times, such as with question and answer websites
@@ -387,8 +388,8 @@ Who directs the crowdsourcing activities and who benefits from the contributions
 Considering the director of a crowdsourcing task,
 @zwass_cocreation_2010 distinguishes between *autonomous* and
 *sponsored* forms of crowdsourcing.
-*Sponsored* crowdsourcing is when there is a entity at the top soliciting the contributions: a client of sorts.
-In contrast *autonomous* crowdsourcing serves the community itself.
+*Sponsored* crowdsourcing is when there is an entity at the top soliciting the contributions: a client of sorts.
+In contrast, *autonomous* crowdsourcing serves the community itself.
 Autonomous crowdsourcing can be in a centralized location, like a community-written wiki or video-sharing website, or exist loosely, as in blogs.
 @zwass_cocreation_2010 explains: "Marketable value is not necessarily consigned to the market—it may be placed in the commons, as is the case with Wikipedia."
 
@@ -436,10 +437,10 @@ There is much effort expended in archiving, enriching, appreciating, and sharing
 Objective tasks are assumed to have an authoritative truth, even if it is unknown.
 For example, in transcribing scanned texts, it is assumed that there is a ‘correct’ passage in the work that has been scanned.
 
-In contrast, subjective tasks have a variable concept of correctness, as they are are not expected to be consistent between contributors.
+In contrast, subjective tasks have a variable concept of correctness, as they are not expected to be consistent between contributors.
 
 Human computation undertakings are commonly objective tasks, and taxonomic efforts for human computation – such as Schenk and Guittard's split of routine, complex, and creative
-[-@schenk_crowdsourcing_2009] – do not touch on the subjective/objective separation in a direct way.
+[-@schenk_crowdsourcing_2009] – do not touch on the subjective/objective separation directly.
 
 The subjective-objective distinction has consequences for training and quality control.
 Objective tasks lead to a training approach where the ideal result is that everyone performs the task in the same one right way.
@@ -535,7 +536,7 @@ To conclude, I offer some practical examples to provide a template for crowdsour
     are also given an option to fix the transcriptions.
 
 -   *No.* Core crowdsourcing requires more technical overhead, but
-    results in some of the most exciting examples of crowdsourcing.
+    results in some of the more interesting examples of crowdsourcing.
 *Old
     Weather* or *Transcribe Bentham* show how archives can engage with
     interested members of the public, while arguably providing a strong
@@ -585,7 +586,7 @@ A
     provide examples of how a system can emphasize the incentives they
     offer to potential volunteers.
 Most of the successful projects noted
-    in this study offer some of the primary motivators.
+    in this study offer some primary motivators.
 
 -   *Don't have motivators.* For trickier or less intrinsically
     interesting data, it is possible to hire on-demand workers through a
