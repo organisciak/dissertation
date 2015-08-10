@@ -1,0 +1,155 @@
+{
+  "items": [
+    9.51386108477204e+16, 
+    5.5647609767733766e+17, 
+    1.2026025251972878e+17, 
+    3659243419266073.0, 
+    1.606519116786779e+17, 
+    2.5058316674052784e+17, 
+    2.3890195520626806e+17, 
+    5.11510470150033e+17, 
+    8514686766779371.0, 
+    2.3643966764345764e+16
+  ], 
+  "facet": {
+  	"query": ""
+  },
+  "meta": {
+    "poor": "images of buffalos or chicken", 
+    "query": "buffalo chicken dip", 
+    "good": "images of buffalo chicken dip (a dip for food, like chips), recipes for buffalo chicken dip", 
+    "ok": "images of other types of dip, images of ingredients"
+  }, 
+  "answers": [
+    {
+      "95138610847720400": {
+        "probability": {
+          "Somewhat Relevant": 0.375, 
+          "Not Relevant": 0.625, 
+          "Very Relevant": 0.0
+        },
+	"teaching": {
+	"tips": "This is a sandwich, not dip. Sometimes search engines match some words, but not the right ones!"
+	}
+      }
+    }, 
+    {
+      "556476097677337664": {
+        "probability": {
+          "Somewhat Relevant": 0.20000000000000001, 
+          "Not Relevant": 0.80000000000000004, 
+          "Very Relevant": 0.0
+        },
+	"teaching": {
+	"tips": "Again, this is a wrap, not a dip."
+	}
+
+      }
+    }, 
+    {
+      "120260252519728784": {
+        "probability": {
+          "Somewhat Relevant": 0.41176470588235292, 
+          "Not Relevant": 0.52941176470588236, 
+          "Very Relevant": 0.058823529411764705
+        },
+	"teaching": {
+	"tips": ""
+	}
+
+      }
+    }, 
+    {
+      "3659243419266073": {
+        "probability": {
+          "Somewhat Relevant": 0.1875, 
+          "Not Relevant": 0.6875, 
+          "Very Relevant": 0.125
+        },
+	"teaching": {
+	"tips": ""
+	}
+
+      }
+    }, 
+    {
+      "160651911678677888": {
+        "probability": {
+          "Somewhat Relevant": 0.25, 
+          "Not Relevant": 0.6875, 
+          "Very Relevant": 0.0625
+        },
+	"teaching": {
+	"tips": ""
+	}
+
+      }
+    }, 
+    {
+      "250583166740527840": {
+        "probability": {
+          "Somewhat Relevant": 0.11764705882352941, 
+          "Not Relevant": 0.88235294117647056, 
+          "Very Relevant": 0.0
+        },
+	"teaching": {
+	"tips": ""
+	}
+
+      }
+    }, 
+    {
+      "238901955206268064": {
+        "probability": {
+          "Somewhat Relevant": 0.52941176470588236, 
+          "Not Relevant": 0.35294117647058826, 
+          "Very Relevant": 0.11764705882352941
+        },
+	"teaching": {
+	"tips": ""
+	}
+
+      }
+    }, 
+    {
+      "511510470150033024": {
+        "probability": {
+          "Somewhat Relevant": 0.25, 
+          "Not Relevant": 0.375, 
+          "Very Relevant": 0.375
+        },
+	"teaching": {
+	"tips": ""
+	}
+
+      }
+    }, 
+    {
+      "8514686766779371": {
+        "probability": {
+          "Somewhat Relevant": 0.058823529411764705, 
+          "Not Relevant": 0.88235294117647056, 
+          "Very Relevant": 0.058823529411764705
+        },
+	"teaching": {
+	"tips": ""
+	}
+
+      }
+    }, 
+    {
+      "23643966764345764": {
+        "probability": {
+          "Somewhat Relevant": 0.0, 
+          "Not Relevant": 1.0, 
+          "Very Relevant": 0.0
+        },
+	"teaching": {
+	"tips": ""
+	}
+
+      }
+    }
+  ], 
+  "_id": "55c25383c7ed2ff20c44da15"
+}

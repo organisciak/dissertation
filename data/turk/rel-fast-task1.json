@@ -1,0 +1,14 @@
+{
+	"params": {
+		"hit_id": "55c3021cf7dc871244355b59"
+	},
+	"url": "https://crowdycrowdy.com/#/relevance/fast",
+	"title": "Judge as many image search results as you can in 1 minute",
+	"description": "Tell us if images are relevant to an online search [with increasing bonuses]",
+	"keywords": ["images", "relevance judgement", "visual", "search results", "bonus"],
+	"frame_height": 650,
+	"amount": 0.10,
+	"annotation": "dissertation/data/turk/image-relevance-fast-fast1.json",
+	"max_assignments": 5,
+	"num_hits": 30
+}
