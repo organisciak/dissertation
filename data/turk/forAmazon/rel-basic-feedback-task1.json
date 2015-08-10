@@ -1,0 +1,14 @@
+{
+	"params": {
+		"hit_id": "55c5576b406503ba27582732"
+	},
+	"url": "https://crowdycrowdy.com/#/relevance/basic",
+	"title": "Judge image search results",
+	"description": "Tell us if images are relevant to an online search [1 min, bonuses for more HITs]",
+	"keywords": ["images", "relevance judgement", "visual", "search results"],
+	"frame_height": 650,
+	"amount": 0.20,
+	"annotation": "dissertation/data/turk/image-relevance-basic-feedback1.json",
+	"max_assignments": 4,
+	"num_hits": 39
+}
