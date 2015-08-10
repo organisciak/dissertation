@@ -448,7 +448,7 @@ Basically, the process was as follows:
  The retrieval results are used for measuring the efficacy of 
 
 <!-- What is pinterest -->
-\newthought{Pinterest is a social network} centered on the saving, sharing, and curation of online images.
+\newthought{Pinterest is a social network} centered on the saving, sharing, and curation of online images
 It is built entirely on crowd contributions.
 On Pinterest, the document unit is a 'pin': an image, associated with a web URL and page title, and a required text description provided by the user.
 Though the most common type of pin is saved from an external website, it is also possible to upload personal content.
@@ -458,6 +458,16 @@ Pins are sorted into curated lists, referred to as 'boards'.
 Like pins, classification into boards is not controlled.
 While adding a pin to a board is an act of classification, the classes are user-defined and can be created for various reason, such as quality judgments (e.g. "Neat stuff"), thematically descriptive (e.g. "dream wedding"), or miscellany of various sorts (e.g. "inspiration", "funny").
 Boards are user-specific, created by a user with a title, description, category, and optional map.
+
+In the words of the company materials, Pinterest features three primary purposes: saving (as pins), organizing (into boards), and discovery [@_about_].
+In this way, it is organized in a way familiar to library and archival communities, distribution online images with an eye toward discoverability and curation.
+
+It is also a large-scale site of descriptive crowdsourcing, recalling past trends in social bookmarking (i.e. the eventually doomed _del.icio.us_) but with a visual spin to the bookmarking activity.
+Users describe pins and categorize them into boards; describe, title, and categorize boards; and contribute various social information, such as comments, repins[^repin], and voting (in the form of 'heart'-ing).
+
+[^repin]: To _repin_ is to save a new pin from an existing pin, using the same source URL and image, but applying a new description and saving to a new board.
+A document's repin count can be interpreted as a measure of a document's internal influence among the Pinterest community.
+
 
 <!--Why study Pinterest?-->
 i\newthought{Pinterest is a novel website} for studying ways to incorporate crowdsourced information into web retrieval.

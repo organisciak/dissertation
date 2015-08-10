@@ -195,7 +195,7 @@ Note that not all sets of tasks had ten items, as our system would track tasks t
 Originally $17700$ data points were collected, though this was later increased to just under $23000$.
 The average amount of time spent on each individual item was $4.8$ seconds, with half of all ratings being done in less than $1.8$ seconds and full rating sets being completed in an average time of $37.3$ seconds.
 
-![The number of ratings contributed per rater, roughly following a power-law distribution.](../images/ch3-contributiondist.png) {#fig:ch3ratedist}
+![The number of ratings contributed per rater, roughly following a power-law distribution.](images/ch3-contributiondist.png) {#fig:ch3ratedist}
 
 There were $157$ unique workers that contributed ratings, rating an average of $141.9$ tasks.
 The most dedicated worker completed a total of 1404 ratings.
@@ -216,7 +216,7 @@ Among the statistics collected for the relevance judgment dataset was _dwell tim
 The hypothesis motivating this metric was that dwell time was not significant when understood independently, but might indicate the quality of workers when taking into account the order in which tasks were completed.
 Since tasks were done in sets of ten, the order referred to where in this set they occurred.
 
-![Figure 4: Frequency distribution of the average amount of time that users spent on the tasks that they rated incorrectly and those they rated correctly.](../images/ch3-dwell.png) {#fig:ch3-dwell1}
+![Frequency distribution of the average amount of time that users spent on the tasks that they rated incorrectly and those they rated correctly.](images/ch3-dwell.png) {#fig:ch3-dwell1}
 
 Order served as a useful grouping factor because the time spent on the first rating is confounded with the time spent reading the rating instructions, which is to say that the two are inseparable.
 Figure @fig:ch3-dwell1 shows the distribution of worker performance by dwell time alone.
