@@ -1,0 +1,161 @@
+{
+  "items": [
+	560064903630270592,
+	192458584045939616,
+	501166264757174592,
+	570549846513485824,
+	31947478579159400,
+	418764465324142912,
+	234327986831240800,
+	562527809680152064,
+	227924431116382720,
+	110690103315494464
+  ], 
+  "meta": {
+    "query": "upcycle", 
+    "good": "items being reused in a way that improves on the original", 
+    "ok": "images that show something in the process of being rebuilt or reused"
+  }, 
+  "answers": [
+    {
+      "item":560064903630270592,
+      "answer":{
+        "probability": {
+          "Somewhat Relevant": 0.25, 
+          "Not Relevant": 0.5, 
+          "Very Relevant": 0.25
+        },
+	"teaching": {
+	"tips": "As far as we can tell, this is just a regular table, so it is not 'upcycled' and therefore not relevant."
+	}
+      }
+    }, 
+    {
+      "item": 192458584045939616,
+      "answer": {
+        "probability": {
+          "Somewhat Relevant": 0.3125, 
+          "Not Relevant": 0.125, 
+          "Very Relevant": 0.5625
+        },
+	"teaching": {
+	"tips": "This is very relevant to people searching for 'upcycle', because they are repurposing old toys as hangers. Sometimes, you can get tips by hovering over the image. This isn't always useful, but in this case, it points out that those animals are 'toys'."
+	}
+
+      }
+    }, 
+    {
+      "item": 501166264757174592,
+      "answer": {
+        "probability": {
+          "Somewhat Relevant": 0.26666666666666666, 
+          "Not Relevant": 0.066666666666666666, 
+          "Very Relevant": 0.66666666666666663
+        },
+	"teaching": {
+	"tips": "Remember to read the instructions, which explain that relevant 'upcycle' images show things that improve on the original. Here, plastic bottles are used for decoration, make something out of junk."
+	}
+
+      }
+    }, 
+    {
+      "item": 570549846513485824,
+      "answer": {
+        "probability": {
+          "Somewhat Relevant": 0.1875, 
+          "Not Relevant": 0.1875, 
+          "Very Relevant": 0.625
+        },
+	"teaching": {
+	"tips": "This one is tricky, but since it looks like a craft that salvaged extra material, it would be interesting to somebody searching for 'upcycle'."
+	}
+
+      }
+    }, 
+    {
+      "item": 31947478579159400,
+      "answer": {
+        "probability": {
+          "Somewhat Relevant": 0.29411764705882354, 
+          "Not Relevant": 0.0, 
+          "Very Relevant": 0.70588235294117652
+        },
+	"teaching": {
+	"tips": "This clothing took a Dr. Suiss t-shirt and re-used it for a dress."
+	}
+
+      }
+    }, 
+    {
+      "item": 418764465324142912,
+      "answer": {
+        "probability": {
+          "Somewhat Relevant": 0.23529411764705882, 
+          "Not Relevant": 0.6470588235294118, 
+          "Very Relevant": 0.11764705882352941
+        },
+	"teaching": {
+	"tips": "This doesn't show materials in the process of being upcycled, and it seems to just be a card that doesn't reuse things."
+	}
+
+      }
+    }, 
+    {
+      "item": 234327986831240800,
+      "answer": {
+        "probability": {
+          "Somewhat Relevant": 0.2857142857142857, 
+          "Not Relevant": 0.14285714285714285, 
+          "Very Relevant": 0.5714285714285714
+        },
+	"teaching": {
+	"tips": "This one is tricky, because the image alone doesn't make it clear that it reuses the colorful cards used for paint samples. When in doubt, see if the descriptions gives more details."
+	}
+
+      }
+    }, 
+    {
+      "item": 562527809680152064,
+      "answer": {
+        "probability": {
+          "Somewhat Relevant": 0.13333333333333333, 
+          "Not Relevant": 0.20000000000000001, 
+          "Very Relevant": 0.66666666666666663
+        },
+	"teaching": {
+	"tips": "Plastic bottles for cups: a case of reusing materials that makes them more valuable."
+	}
+
+      }
+    }, 
+    {
+      "item": 227924431116382720,
+      "answer": {
+        "probability": {
+          "Somewhat Relevant": 0.055555555555555552, 
+          "Not Relevant": 0.055555555555555552, 
+          "Very Relevant": 0.88888888888888884
+        },
+	"teaching": {
+	"tips": "Cookie cutters reused for decoration."
+	}
+
+      }
+    }, 
+    {
+      "item": 110690103315494464,
+      "answer": {
+        "probability": {
+          "Somewhat Relevant": 0.57894736842105265, 
+          "Not Relevant": 0.26315789473684209, 
+          "Very Relevant": 0.15789473684210525
+        },
+	"teaching": {
+	"tips": "This is another tough one, because it is hard to tell if these boxes were bought like that or reuse burlap. Since it might still interest of give a searcher ideas for 'upcycle', it is somewhat relevant: useful, but 'very relevant' images are better search results."
+	}
+
+      }
+    }
+  ], 
+  "_id": "55c25383c7ed2ff20c44da19"
+}
