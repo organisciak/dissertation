@@ -123,7 +123,7 @@
 	    }
     
     ],
-    "trainingSet_id": "",
+    "trainingset_id": "55c25383c7ed2ff20c44da19",
     "facetType": "query",
     "payment": 0.15,
     "setsPerItem": 5,
@@ -135,5 +135,4 @@
     "exclude": {
 	    "pastInTaskType": true
     }
-}
 }
