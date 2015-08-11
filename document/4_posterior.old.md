@@ -1,13 +1,3 @@
-Modeling user-contributed document metadata
-==================================================================
-
-## Introduction
-
-The focus of this chapter will be ranked retrieval over content in the online community _Pinterest_, a system for users to publicly save web images in curated lists.
-Pinterest is a heavily user-generated website where the majority of crowd contributions fit into the descriptive or curatorial mode that this dissertation is concerned with.
-It is an appropriate focus for this study because Pinterest generates new information about existing information objects, and does so in a very loosely constrained manner.
-Studying retrieval in the context of Pinterest allows broader exploration of interpreting abstract contributions in concrete ways more broadly.
-
 Various types of crowdsourcing data have been used for understanding information retrieval documents, including page links[@page_pagerank_1999], microblogging discussion of the documents[@dong_time_2010], social tags[@lamere_social_2008], <!-- TODO2: having trouble finding reasearch for this, but there has to be something out there about using "opinion ratings" in IR--> and implicit relevance feedback[@agichtein_improving_2006].
 On contribution-heavy Pinterest, this study will look at how curated lists can expand a system's language model of the typically text-sparse Pinterest documents.
 
@@ -49,80 +39,7 @@ It is this latter approach to representing subjective aspects of document, to se
 When using crowdsourced information to inform a general understanding of a document, how do you model the variety of interpretations and what are the pitfalls to avoid?
 
 <!--Much work has been completed in posterior corrections for paid crowdsourcing contributions.-->
-<!--## Measuring Reliability of Human Raters
-
-Before performing the study on Pinterest, I the first part of this chapter will outline the work previously completed by @organisciak_evaluating_2012.
-There, we asked questions in interpreting the quality of paid crowdsourcing contributions, which may apply to the new research.
-Does the amount of time spent on a contribution correlate to a good or bad task?
-Does the experience of a contributor, either on the task in general or responding to the specific query, reflect the quality of their contributions?
-Can agreement with other contributors be used to measure and potentially correct for quality differences?
-
-A few additional questions need to be asked for discussion in the context of the proposed dissertation.
-One form of analysis that would be useful but was not originally done is to compare the recoverable signal from artificially smaller contributor groups.
-If data collection had been cut off earlier, how accurate would the various methods for correcting against a worker's reliability be?
-
--->
-
-## Approach
-
-Pinterest is an online community for saving visual bookmarks called 'pins' to curated lists called 'boards'.
-On their about page, Pinterest features three primary purposes: saving (as pins), organizing (into boards), and discovery [@_about_].
-
-__RQ1__: How can crowdsourced contributions be incorporated into an generative language retrieval model, and to what effect?
-
-__RQ2__: Can crowdsourced information be improved as evidence by adding contributor-dependent normalization or smoothing techniques?
-
-__RQ3__: How do you account for novelty, allowing for new items without any crowdsourcing contributions?
-
-For _RQ1_, this study treats descriptive user contributions as evidence for estimates of $P(Q|D)$.
-As a secondary question in addressing _RQ1_, user contributed quality judgments (i.e. "faves", reshares, sharing to external social networks) are considered as evidence for a document's prior probability, $P(D)$.
-
-The primary contributions is in improving a document's language model by smoothing it against the language model of the curated lists, 'boards', that it belongs to.
-Documents, are treated in two ways: as an individual user's 'pin' -- their visual bookmark of a page on the internet alongside their title, description, and the board they add it to -- and as the meta-document, a collection of all user's pins that same source image.
-
-The variability of human interpretations is embraced in modeling a document, rather than pushed against.
-Not everybody sees the same features in the same document, so user-contributed document metadata is treated as a mixture of interpretations.
-
-<!-- TODO2: RQ: consistency in categories among Pins with identical sources -->
-
-### Data
-
--------------------------- ------------------- --------------- --------------------
-  Animals                   Architecture        Art             Cars & Motorcycles  
-  Celebrities               Design              DIY             Crafts              
-  Education                 Film                Music & Books   Food & Drink        
-  Gardening                 Geek                Hair & Beauty   Health & Fitness    
-  History                   Holidays & Events   Home Decor      Humor               
-  Illustrations & Posters   Kids                Men's Fashion   Outdoors            
-  Photography               Products            Quotes          Science & Nature    
-  Sports                    Tattoos             Technology      Travel              
-  Weddings                  Women's Fashion     Other                               
--------------------------- ------------------- --------------- --------------------
-
-Table: Categories for curated lists ('boards') on Pinterest
-
-There is also the concept of a 'repin', which involves saving a new pin from an existing pin, using the same source URL and image, but applying a new description and saving to a new board.
-A document's repin count can be interpreted as a measure of a document's internal influence among the Pinterest community. Additional community-specific social features include commenting on pins and 'liking', which is a unary voting mechanism.
-
-The explicit forms of descriptive crowdsourcing that are seen on Pinterest are:
-
- * Describing pins: description field, choice of board membership
- * Describing boards: title, description, category, fields
- * Social contribution: commenting on pins, repinning, 'liking', Facebook integration 
-
-
-### Design: A Language-modeling approach to curated lists
-
-### Data Collection
-
-### Evaluation
-
-Users will be asked to judge the relevance of 130 documents per retrieval model on a graded scale.
-Documents will be shown in randomized order.
-The large number of results judged per query is influenced by the visual format of Pinterest.
-Pinterest's visual interface is quicker to browse than text results, and I expect that the common focus on ten ranked results is too small in a realistic setting.
-Search results on Pinterest's IR system load 65 results initially, though an 'infinite scroll' keeps loading results as a user scrolls down the page.
-Note that the judging interface format may change following the results of the first half of this dissertation. 
+<!--## Measuring Reliability of Human Raters-->
 
 #### Evaluation Queries
 
@@ -138,9 +55,6 @@ To shift the sample away from the head of the distribution, the sampling frame w
 [^twoletter]: Using the frequencies calculated by @norvig_english_, these are: TH, OF, AN, IN, TO, CO, RE, BE, FO, PR, WH, HA, MA, WI, HE, IS, NO, WA, ON, DE, ST, SE, AS, IT, CA, HI, SO, WE, AR, DI, MO, AL, SU, PA, FR, ME, OR, SH, LI, CH, WO, PO, EX, BY, AT, FI, PE, BU, LA, NE, UN, LE, SA, TR, HO, YO, LO, DO, FA, SI, GR, EN, AC, MI, TE, BO, BA, GO, SP, OU, PL, EV, AB, TA, RA, US, BR, CL, DA, GE, TI, FE, AD, MU, IM, AP, RO, NA, SC, PU, EA, CR, VI, CE, OT, AM, AG, UP, RI, VE.
 
 For each query, a description of what constitute the different levels of relevance will be written by myself, and the relevance of the first one hundred results will be rated by paid workers on a graded relevance scale.
-
-It is likely that Pinterest's own retrieval model incorporates additional implicit feedback from users in the form of click-through data.
-This is a useful indicator of a item's quality, itself a form of crowd-contributed retrieval evidence, but is well-studied and too removed from the scope of this study to undertake.
 
 -------------------------------------------------------------------------------
 appetizers, art,
@@ -169,54 +83,7 @@ zac efron, zara, zucchini bread
 -------------------------------------------------------------------------------
 Table: Popular queries on Pinterest, showing the 5 search input auto-complete suggestions for each letter of the alphabet. Though Pinterest requires users to be logged-in, this list does not appear to be personalized: the same list was derived when I asked other users to run the collection code. \label{pop_pinterest}
 
-#### Baseline
 
-The baseline for the system will be a unigram language model, with the query likelihood based on the terms of a document's title and user description, and smoothed against the collection likelihood with linear smoothing (i.e. _Jelinek-Mercer_).
-
-Fundamentally, the language modelling approach assumes each document as a generative model, and estimates the probability of any given document $d$ generating a query $q$.
-
-The unigram model makes a couple of simplifying assumptions. 
-First, it assumes that the query-independent probability of a document being relevant, $P(d)$, is uniform, meaning it does not affect ranking and can effectively be ignored.
-Also removing the document-independent query constant, it means that
-
-$P(d|q)\propto(P(q|d))$, 
-
-leaving our estimate in the hands of P(q|d).
-The second assumption for the unigram model is that the probability of a document generating a query is the joint probability of each term in the query occurring in the document.
-Thus,
-
-$P(q|d)=\prod\limits_{i=1}^n P(q_i|d)$.
-
-This assumes a conditional independence between terms.
-However, taking a maximum likelihood estimate for $P(q_i|d)$---dividing term $q_i$'s occurrences in document $d$ by the sum of all terms---suffers from some problems.
-First, it heavily punishes documents where a word has not occurred, over-emphasizing seen words in the document's language model.
-Secondly, it fails to account for the general likelihood of a word occurring in the language.
-Thus, we smooth between the query term in the document's language model and its probability in the collections language model ($P(q_i|C)$).
-Smoothing not only de-emphasizes seen words, but also reduces the discriminatory power of common words, akin to the TF-IDF intuition[@zhai_study_2001].
-
-The baseline in this study will use linear smoothing between the two forms of evidence.
-With $\lambda=0.75$ chosen based on a reading of @zhai_study_2001's evaluation of linear smoothing performance, the baseline will use the following estimation of $P(q_i|d)$:
-
-$P(q_i|d)=(1-\lambda)P(q_i|d)+\lambda P(w|C)$.
-
-
-<!-- What would be a surprise? -->
-
-#### System
-
-The testing system will be built on top of Apache Lucene.
-Lucene provides high performance for large collections.
-The baseline system will use the LMJelinekMercerSimilarity similarity scorer, and subsequent changes will be custom made.
-
-### Risks and fallbacks
-
-This study contains some risks on non-results or failures.
-
-Evaluation problems:
-If recruitment for evaluators proves difficult or if the methodology for evaluation is too fatiguing, this study can move to a more reliable albeit less naturalistic evaluation through Mechanical Turk. 
-
-Another evaluation concern is that, with the raw number of materials on Pinterest, there will be more than enough relevant results for the more popular topics related to head queries, even for the baseline system.
-The use of NDCG with graded relevance will offer more sensitivity to potential issues.
 
 ### Related question: stylistic congealment in crowdsourcing 
 
@@ -237,9 +104,3 @@ Wikipedia does not set explicit rules, but conventions are established and polic
 For example, after a recommendation in 2006, editors began insisting on well-sourced information underlying all significant statement on the website [@wales_insist_2006].
 The structure has also enabled efforts such as DBPedia, structured data representing the entities in Wikipedia pages.
 It has also informed information retrieval approaches to understanding entities beyond a query, such as with Google's Knowledge Graph and Microsoft's Satori.
-
-## Conclusion
-
-Descriptive crowdsourcing provides metadata about information objects that has the potential to increase our computation models of them.
-However, crowds are human, biased in hard to predict ways.
-This chapter considers the issues involved in modelling crowd contributions, centered around an information retrieval study on Pinterest.

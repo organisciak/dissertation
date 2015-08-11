@@ -1,21 +1,19 @@
-# Experiment #3: Music Similarity Judgments
+# Designing Tasks for Objective Needs 2
 
-The next chapter will turn to more subjective subjective settings.
+The next chapter will turn to more subjective settings.
 Before continuing, however, it is worth reported on one more study of objective task design, one which has been extracted to its own section because the study looks at both posterior data correction and task design corrections, as discussed in the two chapters prior, while the findings bridge the shift in focus from objective task design to subjective.
 
-\marginnote{This work was previous reported in: 
-}
-
-## Introduction
-Judging the similarity of audio is a difficult and time-consuming task.
+\newthought{Judging the similarity of audio} is a difficult and time-consuming task.
 Since 2006, the Music Information Retrieval Evaluation eXchange (MIREX) has been using volunteer human judges for evaluating the performance of
-music systems submitted to the Audio Music Similarity and Retrieval (AMS) task.
+music systems submitted to the Audio Music Similarity and Retrieval (AMS) task.[^JCDLCite]
+
+[^JCDLCite]: A version of this work was previously presented at JCDL 2015, with co-author J. Stephen Downie [@organisciak_improving_2015].
 
 After analyzing four years of crowd judgments from AMS, finding that the consistency across different raters and years is remarkably poor, this chapter looks at the role of crowdsourcing design and modeling choices in this data variable.
 Following from the previous chapter and especially the first half of this chapter, the low inter-coder consistency is tackled from both a collection approach perspective and a post-collection perspective. 
 Specifically, user normalization, collection instrument design changes, and multiple independent judgments are pursued.
 
-The primary contribution here is an better understanding of data issues that stem from crowdsourced music evaluation datasets, and methods to avoid data quality pitfalls.
+The primary contribution here is a better understanding of data issues that stem from crowdsourced music evaluation datasets, and methods to avoid data quality pitfalls.
 Particularly, our case study of music information retrieval judgments generalizes to a class of evaluation tasks that are subjective-biased.
 
 Music similarity is desired by music digital library users [@lee_survey_2004], and other digital libraries deal with a comparable form of *normative* task where there is no absolutely correct ground truth but a desire to reach a consensus or
@@ -40,11 +38,12 @@ To avoid exhaustion, E6K saves judgments continuously, so that judges can step a
 
 ## Data
 
-$26024$ human judgments of audio similarity were compiled, comprising four years of MIREX’s AMS judgments.
+$26024$ human judgments of audio similarity were compiled, comprising four years of MIREX's AMS judgments.
 The candidate songs were selected for judgment by 8 submitted systems in 2010, 18 in 2011, 10 in 2012, and 8 in 2013.
 Until 2011, 100 queries were evaluated each year, after which MIREX shifted to 50 queries per year.
 
 All the candidates for a query were graded on two scales of similarity:
+
  - The __BROAD__ scale is a categorical ranking from three choices: "not similar", "somewhat similar", and "very similar".
  - The __FINE__ scale is a 101-point numerical rating, from 0-100.
 
@@ -65,10 +64,10 @@ Since our best prediction for the true similarity of two songs is the mean of bo
 In this case, $RMSE=16.58$ against a prediction assuming symmetric similarity.
 
 RMSE is generally meaningful in comparison, but for a sense of the variance with an RMSE of 16.58, consider that it is in the same unit as the scale, which only has a max range of 101 points[^STDdev].
-Alternately, the FINE scale judgements are plotted in Figure {@fig:recip-fine}.[^TODO]
+Alternately, the FINE scale judgements are plotted in Figure {@fig:recip-fine}, which shows this variance clearly.
 The slope shows the expected relationship if similarity was an agreeable metric independent of "which song is listened to first" order effects – an assumption implicitly made in treating similarity as something that can be evaluated.
 
-![Fig Test](images/reciprocal-scores.png) {#fig:recip-fine}
+![Audio similarity judgments for (Song _x_, Song _y_) pairs judged in multiple years.](images/reciprocal-scores.png) {#fig:recip-fine}
 
 [^STDdev]: It  may be helpful in approximating the severity of the problem to remember that RMSE aligns with sample standard deviation.
 
@@ -76,7 +75,7 @@ The noise presented here suggests a great deal of circumstance and randomness in
 
 Comparing the BROAD category of reciprocal pairs tells a similar story (Table {@tbl:amscorr}): only $35\%$ of judges agreed on the category and nearly half was agreement on “somewhat similar” item.
 While some of this is to be expected, it also suggests that *SS* functions as a catch-all category where judges hedge their bets.
-This is supported by its much wider range (@fig:all-dist). [^TODO]
+This is supported by its much wider range (Figure @fig:all-dist).
 
   ---------------------- ---- ---- ----
                          NS   SS   VS
@@ -87,32 +86,36 @@ This is supported by its much wider range (@fig:all-dist). [^TODO]
 
 Table: Relationship of categorical judgments for pairs of songs that have been judged twice over a four-year span of AMS. {#tbl:amscorr}
 
-The weak correlation in re-judging makes it difficult to assess the extent to which the evaluation is actually reflecting the ‘truth’ of what songs are similar.
+The weak correlation in re-judging makes it difficult to assess the extent to which the evaluation is actually reflecting the 'truth' of what songs are similar.
 
 What are the reasons for this weak correlation?
 This study considers this question in the context of crowdsourcing choices, looking at collection format and data treatment as possible sources for the variance.
 First, lets consider some possible explanations.
 
-**Order and priming effects**.
-Perhaps there is an order effect based on either which song a judge listens to first, or a priming effect caused by a judge listening consecutively to a set of song pairs with the same query.
-Research in other contexts has noted the possibility of asymmetrical effects [@tversky_features_1977; @polk_rating_2002; @hiatt_role_2013].
+\clearpage
 
-**Different interpretations of the scale**.
-Do different people treat the rating scale differently? This would be a user bias, but a predictable one.
+- **Order and priming effects**.
+  Perhaps there is an order effect based on either which song a judge listens to first, or a priming effect caused by a judge listening consecutively to a set of song pairs with the same query.
+  Research in other contexts has noted the possibility of asymmetrical effects [@tversky_features_1977; @polk_rating_2002; @hiatt_role_2013].
 
-**Bad intercoder reliability due to task design**.
-Perhaps the E6K system does a poor job controlling for consistency?
+- **Different interpretations of the scale**.
+  Do different people treat the rating scale differently? This would be a user bias, but a predictable one.
 
-**Bad judges**.
-Much crowd research looks at malicious or unreliable contributors.
-This is possible, but unlikely to happen systematically since the volunteers are trusted members of the MIR community.
+- **Bad intercoder reliability due to task design**.
+  Perhaps the E6K system does a poor job controlling for consistency?
 
-**An inherently subjective task**: Does this task present challenges to agreement?
+- **Bad judges**.
+  Much crowd research looks at malicious or unreliable contributors.
+  This is possible, but unlikely to happen systematically since the volunteers are trusted members of the MIR community.
+
+- **An inherently subjective task**. Does this task present challenges to agreement?
 
 It is likely that the noisy, high-variance MIREX music similarity judgments stem from multiple sources.
 In line with the thrust of this dissertation, I focus on measuring how much of that is recoverable: what can be improved by changes to practice.
 The rest of this chapter will at consider 1) corrections for user-specific biases, 2) multiple-keyed judgments, and 3) a task design.
 While order effect are not focused on, partially because their measurement is possibly confounded by the other issues, this chapter's positive results -- showing improved judgment consistency -- provide a better sense of the magnitude at which such effects might exist.
+
+![Distribution of FINE scores relative to BROAD categories](images/broad-histogram.png) {#fig:all-dist}
 
 ## Related Work
 
@@ -126,7 +129,7 @@ However, it is more time-consuming to create, a factor in the decision to use a 
 Also, it suffers from similar inconsistency problems to what we observe in this paper
 [@urbano_crowdsourcing_2010].
 
-Despite the inconsistency observed in this study, research into the power of AMS evaluation for an year not overlapping with our study concluded that the relative rankings of AMS systems in MIREX are sound, with contention on about 4% of pairwise system comparisons [@urbano_audio_2011].
+Despite the inconsistency observed in this study, research into the power of AMS evaluation for a year not overlapping with our study concluded that the relative rankings of AMS systems in MIREX are sound, with contention on about 4% of pairwise system comparisons [@urbano_audio_2011].
 This chapter turn to Mechanical Turk for additional judgments, an option shown as a viable approach to music similarity judgments in multiple studies [@urbano_crowdsourcing_2010; @lee_crowdsourcing_2010].
 
 @urbano_crowdsourcing_2010 looked to paid crowdsourcing for lowering the difficulty of finding human labor for *ranked* similarity judgments.
@@ -135,18 +138,18 @@ Additional research has also looked at *graded* similarity judgments in the cont
 
 ## Approach
 
-To address possible sources of the error in MIREX’s crowdsourced relevance judgments, four approaches are taken:
+To address possible sources of the error in MIREX's crowdsourced relevance judgments, four approaches are taken:
 
- 1. normalizing workers by their personal habits;
- 2. asking new, different judges for judgments;
- 3. adding additional redundant judges[^languageAMS];
- 4. testing an alternate interface that gives judges more guidance on what rating is appropriate.
+ 1. Normalizing workers by their personal habits;
+ 2. Asking new, different judges for judgments;
+ 3. Adding additional redundant judges[^languageAMS];
+ 4. Testing an alternate interface that gives judges more guidance on what rating is appropriate.
 
-[^languageAMS]: Since this chapter involves volunteer contributions, contributors are not uniformly referred to as _workers_, as in the other chapters, except when discussion paid contributors.
+[^languageAMS]: Since this chapter involves volunteer contributions, contributors are not uniformly referred to as _workers_, as in the other chapters, except when discussing paid contributors.
 
 ## Normalizing for Grader-Specific Effects {#normalizing-workers}
 
-*RQ1: Are intra-judge inconsistencies responsible for the lack of reciprocation in AMS similarity judgments?*
+  > _RQ1_: Are intra-judge inconsistencies responsible for the lack of reciprocation in AMS similarity judgments?
 
 The human judges are given a large amount of leeway regarding how they perform a task.
 We set out to see if this contributes to superficial variance, and whether correcting for it can address the poor reciprocation in AMS.
@@ -163,10 +166,10 @@ normal part of human subjectivity.
 Instructions continue to suggest that judges apply a level of 'reasonableness' regarding what is intuitively sensible.
 For example, a low FINE score when the BROAD category is 'very similar' is not reasonable.
 
-This type of error is commonly seen in collaborative filtering for recommendation, where users’ opinions are often treated as a mixture of their nominal rating, adjusted by user-specific and item-specific biases [@koren_bellkor_2009].
-To normalize judges against their specific biases, FINE judgments were translated to z-score values, represented as standard deviations from the judge’s mean rating habit.
+This type of error is commonly seen in collaborative filtering for recommendation, where users' opinions are often treated as a mixture of their nominal rating, adjusted by user-specific and item-specific biases [@koren_bellkor_2009].
+To normalize judges against their specific biases, FINE judgments were translated to z-score values, represented as standard deviations from the judge's mean rating habit.
 This approach was previously seen in
-@hofmann_latent_2004; in our case, adjusted ratings were blocked by a judge’s BROAD score, resulting in three values for each judge: deviation from their typical FINE score for "not similar", "somewhat similar", and "very similar" candidates.
+@hofmann_latent_2004; in our case, adjusted ratings were blocked by a judge's BROAD score, resulting in three values for each judge: deviation from their typical FINE score for "not similar", "somewhat similar", and "very similar" candidates.
 
 The adjusted rating $r^{'}_{u,b}$ for judge $u$ and BROAD category $b$ was calculated in the following way:
 
@@ -183,9 +186,9 @@ In other words, the notion that judges were internally consistent in a way that 
 
 ## Verifying Judgments with New Graders
 
-*RQ2: Are problem judges responsible for inconsistent reciprocal ratings?*
+  > _RQ2_: Are problem judges responsible for inconsistent reciprocal ratings?
 
-*RQ3: Is subjectivity or disagreement of the grading task responsible for inconsistent reciprocal ratings?*
+  > _RQ3_: Is subjectivity or disagreement of the grading task responsible for inconsistent reciprocal ratings?
 
 Would the same low consistent been seen if new judges were asked?
 Getting a second opinion addresses two possibilities: expected error (good judges, biased task) and unexpected error (agreeable task, bad judges).
@@ -211,33 +214,69 @@ In contrast, aggregating multiple worker judgments toward a normative opinion re
 ($55.1\%$ improvement).
 This means that, as asked in *RQ3*, the task is too subjective to trust a single judge and has a high natural variance in judgment.
 
-  Approach                                         RMSE       
-  ------------------------------------------ ---------------- --
-  Baseline (AMS Graders)                          16.58       
-  Normalizing Graders                         16.15 (-0.03%)  
-  Second-opinion (Individual turk workers)    15.53 (-6.3%)   
-  Aggregating workers: 2 votes/judgment       9.72 (-41.4%)   
-  Aggregating workers: 3 votes/judgment       7.45 (-55.1%)   
-  Alternate design (individual judgments)     11.44 (-31.0%)  
-  Alternate design (2 votes/judgments)        7.55 (-54.5%)   
-  Alternate design (3 votes/judgments)        5.40 (-66.1%)   
 
-Table : Deviation (in RMSE) of similarity judgments from expectation.{#tbl:rmse-vals}
++---------------------------+----------------+
+| Approach                  | RMSE           |
++===========================+================+
+| Baseline (AMS Graders)    | 16.58          |
++---------------------------+----------------+
+| Normalizing Graders       | 16.15 (-0.03%) |
++---------------------------+----------------+
+| Second-opinion            |
+| (Individual turk workers) | 15.53 (-6.3%)  |
++---------------------------+----------------+
+| Aggregating workers:      |                |
+| 2 votes/judgment          | 9.72 (-41.4%)  |
++---------------------------+----------------+
+| Aggregating workers:      |                |
+| 3 votes/judgment          | 7.45 (-55.1%)  |
++---------------------------+----------------+
+| Alternate design          |                |
+| (individual judgments)    | 11.44 (-31.0%) |
++---------------------------+----------------+
+| Alternate design          |                |
+| (2 votes/judgments)       | 7.55 (-54.5%)  |
++---------------------------+----------------+
+| Alternate design          |                |
+| (3 votes/judgments)       | 5.40 (-66.1%)  |
++---------------------------+----------------+
+
+Table: Deviation (in RMSE) of similarity judgments from expectation.{#tbl:rmse-vals}
 
 
 ## Improving task guidance
 
-_RQ4: Does the task design affect the quality of judgments?_
+  > _RQ4_: Does the task design affect the quality of judgments?
 
 One of the threats to grading reliability is a hard to understand or poorly defined coding scheme [@neuendorf_content_2002].
-Following from earlier discussion, we turn to the effect of a task’s design on the consistency of judgments by evaluating a different collection interface.
+Following from earlier discussion, we turn to the effect of a task's design on the consistency of judgments by evaluating a different collection interface.
 
 New judgments are again collected on Mechanical Turk.
-In contrast to the previous evaluation’s fidelity to the original collection interface, here the task design is changed to more carefully guide graders.
+In contrast to the previous evaluation's fidelity to the original collection interface, here the task design is changed to more carefully guide graders.
 
 Previous literature notes that the similarity ratings can be biased because the perceived distance between points in a rating scale is not linear, and word choice can affect interpretation of the task [@katter_influence_1968; @eisenberg_measuring_1988].
 This motivated us to measure some changes to the rating scale: BROAD scores were no longer collected, and FINE scores gave textual descriptions for ranges of the 0-100 scale, serving as anchors.
-We also tested this interface with colloquial language to make the instructions more broadly accessible.[^TODO; I have space to explain more]
+We also tested this interface with colloquial language to make the instructions more broadly accessible, with the wording shown in Table @tbl:colloquial.
+
++-------+----------------------------------------------------------+
+| Range | Description                                              |
++=======+==========================================================+
+| 0-20  | The candidate couldn’t be more different from the query. |
++-------+----------------------------------------------------------+
+| 20-40 | The candidate is not really similar to the query song.   |
++-------+----------------------------------------------------------+
+| 40-60 | The candidate doesn’t sound like the query too much, but |
+|       | shares some themes                                       |
++-------+----------------------------------------------------------+
+| 60-80 | The candidate has a similar sound or feel to the query   |
+|       | song                                                     |
++-------+----------------------------------------------------------+
+| 80-99 | The candidate sounds like the query song.                |
++-------+----------------------------------------------------------+
+| 100   | They are the same song!                                  |
++-------+----------------------------------------------------------+
+
+Table: The colloquial wording presented to graders in the alternative task interface {#tbl:colloquial}
 
 ### Results
 
@@ -255,12 +294,13 @@ For AMS and similarly semi-subjective tasks, there are two changes that can be i
 **Collecting multiple judgments.** Despite the added complexity or cost of collecting multiple judgments for each query-candidate pair, it is an important step toward collecting consistent results.
 While finding enough volunteer judges in the MIR community is a restricting factor, amateur paid crowds offer similar performance [@lee_crowdsourcing_2010;@urbano_crowdsourcing_2010] and may be one way to augment the volunteer judgments. 
 
-**Providing a more specific codebook.** While it is important to acknowledge the subjectivity of similarity judging, providing structure for graders to anchor their interpretations into a score improves the reliability of their contributions.
-[^There was purportedly great discussion at the conception of the AMS task around the expected subjectivity, which may have motivated the loose instructions stating that "we expect to see variations accross evaluators... as this is a normal part of human subjectivity." However, I would argue, in light of the results here, that there is a confounding between natural, expected subjectivity of the task, and artificial variance stemming from the treatment of the task itself.]
+**Providing a more specific codebook.** While it is important to acknowledge the subjectivity of similarity judging, providing structure for graders to anchor their interpretations into a score improves the reliability of their contributions.[^EarlyAMS]
 Unlike multiple judgments, these sorts of task design changes do not add to the cost of evaluation.
 
+[^EarlyAMS]: There was purportedly great discussion at the conception of the AMS task around the expected subjectivity, which may have motivated the loose instructions stating that "we expect to see variations across evaluators... as this is a normal part of human subjectivity." However, I would argue, in light of the results here, that there is a confounding between natural, expected subjectivity of the task, and artificial variance stemming from the treatment of the task itself.
+
 For the benefit of further study, it would be also beneficial for MIREX to retain information about judgment order and time taken for each judgment.
-While the poor consistency is improved through multiple judgments and stronger instructions, an outstanding question is whether a judge’s approach to a task evolves over time.
+While the poor consistency is improved through multiple judgments and stronger instructions, an outstanding question is whether a judge's approach to a task evolves over time.
 
 Normalizing for systematic user-specific biases did not improve the consistency of the data.
 However, when graders were provided a rating scale that gave them more guidance, they performed better.
@@ -274,3 +314,4 @@ However, since music similarity tries to derive a consensus for a quality that p
 Judging music similarity is normative: it does not have a clear truth but it is possible to strive for a rough consensus that strives to satisfy most opinions.
 This type of task is important to building better information systems: it can apply to certain contexts of information retrieval relevance, or ratings of item quality in online collections, or even in crowd-curated lists, but as we found with audio similarity, it is important to treat it as such.
 
+The next chapter follows this thread further, to highly subjective contexts. It considers how to collect subjective data on Mechanical Turk and introduces two protocols for designing such tasks.
