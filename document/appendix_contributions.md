@@ -15,18 +15,14 @@ Fenlon contributed the initial text describing the IMLS DCC.
 
 This work was initially presented at the annual meeting of the Association of Information Science and Technology [ASIS&T 2012 - @organisciak_evaluating_2012]. Copyright to the text is retained by the authors.
 
-In _Designing Task for Objective Needs_, work on part 2 was completed alongside Stephen Downie.
-Stephen contributed advising on the work and gave permission to use the data.
+In _Designing Task for Objective Needs_, work on part 2 was completed alongside Stephen Downie. Downie advised on the work.
 
-This work was completed for this dissertation but published beforehand as a standalone study [@organisciak_improving_2015], presented at the ACM/IEEE Join Conference on Digital Libraries (JCDL 2015). Permission for dissertation re-use is  provided by the ACM alongside reference to the original work.
+This work was completed for this dissertation alongside work on the Music Information Retrieval Exchange, but published beforehand as a standalone study [@organisciak_improving_2015] at the ACM/IEEE Join Conference on Digital Libraries (JCDL 2015). Permission for dissertation re-use is provided by the ACM alongside reference to the original work.
 
 In _Designing Tasks for Subjective Needs_, work was completed with Jaime Teevan, Susan Dumais, Adam Tauman Kalai, and Robert C. Miller.
 
 The co-authors advised greatly on this study.
 Since this chapter is a new presentation of previously reported results, much of the writing is new. However, Teevan contributed significant editing and advising support, and parts of the introduction and related work section include text attributable to Teevan.
 Additionally, data in the section _Handwriting Imitation; Style-Grokking_ was collated by co-author Kalai.
-Earlier publication of this work [HCOMP - @organisciak_crowd_2014, and an award-track rewrite for IJCAI - @organisciak_matching_2015] has signification editing contributions from the coauthors.
-This paper
-
-work represents a co-mingling of 
-
+Earlier publication of this work [@organisciak_crowd_2014; @organisciak_matching_2015] has signification editing contributions from the coauthors.
+The research underlying this chapter was completed for Microsoft Research.

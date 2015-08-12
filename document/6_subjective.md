@@ -3,27 +3,24 @@
 [^HCOMPreference]: This chapter is a new reporting of work previously presented at HCOMP 2014, with co-authors Jaime Teevan, Susan Dumais, Robert C.
 Miller, and Adam Tauman Kalai [@organisciak_crowd_2014].
 Research was performed for Microsoft Research.
-This treatment includes additional data reporting, including discussion of costs and qualitative feedback, as well as an additional set of experiments around handwriting emulation.
+  This treatment includes additional data reporting, including discussion of costs and qualitative feedback, as well as an additional set of experiments around handwriting emulation.
+  Co-authorship notes in appendix.
 
 Other people can tell us a lot about what an individual might want from an information system.
-In recent years, information systems have figured out how to successfully incorporate large-scale feedback from others using logged user behavior improve web search (cite), make good movie
-(cite Netflix) and product (cite Amazon) recommendations, and even support responses to crisis situations (cite Palen).
-To do this successfully, these systems must account for the fact that not all people want the same thing (cite potential for personalization?).
+In recent years, information systems have figured out how to successfully incorporate large-scale feedback from others using logged user behavior improve web search (TODO cite), make good movie () and product (TODO cite Amazon) recommendations, and even support responses to crisis situations (TODO cite Palen).
+To do this successfully, these systems must account for the fact that not all people want the same thing (TODO cite potential for personalization?).
 Given enough behavioral data, systems like Netflix and Amazon have been able to successfully personalize their content to individual users by identifying other related users and showing them what those users have consumed.[^HCOMPreference]
 
 While large-scale approaches to personalization have been successful,
 they can only be applied to cases where significant behavioral data already exists.
 
 Netflix can do a good job recommending popular publicly released movies, but would have a much harder time recommending content from a small private collection.
-,,,
 
 With growing access to real-time human workers through paid crowd markets, a new opportunity to use information from others to address personal information needs is becoming feasible: *personalized crowdsourcing*.
 
-Crowdsourcing is commonly used for objective tasks, such as in the creation of training datasets **(e.g.,)** or for evaluation [e.g., @kiritchenko_sentiment_2014; @radinsky_learning_2012]
+Crowdsourcing is commonly used for objective tasks, such as in the creation of training datasets **(TODO e.g.,)** or for evaluation [e.g., @kiritchenko_sentiment_2014; @radinsky_learning_2012]
 Crowdsourcing allows many of the complexities of modeling subjective needs to be sidestepped and delegated to a kernel of people.
-Recent
-
-work has begun to exploring crowdsourcing to solve person-specific problems, such as in travel planning [@zhang_human_2012], document editing [@bernstein_soylent:_2010], and email management [@kokkalis_emailvalet_2013].
+Recent work has begun to exploring crowdsourcing to solve person-specific problems, such as in travel planning [@zhang_human_2012], document editing [@bernstein_soylent_2010], and email management [@kokkalis_emailvalet_2013].
 This paper introduces personalized crowdsourcing as a general solution to this class of problem, applying human computation through paid crowdsourcing for on-demand personalization.
 
 To explore how paid online crowds can be leveraged to personalize for individuals in sparse data settings, we present two protocols,
@@ -48,50 +45,36 @@ Crowdsourcing for subjective tasks is common in volunteer crowdsourcing settings
 Some projects indulge in the variability of human contributions for artistic effect, such as the crowdsourcing fan film
 *Star Wars* *Uncut* [@pugh_star_2009] and crowdsourcing music video *The Johnny Cash Project*.
 More generally, certain patterns of reactive user-generated content are a familiar part of everyday information system use, such as rating, and commenting.
-Casual online users contribute subjective opinions based on reactions to the content as well as the contributions of other people (Dellarocas and Ritu 2006).
-This parallels user-generated content contribution in general (Daugherty et al 2008), though a complication of volunteered subjective information is that it is biased.
-For example, many online ratings exhibit a bimodal distribution, seeming to suggest that self-selected contributors tend to be either very negative or positive, with moderate contributors less like to contribute (Hu, et al 2006, Dellarocas and Ritu 2006).
-Similarly, early contributors of opinion ratings or reviews tend to affect later opinions (Li and Hitt 2006).
+Casual online users contribute subjective opinions based on reactions to the content as well as the contributions of other people [@dellarocas_what_2006].
+This parallels user-generated content contribution in general [@daugherty_exploring_2008], though a complication of volunteered subjective information is that it is biased.
+For example, many online ratings exhibit a bimodal distribution, seeming to suggest that self-selected contributors tend to be either very negative or positive, with moderate contributors less like to contribute [@hu_can_2006; @dellarocas_what_2006].
+Similarly, early contributors of opinion ratings or reviews tend to affect later opinions (Li and Hitt 2006) - TODO citation.
 
 Paying workers may lower self-selection biases for subjective tasks.
-However, the most common uses of paid crowds are in the style of human computation (Quinn and Bederson 2011, Law and Ahn 2011): tasks such as evaluation dataset creation (e.g., Snow et al 2008, Novotney and Callison-Burch 2010, Alonso et al 2008) which are premised on the collection of a ground truth.
-As a result, much literature focuses on issues of reconciling multiple contributions into a trustworthy output
-(Sheng et al 2008, Wallace et al.
-2011, Eickhoff and Vries 2012).
+However, the most common uses of paid crowds are in the style of human computation [@quinn_human_2011; @law_human_2011]: tasks such as evaluation dataset creation [e.g. @snow_cheap_2008; @novotney_cheap_2010; @alonso_crowdsourcing_2008].
+As a result, much literature focuses on issues of reconciling multiple contributions into a trustworthy output [@sheng_get_2008; @wallace_who_2011; @eickhoff_increasing_2012];
 
 Though personalized crowdsourcing can be applied in numerous contexts,
 it is particularly valuable in highly-specific on-demand settings: where a person might not have the time to spend on completing a task themselves, but the subjectivity of their needs paired with the specificity of the task means that there are few alternative options.
-Some people do not find optimal completion of such tasks to be worthwhile, a factor influenced by the perceived value of their time and their enjoyment of the task (Marmorstein et al.
-1992).
-This trade-off is present in areas such as price comparison shopping (ibid) and travel-planning (Gursoy and McCleary 2004).
+Some people do not find optimal completion of such tasks to be worthwhile, a factor influenced by the perceived value of their time and their enjoyment of the task [@marmorstein_value_1992].
+This trade-off is present in areas such as price comparison shopping (ibid) and travel-planning [@gursoy_integrative_2004].
 This study does not make any assumptions about where the target person's preferences lie in balancing the quality cost of not personalizing, time cost of completing the task themselves, or monetary cost of personalization.
 
 The underlying assumption in taste-matching is that you can personalize for a person by finding similar people or groups of people, and using them as a proxy for the target person.
-This mirrors the approach seen in collaborative filtering (e.g., Hofmann 2004), one of the most common forms of recommendation.
+This mirrors the approach seen in collaborative filtering [@hofmann_latent_2004], one of the most common forms of recommendation.
 Collaborative filtering is also similarly motivated at a higher-level, by the difficulty to predict people's subjective desires and needs purely by analyzing the content.
-Where taste-matching differs is that workers contribute data on demand,
-sidestepping the common collaborative filtering problem of sparse data
-(Konstan et al., 1997).
+Where taste-matching differs is that workers contribute data on demand, sidestepping the common collaborative filtering problem of sparse data [@konstan_grouplens_1997].
 
-The taste-grokking approach pursued in this study looks to generate personalized content by asking workers to understand the requester and guess at their tastes and needs; e.g., guessing a requester's opinion on a rating scale.
-A similar approach was explored by Krishnan et al.
-(2008), where the MovieLens collaborative filtering system was compared to human recommenders.
+The taste-grokking approach pursued in this study looks to generate personalized content by asking workers to understand the requester and guess at their tastes and needs; E.g., guessing a requester's opinion on a rating scale.
+A similar approach was explored by @krishnan_who_2008, where the MovieLens collaborative filtering system was compared to human recommenders.
 MovieLens, which functions like a more mature,
 higher *n* version of taste-matching, was found to perform better.
 Where humans did excel was in recommending for requesters with eclectic or novel tastes.
 
-Recent work has warned about expected ground truth tasks have subjective components, biasing work around them (Alonso et al 2013).
-Tasks such as document editing (Bernstein et al.
-2010), selecting the best frame of a video (Bernstein et al.
-2011), or rating the similarity between objects
-(Tamuz et al.
-2011) can be argued to contain requester- or worker-specific biases.
-Some efforts have identified the need to subjective affordances, such as crowdsourced email assistant EmailValet
-(Kokkalis et al.
-2012), travel-planning system Mobi (Zhang et al.
-2012),
-and parts of document-editing system Soylent (Bernstein et al.
-2010).
+Recent work has warned about expected ground truth tasks have subjective components, biasing work around them [@alonso_are_2013].
+Tasks such as selecting the best frame of a video [@bernstein_crowds_2011] or rating the similarity between objects [@tamuz_adaptively_2011] can be argued to contain requester- or worker-specific biases.
+Some efforts have identified the need to subjective affordances, such as crowdsourced email assistant EmailValet [@kokkalis_emailvalet_2013], travel-planning system Mobi [@zhang_human_2012],
+and parts of document-editing system Soylent [@bernstein_soylent_2010].
 In all three of these cases, the systems allow requesters to communicate their particular tastes and needs with a natural language description.
 In the taste-grokking protocol of our study, we use communication-by-example rather than plain text communication, but this explicit approach constitutes another approach to personalized crowdsourcing.
 While paid crowdsourcing has dealt with subjective tasks before, a generalized approach has not been previously defined.
@@ -124,7 +107,7 @@ when discussion the requester profile from the worker perspective.
 Profile construction is subject to variation from a number of parameters: the profiling set size, the profiling set selection, and the domain.
 While information content increases with larger profiling sets,
 working with humans restricts size based on considerations of attention,
-time, and exhaustion (Rzeszotarski 2013).
+time, and exhaustion [@rzeszotarski_inserting_2013].
 For the requester particularly, the time cost of a large profiling set also works against the time and effort saving goals of many personalization settings.
 
 The items acted upon in the profiling set are another profiling consideration.
@@ -166,9 +149,7 @@ Whereas taste-matching performs an algorithmic similarity matching based on requ
 As illustrated in Figure XX2, taste-grokking workers are shown a requester's profiling set and asked a variant of the question, 'how do you think the requester would perform the next tasks?' For example, with the product image rating task, workers were shown a requester's ratings for a few items, and asked to rate what the requester's opinion would be for additional products.
 
 As defined here, taste-grokking uses a 'train-by-example' approach to communicate a requester's taste to workers.
-Other crowdsourcing studies that have personalized by communication have had the requester articulate their needs in written instructions, e.g., explaining email priorities (Kokkalis et al.
-2013) or travel preferences (Zhang et al.
-2012).
+Other crowdsourcing studies that have personalized by communication have had the requester articulate their needs in written instructions, e.g., explaining email priorities [@kokkalis_emailvalet_2013] or travel preferences [@zhang_human_2012].
 There are potential benefits and difficulties to this approach.
 Taste-grokking trains by example due on presumed consistency, attempts to minimize requester effort, and concerns about the technique's sensitivity to hard to articulate decision factors.
 While written requests may be dependent on the requester's skill, having a requester simply perform a small amount of the work does not have this confounding factor.
@@ -212,8 +193,9 @@ Taste-matching and taste-grokking are evaluated over three problems.
 -   *Image-based recommendation:* For a familiar, common context, image
     recommendation is performed.
 The purpose is to guess a requester's
-    opinions on images of a) online shopping results (specifically,
-    salt-shakers), and b) restaurant meal offerings.
+    opinions on images of 
+    a) online shopping results (specifically,salt-shakers), and 
+    b) restaurant meal offerings.
 
 -   *Text-highlighting:* Measuring the protocols in a more difficult and
     complex setting, personalized crowdsourcing is evaluated for text
@@ -281,14 +263,13 @@ Workers in the taste-matching group were asked to rate images based on their own
 
 As not all people have the same mental concept of the rating scale
 (e.g., how much one has to like the item to give it five stars rather than four), taste-matching ratings were normalized
-($r \rightarrow r^{'}$) as the deviation from each user's mean rating
-(Hofmann 2004):
+($r \rightarrow r^{'}$) as the deviation from each user's mean rating [@hofmann_latent_2004]:
 
 <!-- TODO fix equation
 $r^{'} = \frac{r - \mu_{\text{rater}}}{\sigma_{\text{rater}}}$.
 -->
 
-Normalization was not necessary for grokking because workers were performing against a target user's worldview rather than their own.
+Normalization was not necessary for grokking because workers were performing against a target user's world-view rather than their own.
 
 ### Taste-Grokking
 
@@ -303,7 +284,7 @@ to measure whether workers that were notably strong or weak at grokking.
 
 ### Baseline
 
-A system that does not assume variation across individuals would not personalize, and instead might use the opinions of any worker to make recommendations for the requestor.
+A system that does not assume variation across individuals would not personalize, and instead might use the opinions of any worker to make recommendations for the requester.
 This is what we use for the baseline measure, performing at an average RMSE of 1.64 for the salt-shaker recommendation task, and 1.51 and 1.58 for the cuisine recommendation tasks in Seattle and Boston, respectively.
 An error of 1.51-1.64 on a five-point scale is fairly high and shows that the tasks are notably subjective to begin with.
 
@@ -324,16 +305,16 @@ Such a correlation could still exist if the task was not subjective, and is only
   Best matched worker from random 5    1.43 (-13%)              1.19 (-22%)     1.26 (-20%)
   Best matched worker from random 10   1.35 (-18%)              1.08 (-29%)     1.08 (-31%)
 
-*Table XX1: Taste-matching performance for recommendation task*
+Table: Taste-matching performance for recommendation task {#tbl:matching-performance}
 
-Table XX1 shows the performance of recommendations predicted by taste-matching.
+Table @tbl:matching-performance shows the performance of recommendations predicted by taste-matching.
 In both task types, taste-matching improved over the baseline, with stronger gains against the cuisine recommendation tasks.
 
 The parameterizations were selected based on an expectation of a realistic task setting: best worker from random five and ten.
 In this setting, a requester starts a personalized crowdsourcing task, and *n*
 workers are profiled.
 Based on the profiling 'match', the best of these workers is retained to perform more work as a surrogate for the requester.
-The amount of workers to profile is dependent on a requester's quality-cost tradeoff, so in addition to the values for five and ten profiled workers, Figure XX shows the performance gains in waiting for more workers to profile, up to 30.
+The amount of workers to profile is dependent on a requester's quality-cost trade-off, so in addition to the values for five and ten profiled workers, Figure XX shows the performance gains in waiting for more workers to profile, up to 30.
 Though there is no formal expectation of constant improvement, profiling additional workers nonetheless keeps improving performance.
 
 With the parameters used in this study – payment of \$1.50 per 100 ratings and a profiling set of 20 items – profiling each worker comes to 30 cents, followed by 1.5 cents for every predicted rating by the matched worker.
@@ -357,7 +338,7 @@ This is sensible because all the workers are striving for the same ground truth,
 For this study, we aggregated workers'
 recommended ratings with a simple mean.
 Aggregating through the mean of five workers' predictions provides improvements of 34% for salt and pepper shaker taste prediction, and 9% and 19% for the cuisine tasks.
-The choice to aggregate 5 workers is motivated by a recommendation in Novotney and Callison-Burch (2009) for a different task type but with similar complexity.
+The choice to aggregate 5 workers is motivated by a recommendation in @novotney_cheap_2010 for a different task type but with similar complexity.
 
 Using a cross-validation set of ten ratings to identify and aggregate top workers improves the quality of predictions further, though at the cost and time of collecting additional recommendations.
 Figure *XX4*
@@ -376,7 +357,7 @@ the much improved performance with aggregation means that an ideal taste-grokkin
 <!-- Time--->
 
 Given that in one protocol workers shared their own opinions of food and products while in the other they had to interpret another person, we expected the time spent per contribution to be higher for taste-grokking tasks.
-This was indeed the case, though the median time per grokked rating prediction was not drastically higher: 4.6s (grokking) compared to 3.3 (matching).
+This was indeed the case, though the median time per grokked rating prediction was not drastically higher: 4.6 seconds (grokking) compared to 3.3 (matching).
 The range of time spent per item is much larger for taste-grokking, as shown in the box plots in Figure XX5.
 Among crowd workers, it is common to find high-end time outliers due to casual workers that multi-task, but the length of the tail for grokking seems to suggest an additional effect.
 Though we do not know with certainty,
@@ -420,25 +401,21 @@ To measure how robust randomness is compared to alternative selection strategies
 
 The alternative set used using stratified random sampling, from items clustered against opinions contributed by taste-matching workers.
 K-means clusters was used, where the number of clusters *k* was equal to the profiling set size (i.e., *k=10*).
-The clusters used as strata for sampling are partially shown in Figure XX8.
+The clusters used as strata for sampling are partially shown in Figure @fig:cluster-examples.
+
 For the profiling set, one item was randomly chosen from each strata.
 The intention was to capture the breadth of tastes.
 
 Using an optimized selection of items in the communication set improved performance greatly over the salt and pepper shaker prediction task.
-Figure XX9 shows the quality of aggregating 1-30 workers; for comparison to Table XX2, aggregating 5 random workers gave an RMSE of $1.04$.
+Figure @fig:aggregation shows the quality of aggregating 1-30 workers; for comparison to Table XX2, aggregating 5 random workers gave an RMSE of $1.04$.
 
-![](images/media/image8.png)
+![Example of salt-and-pepper clusters, k=10](images/subj-examples.png) {#fig:cluster-examples}
 
-*Figure XX8: Example of salt-and-pepper clusters, k=10.*
-
-![](images/media/image9.png)
-
-*Figure XX9: Performance of optimized training set for predicting product opinions, aggregating multiple workers.*
+![Performance of optimized training set for predicting product opinions, aggregating multiple workers](images/subj-aggregation.png) {#fig:aggregation}
 
 Predicting a requester's rating was a suitable application of personalized crowdsourcing for two image recommendation tasks.
 Both taste-grokking and taste-matching improved over the baseline.
-However,
-the task domains mattered, and taste-grokking was stronger for salt and pepper shaker recommendation while taste-matching was strong for cuisine recommendation.
+However, the task domains mattered, and taste-grokking was stronger for salt and pepper shaker recommendation while taste-matching was strong for cuisine recommendation.
 The complexity of the tasks seemed to have contributed to this disparity, where the richer decision space of food resulted in harder-to-understand communication sets with taste-grokking.
 
 Text Highlighting
@@ -454,7 +431,8 @@ making it well suited for personalized crowdsourcing.
 In contrast,
 highlighting texts has much more possible variation, and involved requester-specific *needs* in addition to requester-specific *opinions*.
 
-For this task, we measure personalized crowdsourcing for making film reviews skimmable.
+For this task, we measure personalized crowdsourcing for making film reviews easy to skim.
+
 Film reviews were chosen as a generally useful domain where people having varying information needs and opinions, as well as one that may be interesting to workers.
 Thus, it is expected to be an easy domain for a difficult task, providing insight into the tractability of text highlighting.
 
@@ -589,7 +567,7 @@ An evaluator would likely be looking for a crossed 'z' each time,
 while grokkers are likely to mimic that.
 
 On average, individual grokkers scored $0.50$, well below the $0.83$,
-average score of a requestor on their own sample pair.
+average score of a requester on their own sample pair.
 There was a large variation in imitation ability among grokking workers, with average scores ranging from $0.38$ to $0.67\ $for the five individual grokkers.
 For comparison, the best grokked sample for each condition achieved a score of $0.69$.
 Figure XX10 shows how this varies across $k$, with

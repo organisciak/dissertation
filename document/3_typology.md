@@ -9,7 +9,7 @@ The scope of crowdsourcing is broad, however, and the myriad approaches to colla
 In order to address this, this chapter presents a typology of crowdsourcing for information science.[^iConfCite]
 
 [^iConfCite]: A version of this chapter was previously presented at iConference 2015 with co-author Michael B. Twidale [@organisciak_design_2015].
- For this and other co-authored work described in this dissertation, material contributions credited to co-authors, such as data and tables, are attributed where necessary. What is not noted at granularity is the valuable advising and editing contributions co-authors have made, and in each instance of collaboration this should be expected.
+ Co-authorship notes in appendix.
 
 Crowdsourcing, the collaboration of distributed contributors on a common product, promises value to library and information science in a variety of ways.
 Information systems and digital repositories deal with overwhelming amounts of materials that can be annotated with help from many hands, and the relationship that cultural heritage collections hold with their audience can potentially be strengthened by pursuing meaningful collaboration between the two.
