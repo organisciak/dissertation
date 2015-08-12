@@ -66,6 +66,16 @@ When studying intrinsic motivation in Mechanical Turk tasks, @mason_financial_20
 
 ## Problem
 
+<!-- Some related work, while the beefier stuff is later -->
+\newthought{A similar approach was been taken by @mitra_comparing_2015 have taken a similar approach to this chapter, in pursuing "person-oriented strategies" over process-oriented strategies".
+Their study is a unique precedent for a controlled experiment of different collection-time strategies for paid crowdsourcing contributions.
+They consider the following strategies: (1) screening workers, (2) providing examples and training workers, (3) offering financial incentives for improved quality (bonuses), and (4) aggregating or filtering multiple independent workers.
+
+Screening (1) and aggregation (4) are strategies discussed further and employed respectively in the previous and next chapter, and performance bonuses (3) are a parameterization manipulation that has been studied before <!-- TODO, cite refs from mitra paper, and others-->. ^[We also used a performance-based bonus in the 'taste-grokking' personalization approach detailed in Chapter 6. Though we hypothesized it may have a self-competitive effect, it was not the focus of that study and a controlled comparison was not performed to see if it was exerted an inordinate bias on the results. Appropriately, @mitra_comparing_2015 did not find this type of incentive to improve quality, for the most part.]
+Pertinent to this study, however, @mitra_comparing_2015 found that training contributors on task expectations improved contribution quality on nearly all tasks, generally compounding improvements on top of other conditions.
+Similar to this study, @mitra_comparing_2015 compare interaction against a set of tasks that range in their subjectivity.
+<!-- TODO how do we differ?-->
+
 ## Overview
 
 In this chapter, multiple interfaces for encouraging less deviation between contributors are evaluated against identical controlled tasks.
@@ -78,6 +88,11 @@ Afterward, an applied experiment is presented, where both apriori and posterior 
 
 
 ## Related Work
+
+### Financial Tweaking
+### Bonuses
+### Task Description
+
 <!-- TODO
 Explain various conditions _before_ related work
 Move other lit review (i.e. for feedback) to this section.
@@ -86,17 +101,6 @@ More lit review on training, on feedback (Mitra has some suggestions)
 Or.. should I move /this/ section /into/ the more granular sections?
 
 -->
-@mitra_comparing_2015 have taken a similar approach to this chapter, in pursuing "person-oriented strategies" over process-oriented strategies".
-Their study is a unique precedent for a controlled experiment of different collection-time strategies for paid crowdsourcing contributions.
-They consider the following strategies: (1) screening workers, (2) providing examples and training workers, (3) offering financial incentives for improved quality (bonuses), and (4) aggregating or filtering multiple independent workers.
-
-Screening (1) and aggregation (4) are strategies discussed further and employed respectively in the previous and next chapter, and performance bonuses (3) are a parameterization manipulation that has been studied before<!-- TODO, cite refs from mitra paper, and others-->. ^[We also used a performance-based bonus in the 'taste-grokking' personalization approach detailed in Chapter 6. Though we hypothesized it may have a self-competitive effect, it was not the focus of that study and a controlled comparison was not performed to see if it was exerted an inordinate bias on the results. Appropriately, @mitra_comparing_2015 did not find this type of incentive to improve quality, for the most part.]
-Pertinent to this study, however, @mitra_comparing_2015 found that training contributors on task expectations improved contribution quality on nearly all tasks, generally compounding improvements on top of other conditions.
-Similar to this study, @mitra_comparing_2015 compare interaction against a set of tasks that range in their subjectivity.
-<!-- TODO how do we differ?-->
-
-
-
 
 ## Research Questions
 
@@ -144,7 +148,7 @@ Metadata encoding tasks generally consist of the following parts:
 
  * __Goal__ statement/question. _e.g. "Is this page relevant to query `q`?", "Find the topic of a tweet."_
  * __Instructions__ for performing the task.
- * one or more __Items__ that worker responds to. _e.g. webpage snippets, microblogging messages_
+ * One or more __Items__ that worker responds to. _e.g. webpage snippets, microblogging messages_
  * __Action__, one per item: the data collection mechanism.
 
 \newthought{Within this framework}, a number of factors are observable that may potentially affect how our microblog encoding task is completed.
@@ -297,7 +301,7 @@ The ability to respond easily provides valuable information on worker satisfacti
  Based on my experiences, feedback forms provide a space for critical information, such as broken tasks, and qualitative information, such as worker satisfaction. Most importantly, they provide a qualitative connection to workers, which is contrary to Amazon's purposes as 'artificial artificial intelligence' but which encourages requesters to respect their workers.
  Interestingly, as noted earlier, when @alonso_design_2011 tried to mandate feedback form responses, they found that their quality fell relative to volunteered feedback.
 
-### Training interface
+### Training interface (TRAIN)
 
 In the training interface, the worker is walked through their first task slowly.
 As they complete the tasks, their answers are evaluated against a gold standard and they are informed if they completed it correctly or incorrectly.
@@ -319,59 +323,65 @@ The tasks set itself appears similar to a basic interface taskset, except that t
 To better guide workers and for a clearer understanding of how the worker is performing, the 'Check Answer' button is disabled until a submission is made, and the submission interface is disabled after the answer is checked.
 This helps explain to workers the intended order of contribution with minimal text: we want workers to try a contribution before checking their answer, and we don't want them changing the answer afterward.
 
-### Feedback Interface
+### Feedback Interface (FDBK)
+
+In the previous chapter, it was found that workers that did not spend enough time reading instructions did not perform as well overall, even when their typical task completion time looked the same as well-performing workers.
+Since in this case the poorer workers did not exhibit any time-optimization wage-maximizing behaviours, a possible reason is that they were performing in an honest manner and simply did not internalize the codebook adequately.
+
+If this is the case, is it possible to improve the performance of poor workers but simply letting them know of issues with their work?
+The feedback condition of this study attempted to do just that, with a intervention at the start of tasks, after a worker's first task, estimating the worker's performance.
 
 In the feedback interface, a worker is shown feedback about their estimated performance on past tasks.
 The first task that they complete is identical to the basic interface.
 Starting with the second task, however, the interface gives them a window with their estimated performance, relative to other workers.
 
-![Example of showing Feedback shown to workers](../images/performance-feedback.png)
+![Example of showing feedback shown to workers](../images/performance-feedback.png) {#fig:showperformance}
 
 The estimate of performance was determined differently for the different task types, image tagging and image relevance judgments, and is described in those respective sections.
 
-As seen in Figure @fig:showperformance, feedback was given in in the form of ranked percentile information relative to actual workers. 
+As seen in Figure @fig:showperformance, feedback was given in the form of ranked percentile information relative to actual workers. 
+The underlying measures or the exact estimate were not revealed.
+Unlike the training interface, it did not provide any feedback on what was done wrong and what was performed corrected.
+This black box approach was because this interface was not intended to train, simply to inform and -- it was hypothesized -- encourage a return to the task instructions if a worker needed to recalibrate their understanding of the task.
 
 Though it would have been trivial to adapt the text relative to performance, it was deliberately decided that the written copy stay the same, and that this information is clear to workers.
 The intention was to avoid a perception of scolding, leaving the _interpretation_ of the performance feedback to the worker; "_If you're doing well..._", or "_If you think you should be doing better_".
 
-The expectation was that showing feedback can trigger an external motivation, simply in seeing that these statistics are kept", as well as intrinsic motivation, trying to perform better for self-competitive reasons.
-The latter cannot be discounted, but the design tried to encourage more of the latter.
+The expectation was that showing feedback may trigger an external motivation, simply in seeing that these statistics are kept, as well as intrinsic motivation, trying to perform better for self-competitive reasons.
+The former cannot be discounted, but the design tried to encourage more of the latter.
 
 @mccreadie_crowdsourcing_2011 attempted a similar approach, where contributors were shown a sidebar color-coding all their contributions based on their agreement with other raters and the authors.
 Showing this information with such granularity encourages workers to go back to reconsider debated answers, whereas this study's take tries to encourage more care and competition moving forward.
 
-Thus, of the ample ways to design a feedback mechanism, this one:
+As with the training condition, workers were encouraged to continue performing tasks with a plea and a bonus (Figure @fig:staybonus).
+This is because feedback was only applied starting with the second task.
+Base payment was $0.05 lower than was provided for the basic interface, while the continued engagement bonus was $0.10 per task.
+
+![Message encouraging repeat work](images/design-stickaround.png) {#fig:staybonus}
+
+In sum, of the ample ways to design a feedback mechanism, this study's condition:
 
 - Positioned workers relative to the workforce, rather than absolute measures.
 - Tried to focus on worker self-motivation over the observer effect.
+- Focused on intervention at a start of a new task
 
+### Time-Limited Interface (FAST)
 
-<!--TODO2
- * email McCreadie about permission to include figure
- * Add mockup figure
- * Calculate stats for another dataset on what percentage of contributions are not the first task done by a user.
-
-Rough Notes
-
-If you're doing voting, then a score is possible based on agreement with other workers:
-^Score=Avg. StdDev from Mean of Ratings
--->
-
-
-### Time-Limited Interface
-
-Not all crowdsourcing contribution cases require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
-This was the case in an incidental finding reported in Chapter 6, where asking workers performing subjective opinion-based tasks to explain their judgement seemed to change the judgment habits themselves.
+Not all crowdsourcing contribution cases may require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
+This was the case in an incidental finding reported in Chapter 6, where asking workers performing subjective opinion-based tasks to explain their judgment seemed to change the judgment habits themselves.
 
 In contrast to the training and feedback interfaces, which served, in a way, to slow down workers and make them more focused on their contributions, the final data collection interface pursues the opposite approach.
 The time-limited interface encourages quicker interactions by giving users a timer to complete all tasks.
 
-The goal and instructions do not differ greatly from that of the basic interface, with the exception of texts saying 
+The goal and instructions do not differ greatly from that of the basic interface, with the exception of text explaining the limited amount of time that a worker has.
+
+The amount of time workers actually had differed between task types, because relevance judgments are completed more quickly than item tags. The former task lasted for 90 seconds, while the latter lasted for 60 seconds.
 
 It is important not to distress the worker when trying to push them into a visceral form of task completion, as this might have the opposite effect.
 Instead, this design encourages _flow_ ^[TODO citation], where a user moves seamlessly through the tasks without over-thinking their answers.
 To avoid the potential distress of thinking about what is to come, this interface does not show a list of tasks to complete (e.g. "complete these ten tasks in a minute").
-Instead, tasks are shown one at a time (e.g."See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers.
+Instead, tasks are shown one at a time (e.g. "See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers.
+
 
 <!--
 TODO2
@@ -379,32 +389,33 @@ TODO2
  * What is the time limit? This needs to be measured to determine a good value
  * Add mockup of interface-->
 
- ### Evaluation
+### Evaluation
 
  <!--Talk about Mechanical Turk. -->
  <!--Talk about the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
 
- The experiments in this study will be run in a naturalistic setting: running directly on a paid crowdsourcing platform, Amazon Mechanical Turk, with real workers.
+ The experiments in this study were run in a naturalistic setting, running directly on a paid crowdsourcing platform, Amazon Mechanical Turk, with real workers.
+
  There are trade-offs to this setting.
  It is easy to instrumentalize and properly captures the actual skills and attentiveness of paid crowd workers.
  However, working within the conventions of the system means that some parts cannot be controlled.
  For example, workers cannot be forced to perform multiple tasks, simply encouraged to do so.
  Also, the actual user pools testing the different interfaces are not necessarily the same individuals.
- Thus, it is important that the users are similarly representational: it would be problematic if one interface was used mainly by Indian residents while another was performed mainly by American residents (the second and first larges nationalities on Mechanical Turk, respectively).
+ Thus, it is important that the users are similarly representational: it would be problematic if one interface was used mainly by Indian residents while another was performed mainly by American residents (the second and first largest nationalities on Mechanical Turk, respectively).
 
- For this reason, each interface will be evaluated with temporal and geographic restrictions.
- Workers will be restricted to American workers, and tasks will each be posted during the American work day: between 10am and 1pm Pacific Time during weekdays.
- <!-- Does this narrow my findings too much? There should be work that informs us more about this-->
+ For this reason, each interface was be evaluated with temporal and geographic restrictions.
+ Workers were restricted to American workers, and most tasks were during the American work day, with only slight deviations.
 
 ### Implementation
 
 The experiments were performed on Amazon's Mechanical Turk, using an API that allows external pages to be hosted within the Mechanical Turk interface.
 
-The system for design manipulation was developed using JavaScript on the front end, built on top of the Angular JS library.
+The system for design manipulation was developed using JavaScript on the front end, built on top of the AngularJS library[^angularjs].
 The software is released with an open-source MIT license[^crowdy].
 
-The back-end of the stack also runs on Javascript, with a Node.js server run on the Express web application framework.
-Data storage uses the MongoDB database.
+The back-end of the stack also runs on JavaScript, with a Node.js[^nodejs] server run on the Express[^express] web application framework.
+Because of the complexity of the logic in serving tasks, this code was optimized toward asynchronous operations whenever possible.
+Data storage uses the MongoDB[^mongodb] database.
 The task serving code is also released online[^crowdybackend].
 
 Details of the experimental system, including design documents, model descriptions, and logic, are provided in the Appendices. <!-- TODO2 add proper link. -->
@@ -527,6 +538,28 @@ It is likely that Pinterest's own retrieval model incorporates additional implic
 This is a useful indicator of a item's quality, itself a form of crowd-contributed retrieval evidence, but is well-studied and too removed from the scope of this study to undertake.
 
 
+###  Measurements
+
+TODO 
+ - Quality, Variance
+ - Cost
+ - Satisfaction
+
+\newthought{Workers were given the option} to rate the task and their satisfaction with the payment, on a scale from 1-5.
+
+Figure @rel-task-satisfaction shows the distribution of satisfaction score for each condition.
+In all cases, they were skewed toward the upper end -- the median is 5 for each condition -- as may not be surprising.
+
+TODO Write up
+
+![Relevance judgment task satisfaction scores, by condition.](images/taskSatisfaction-relevance.png) {#fig:rel-task-satisfaction}
+
+![Relevance judgment payment satisfaction scores, by condition.](images/paySatisfaction-relevance.png) {#fig:rel-pay-satisfaction}
+
+A final question looked at was whether a person's rank -- as given in the feedback condition -- affected their satisfaction.
+There were not enough measurements for a non-parametric comparison, but it did not appear to be a notable factor.
+Binning workers in quartiles by rank, those in the second quartile had a comparable task satisfaction ($mean=4.25$, $median=5$, $N=4.5$, _note low N_) to those in the third performance quartile ($mean=4.81$, $median=5$, $N=11$) and the upper quartile ($mean=4.62$, $mean=5$, $N=16$).
+Given a larger sample, one interest quirk to pursue is that the lowest pay satisfaction was among the best contributors ($mean=4.375$, $median=4$, $N=16$).
 
 ### Evaluation
 
@@ -535,66 +568,77 @@ This is a useful indicator of a item's quality, itself a form of crowd-contribut
 ## Experiment  #2: Tagging
 
 <!--Why tagging-->
-Tagging is a type of free-text labelling often applied in online social context.
+Tagging is a type of free-text labelling often applied in online social contexts.
 It allows a system to collect more metadata about its records than the system may have, and representing different _types_ of description.
-Such open-ended contribution can grow unwieldy and hard to protect against vandalism, but public good institutions such as libraries and museums 
-For example, on business recommendation system Yelp, tags allow users to contribute data about the type of business [^A competing service, Foursquare, also uses tags, but in a more structured way. ]
+Such open-ended contribution can grow unwieldy and hard to protect against vandalism, but public good institutions such as libraries and museums can use them for a sense of how the people they serve are interpreting the materials of their collections. 
+Tags are also useful for augmenting large encoding efforts.
+For example, on business recommendation system Yelp, tags allow users to contribute data about the type of business[^Foursquare].
+
+[^Foursquare]: A competing service, Foursquare, also uses tags, but in a more structured way.
 their libraries and museums to collect more metadata about their
 
-- Limited metadata
+<!--Limited metadata-->
 
 Trant and Wyman argue that tagging from online users "appears to fill gaps in current documentation practice" [~@trant_investigating_2006].
+Following from this, tagging is particularly helpful for difficult to model formats (i.e. non-text) and when corpus sizes surpass the ability to formally classify works.
+Tagging has been used to encode scans of text [@TODOciteRecaptcha], improve information retrieval retrieval document modelling [@lamere_social_2008; @citeBao], augment personalized search [@lermancite; @nollcite].
 
-  - information overload
- Difficult to model formats (non-text)
+Tagging also offers a break from the Vocabulary Problem [@furnas_vocabulary_1987].
+@furnas_vocabulary_1987 performed a set of term generation experiments in 1987 where the asked participants to describe functions or objects.
+They found that the amount of spontaneous consensus was very low, arguing that this problem of vocabulary becomes a user issue because different users expect different vocabularies.
+However, it's the designers who get to choose the primary vocabulary and, "as heavy users, grow to find [their] terms obvious and natural" (ibid).
 
- - vocabulary problem
+The proposed solution to the vocabulary problem was to allow 'essentially unlimited numbers of aliases'[^At least when those aliases are not more popular for other functions.] [@furnas_vocabulary_1987] -- something that tagging functionally allows.
+With tags, the descriptors for an information object are not one centralized viewpoint, but an amalgam of different viewpoints and different vocabularies.
 
-<!--Why paid-->
-- Volunteer practice
-   - Many volunteers tag poorly
-     - @springer_for_2008 find that tags were the least fulfilling type of information contributed to the Library of Congress account on Flickr. <!--Add sidenote about Flickr, and perhaps the commons--> ...
-In a look at social features used in library online catalogues, @spiteri_social_2011 finds tagging to be among the least used.
-While the complexities of why this is the case and how closely tied the result is to the implementation, the finding does suggest that features which are arguably more self-serving, such as curating lists of library materials and starring liked works, are easier to collect than more pragmatic features for item description.
+This is the ideal setting.
 
-While it has been suggested that the most generally useful tags also tend to be those that are applied by the most _different_ users [@sen_quest_2007], volunteer tagging does not necessarily reflect that diversity.
-On Flickr Commons, it was noted that 40% of the tags were contributed by 10 'power taggers'; nonetheless, with over 59 thousand tags contributed, this still meant that other users still contributed a notable amount [@springer_for_2008].
+However, there are numerous difficulties with tagging, especially when reliant on volunteers.
 
-### Related Work
+While tagging seems to address the vocabulary problem in its potential, the multiple alias approach does not guarantee that they will be approaches reliably.
+In instances of low contributor engagement and sparse tags, the fact that people's vocabularies differ can be aggravated by the loose contribution style of tagging.
+
+Additionally, volunteers tagging practices often do not match the needs of system designers.
+Of all the contribution approaches enabled by The Commons on Flickr, for example, @springer_for_2008 found that tags were the least fulfilling type of information contributed to the Library of Congress account on Flickr.
+Likewise, in a look at social features used in library online catalogues, @spiteri_social_2011 finds tagging to be among the least used.
+That finding does suggest that features which are arguably more self-serving, such as curating lists of library materials and starring liked works, are easier to collect than more pragmatic features for item description.
+
+Finally, while it has been suggested that tags with the most general usefulness also tend to be those that are applied by the most _different_ users [@sen_quest_2007], volunteer tagging does not necessarily reflect that diversity.
+On The Commons, it was noted that 40% of the tags were contributed by 10 'power taggers'; nonetheless, with over 59 thousand tags contributed, this still meant that other users still contributed a notable amount [@springer_for_2008].
+
+Due to the discord between the promise of tagging and difficulties of volunteer-based implementation, paid crowdsourcing is an appealing approach to collecting tags.
+While it does not includes some tertiary benefits related to community engagement, it allows us to control for quality by enforcing a codebook and to make us of many diverse viewpoints in practice.
+
+Following from the experiments on information retrieval relevance judgments, this section evaluates our design manipulations over an image tagging task.
+Image tagging is an interesting departure from relevance judgments in that there is no _clear_ correct contribution.
+A good contribution is dependent on the need.
+For this reason, designs that help guide a worker in relevance judgments may mislead for tagging.
+<!--TODO Finish once I can write about results -->
+
+<!--### Related Work-->
+
+\newthought{There are different interpretations on tagging}, what types are desired, how much variance is acceptable, and what the role of tagging is.
+
+With tagging, some degree of variability is desired, because that diversity is central to many benefits of tags.
+However, it would be ill-advised to view tagging as a fully relativist activity.
+It has been found that tagging begins to converge on a set of popular, common tags [@golder_usage_2006] and there certainly are notions of 'good' or 'bad' tags [@sen_quest_2007].
+
+For museums, tagging is considered not only in pragmatic subject access terms, but as a medium for critical value and engagement, according to @trant_investigating_2006.
+Indeed, they note the value in tagging for understanding the tagger: a way to understand how patrons react and interact with museum collections.[^TagAssert]
+
+[^TagAssert]: "A tag is a user's assertion that a work of art is about something." - @trant_investigating_2006
 
 @sen_quest_2007 study the quality of community tags in the MovieLens film recommendation system, toward methods to prioritize tags in the interface.
 They find that high-quality tags, as determined by survey, are not necessarily the most-applied tags, likely because the most common tags are locally useful 'personal' tags.
 However, tags that are applied by many _unique_ users are more likely to be useful, as are tags that are clicked by many unique users.
 While this form of usage-based quality indicator does not help in collecting good tags, it does affect how to determine quality tags for ground truth in this study.
 
-
-
-<!-- TODO discuss -->
-
-- RQ:
-
-- subjective vs. objective
-
-There are different interpretations on tagging, what types are desired, how much variance is acceptable, and what the role of tagging is.
-
-For museums, tagging is considered not only in pragmatic subject access terms, but as a medium for critical value and engagement, according to @trant_investigating_2006.
-Indeed, they note the value in tagging for understanding the tagger: a way to understand how patrons react and interact with museum collections.^[TagAssert]
-
-^[TagAssert]: "A tag is a user's assertion that a work of art is about something." - @trant_investigating_2006
-
-
-  - desire some sort of variability
-However, it would be ill-advised to view tagging as a fully relativist activity.
-It has been found that tagging begins to converge on a set of popular, common tags [@golder_usage_2006]<!--TODO cite Cattuto 2006 -->, and there certainly are notions of 'good' or 'bad' tags [@sen_quest_2007]. <!-- TODO cite.. what else?-->.
-
 When @sen_tagging_2006 compared different approaches to collecting tags -- an interface where prior tags are seen, an interface where only popular prior tags are seen, an interface that shows recommended prior tags -- the interface that did not show prior tags had a much larger proportion of never before seen tags.
 This is an unsurprising phenomenon, given that tagging habits appear to be influenced by the community [@golder_structure_2007; @sen_tagging_2006]; however, it is a factor influencing our approach to tag collection through paid crowdsourcing.
 
 A crowd marketplace is emphatically not a community, at least not in the service of a requester's particular task, and generally the pragmatic system-oriented uses
-are underlied by a desire for convergence and minimal redundancy.
+are underlaid by a desire for convergence and minimal redundancy.
 This is to say, a requester looking to pay for image tags may not want a vocabulary explosion, but also may be looking to avoid the added complexity and cost of collecting prior tags to show to workers.
-<!-- TODO what is preferred? I should try both -->
-<!-- Useful somewhere? : Collecting Factual tags [@sen_tagging_2006] is best serviced by a strategy of showing the most popular prior tags, though this is confounded by the fact that popular tags tend to _be_ factual tags.-->
 
 <!--##### Tagging Instruction-->
 
@@ -609,7 +653,7 @@ Particularly, we look to information retrieval uses, to help in findability, fil
 One typology for types of tags was offered for tagged bookmarks by @golder_usage_2006.
 They present seven kinds of bookmarking tags: those for identifying what the item is about (i.e. topical), for identifying what the item is (e.g. blog), for identifying the creator of the item, for qualifying or refining other tags, for labeling subjective characteristics of the content, for establishing a relationship to the tagger (e.g. 'my post'), and for organization.
 
-How might Golder and Huberman's categiries of tags apply to images?i <!-- TODO -->
+How might Golder and Huberman's categories of tags apply to images?i <!-- TODO -->
 
 <!-- quotes 
 
