@@ -1,0 +1,379 @@
+{
+  "items": [
+    24277285466325880, 
+    195273333814694432, 
+    119345458845380640, 
+    2814818489916730, 
+    470274386059469760, 
+    336433034633647232, 
+    151292868705900384, 
+    166422148703229440, 
+    119134352612716800, 
+    350436414727218560
+  ], 
+  "_id": "sample1", 
+  "answers": [
+  {
+    "item": "195273333814694432", 
+    "answer": {
+      "tags":{"poor": [
+        "art", 
+        "purple bracelet", 
+        "color", 
+        "bracelet", 
+        "purple nalipolish", 
+        "ways to sharpen your nail look", 
+        "painting", 
+        "design", 
+        "hand", 
+        "nails"
+      ], 
+      "great": [
+        "mixed color nail polish", 
+        "purplenail polish", 
+        "burgundy nail patterns", 
+        "multi coloured nails", 
+        "multi colored nails", 
+        "burgundy french nails", 
+        "purple and pink nails", 
+        "burgundy and pink nails"
+      ], 
+      "good": [
+        "nail polish", 
+        "fingernails", 
+        "manicured nails"
+      ], 
+      "ok": [
+        "nail", 
+        "hand showing nails"
+      ]
+    }, 
+    "teaching": {
+      "tips": "Tags about nails are good, especially when they're more specific. Remember to think, 'would this image be useful to somebody searching for the tag'."
+    }
+  }}, 
+  {
+    "item": "151292868705900384", 
+    "answer": {
+      "tags":{"poor": [
+        "water"
+      ], 
+      "great": [
+        "female swimming", 
+        "woman swimming underwater", 
+        "woman floating in water", 
+        "underwater shot", 
+        "womans body underwater", 
+        "woman in black bikini swimming underwater"
+      ], 
+      "good": [
+        "swimming", 
+        "two piece", 
+        "woman wearing bikini", 
+        "swimsuit", 
+        "black and white photograph of people in pool", 
+        "bikini", 
+        "underwater"
+      ], 
+      "ok": [
+        "bathing suit", 
+        "grayscale", 
+        "black and white photography", 
+        "black and white"
+      ]
+    }, 
+    "teaching": {
+      "tips": "The best tags describe the subject, a woman, and the action, swimming."
+    }
+  }}, 
+  {
+    "item": "2814818489916730", 
+    "answer": {
+      "tags":{"poor": [
+        "read hair", 
+        "blithe minime"
+      ], 
+      "great": [
+        "girl doll", 
+        "big-eyed doll", 
+        "red haired doll", 
+        "red head doll with glasses", 
+        "doll with glasses"
+      ], 
+      "good": [
+        "glasses", 
+        "bjd", 
+        "doll", 
+        "blythe", 
+        "big eyed doll"
+      ], 
+      "ok": [
+        "toy", 
+        "child", 
+        "creepy", 
+        "red haired girl"
+      ]
+    }, 
+    "teaching": {
+      "tips": "Direct and descriptive tags are best."
+    }
+  }}, 
+  {
+    "item": "119134352612716800", 
+    "answer": {
+      "tags":{"poor": [
+        "mexican", 
+        "maggots", 
+        "gross", 
+        "rice and beans"
+      ], 
+      "great": [
+        "grains", 
+        "oats", 
+        "nuts", 
+        "granola", 
+        "homemade granola"
+      ], 
+      "good": [
+        "how to make granola", 
+        "dried fruits", 
+        "food", 
+        "fruit"
+      ], 
+      "ok": [
+        "dinner", 
+        "hot dish", 
+        "healthy", 
+        "breakfast", 
+        "homemade", 
+        "snack", 
+        "baking", 
+        "dessert"
+      ]
+    }, 
+    "teaching": {
+    }
+  }}, 
+  {
+    "item": "119345458845380640", 
+    "answer": {
+      "tags":{"poor": [
+        "food", 
+        "bit size desert", 
+        "light carmel cookie", 
+        "three"
+      ], 
+      "great": [
+        "cookie bars", 
+        "caramel bars", 
+        "salted caramel bar", 
+        "salted caramel bars", 
+        "caramel desert", 
+        "salted caramel", 
+        "carmel bars"
+      ], 
+      "good": [
+        "cookies on a glass plate", 
+        "square cookies", 
+        "sweets", 
+        "bars", 
+        "fresh cookie bars", 
+        "bar"
+      ], 
+      "ok": [
+        "easy desert to make", 
+        "cookies", 
+        "baking recipe", 
+        "pretty dessert", 
+        "yummy", 
+        "gooey", 
+        "dessert"
+      ]
+    }, 
+    "teaching": {
+      "tips": "It's a 'dessert' (ok tag), but more specifically 'bars' (good tag), but more specifically 'caramel bars' (great)."
+    }
+  }}, 
+  {
+    "item": "24277285466325880", 
+    "answer": {
+      "tags":{"poor": [
+        "outside", 
+        "outdoor"
+      ], 
+      "great": [
+        "hanging chair", 
+        "hammock swing", 
+        "hammock on porch"
+      ], 
+      "good": [
+        "cabin", 
+        "relaxation", 
+        "interior design", 
+        "porch", 
+        "deck", 
+        "hammock", 
+        "comfortable", 
+        "chair", 
+        "swing", 
+        "trees", 
+        "lounge", 
+        "relaxing", 
+        "serene"
+      ], 
+      "ok": [
+        "pillow", 
+        "forest", 
+        "white", 
+        "stools", 
+        "wood", 
+        "home", 
+        "paradise", 
+        "sunlight"
+      ]
+    }, 
+    "teaching": {
+      "tips": "Great tags describe the central item in the image, good tags describe the scene. The worse tags are too general: if somebody was search for 'outside', there would be better images than this one."
+    }
+  }}, 
+  {
+    "item": "166422148703229440", 
+    "answer": {
+      "tags":{"poor": [
+        "middelton", 
+        "kate", 
+        "happy birthday prince william", 
+        "william", 
+        "prince henry"
+      ], 
+      "great": [
+        "royal", 
+        "royalty", 
+        "royal family standing", 
+        "will and kate smiling", 
+        "kate middleton", 
+        "prince william and kate middleton", 
+        "prince william", 
+        "the royal family", 
+        "royal couple", 
+        "happy royal couple"
+      ], 
+      "good": [
+        "royals"
+      ], 
+      "ok": [
+        "couple", 
+        "happy", 
+        "will and kate", 
+        "prince william and kate photo", 
+        "prince", 
+        "prince william and princess kate"
+      ]
+    }, 
+    "teaching": {
+      "tips": "Sometimes the text (from hovering) might not be useful. Here the text says 'happy birthday', but the image doesn't visibly relate to Prince William's birthday."
+    }
+  }}, 
+  {
+    "item": "350436414727218560", 
+    "answer": {
+      "tags":{"poor": [
+        "fall"
+      ], 
+      "great": [
+        "life alert", 
+        "old woman on floor", 
+        "lady on the floor", 
+        "funny meme", 
+        "work meme"
+      ], 
+      "good": [
+        "grandma", 
+        "comedy", 
+        "funny nurse scene", 
+        "old person", 
+        "joke", 
+        "meme", 
+        "nursing", 
+        "funny text", 
+        "fallen", 
+        "woman fell down"
+      ], 
+      "ok": [
+        "bedroom", 
+        "help i have fallen and i cant get up", 
+        "grandmother", 
+        "work fell over", 
+        "spicing up meme", 
+        "nurse"
+      ]
+    }, 
+    "teaching": {
+      "tips": "This is a tough one. The better tags refer to the purpose of the image as a joke."
+    }
+  }}, 
+  {
+    "item": "336433034633647232", 
+    "answer": {
+      "tags":{"poor": [
+        "silver necklace", 
+        "necklace"
+      ], 
+      "great": [
+        "star bracelet", 
+        "silver bracelet"
+      ], 
+      "good": [
+        "jewelry", 
+        "bracelet"
+      ], 
+      "ok": [
+        "silver", 
+        "star", 
+        "delicate necklace", 
+        "star necklace"
+      ]
+    }, 
+    "teaching": {
+      "tips": "This is a case where the text can help you: if you think this is a necklace, it notes that it's a bracelet."
+    }
+  }}, 
+  {
+    "item": "470274386059469760", 
+    "answer": {
+      "tags":{"poor": [
+        "mark tiexiera", 
+        "mark teixiera", 
+        "baseball", 
+        "aseball card", 
+        "mark", 
+        "new york", 
+        "too har", 
+        "bat"
+      ], 
+      "great": [
+        "yankees cards", 
+        "mark teixeira card", 
+        "mark teixeira", 
+        "teixeira", 
+        "ny yankees mark teixeira gets a hit"
+      ], 
+      "good": [
+        "new york yankees", 
+        "funny", 
+        "new york yankees baseball player", 
+        "yankees", 
+        "ny yankees", 
+        "baseball player"
+      ], 
+      "ok": [
+        "player"
+      ]
+    }, 
+    "teaching": {
+      "tips": "This one's easy. Note that the better tags are more specific: 'mark teixeira card' or 'yankees card' is better than 'baseball card', which is better than 'baseball'."
+    }
+  }
+}
+]
+}

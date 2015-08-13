@@ -9,6 +9,6 @@
 	"frame_height": 650,
 	"amount": 0.15,
 	"annotation": "dissertation/data/turk/image-relevance-training-basic1.json",
-	"max_assignments": 7,
+	"max_assignments": 3,
 	"num_hits": 39
 }

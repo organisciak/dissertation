@@ -1,0 +1,375 @@
+{
+  "items": [
+    "2814818489916730", 
+    "269230883943533664", 
+    "104708760057824320", 
+    "406520303835237888", 
+    "84161086761367824", 
+    "18366310953663964", 
+    "42573158949928880", 
+    "226798531204491904", 
+    "386254105513790016", 
+    "407083253788406464"
+  ], 
+  "_id": "sample2", 
+  "answers": [
+    {
+      "item": "84161086761367824", 
+      "answers": {
+        "poor": [
+          "lamp", 
+          "pink"
+        ], 
+        "great": [
+          "queen of hearts party theme", 
+          "red queen party theme", 
+          "red queen party items", 
+          "queen of hearts party items", 
+          "red heart card party"
+        ], 
+        "good": [
+          "alice in wonderland", 
+          "clock", 
+          "table decor", 
+          "party decorations"
+        ], 
+        "ok": [
+          "heart", 
+          "decoration", 
+          "candles", 
+          "decorations", 
+          "baby shower", 
+          "clocks", 
+          "red", 
+          "theme", 
+          "chess", 
+          "decor", 
+          "party"
+        ]
+      }, 
+      "teaching": {
+        "tips": ""
+      }
+    }, 
+    {
+      "item": "18366310953663964", 
+      "answers": {
+        "poor": [
+          "conan", 
+          "poster", 
+          "house of the baskervilles", 
+          "houd of the baskervilles", 
+          "classic film", 
+          "arthur", 
+          "murder", 
+          "hound of the baskervilels cover"
+        ], 
+        "great": [
+          "the hound of the baskervilles", 
+          "hound of the baskervilles", 
+          "pulp novel", 
+          "sherlock holmes book", 
+          "sherlock holmes"
+        ], 
+        "good": [
+          "arthur conan doyle", 
+          "doyle", 
+          "holmes", 
+          "pulp", 
+          "mystery", 
+          "book cover", 
+          "novel", 
+          "murder mystery", 
+          "hound of the baskervilles vintage cover"
+        ], 
+        "ok": [
+          "scary", 
+          "book", 
+          "dog", 
+          "hounds of the baskervilles", 
+          "watson", 
+          "classics", 
+          "hound", 
+          "baskerville", 
+          "book artwork", 
+          "literature", 
+          "baskervilles"
+        ]
+      }, 
+      "teaching": {
+        "tips": ""
+      }
+    }, 
+    {
+      "item": "42573158949928880", 
+      "answers": {
+        "poor": [
+          "female"
+        ], 
+        "great": [
+          "cake decoration", 
+          "seaside cake", 
+          "amelia cake", 
+          "beach decoration", 
+          "beach seaside cake", 
+          "beach cake"
+        ], 
+        "good": [
+          "two-tier cake", 
+          "pastel cake"
+        ], 
+        "ok": [
+          "baby girl", 
+          "poster of cake", 
+          "cute", 
+          "cake-stand", 
+          "cake", 
+          "birthday", 
+          "amelia"
+        ]
+      }, 
+      "teaching": {
+        "tips": ""
+      }
+    }, 
+    {
+      "item": "2814818489916730", 
+      "answers": {
+        "poor": [
+          "read hair", 
+          "blithe minime"
+        ], 
+        "great": [
+          "girl doll", 
+          "big-eyed doll", 
+          "red haired doll", 
+          "red head doll with glasses", 
+          "doll with glasses"
+        ], 
+        "good": [
+          "glasses", 
+          "bjd", 
+          "doll", 
+          "blythe", 
+          "big eyed doll"
+        ], 
+        "ok": [
+          "toy", 
+          "child", 
+          "creepy", 
+          "red haired girl"
+        ]
+      }, 
+      "teaching": {
+        "tips": ""
+      }
+    }, 
+    {
+      "item": "104708760057824320", 
+      "answers": {
+        "poor": [
+          "pasta", 
+          "dinner", 
+          "lunch", 
+          "food"
+        ], 
+        "great": [
+          "mushroom dish", 
+          "cooking mushrooms", 
+          "sprigs of rosemary", 
+          "fungi food dish", 
+          "mushroom meal", 
+          "cooked mushrooms"
+        ], 
+        "good": [
+          "mushrooms", 
+          "saute", 
+          "thyme", 
+          "mushroom", 
+          "cooking with mushrooms"
+        ], 
+        "ok": [
+          "meal", 
+          "frying pan", 
+          "mushroom soup", 
+          "fried mushroom dinner", 
+          "shrooms"
+        ]
+      }, 
+      "teaching": {
+        "tips": ""
+      }
+    }, 
+    {
+      "item": "226798531204491904", 
+      "answers": {
+        "poor": [
+          "question", 
+          "talking", 
+          "screenshot", 
+          "text", 
+          "too hard", 
+          "funny meme"
+        ], 
+        "great": [
+          "text conversations to laugh about", 
+          "hilarious", 
+          "joke", 
+          "chat logs", 
+          "funny chat", 
+          "funny text convo"
+        ], 
+        "good": [
+          "chat conversation", 
+          "message", 
+          "chat"
+        ], 
+        "ok": [
+          "conversation", 
+          "funny text", 
+          "funny"
+        ]
+      }, 
+      "teaching": {
+        "tips": ""
+      }
+    }, 
+    {
+      "item": "386254105513790016", 
+      "answers": {
+        "poor": [
+          "decoration", 
+          "leaves", 
+          "plantlife", 
+          "indoor"
+        ], 
+        "great": [
+          "bonsai art", 
+          "bonsai tree", 
+          "bonsai", 
+          "mossy plant"
+        ], 
+        "good": [
+          "rocks", 
+          "fountain", 
+          "moss", 
+          "mossy"
+        ], 
+        "ok": [
+          "mossy thing on a porch", 
+          "green plant", 
+          "gardening", 
+          "plants", 
+          "plant"
+        ]
+      }, 
+      "teaching": {
+        "tips": ""
+      }
+    }, 
+    {
+      "item": "406520303835237888", 
+      "answers": {
+        "poor": [
+          "thigh high socks", 
+          "girl"
+        ], 
+        "great": [
+          "manga blue hair", 
+          "anime girl with wings and blue hair", 
+          "vocaloid", 
+          "anime"
+        ], 
+        "good": [
+          "vocal", 
+          "anime girl"
+        ], 
+        "ok": [
+          "cartoon", 
+          "waifu", 
+          "art", 
+          "artwork"
+        ]
+      }, 
+      "teaching": {
+        "tips": ""
+      }
+    }, 
+    {
+      "item": "269230883943533664", 
+      "answers": {
+        "poor": [
+          "bread boll", 
+          "food", 
+          "snack", 
+          "salmon", 
+          "breadbowl"
+        ], 
+        "great": [
+          "smoked salmon spread in sourdough bowl", 
+          "sourdough bowl", 
+          "bread bowl dip"
+        ], 
+        "good": [
+          "party appetizer idea", 
+          "smoked salmon dip", 
+          "bread dip", 
+          "salmon spread", 
+          "dip", 
+          "bread bowl", 
+          "creamy dip"
+        ], 
+        "ok": [
+          "delicious bread bowl dip", 
+          "bread", 
+          "smoked salmon", 
+          "appetizer"
+        ]
+      }, 
+      "teaching": {
+        "tips": ""
+      }
+    }, 
+    {
+      "item": "407083253788406464", 
+      "answers": {
+        "poor": [
+          "network information", 
+          "system", 
+          "network graph", 
+          "too hard", 
+          "graph"
+        ], 
+        "great": [
+          "gemstone reference", 
+          "earth medicine", 
+          "earthstone", 
+          "earth medicine chart"
+        ], 
+        "good": [
+          "nature", 
+          "systems", 
+          "health patterns", 
+          "medicine", 
+          "gemstones", 
+          "earth", 
+          "round chart", 
+          "medicine graph", 
+          "gems"
+        ], 
+        "ok": [
+          "network", 
+          "diagram", 
+          "chart", 
+          "patterns", 
+          "networks", 
+          "system chart", 
+          "circle chart"
+        ]
+      }, 
+      "teaching": {
+        "tips": ""
+      }
+    }
+  ]
+}
