@@ -545,12 +545,25 @@ TODO
  - Cost
  - Satisfaction
 
+### Results
+
+\newthought{A measurement of time spent} on each task was taken, in seconds.
+
+It should be noted that, unlike the later tagging experiment, where a worker's time spent focused on an input box could be measured, there is no easy proxy for measuring per-task time in a set.
+Since the relevance judgment options are a set of radio buttons, we do not capture the *start* of a worker's attention, just the moment that they actually make their contribution.
+As a proxy, a measure was taking of the amount of time that the *previous* item was in focus; i.e. worker clicks item A, and while they think about item B, A is still in focus.
+This provides a rough estimate of the time spent, good enough for broad comparisons, though not robust enough to tie time to a specific item.
+
+
+<!-- Feedback -->
 \newthought{Workers were given the option} to rate the task and their satisfaction with the payment, on a scale from 1-5.
 
 Figure @rel-task-satisfaction shows the distribution of satisfaction score for each condition.
 In all cases, they were skewed toward the upper end -- the median is 5 for each condition -- as may not be surprising.
 
 TODO Write up
+
+
 
 ![Relevance judgment task satisfaction scores, by condition.](images/taskSatisfaction-relevance.png) {#fig:rel-task-satisfaction}
 
@@ -561,9 +574,6 @@ There were not enough measurements for a non-parametric comparison, but it did n
 Binning workers in quartiles by rank, those in the second quartile had a comparable task satisfaction ($mean=4.25$, $median=5$, $N=4.5$, _note low N_) to those in the third performance quartile ($mean=4.81$, $median=5$, $N=11$) and the upper quartile ($mean=4.62$, $mean=5$, $N=16$).
 Given a larger sample, one interest quirk to pursue is that the lowest pay satisfaction was among the best contributors ($mean=4.375$, $median=4$, $N=16$).
 
-### Evaluation
-
-### Results
 
 ## Experiment  #2: Tagging
 
@@ -653,42 +663,28 @@ Particularly, we look to information retrieval uses, to help in findability, fil
 One typology for types of tags was offered for tagged bookmarks by @golder_usage_2006.
 They present seven kinds of bookmarking tags: those for identifying what the item is about (i.e. topical), for identifying what the item is (e.g. blog), for identifying the creator of the item, for qualifying or refining other tags, for labeling subjective characteristics of the content, for establishing a relationship to the tagger (e.g. 'my post'), and for organization.
 
-How might Golder and Huberman's categories of tags apply to images?i <!-- TODO -->
-
-<!-- quotes 
-
-"Some tags that would not typically be provided by Library catalogers are obviously more important in a social media site like Flickr, where photos may be sought out for reuse based on such attributes as predominate colors." (Springer et al 2008:24)
-
--->
-
-<!-- TODO: look at studies on Flickr tagging-->
-
 @sen_tagging_2006 collapse the seven classes from @golder_structure_2007 into three: _factual_ tags conveying objective information, _subjective_ tags conveying opinions, and _personal_ tags that are intended only for the tagger.
 As expected, factual tags were found to be most generally useful, particularly for learning and finding, although personal and subjective tags were useful for self-expression and organizing, respectively.
+
 These are uses that matter to users of online communities, though for the organization purposes of this study's image tagging task, and perhaps more generally for the controlled paid setting, factual tags are the most desired.
 
-In a survey related to the display of prior tags [@sen_quest_2007], users found personal tags less useful.
+Finally, @springer_for_2008 analyzed a sample of tags and derived a number of non-exclusive categories for image tags, including tags derived from the description, new descriptive tags, new subject words, commentary, emotional/aesthetic responses, personal knowledge or research, machine tags, variant forms, foreign language tags, and miscellaneous tags [@springer_for_2008]. Of these, description-derived and image subject tags were the most common.
 
-<!-- Tags used in IR.. what kind -->
+These studies informed how this study presented the tagging task.
+First, the underlying criteria motivating a good or bad tag was directly stated, that the purpose is to help people find images.
+"If somebody was searching for this tag, would this be an image that they would want to find?"
 
-Finally, tagging has been used in practice for cultural heritage uses, and preferred types of tags have been discussed, even when actual practice does not yield those ideals.
-<!- TODO LIS literature on tagging ->
+Of the typologies studied, the types of tags that would inform this task are factual and descriptive (new descriptive). Machine tags, variant forms, these can be generated without crowdsourcing; on the other end of the spectrum, personal tags are not useful here.
 
-In their report on The Commons ^[TODO make sure I use the proper name throughout the document, not "Flickr Commons], @springer_for_2008 analyzed a sample of tags and derived a number of non-exclusive categories for image tags:
+The examples of good and bad tags to anchor workers were as follows:
 
-- tags derived from the description;
-- new descriptive keywords, including tags for place, format, photographic technique, time period, or creator name;
-new subject words, such as items seen in the image, associations/symbolism,  commentary (e.g. 'Sunday best'), transcription of words in the image, topical tags and humour;
-- emotional/aesthetic responses (e.g. 'ugly');
-- personal knowledge or research;
-- machine tags;
-- variant forms;
-- foreign language tags; and
-- miscellaneous tags [@springer_for_2008]
+ > **Good** and interesting tags describe _actions_ and _objects_ in the image. Tags can be multiple words, and should _stand alone_.
+ > **Bad** tags don't describe what is in the image, describe things _too generally_, or describe things that are _not the focus_ of the image. For this task, _personal tags_ are not helpful.
 
-Of these, description-derived and image subject tags were the most common.
+The words italicized above were presented as links, showing a pop-up box with examples on hover (a note made this fact clear to workers).
+Emotional/aesthetic tags were neither explicitly encouraged or discouraged; they can be useful tags, but an adequate explanation that did not confound subjective and personal tags would have violated attempts at brevity.TODO
 
-The relative usefulness of the 
+The relative usefulness of the TODO
 
 <!--##### Tagging - Training Interface-->
 
@@ -713,6 +709,37 @@ That is, since the first batch of basic tagging contributions averaged 23 second
 ### Results
 
 \newthought{In completion time}, the most drastic difference was in the fast condition.
+
+![Distribution of time spent, per tagged item, for each condition. Kernel density shown rather than nominal counts, to account for variations in N.](images/tagTime1.png) {#fig:tag-time1}
+
+The relative difference in per-item tagging tasks is shown in Figure @fig:tag-time1.
+To avoid misleading graphics due to difficulties in controlling for N, the kernel density estimates are shown. Additionally the associated measures for each distribution are shown in Table @tbl:tag-time2.
+
++--------------+-------+--------+---------+-----+
+| condition    | mean  | median | std.dev | N   |
++==============+=======+========+=========+=====+
+| basic        | 22.89 | 18.35  | 17.65   | 846 |
++--------------+-------+--------+---------+-----+
+| fast         | 11.46 | 6.94   | 11.46   | 500 |
++--------------+-------+--------+---------+-----+
+| feedback     | 10.75 | 9.78   | 5.66    | 264 |
++--------------+-------+--------+---------+-----+
+| postTraining | 25.03 | 19.85  | 19.88   | 490 |
++--------------+-------+--------+---------+-----+
+
+Table: Metrics for time spent per task, in seconds. {#tbl:tag-time2}
+
+The fast condition improved the mean time spent on tasks to approximately twice as fast as the basic condition.
+The feedback condition was similarly fast, though the reasons for this are unclear. [^TODO run more experiments for feedback at a different time of the day to increase N. Might be a fluke.]
+
+While the time-limited condition and feedback condition changed worker behavior, the tasks completed after training were done at the same pace as the baseline.
+Pairwise comparisons between the distributions reject the null hypothesis of equal distributions in all cases except the comparison between the baseline and the post-training distributions[^tagTimeSig].
+This came as a surprise, as it was expected that workers in this condition would perform more confidently.
+
+[^tagTimeSig]: $p==0.02$, Mann-Whitney U with continuous correction, fail to reject at $/alpha=0.05$ with Bonferroni correction.
+  Since six comparisons were performed, the test for significant would be $>0.0083$.
+  All other comparisons with highly significant.
+
 
 \newthought{In the fast interface}, the payment struc
 
