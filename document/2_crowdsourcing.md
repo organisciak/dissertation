@@ -225,21 +225,16 @@ This has been a costly and exhausting process in the past, making it difficult t
 Relevance judgments benefit from the agreement among multiple humans, since the concept of 'relevance' is not clear-cut but rather normative.
 The ability to attract a breadth of rater types also positions paid crowdsourcing as an effective means to collecting evaluation data.
 
-For three years, TREC has run a crowdsourcing track that emphasizes the collection of high quality relevance judgments through paid crowds [@lease_overview_2011; @smucker_overview_2012].
-While much of the focus was on identifying and accounting for lower quality workers, there were also some efforts which built novel interfaces to try to streamline contributions or increase reliability.
-For example, the Glasgow team encourage fast turnaround, reducing rating click counts, pre-loading pages, and floating the assessment question [@mccreadie_university_2011].
-Earlier, the same team crowdsourced judgments for the TREC Blog track with a design that color coded completed tasks based on whether they matched other raters and a gold standard [@mccreadie_university_2011].
+TREC itself ran a crowdsourcing track for three years, the primary task a competition to improve relevance judgment quality [@lease_overview_2011; @smucker_overview_2012].
 
-Grady and Lease also explored the effect of changing human factors on information retrieval relevance judging through Mechanical Turk [-@grady_crowdsourcing_2010]. They considered four factors: terminology, base pay, offered bonus, and query wording. Though their findings were inconclusive, their study provides guidance on the issues related to this form of study. This dissertation builds upon Grady and Lease's work, as well as other parameterization studies like Mason and Watts [-@mason_financial_2010], by evaluating more drastic deviations from the core structure of a paid crowdsourcing task.
-
-The effect of wording and terminology, one of Grady and Lease's focal points, has often been alluded to as a factor in crowdsourcing, including in Library and Information Science work. In writing about The Commons, a successful museum crowdsourcing project with Flickr, the Library of Congress reported that the "text announcing the Commons ('This is for the good of humanity, dude!!') struck just the right chord" [@springer_for_2008].
-
-Alonso and Baeza-Yates have also written about the effect of different parameterizations of paid crowdsourcing tasks, considering the quality of relevance judgments with varying numbers of contributors evaluation each task, topics per task, and documents per query. In doing so, they cite interface design as the most important part of experimental design on Mechanical Turk and recommend following survey design guidelines and provided clear, colloquial instructions [@alonso_design_2011]. This study agrees with their sentiment, and strives to formally understand and articulate the differences that interface design influences in crowdsourcing.
+Another common use of crowdsourcing is for information retrieval correction of results.
+Manual tweaking of results is not a scholarly activity, but there is evidence that it is done often in practice, by companies such as Twitter [@chen_improving_2013], 
 
 Using crowdsourcing in the machine, as evidence for search engine algorithms rather than evaluation, is less common.
-PageRank is one such effort, utilizing the linking habits of web page authors as a proxy for authoritativeness and quality[@page_pagerank_1999].
+PageRank is one such effort, utilizing the linking habits of web page authors as a proxy for authoritativeness and quality [@page_pagerank_1999].
+Recently, crowdsourcing has proven useful for time-sensitive queries, and has been used by Twitter to model searches that may have never been seen before [@chen_all_2008].
 
-One of the best explored spaces of retrieval over or incorporating crowdsourced information is in folksonomies.
+One of the better explored spaces of retrieval over or incorporating crowdsourced information is in folksonomies.
 Folksonomies refer to free-text labelling (i.e. 'tagging') by non-professionals.
 A popular resource for folksonomies over general web documents is the older incarnation of bookmarking website del.icio.us.
 In folksonomies such as on del.icio.us, over 50% of tags contribute information that was not contained in the document; for music tags (on the website Last.fm), over 98% of tags provide text information not previously help in the record[@bischoff_can_2008].
