@@ -58,54 +58,72 @@ The manner to improve on a basic task/description/items interface design is not 
 \newthought{If we consider crowdsourcing data quality} as something that can be addressed not only through post-collection modeling but through the choices made in designing the collection task, the latter approach is surely the lesser studied problem.
   However, in cost-time considerations, design promises more efficient improvements.
 A design that is more interesting to workers or less prone to error may result in better contributions at no extra cost, while designs that offer bonuses or training include short-term costs.
-When studying intrinsic motivation in Mechanical Turk tasks, @mason_financial_2010 found that a small change in instrumentation -- changing remuneration to less tightly govern the task -- resulted in more work contributed with happier contributors.
+For example, @mason_financial_2010 found that a small change in instrumentation -- changing remuneration to less tightly govern the task -- resulted in more work contributed with happier contributors.
 <!-- TODO is there work about whether it is better to go cheaper with a bonus, or higher with no bonus?
 -->
 
-[<!--Gilbert paper-->]
-
-## Problem
-
-<!-- Some related work, while the beefier stuff is later -->
-\newthought{A similar approach was been taken by @mitra_comparing_2015 have taken a similar approach to this chapter, in pursuing "person-oriented strategies" over process-oriented strategies".
-Their study is a unique precedent for a controlled experiment of different collection-time strategies for paid crowdsourcing contributions.
-They consider the following strategies: (1) screening workers, (2) providing examples and training workers, (3) offering financial incentives for improved quality (bonuses), and (4) aggregating or filtering multiple independent workers.
-
-Screening (1) and aggregation (4) are strategies discussed further and employed respectively in the previous and next chapter, and performance bonuses (3) are a parameterization manipulation that has been studied before <!-- TODO, cite refs from mitra paper, and others-->. ^[We also used a performance-based bonus in the 'taste-grokking' personalization approach detailed in Chapter 6. Though we hypothesized it may have a self-competitive effect, it was not the focus of that study and a controlled comparison was not performed to see if it was exerted an inordinate bias on the results. Appropriately, @mitra_comparing_2015 did not find this type of incentive to improve quality, for the most part.]
-Pertinent to this study, however, @mitra_comparing_2015 found that training contributors on task expectations improved contribution quality on nearly all tasks, generally compounding improvements on top of other conditions.
-Similar to this study, @mitra_comparing_2015 compare interaction against a set of tasks that range in their subjectivity.
-<!-- TODO how do we differ?-->
-
-## Overview
-
-In this chapter, multiple interfaces for encouraging less deviation between contributors are evaluated against identical controlled tasks.
-Two design manipulations are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
+This chapter looks at collection-time task design manipulations or interventions for collecting objective data through paid crowdsourcing.
+Multiple interfaces for encouraging less deviation between contributors are evaluated against identical controlled tasks.
+Two of of these design manipulations are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
 A third design encourages quicker responses.[^whyint]
-These are compared to a realistic baseline interface which follows typical Mechanical Turk conventions.
-Afterward, an applied experiment is presented, where both apriori and posterior methods are applied to a music information retrieval evaluation. The design changes that are made improve the quality of results drastically, with negligible cost differences.
+These are compared to a realistic baseline interface which follows Mechanical Turk conventions and best practices.
+These design manipulations are measured against two control tasks: image tagging and image-based information retrieval relevance judgments.
+
+Afterward, an applied experiment is presented, where both a priori and posterior collection quality optimization methods are applied to a music information retrieval evaluation. The design changes that are made improve the quality of results drastically, with negligible cost differences.
 
 [^whyint]: Why are these design manipulations chosen? Later in this chapter, various possibilities for design manipulation are considered, and compared to the existing literature. As will be seen, prior work has lent insight on the effect of 'parameter manipulations' such as payment variation [@mason_financial_2010; @harris_youre_2011], wording changes [@grady_crowdsourcing_2010], while more drastic design manipulations are only beginning to be studied in the context of crowds [@mitra_comparing_2015].
 
+# Prior work on microtask design
 
-## Related Work
+Grady and Lease also explored the effect of changing human factors on information retrieval relevance judging through Mechanical Turk [-@grady_crowdsourcing_2010]. They considered four factors: terminology, base pay, offered bonus, and query wording.
+Their findings were inconclusive; however their study provides guidance on the issues related to this form of study.
 
-### Financial Tweaking
-### Bonuses
-### Task Description
+The effect of wording and terminology, one of Grady and Lease's focal points, has often been alluded to as a factor in crowdsourcing, including in Library and Information Science work.
+In writing about The Commons, a successful museum crowdsourcing project with Flickr, the Library of Congress reported that the "text announcing the Commons ('This is for the good of humanity, dude!!') struck just the right chord" [@springer_for_2008].
 
-<!-- TODO
-Explain various conditions _before_ related work
-Move other lit review (i.e. for feedback) to this section.
-More lit review on training, on feedback (Mitra has some suggestions)
+Grady and Lease's work in in a space of parameterization studies, that look at how changes to the parameters of typical tasks -- title, description, payment -- affect the outcome.
+Another notable parameterization study, by @mason_financial_2010, contributed insights on the relationship between payment and worker satisfaction.
+In one experiment, they found that increased payment does not improve the quality of results, only the duration of engagement.
+This was attributed to an anchoring effect where, in paying workers more, a worker's perception of the task's value increased with the payment.
+In a second experiment, they found that tying payment too closely to a task, in this case paying by word in a word search, lowered the intrinsic motivation and satisfaction of workers.
+This chapter builds upon parameterization studies to evaluate slightly more drastic deviations for the typical structure of a paid crowdsourcing task.
 
-Or.. should I move /this/ section /into/ the more granular sections?
+Alonso and Baeza-Yates have also written about the effect of different parameterizations of paid crowdsourcing tasks, considering the quality of relevance judgments with varying numbers of contributors evaluation each task, topics per task, and documents per query.
+In doing so, they cite interface design as the most important part of experimental design on Mechanical Turk and recommend following survey design guidelines and provided clear, colloquial instructions [@alonso_design_2011].
+This study agrees with their sentiment, and strives to formally understand and articulate the differences that interface design influences in crowdsourcing.
 
--->
+For three years, TREC ran a crowdsourcing track that emphasizes the collection of high quality relevance judgments through paid crowds [@lease_overview_2011; @smucker_overview_2012].
+
+While much of the focus was on identifying and accounting for lower quality workers, there were also some efforts which built novel interfaces to try to streamline contributions or increase reliability.
+For example, the Glasgow team encourage fast turnaround, reducing rating click counts, pre-loading pages, and floating the assessment question [@mccreadie_university_2011].
+Earlier, the same team crowdsourced judgments for the TREC Blog track with a design that color coded completed tasks based on whether they matched other raters and a gold standard [@mccreadie_university_2011].
+
+One novel approach to information retrieval evaluation was performed by @eickhoff_quality_2012.
+They created a game for collecting labels, finding that it resulted in more contributions for substantially less cost.
+Akin to @mason_financial_2010's word search in the paid-by-task condition, @eickhoff_quality_2012 found that workers continued playing even after they the completed the required portion of the task.
+This chapter does not study the use of games, but uses elements of gamification indirectly in studying the effect of communication quantified worker performance.
+
+The collection-time design problem has been previously pursued by @mitra_comparing_2015, who looked at "person-oriented strategies" over "process-oriented strategies".
+Their study is a unique precedent for a controlled experiment of different collection-time strategies for paid crowdsourcing contributions.
+They consider the following strategies: (1) screening workers, (2) providing examples and training workers, (3) offering financial incentives for improved quality (bonuses), and (4) aggregating or filtering multiple independent workers.
+
+Screening (1) and aggregation (4) are strategies discussed further and employed respectively in the previous and next chapter, and performance bonuses (3) are a parameterization manipulation that has been studied before[^PerformanceBonus].
+Pertinent to this study, however, @mitra_comparing_2015 found that training contributors on task expectations improved contribution quality on nearly all tasks, generally compounding improvements on top of other conditions.
+Similar to this study, @mitra_comparing_2015 compare interaction against a set of tasks that range in their subjectivity.
+
+Finally, @kazai_crowdsourcing_2011 approach the problem of HIT design quality improvement by inputting various trap mechanisms for inattentive workers.
+Tasks were completed by a survey flow, where the set of questions to be answered depended on the answers, allowing peculiar flows to be filtered.
+Captchas were also used to confirm human input and, perhaps most amusing, questions were planted that had the were check a box if they "did not pay attention" or "did not read the instructions".
+This is a direct solution to some of the problems this chapter looks at.
+@kazai_crowdsourcing_2011 tested a number of confounded features, but these quality control metrics appeared to improve worker agreement with gold standard data.
+
+[^PerformanceBonus]: We also used a performance-based bonus in the 'taste-grokking' personalization approach detailed in Chapter 6.
+Though we hypothesized it may have a self-competitive effect, it was not the focus of that study and a controlled comparison was not performed to see if it was exerted an inordinate bias on the results. @mitra_comparing_2015 did not find this type of incentive to improve quality.
 
 ## Research Questions
 
 This chapter compares the effect of task design on the quality of crowdsourced objective data.
-Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information science -- a typical encoding task performed by paid crowds, the following questions will be pursued:
+Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information science -- a typical encoding task performed by paid crowds -- the following questions are pursued:
 
  * __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?^[The _design space_ question.]
 
@@ -125,7 +143,7 @@ RQ2 and RQ3 are the primary questions being explored in this chapter of the prop
 While this dissertation is explicitly pursuing the former question, collecting computationally useful contributions needs to be understood in the context of contributor satisfaction.
 The trade-off between contributions that crowds want to make and the reliability of the data is a central consideration for fostering sustainable, or alternately affordable, crowdsourcing.
 
-RQ4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be addressed as thoroughly as possible.
+RQ4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be addressed as thoroughly as possible. [TODO: don't forget to address this]
 
 ## Design Space
 
@@ -136,10 +154,6 @@ Commonly, a paid crowdsourcing worker goes through the following steps:
  3. Worker $w$ accepts the task $t$
  4. Work performs task $t$ and submits
  5. A new task $t'$ is chosen and, worker is taken back to _step 2_ or _step 3_
-
-<!--TODO research on structure?-->
-<!-- TODO cite Amazon docs -->
-<!--TODO screenshot of a normal task-->
 
 The above steps are the model used by Amazon Mechanical Turk when a task is followed through to completion.
 Workers are also given escape options, to skip, reject or return tasks.
@@ -152,30 +166,25 @@ Metadata encoding tasks generally consist of the following parts:
  * __Action__, one per item: the data collection mechanism.
 
 \newthought{Within this framework}, a number of factors are observable that may potentially affect how our microblog encoding task is completed.
-First are the parameterizations of the task within its existing structure -- changes to the goal, instructions, item, action, and even the task itself.
-Ways that these can change from task to task include:
+First are the parameterizations of the task within its existing structure.
 
- * __Task__
-    * Payment.
-    * Bonuses.
-    * Number of tasks available.
- * __Goal__
- * __Instructions__
-    * Clarity.
-    * Restrictive versus open-ended.
-    * Length.
- * __Item__
-    * Number of items in a task.
- * __Action__
-    * Complexity of action. e.g. granularity.
+The *task* can be modified, changing parts such as payment [e.g. @mason_financial_2010], bonuses [e.g. @grady_crowdsourcing_2010], or number of tasks available.
+
+The *goal* can also be modified; as discussed in the introductory chapter, worker and system goals can and often do vary.
+
+The *instructions* can change: changes can be made to the clarity, the restrictiveness or open-endedness, or the length.
+
+The *item* can change, such as modifying the presentation or the size of the single assignment set.
+
+Even the *contribution* action can change: for example, the granularity of the contribution mechanism (free text, multiple choice, single button, etc.).
 
 There are also intangibles such as the appeal of the topic and the visual layout.
 
-Of course, we're not constrained to the task structure provided above.
+Of course, there is no constraint insisting on the task structure provided above.
 We can add elements to the task design before the task is accepted, at the start of the task, during or in response to individual interactions, or after the task is completed.
 Taking away elements might also be possible, such as the instructions, though it is hard to imagine that doing would would have a positive effect on the reliability or variance of the data.
 
-The possibilities are endless for adding parts to the basic task.
+There are countless possibilities for adding parts to the basic task.
 To inspire useful ones, it is helpful to consider one final, naturalistic set of factors that may affect the outcome of a paid crowdsourcing task: worker behaviours.
 
 A worker's contribution may be affected by factors such as experience, skill, time spent per task, and attentiveness.
@@ -228,7 +237,7 @@ With regards to designs that mislead workers about their performance, there are 
 
 ## Approach
 
-While parameterization studies have compared how shifts in description [e.g. @grady_crowdsourcing_2010] or payment structure [e.g. @mason_financial_2010] affect contribution, very few studies looking at more drastic design manipulations have been performed on a controlled task [^The recent paper by @mitra_comparing_2015 a notable exception]. [^TODO add more citations above]
+While parameterization studies have compared how shifts in description or payment structure affect contribution, very few studies looking at more drastic design manipulations have been performed on a controlled task [A few of the exceptions have already been notes, such as @mitra_comparing_2015; @eickhoff_quality_2012].
 
 Still, some unresolved questions in the area are necessary to understand in the pursuit of quality crowd contributions.
 For example, it is still unclear whether simple encoding tasks benefit more from workers' gut instincts or careful consideration.
@@ -238,9 +247,14 @@ Having found in the previous chapter that reading instructions slowly is importa
 Understanding that many reliability errors are introduced by honest workers that intend to do well, it may also be important to keep workers informed of their performance, at least when they are not performing well. Other work, to be reported in later chapters, finds that a task redesign for an evaluation task can improve collected data immensely at little extra cost, while in the case of simple item ratings, over-thinking the task is actually detrimental.
 
 With those considerations in mind, this study compares data collected through three interfaces for crowdsourced data collection: a training interface, a feedback interface, and a time-limited interface.
+
 The training interface takes more care to slow down the task and walk new workers through the codebook and the style of a good contribution.
+
 The feedback interface tries to reflect performance back to workers, to check their understanding of the codebook.
+
 Finally, the time-limited interface contrasts the introspective approach of the other interface by encouraging quicker contributions.
+
+For comparison, a carefully designed baseline follows conventions and best practices for paid microtasking platforms.
 
 ### Basic interface (Baseline)
 
@@ -270,11 +284,11 @@ Collapsible instructions have been recommended previously [@chen_making_2012; @c
 
 [^TaggingInterface]: TODO: Add figure of instructions from basic condition of tagging task. The substance of the instructions is discussed in the Tag Task section.
 
-Following the advice laid out by the unofficial Guidelines for Academic Requesters[@_guidelines_2014][^Workers], a time estimate for task completion was also provided.
+Following the advice laid out by a notable set of best practices [@_guidelines_2014][^Workers], a time estimate for task completion was also provided.
 The time estimate was determined based on testing and updated following an initial batch of tasks.
 
 It is recommended to be clear about what work is rejected [@_requester_2011; @_guidelines_2014].<!--_-->
-Given that an underlying premise of this chapter is investigating whether the work requester is sometimes to blame for poor work, it would be a troublesome foregone conclusion to actually reject work, so for ethical reasons no work was rejected.
+Given that an underlying premise of this chapter is investigating whether the work requester is sometimes to blame for poor work, it would be a troublesome foregone conclusion to actually reject work, so no work was rejected.
 Instead, even for the basic interface, improper work that would have been rejected in other settings was validated by the system when possible.
 For example, workers were asked for a minimum of two tags in the tagging task; as shown in Figure @fig:basicvalidation, they could not submit before entering two tags.
 To account for instances where a second tag was too difficult to create, workers could also add a placeholder 'TOOHARD' tag, which the interface alerted a worker to if their cursor was inactive for a few seconds (Figure @fig:tippopup).
@@ -294,34 +308,41 @@ The _task set_ of items to perform work on, again followed a basic archetypal pa
 The tasks themselves were small and did not require context shifting, as Amazon recommends [@_requester_2011].
 
 Finally, the basic interface included an open-ended feedback form at the end.
-While this is far from a standard convention, many have recommended it as a standard element in task design [<!-- TODO cite Chen, cite dynamo, cite alonso? -->].
+While this is far from a standard convention, many have recommended it as a standard element in task design [@chen_mechanical_2012; @_guidelines_2014].
 The ability to respond easily provides valuable information on worker satisfaction and task problems.[^feedback]
 
-[^feedback]: I have treated feedback forms as a necessity for the past few years.
- Based on my experiences, feedback forms provide a space for critical information, such as broken tasks, and qualitative information, such as worker satisfaction. Most importantly, they provide a qualitative connection to workers, which is contrary to Amazon's purposes as 'artificial artificial intelligence' but which encourages requesters to respect their workers.
+[^feedback]: Most feedback form practice is anecdotal, because its value is qualitatively palpable but quantitatively intangible.
+ Based on my own experiences, feedback forms provide a space for critical information -- such as broken tasks -- and qualitative information -- such as worker satisfaction. Most importantly, they provide a more human interface between workers and requesters.
+ This runs contrary to Amazon's purposes as 'artificial artificial intelligence' but encourages requesters to respect their workers.
  Interestingly, as noted earlier, when @alonso_design_2011 tried to mandate feedback form responses, they found that their quality fell relative to volunteered feedback.
 
 ### Training interface (TRAIN)
 
 In the training interface, the worker is walked through their first task slowly.
 As they complete the tasks, their answers are evaluated against a gold standard and they are informed if they completed it correctly or incorrectly.
-Incorrect answers will also be given an explanation of why the actual answer is correct.
-
-<!-- TODO2 Justification for this design: who else has done it?
-Ask Mike, possible Jaime for advice, my lit review is failing.
--->
+Accompanying the 'evaluation', incorrect answers are also given an explanation of why the actual answer is correct.
 
 The training tasks were hand-designed, based on a random sample of items.
 One can imagine an optimal sample, where the training set starts with easy tasks and quickly turns focus to the items that are most difficult.
 However, removing the most difficult items from the post-training pool would unfairly bias the training condition: this is why a random sample for training was selected.
 
-During the training interface, workers were greeted with a message noting that their first task will be atypical, in that answers will be provided.
+During the training interface, workers are greeted with a message noting that their first task will be atypical, in that answers will be provided.
 The tasks set itself appears similar to a basic interface taskset, except that the individual items have a 'Check your Answer' button (Figure @fig:trainexample1).
 
 ![Item in a training condition, before and after checking the answer.](images/upcycletrain1.png) {#fig:trainexample1}
 
 To better guide workers and for a clearer understanding of how the worker is performing, the 'Check Answer' button is disabled until a submission is made, and the submission interface is disabled after the answer is checked.
 This helps explain to workers the intended order of contribution with minimal text: we want workers to try a contribution before checking their answer, and we don't want them changing the answer afterward.
+
+\newthought{The two task settings looked at here}, image tagging and relevance judgments, have different levels.
+While the tagging task stands alone, each image functioning independently of the others, relevance judgments are grouped within queries.
+This means an initial interaction training task focuses on teaching specific to a query, teaching in-depth the mode of thinking associated with conducting the judgments, while not particularly training workers for the specific queries they will see.^[In this study, workers had a $1/19$ chance of getting a task set where they judged documents for the same query as they saw in the training task.]
+
+![Intervention in INSTRUCT condition](images/instructModal.png) {#fig:instruct-modal}
+
+To also measure query-specific training, albeit at a smaller scale, the relevance judgment experiment is also evaluated against a training intervention (INSTRUCT).
+This intervention amounts to a full screen window with the task instructions as well as visual examples of very relevant, somewhat relevant, and non-relevant images (Figure @fig:instruct-modal).
+Contrary to the main training condition, workers do not have their own choices evaluated; instead, INSTRUCT focuses on recontextualizing the standard training instructions in a direct manner, one that has to be explicitly dismissed.
 
 ### Feedback Interface (FDBK)
 
@@ -431,6 +452,8 @@ Details of the experimental system, including design documents, model descriptio
 ### Tagging
 
 ## Experiment #1: Relevance Judgments
+
+TODO note kazai finding that it's better to randomly order the results
 
 Lowering the barrier to custom evaluation is one of the most important uses of crowdsourcing for information retrieval research.
 While production systems benefit from actual humans in the machine to identify topics and correct algorithmic quirks^[TODO cite Twitter, Google, Bing], research aiming to improve pure information retrieval performance still needs ways to appropriately evaluate different models and approaches.
@@ -553,6 +576,32 @@ It should be noted that, unlike the later tagging experiment, where a worker's t
 Since the relevance judgment options are a set of radio buttons, we do not capture the *start* of a worker's attention, just the moment that they actually make their contribution.
 As a proxy, a measure was taking of the amount of time that the *previous* item was in focus; i.e. worker clicks item A, and while they think about item B, A is still in focus.
 This provides a rough estimate of the time spent, good enough for broad comparisons, though not robust enough to tie time to a specific item.
+
+![Comparison is time spent per task, in seconds](../images/relevanceTime1.png) {#fig:relevance-time}
+
+Figure @fig:relevance-time shows the distributions of time spent per task, faceted by the experimental condition.
+Interestingly, the time-limited condition ($mean=3.59$, $median=2.91$, $N=1921$) was found to be slower than the basic ($mean=2.98$,$median=1.79$, $N=1894$) and feedback conditions ($mean=2.90$, $median=1.79$).[^TimeSig]
+This finding stands in stark contrast to what is seen later for the tagging experiment.
+There are some possible reasons for this, which are discussed later.
+
+Another way of considering this data is by user means.
+That is, reducing each user to a single data point so that any outliers do not exert undue influence over the data. 
+Table @tbl:avgRelTime shows the statistics for this measure. Viewed in this manner, the time-limited interface and the baseline were comparable, while feedback and training improved the mean time of the average worker.
+
++--------------+------+--------+------+----+
+| condition    | mean | median | std  | N  |
++==============+======+========+======+====+
+| basic        | 4.32 | 3.72   | 2.63 | 80 |
+| fast         | 4.61 | 3.99   | 1.93 | 34 |
+| feedback     | 3.38 | 3.06   | 1.97 | 32 |
+| postTraining | 2.68 | 1.83   | 2.30 | 34 |
++--------------+------+--------+------+----+
+
+Table: Details of average time spent by worker in each condition (in seconds). {#tbl:avgRelTime}
+
+
+[^TimeSig]: $p<<0.001$ in both comparisons, Mann-Whitney U.
+
 
 
 <!-- Feedback -->
@@ -736,7 +785,7 @@ While the time-limited condition and feedback condition changed worker behavior,
 Pairwise comparisons between the distributions reject the null hypothesis of equal distributions in all cases except the comparison between the baseline and the post-training distributions[^tagTimeSig].
 This came as a surprise, as it was expected that workers in this condition would perform more confidently.
 
-[^tagTimeSig]: $p==0.02$, Mann-Whitney U with continuous correction, fail to reject at $/alpha=0.05$ with Bonferroni correction.
+[^tagTimeSig]: $p==0.02$, Mann-Whitney U, fail to reject at $/alpha=0.05$ with Bonferroni correction.
   Since six comparisons were performed, the test for significant would be $>0.0083$.
   All other comparisons with highly significant.
 
@@ -749,3 +798,15 @@ This came as a surprise, as it was expected that workers in this condition would
 - Ground Truth creation
   - tags that are applied by many unique users are likely to be better tags [@sen_quest_2007]
   - In rating tag quality, both positive and negative ratings are important [@sen_quest_2007]
+
+## Discussion
+
+Differences between tasks
+- people /like/ relevance judgments (for images... which may be more fun??)
+  - more predictable, quicker
+
+Time
+'FAST' slowed down.
+
+Feedback
+Good workers were less satisfied with pay (but still very satisfied with task)
