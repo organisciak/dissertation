@@ -84,3 +84,15 @@ vim ~/dissertation/data/turk/rel-basic-task1.json
 # Post to sandbox
 
 ```
+
+And to sample for the teaching intervention task, I expanded search results size to 100 in search_expanded.sh, and then
+
+```
+mkdir results-tmp
+head -n13 final-query-sample.txt | parallel --eta -j2 ./search_expanded.sh localhost:9200/pinterest/pin {} "| python -mjson.tool >results-tmp/{}.json"
+
+ls . | parallel grep "image236" {} '|' tail -n +31'|' perl -pe "\"s/^.*?(http.*jpg).*$/<img src='\1' \/>/\"" '>~/crowdy-backend/public/teaching-sample/{.}.html'
+rm -rf results-tmp
+```
+
+This added html files of images accessible from crowdycrowdy.com/teachingsample/QUERY.html, which can be reviewed manual.
