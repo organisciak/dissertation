@@ -373,7 +373,7 @@ The underlying measures or the exact estimate were not revealed to workers.
 Unlike the training interface, it did not provide any feedback on what was done wrong and what was performed correctly.
 This black box approach was because this interface was not intended to train, simply to inform and -- it was hypothesized -- encourage a return to the task instructions if a worker needed to recalibrate their understanding of the task.
 
-Though it would have been trivial to adapt the text relative to performance, it was deliberately decided that the written copy stay the same, and that this information is clear to workers.
+Though it would have been trivial to adapt the text relative to performance, it was deliberately decided that the written copy stay the same, and that this was clear to workers.
 The intention was to avoid a perception of scolding, leaving the _interpretation_ of the performance feedback to the worker; "_If you're doing well..._", or "_If you think you should be doing better_".
 
 The expectation was that showing feedback may trigger an external motivation, simply in seeing that these statistics are kept, as well as intrinsic motivation, trying to perform better for self-competitive reasons.
@@ -387,11 +387,11 @@ This is because feedback is only applied starting with the second task.
 Base payment was \$0.05 lower than was provided for the basic interface, while the continued engagement bonus was \$0.10 per task.
 
 ![Message encouraging repeat work](images/design-stickaround.png) {#fig:staybonus}
-
+;
 In sum, of the ample ways to design a feedback mechanism, this study's condition:
 
 - Positions workers relative to the workforce, rather than absolute measures.
-- Tries to focus on worker self-motivation over the observer effect.
+- Designed with increased focus on worker self-motivation over the observer effect.
 - Focuses on intervention at a start of a new task.
 
 ### Time-Limited Interface (FAST)
@@ -408,7 +408,7 @@ The goal and instructions do not differ greatly from that of the basic interface
 The amount of time workers actually had differed between task types, because relevance judgments are completed more quickly than item tags. The former task lasted for 90 seconds, while the latter lasted for 60 seconds.
 
 It is important not to distress the worker when trying to push them into a visceral form of task completion, as this might have the opposite effect.
-Instead, this design encourages _flow_ ^[TODO citation], where a user moves seamlessly through the tasks without over-thinking their answers.
+Instead, this design seeks to encourage _flow_ [@csikszentmihalyi_flow_1991], where a user is in an uninterrupted state on concentration on the task.
 To avoid the potential distress of thinking about what is to come, this interface does not show a list of tasks to complete (e.g. "complete these ten tasks in a minute").
 Instead, tasks are shown one at a time (e.g. "See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers. Figure @fig:fast-screen shows an example of the interface.
 
@@ -417,7 +417,7 @@ Instead, tasks are shown one at a time (e.g. "See how many tasks you can complet
 Determining a payment is nuanced for this condition.
 Bonuses are bound in promises: there is no system restraint to guarantee payment other than the requester's word.
 To assure workers that they will be paid, it is important to still have a notable base payment.
-At the same time, an effort optimizing worker might realize that it is favourable to avoid the per-contribution bonuses, and keep completing 'do as many as you can in X seconds' tasks with only one contribution.
+At the same time, an effort-optimizing worker might realize that it is favourable to avoid the per-contribution bonuses, and keep completing 'do as many as you can in X seconds' tasks with only one contribution.
 To counter such a possibility, the per-item bonuses ramp up; e.g. no bonus for the first task, \$0.01 for the second, \$0.02 for the third.[^FastExample]
 This provides incentive to actually try to maximize time.
 
@@ -425,9 +425,6 @@ This provides incentive to actually try to maximize time.
 
 
 ### Evaluation
-
- <!--Talk about Mechanical Turk. -->
- <!--Talk about the real world use of crowdsourcing. Google has internal systems, so does MS. Researchers are using it for on-demand data -->
 
  The experiments in this study were run in a naturalistic setting, running directly on a paid crowdsourcing platform, Amazon Mechanical Turk, with real workers.
 
@@ -438,7 +435,7 @@ This provides incentive to actually try to maximize time.
  Also, the actual user pools testing the different interfaces are not necessarily the same individuals.
  Thus, it is important that the users are similarly representational: it would be problematic if one interface was used mainly by Indian residents while another was performed mainly by American residents (the second and first largest nationalities on Mechanical Turk, respectively).
 
- For this reason, each interface was be evaluated with temporal and geographic restrictions.
+ For this reason, each interface was evaluated with temporal and geographic restrictions.
  Workers were restricted to American workers, and most tasks were during the American work day, with only slight deviations.
 
 ### Implementation
@@ -463,35 +460,32 @@ Details of the experimental system, including design documents, model descriptio
 [^crowdybackend]: https://github.com/organisciak/crowdy-backend
 
 
-### Tagging
-
 ## Experiment #1: Relevance Judgments
 
-TODO note kazai finding that it's better to randomly order the results
 
 Lowering the barrier to custom evaluation is one of the most important uses of crowdsourcing for information retrieval research.
-While production systems benefit from actual humans in the machine to identify topics and correct algorithmic quirks^[TODO cite Twitter, Google, Bing], research aiming to improve pure information retrieval performance still needs ways to appropriately evaluate different models and approaches.
-Paid crowdsourcing platforms offer a way to tap into large and diverse groups of people for relevance judgments, making custom evaluation datasets -- and subsequently research over novel corpora -- greatly more accessible.^[Previously]
+While production systems benefit from actual humans in the machine to identify topics and correct algorithmic quirks, research aiming to improve pure information retrieval performance still needs ways to appropriately evaluate different models and approaches.
+Paid crowdsourcing platforms offer a way to tap into large and diverse groups of people for relevance judgments, making custom evaluation datasets -- and subsequently research over novel corpora -- greatly more accessible.[^Previously]
 
-^[Previously]: The role and value of crowdsourcing for information retrieval evaluation was discussed at length in the previous chapter.
+[^Previously]: The role and value of crowdsourcing for information retrieval evaluation was discussed at length in the previous chapter.
   For brevity, it is only lightly recalled here.
 
-To judge the effect of design manipulations on relevant judgment collection, a set of experiments were set up for image information retrieval results.
-
-### Related Work
+Continuing from the previous chapter's look at contribution behaviours and post-collection indicators of quality for relevance judgments, this chapter judges the effects of collection-design manipulations for image information retrieval results.
 
 ### Data
 
-The dataset being evaluated consisted of XXX^[TODO] query -- image document pairs, evaluating 20 results each^[TODO confirm] for 15 queries, against a corpus of 185.6k documents from image-sharing social network Pinterest.
+The dataset being evaluated consists of 389 query--image document pairs, evaluating 30 results each for 13 queries^[With one result removed for sensitive content.], against a corpus of $185.6k$ documents from image-sharing social network Pinterest.
 All the data, control and experiments, were collected specifically for this study, allowing for a fair comparison of design manipulations against a baseline that was competently implemented.
 
 This section details the process of developing the test corpus.
 Basically, the process was as follows:
- - Collecting a large randomized sample of documents from Pinterest (_pins_).
+ - Collecting a large randomized sample of image documents from Pinterest (_pins_).
  - Sampling realistic queries, collected from Pinterest's query auto-suggestions.
  - Implementing a retrieval system with the sampled documents, and retrieving results against the sampled queries.
 
- The retrieval results are used for measuring the efficacy of 
+ The retrieval results are used for measuring the efficacy of different designs for collecting relevance judgments.
+ As such, there was a desire for some heterogeneity in the results, which motivated the creation of a custom sample.
+ With over 200 million documents, it was worried that the alternate approach of scraping _all_ the results from Pinterest's own search system would results in a set highly skewed toward very relevant documents, making it difficult to separate a signal in the experiment.
 
 <!-- What is pinterest -->
 \newthought{Pinterest is a social network} centered on the saving, sharing, and curation of online images
@@ -516,18 +510,17 @@ A document's repin count can be interpreted as a measure of a document's interna
 
 
 <!--Why study Pinterest?-->
-i\newthought{Pinterest is a novel website} for studying ways to incorporate crowdsourced information into web retrieval.
+\newthought{Pinterest is a novel site} for studying crowdsourcing in the context of retrieval.
 This study, concerned with the methodology of crowdsourcing, is not dependent on Pinterest, but Pinterest is nonetheless an appropriate site to underpin it.
 Structurally, it resembles the archival form of many library and museum systems, albeit at a larger scale, it is itself a product of [volunteer] crowdsourcing, and it deals in the type of sparse, simple content that crowdsourcing is appropriate for.
 
  * The organizational form of Pinterest, grouping documents into curated lists called 'boards', is a interface pattern that is relevant to many forms of information repository.
    Social OPACs, for example, allow library patrons to collect books into similarly uncontrolled lists.
  * Pinterest contains very little information about the source web document.
-   It is feasible to crawl the full text of the source, but as it stands, a Pinterest 'pin' alone offers a record of a _human's interpretation_ of the source.
-   It is simple, and helps us avoid confounding the focus on crowd contributions.
+   It is feasible to crawl the full text of the source, but as it stands, a Pinterest 'pin' alone offers a record of a _single person's interpretation_ of the source.
  * Since the primary form of Pinterest document is a human reaction to a web document, the user contributions on the site may have possible future use for web retrieval.
  * For the purpose of this study, collecting relevance judgments for retrieved pins, the image-centric form is the type of task that crowds should be capable at.
-   Good tasks should focus on one thing, with little context switching [@_guidelines_2014], and understanding an image is a quick, natural activity for people.^[Even when it is not so for machines (TODO citation].
+   Good tasks should focus on one thing, with little context switching [@_guidelines_2014], and understanding an image is a quick, natural activity for people [@von_ahn_games_2006].
 
 Finally, Pinterest is an interesting but understudied website.
 Demographically there is a female skew, interesting precisely it counter-balances the typical male-heavy community demographic.
@@ -535,9 +528,8 @@ Demographically there is a female skew, interesting precisely it counter-balance
 <!-- TODO talk about TREC crowdsourcing track -->
 
 <!-- data collection-->
-Two types of information were collected from Pinterest for this experiment: pins and boards.
 
-Sampling was done according to Pinterest's provided sitemap.
+\newthought{Sampling was done against} Pinterest's provided sitemap.
 An initial survey (August 2014) suggested that Pinterest had approximately 107.5 million users, with 207.5 million pins and 572 million boards containing those pins.
 
 <!--
@@ -545,35 +537,34 @@ Users: 107.5m 	4300 packages of 25000 users, 1.1 MB each
 Boards: 571.95m 22878 packages of 25k boards
 Pins: 207.5m 	8300 packages of 25k pins --> 
 
-This is a very large amount of data, and only a sample was needed for this study. For the sample, 
+This is a very large amount of data, and only a sample was needed for this study. For the sample, random $25k$ pin sitemap listings were downloaded, a process randomly pulled out approximate $1\%$ pin listings, the collected pins were randomly ordered, and the full metadata of pins was collected against this master list.
 
-- Random 25000 pin sitemap listings were downloaded
-- A process randomly pulled out pin listings, with each listing holding a 1% of being preserved
-- The collected pins were randomly ordered, and the full metadata of pins was collected against this master list.
+For the information retrieval system underlying this experiment's relevance judgments, a sample of 195k pins was collected and indexed.[^Attrition]
 
-For the information retrieval system underlying this experiment's relevance judgments, a sample of 195k pins was collected and indexed.^[Attrition]
-
-^[Attrition]: This sample was collected in 40k pin batches, and not all at once.
+[^Attrition]: This sample was collected in 40k pin batches, and not all at once.
   As a result, the final number of pins successfully downloaded was lower, at 184583 document. The time difference between batches provides a sense of attrition on Pinterest.
-  The first two batches of pins were collected against a five-month old sitemap, and 1.4-1.5k pins were no longer accessible per batch ($~3.4\%$ attrition). 
-  Another batch was scraped when the sample list was 9 months old, and $6.4\%$ of the links were no longer active, the final two batches were collected 2 months later, with $7.2\%$ links missing.
+  The first two batches of pins were collected against a five-month old sitemap, and 1.4-1.5k pins were no longer accessible per batch (~3.4\% attrition). 
+  Another batch was scraped when the sample list was 9 months old, and 6.4\% of the links were no longer active, the final two batches were collected 2 months later, with $7.2\%$ links no long online.
 
 \newthought{Queries were sampled} from auto-complete suggestions on Pinterest.
 When a user starts to type in a query, five suggestions appear.
 For example, typing 'r' will suggest 'recipes', 'red hair', 'rings', 'relationship quotes', and 'rustic wedding'.
 These appear to be the most probable queries starting with the provided string.
-For an insight of what types of queries are in the sampling frame and more generally what topics are popular among Pinterest users, Table {@tab:pop-pinterest} \ref{pop_pinterest} lists the auto-complete suggestions when each letter of the alphabet is entered into the search box.
 
-It should be noted, however, that a sample frame of just the most popular terms is too general.
-To shift the sample away from the head of the distribution, the sampling frame will also include 500 queries derived from auto-complete suggestions based on two character strings: specifically, the one hundred most common two-character pairs occurring at the start of the English language.[^twoletter]
+The top queries for each letter of the alphabet were collected for the sampling pool.
+To shift the sample list away from the most-popular queries, the sampling frame also included 500 queries derived from auto-complete suggestions based on two character strings: specifically, the one hundred most common two-character pairs occurring at the start of the English language [via @norvig_english_].
 
-[^twoletter]: Using the frequencies calculated by @norvig_english_, these are: TH, OF, AN, IN, TO, CO, RE, BE, FO, PR, WH, HA, MA, WI, HE, IS, NO, WA, ON, DE, ST, SE, AS, IT, CA, HI, SO, WE, AR, DI, MO, AL, SU, PA, FR, ME, OR, SH, LI, CH, WO, PO, EX, BY, AT, FI, PE, BU, LA, NE, UN, LE, SA, TR, HO, YO, LO, DO, FA, SI, GR, EN, AC, MI, TE, BO, BA, GO, SP, OU, PL, EV, AB, TA, RA, US, BR, CL, DA, GE, TI, FE, AD, MU, IM, AP, RO, NA, SC, PU, EA, CR, VI, CE, OT, AM, AG, UP, RI, VE.
+\newthought{Thirteen queries were sampled.}
+For each query, a description of what constitute the different levels of relevance was written by myself.
+Three point categorical relevance was used, with not, somewhat, and very relevant as the options.
 
-For each query, a description of what constitute the different levels of relevance will be written by myself, and the relevance of the first one hundred results will be rated by paid workers on a graded relevance scale.
+Results to judge were generated using a Dirichlet-smoothed language modelling system.
+A basic form of query expansion was used wherein the original query was run, and a word list consisting of the top results was resubmitted as a secondary query.
+Given the short nature of these documents, document expansion in this style would have been appropriate [@efron_improving_2012], but the query expansion sufficed for widening the net for results.
 
-It is likely that Pinterest's own retrieval model incorporates additional implicit feedback from users in the form of click-through data.
-This is a useful indicator of a item's quality, itself a form of crowd-contributed retrieval evidence, but is well-studied and too removed from the scope of this study to undertake.
+\newthought{}
 
+TODO note kazai finding that it's better to randomly order the results
 
 ###  Measurements
 
