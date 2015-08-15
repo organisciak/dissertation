@@ -1,0 +1,29 @@
+
+
+
+
+
+% Set a hard margin of one inch.
+% from http://tex.stackexchange.com/questions/119900/how-do-i-set-a-hard-minimum-margin-size-with-the-tufte-book-document-class
+% For US letter paper
+\geometry{
+  left=1in, % left margin
+  textwidth=25pc, % main text block
+  marginparsep=2pc, % gutter between main text block and margin notes
+  marginparwidth=12pc % width of margin notes
+}
+
+
+
+
+% Work on proper arbaic vs roman numerals
+
+\renewcommand\frontmatter{%
+  \pagenumbering{roman}%
+}
+
+\renewcommand\mainmatter{%
+  \pagenumbering{arabic}%
+}
+
+

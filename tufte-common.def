@@ -404,7 +404,7 @@
 \renewcommand\huge{\@setfontsize\huge{20.74}{30}}
 \renewcommand\Huge{\@setfontsize\Huge{24}{36}}
 
-\setlength\leftmargini   {1pc}
+\setlength\leftmargini   {2pc}
 \setlength\leftmarginii  {1pc}
 \setlength\leftmarginiii {1pc}
 \setlength\leftmarginiv  {1pc}
@@ -1469,18 +1469,25 @@
   \fancyhf{} % clear header and footer fields
   % Uncomment the following five lines of code if you want the opening page
   % of the chapter to express the folio in the lower outside corner.
-  %\ifthenelse{\boolean{@tufte@twoside}}
-  %  {\fancyfoot[LE,RO]{\thepage}}
-  %  {\fancyfoot[RE,RO]{\thepage}}
+  \ifthenelse{\boolean{@tufte@twoside}}
+    {\fancyfoot[LE,RO]{\thepage}}
+    {\fancyfoot[RE,RO]{\thepage}}
 }
 
 % The `empty' page style suppresses all headers and footers.
 % It's used on title pages and `intentionally blank' pages.
 \fancypagestyle{empty}{
   \fancyhf{} % clear header and footer fields
+   % PO: add page numbers to *everything*
+  \ifthenelse{\boolean{@tufte@twoside}}
+    {\fancyhead[LE,RO]{\thepage}}
+    {\fancyhead[RE,RO]{\thepage}}
 }
 
-
+% PO: One use on title page
+\fancypagestyle{actuallyempty}{
+  \fancyhf{} % clear header and footer fields
+}
 %%
 % Set raggedright and paragraph indentation for document
 
@@ -1545,13 +1552,12 @@
   \begin{fullwidth}%
   \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklessauthor}}%
   \vspace{11.5pc}%
-  \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklesstitle}}%
+  \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\thanklesstitle}%
   \vfill%
   \fontsize{14}{16}\selectfont\par\noindent\allcaps{\thanklesspublisher}%
   \end{fullwidth}%
   }
-  \thispagestyle{empty}%
-  \clearpage%
+  \thispagestyle{actuallyempty}%
 }
 
 %%
@@ -1580,7 +1586,6 @@
     \@@date
   \endgroup
   \thispagestyle{plain}% suppress the running head
-  \tuftebreak% add some space before the text begins
   \@afterindentfalse\@afterheading% suppress indentation of the next paragraph
 }
 

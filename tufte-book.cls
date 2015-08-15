@@ -70,9 +70,9 @@
 %%
 % If there is a `tufte-book-local.sty' file, load it.
 
-\IfFileExists{tufte-book-local.tex}{%
-  \@tufte@info@noline{Loading tufte-book-local.tex}%
-  \input{tufte-book-local}%
+\IfFileExists{tufte-book-local.sty}{%
+  \@tufte@info@noline{Loading tufte-book-local.sty}%
+  \input{tufte-book-local.sty}%
 }{}
 
 %%

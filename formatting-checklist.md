@@ -8,8 +8,8 @@ The following sections are required and must be included in all master’s
 theses and doctoral dissertations:
 
 - [ ]  [Abstract](#abstract) (page ii)
-- [ ]  [Table of contents](#TOC)
-- [ ]  [Main text](#main_text) (separated into chapters)
+- [x]  [Table of contents](#TOC)
+- [x]  [Main text](#main_text) (separated into chapters)
 - [ ]  [Bibliography or references](#bibliography)
 
 Note the absence of List of Tables and List of Figures sections.
@@ -24,7 +24,7 @@ as has been done in the examples above.
 Title page requirements
 -----------------------
 
-See [Step 2](/step-2-departmental-approval) for information about
+ - [] See [Step 2](/step-2-departmental-approval) for information about
 the process for filing your title page with the Graduate College Thesis
 Office prior to submitting your thesis for review.
 
@@ -36,18 +36,18 @@ page.
 
 ### **Page Set-up**
 
-- [ ]  Set margins to one inch on all sides of the page.
+- [x]  Set margins to one inch on all sides of the page.
 - [ ]  Set line spacing for the entire page to single space.
-- [ ]  Do not display a page number anywhere on the page.
+- [x]  Do not display a page number anywhere on the page.
 - [ ]  Center all text except the adviser or committee information
     horizontally between the left and right margins.
-- [ ]  Do not use boldface type on the title page.
-- [ ]  Use italics only for scientific or
+- [x]  Do not use boldface type on the title page.
+- [x]  Use italics only for scientific or
     specialized terminology.
 
 ### Title (2 inches from the top edge of the page)
 
-- [ ]  Set the title in all capital letters.
+- [x]  Set the title in all capital letters.
 
 ### BY and Name (3.5 inches from the top edge of the page)
 
@@ -55,23 +55,21 @@ The student name that appears on the title page should match the
 student name recorded on the [Thesis/Dissertation Approval (TDA)
 form](/forms/certificate).
 
-- [ ]  Set BY in all capital letters.
-- [ ]  Set your name in all capital letters.
-- [ ]  One blank line must separate BY and your name.
+- [x]  Set BY in all capital letters.
+- [x]  Set your name in all capital letters.
+- [x]  One blank line must separate BY and your name.
 
 ### The Label "THESIS" or "DISSERTATION" (5.5 inches from the top edge of the page)
 
-- [ ]  Title pages for master’s theses should display the
-    label THESIS.
-- [ ]  Title pages for doctoral dissertations should display the
+- [x]  Title pages for doctoral dissertations should display the
     label DISSERTATION.
-- [ ]  Set THESIS or DISSERTATION in all capital letters.
+- [x]  Set THESIS or DISSERTATION in all capital letters.
 
 ### Text Block with Degree, Major, and Year of Conferral
 
-- [ ]  One blank line should separate the label THESIS or
+- [x]  One blank line should separate the label THESIS or
     DISSERTATION and the text block.
-- [ ]  The text block will be either 4, 5, or 6 lines long and must
+- [x]  The text block will be either 4, 5, or 6 lines long and must
     be divided into the following lines exactly as shown:
 
 1.  Submitted in partial fulfillment of the requirements
@@ -83,78 +81,73 @@ form](/forms/certificate).
 6.  University of Illinois at Urbana-Champaign, <add year of
     degree conferral>
 
-- [ ]  Line 2 of the text block must contain: (a) the degree for
+- [x]  Line 2 of the text block must contain: (a) the degree for
     which the thesis is being submitted and (b) the student’s major (not
     the name of the student’s department).
-- [ ]  The major must fit entirely onto line 2 of the text block. (It
+- [x]  The major must fit entirely onto line 2 of the text block. (It
     may be necessary to reduce the font size of the entire text block in
     order to allow for the major to fit entirely onto the
     second line.)
-- [ ]  Most students will not include lines 3 or 4. There are very
+- [x]  Most students will not include lines 3 or 4. There are very
     few campus-approved graduate concentrations and graduate minors.
     (The list of campus-approved graduate minors can be found
     [here](http://provost.illinois.edu/ProgramsOfStudy/2013/fall/programs/index.html).)
     If a concentration or minor cannot be verified by the University’s
     records, it will not be allowed on the title page.
-- [ ]  The year in line 6 of the text block must be the year of the
+- [x]  The year in line 6 of the text block must be the year of the
     degree conferral period for which the student will deposit (e.g., if
     a student deposits in December 2015 for the May 2016 graduation
     period, the year in the text block should be 2016).
 
 ### Location (7.5 inches from the top edge of the page)
 
-- [ ]  The location is Urbana, Illinois (do not
+- [x]  The location is Urbana, Illinois (do not
     abbreviate Illinois).
 
 ### Adviser or Committee Information (8 inches from the top edge of the page)
 
-- [ ]  Master’s students will use the heading “Adviser:” or “Master’s
-    Committee:”, depending on which is applicable or preferred. Some
-    master’s students have more than one adviser, in which case the
-    heading “Advisers:” may be used.
-- [ ]  Doctoral students will use the heading “Doctoral
+- [x]  Doctoral students will use the heading “Doctoral
     Committee:”
-- [ ]  The heading “Adviser:” or “Doctoral Committee:” or equivalent
+- [x]  The heading “Adviser:” or “Doctoral Committee:” or equivalent
     must begin at the left margin.
-- [ ]  One blank line should separate the heading “Adviser:” or
+- [x]  One blank line should separate the heading “Adviser:” or
     “Doctoral Committee:” or equivalent and the names of the committee
     members or adviser.
-- [ ]  List each committee member on a separate line.
-- [ ]  Adviser and committee member names should be indented
+- [x]  List each committee member on a separate line.
+- [x]  Adviser and committee member names should be indented
     approximately half an inch from the left margin.
-- [ ]  For committees, the committee chair should be listed first,
+- [x]  For committees, the committee chair should be listed first,
     and the director of research (adviser) should be listed second; all
     other committee members may be listed in the order preferred by the
     student or the student’s adviser.
-- [ ]  The committee chair should be indicated by adding a comma and
+- [x]  The committee chair should be indicated by adding a comma and
     the word “Chair” after the chair’s name.
-- [ ]  The director of research (if different from chair) should be
+- [x]  The director of research (if different from chair) should be
     indicated by adding a comma and the phrase “Director of Research”
     after the director’s name.
-- [ ]  “Co-Chair” and “Co-Director of Research” designations may be
+- [x]  “Co-Chair” and “Co-Director of Research” designations may be
     used when applicable.
-- [ ]  Faculty members should be listed with their professorial title
+- [x]  Faculty members should be listed with their professorial title
     (i.e., Professor, Associate Professor, Assistant
     Professor, etc.).
-- [ ]  The professorial title should be spelled in full (do
+- [x]  The professorial title should be spelled in full (do
     not abbreviate) and listed before the faculty member’s name.
-- [ ]  Affiliations should be listed only for committee members who
+- [x]  Affiliations should be listed only for committee members who
     are not University of Illinois at Urbana-Champaign faculty (i.e.,
     departmental affiliations should not be listed).
-
  
 
 Abstract requirements
 ----------------------------------
 
-- [ ]  An abstract is required for all theses
+- [x]  An abstract is required for all theses
     and dissertations.
 - [ ]  The abstract must be placed immediately after the
     title page.
-- [ ]  The page number Roman numeral two (ii) must appear on the
+- [x]  The page number Roman numeral two (ii) must appear on the
     first page of the abstract.
-- [ ]  The abstract must be written in English.
-- [ ]  There is no word limit for the abstract.
+- [x]  The abstract must be written in English.
+- [x]  There is no word limit for the abstract.
 
  
 
@@ -165,7 +158,7 @@ Refer to the Table of Contents examples provided in the [sample thesis
 pages](/sites/default/files/PDFs/SampleThesisPages.pdf) as you read
 through the following section.
 
-- [ ]  A Table of Contents is required for all theses and dissertations.
+- [x]  A Table of Contents is required for all theses and dissertations.
 - [ ]  All chapter titles and titles of chapter equivalents (e.g., List of
     Symbols, Bibliography, Appendix A, etc.) must be listed in the Table
     of Contents.
@@ -205,7 +198,8 @@ Minimum requirements for main text
     the 1-inch margin on one or more sides will not be accepted
     for deposit.
 
- - [ ] __PO NOTE: Top header (chapter heading+page number) is outside the margin...___ 
+ - [ ] __PO NOTE: Top header (chapter heading+page number) is outside the margin..__. Keeping this in there for committee, but it can be changed in tufte-common.def, under fancy page style. Just remove everything except \thepage
+ - [ ] __PO NOTE: Doublecheck margin notes, sometimes they flow beyond the bottom margin__
 
 ### Fonts
 
@@ -214,7 +208,7 @@ Minimum requirements for main text
     be easily legible.
 - [x]  Font size and type may differ for footnotes, figure captions, table
     data, references, and material in an appendix and may be as small
-    as 7-point. _PO: minimum in my stle file is 8-point, /small is 9-point)_
+    as 7-point. _PO: minimum in my style file is 8-point, /small is 9-point)_
 - [x]  Script and ornamental fonts will not be accepted. _(PO: Never!)_
 
 ### Line Spacing
@@ -222,7 +216,7 @@ Minimum requirements for main text
 - [x]  Spacing of the body text may be from 1.5 lines to Double and must
     remain consistent throughout the main text.
     - _PO Note: It's unclear what "1.5 lines" translates to, so I used the setspace package with /onehalfspacing _
-- [ ]  Single-spacing within the main text is allowed for titles, headings,
+- [x]  Single-spacing within the main text is allowed for titles, headings,
     footnotes, endnotes, references, lengthy quotations, bulleted or
     numbered lists, figure or table captions, or material in
     an appendix.
@@ -233,12 +227,12 @@ Minimum requirements for main text
     display page numbers.
 - [ ]  Pages prior to the main text should be numbered with Roman numerals
     (beginning with the abstract as page ii).
-- [ ]  Pages in the rest of the thesis should be numbered with Arabic
+- [x]  Pages in the rest of the thesis should be numbered with Arabic
     numerals (beginning with 1 and continuing through the end of
     the document).
 - [ ]  Page numbers must be placed at least half an inch from the edge of
     the page.
-- [ ]  Each chapter or chapter equivalent must begin on a new page.
+- [x]  Each chapter or chapter equivalent must begin on a new page.
 
  
 
@@ -249,12 +243,12 @@ There is no reference style required by the Graduate College Thesis
 Office. However, departments may require the use of a reference style
 that is appropriate to the student’s program of study.
 
-- [ ]  All theses are required to have either a bibliography or a list
+- [x]  All theses are required to have either a bibliography or a list
     of references.
-- [ ]  When placed at or near the end of a thesis, the references section
+- [x]  When placed at or near the end of a thesis, the references section
     is considered a chapter equivalent; therefore, the title of the
     section should be formatted like a chapter title.
-- [ ]  In some scientific and engineering disciplines, the references may
+- [x]  In some scientific and engineering disciplines, the references may
     be placed at the end of each chapter instead of at the end of
     the thesis.
 
@@ -273,10 +267,10 @@ musical examples, charts, graphs, line drawings, maps, and other
 illustrative materials. For discussion purposes, these media will be
 called figures.
 
-- [ ]  All figures must fit within the minimum
+- [x]  All figures must fit within the minimum
     1-inch margins. Theses with any material extending beyond these
     margins will not be accepted for deposit.
-- [ ]  Figures must be numbered consecutively throughout
+- [x]  Figures must be numbered consecutively throughout
     the entire thesis. Students may choose from one of two options:
 
 
@@ -291,11 +285,11 @@ called figures.
     forth would be numbered A.1, A.2, B.1, B.2, C.1 and
     so on.)
 
-- [ ]  Tables should be numbered independently from figures.
-- [ ]  Figure captions may be single-spaced and are not
+- [x]  Tables should be numbered independently from figures.
+- [x]  Figure captions may be single-spaced and are not
     required to be set in the same font style or size as that of the
     main text.
-- [ ]  Figure captions should appear on the same page as
+- [x]  Figure captions should appear on the same page as
     the figure to which they refer.
 
 ### Figure Placement
@@ -305,40 +299,40 @@ students to group figures at the end of chapters or at the end of the
 main text to avoid many of the problems associated with placing figures
 next to their corresponding text.
 
-- [ ]  Figures should not be placed out of the order in
+- [x]  Figures should not be placed out of the order in
     which they are numbered.
-- [ ]  If figures are grouped at the end of a chapter or
+- [x]  If figures are grouped at the end of a chapter or
     the main text, each figure may be placed on a
     separate page.
-- [ ]  Multiple figures may be placed on the same page as
+- [x]  Multiple figures may be placed on the same page as
     long as doing so does not compromise
     their legibility.
-- [ ]  Figures grouped at the end of a chapter are
+- [x]  Figures grouped at the end of a chapter are
     considered a section, the first page of which should display the
     appropriate section heading (i.e., “Figures”, “Tables”, “Figures and
     Tables”, etc.).
-- [ ]  Figures grouped at the end of the main text are
+- [x]  Figures grouped at the end of the main text are
     considered a chapter, the first page of which should display the
     appropriate chapter title (i.e., “Figures”, “Tables”, “Figures and
     Tables”, etc.).
-- [ ]  Do not add figure callouts (i.e., <place Figure
+- [x]  Do not add figure callouts (i.e., <place Figure
     2.1 about here>) anywhere in the thesis.
 
 ### Multiple-Page Figures
 
-- [ ]  Every page containing part of a multiple-page
+- [x]  Every page containing part of a multiple-page
     figure must include at least an abbreviated figure label such as
     “Figure 2.5 (cont.)”.
-- [ ]  The figure caption is only required to appear
+- [x]  The figure caption is only required to appear
     once; an abbreviated label may be used on
     subsequent pages.
 
 ### Rotated Figures
 
-- [ ]  Figures that are rotated should be rotated
+- [x]  Figures that are rotated should be rotated
     counterclockwise so that the top of the figure faces toward the
     left (inside) edge of the page.
-- [ ]  Page numbers, headings, captions, and titles may
+- [x]  Page numbers, headings, captions, and titles may
     be rotated with the figure.
 
 ### Color Figures
@@ -363,17 +357,18 @@ material.
 
 This is accomplished by including
 
- - [ ]  a footnote at the bottom of the first page of the chapter in which the
+ - [x]  a footnote at the bottom of the first page of the chapter in which the
  previously published material appears that acknowledges the previous publication,
- - [ ]  cites basic bibliographic information, and
- - [ ]  states that the copyright owner has provided permission
+   - **PO Note** Margin note
+ - [x]  cites basic bibliographic information, and
+ - [x]  states that the copyright owner has provided permission
 to reprint.
 
 In scientific disciplines, it is also common for students to
 include material derived from a published paper with multiple authors.
 In such cases,
 
-- [ ]  the footnote must acknowledge the contribution of the
+- [x]  the footnote must acknowledge the contribution of the
 other authors, including any figures, tables, or data that were not
 created by the author
 
@@ -466,3 +461,4 @@ and departmental thesis review procedures.
 
 *Note: The Graduate College Thesis Office will not begin the thesis
 format review without notification of departmental approval.*
+

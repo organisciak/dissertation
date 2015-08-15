@@ -1,4 +1,4 @@
-\documentclass[nobib]{tufte-book}
+\documentclass[nobib,twoside,openany]{tufte-book}
 
 \hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
 
@@ -154,16 +154,25 @@
 \usepackage{makeidx}
 \makeindex
 
+
+%%% PO: Additional customizations in tufte-book-local.sty
+\input{thesis-custom.sty}%
+
 \begin{document}
 % Front matter
 \frontmatter
 
-
 % r.3 full title page
 \maketitle
 
-% r.1 blank page
-%\blankpage
+% PO Abstract needs to precede everything but the title page, starting
+% roman numeral 2
+% For print, it makes sense to use cleardoublepage to skip a page, but 
+% for deposit, they want it on page 2
+%\cleardoublepage
+\chapter{Abstract}\label{abstract}
+\setcounter{page}{2}
+Placeholder for styling.
 
 % v.4 epigraphs and copyright page
 \newpage
@@ -182,18 +191,22 @@ In these democratic days, any investigation in the trustworthiness and peculiari
 \setlength{\parskip}{\baselineskip}
 Copyright \copyright\ \the\year\ \thanklessauthor
 
-%\par\smallcaps{Published by \thanklesspublisher}
-
-%\par\smallcaps{tufte-latex.github.io/tufte-latex/}
-
 \par\textit{DRAFT, \monthyear}
 \end{fullwidth}
 
 % r.5 contents
 \tableofcontents
 
+% PO: forcing table and figure lists to the TOC, 
+% but it may just be easier to remove these options and
+% not particularly recommended sections for deposit
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
 
 % r.7 dedication
@@ -209,16 +222,21 @@ Copyright \copyright\ \the\year\ \thanklessauthor
 %\vfill
 %\vfill
 
+\cleardoublepage
+
+% Start the main matter (normal chapters)
+\mainmatter
 
 % r.9 introduction
+% PO: for deposit, abstract needs to be on the next page, but for print,
+% it will make sense to use cleardoublepage (empty page in between)
 %\cleardoublepage
 \onehalfspacing
-
+% PO set page numbering to start from 1
+\setcounter{page}{1}
 \include{1_intro}	% for INTRODUCTION in "intro.tex"
 
 %%
-% Start the main matter (normal chapters)
-\mainmatter
 
 \include{2_crowdsourcing}
 
@@ -234,14 +252,6 @@ Copyright \copyright\ \the\year\ \thanklessauthor
 
 \include{7_conclusions}
 
-%\newthought{The pages} of a book are usually divided into three major
-%sections: the front matter (also called preliminary matter or prelim), the
-%main matter (the core text of the book), and the back matter (or end
-%matter).
-
-%%
-% The back matter contains appendices, bibliographies, indices, glossaries, etc.
-
 \backmatter
 
 \include{appendix_contributions}
@@ -256,7 +266,9 @@ Copyright \copyright\ \the\year\ \thanklessauthor
 
 
 % ADDED BIBLATEX
-\printbibliography %[<options for printing>]
+\clearpage
+% force bib to toc
+\printbibliography[heading=bibintoc]
 
 \printindex
 
