@@ -7,7 +7,7 @@ Before continuing, however, it is worth reported on one more study of objective 
 Since 2006, the Music Information Retrieval Evaluation eXchange (MIREX) has been using volunteer human judges for evaluating the performance of
 music systems submitted to the Audio Music Similarity and Retrieval (AMS) task.[^JCDLCite]
 
-[^JCDLCite]: A version of this work was previously presented at JCDL 2015, with co-author J. Stephen Downie [@organisciak_improving_2015].
+[^JCDLCite]: A version of this work was previously presented at JCDL 2015, with co-author J. Stephen Downie [@organisciak_improving_2015]. Copyright held by ACM, permission provided for dissertation reuse.
 
 After analyzing four years of crowd judgments from AMS, finding that the consistency across different raters and years is remarkably poor, this chapter looks at the role of crowdsourcing design and modeling choices in this data variable.
 Following from the previous chapter and especially the first half of this chapter, the low inter-coder consistency is tackled from both a collection approach perspective and a post-collection perspective. 

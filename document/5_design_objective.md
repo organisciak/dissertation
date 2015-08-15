@@ -297,11 +297,6 @@ To account for instances where a second tag was too difficult to create, workers
 
 ![An example of the suggestion message in the basic condition of the tagging task, which appears after the input field is active for a small period of time.](images/design-basic-tippopup.png) {#fig:tippopup}
 
-[^Validation1]: TODO - Add figure of validation
-
-
-[^Validation2]: TODO - Add info popup
-
 [^Workers]: These unofficial guidelines, on the Dynamo Wiki, were written collaboratively by academic researchers and Mechanical Turk workers.
 
 The _task set_ of items to perform work on, again followed a basic archetypal pattern, listing each item in a grid.
@@ -338,11 +333,24 @@ This helps explain to workers the intended order of contribution with minimal te
 While the tagging task stands alone, each image functioning independently of the others, relevance judgments are grouped within queries.
 This means an initial interaction training task focuses on teaching specific to a query, teaching in-depth the mode of thinking associated with conducting the judgments, while not particularly training workers for the specific queries they will see.^[In this study, workers had a $1/19$ chance of getting a task set where they judged documents for the same query as they saw in the training task.]
 
-![Intervention in INSTRUCT condition](images/instructModal.png) {#fig:instruct-modal}
-
 To also measure query-specific training, albeit at a smaller scale, the relevance judgment experiment is also evaluated against a training intervention (INSTRUCT).
 This intervention amounts to a full screen window with the task instructions as well as visual examples of very relevant, somewhat relevant, and non-relevant images (Figure @fig:instruct-modal).
 Contrary to the main training condition, workers do not have their own choices evaluated; instead, INSTRUCT focuses on recontextualizing the standard training instructions in a direct manner, one that has to be explicitly dismissed.
+However, it is also applied alongside each task set, rather than existing solely as a first-interaction task.
+
+![Intervention in INSTRUCT condition](images/instructModal.png) {#fig:instruct-modal}
+
+To summarize, the TRAIN condition:
+
+- Introduces a training set on a worker's first task set.
+- Pursues an answer-checking mechanism, where worker make a contribution and have it verified.
+- Walks the worker through a set of tips and examples.
+
+Additionally, the INSTRUCT condition:
+
+- Uses a start of task set intervention, for each task set.
+- Forefronts instructions, with demonstrative examples.
+- Requires user input to continue past the instructions.
 
 ### Feedback Interface (FDBK)
 
@@ -361,8 +369,8 @@ Starting with the second task, however, the interface gives them a window with t
 The estimate of performance was determined differently for the different task types, image tagging and image relevance judgments, and is described in those respective sections.
 
 As seen in Figure @fig:showperformance, feedback was given in the form of ranked percentile information relative to actual workers. 
-The underlying measures or the exact estimate were not revealed.
-Unlike the training interface, it did not provide any feedback on what was done wrong and what was performed corrected.
+The underlying measures or the exact estimate were not revealed to workers.
+Unlike the training interface, it did not provide any feedback on what was done wrong and what was performed correctly.
 This black box approach was because this interface was not intended to train, simply to inform and -- it was hypothesized -- encourage a return to the task instructions if a worker needed to recalibrate their understanding of the task.
 
 Though it would have been trivial to adapt the text relative to performance, it was deliberately decided that the written copy stay the same, and that this information is clear to workers.
@@ -374,25 +382,26 @@ The former cannot be discounted, but the design tried to encourage more of the l
 @mccreadie_crowdsourcing_2011 attempted a similar approach, where contributors were shown a sidebar color-coding all their contributions based on their agreement with other raters and the authors.
 Showing this information with such granularity encourages workers to go back to reconsider debated answers, whereas this study's take tries to encourage more care and competition moving forward.
 
-As with the training condition, workers were encouraged to continue performing tasks with a plea and a bonus (Figure @fig:staybonus).
-This is because feedback was only applied starting with the second task.
-Base payment was $0.05 lower than was provided for the basic interface, while the continued engagement bonus was $0.10 per task.
+As with the training condition, workers are encouraged to continue performing tasks with a plea and a bonus (Figure @fig:staybonus).
+This is because feedback is only applied starting with the second task.
+Base payment was \$0.05 lower than was provided for the basic interface, while the continued engagement bonus was \$0.10 per task.
 
 ![Message encouraging repeat work](images/design-stickaround.png) {#fig:staybonus}
 
 In sum, of the ample ways to design a feedback mechanism, this study's condition:
 
-- Positioned workers relative to the workforce, rather than absolute measures.
-- Tried to focus on worker self-motivation over the observer effect.
-- Focused on intervention at a start of a new task
+- Positions workers relative to the workforce, rather than absolute measures.
+- Tries to focus on worker self-motivation over the observer effect.
+- Focuses on intervention at a start of a new task.
 
 ### Time-Limited Interface (FAST)
 
 Not all crowdsourcing contribution cases may require more focus; sometimes a worker in a quicker mode of thinking contributes more consistent and reliable work.
 This was the case in an incidental finding reported in Chapter 6, where asking workers performing subjective opinion-based tasks to explain their judgment seemed to change the judgment habits themselves.
 
-In contrast to the training and feedback interfaces, which served, in a way, to slow down workers and make them more focused on their contributions, the final data collection interface pursues the opposite approach.
+In contrast to the training and feedback interfaces, which serve in a way to slow down workers and make them more focused on their contributions, the final data collection interface pursues the opposite approach.
 The time-limited interface encourages quicker interactions by giving users a timer to complete all tasks.
+Providing a time-limit is expected to encourage less second-guessing of the contribution.
 
 The goal and instructions do not differ greatly from that of the basic interface, with the exception of text explaining the limited amount of time that a worker has.
 
@@ -401,14 +410,19 @@ The amount of time workers actually had differed between task types, because rel
 It is important not to distress the worker when trying to push them into a visceral form of task completion, as this might have the opposite effect.
 Instead, this design encourages _flow_ ^[TODO citation], where a user moves seamlessly through the tasks without over-thinking their answers.
 To avoid the potential distress of thinking about what is to come, this interface does not show a list of tasks to complete (e.g. "complete these ten tasks in a minute").
-Instead, tasks are shown one at a time (e.g. "See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers.
+Instead, tasks are shown one at a time (e.g. "See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers. Figure @fig:fast-screen shows an example of the interface.
 
+![Task in FAST design.](images/fastScreen.png) {#fig:fast-screen}
 
-<!--
-TODO2
- * To explain: how does the timer cut off slow workers? (With bonuses that are only given per item of task-set finished within time limit)
- * What is the time limit? This needs to be measured to determine a good value
- * Add mockup of interface-->
+Determining a payment is nuanced for this condition.
+Bonuses are bound in promises: there is no system restraint to guarantee payment other than the requester's word.
+To assure workers that they will be paid, it is important to still have a notable base payment.
+At the same time, an effort optimizing worker might realize that it is favourable to avoid the per-contribution bonuses, and keep completing 'do as many as you can in X seconds' tasks with only one contribution.
+To counter such a possibility, the per-item bonuses ramp up; e.g. no bonus for the first task, \$0.01 for the second, \$0.02 for the third.[^FastExample]
+This provides incentive to actually try to maximize time.
+
+[^FastExample]: The screenshot in figure @fig:fast-screen was taken for the first item in a set, so it shows a zero-sum bonus.
+
 
 ### Evaluation
 
@@ -418,7 +432,7 @@ TODO2
  The experiments in this study were run in a naturalistic setting, running directly on a paid crowdsourcing platform, Amazon Mechanical Turk, with real workers.
 
  There are trade-offs to this setting.
- It is easy to instrumentalize and properly captures the actual skills and attentiveness of paid crowd workers.
+ It is easy to instrumentalize and properly capture the actual skills and attentiveness of paid crowd workers.
  However, working within the conventions of the system means that some parts cannot be controlled.
  For example, workers cannot be forced to perform multiple tasks, simply encouraged to do so.
  Also, the actual user pools testing the different interfaces are not necessarily the same individuals.

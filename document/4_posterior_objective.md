@@ -26,7 +26,7 @@ In the absence of traditional measures of reliability, how do we know what onlin
 
 This chapter approaches a crucial problem: disambiguating the influence of unreliable annotators from natural uncertainty in multi-worker aggregation.[^ASISTcite]
 
-[^ASISTcite]: A version of this chapter was previously published at ASIS&T 2012, with co-authors Miles Efron, Katrina Fenlon, and Megan Senseney [@organisciak_evaluating_2012].
+[^ASISTcite]: A version of this chapter was previously published at ASIS&T 2012, with co-authors Miles Efron, Katrina Fenlon, and Megan Senseney [@organisciak_evaluating_2012]. Copyright retained by authors.
 
 This goal is pursued for tasks with an expected truth -- that is, objective tasks.
 However, a key assumption is made: that of a negotiated "ground truth" over an objective one.
