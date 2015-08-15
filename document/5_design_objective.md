@@ -533,9 +533,9 @@ Demographically there is a female skew, interesting precisely it counter-balance
 An initial survey (August 2014) suggested that Pinterest had approximately 107.5 million users, with 207.5 million pins and 572 million boards containing those pins.
 
 <!--
-Users: 107.5m 	4300 packages of 25000 users, 1.1 MB each
+Users: 107.5m     4300 packages of 25000 users, 1.1 MB each
 Boards: 571.95m 22878 packages of 25k boards
-Pins: 207.5m 	8300 packages of 25k pins --> 
+Pins: 207.5m     8300 packages of 25k pins --> 
 
 This is a very large amount of data, and only a sample was needed for this study. For the sample, random $25k$ pin sitemap listings were downloaded, a process randomly pulled out approximate $1\%$ pin listings, the collected pins were randomly ordered, and the full metadata of pins was collected against this master list.
 
@@ -562,36 +562,89 @@ Results to judge were generated using a Dirichlet-smoothed language modelling sy
 A basic form of query expansion was used wherein the original query was run, and a word list consisting of the top results was resubmitted as a secondary query.
 Given the short nature of these documents, document expansion in this style would have been appropriate [@efron_improving_2012], but the query expansion sufficed for widening the net for results.
 
-\newthought{}
+### Measurements
 
-TODO note kazai finding that it's better to randomly order the results
+Across all conditions, $12037$ relevance judgments were collected, approximately $30$ redundant judgments per document.
+For every condition except the time-limited (FAST) condition, these were completed in randomly selected batches of up to ten.
 
-###  Measurements
+<!-- TODO confirm numbers at end: db.tasksets.aggregate({$match:{'meta.type':'relevance judgments'}}, {$unwind:'$tasks'}, {$group:{_id:'$meta.condition', count:{$sum:1}}}) -->
 
-TODO 
- - Quality, Variance
- - Cost
- - Satisfaction
+The ground truth data is constructed from the majority vote label for the documents; that is, the most common judgment made by the 30+ workers that have judged each document.
 
-### Results
+Additional information was gathered on satisfaction and time spent.
 
-\newthought{A measurement of time spent} on each task was taken, in seconds.
+Regarding feedback, workers had an optional free text response form, an optional five-point colloquially-worded 'pay satisfaction' input, and a similar optional 'task satisfaction' input.
 
+Time spent was gathered in seconds.
 It should be noted that, unlike the later tagging experiment, where a worker's time spent focused on an input box could be measured, there is no easy proxy for measuring per-task time in a set.
 Since the relevance judgment options are a set of radio buttons, we do not capture the *start* of a worker's attention, just the moment that they actually make their contribution.
 As a proxy, a measure was taking of the amount of time that the *previous* item was in focus; i.e. worker clicks item A, and while they think about item B, A is still in focus.
 This provides a rough estimate of the time spent, good enough for broad comparisons, though not robust enough to tie time to a specific item.
 
-![Comparison is time spent per task, in seconds](../images/relevanceTime1.png) {#fig:relevance-time}
+### Results
+
+This section present the results for performance, time, and satisfaction.
+Analysis will follow after.
+
+\newthought{The performance of workers across conditions} is shown in Table @tbl:byItemRelStats, with the primary statistics for the likelihood of a document's relevance being correctly judged in each condition.
+All the judgments were collated by query-document pair, so each datum represents that condition's mean 'correctness' on a given query-document pair, for all 389 pairs.
+Significance tests are also shown for the condition's equality with the baseline, which is rejected at 0.01 for FAST and INSTRUCT, at 0.05 for FDBK, and not rejected for TRAIN.
+
+The distribution of this data is shown as violin plots in Figure @fig:byItemRelChart, with the lower quartile and median marked.
+The upper quartile is at $100\%$, meaning that even for the worst condition, FAST, at least one-quarter of documents were always correctly judged.
+
+condition   mean     median   std.dev   sig
+----------- -------- -------- --------- ----
+BASE        0.734    0.800    0.269     /
+FAST        0.693    0.800    0.267     **
+FDBK        0.796    0.875    0.216     *
+INSTRUCT    0.791    0.857    0.259     **
+TRAIN       0.780    0.800    0.214     
+
+Table: Statistics for the likelihood of a document's relevance being correctly judged, by condition. Significance marks rejection of equal distribution to the baseline (Mann-Whitney U, Bonferroni-adjusted significance at 0.05 - \*, 0.01 - \*\*, and 0.001 - \*\*\*). {#tbl:byItemRelStats}
+
+![Distribution of correct judgments by item, shown by condition. The Lower quartile is marked by dotted lines and the median is marked by a dashed line.](images/byItemRelevanceCorrect.png) {#fig:byItemRelChart}
+
+How good were the workers on average? Table @tbl:byWorkerRelStats shows the median and mean quality of worker, scored by their accuracy rate.
+This does not take into account whether workers were given easy or difficult tasks to perform or if some documents were judged more than others, but it reflects the same order of INSTRUCT, FDBK, TRAIN, BASE, as was seen above.
+
+condition     mean    median    std
+---------- ------- ------- --------
+BASE        0.750    0.759    0.179
+FAST        0.685    0.716    0.197
+FDBK        0.783    0.800    0.119
+INSTRUCT    0.782    0.817    0.172
+TRAIN       0.775    0.791    0.101
+
+Table: Mean and median quality of workers in each condition, by accuracy rate -- the proportion of all judgments performed correctly. {#tbl:byWorkerRelStats}
+
+\newthought{A measurement of time spent} on each task was taken, in seconds.
+
+![Comparison of time spent per task, in seconds (n=12667)](../images/relevanceTime1.png) {#fig:relevance-time}
 
 Figure @fig:relevance-time shows the distributions of time spent per task, faceted by the experimental condition.
-Interestingly, the time-limited condition ($mean=3.59$, $median=2.91$, $N=1921$) was found to be slower than the basic ($mean=2.98$,$median=1.79$, $N=1894$) and feedback conditions ($mean=2.90$, $median=1.79$).[^TimeSig]
+Interestingly, the time-limited condition, FAST, was found to be _slower_ than the baseline (Table @tbl:relTime)
 This finding stands in stark contrast to what is seen later for the tagging experiment.
 There are some possible reasons for this, which are discussed later.
 
-Another way of considering this data is by user means.
+condition    mean    median  std     N    sig
+------------ ------- ------- ------- ---- -----
+BASE         2.98    1.79    3.92    1894  /
+FAST         3.59    2.91    2.30    1921 ***
+FDBK         2.90    1.79    3.15    3318 **
+INSTRUCT     2.90    1.76    3.53    1629 
+TRAIN        4.06    2.58    5.72    3906 ***
+
+Table: Time spent per relevance judgment in each condition. Significance marks rejection of equal distribution to the baseline (Mann-Whitney U, Bonferroni-adjusted significance at 0.05 - \*, 0.01 - \*\*, and 0.001 - \*\*\*). {#tbl:relTime}
+
+<!-- TODO update instruct values if more data collected -->
+
+Considering this data by user means to reduce the influence of outliers tells a comparable story.
+
+<!-- 
 That is, reducing each user to a single data point so that any outliers do not exert undue influence over the data. 
-Table @tbl:avgRelTime shows the statistics for this measure. Viewed in this manner, the time-limited interface and the baseline were comparable, while feedback and training improved the mean time of the average worker.
+Table @tbl:avgRelTime shows the statistics for this measure.
+Viewed in this manner, the time-limited interface and the baseline were comparable, while feedback and training improved the mean time of the average worker.
 
 +--------------+------+--------+------+----+
 | condition    | mean | median | std  | N  |
@@ -599,34 +652,27 @@ Table @tbl:avgRelTime shows the statistics for this measure. Viewed in this mann
 | basic        | 4.32 | 3.72   | 2.63 | 80 |
 | fast         | 4.61 | 3.99   | 1.93 | 34 |
 | feedback     | 3.38 | 3.06   | 1.97 | 32 |
+
 | postTraining | 2.68 | 1.83   | 2.30 | 34 |
 +--------------+------+--------+------+----+
 
-Table: Details of average time spent by worker in each condition (in seconds). {#tbl:avgRelTime}
-
-
-[^TimeSig]: $p<<0.001$ in both comparisons, Mann-Whitney U.
-
+Table: Details of average time spent by worker in each condition (in seconds). {#tbl:avgRelTime}  -->
 
 
 <!-- Feedback -->
-\newthought{Workers were given the option} to rate the task and their satisfaction with the payment, on a scale from 1-5.
+\newthought{Finally, Workers were given the option} to rate the task and their satisfaction with the payment, on a scale from 1-5.
 
-Figure @rel-task-satisfaction shows the distribution of satisfaction score for each condition.
+Figure @fig:rel-task-satisfaction shows the distribution of task satisfaction scores for each condition, and Figure @fig:rel-pay-satisfaction shows the payment satisfaction scores.
 In all cases, they were skewed toward the upper end -- the median is 5 for each condition -- as may not be surprising.
-
-TODO Write up
-
-
+The main point to note is that none of the conditions are troublesome for workers, and that workers in the pseudo-competitive conditions (FAST and FDBK) seem to enjoy the tasks slightly more.
 
 ![Relevance judgment task satisfaction scores, by condition.](images/taskSatisfaction-relevance.png) {#fig:rel-task-satisfaction}
 
 ![Relevance judgment payment satisfaction scores, by condition.](images/paySatisfaction-relevance.png) {#fig:rel-pay-satisfaction}
 
-A final question looked at was whether a person's rank -- as given in the feedback condition -- affected their satisfaction.
+A related question is whether a person's rank -- as given in the feedback condition -- affected their satisfaction.
 There were not enough measurements for a non-parametric comparison, but it did not appear to be a notable factor.
-Binning workers in quartiles by rank, those in the second quartile had a comparable task satisfaction ($mean=4.25$, $median=5$, $N=4.5$, _note low N_) to those in the third performance quartile ($mean=4.81$, $median=5$, $N=11$) and the upper quartile ($mean=4.62$, $mean=5$, $N=16$).
-Given a larger sample, one interest quirk to pursue is that the lowest pay satisfaction was among the best contributors ($mean=4.375$, $median=4$, $N=16$).
+Given a larger sample, one interesting quirk that was observed is that the lowest pay satisfaction was among the best contributors ($mean=4.375$, $median=4$, $N=16$).
 
 
 ## Experiment  #2: Tagging

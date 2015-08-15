@@ -1,6 +1,13 @@
-
-
-
+% Float longtable captions (the tables used by Pandoc)
+% to the margin, as is done for figures
+\makeatletter
+\def\LT@makecaption#1#2#3{%
+  \noalign{\smash{\hbox{\kern\textwidth\rlap{\kern\marginparsep
+  \parbox[t][][b]{\marginparwidth}{%
+  \vphantom{40pt} % PO: hacking around a slight verticle misplacement
+\@tufte@caption@font \@tufte@caption@justification \noindent 
+   #1{#2: }\ignorespaces #3}}}}}}
+\makeatother
 
 
 % Set a hard margin of one inch.

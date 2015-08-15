@@ -16,7 +16,7 @@ gruntfile = (grunt) ->
         images:
           cmd: 'rsync -av -e \'ssh -i ../../../keys/crowdy/crowdy-ec2.pem \' '+
           'ec2-user@ec2-52-27-153-227.us-west-2.compute.amazonaws.com:'+
-          '~/dissertation/images ./images'
+          '~/dissertation/images/* ./images'
       watch:
         markdown:
           files: '<%= documents %>',
