@@ -73,7 +73,7 @@ Afterward, an applied experiment is presented, where both a priori and posterior
 
 [^whyint]: Why are these design manipulations chosen? Later in this chapter, various possibilities for design manipulation are considered, and compared to the existing literature. As will be seen, prior work has lent insight on the effect of 'parameter manipulations' such as payment variation [@mason_financial_2010; @harris_youre_2011], wording changes [@grady_crowdsourcing_2010], while more drastic design manipulations are only beginning to be studied in the context of crowds [@mitra_comparing_2015].
 
-# Prior work on microtask design
+## Prior work on microtask design
 
 Grady and Lease also explored the effect of changing human factors on information retrieval relevance judging through Mechanical Turk [-@grady_crowdsourcing_2010]. They considered four factors: terminology, base pay, offered bonus, and query wording.
 Their findings were inconclusive; however their study provides guidance on the issues related to this form of study.
@@ -608,8 +608,8 @@ Table: Statistics for the likelihood of a document's relevance being correctly j
 How good were the workers on average? Table @tbl:byWorkerRelStats shows the median and mean quality of worker, scored by their accuracy rate.
 This does not take into account whether workers were given easy or difficult tasks to perform or if some documents were judged more than others, but it reflects the same order of INSTRUCT, FDBK, TRAIN, BASE, as was seen above.
 
-condition     mean    median    std
----------- ------- ------- --------
+condition  mean    median     std
+---------- ------- ---------- --------
 BASE        0.750    0.759    0.179
 FAST        0.685    0.716    0.197
 FDBK        0.783    0.800    0.119
@@ -619,13 +619,12 @@ TRAIN       0.775    0.791    0.101
 Table: Mean and median quality of workers in each condition, by accuracy rate -- the proportion of all judgments performed correctly. {#tbl:byWorkerRelStats}
 
 \newthought{A measurement of time spent} on each task was taken, in seconds.
-
-![Comparison of time spent per task, in seconds (n=12667)](../images/relevanceTime1.png) {#fig:relevance-time}
-
 Figure @fig:relevance-time shows the distributions of time spent per task, faceted by the experimental condition.
 Interestingly, the time-limited condition, FAST, was found to be _slower_ than the baseline (Table @tbl:relTime)
 This finding stands in stark contrast to what is seen later for the tagging experiment.
 There are some possible reasons for this, which are discussed later.
+
+![Comparison of time spent per task, in seconds (n=12667)](../images/relevanceTime1.png) {#fig:relevance-time}
 
 condition    mean    median  std     N    sig
 ------------ ------- ------- ------- ---- -----
@@ -640,6 +639,25 @@ Table: Time spent per relevance judgment in each condition. Significance marks r
 <!-- TODO update instruct values if more data collected -->
 
 Considering this data by user means to reduce the influence of outliers tells a comparable story.
+Viewed in this manner, the time-limited interface and the baseline were comparable, while feedback and training improved the mean time of the average worker.
+
+While this data tells us about how quick the actual tasks in a task set are completed, there is also the time spent in between contributions, which can be assumed to primarily time spent on instructions.
+Table @tbl:RelNonContrib shows the time spent in these moments.
+
+Notably, FDBK appears to be considered in much less time than other conditions.
+Recalling that FDBK and TRAIN are never a worker's first interaction, Table @tbl:RelNonContrib also shows values excluding first-time interactions, for a better comparison.
+The results do no change much, other than showing that the baseline tasks are completed quicker in later interactions.
+In contrast to FDBK, and training intervention INSTRUCT compelled people to spend the most time the instructions.
+
+condition  mean            median           std      N
+---------- --------------- ---------------- -------- -----
+BASE       30.79 (22.93)   18.03 (12.66)    36.09    200
+FAST       34.86 (31.54)   23.45 (21.09)    35.86    132
+FDBK       19.58 (--)      13.17 (--)       19.35    359
+INSTRUCT   48.64 (48.87)   22.01 (20.49)    74.65    210
+TRAIN      38.89 (--)      14.12 (--)       73.90    378
+
+Table: Time spent on non-contribution parts of a task, excluding tasks where feedback form was completed. Parenthetical values show information only when worker's Nth task is 2 or more. {#tbl:RelNonContrib}
 
 <!-- 
 That is, reducing each user to a single data point so that any outliers do not exert undue influence over the data. 
@@ -662,6 +680,8 @@ Table: Details of average time spent by worker in each condition (in seconds). {
 <!-- Feedback -->
 \newthought{Finally, Workers were given the option} to rate the task and their satisfaction with the payment, on a scale from 1-5.
 
+<!-- a bug resulted in the form not showing up for most of the basic condition workers, and many of the feedback condition workers -->
+
 Figure @fig:rel-task-satisfaction shows the distribution of task satisfaction scores for each condition, and Figure @fig:rel-pay-satisfaction shows the payment satisfaction scores.
 In all cases, they were skewed toward the upper end -- the median is 5 for each condition -- as may not be surprising.
 The main point to note is that none of the conditions are troublesome for workers, and that workers in the pseudo-competitive conditions (FAST and FDBK) seem to enjoy the tasks slightly more.
@@ -674,6 +694,64 @@ A related question is whether a person's rank -- as given in the feedback condit
 There were not enough measurements for a non-parametric comparison, but it did not appear to be a notable factor.
 Given a larger sample, one interesting quirk that was observed is that the lowest pay satisfaction was among the best contributors ($mean=4.375$, $median=4$, $N=16$).
 
+### Analysis
+
+The best work was contributed by workers in the training intervention (INSTRUCT) condition.
+Their contributions were significantly more accurate at the same cost and with no discernible change in time per task.
+However, supporting the interpreted finding in the previous chapter, alongside the improved performance workers spent much more time reading the instructions.
+In the previous chapter this measurement was confounded with the completion of the first task, here we confirm it.
+
+INSTRUCT is an easy condition to parameterize, only requiring a one-time cost from the requester to collect training examples and perhaps a slight development cost to implement instructions as a dismissable, up-front modal window.
+
+The intervention in INSTRUCT was partially motivated by @shu_signing_2012, who found that for reporting forms requiring a signature to confirm honesty, such as tax or insurance forms, asking people to sign at the top led to more honest reporting.
+By forefronting the instructions, this condition seems to encourage workers to be more honest about the codebook.
+An unknown caveat is whether this is a persistent effect or, if after enough tasks with this condition, workers start to dismiss the information sooner.
+
+\newthought{The quality of contributions in the feedback condition} also improves on the baseline condition.
+Like with INSTRUCT, three-quarters of query-document pairs were corrected classified by two-thirds of contributors.
+This means that with as few as three redundant judgments, most of the consensus votes would be correct.
+
+A surprise with the feedback task was that workers did not slow down, but indeed performed the tasks quicker.
+The reason for this behavior is unclear.
+Figure @fig:relFeedbackByRank shows the correlation between time spent the ranked percentile that the worker was given, which does not show any clear linear pattern.
+The best we can speculate is that while workers in the 60th percentile slowed down to try to improve, the best workers were validated to trust their instincts while the worst workers did not care.
+
+![Comparison of the time workers in the Feedback condition spent on relevance judgments against their percentile rank, as provided to them.](images/relFdbkByRank.png) {#fig:relFeedbackByRank}
+
+
+\newthought{Work in the first-task training condition}, TRAIN, was not significantly different in quality from the baseline, which appears to confirm that training on one query does not assist in completing relevance judgments for other queries.
+
+Notably, TRAIN slowed down workers, as if the close training with one query made then sensitive to the nuance that other queries may have.
+This did not translate to performance improvements, however.
+
+\newthought{As expected, time-limited workers} did not perform as strongly as expected.
+However, the accompanying expectation was not seen in the data: that for the loss in quality, FAST would increase the speed on contributions and potential improve the capacity to collect redundant judgments.
+
+To the contrary, FAST was not fast.
+A possible explanation is that image relevance judgments are already a very quick interaction, only a few seconds.
+The one-at-a-time fast interface may have stood in the way of workers' comprehension of the entire task set: where in a traditional setting they can click on their answer and already be thinking about the next one, here they had to click again to move to the next task.
+It is possible that for relevance judgments over more complex types of documents, the fast interface would perform differently, akin to what will be seen in the next experiment.
+
+![Likelihood of correct relevance judgment shown by query](images/byQueryPerformance.png) {#fig:byQueryRelPerformance}
+
+\newthought{A comparison of performance per query} (Figure @fig:byQueryRelPerformance) offers some insight as to the relative strengths and weaknesses of the various conditions.
+
+The thirteen queries tested are shown as columns in Figure @fig:byQueryRelPerformance.
+Despite across the board worse results, the places where FAST appears to stumble most is where there there was nuance to the instructions, in edge cases where one might consult the instructions again.
+For example, are other tattoos relevant to _rose tattoo_? 
+(No.)
+Are other flowers relevant?
+(Somewhat.)
+The instructions for what was very relevant, somewhat relevant, or not relevant were in a way subjective, in that they were interpreted by myself when written, but this simply grounded the correct answer in a single interpretation.
+
+The query analysis also shows places where then hand-chosen examples for INSTRUCT seemed to mislead.
+'_agape_', a word referring to platonic Christian love of people as well and the Christian God's love of people, was extremely underrepresented in our sample, and all the results were non-relevant.
+This was a tricky inclusion, and by showing workers in INSTRUCT examples of relevant or somewhat relevant, it may have additionally misled workers to expect that there _are_ relevant results.
+Likewise, it seems that the manual choice of examples for 'Islam' and 'Easter crafts' also misled.
+
+### Summary
+
+In sum, for relevance judgments of image documents, a per-task training intervention and performance feedback improved the quality of judgments, while a training set on an unrelated query had no significant effect, and a time-limited interface actively disrupted workers.
 
 ## Experiment  #2: Tagging
 
@@ -689,9 +767,9 @@ their libraries and museums to collect more metadata about their
 
 <!--Limited metadata-->
 
-Trant and Wyman argue that tagging from online users "appears to fill gaps in current documentation practice" [~@trant_investigating_2006].
+Trant and Wyman argue that tagging from online users "appears to fill gaps in current documentation practice" [-@trant_investigating_2006].
 Following from this, tagging is particularly helpful for difficult to model formats (i.e. non-text) and when corpus sizes surpass the ability to formally classify works.
-Tagging has been used to encode scans of text [@TODOciteRecaptcha], improve information retrieval retrieval document modelling [@lamere_social_2008; @citeBao], augment personalized search [@lermancite; @nollcite].
+Tagging has been used to encode scans of text [@ahn_recaptcha_2008], improve information retrieval retrieval document modelling [@lamere_social_2008; @bao_optimizing_2007], augment personalized search [@lerman_personalizing_2007; @noll_web_2007].
 
 Tagging also offers a break from the Vocabulary Problem [@furnas_vocabulary_1987].
 @furnas_vocabulary_1987 performed a set of term generation experiments in 1987 where the asked participants to describe functions or objects.
