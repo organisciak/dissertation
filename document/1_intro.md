@@ -410,10 +410,6 @@ The final research chapter, _Chapter 6_, shifts the focus to subjective crowdsou
 While paid crowdsourcing is often applied to objective or normative goals, this chapter asks how collection-time strategies can improve the quality of contributions where the task goals are conditioned on a specific person's tastes or needs.
 Building on work developed by @organisciak_personalized_2013, we present methods to perform subjective crowdsourcing for on-demand personalization, showing it to be feasible for our evaluated settings. Following from the earlier study on the effect of design manipulations for objective tasks, this chapter also studies the influence of task design changes in how crowds contribute using one of our subjective crowdsourcing protocols, taste-grokking.
 
-## Summary of Findings
-
-TODO (or TODO remove?)
-
 <!--
 - CHAPTER 1: Introduction
   - Overview

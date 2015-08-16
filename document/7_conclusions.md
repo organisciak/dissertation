@@ -1,5 +1,5 @@
-Conclusion
-=============
+Summary and Conclusion
+=======================
 
 Crowdsourcing presents a great deal of potential value to information science, in its ability to supplement existing metadata objects with new descriptive information, qualitative reactions, and different perspectives.
 However, the benefits of contributions from self-selected amateur humans are also potential pitfalls.
@@ -17,94 +17,53 @@ Following in this direction, this study finally shifts focus to the implementati
 
 What are the properties of data collected from paid crowds for objective and subjective information system tasks, and how can the quality of data -- in terms of consistency and variance -- be optimized? We addressed this motivating question through three broad research questions.
 
-- __Broad Research Question 1__: What are the _post-collection_ indicators of quality in worker-contributed objective task data, and can these be leveraged for improved data modelling?
+> __Broad Research Question 1__: What are the _post-collection_ indicators of quality in worker-contributed objective task data, and can these be leveraged for improved data modelling?
 
-In _Interpreting Objective Tasks for Paid Crowdsourcing_, time, experience, and agreement were studied as potential indicators of quality in stu
+In _Interpreting Objective Tasks for Paid Crowdsourcing_, time, experience, and agreement were studied as potential indicators of quality in already collected data.
 
-TODO
+One of the primary findings of this chapter was that for low-granularity tasks such as information retrieval relevance judgments over short documents, crowd quality is not of much concern.
+Worker agreement was found to be a notable indicator of quality; however, using this to score workers and weigh their contributions upward or downward was overengineering: a simple majority voting approach worked nearly as well.
 
+Experience was not found to be an indicator of quality, perhaps because the task type that was studied only had about a two-task learning curve.
+One of the benefits of this null finding is that it simplifies further study of similar tasks, because blocking conditions by number of tasks completed does not appear necessary.
 
+Finally, the amount of time taken by workers was not found to be significant, except for the first task of task set.
+Exploring the possibility that this to be due to time spent in reading instructions, the measurement of which was confounded with the first task, it was found the otherwise identical workers in their contribution habits could have their eventual performance predicted simple based on the time the spend on the outset of the first task and whether they classify it correctly.
 
+Since poor workers in this class were not exhibiting profit-optimizing behaviours, this finding suggests that interventions during collection time might assist in course-correcting workers -- leading to the next research question.
 
+> __RQ 2__: What are the biases inherent to the task design for objective or non-normative tasks (i.e. the data collection instrument), and can design manipulations correct for them at _collection time_?
 
+In _Designing Tasks for Objective Needs_, this work moved past an immutable treatment of contributions and looks at how contribution quality can be influenced at collection-time.
 
-- __RQ 2__: What are the biases inherent to the task design for objective or non-normative tasks (i.e. the data collection instrument), and can design manipulations correct for them at _collection time_? ^[Reported in both parts of Chapter 5.]
+This chapter explored the design space, exploding the different task parameterization possibilities and considering possible design manipulations.
+Three manipulations were then pursued in practice: a training interface (in both close interaction first-taskset parameterizations and a less involved per-taskset 
+approach), a performance feedback intervention, and a speed-encouraging time-limited interface.
+Of these, training and performance feedback improved the quality of contributions over a best practices baseline.
 
-- __RQ 3__: What are the quality losses when treating non-normative tasks in objective ways, and can collection-time framing or post-collection modeling approaches reduce these? ^[Reported in Chapter 6.]
+Initial interaction training was found to be effective for a task where the best practices are not conditioned on an extra variable.
+Whereas the results were not significant for relevance judgments, where subsequent tasks may be for different queries than the training set, it showed considerable promise for tagging tasks.
 
-Though in each chapter there are concrete solutions proposed and evaluated, the first step of each research question is to understand the scope of the problem.
-Regardless of implementation, this dissertation's _pertinent and valuable contribution_ is in understanding some ways that crowdsourced data may have unexpected and perhaps overlooked variance, bias, and low-consistency.
+An alternate training condition was attempted for relevance judgments, which fore-fronted the task instructions with a modal window, one requiring an explicit input to move past, and presented the instructions with strong examples of what each type of judgment would look like.
+This condition resulted in more time spent on understanding the codebook and, confirming the suggestion from earlier, subsequently strong gains in performance.
 
-\newthought{Before conducting our own experiments}, Chapters 2 and 3 present an in-depth look at crowdsourcing.
+These findings support, to the extent of the types of tasks collected, the assumption that crowd contribution quality is as much a responsibility of requesters as it is of the crowd.
+More to the point, they show that there are ways of improving results at no extra collection cost.
+This makes it an asset for practical implementations, and exploring alternative forms of design manipulations and interventions is worthy of further study.
 
-Chapter 2 presents a brief overview of crowdsourcing.
-One can consider this chapter the seed of what might be taught in the first two weeks of a course on crowdsourcing.
+Tying together the preceded two chapters, a small study was next conducted on the low inter-grader reliability of audio similarity judgments for music information retrieval.
+Correcting the existing data was not found to be effective, but increasing the redundant contribution count and redesigning the collection interface to anchor the categories was able to account for a significant portion of the inter-grader error.
 
-Chapter 3 then presents an information-science typology of crowdsourcing, a necessity for appreciating the expansive area of crowdsourcing and this study's particular scoping.
-Both of these chapters are general, and literature reviews pertinent to the experiments in this study are reported in the relevant research chapters.
+Part of this chapter focused on the problem of contributor subjectivity. Despite being performed by trusted contributions, the subjectivity of audio similarity judgment tasks confounded their normative use for system evaluation.
 
-\newthought{Chapter 4 applies a post-collection lens to crowdsourcing error}, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
+> __RQ 3__: What are the quality losses when treating non-normative tasks in objective ways, and can collection-time framing or post-collection modeling approaches reduce these?
 
-The chapter is largely analytical, hoping to understand what we can infer from crowd behaviors about the strength of their contributions and evaluating strategies for better paid crowdsourcing.
-By taking this approach, this chapter seeds some the expected outcomes driving later chapters.
+_Designing Tasks for Subjective Needs_ again focused on maximizing quality through a priori design and instrumentation choices this pursued in the context of subjective tasks.
+Focusing on a setting of on-demand personalization, it introduced two approaches.
+The first was a collection-time design choice, _taste-grokking_, where workers were asked to infer the needs of a target user.
+The second was a post-collection modeling choice, _taste-matching_, where workers were profiled on their preferences, matched to users, and their contributions used to personalize for matched users.
 
-The questions this chapter asks are the following:
+Both approaches improved over an unpersonalized baseline.
+Taste-matching was strong in contexts whether the factors affecting a person's tasks were more complex or latent, but in simple contexts taste-grokking performed better and resulted in more satisfied workers.
 
- - __RQ 1.1__: Do worker contributions improve predictably with experience?
- - __RQ 1.2__: Does the length of time that a worker spends on a question reflect the quality of their rating?
- - __RQ 1.3__: Does a worker's agreement or disagreement with other workers reflect their overall quality as a worker?
- - __RQ 1.4__: If so, can disagreement be used for data improvements?
-
-\newthought{Considering the data quality of crowdsourcing} as an immutable set of contributions is an important avenue toward properly analyzing and controlling  crowd data, and also pays proper reverence toward a popular stream of crowdsourcing research.
-
-However, in many circumstances, contributions are _not_ a hallowed set of data, bestowed upon a researcher to work with.
-They are collected, and as such the _way they are collected_ can change what they look like at the end.
-Chapter 5 turns our attention toward this less-explored corollary of post-collection data modelling: the effect of the collection instrument on the resultant contributions, toward understanding and potentially optimizing the contribution collection process.
-This is about how you ask, and how it affects what you are told.
-
-Chapter 5 is presented in two parts, both studies conducted for this dissertation, one published previously and one presenting work for the first time.
-
-The first part (5.1) selects two control tasks, and measures the effect of three different design manipulations on the makeup of the data -- consistency and quality, but also contribution patterns.
-Looking at interfaces that give users training, performance feedback, or timer-driven nudges, it asks:
-<!--These design manipulations are looked at again over a subjective context in Chapter 6.-->
-
- * __RQ 2.1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
-
- * __RQ 2.2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?
-
- * __RQ 2.3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
-
- * __RQ 2.4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?
-
-The second part of Chapter 5 (5.2) bridges chapters 4 and 5 in a real world setting, applying post-collection corrections as well as collection-time task manipulations to the human judgments used in evaluating audio similarity for the Music Information Retrieval Exchange (MIREX).
-Finding the inter-grader consistency to be very low, this small chapters asks:
-
- - __RQ 2.5__: Are grader differences responsible for low inter-grader consistency in MIREX judgments?
- - __RQ 2.6__: Are problem graders responsible for low inter-grader consistency?
- - __RQ 2.7__: Is subjectivity or disagreement of the grading task responsible for low inter-grader consistency?
- - __RQ 2.8__: Does the task design affect the quality of contributions?
-
-\newthought{Chapter 6 focuses on completing subjective tasks} through paid crowdsourcing, again focusing on maximizing quality through a priori design and instrumentation choices.
-Subjective tasks are rarely done in paid contexts, so _personalized crowdsourcing_ is introduced as a way to formalize and argue for the approach.
-Two protocols for personalized crowdsourcing are then presented, referred to as _taste-matching_ and _taste-grokking_, and compared.
-
-<!-- Reminder: update any changes here and in the actual chapter -->
-
- - __RQ 3.1__: Is it feasible to apply paid crowdsourcing to subjective problems?
- - __RQ3.2__: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
- - __RQ 3.3__: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
- - __RQ 3.4__: How do different types of subjective tasks affect the efficacy of personalized crowdsourcing approaches?
- <!-- - __RQ 3.5__: How do task design manipulations affect the quality of crowd contributions?-->
-
-### Goal
-
-The goal of this work is to leave you, the reader, with an understanding of how online crowds can reliably generate metadata about information system objects, both for subjective or objective ends.
-The main contribution of this study is _methodological_: understanding issues related to proper -- or improper -- crowdsourcing in information sciences.
-It is written in the service of uncovering issues and answering them thoroughly, where a reader may develop realistic expectations or hypotheses for tasks beyond the tasks used for this study's experiments.
-
-A reader of this work will understand:
-
- * the issues related to using crowdsourcing contributions for improving document metadata, particularly for information retrieval indexing and evaluation, and user-based filtering or recommendation;
- * the effect of different designs of crowdsourcing collection tasks on the resulting reliability and consistency of the collected data, particularly designs that train workers, give them feedback, or hurry them;
- * sources of contributor-specific error in information retrieval evaluation tasks; and
- * how these findings may assist future working in information science and cultural heritage.
+\newthought{TODO}

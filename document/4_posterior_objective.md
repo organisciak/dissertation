@@ -38,7 +38,7 @@ This work was supported by Institute of Museum and Library Services LG-06-07-002
 In addition to the coauthors on Organisciak et al. (2012) -- Efron, Fenlon, and Senseney -- other contributing members include Timothy W. Cole, Thomas Habing, Jacob Jett, Carole L. Palmer, and Sarah L. Shreeves.
 }
 
-This chapter makes the following contributions: ^[TODO mimic this acknowledgement style for other chapters]
+This chapter makes the following contributions:
 
 - Description of the problem of reconciling annotation contributions or work by non-expert, semi-anonymous workers.
 - Evaluation of a number of approaches for separating worker quality from rating difficulty, including dwell time, worker experience, task difficulty, and agreement with other workers. 

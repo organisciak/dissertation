@@ -57,7 +57,7 @@ However, the most common uses of paid crowds are in the style of human computati
 As a result, much literature focuses on issues of reconciling multiple contributions into a trustworthy output [@sheng_get_2008; @wallace_who_2011; @eickhoff_increasing_2012];
 
 \newthought{Though personalized crowdsourcing can be applied in numerous contexts},
-it is particularly valuable in highly-specific on-demand settings: where a person might not have the time to spend on completing a task themselves, but the subjectivity of their needs paired with the specificity of the task means that there are few alternative options.
+it is particularly valuable in highly-specific on-demand settings: where a person might not have the time to spend on completing a task themselves, but the subjectivity of their needs alongside the specificity of the task means that there are few alternative options.
 Some people do not find optimal completion of such tasks to be worthwhile, a factor influenced by the perceived value of their time and their enjoyment of the task [@marmorstein_value_1992].
 This trade-off is present in areas such as price comparison shopping (ibid) and travel-planning [@gursoy_integrative_2004].
 This study does not make any assumptions about where the target person's preferences lie in balancing the quality cost of not personalizing, time cost of completing the task themselves, or monetary cost of personalization.
@@ -99,7 +99,7 @@ Both protocols begin with a minimal profile of the requester – the target of p
 
 The profiling set is a set of tasks in the style that the workers will be expected to complete.
 For example, for one of this paper's settings,
-where personalized crowdsourcing is applied to predicting a requester's opinion of salt and pepper shaker products on a five-point scale, the profiling set is comprised of salt and pepper shakers that are rated.
+where personalized crowdsourcing is applied to predicting a requester's opinion of salt and pepper shaker products on a five-point scale, a set of rated salt and pepper shakers comprise the profiling set.
 In the context of taste-matching, the requester profile is compared to worker profiles constructed against the same items.
 For taste-grokking,
 the requester profile is used to visually communicate the requester's tastes and needs to workers.
@@ -198,7 +198,7 @@ Taste-matching and taste-grokking are evaluated over three problems.
     recommendation is performed.
 The purpose is to guess a requester's
     opinions on images of 
-    a) online shopping results (specifically,salt-shakers), and 
+    a) online shopping results (specifically, salt-shakers), and 
     b) restaurant meal offerings.
 
 -   *Text-highlighting:* Measuring the protocols in a more difficult and
@@ -301,7 +301,7 @@ Table: Taste-matching performance for recommendation task {#tbl:matching-perform
 Table @tbl:matching-performance shows the performance of recommendations predicted by taste-matching.
 In both task types, taste-matching improved over the baseline, with stronger gains against the cuisine recommendation tasks.
 
-The parameterizations were selected based on an expectation of a realistic task setting: best worker from random five and ten.
+The parameterizations were selected based on an expectation of a realistic task setting: the best worker from random five and ten.
 In this setting, a requester starts a personalized crowdsourcing task, and *n*
 workers are profiled.
 Based on the profiling 'match', the best of these workers is retained to perform more work as a surrogate for the requester.
@@ -346,14 +346,14 @@ The choice to aggregate 5 workers is motivated by a recommendation in @novotney_
 Using a cross-validation set of ten ratings to identify and aggregate top workers improves the quality of predictions further, though at the cost and time of collecting additional recommendations.
 Figure @fig:top-grokkers
 demonstrates the improvement in performance as more of the top workers
-(e.g., 2^nd^, 3^rd^, .., 30^th^ best cross-validated worker included in prediction).
+(e.g., 2^nd^, 3^rd^, ..., 30^th^ best cross-validated worker included in prediction).
 For each task domain there is an increase in performance followed by a gradual decrease, suggesting that even with good workers,
 aggregation is an important approach for improving quality.
 
 Taste-grokking does not include any fixed costs for profiling as with taste-matching.
 With the intuitively chosen payment parameters in this study, taste-grokking remains more affordable with a single worker per recommendation.
 However, while the salt and pepper shaker product recommendation task was well suited for single-worker taste-grokking,
-the much improved performance with aggregation means that an ideal taste-grokking setting is more expensive after a small number of rating predictions.
+the much improved performance with aggregation means that an ideal taste-grokking setting is more expensive after a few rating predictions.
 
 ### Worker Behavior
 
@@ -392,7 +392,7 @@ This feedback seems to align with the poorer grokking results for cuisine, which
 Figure @fig:tastegrokkingPerformance shows the performance of an all-worker aggregation for each individual taste-grokking experiment, in order to demonstrate the range of overall prediction quality related to different profiling sets.
 For comparison, the worst optimized profiling set (described in next section) performance was RMSE=1.05.
 Figure @fig:goodPoorGrokking offers an example of a successful profiling set alongside one where workers performed poorly.
-The reason the bottom set in Figure @fig:goodPoorGrokking performed poorly is only speculative, though it is notable that it did not capture the workers opinion of 'cute figurines', as the one above did with the cuddling bird and the cupcake salt and pepper shakers.
+The reason the bottom set in Figure @fig:goodPoorGrokking performed poorly is only speculative, though it is notable that it did not capture the workers' opinion of 'cute figurines', as the one above did with the cuddling bird and the cupcake salt and pepper shakers.
 The taste cluster examples in Figure @fig:cluster-examples show that this is a large facet of the space.
 However, of the nine workers that left feedback for the poorly recommended task, none expressed concerns about the training set.
 
@@ -577,7 +577,7 @@ $0.17$ - i.e., 17% of the time workers thought that the evaluated sample was wri
 This was low, but expected, given how different handwriting may be.
 On the upper end, the requester's true handwriting scored $0.83$ providing an insight into the cautiousness of evaluators.
 
-![Success of handwriting samples in passing for the requester’s handwriting, in percentage. The performance of the best grokked sample from a set of 1..5 shown, and the best non-grokked sample from 1..13.](images/handwriting-success.png) {#fig:handwriting-success}
+![Success of handwriting samples in passing for the requester’s handwriting, in percentage. The performance of the best grokked sample from a set of 1...5 shown, and the best non-grokked sample from 1...13.](images/handwriting-success.png) {#fig:handwriting-success}
 
 Matching ranked as poorly as expected.
 Figure @fig:handwriting-success shows the score of the best of $k$ random samples in people's own handwriting.
@@ -638,7 +638,7 @@ Scaling worker counts to large numbers of workers provided better improvements w
 
 Taste-matching at scale bridges the protocol to its conceptual antecedent: collaborative filtering.
 Taste-matching follows the same intuitions as collaborative filtering and can be interpreted as on-demand collaborative filtering for contexts where no pre-existing data exists.
-Mature collaborative filtering systems, like Netflix, make sense of large numbers of opinion data from their users; for a context like filtering one's vacation photos or buying a salt shaker, this rich data does not exist and it is hard to a imagine a robust system around it.
+Mature collaborative filtering systems, like Netflix, make sense of large numbers of opinion data from their users; for a context like filtering one's vacation photos or buying a salt shaker, this rich data does not exist and it is hard to imagine a robust system around it.
 
 One challenge in collaborative filtering is data sparsity when a new user joins, when new items are added, or both, when the system is brand new.
 On-demand personalization through taste-matching can be used to bootstrap a system as it grows.

@@ -133,7 +133,7 @@ Early crowdsourcing projects, such as galaxy annotation site *Galaxy Zoo* and pr
 
 @wiggins_goals_2012 present a typology of citizen science projects, binning them into action-oriented, conservation-focused, investigative, wholly virtual, and educational projects.
 
-## Notable Research
+<!--## Notable Research
 
 A greatest hits of crowdsourcing is beyond the scope of this study, though ^[TODO this section]
 
@@ -148,9 +148,6 @@ They also identified that intrinsic motivation is still at play in paid crowdsou
 @kraut_building_2011 mined social literature for one of the most insightful looks at how online communities function effectively
 
 Yochai Benkler's Wealth of Networks [-@benkler_wealth_2006], discussed earlier, which took a political economy view to commons-based forms of production, and the affordances that technology provides for sidestepping corporate production in this way.
-
-<!--TODO2: others?
-VizWiz
 -->
 
 ## Crowdsourcing in the Wild
@@ -232,7 +229,7 @@ Manual tweaking of results is not a scholarly activity, but there is evidence th
 
 Using crowdsourcing in the machine, as evidence for search engine algorithms rather than evaluation, is less common.
 PageRank is one such effort, utilizing the linking habits of web page authors as a proxy for authoritativeness and quality [@page_pagerank_1999].
-Recently, crowdsourcing has proven useful for time-sensitive queries, and has been used by Twitter to model searches that may have never been seen before [@chen_all_2008].
+Recently, crowdsourcing has proven useful for time-sensitive queries, and has been used by Twitter to model searches that may have never been seen before [@chen_improving_2013].
 
 One of the better explored spaces of retrieval over or incorporating crowdsourced information is in folksonomies.
 Folksonomies refer to free-text labelling (i.e. 'tagging') by non-professionals.
@@ -251,8 +248,7 @@ In the context of del.icio.us, their approach improves over traditional unigram 
 Finally, @harris_applying_2012 provide a comprehensive overview of ways that crowdsourcing and games with a purpose can be incorporated in the information retrieval workflow.
 While crowdsourcing is noted as highly feasible for evaluation, it is also noted as an approach which can help in building document collections, identifying information needs, and query refinement.
 
-<!-- TODO2 : Lamere - social tagging-->
-<!-- TODO2: * Coding Aggregation / Ground Truth generation -->
+Discussion of crowdsourcing in information science continues generally in the next chapter, an IS-centric typology of crowdsourcing, then in the context of paid crowdsourcing in the subsequent two chapters.
 
 ## Summary
 

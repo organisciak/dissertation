@@ -64,24 +64,24 @@ For example, @mason_financial_2010 found that a small change in instrumentation 
 
 This chapter looks at collection-time task design manipulations or interventions for collecting objective data through paid crowdsourcing.
 Multiple interfaces for encouraging less deviation between contributors are evaluated against identical controlled tasks.
-Two of of these design manipulations are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
+Two of these design manipulations are intended to slow down workers and make them aware of how their perception of the task deviates from the standard.
 A third design encourages quicker responses.[^whyint]
 These are compared to a realistic baseline interface which follows Mechanical Turk conventions and best practices.
 These design manipulations are measured against two control tasks: image tagging and image-based information retrieval relevance judgments.
 
 Afterward, an applied experiment is presented, where both a priori and posterior collection quality optimization methods are applied to a music information retrieval evaluation. The design changes that are made improve the quality of results drastically, with negligible cost differences.
 
-[^whyint]: Why are these design manipulations chosen? Later in this chapter, various possibilities for design manipulation are considered, and compared to the existing literature. As will be seen, prior work has lent insight on the effect of 'parameter manipulations' such as payment variation [@mason_financial_2010; @harris_youre_2011], wording changes [@grady_crowdsourcing_2010], while more drastic design manipulations are only beginning to be studied in the context of crowds [@mitra_comparing_2015].
+[^whyint]: Why are these design manipulations chosen? Later in this chapter, various possibilities for design manipulation are considered, and compared to the existing literature.
 
 ## Prior work on microtask design
 
-Grady and Lease also explored the effect of changing human factors on information retrieval relevance judging through Mechanical Turk [-@grady_crowdsourcing_2010]. They considered four factors: terminology, base pay, offered bonus, and query wording.
+Grady and Lease previously explored the effect of changing human factors on information retrieval relevance judging through Mechanical Turk [-@grady_crowdsourcing_2010]. They considered four factors: terminology, base pay, offered bonus, and query wording.
 Their findings were inconclusive; however their study provides guidance on the issues related to this form of study.
 
 The effect of wording and terminology, one of Grady and Lease's focal points, has often been alluded to as a factor in crowdsourcing, including in Library and Information Science work.
 In writing about The Commons, a successful museum crowdsourcing project with Flickr, the Library of Congress reported that the "text announcing the Commons ('This is for the good of humanity, dude!!') struck just the right chord" [@springer_for_2008].
 
-Grady and Lease's work in in a space of parameterization studies, that look at how changes to the parameters of typical tasks -- title, description, payment -- affect the outcome.
+Grady and Lease's work is in the space of parameterization studies, that look at how changes to the parameters of typical tasks -- title, description, payment -- affect the outcome.
 Another notable parameterization study, by @mason_financial_2010, contributed insights on the relationship between payment and worker satisfaction.
 In one experiment, they found that increased payment does not improve the quality of results, only the duration of engagement.
 This was attributed to an anchoring effect where, in paying workers more, a worker's perception of the task's value increased with the payment.
@@ -114,7 +114,7 @@ Similar to this study, @mitra_comparing_2015 compare interaction against a set o
 Finally, @kazai_crowdsourcing_2011 approach the problem of HIT design quality improvement by inputting various trap mechanisms for inattentive workers.
 Tasks were completed by a survey flow, where the set of questions to be answered depended on the answers, allowing peculiar flows to be filtered.
 Captchas were also used to confirm human input and, perhaps most amusing, questions were planted that had the were check a box if they "did not pay attention" or "did not read the instructions".
-This is a direct solution to some of the problems this chapter looks at.
+This is a direct solution to some problems this chapter looks at.
 @kazai_crowdsourcing_2011 tested a number of confounded features, but these quality control metrics appeared to improve worker agreement with gold standard data.
 
 [^PerformanceBonus]: We also used a performance-based bonus in the 'taste-grokking' personalization approach detailed in Chapter 6.
@@ -143,7 +143,7 @@ RQ2 and RQ3 are the primary questions being explored in this chapter of the prop
 While this dissertation is explicitly pursuing the former question, collecting computationally useful contributions needs to be understood in the context of contributor satisfaction.
 The trade-off between contributions that crowds want to make and the reliability of the data is a central consideration for fostering sustainable, or alternately affordable, crowdsourcing.
 
-RQ4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be addressed as thoroughly as possible. [TODO: don't forget to address this]
+RQ4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be addressed as thoroughly as possible. 
 
 ## Design Space
 
@@ -182,7 +182,7 @@ There are also intangibles such as the appeal of the topic and the visual layout
 
 Of course, there is no constraint insisting on the task structure provided above.
 We can add elements to the task design before the task is accepted, at the start of the task, during or in response to individual interactions, or after the task is completed.
-Taking away elements might also be possible, such as the instructions, though it is hard to imagine that doing would would have a positive effect on the reliability or variance of the data.
+Taking away elements might also be possible, such as the instructions, though it is hard to imagine that doing so would have a positive effect on the reliability or variance of the data.
 
 There are countless possibilities for adding parts to the basic task.
 To inspire useful ones, it is helpful to consider one final, naturalistic set of factors that may affect the outcome of a paid crowdsourcing task: worker behaviours.
@@ -191,15 +191,15 @@ A worker's contribution may be affected by factors such as experience, skill, ti
 Which of these can be influenced by external factors?
 
  - _Experience_. Experience is a product of sustained interaction with the current type of task.
-   It can affecting indirectly by focusing on methods to extend the length of a user's interaction, such as bonus payments for staying around.
+   It can be affected indirectly by focusing on methods to extend the length of a user's interaction, such as bonus payments for staying around.
  * _Skill_. Skill is developed over time and is mostly affected by factors internal to the worker.
    To the extent that we could affect it, most functionality would encourage greater experience.
    Teaching workers by reinforcing their successes and failures might also have an effect.
- - _Self-confidence and decisiveness_. Contributors or workers that second-guess themselves more often may be less internally consistent. <!-- TODO2: advice from Diane Kelly on lit? -->
+ - _Self-confidence and decisiveness_. Contributors or workers that second-guess themselves more often may be less internally consistent.
  - _Attentiveness and fatigue_. Environmental distractions or fatigue can change how consistently a task is completed.
 The microtasking design pattern in paid crowdsourcing is meant to negate some of the fatigue seen in traditional classification labour, but there is no way to anticipate other outside factors, such has how many tasks from other requesters were completed. It is possible to affect attentiveness and fatigue within a task, however, with higher- or lower-effort tasks.
  - _Perceived importance of task_. The perceived importance of a task might affect some other factors, such as attentiveness or self-confidence.
- - _Time spent on each task_. The time spend on a task does not always translate to an indicator or quality, but might encourage greater numbers of contributions or more decisive contributions when controlled.
+ - _Time spent on each task_. The time spent on a task does not always translate to an indicator or quality, but might encourage greater numbers of contributions or more decisive contributions when controlled.
 
 With these in mind, consider this study's image tagging task.
 How would the contribution change if:
@@ -280,7 +280,7 @@ Collapsible instructions have been recommended previously [@chen_making_2012; @c
 
 ![Screenshot of task within the Mechanical Turk interface.](images/design-basic-inturk.png) {#fig:basic-inturk}
 
-[^TagDifficulty]: Incidentally, Figure {@fig:basic-inturk} also shows some of the more challenging images to tag. How would you tag them? 
+[^TagDifficulty]: Incidentally, Figure {@fig:basic-inturk} also shows of the more challenging images to tag. How would you tag them? 
 
 [^TaggingInterface]: TODO: Add figure of instructions from basic condition of tagging task. The substance of the instructions is discussed in the Tag Task section.
 
@@ -295,7 +295,7 @@ To account for instances where a second tag was too difficult to create, workers
 
 ![Screenshot of contribution validation, which informs contributors of issues before submission](images/design-basic-validation.png) {#fig:basicvalidation}
 
-![An example of the suggestion message in the basic condition of the tagging task, which appears after the input field is active for a small period of time.](images/design-basic-tippopup.png) {#fig:tippopup}
+![An example of the suggestion message in the basic condition of the tagging task, which appears after the input field is active for a small period.](images/design-basic-tippopup.png) {#fig:tippopup}
 
 [^Workers]: These unofficial guidelines, on the Dynamo Wiki, were written collaboratively by academic researchers and Mechanical Turk workers.
 
@@ -355,16 +355,16 @@ Additionally, the INSTRUCT condition:
 ### Feedback Interface (FDBK)
 
 In the previous chapter, it was found that workers that did not spend enough time reading instructions did not perform as well overall, even when their typical task completion time looked the same as well-performing workers.
-Since in this case the poorer workers did not exhibit any time-optimization wage-maximizing behaviours, a possible reason is that they were performing in an honest manner and simply did not internalize the codebook adequately.
+Since in this case the poorer workers did not exhibit any time-optimization wage-maximizing behaviours, a possible reason is that they were performing honestly but simply did not internalize the codebook adequately.
 
 If this is the case, is it possible to improve the performance of poor workers but simply letting them know of issues with their work?
-The feedback condition of this study attempted to do just that, with a intervention at the start of tasks, after a worker's first task, estimating the worker's performance.
+The feedback condition of this study attempted to do just that, with an intervention at the start of tasks, after a worker's first task, estimating the worker's performance.
 
 In the feedback interface, a worker is shown feedback about their estimated performance on past tasks.
 The first task that they complete is identical to the basic interface.
 Starting with the second task, however, the interface gives them a window with their estimated performance, relative to other workers.
 
-![Example of showing feedback shown to workers](../images/performance-feedback.png) {#fig:showperformance}
+![Example of showing feedback shown to workers](images/performance-feedback.png) {#fig:showperformance}
 
 The estimate of performance was determined differently for the different task types, image tagging and image relevance judgments, and is described in those respective sections.
 
@@ -403,7 +403,7 @@ In contrast to the training and feedback interfaces, which serve in a way to slo
 The time-limited interface encourages quicker interactions by giving users a timer to complete all tasks.
 Providing a time-limit is expected to encourage less second-guessing of the contribution.
 
-The goal and instructions do not differ greatly from that of the basic interface, with the exception of text explaining the limited amount of time that a worker has.
+The goal and instructions do not differ greatly from that of the basic interface, except for text explaining the limited amount of time that a worker has.
 
 The amount of time workers actually had differed between task types, because relevance judgments are completed more quickly than item tags. The former task lasted for 90 seconds, while the latter lasted for 60 seconds.
 
@@ -442,7 +442,8 @@ This provides incentive to actually try to maximize time.
 
 The experiments were performed on Amazon's Mechanical Turk, using an API that allows external pages to be hosted within the Mechanical Turk interface.
 
-The system for design manipulation was developed using JavaScript on the front end, built on top of the AngularJS library[^angularjs].
+Experiments were run using a custom system called Crowdy.
+Crowdy was developed using JavaScript on the front end, built on top of the AngularJS library[^angularjs].
 The software is released with an open-source MIT license[^crowdy].
 
 The back-end of the stack also runs on JavaScript, with a Node.js[^nodejs] server run on the Express[^express] web application framework.
@@ -450,7 +451,8 @@ Because of the complexity of the logic in serving tasks, this code was optimized
 Data storage uses the MongoDB[^mongodb] database.
 The task serving code is also released online[^crowdybackend].
 
-Details of the experimental system, including design documents, model descriptions, and logic, are provided in the Appendices. <!-- TODO2 add proper link. -->
+<!--
+Details of the experimental system, including design documents, model descriptions, and logic, are provided in the Appendices. TODO2 add proper link. -->
 
 [^angularjs]: https://angularjs.org/
 [^nodejs]: https://nodejs.org/
@@ -485,7 +487,7 @@ Basically, the process was as follows:
 
  The retrieval results are used for measuring the efficacy of different designs for collecting relevance judgments.
  As such, there was a desire for some heterogeneity in the results, which motivated the creation of a custom sample.
- With over 200 million documents, it was worried that the alternate approach of scraping _all_ the results from Pinterest's own search system would results in a set highly skewed toward very relevant documents, making it difficult to separate a signal in the experiment.
+ With over 200 million documents, it was worried that the alternate approach of scraping the results from Pinterest's own search system would results in a set highly skewed toward very relevant documents, making it difficult to separate a signal in the experiment.
 
 <!-- What is pinterest -->
 \newthought{Pinterest is a social network} centered on the saving, sharing, and curation of online images
@@ -514,7 +516,7 @@ A document's repin count can be interpreted as a measure of a document's interna
 This study, concerned with the methodology of crowdsourcing, is not dependent on Pinterest, but Pinterest is nonetheless an appropriate site to underpin it.
 Structurally, it resembles the archival form of many library and museum systems, albeit at a larger scale, it is itself a product of [volunteer] crowdsourcing, and it deals in the type of sparse, simple content that crowdsourcing is appropriate for.
 
- * The organizational form of Pinterest, grouping documents into curated lists called 'boards', is a interface pattern that is relevant to many forms of information repository.
+ * The organizational form of Pinterest, grouping documents into curated lists called 'boards', is an interface pattern that is relevant to many forms of information repository.
    Social OPACs, for example, allow library patrons to collect books into similarly uncontrolled lists.
  * Pinterest contains very little information about the source web document.
    It is feasible to crawl the full text of the source, but as it stands, a Pinterest 'pin' alone offers a record of a _single person's interpretation_ of the source.
@@ -542,7 +544,7 @@ This is a very large amount of data, and only a sample was needed for this study
 For the information retrieval system underlying this experiment's relevance judgments, a sample of 195k pins was collected and indexed.[^Attrition]
 
 [^Attrition]: This sample was collected in 40k pin batches, and not all at once.
-  As a result, the final number of pins successfully downloaded was lower, at 184583 document. The time difference between batches provides a sense of attrition on Pinterest.
+  As a result, the final number of pins successfully downloaded was lower, at 184583 documents. The time difference between batches provides a sense of attrition on Pinterest.
   The first two batches of pins were collected against a five-month old sitemap, and 1.4-1.5k pins were no longer accessible per batch (~3.4\% attrition). 
   Another batch was scraped when the sample list was 9 months old, and 6.4\% of the links were no longer active, the final two batches were collected 2 months later, with $7.2\%$ links no long online.
 
@@ -638,7 +640,7 @@ Table: Time spent per relevance judgment in each condition. Significance marks r
 
 \clearpage
 
-![Comparison of time spent per task, in seconds (n=12667)](../images/relevanceTime1.png) {#fig:relevance-time}
+![Comparison of time spent per task, in seconds (n=12667)](images/relevanceTime1.png) {#fig:relevance-time}
 
 Considering this data by mean user time, to reduce the influence of outliers, tells a comparable story.
 Viewed in this manner, the time-limited interface and the baseline were comparable, while feedback and training improved the mean time of the average worker.
@@ -706,7 +708,7 @@ In the previous chapter this measurement was confounded with the completion of t
 INSTRUCT is an easy condition to parameterize, only requiring a one-time cost from the requester to collect training examples and perhaps a slight development cost to implement instructions as a dismissable, up-front modal window.
 
 The intervention in INSTRUCT was partially motivated by @shu_signing_2012, who found that for reporting forms requiring a signature to confirm honesty, such as tax or insurance forms, asking people to sign at the top led to more honest reporting.
-By forefronting the instructions, this condition seems to encourage workers to be more honest about the codebook.
+By foregrounding the instructions, this condition seems to encourage workers to be more honest about the codebook.
 An unknown caveat is whether this is a persistent effect or, if after enough tasks with this condition, workers start to dismiss the information sooner.
 
 \newthought{The quality of contributions in the feedback condition} also improves on the baseline condition.
@@ -742,7 +744,7 @@ It is possible that for relevance judgments over more complex types of documents
 \newthought{A comparison of performance per query} (Figure @fig:byQueryRelPerformance) offers some insight as to the relative strengths and weaknesses of the various conditions.
 
 The thirteen queries tested are shown as columns in Figure @fig:byQueryRelPerformance.
-Despite across the board worse results, the places where FAST appears to stumble most is where there there was nuance to the instructions, in edge cases where one might consult the instructions again.
+Despite across the board worse results, the places where FAST appears to stumble most is where there was nuance to the instructions, in edge cases where one might consult the instructions again.
 For example, are other tattoos relevant to _rose tattoo_? 
 (No.)
 Are other flowers relevant?
@@ -768,13 +770,11 @@ Tags are also useful for augmenting large encoding efforts.
 For example, on business recommendation system Yelp, tags allow users to contribute data about the type of business[^Foursquare].
 
 [^Foursquare]: A competing service, Foursquare, also uses tags, but in a more structured way.
-their libraries and museums to collect more metadata about their
 
-<!--Limited metadata-->
 
 Trant and Wyman argue that tagging from online users "appears to fill gaps in current documentation practice" [-@trant_investigating_2006].
 Following from this, tagging is particularly helpful for difficult to model formats (i.e. non-text) and when corpus sizes surpass the ability to formally classify works.
-Tagging has been used to encode scans of text [@von_ahn_recaptcha_2008], improve information retrieval retrieval document modelling [@lamere_social_2008; @bao_optimizing_2007], augment personalized search [@lerman_personalizing_2007; @noll_web_2007].
+Tagging has been used to encode scans of text [@von_ahn_recaptcha_2008], improve information retrieval document modelling [@lamere_social_2008; @bao_optimizing_2007], augment personalized search [@lerman_personalizing_2007; @noll_web_2007].
 
 Tagging also offers a break from the Vocabulary Problem [@furnas_vocabulary_1987].
 Furnas et al. performed a set of term generation experiments in 1987 where the asked participants to describe functions or objects.
@@ -800,7 +800,7 @@ Finally, while it has been suggested that tags with the most general usefulness 
 On The Commons, it was noted that 40% of the tags were contributed by 10 'power taggers'; nonetheless, with over 59 thousand tags contributed, this still meant that other users still contributed a notable amount [@springer_for_2008].
 
 Due to the discord between the promise of tagging and difficulties of volunteer-based implementation, paid crowdsourcing is an appealing approach to collecting tags.
-While it does not includes some tertiary benefits related to community engagement, it allows us to control for quality by enforcing a codebook and to make us of many diverse viewpoints in practice.
+While it does not include some tertiary benefits related to community engagement, it allows us to control for quality by enforcing a codebook and to make use of many diverse viewpoints in practice.
 
 Following from the experiments on information retrieval relevance judgments, this section evaluates our design manipulations over an image tagging task.
 Image tagging is an interesting departure from relevance judgments in that there is no _clear_ correct contribution.
@@ -813,7 +813,7 @@ For this reason, designs that help guide a worker in relevance judgments may mis
 \newthought{There are different interpretations on tagging}, what types are desired, how much variance is acceptable, and what the role of tagging is.
 
 With tagging, some degree of variability is desired, because that diversity is central to many benefits of tags.
-However, it would be ill-advised to view tagging as a fully relativist activity.
+However, it would be ill-advised to view tagging completely as a relativist activity.
 It has been found that tagging begins to converge on a set of popular, common tags [@golder_usage_2006] and there certainly are notions of 'good' or 'bad' tags [@sen_quest_2007].
 
 For museums, tagging is considered not only in pragmatic subject access terms, but as a medium for critical value and engagement, according to @trant_investigating_2006.
@@ -865,13 +865,14 @@ The examples of good and bad tags to anchor workers were as follows:
  > **Bad** tags don't describe what is in the image, describe things _too generally_, or describe things that are _not the focus_ of the image. For this task, _personal tags_ are not helpful.
 
 The words italicized above were presented as links, showing a pop-up box with examples on hover (a note made this fact clear to workers).
-Emotional/aesthetic tags were neither explicitly encouraged or discouraged.
+Emotional/aesthetic tags were neither explicitly encouraged nor discouraged.
 
 ### Data
 
-The images gathered for this experiment were again textually-sparse documents from Pinterest.
-These were collected as described earlier.
-The sample for this experiments comprised 100 randomly sampled images from the 185k document corpus.
+The images gathered for this experiment were again textually-sparse documents from Pinterest, collected as described earlier.
+From the 185k document corpus, 100 images were randomly sampled from among pins with a minimum one 'like' rating and one repin.
+The sample size was contained to 100 items to focus resources on maximizing the tags per item, under the expectation the vocabularies can grow large.
+$6201$ tags were collected, comprising just under 2000 unique tags.
 
 Tags were collected on Mechanical Turk in task sets of 10 images, except in the FAST condition, where the number of images tagged was dependent on time.
 To add variety and move away from the single most obvious tag, workers were required to contribute two tags -- though they were given an escape path in the form of a 'TOOHARD' tag.
@@ -880,7 +881,7 @@ In the interface, only the images were shown.
 The image's original title and description from Pinterest could still be seen, behind a popup activated by mouse hover over the image.
 Workers were warned that the text may be useful, but may also be misleading.
 
-The training condition, TRAIN, trained workers on 10 images, providing feedback on how good their tag attempts were and showing examples of other tags, organized by 'poor', 'ok', 'good', and 'poor'.
+The training condition, TRAIN, trained workers on 10 images, providing feedback on how good their tag attempts were and showing examples of other tags, organized by 'poor', 'OK', 'good', and 'poor'.
 There was no INSTRUCT training intervention tested for this experiment.
 
 In running the FAST condition, the payment structure was developed to approximate the payment of the basic interface if completion behaviors were equal.
@@ -894,53 +895,80 @@ Despite prior work suggesting that the most popular tags are also the most usefu
 The concern was that the most popular tags would be those lacking in adequate specificity.
 Consider that a tag for 'German Shepherd' or 'Calico' is more useful than 'dog' or 'cat'. However, the latter are easy tags to converge on.
 
-Accordingly, a lar  TODO
+Accordingly, a large manual evaluation of the tags was performed by myself.
+$1976$ tags were judged on a four-point scale consisting of the following ordinal categories: _poor_, _OK_, _good_, and _great_.
+The 'TOOHARD' tag was removed.
+These were evaluated on their own merits against the goals stated in the task -- _how good would this image be for a person searching for the tag_ -- and with no information regarding how often they were applied or in which condition.
+
+There does appear to be a very weak relationship between good tags and how often they were applied, but only for tags used very often, eight times or more. Tags applied a handful of times were not any better than tags applied once or twice.
 
 ### Results
 
-\newthought{In completion time}, the most drastic difference was in the fast condition.
+Figure @fig:tagQualities shows the quality distribution of tags applied in each condition, not factoring in user or item effects. Performing a Kruskal-Wallis ranked test comparing the conditions to the baseline, we find that TRAIN and FAST are different distributions than BASE, at $\alpha=0.001$, but we fail to reject the null hypothesis of equal medians for FDBK.
+
+![Proportions of tags which were poor, okay, good, or great, by condition.](images/tagQuality.png) {#fig:tagQualities}
+
+If we assume that the difference between the ground truth categories is roughly linear -- e.g. that a rating of 4 ('great') is twice as good as a rating of 2 ('okay') -- the quality ranks can be averaged. Controlling by item, Figure @fig:tagItemQualities shows the distribution of average qualities for each image, with accompanying statistics in Table @tbl:tagItemQualities2.
+Each datum represents the average quality for one of the 100 tags studies; for example, a median of 3.00 for the TRAIN condition means that for half of the tags, you are likely to get a tag that is at the 'good' end of the scale.
+
+![Distribution of each item's average tag quality.](images/tagItemQuality.png) {#fig:tagItemQualities}
+
+condition  mean     median   std   
+---------- -------- -------- ------
+BASE       2.739    2.738    0.353 
+FAST       2.457    2.420    0.355 
+FDBK       2.648    2.667    0.580 
+TRAIN      3.071    3.000    0.591 
+
+Table: Statistics for average item tag quality. {#tbl:tagItemQualities2}
+
+\newthought{In completion time}, the most drastic difference was in the fast condition, with a median tagging time of under 7 seconds.
+This contrasts with the earlier relevance judgment experiment.
+Like the earlier experiment, however, the feedback condition also shortened workers' per-task completion time.
 
 ![Distribution of time spent, per tagged item, for each condition. Kernel density shown rather than nominal counts, to account for variations in N.](images/tagTime1.png) {#fig:tag-time1}
 
 The relative difference in per-item tagging tasks is shown in Figure @fig:tag-time1.
-To avoid misleading graphics due to difficulties in controlling for N, the kernel density estimates are shown. Additionally the associated measures for each distribution are shown in Table @tbl:tag-time2.
+To avoid misleading graphics due to difficulties in controlling for N, the kernel density estimates are shown rather than counts.
+Additionally, the associated measures for each distribution are shown in Table @tbl:tag-time2.
 
-+--------------+-------+--------+---------+-----+
-| condition    | mean  | median | std.dev | N   |
-+==============+=======+========+=========+=====+
-| basic        | 22.89 | 18.35  | 17.65   | 846 |
-+--------------+-------+--------+---------+-----+
-| fast         | 11.46 | 6.94   | 11.46   | 500 |
-+--------------+-------+--------+---------+-----+
-| feedback     | 10.75 | 9.78   | 5.66    | 264 |
-+--------------+-------+--------+---------+-----+
-| postTraining | 25.03 | 19.85  | 19.88   | 490 |
-+--------------+-------+--------+---------+-----+
+condition  mean      median   std       N     sig
+---------- --------- -------- --------- ----- ----
+BASE       22.669    18.270   17.523    866    /
+FAST       11.459    6.940    11.461    500   ***
+FDBK       11.019    10.137   5.566     308   ***
+TRAIN      25.027    19.846   19.875    490   *
 
-Table: Metrics for time spent per task, in seconds. {#tbl:tag-time2}
+Table: Metrics for time spent per task, in seconds. Significance marks rejection of equal distribution to the baseline (Mann-Whitney U, Bonferroni-adjusted significance at 0.05 - \*, 0.01 - \*\*, and 0.001 - \*\*\*). {#tbl:tag-time2}
 
-The fast condition improved the mean time spent on tasks to approximately twice as fast as the basic condition.
-The feedback condition was similarly fast, though the reasons for this are unclear. [^TODO run more experiments for feedback at a different time of the day to increase N. Might be a fluke.]
+Comparisons to the baseline rejected equality with the baseline, though for the slightly slower TRAIN, this was only at $\alpha=0.05$.
 
-While the time-limited condition and feedback condition changed worker behavior, the tasks completed after training were done at the same pace as the baseline.
-Pairwise comparisons between the distributions reject the null hypothesis of equal distributions in all cases except the comparison between the baseline and the post-training distributions[^tagTimeSig].
-This came as a surprise, as it was expected that workers in this condition would perform more confidently.
+\clearpage
 
-[^tagTimeSig]: $p==0.02$, Mann-Whitney U, fail to reject at $/alpha=0.05$ with Bonferroni correction.
-  Since six comparisons were performed, the test for significant would be $>0.0083$.
-  All other comparisons with highly significant.
+\newthought{The rated satisfaction} of the task by workers is shown in Figure @tagTaskSatisfaction, and their satisfaction with the payment are shown in @fig:tagPaySatisfaction.
 
+![Task satisfaction ratings for tagging task.](images/taskSatisfaction-tag.png) {#fig:tagTaskSatisfaction}
 
-\newthought{In the fast interface}, the payment struc
+![Pay satisfaction ratings for tagging task.](images/paySatisfaction-tag.png) {#fig:tagPaySatisfaction}
 
+Satisfaction with both the task and pay are similar.
+The TRAIN condition is heavily skewed upward, while the basic interface received notably poor feedback.
 
-## Evaluation
+## Analysis
 
-- Ground Truth creation
-  - tags that are applied by many unique users are likely to be better tags [@sen_quest_2007]
-  - In rating tag quality, both positive and negative ratings are important [@sen_quest_2007]
+The training condition was very appropriate for this type of task, clearly improving on the quality of tags received as well as worker satisfaction.
+These finding are promising because the implemented approach to training only requires extra effort in designing the training task set, and extra costs for the one task set, per worker, where they are not contributing new information on unknown images.
+However, beyond this, there are no ongoing costs.
+An alternative to implementing the training set as its own task set is implementing it as a 'Qualification Test' rather than a paid task -- a function of Mechanical Turk (and similarly implemented on other platforms) that allows a test to be used in order to assign a custom qualification, against which task sets can be restricted.
+
+TODO
 
 ## Discussion
+
+In developing and testing this experiment, it struck me how uncertain one feels when asked to generate tags on demand, at least compared to the structured nature of relevance judgments.
+Despite careful effort in describing what a good or bad tag is, workers may have been similarly less confident about their contributions.
+The drastic improvement in satisfaction in the training task
+
 
 Differences between tasks
 - people /like/ relevance judgments (for images... which may be more fun??)
