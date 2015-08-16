@@ -289,12 +289,22 @@ Such a correlation could still exist if the task was not subjective, and is only
 
 ### Taste-Matching
 
-                                       Products –Salt shakers   Food - Boston   Food - Seattle
-  ------------------------------------ ------------------------ --------------- ----------------
-  Baseline: Prediction by any worker   1.64                     1.51            1.58
-  Best 3 workers overall (top 10%)     0.89 (-46%)              1.02 (-32%)     1.19 (-25%)
-  Best matched worker from random 5    1.43 (-13%)              1.19 (-22%)     1.26 (-20%)
-  Best matched worker from random 10   1.35 (-18%)              1.08 (-29%)     1.08 (-31%)
++--------------------------+--------------+-------------+-------------+
+|                          | Products -   | Food -      | Food -      |
+|                          | Salt shakers | Boston      | Seattle     |
++==========================+==============+=============+=============+
+| Baseline: Prediction     |              |             |             |
+| by any worker            | 1.64         | 1.51        | 1.58        |
++--------------------------+--------------+-------------+-------------+
+| Best 3 workers overall   |              |             |             |
+| (top 10%)                | 0.89 (-46%)  | 1.02 (-32%) | 1.19 (-25%) |
++--------------------------+--------------+-------------+-------------+
+| Best matched worker from |              |             |             |
+| random 5                 | 1.43 (-13%)  | 1.19 (-22%) | 1.26 (-20%) |
++--------------------------+--------------+-------------+-------------+
+| Best matched worker from |              |             |             |
+| random 10                | 1.35 (-18%)  | 1.08 (-29%) | 1.08 (-31%) |
++--------------------------+--------------+-------------+-------------+
 
 Table: Taste-matching performance for recommendation task {#tbl:matching-performance}
 
@@ -317,13 +327,23 @@ For the salt and pepper shaker recommendation task, the taste-matching improveme
 
 ### Taste-Grokking
 
-                                                Products – Salt shakers  Food - Boston  Food - Seattle
------------------------------------------------ ------------------------ -------------- ---------------
-Baseline: Prediction by any worker              1.64                     1.51           1.58
-Best 3 workers overall                          0.87 (-47%)              0.78 (-48%)    0.79 (-50%)
-Average individual                              1.29 (-21%)              1.53 (+1.3%)   1.57 (-0.5%)
-Aggregated prediction (mean, 5 random workers)  1.07 (-34%)              1.38 (-9%)     1.28 (-19%)
-Aggregated prediction (mean, 5 top workers)     1.02 (-34%)              1.22 (-19%)    1.13 (-28%)
++--------------------------+--------------+--------------+--------------+
+|                          | Products -   | Food -       | Food -       |
+|                          | Salt shakers | Boston       | Seattle      |
++==========================+==============+==============+==============+
+| Baseline: Prediction by  |              |              |              |
+| any worker               | 1.64         | 1.51         | 1.58         |
++--------------------------+--------------+--------------+--------------+
+| Best 3 workers overall   | 0.87 (-47%)  | 0.78 (-48%)  | 0.79 (-50%)  |
++--------------------------+--------------+--------------+--------------+
+| Average individual       | 1.29 (-21%)  | 1.53 (+1.3%) | 1.57 (-0.5%) |
++--------------------------+--------------+--------------+--------------+
+| Aggregated prediction    |              |              |              |
+| (mean, 5 random workers) | 1.07 (-34%)  | 1.38 (-9%)   | 1.28 (-19%)  |
++--------------------------+--------------+--------------+--------------+
+| Aggregated prediction    |              |              |              |
+| (mean, 5 top workers)    | 1.02 (-34%)  | 1.22 (-19%)  | 1.13 (-28%)  |
++--------------------------+--------------+--------------+--------------+
 
 Table: Taste-Grokking performance {#tbl:grokking-performance}
 

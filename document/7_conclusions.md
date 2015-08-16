@@ -66,4 +66,6 @@ The second was a post-collection modeling choice, _taste-matching_, where worker
 Both approaches improved over an unpersonalized baseline.
 Taste-matching was strong in contexts whether the factors affecting a person's tasks were more complex or latent, but in simple contexts taste-grokking performed better and resulted in more satisfied workers.
 
-\newthought{TODO}
+\newthought{Crowdsourcing is a promising approach} for teaching us more about the data in our information systems.
+Volunteer crowdsourcing inherits various complexities of motivation, something that paid crowdsourcing is able to sidestep.
+However, as this study showed, there are still biases and 

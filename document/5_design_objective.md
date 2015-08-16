@@ -69,6 +69,8 @@ A third design encourages quicker responses.[^whyint]
 These are compared to a realistic baseline interface which follows Mechanical Turk conventions and best practices.
 These design manipulations are measured against two control tasks: image tagging and image-based information retrieval relevance judgments.
 
+It is found that training interventions improve collected contribution quality, and performance feedback improves quality in certain circumstances.
+
 Afterward, an applied experiment is presented, where both a priori and posterior collection quality optimization methods are applied to a music information retrieval evaluation. The design changes that are made improve the quality of results drastically, with negligible cost differences.
 
 [^whyint]: Why are these design manipulations chosen? Later in this chapter, various possibilities for design manipulation are considered, and compared to the existing literature.
@@ -127,11 +129,11 @@ Scoped to a reasonable parameterization of crowdsourcing as it is commonly pract
 
  * __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?^[The _design space_ question.]
 
- * __RQ2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?^[The primary _data quality_ question.]
+ * __RQ2__: Is there a significant difference in the quality<!--, reliability, and consistency--> of crowd contributions for the same task collected through different collection interfaces?^[The primary _data quality_ question.]
 
  * __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?^[The secondary _satisfaction_ question.]
 
- * __RQ4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?^[The _generalizability_ question.]
+ <!--* __RQ4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?^[The _generalizability_ question.]-->
 
 RQ1 is the question of design, on synthesizing prior work and brainstorming directions to explore.
 It is a partially subjective question, but one still worth pursuing with diligence.
@@ -143,7 +145,9 @@ RQ2 and RQ3 are the primary questions being explored in this chapter of the prop
 While this dissertation is explicitly pursuing the former question, collecting computationally useful contributions needs to be understood in the context of contributor satisfaction.
 The trade-off between contributions that crowds want to make and the reliability of the data is a central consideration for fostering sustainable, or alternately affordable, crowdsourcing.
 
+<!--
 RQ4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be addressed as thoroughly as possible. 
+-->
 
 ## Design Space
 
@@ -887,7 +891,7 @@ There was no INSTRUCT training intervention tested for this experiment.
 In running the FAST condition, the payment structure was developed to approximate the payment of the basic interface if completion behaviors were equal.
 That is, since the first batch of basic tagging contributions averaged 23 seconds each for 10 tasks at $\$0.50$, the payment for the timed interface was intended to match that reimbursement rate at 4 tasks.
 
-## Measurements
+### Measurements
 
 As with the relevance judgment experiment, time and feedback information was collected. The data on time spent per task was more specific, because it could be collected more directly than in the relevance judgment condition.
 
@@ -900,7 +904,12 @@ $1976$ tags were judged on a four-point scale consisting of the following ordina
 The 'TOOHARD' tag was removed.
 These were evaluated on their own merits against the goals stated in the task -- _how good would this image be for a person searching for the tag_ -- and with no information regarding how often they were applied or in which condition.
 
-There does appear to be a very weak relationship between good tags and how often they were applied, but only for tags used very often, eight times or more. Tags applied a handful of times were not any better than tags applied once or twice.
+A relationship between good tags and how often they were applied if weak at best, only for tags used very often, eight times or more. Tags applied a handful of times were not any better than tags applied once or twice.
+
+![Relationship between the tag character length and the tag quality.](images/tagLength2.png) {#fig:tagLength2.png}
+
+There does appear to be a relationship between strong tags and tag length, in that moderate to long length tags are better than short tags and -- to the extent that there was data -- very long tags.
+Figure @tagLength2 demonstrates this relationship clearly.
 
 ### Results
 
@@ -908,7 +917,7 @@ Figure @fig:tagQualities shows the quality distribution of tags applied in each 
 
 ![Proportions of tags which were poor, okay, good, or great, by condition.](images/tagQuality.png) {#fig:tagQualities}
 
-If we assume that the difference between the ground truth categories is roughly linear -- e.g. that a rating of 4 ('great') is twice as good as a rating of 2 ('okay') -- the quality ranks can be averaged. Controlling by item, Figure @fig:tagItemQualities shows the distribution of average qualities for each image, with accompanying statistics in Table @tbl:tagItemQualities2.
+If we assume that the difference between the ground truth categories is roughly linear -- e.g. that a rating of 4 ('great') is twice as good as a rating of 2 ('okay') -- then the quality ranks can be averaged. Controlling by item, Figure @fig:tagItemQualities shows the distribution of average qualities for each image, with accompanying statistics in Table @tbl:tagItemQualities2.
 Each datum represents the average quality for one of the 100 tags studies; for example, a median of 3.00 for the TRAIN condition means that for half of the tags, you are likely to get a tag that is at the 'good' end of the scale.
 
 ![Distribution of each item's average tag quality.](images/tagItemQuality.png) {#fig:tagItemQualities}
@@ -954,28 +963,105 @@ Comparisons to the baseline rejected equality with the baseline, though for the 
 Satisfaction with both the task and pay are similar.
 The TRAIN condition is heavily skewed upward, while the basic interface received notably poor feedback.
 
-## Analysis
+### Analysis
 
 The training condition was very appropriate for this type of task, clearly improving on the quality of tags received as well as worker satisfaction.
 These finding are promising because the implemented approach to training only requires extra effort in designing the training task set, and extra costs for the one task set, per worker, where they are not contributing new information on unknown images.
 However, beyond this, there are no ongoing costs.
 An alternative to implementing the training set as its own task set is implementing it as a 'Qualification Test' rather than a paid task -- a function of Mechanical Turk (and similarly implemented on other platforms) that allows a test to be used in order to assign a custom qualification, against which task sets can be restricted.
 
-TODO
+The disproportionally high satisfaction scores for TRAIN are notable, because they lend insight on worker needs.
+Note that the measurement of TRAIN is through the post-training task sets, which are identical to the baseline. The only different is the priming task that preceded them.
+In context, it seems that workers prefer the close guidance, to confirm for them how the task should be completed.
+
+Unlike the relevance judgment task type, performance feedback was inefficient for tagging.
+While the satisfaction response rates were low for this condition, they did not indicate any discontent with the task.
+
+Instead, it is likely that this is not a task where unguided feedback is the intervention that is necessary.
+By design, the feedback condition does not tell a worker the reasons for their rank, instead trying to coax them to read the instructions closer if they are unsatisfied with their rank.
+However, the tagging task was less structured, and workers might need inspiration more than feedback.
+It would be interesting to conduct the feedback task in concert with training.
+
+The FAST condition resulted in contributions received twice as quickly, though at a quality loss.
+Recalling Figure @tagLength2 and the relationship between good tags and length, the types of tags contributed by the time-limited condition skewed toward the short end (Table @tbl:LengthByCondition).
+
++--------------+----------+----------+------------+-----------+
+|              | Mean     | Median   | Mean       | Median    |
+| condition    | Length   | Length   | Word Count | Word Count|
++==============+==========+==========+============+===========+
+| BASE         | 10.223   | 8        | 1.682      | 1         |
++--------------+----------+----------+------------+-----------+
+| FAST         | 9.014    | 7        | 1.524      | 1         |
++--------------+----------+----------+------------+-----------+
+| FDBK         | 7.798    | 7        | 1.260      | 1         |
++--------------+----------+----------+------------+-----------+
+| TRAIN        | 13.596   | 13       | 2.143      | 2         |
++--------------+----------+----------+------------+-----------+
+
+Table: Mean tag character and word length of tags in each condition. {#tbl:tagLengthByCondition}
+
+In a circumstance where shorter tags are useful, the time-limited condition might be preferable for its ability to collect contributions twice as fast.
+
+<!-- TODO tag length, tag word count relative to condition -->
+<!-- TODO... good future direction TRAIN+FDBK -->
 
 ## Discussion
 
-In developing and testing this experiment, it struck me how uncertain one feels when asked to generate tags on demand, at least compared to the structured nature of relevance judgments.
+
+ > __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
+
+With regard to the design space question, the start of this chapter explored the possibilities for collection task design, and looked at promising past works such as games-based tasks [@eickhoff_increasing_2012; @ahn_labeling_2004] and bonus-based payment manipulations [@mason_financial_2010].
+
+The approaches that were chosen to be pursued focused on attention and awareness, measuring how design can refocus attention on instructions, inform workers of problems, or push workers to more instinctual forms of contribution.
+The lower performance of contributions in the time-limited interface without sufficiently compelling improvements in time (except perhaps in the tagging condition) and satisfaction suggests to future work is better focused on the former types of task design.
+
+ > __RQ2__: Is there a significant difference in the quality of crowd contributions for the same task collected through different collection interfaces?
+
+With regard to the primary data question, this chapter shows that a notable degree of data influence exists in the design of the task.
+The type of design manipulations that are fruitful vary based on the needs of the workers, and are worthy of discussion here.
+
+In developing and testing the tagging experiment, it struck me how uncertain one feels when asked to be creative on demand, at least compared to the structured nature of relevance judgments.
 Despite careful effort in describing what a good or bad tag is, workers may have been similarly less confident about their contributions.
-The drastic improvement in satisfaction in the training task
+The drastic improvement in satisfaction in the training task certainly seems to suggest that guidance is desired, and the increase in mean tag length (Table @tbl:tagLengthByCondition) shows that trained workers grasped latent indicators of quality.
 
+Confidence in the tasks seems to point to part of the difference between relevance judgments and tagging.
+People liked the relevance judgments, in that they were quick and with few hiccups.
+It is not a particularly fun task, but it is dependable - at least in the image-centric context presented.
+The relevance judgment form was already naturally optimized, to the extent that the time-limited interface measure actually slowed down workers.
 
-Differences between tasks
-- people /like/ relevance judgments (for images... which may be more fun??)
-  - more predictable, quicker
+Training was useful in both conditions, but in different implementations.
+The first-taskset training condition was helpful in assisting tagging workers in understanding the requirements because all the tasks followed the same convention.
+For relevance judgments, a smaller training condition at the start of each task was more effective, likely because the context -- i.e. the query -- would change between task sets.
+This may be a differentiating factor for applying training to future conditions: can all task sets be described with the same instructions?
 
-Time
-'FAST' slowed down.
+Performance feedback was effective for image relevance judgments but not for image tagging.
+With image tagging, the failure may have been in not provided the right type of support: whereas the goal of the feedback interface was in measuring awareness, workers seemed to need guidance.
+This was by design for this experiment, but it remains to be seen whether a paired approach applying both training and feedback would improve over the gains seen in the training interface.
 
-Feedback
-Good workers were less satisfied with pay (but still very satisfied with task)
+In a finding contrary to the expectation at the outset of this chapter, performance feedback seemed to encourage quicker contribution.
+The reason for this is not clear, but one reading of the data suggests that better workers were encouraged to perform fast by the validation, enough to counteract workers that slowed down.
+
+Since the start, the time-limited condition was an outlier, to compare a drastically different approach to design than the other manipulations.
+Though it was not expected to improve performance, the gains in efficiency and worker interest may have balanced that out.
+However, for both tasks, the quality of contributions fell.
+In different contexts, one can imagine this interface being helpful: in cases where the faster contribution style did not lower collection quality.
+For example, a less restrained tagging task might be better suited; indeed, this is similar to the fast tagging mode of the ESP Game [@ahn_labeling_2004].
+
+ > __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
+
+Workers did express different satisfaction with different interfaces.
+The purpose of formalizing this secondary research question was to stay sensitive of possible negative effects in worker experience accompanying the design manipulations.
+This was not found to be the case, and most shifts in satisfaction improved on the basic interface.
+This many suggest that workers find variety refreshing, but it can also simply be a self-selection effect, where the only respondents were the ones that took note of the shift away from an archetypal task.
+The most notable change in task satisfaction was in the image tagging post-training condition, meaning workers were happier in addition to better performers.
+
+For both tasks, workers that were told they were better workers in the feedback condition also exhibited lower pay satisfaction.
+@mason_financial_2010 have previous found that the perceptions of a task's value are elastic, and this quirk is worthy of future study.
+
+## Conclusion
+
+This chapter measured three design manipulations, one in two variants, against two control tasks appropriate for information science.
+Notably, it was found that training interventions improved data quality at little extra cost, while performance feedback improved over a baseline in circumstances where workers were capable of self-correction.
+
+These findings can support future work on crowdsourcing design, as well as informing practical applications for tasks where there is an objective or normative truth.
+The next chapter presents one real-world application of crowdsourcing, in an experiment that applies both post-collection corrections and collection-time design changes.
