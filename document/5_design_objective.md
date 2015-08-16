@@ -624,8 +624,6 @@ Interestingly, the time-limited condition, FAST, was found to be _slower_ than t
 This finding stands in stark contrast to what is seen later for the tagging experiment.
 There are some possible reasons for this, which are discussed later.
 
-![Comparison of time spent per task, in seconds (n=12667)](../images/relevanceTime1.png) {#fig:relevance-time}
-
 condition    mean    median  std     N    sig
 ------------ ------- ------- ------- ---- -----
 BASE         2.98    1.79    3.92    1894  /
@@ -638,16 +636,20 @@ Table: Time spent per relevance judgment in each condition. Significance marks r
 
 <!-- TODO update instruct values if more data collected -->
 
-Considering this data by user means to reduce the influence of outliers tells a comparable story.
+\clearpage
+
+![Comparison of time spent per task, in seconds (n=12667)](../images/relevanceTime1.png) {#fig:relevance-time}
+
+Considering this data by mean user time, to reduce the influence of outliers, tells a comparable story.
 Viewed in this manner, the time-limited interface and the baseline were comparable, while feedback and training improved the mean time of the average worker.
 
-While this data tells us about how quick the actual tasks in a task set are completed, there is also the time spent in between contributions, which can be assumed to primarily time spent on instructions.
+While this data tells us how quick the actual tasks in a task set are completed, there is also the time spent in-between contributions, which can be assumed to primarily time spent on instructions.
 Table @tbl:RelNonContrib shows the time spent in these moments.
 
 Notably, FDBK appears to be considered in much less time than other conditions.
 Recalling that FDBK and TRAIN are never a worker's first interaction, Table @tbl:RelNonContrib also shows values excluding first-time interactions, for a better comparison.
-The results do no change much, other than showing that the baseline tasks are completed quicker in later interactions.
-In contrast to FDBK, and training intervention INSTRUCT compelled people to spend the most time the instructions.
+The results do not change much, other than showing that the baseline tasks are completed quicker in later interactions.
+In contrast to FDBK, training intervention INSTRUCT compelled people to spend the most time the instructions.
 
 condition  mean            median           std      N
 ---------- --------------- ---------------- -------- -----
@@ -698,7 +700,7 @@ Given a larger sample, one interesting quirk that was observed is that the lowes
 
 The best work was contributed by workers in the training intervention (INSTRUCT) condition.
 Their contributions were significantly more accurate at the same cost and with no discernible change in time per task.
-However, supporting the interpreted finding in the previous chapter, alongside the improved performance workers spent much more time reading the instructions.
+However, supporting the interpreted finding in the previous chapter, accompanying the improved performance was more time spend reading instructions.
 In the previous chapter this measurement was confounded with the completion of the first task, here we confirm it.
 
 INSTRUCT is an easy condition to parameterize, only requiring a one-time cost from the requester to collect training examples and perhaps a slight development cost to implement instructions as a dismissable, up-front modal window.
@@ -714,14 +716,17 @@ This means that with as few as three redundant judgments, most of the consensus 
 A surprise with the feedback task was that workers did not slow down, but indeed performed the tasks quicker.
 The reason for this behavior is unclear.
 Figure @fig:relFeedbackByRank shows the correlation between time spent the ranked percentile that the worker was given, which does not show any clear linear pattern.
-The best we can speculate is that while workers in the 60th percentile slowed down to try to improve, the best workers were validated to trust their instincts while the worst workers did not care.
+
+One possible explanation is that, while workers in the 60th percentile slowed down to try to improve, the best workers were validated to trust their instincts while the worst workers did not care.
+The goal of the performance feedback was to give honest but poorly performing workers an indicator of lower quality contributions.
+This somewhat performed its function in the middle of the pack, but didn't compel the poorest workers.
 
 ![Comparison of the time workers in the Feedback condition spent on relevance judgments against their percentile rank, as provided to them.](images/relFdbkByRank.png) {#fig:relFeedbackByRank}
 
 
 \newthought{Work in the first-task training condition}, TRAIN, was not significantly different in quality from the baseline, which appears to confirm that training on one query does not assist in completing relevance judgments for other queries.
 
-Notably, TRAIN slowed down workers, as if the close training with one query made then sensitive to the nuance that other queries may have.
+Notably, TRAIN slowed down workers, as if the close training with one query made then sensitive to nuances that other queries may have.
 This did not translate to performance improvements, however.
 
 \newthought{As expected, time-limited workers} did not perform as strongly as expected.
@@ -744,10 +749,10 @@ Are other flowers relevant?
 (Somewhat.)
 The instructions for what was very relevant, somewhat relevant, or not relevant were in a way subjective, in that they were interpreted by myself when written, but this simply grounded the correct answer in a single interpretation.
 
-The query analysis also shows places where then hand-chosen examples for INSTRUCT seemed to mislead.
-'_agape_', a word referring to platonic Christian love of people as well and the Christian God's love of people, was extremely underrepresented in our sample, and all the results were non-relevant.
+The query analysis also shows places where the hand-chosen examples for INSTRUCT seemed to mislead.
+'_agape_', a Christian word relating to love, was extremely underrepresented in our sample, and all the results were non-relevant.
 This was a tricky inclusion, and by showing workers in INSTRUCT examples of relevant or somewhat relevant, it may have additionally misled workers to expect that there _are_ relevant results.
-Likewise, it seems that the manual choice of examples for 'Islam' and 'Easter crafts' also misled.
+Likewise, it seems that the manual choice of examples for 'Islam' and 'Easter crafts' also misled to a certain extent.
 
 ### Summary
 
@@ -769,24 +774,24 @@ their libraries and museums to collect more metadata about their
 
 Trant and Wyman argue that tagging from online users "appears to fill gaps in current documentation practice" [-@trant_investigating_2006].
 Following from this, tagging is particularly helpful for difficult to model formats (i.e. non-text) and when corpus sizes surpass the ability to formally classify works.
-Tagging has been used to encode scans of text [@ahn_recaptcha_2008], improve information retrieval retrieval document modelling [@lamere_social_2008; @bao_optimizing_2007], augment personalized search [@lerman_personalizing_2007; @noll_web_2007].
+Tagging has been used to encode scans of text [@von_ahn_recaptcha_2008], improve information retrieval retrieval document modelling [@lamere_social_2008; @bao_optimizing_2007], augment personalized search [@lerman_personalizing_2007; @noll_web_2007].
 
 Tagging also offers a break from the Vocabulary Problem [@furnas_vocabulary_1987].
-@furnas_vocabulary_1987 performed a set of term generation experiments in 1987 where the asked participants to describe functions or objects.
+Furnas et al. performed a set of term generation experiments in 1987 where the asked participants to describe functions or objects.
 They found that the amount of spontaneous consensus was very low, arguing that this problem of vocabulary becomes a user issue because different users expect different vocabularies.
 However, it's the designers who get to choose the primary vocabulary and, "as heavy users, grow to find [their] terms obvious and natural" (ibid).
 
-The proposed solution to the vocabulary problem was to allow 'essentially unlimited numbers of aliases'[^At least when those aliases are not more popular for other functions.] [@furnas_vocabulary_1987] -- something that tagging functionally allows.
+The proposed solution to the vocabulary problem was to allow 'essentially unlimited numbers of aliases'^[At least when those aliases are not more popular for other functions.] (ibid) -- something that tagging functionally allows.
 With tags, the descriptors for an information object are not one centralized viewpoint, but an amalgam of different viewpoints and different vocabularies.
 
 This is the ideal setting.
 
 However, there are numerous difficulties with tagging, especially when reliant on volunteers.
 
-While tagging seems to address the vocabulary problem in its potential, the multiple alias approach does not guarantee that they will be approaches reliably.
+While tagging seems to address the vocabulary problem in its potential, the multiple alias approach does not guarantee that they will be approached reliably.
 In instances of low contributor engagement and sparse tags, the fact that people's vocabularies differ can be aggravated by the loose contribution style of tagging.
 
-Additionally, volunteers tagging practices often do not match the needs of system designers.
+Additionally, volunteer tagging practices often do not match the needs of system designers.
 Of all the contribution approaches enabled by The Commons on Flickr, for example, @springer_for_2008 found that tags were the least fulfilling type of information contributed to the Library of Congress account on Flickr.
 Likewise, in a look at social features used in library online catalogues, @spiteri_social_2011 finds tagging to be among the least used.
 That finding does suggest that features which are arguably more self-serving, such as curating lists of library materials and starring liked works, are easier to collect than more pragmatic features for item description.
@@ -860,29 +865,36 @@ The examples of good and bad tags to anchor workers were as follows:
  > **Bad** tags don't describe what is in the image, describe things _too generally_, or describe things that are _not the focus_ of the image. For this task, _personal tags_ are not helpful.
 
 The words italicized above were presented as links, showing a pop-up box with examples on hover (a note made this fact clear to workers).
-Emotional/aesthetic tags were neither explicitly encouraged or discouraged; they can be useful tags, but an adequate explanation that did not confound subjective and personal tags would have violated attempts at brevity.TODO
+Emotional/aesthetic tags were neither explicitly encouraged or discouraged.
 
-The relative usefulness of the TODO
+### Data
 
-<!--##### Tagging - Training Interface-->
+The images gathered for this experiment were again textually-sparse documents from Pinterest.
+These were collected as described earlier.
+The sample for this experiments comprised 100 randomly sampled images from the 185k document corpus.
 
-Given the more detailed, specific approach taken in the training interface condition, more prior work on tagging is used in guiding users.
-It has been found that user tagging habits resemble other tags that they see [@sen_tagging_2006].
-Given this, the training interface offers a set of examples, with good and bad tags shown.
-The quality of these tags was determined through a Mechanical Turk task, where workers rated previously submitted tags.
-<!--TODO this hasn't been done yet... aspirational text -->
-<!-- TODO details -->
+Tags were collected on Mechanical Turk in task sets of 10 images, except in the FAST condition, where the number of images tagged was dependent on time.
+To add variety and move away from the single most obvious tag, workers were required to contribute two tags -- though they were given an escape path in the form of a 'TOOHARD' tag.
 
-<!--##Fast Interface-->
+In the interface, only the images were shown.
+The image's original title and description from Pinterest could still be seen, behind a popup activated by mouse hover over the image.
+Workers were warned that the text may be useful, but may also be misleading.
 
-\newthought{For the timed interface}, ...
+The training condition, TRAIN, trained workers on 10 images, providing feedback on how good their tag attempts were and showing examples of other tags, organized by 'poor', 'ok', 'good', and 'poor'.
+There was no INSTRUCT training intervention tested for this experiment.
 
-<!--#### Fast Interface design-->
-<!--#### Fast Interface Payment-->
-The payment structure was developed to approximate the payment of the basic interface if completion behaviors were equal.
-That is, since the first batch of basic tagging contributions averaged 23 seconds each for 10 tasks at $\$0.50$, the payment for the timed interface was intended to match that reimbursement rate at 4 tasks
-<!-- TODO: trailed off while writing... go back in the morning and finish-->
+In running the FAST condition, the payment structure was developed to approximate the payment of the basic interface if completion behaviors were equal.
+That is, since the first batch of basic tagging contributions averaged 23 seconds each for 10 tasks at $\$0.50$, the payment for the timed interface was intended to match that reimbursement rate at 4 tasks.
 
+## Measurements
+
+As with the relevance judgment experiment, time and feedback information was collected. The data on time spent per task was more specific, because it could be collected more directly than in the relevance judgment condition.
+
+Despite prior work suggesting that the most popular tags are also the most useful in some contexts, a metadata enrichment setting did not seem like one of them.
+The concern was that the most popular tags would be those lacking in adequate specificity.
+Consider that a tag for 'German Shepherd' or 'Calico' is more useful than 'dog' or 'cat'. However, the latter are easy tags to converge on.
+
+Accordingly, a lar  TODO
 
 ### Results
 
