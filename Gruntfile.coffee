@@ -4,7 +4,8 @@ gruntfile = (grunt) ->
     grunt.initConfig({
       # Metadata
       pkg: grunt.file.readJSON('package.json')
-      documents: ['document/1_intro.md', 'document/2_crowdsourcing.md',
+      documents: ['document/0_abstract.md', 'document/1_intro.md',
+        'document/2_crowdsourcing.md',
         'document/3_typology.md', 'document/4_posterior_objective.md',
         'document/5_design_objective.md', 'document/5_5_ams-study.md',
         'document/6_subjective.md', 'document/7_conclusions.md',

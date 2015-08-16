@@ -1,3 +1,4 @@
+document/0_abstract.md
 document/1_intro.md
 document/2_crowdsourcing.md
 document/3_typology.md

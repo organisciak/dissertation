@@ -370,7 +370,7 @@ The time is measured from the start to end of the worker interaction,
 for a set of 100 ratings for taste-matching or 90 rating predictions for taste-grokking.
 As such, part of the time spent might be related to the reading of instructions, which may also contribute to differences between the two protocols.
 
-![Taste-Grokking performance for each individual requester × profiling set experiment.](images/taste-grokking-performance1.png) {#fig:tastegrokkingPerformance}
+![Taste-Grokking performance for each individual requester x profiling set experiment.](images/taste-grokking-performance1.png) {#fig:tastegrokkingPerformance}
 
 ![Comparison of time per item rating spent by workers in taste-grokking and taste-matching](images/personalization-time-spent.png) {#fig:subjTimeSpent}
 
