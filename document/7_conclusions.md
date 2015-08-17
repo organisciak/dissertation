@@ -28,7 +28,7 @@ Experience was not found to be an indicator of quality, perhaps because the task
 One of the benefits of this null finding is that it simplifies further study of similar tasks, because blocking conditions by number of tasks completed does not appear necessary.
 
 Finally, the amount of time taken by workers was not found to be significant, except for the first task of task set.
-Exploring the possibility that this to be due to time spent in reading instructions, the measurement of which was confounded with the first task, it was found the otherwise identical workers in their contribution habits could have their eventual performance predicted simple based on the time the spend on the outset of the first task and whether they classify it correctly.
+Exploring the possibility that this to be due to time spent in reading instructions, the measurement of which was confounded with the first task, it was found the otherwise identical workers in their contribution habits could have their eventual performance predicted simple based on the time they spend on the outset of the first task and whether they classify it correctly.
 
 Since poor workers in this class were not exhibiting profit-optimizing behaviours, this finding suggests that interventions during collection time might assist in course-correcting workers -- leading to the next research question.
 
@@ -39,7 +39,7 @@ In _Designing Tasks for Objective Needs_, this work moved past an immutable trea
 This chapter explored the design space, exploding the different task parameterization possibilities and considering possible design manipulations.
 Three manipulations were then pursued in practice: a training interface (in both close interaction first-taskset parameterizations and a less involved per-taskset 
 approach), a performance feedback intervention, and a speed-encouraging time-limited interface.
-Of these, training and performance feedback improved the quality of contributions over a best practices baseline.
+Of these, training and performance feedback improved the quality of contributions over the best practices baseline.
 
 Initial interaction training was found to be effective for a task where the best practices are not conditioned on an extra variable.
 Whereas the results were not significant for relevance judgments, where subsequent tasks may be for different queries than the training set, it showed considerable promise for tagging tasks.
@@ -68,4 +68,16 @@ Taste-matching was strong in contexts whether the factors affecting a person's t
 
 \newthought{Crowdsourcing is a promising approach} for teaching us more about the data in our information systems.
 Volunteer crowdsourcing inherits various complexities of motivation, something that paid crowdsourcing is able to sidestep.
-However, as this study showed, there are still biases and 
+However, as this study shows, crowds still exhibit biases and economies of attention that can influence their contributions in unexpected ways and -- particularly concerning for practitioners -- unseen ways.
+
+This is part of the territory for crowdsourcing - you benefit from the dynamism of actual humans, but gain it by exchanging some predictability.
+Aggregating and cross-checking contributions helps in controlling against such issues, but there is also much to be done at little or minimal extra monetary or human cost.
+We discover some of these, including modified implementations of collection instruments and more thoughtful treatment of subjective content.
+
+The primary contribution of this dissertation is in understanding when crowd collected data may be biased, and how to improve upon it.
+Particularly, a non-adversarial approach is taken, for the most part, focusing on how changes come from the circumstances _around_ the contributor's context.
+This does not mean that there are not good or bad contributions -- rather, by shifting focus to a parallel track, many of the methods describe here can be implemented alongside worker-centric quality control research.
+
+As crowdsourcing matures as a concept and as a focus of research, it is important to remember that well-organized online crowds are individuals, operating differently from the single-minded, simplified 'crowds' described by @le_bon_crowd:_1896.
+As such, crowd individuals are capable and intelligent, but subject to the whims of attention and influence that we all are.
+For those hoping to work with data created by crowds, understanding the way those biases sway is of interest.

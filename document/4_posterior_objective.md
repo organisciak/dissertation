@@ -1,8 +1,9 @@
 Interpreting Objective Tasks for Paid Crowdsourcing
 ====================================================
 
+<!--
 _Overview_
-\begin{comment}\begin{fullwidth}
+\begin{fullwidth}
 \begin{quote}
 Gathering annotations from non-expert online workers is an attractive method for quickly completing large-scale annotation tasks, but the increased possibility of unreliable annotators and diminished work quality remains a cause for concern.
 In the context of information retrieval, where human-encoded relevance judgments underlie the evaluation of new systems and methods, the ability to quickly and reliably collect trustworthy annotations allows for quicker development and iteration of research.
@@ -13,7 +14,7 @@ Additionally, the time spent by workers familiarizing themselves with a new set 
 
 These findings may inform large-scale digital collections' use of non-expert workers for performing more purposive and affordable online annotation activities. 
 \end{quote}
-\end{fullwidth}\end{comment}
+\end{fullwidth}-->
 
 \newthought{Work supported through online} volunteer contributions or micropayment-based labor presents a strikingly different mode for annotating information items.
 The accessibility of large groups of contributors online -- in the form of either interested volunteers or paid workers -- allows for large-scale annotation tasks to be completed quickly.
