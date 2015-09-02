@@ -446,17 +446,15 @@ The complexity of the tasks seemed to have contributed to this disparity, where 
 Text Highlighting
 -----------------
 
+Rating prediction against a five-point scale is an easily controlled task,
+making it well suited for personalized crowdsourcing.
+To observe personalized crowdsourcing in a more complex setting, a new task was developed:
+text highlighting to make film reviews easy to skim.
+Highlighting texts has much more possible variation [@marshall_future_2000], and involved requester-specific *needs* in addition to requester-specific *opinions*.
+
 Many settings call for people to digest large amounts of texts, such as in academia, medicine, law, and business.
 To varying degrees, different individuals may look for different information in the same texts.
 Can online crowds be leveraged to highlight texts for target requesters, for the purpose of summarization?
-
-For the next setting, a more complex use case is pursued.
-Rating prediction against a five-point scale is an easily controlled task,
-making it well suited for personalized crowdsourcing.
-In contrast,
-highlighting texts has much more possible variation, and involved requester-specific *needs* in addition to requester-specific *opinions*.
-
-For this task, personalized crowdsourcing is applied to making film reviews easy to skim.
 
 Film reviews were chosen as a generally useful domain where people having varying information needs and opinions, as well as one that may be interesting to workers.
 Thus, it is expected to be an easy domain for a difficult task, providing insight into the tractability of text highlighting.

@@ -70,7 +70,7 @@ The slope shows the expected relationship if similarity was an agreeable metric 
 ![Audio similarity judgments for (Song _x_, Song _y_) pairs judged in multiple years.](images/reciprocal-scores.png) {#fig:recip-fine}
 
 [^STDdev]: It may be helpful in approximating the severity of the problem to remember that RMSE aligns with sample standard deviation in a normal distribution. No assumptions are made about distribution in this case, but in a normal distribution, a range of about 53 points on the scale would be required to represent 95% of contributions.
- Alternately, the RMSE of uniformly distributed random judgments would be approximately 40-41. This would be the performance if an unbiased game of Plinko judged audio similarity.
+ Alternately, the RMSE of uniformly distributed random judgments would be approximately 40-41. This would be the performance if judges were replaced by a game of Spin the Bottle.
 
 The noise presented here suggests a great deal of circumstance and randomness in evaluating music similarity algorithms for MIREX.
 

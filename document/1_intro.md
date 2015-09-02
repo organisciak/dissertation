@@ -95,7 +95,7 @@ The broad research questions informing the chapters are as follows:
 
 - __Broad Research Question 1__: What are the _post-collection_ indicators of quality in worker-contributed objective task data, and can these be leveraged for improved data modelling? ^[Reported in Chapter 4, with an additional approach comprising part of Chapter 5.2.]
 
-- __RQ 2__: What are the biases inherent to the task design for objective or non-normative tasks (i.e. the data collection instrument), and can design manipulations correct for them at _collection time_? ^[Reported in both parts of Chapter 5.]
+- __RQ 2__: What are the biases inherent to the task design for objective or normative tasks (i.e. the data collection instrument), and can design manipulations correct for them at _collection time_? ^[Reported in both parts of Chapter 5.]
 
 - __RQ 3__: What are the quality losses when treating non-normative tasks in objective ways, and can collection-time framing or post-collection modeling approaches reduce these? ^[Reported in Chapter 6.]
 
