@@ -25,11 +25,13 @@ Recent work has begun to exploring crowdsourcing to solve person-specific proble
 The approach taken by this chapter introduces personalized crowdsourcing as a general solution to this class of problem, applying human computation through paid crowdsourcing for on-demand personalization.
 
 To explore how paid online crowds can be leveraged to personalize for individuals in sparse data settings, two protocols are presented:
-*taste-matching*, where crowd workers that are similar to the requester are identified and asked to perform a task, and 
-*taste-grokking*, where crowd workers are asked to perform a task as if they were the requester.
+*taste-matching*, where workers are matched in similarity to the requester, and
+*taste-grokking*, where unfiltered crowd workers are asked to perform a task as if they were the requester.
 It is shown that personalized crowdsourcing is feasible, within the scope of a number of evaluated task types and domains.
 By studying personalized crowdsourcing for image recommendation, text summarization,
 and handwriting emulation, this chapter offers insight into the relative strengths and weaknesses of each.
+
+These protocol are introduced in more detail later, but the fundamental difference is that in taste-matching, the system finds people with the same opinions and tastes as the requester and asks them for their opinions as a proxy for the requester, while taste-grokking asks _any_ worker, similar or not, to make an educated guess about what the requester would like.
 
 The primary goal in evaluating taste-matching and taste-grokking for various problems is to compare the space of possibility for personalized crowdsourcing: what works, what does not, and when.
 Beyond the underlying philosophies of 'matching' or 'grokking' being compared in the two protocols, this chapter touches on training set size and selection, tasks of different complexity and in different domains, contribution granularity,
@@ -85,8 +87,8 @@ Personalized crowdsourcing has been pursued by prior projects, but not explicitl
 The work presented here differs from earlier work in providing a generalized treatment of personalized crowdsourcing,
 comparing different approaches in different domains and subsequently presenting problems affecting general use of paid crowdsourcing.
 Two protocols are presented for comparison, taste-matching and taste-grokking.
-Taste-matching has precedent in other areas, though this chapter's implementation differs in applying the concepts to on-demand needs,
-while taste-grokking offers a more novel approach relies on critical thinking, capitalizing on the human core underlying a crowdsourcing method.
+Taste-matching has precedent in other areas, though this chapter's implementation differs in applying the concepts to on-demand needs.
+Taste-grokking offers a more novel approach relying on critical thinking by workers, capitalizing on the human core underlying crowdsourcing.
 
 Taste-Matching and Taste-Grokking Protocols
 -------------------------------------------
@@ -161,7 +163,7 @@ Still, a potential variant of taste-grokking could combine the train-by-example 
 
 A benefit of taste-grokking is that it realigns a subjective task to a ground truth: all the workers are trying their best to make sense of the requester.
 Since there is an assumed correct answer, taste-grokking is well-suited to error correction and quality metrics performed in more traditional, non-personalized paid crowd contexts.
-For example, whereas with matching it is hard to differentiate between a cheating worker and one with eclectic tastes, with taste-grokking a worker that is suspiciously deviating from the requester's tastes is more likely to in fact be malicious.
+For example, whereas with matching it is hard to differentiate between a cheating or poor worker and one with eclectic tastes, with taste-grokking a worker that is deviating from the consensus can more confidently be understood as a malicious or poor worker.
 Additionally, taste-grokking is well suited to multi-contribution aggregation.
 For example, in a simple aggregation case when predicting opinion ratings, suggestions from multiple workers may be collected for each rating, and the personalized prediction can be a voted rating (mode) or a mean.
 Doing so smooths over individual errors, although at extra cost.
@@ -396,7 +398,7 @@ As such, part of the time spent might be related to the reading of instructions,
 
 \newthought{When collecting taste-matching data}, a tertiary evaluation was done where workers were not only asked to provide a rating of their opinion,
 but were also asked 'what is your reason for this rating?' It was found that by asking workers to contemplate and explicate their reasoning for judgments, their behaviors changed.
-Workers' mean ratings were more moderated, with workers that were overall consistently negative or positive not represented.
+The mean worker ratings (i.e. each worker's average opinion) were more measured, with workers that were overall consistently negative or positive not represented.
 This data was not used for the main evaluation, but serves to emphasize that unexpected variance when working with online crowds not only stems from their tastes and needs,
 but also the contexts in which they contribute data.
 

@@ -108,22 +108,22 @@ In the next section, we consider existing work more thoroughly, adapting it into
 \toprule Category & Description & Sub-categories \\
 \midrule Motivation &
 How are contributors incentivized? &
-Primary/Secondary \cite{organisciak_why_2010}, Contribution/commitment \cite{kraut_building_2011} \\
+Primary/Secondary \autocite{organisciak_why_2010}, Contribution/commitment \autocite{kraut_building_2011} \\
 &
 &
 Extrinsic/Intrinsic \\
 \midrule Centrality &
 How central is the crowdsourcing to the overall project? &
-Core / Peripheral \cite{organisciak_incidental_2013} \\
+Core / Peripheral \autocite{organisciak_incidental_2013} \\
 \midrule Beneficiary &
 Who benefits? What is their relationship to contributors? &
-Autonomous / sponsored \cite{zwass_cocreation_2010} \\
+Autonomous / sponsored \autocite{zwass_cocreation_2010} \\
 &
 &
 Crowd / individual \\
 \midrule Aggregation &
 How are diverse contributions reconciled into a common product? &
-Selective /Integrative \cite{geiger_managing_2011, schenk_crowdsourcing_2009} \\
+Selective /Integrative \autocite{geiger_managing_2011, schenk_crowdsourcing_2009} \\
 &
 &
 Summative / Iterative / Averaged \\
@@ -147,7 +147,7 @@ Unskilled, locally trained, specialized \\
 heterogeneous / diverse \\
 \bottomrule
 \end{tabular}
-\caption{Overview of facets in our crowdsourcing typology}
+\caption[][-24pt]{Overview of facets in our crowdsourcing typology}
 \end{table}
 \end{center}
 <!--_-->
@@ -169,7 +169,7 @@ The spectrum of intrinsic to extrinsic motivators is commonly paralleled in crow
 [@rouse_preliminary_2010; @geiger_managing_2011; @kraut_building_2011; @schenk_crowdsourcing_2009].
 
 Paid and volunteer crowdsourcing are not exclusive, and there are extrinsic motivators beyond money.
-However, this separation is common because of it accounts for some of the starkest differences between how crowdsourcing is implemented and motivated.
+However, this separation is common because it accounts for some of the starkest differences between how crowdsourcing is implemented and motivated.
 There are differing design implications around people being paid and performing work for other reasons: money is a direct currency for obtaining labor, while convincing volunteers to contribute requires a greater sensitivity of their needs and ultimately more complexity in engineering the crowdsourcing system.
 
 It has been shown that intrinsic motivation still plays a part in paid crowdsourcing [@mason_financial_2010], and some systems mix intrinsically motivated tasks with payment or the chance at remuneration.
@@ -196,7 +196,7 @@ These cases were studied in case studies followed by user studies.
 Below is a list of primary motivators seen in @organisciak_why_2010, but also paralleled and supported by the similar broad view social study published by @kraut_building_2011.
 
 -   **Money and extrinsic reward**.
-    Paying crowds is the most reliable
+    Paying people is the most reliable
     approach for collecting contributions, and is an option in the
     absence of other motivators or where certainty is required.
     However,
@@ -276,7 +276,7 @@ The ‘appeal’ itself can be
 They also assert that direct requests for
     contribution are better than broadcast.
 
-One motivator overlooked in is *novelty*.
+One motivator overlooked in @organisciak_why_2010 is *novelty*.
 Novelty or curiosity is ephemeral and unsustainable, but nonetheless a unique idea can attract contributions for a short amount of time.
     @kraut_building_2011 also note structure, goals,
 and deadlines as incentives.
@@ -308,8 +308,7 @@ This motivator factors into the taxonomy by as
     *social status*.
 
 -   **Window fixing**.
-Nurturing a well-maintained community where the
-    members are compelled to support its health.
+Nurturing a well-maintained community where the members feel compelled to support its health.
 
 ### Centrality
 
@@ -361,7 +360,7 @@ Our
 With
     contributions such as opinion ratings of information objects the
     process might be to average; with multiple-keyed classification, the
-    aggregation process may be a vote majority; with starring (sometimes
+    aggregation process may be a vote majority, where the most popular option is retained; with starring (sometimes
     referred to as favoriting, liking, or recommending), the averaged
     aggregation may simply show the number of people that have performed
     the action.
@@ -411,7 +410,7 @@ The type of work performed by crowds can vary greatly in its complexity and styl
 Understanding that crowdsourcing is not solely human computation tasks, the inferred corollary to these types of tasks are those that are expected to be too complex for computers: creative,
 judgment-based, or requiring critical thinking.
 Creative crowdsourcing might take the form of artistic human expression, such as online contributors collectively animating a music video (*Johnny Cash Project*) or the sum of YouTube.
-Opinion or judgement-based crowdsourcing often does not have a definitive answer, and is seen in areas such as movie reviews or product ratings.
+Opinion or judgment-based crowdsourcing often does not have a definitive answer, and is seen in areas such as movie reviews or product ratings.
 More complex critical thinking tasks do not fit the paradigm of computation and are much more complex, such as Wikipedia or protein-folding project FoldIt.
 
 @schenk_crowdsourcing_2009 have previously distinguished between three types of crowdsourcing.
@@ -429,13 +428,13 @@ With reactive work, the work is a reaction or interpretation of an existing info
 encoding.
 
 Such a distinction is neglected in most views of crowdsourcing, but important in information science.
-At the heart of many projects in our community, such as those by libraries, museums, and cultural heritage institutions, is a focus on information objects.
+At the heart of many projects by libraries, museums, and cultural heritage institutions, is a focus on information objects.
 There is much effort expended in archiving, enriching, appreciating, and sharing works, and a reactive view of crowdsourcing products places the public within this tradition.
 
 \newthought{A final view of types of work}, one adopted strongly in this dissertation, is the spectrum between *objective* and *subjective* tasks.
 
 Objective tasks are assumed to have an authoritative truth, even if it is unknown.
-For example, in transcribing scanned texts, it is assumed that there is a ‘correct’ passage in the work that has been scanned.
+For example, in transcribing scanned texts, it is assumed that there is a ‘correct’ transcription in the work that has been scanned.
 
 In contrast, subjective tasks have a variable concept of correctness, as they are not expected to be consistent between contributors.
 
@@ -444,7 +443,7 @@ Human computation undertakings are commonly objective tasks, and taxonomic effor
 
 The subjective-objective distinction has consequences for training and quality control.
 Objective tasks lead to a training approach where the ideal result is that everyone performs the task in the same one right way.
-Quality control on those tasks can employ approaches such as interrater reliability, since it can be assumed that there is an object result to be reliable about.
+Quality control on those tasks can employ approaches such as interrater reliability, since it can be assumed that there is an objective set of results that raters are striving for.
 Subjective tasks can still need training and quality control, but it will necessarily be of a different kind.
 For example, certain subjective tasks want to take advantage of the diversity of human activity and so explicitly do not want everyone to do the same thing in the same way.
 
@@ -483,13 +482,16 @@ A number of design patterns have been established and repeated in crowdsourcing,
 These include:
 
 *Microtasking*.
-The concept of splitting a large task into many smaller parts to be worked on by different people was an important tide change in the history of open-source software [@raymond_cathedral_1999], and the same models have been emulated in crowdsourcing.
+The concept of splitting a large task into many smaller parts improves the ability for that task to be worked on by different people.
+Microtasking was an important tide change in the history of open-source software [@raymond_cathedral_1999], and the same model has been often adopted in crowdsourcing.
 With so-called 'microtasks', the overhead to participation is low, and the pressure or dependence on any one contributor is low.
 
 *Gamification*.
-Gamification is predicated on a reframing of what would traditionally be labour into a game-like or leisurely tasks.
-Gamification follows in the philosophy, as Twain wrote, "that work consists of whatever a body is obliged to do, and that play consists of whatever a body is not obliged to do" [-@twain_adventures_1920].
-The ethics of gamification have been argued for as an extension of contributors’ desire to perform meaningful work.
+Gamification is predicated on a reframing of what would traditionally be labour into game-like or leisurely tasks.
+Gamification follows in the philosophy, as with Tom Sawyer recontextualizing a fence painting chore into a game, "that work consists of whatever a body is obliged to do, and that play consists of whatever a body is not obliged to do" [@twain_adventures_1920].
+
+Of course, Tom Sawyer used his fence painting game as a manipulation, intended to trick other children to do his work for him: an apt comparison to ethical concerns about gamification.
+Those defending the ethics of gamification have argued for it as an extension of contributors’ desire to perform meaningful work.
 Shirky, for example,
 argues that people have a ‘cognitive surplus’ to give during their leisure time, a desire to spend their free time doing useful, creative or stimulating tasks [-@shirky_here_2009].
 Gamification is an extension of serious games – games meant to do more than simply entertain
@@ -501,7 +503,7 @@ In areas of crowdsourcing and human computation, Games with a Purpose
 
 *Opinion Ratings*.
 A standard and highly familiar activity online is soliciting qualitative judgments from visitors.
-These ratings have different granularities, most commonly 5-level (e.g. 1 to 5 stars) or binary (e.g. thumbs up/thumbs down).
+These ratings have different granularities, often 5-level (e.g. 1 to 5 stars) or binary (e.g. thumbs up/thumbs down).
 Unary judgments have grown in popularity as ways of showing support with minimal effort.
 Their popularity seems to stem from when social network *Friendfeed* implement a unary voting button labelled, succinctly, "I like this"
 [@taylor_friendfeed_2007] and subsequently when similar wording was adopted by Facebook after acquiring Friendfeed.
@@ -515,11 +517,10 @@ For example, *Kickstarter* and *Indiegogo* ease crowdfunding,
 In the contest design pattern, a requester offers a bounty to the best solution to a problem or task of their choosing, such as in design (e.g. 99Designs), coding (e.g. *TopCoder*), and research and development (e.g. Innocentive).
 Here the "crowdsourcing" is simply using internet to connect to many potentially talented individuals, though contests have been integrated into more collaborative workflows.
 For example, with the collaborative product incubator Quirky, the community votes on the best ideas to develop into products, discussing how to improve the ideas openly.
-One reason for this may be that, in addition to the large portion of future profits that an idea originator may earn if it is voted into development, the rest of the community also receive points for supporting the best ideas.
 
 *Wisdom of crowds*.
-Wisdom of the crowds is a design pattern which emphasizes the effectiveness of human judgment in aggregate
-[@surowiecki_wisdom_2004], provided the participants are rationally organized.
+Wisdom of the crowds, in addition to the principle referring to the effectiveness of human judgment in aggregate, also refers to a design pattern which uses that principle
+[@surowiecki_wisdom_2004].
 This is embodied by multiple-keying for tasks which are expected to have a real answer, such as classifying galaxies, or averaging opinions for subjective tasks to derive a normative judgment.
 
 ## Practitioner's questions
@@ -604,14 +605,22 @@ Crowdsourcing offers potential for involving the public and improving data in di
 However,
 the scope of crowdsourcing is so large and the implementation possibilities so varied that it can seem rather daunting to pursue it.
 
-In this paper we attempt to provide a way of making a bit more sense of the patterns that emerge when considering these projects not so much from the perspective of what they are for (e.g. rating books, movies or restaurants versus citizen science or digital humanities) but rather in terms of how they were designed to achieve particular ends.
+This chapter attempted to provide a way of making a bit more sense of the patterns that emerge when considering these projects not so much from the perspective of what they are for (e.g. rating books, movies or restaurants versus citizen science or digital humanities) but rather in terms of how they were designed to achieve particular ends.
 
-We consolidate a number of past taxonomies of crowdsourcing and project examples to develop a typology of crowdsourcing for information science.
-In addition to modifications on previously studied dimensions such as motivation, aggregation, and beneficiary, we also offer new dimensions regarding centrality of crowdsourcing, the diversity needs of the crowd,
+The typology presented consolidated a number of past taxonomies of crowdsourcing and project examples toward a view of crowdsourcing appropriate for information science.
+In addition to modifications on previously studied dimensions such as motivation, aggregation, and beneficiary, new dimensions were argued for, regarding centrality of crowdsourcing, the diversity needs of the crowd,
 and the dichotomy of generative or reactive types of work.
-This typology offers a framework to making sense of the differences between crowdsourcing projects and thinking through practical possibilities for implementing crowdsourcing mechanics in new projects.
+This typology offers a framework for making sense of the differences between crowdsourcing projects and thinking through practical possibilities for implementing crowdsourcing mechanics in new projects.
 
 The design of a crowdsourcing activity, like any design activity is an exploration of a design space navigating goals (often multiple goals,
 some of which may be contradictory), and constraints, while exploiting technological and social opportunities, and taking account of certain issues such as privacy, security.
-For any given desired product, there are many experiences that could be constructed.
-The dimensions that we provide offer help in comprehending the alternatives and how they are practiced.
+For any given product, there are many experiences that could be constructed.
+The dimensions provided offer help in comprehending the alternatives and how they are practiced.
+
+\newthought{In the language of this chapter}, the rest of this dissertation pursues crowdsourcing in the following space:
+
+ - Crowds that are paid, rather than motivated to volunteer;
+ - Tasks that are reactive, positioning contributions relative to existing documents, rather than generative;
+ - Both objective and subjective contexts, considered distinctly.
+
+The data quality of contributions is considered in this context, starting with the next chapter: a treatment of post-collection data modelling of contributions for objective tasks.

@@ -1,5 +1,5 @@
-Crowdsourcing
-================
+Introduction to Crowdsourcing
+==============================
 
 Crowdsourcing is a conceptually simple idea that has received considerable research attention in the past few years, alongside a realization of the power of the internet for effectively connecting people in large numbers.
 
@@ -71,7 +71,7 @@ The audience poll turned out to be remarkably effective, but not surprising: eve
 
 This is a fitting anecdote, given that many crowdsourcing efforts do come down to connecting to the right individual from the mass of candidates.
 It is seen most clearly in cases such as question and answer websites (e.g. Stack Overflow, Ask Metafilter, Quora).
-However, increasing the pool applies in much more than cases of 'wisdom': many successful websites receive the built of their contributions from a small core group of contributors [e.g. Wikipedia - @muchnik_origins_2013; Transcribe Bentham - @causer_transcription_2012; The Commons - @springer_for_2008] and the benefit of opening up their projects to public contributions is in increasingly the likelihood of a "power user" [@springer_for_2008].
+However, increasing the pool applies in much more than cases of 'wisdom': many successful websites receive the bulk of their contributions from a small core group of contributors [e.g. Wikipedia - @muchnik_origins_2013; Transcribe Bentham - @causer_transcription_2012; The Commons - @springer_for_2008] and the benefit of opening up their projects to public contributions is in increasingly the likelihood of a "power user" [@springer_for_2008].
 
 The second lesson that permeates crowdsourcing is the idea of aggregation that results in a product better than the sum of its parts. Grand projects like Wikipedia and FoldIt^[An online research-supporting game that looks for the most efficient ways to fold proteins.] [@khatib_algorithm_2011] allow contributions to build on the work of past contributors.
 
@@ -84,7 +84,7 @@ It refers to the process of computation -- the "mapping of some input representa
 @quinn_human_2011 offer a taxonomy of human computation, classifying along dimensions of motivation, quality control, aggregation, human skill, process order, and task-request cardinality.
 In synthesizing the various definitions of human computation in relation to crowdsourcing, collection intelligence, and social computing, @quinn_human_2011 note two characteristics of consensus in the definition:
  that "the problems fit the general paradigm of computation, and as such might someday be solvable by computers", and 
- that "the human participation is direction by the computational system or process".
+ that "the human participation is directed by the computational system or process".
 
 As noted by @law_human_2011, Turing defined the purpose of computers as carrying out operations that humans would normally do.
 Human Computation, then, refers to utilizing humans for operations that computers are not capable of performing yet.
@@ -126,12 +126,13 @@ First, individuals are more empowered to operate autonomously, for themselves an
 At the same time, loose collaborations are easier to organize, allowing the pursuit of individual needs at scales beyond the capabilities of a single person.
 
 [^Starbucks]: http://mystarbucksidea.force.com/
+  This presents what would amount to the first few weeks of an introductory crowdsourcing course.
 
 **Citizen science**.
 Citizen science refers to collaboration between scientific communities and members of the public on research.
 Early crowdsourcing projects, such as galaxy annotation site *Galaxy Zoo* and protein-folding competition *FoldIt*, were noted as a form of citizen science, and crowdsourcing has been used for numerous successful results in the field.
 
-@wiggins_goals_2012 present a typology of citizen science projects, binning them into action-oriented, conservation-focused, investigative, wholly virtual, and educational projects.
+@wiggins_goals_2012 present a typology of citizen science projects, organizing them into action-oriented, conservation-focused, investigative, wholly-virtual, and educational projects.
 
 <!--## Notable Research
 
@@ -153,7 +154,7 @@ Yochai Benkler's Wealth of Networks [-@benkler_wealth_2006], discussed earlier, 
 ## Crowdsourcing in the Wild
 
 There is a great deal of crowdsourcing "in the wild", including notable successes and failures.
-The successful projects are particularly worth looking at for clues as to what distinguishes them in the face of less successful or failed site.
+The successful projects are particularly worth looking at for clues as to what distinguishes them in the face of less successful or failed sites.
 Below is a selection of projects that have lasted.
 This small list is chosen in a somewhat arbitrary manner but in the service of a few points.
 
@@ -165,12 +166,13 @@ Additionally, the small selection of examples below is chosen for breadth.
 This dissertation focuses on a small corner of crowdsourcing, but there are many models for online contribution that have been tried, so it is good to have concrete anchors to go by.
 
 Still, looking at crowdsourcing _web sites_ misses part of the legacy of crowdsourcing.
-To assume a speculative post for a moment, it appears that many of the design patterns that will survive from the past decade of experimentation with crowdsourcing will be in the augmentative, supportive roles it can play: community-contributed translations or subtitles; qualitative contributions like flagging, rating, or 'likes'; casual filtering activities like up/down voting.
+Adopting a speculative position for a moment, it appears that many of the design patterns that will survive from the past decade of experimentation with crowdsourcing will be in the augmentative, supportive roles it can play: community-contributed translations or subtitles; qualitative contributions like flagging, rating, or 'likes'; casual filtering activities like up/down voting.
 Likewise, the best new projects are ephemeral: they are not intended to last by design.
 The point has been made that the amount of human effort and leisure-time labour on the Internet is endless [@shirky_here_2009;@mcgonigal_reality_2011]; however, attention is scare.
 
-Projects like those from exemplar Zooniverse, discussed below, or LibCrowds, or from NYPL Labs: they develop single-serving projects to symbiotically engage communities with their collections in focuses, short-term ways, rather than grandiose 'digitize all of history' projects.
-In revisiting my past work on motivations of crowds [@organisciak_why_2010] for the next chapter's crowdsourcing typology, I add a motivator that came up in that work's study, but which I had avoided given the expectation that it is insubstantial: novelty. Novelty is ephemeral, but short-term design may make that ephemerality acceptable.
+Projects like those from citizen science exemplar Zooniverse, discussed below, or LibCrowds, or from NYPL Labs: they develop single-serving projects to symbiotically engage communities with their collections in focused, short-term ways, rather than grandiose 'digitize all of history' projects.
+In my past work on motivations of crowds [@organisciak_why_2010], revisiting in the next chapter's crowdsourcing typology, I avoid discussing novelty given the expectation that it was unsubstantial.
+Novelty is indeed ephemeral, but this does not particularly detract: projects with short-term design may make that ephemerality acceptable.
 
 With that in mind, below are some notable examples in the wild and as a whole, while the next chapter's typology provides a contrasting view of crowdsourcing in its parts.
 
@@ -234,10 +236,10 @@ Recently, crowdsourcing has proven useful for time-sensitive queries, and has be
 One of the better explored spaces of retrieval over or incorporating crowdsourced information is in folksonomies.
 Folksonomies refer to free-text labelling (i.e. 'tagging') by non-professionals.
 A popular resource for folksonomies over general web documents is the older incarnation of bookmarking website del.icio.us.
-In folksonomies such as on del.icio.us, over 50% of tags contribute information that was not contained in the document; for music tags (on the website Last.fm), over 98% of tags provide text information not previously help in the record[@bischoff_can_2008].
+In folksonomies such as on del.icio.us, over 50% of tags contribute information that was not contained in the document; for music tags (on the website Last.fm), over 98% of tags provide text information not previously help in the record [@bischoff_can_2008].
 Information retrieval can benefit for this extra information, and a comparison of web query logs to folksonomies from del.icio.us, Flickr, and Last.fm shows that 58.43-71.22% of queries overlap at least partially with tags in those systems (ibid).
 
-Studying ways to retrieval saved bookmarks on del.icio.us, [@hotho_information_2006] present _FolkRank_, a manner to adjust authority of authors and importance of tags in order to find important resources.
+Studying ways to retrieve saved bookmarks on del.icio.us, [@hotho_information_2006] present _FolkRank_, a technique to adjust authority of authors and importance of tags in order to find important resources.
 While their approach has limited success as a generalized retrieval approach, they find that it holds value in identifying communities of interest within the community.
 
 [@zhou_exploring_2008] present a generalized framework for dealing with social annotations within the language modeling approach.

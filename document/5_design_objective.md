@@ -16,7 +16,7 @@ Related Work
 
 Research Questions
 
-Design Space (RQ1)
+Design Space (RQ 2.1)
     Gedanken Experiments
     So, what do I study
 
@@ -115,7 +115,7 @@ Similar to this study, @mitra_comparing_2015 compare interaction against a set o
 
 Finally, @kazai_crowdsourcing_2011 approach the problem of HIT design quality improvement by inputting various trap mechanisms for inattentive workers.
 Tasks were completed by a survey flow, where the set of questions to be answered depended on the answers, allowing peculiar flows to be filtered.
-Captchas were also used to confirm human input and, perhaps most amusing, questions were planted that had the were check a box if they "did not pay attention" or "did not read the instructions".
+Captchas were also used to confirm human input and, perhaps most amusing, questions were planted that had workers check a box if they "did not pay attention" or "did not read the instructions".
 This is a direct solution to some problems this chapter looks at.
 @kazai_crowdsourcing_2011 tested a number of confounded features, but these quality control metrics appeared to improve worker agreement with gold standard data.
 
@@ -127,26 +127,26 @@ Though we hypothesized it may have a self-competitive effect, it was not the foc
 This chapter compares the effect of task design on the quality of crowdsourced objective data.
 Scoped to a reasonable parameterization of crowdsourcing as it is commonly practiced in information science -- a typical encoding task performed by paid crowds -- the following questions are pursued:
 
- * __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?^[The _design space_ question.]
+ * __RQ 2.1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?^[The _design space_ question.]
 
- * __RQ2__: Is there a significant difference in the quality<!--, reliability, and consistency--> of crowd contributions for the same task collected through different collection interfaces?^[The primary _data quality_ question.]
+ * __RQ 2.2__: Is there a significant difference in the quality<!--, reliability, and consistency--> of crowd contributions for the same task collected through different collection interfaces?^[The primary _data quality_ question.]
 
- * __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?^[The secondary _satisfaction_ question.]
+ * __RQ 2.3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?^[The secondary _satisfaction_ question.]
 
- <!--* __RQ4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?^[The _generalizability_ question.]-->
+ <!--* __RQ 2.4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?^[The _generalizability_ question.]-->
 
-RQ1 is the question of design, on synthesizing prior work and brainstorming directions to explore.
+RQ 2.1 is the question of design, on synthesizing prior work and brainstorming directions to explore.
 It is a partially subjective question, but one still worth pursuing with diligence.
 As research by @komarov_crowdsourcing_2013 found, the effects seen in traditional user studies are still present in online crowd markets.
 Their finding suggests that non-crowdsourcing research in human-computer interaction is informative for our purposes.
 This chapter explores some possible design decisions and argues why they should be studied.
 
-RQ2 and RQ3 are the primary questions being explored in this chapter of the proposed dissertation, on quality for computational use and on satisfaction.
+RQ 2.2 and RQ 2.3 are the primary questions being explored in this chapter of the proposed dissertation, on quality for computational use and on satisfaction.
 While this dissertation is explicitly pursuing the former question, collecting computationally useful contributions needs to be understood in the context of contributor satisfaction.
 The trade-off between contributions that crowds want to make and the reliability of the data is a central consideration for fostering sustainable, or alternately affordable, crowdsourcing.
 
 <!--
-RQ4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be addressed as thoroughly as possible. 
+RQ 2.4 is the question of generalizability. It expands beyond a scope than can reasonably be answered, but it should nonetheless be addressed as thoroughly as possible. 
 -->
 
 ## Design Space
@@ -182,7 +182,7 @@ The *item* can change, such as modifying the presentation or the size of the sin
 
 Even the *contribution* action can change: for example, the granularity of the contribution mechanism (free text, multiple choice, single button, etc.).
 
-There are also intangibles such as the appeal of the topic and the visual layout.
+There are also harder to qualify elements such as the appeal of the topic and the visual layout.
 
 Of course, there is no constraint insisting on the task structure provided above.
 We can add elements to the task design before the task is accepted, at the start of the task, during or in response to individual interactions, or after the task is completed.
@@ -213,7 +213,7 @@ How would the contribution change if:
 * Instructions were written very tersely?
   Verbosely, with many examples?
 - Contributors were tested on the instructions at the beginning of the task?
-  If there were gold labelled items throughout the task?
+  If there were known (gold label) items throughout the task?
   If everything had a known answer and workers were inconvenienced (e.g. with a time delay) when they got an answer wrong?
 - Contributors were asked to volunteer their time?
   Were paid 1c per task? Were paid 10c per task?
@@ -391,11 +391,11 @@ This is because feedback is only applied starting with the second task.
 Base payment was \$0.05 lower than was provided for the basic interface, while the continued engagement bonus was \$0.10 per task.
 
 ![Message encouraging repeat work](images/design-stickaround.png) {#fig:staybonus}
-;
+
 In sum, of the ample ways to design a feedback mechanism, this study's condition:
 
 - Positions workers relative to the workforce, rather than absolute measures.
-- Designed with increased focus on worker self-motivation over the observer effect.
+- Is designed with focus on worker self-motivation more than the observer effect.
 - Focuses on intervention at a start of a new task.
 
 ### Time-Limited Interface (FAST)
@@ -436,7 +436,7 @@ This provides incentive to actually try to maximize time.
  It is easy to instrumentalize and properly capture the actual skills and attentiveness of paid crowd workers.
  However, working within the conventions of the system means that some parts cannot be controlled.
  For example, workers cannot be forced to perform multiple tasks, simply encouraged to do so.
- Also, the actual user pools testing the different interfaces are not necessarily the same individuals.
+ Also, while sampled from the sample pool, the actual workers testing the different interfaces are not necessarily the same individuals, given that it is a workers choice whether to complete a task (or even when to be on the platform performing tasks).
  Thus, it is important that the users are similarly representational: it would be problematic if one interface was used mainly by Indian residents while another was performed mainly by American residents (the second and first largest nationalities on Mechanical Turk, respectively).
 
  For this reason, each interface was evaluated with temporal and geographic restrictions.
@@ -468,15 +468,18 @@ Details of the experimental system, including design documents, model descriptio
 
 ## Experiment #1: Relevance Judgments
 
-
-Lowering the barrier to custom evaluation is one of the most important uses of crowdsourcing for information retrieval research.
-While production systems benefit from actual humans in the machine to identify topics and correct algorithmic quirks, research aiming to improve pure information retrieval performance still needs ways to appropriately evaluate different models and approaches.
+Lowering the barrier to custom evaluation is one of the most notable contributions of crowdsourcing to information retrieval research.
+While production systems benefit from actual humans in the machine to identify topics and correct algorithmic quirks[^NonEvaluation], research aiming to improve pure information retrieval performance still needs ways to appropriately evaluate different models and approaches.
 Paid crowdsourcing platforms offer a way to tap into large and diverse groups of people for relevance judgments, making custom evaluation datasets -- and subsequently research over novel corpora -- greatly more accessible.[^Previously]
+
+[^NonEvaluation]: Discussion of crowdsourcing in information retrieval beyond evaluation uses is in _Introduction to Crowdsourcing_ (Chapter 5).
 
 [^Previously]: The role and value of crowdsourcing for information retrieval evaluation was discussed at length in the previous chapter.
   For brevity, it is only lightly recalled here.
 
-Continuing from the previous chapter's look at contribution behaviours and post-collection indicators of quality for relevance judgments, this chapter judges the effects of collection-design manipulations for image information retrieval results.
+Continuing from the previous chapter's look at contribution behaviours and post-collection indicators of quality for relevance judgments, this chapter judges the effects of collection-design manipulations, starting again with information retrieval relevance judgments as a experimental setting on which to compare these manipulations.
+In this experiment, judgments are collected for image retrieval results.
+
 
 ### Data
 
@@ -484,7 +487,8 @@ The dataset being evaluated consists of 389 query--image document pairs, evaluat
 All the data, control and experiments, were collected specifically for this study, allowing for a fair comparison of design manipulations against a baseline that was competently implemented.
 
 This section details the process of developing the test corpus.
-Basically, the process was as follows:
+The process was as follows:
+
  - Collecting a large randomized sample of image documents from Pinterest (_pins_).
  - Sampling realistic queries, collected from Pinterest's query auto-suggestions.
  - Implementing a retrieval system with the sampled documents, and retrieving results against the sampled queries.
@@ -506,7 +510,7 @@ While adding a pin to a board is an act of classification, the classes are user-
 Boards are user-specific, created by a user with a title, description, category, and optional map.
 
 In the words of the company materials, Pinterest features three primary purposes: saving (as pins), organizing (into boards), and discovery [@_about_].
-In this way, it is organized in a way familiar to library and archival communities, distribution online images with an eye toward discoverability and curation.
+In this way, it is organized in a way familiar to library and archival communities, distributing online images with an eye toward discoverability and curation.
 
 It is also a large-scale site of descriptive crowdsourcing, recalling past trends in social bookmarking (i.e. the eventually doomed _del.icio.us_) but with a visual spin to the bookmarking activity.
 Users describe pins and categorize them into boards; describe, title, and categorize boards; and contribute various social information, such as comments, repins[^repin], and voting (in the form of 'heart'-ing).
@@ -525,7 +529,7 @@ Structurally, it resembles the archival form of many library and museum systems,
  * Pinterest contains very little information about the source web document.
    It is feasible to crawl the full text of the source, but as it stands, a Pinterest 'pin' alone offers a record of a _single person's interpretation_ of the source.
  * Since the primary form of Pinterest document is a human reaction to a web document, the user contributions on the site may have possible future use for web retrieval.
- * For the purpose of this study, collecting relevance judgments for retrieved pins, the image-centric form is the type of task that crowds should be capable at.
+ * For the purpose of this study, collecting relevance judgments for retrieved pins, the image-centric format is the type of task that crowds should be adept at.
    Good tasks should focus on one thing, with little context switching [@_guidelines_2014], and understanding an image is a quick, natural activity for people [@von_ahn_games_2006].
 
 Finally, Pinterest is an interesting but understudied website.
@@ -562,7 +566,7 @@ To shift the sample list away from the most-popular queries, the sampling frame 
 
 \newthought{Thirteen queries were sampled.}
 For each query, a description of what constitute the different levels of relevance was written by myself.
-Three point categorical relevance was used, with not, somewhat, and very relevant as the options.
+Three point categorical relevance was used, with 'not', 'somewhat', and 'very' relevant as the options.
 
 Results to judge were generated using a Dirichlet-smoothed language modelling system.
 A basic form of query expansion was used wherein the original query was run, and a word list consisting of the top results was resubmitted as a secondary query.
@@ -647,7 +651,7 @@ Table: Time spent per relevance judgment in each condition. Significance marks r
 ![Comparison of time spent per task, in seconds (n=12667)](images/relevanceTime1.png) {#fig:relevance-time}
 
 Considering this data by mean user time, to reduce the influence of outliers, tells a comparable story.
-Viewed in this manner, the time-limited interface and the baseline were comparable, while feedback and training improved the mean time of the average worker.
+Viewed in this manner, the time-limited interface and the baseline were comparable, while feedback and training shortened the mean time of the average worker.
 
 While this data tells us how quick the actual tasks in a task set are completed, there is also the time spent in-between contributions, which can be assumed to primarily time spent on instructions.
 Table @tbl:RelNonContrib shows the time spent in these moments.
@@ -711,9 +715,10 @@ In the previous chapter this measurement was confounded with the completion of t
 
 INSTRUCT is an easy condition to parameterize, only requiring a one-time cost from the requester to collect training examples and perhaps a slight development cost to implement instructions as a dismissable, up-front modal window.
 
-The intervention in INSTRUCT was partially motivated by @shu_signing_2012, who found that for reporting forms requiring a signature to confirm honesty, such as tax or insurance forms, asking people to sign at the top led to more honest reporting.
+The intervention in INSTRUCT was in part motivated by @shu_signing_2012, who found that for reporting forms requiring a signature to confirm honesty, such as tax or insurance forms, asking people to sign at the top led to more honest reporting.
 By foregrounding the instructions, this condition seems to encourage workers to be more honest about the codebook.
 An unknown caveat is whether this is a persistent effect or, if after enough tasks with this condition, workers start to dismiss the information sooner.
+With the rotating workforce on Mechanical Turk, this would not be a concern for contexts similar to this study, but would be worth studying if applied in alternate contexts.
 
 \newthought{The quality of contributions in the feedback condition} also improves on the baseline condition.
 Like with INSTRUCT, three-quarters of query-document pairs were corrected classified by two-thirds of contributors.
@@ -748,7 +753,7 @@ It is possible that for relevance judgments over more complex types of documents
 \newthought{A comparison of performance per query} (Figure @fig:byQueryRelPerformance) offers some insight as to the relative strengths and weaknesses of the various conditions.
 
 The thirteen queries tested are shown as columns in Figure @fig:byQueryRelPerformance.
-Despite across the board worse results, the places where FAST appears to stumble most is where there was nuance to the instructions, in edge cases where one might consult the instructions again.
+Despite across-the-board worse results, the places where FAST appears to stumble most is where there was nuance to the instructions, in edge cases where one might consult the instructions again.
 For example, are other tattoos relevant to _rose tattoo_? 
 (No.)
 Are other flowers relevant?
@@ -780,7 +785,7 @@ Trant and Wyman argue that tagging from online users "appears to fill gaps in cu
 Following from this, tagging is particularly helpful for difficult to model formats (i.e. non-text) and when corpus sizes surpass the ability to formally classify works.
 Tagging has been used to encode scans of text [@von_ahn_recaptcha_2008], improve information retrieval document modelling [@lamere_social_2008; @bao_optimizing_2007], augment personalized search [@lerman_personalizing_2007; @noll_web_2007].
 
-Tagging also offers a break from the Vocabulary Problem [@furnas_vocabulary_1987].
+Tagging also promises, in theory, a break from the Vocabulary Problem [@furnas_vocabulary_1987].
 Furnas et al. performed a set of term generation experiments in 1987 where the asked participants to describe functions or objects.
 They found that the amount of spontaneous consensus was very low, arguing that this problem of vocabulary becomes a user issue because different users expect different vocabularies.
 However, it's the designers who get to choose the primary vocabulary and, "as heavy users, grow to find [their] terms obvious and natural" (ibid).
@@ -853,7 +858,7 @@ They present seven kinds of bookmarking tags: those for identifying what the ite
 @sen_tagging_2006 collapse the seven classes from @golder_structure_2007 into three: _factual_ tags conveying objective information, _subjective_ tags conveying opinions, and _personal_ tags that are intended only for the tagger.
 As expected, factual tags were found to be most generally useful, particularly for learning and finding, although personal and subjective tags were useful for self-expression and organizing, respectively.
 
-These are uses that matter to users of online communities, though for the organization purposes of this study's image tagging task, and perhaps more generally for the controlled paid setting, factual tags are the most desired.
+These are uses that matter to users of online communities, though for the organizational purposes of this study's image tagging task, and perhaps more generally for the controlled paid setting, factual tags are the most desired.
 
 Finally, @springer_for_2008 analyzed a sample of tags and derived a number of non-exclusive categories for image tags, including tags derived from the description, new descriptive tags, new subject words, commentary, emotional/aesthetic responses, personal knowledge or research, machine tags, variant forms, foreign language tags, and miscellaneous tags [@springer_for_2008]. Of these, description-derived and image subject tags were the most common.
 
@@ -906,10 +911,10 @@ These were evaluated on their own merits against the goals stated in the task --
 
 A relationship between good tags and how often they were applied if weak at best, only for tags used very often, eight times or more. Tags applied a handful of times were not any better than tags applied once or twice.
 
-![Relationship between the tag character length and the tag quality.](images/tagLength2.png) {#fig:tagLength2.png}
+![Relationship between the tag length (by character count) and tag quality. N=1976.](images/tagLength2.png) {#fig:tagLength2.png}
 
 There does appear to be a relationship between strong tags and tag length, in that moderate to long length tags are better than short tags and -- to the extent that there was data -- very long tags.
-Figure @tagLength2 demonstrates this relationship clearly.
+Figure @fig:tagLength2 demonstrates this relationship clearly.
 
 ### Results
 
@@ -954,7 +959,7 @@ Comparisons to the baseline rejected equality with the baseline, though for the 
 
 \clearpage
 
-\newthought{The rated satisfaction} of the task by workers is shown in Figure @tagTaskSatisfaction, and their satisfaction with the payment are shown in @fig:tagPaySatisfaction.
+\newthought{The rated satisfaction} of the task by workers is shown in Figure @fig:tagTaskSatisfaction, and their satisfaction with the payment are shown in Figure @fig:tagPaySatisfaction.
 
 ![Task satisfaction ratings for tagging task.](images/taskSatisfaction-tag.png) {#fig:tagTaskSatisfaction}
 
@@ -983,7 +988,7 @@ However, the tagging task was less structured, and workers might need inspiratio
 It would be interesting to conduct the feedback task in concert with training.
 
 The FAST condition resulted in contributions received twice as quickly, though at a quality loss.
-Recalling Figure @tagLength2 and the relationship between good tags and length, the types of tags contributed by the time-limited condition skewed toward the short end (Table @tbl:LengthByCondition).
+Recalling Figure @fig:tagLength2 and the relationship between good tags and length, the types of tags contributed by the time-limited condition skewed toward the short end (Table @tbl:tagLengthByCondition).
 
 +--------------+----------+----------+------------+-----------+
 |              | Mean     | Median   | Mean       | Median    |
@@ -1008,14 +1013,14 @@ In a circumstance where shorter tags are useful, the time-limited condition migh
 ## Discussion
 
 
- > __RQ1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
+ > __RQ 2.1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
 
 With regard to the design space question, the start of this chapter explored the possibilities for collection task design, and looked at promising past works such as games-based tasks [@eickhoff_increasing_2012; @ahn_labeling_2004] and bonus-based payment manipulations [@mason_financial_2010].
 
 The approaches that were chosen to be pursued focused on attention and awareness, measuring how design can refocus attention on instructions, inform workers of problems, or push workers to more instinctual forms of contribution.
 The lower performance of contributions in the time-limited interface without sufficiently compelling improvements in time (except perhaps in the tagging condition) and satisfaction suggests to future work is better focused on the former types of task design.
 
- > __RQ2__: Is there a significant difference in the quality of crowd contributions for the same task collected through different collection interfaces?
+ > __RQ 2.2__: Is there a significant difference in the quality of crowd contributions for the same task collected through different collection interfaces?
 
 With regard to the primary data question, this chapter shows that a notable degree of data influence exists in the design of the task.
 The type of design manipulations that are fruitful vary based on the needs of the workers, and are worthy of discussion here.
@@ -1047,7 +1052,7 @@ However, for both tasks, the quality of contributions fell.
 In different contexts, one can imagine this interface being helpful: in cases where the faster contribution style did not lower collection quality.
 For example, a less restrained tagging task might be better suited; indeed, this is similar to the fast tagging mode of the ESP Game [@ahn_labeling_2004].
 
- > __RQ3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
+ > __RQ 2.3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
 
 Workers did express different satisfaction with different interfaces.
 The purpose of formalizing this secondary research question was to stay sensitive of possible negative effects in worker experience accompanying the design manipulations.

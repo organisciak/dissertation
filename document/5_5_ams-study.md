@@ -69,7 +69,8 @@ The slope shows the expected relationship if similarity was an agreeable metric 
 
 ![Audio similarity judgments for (Song _x_, Song _y_) pairs judged in multiple years.](images/reciprocal-scores.png) {#fig:recip-fine}
 
-[^STDdev]: It  may be helpful in approximating the severity of the problem to remember that RMSE aligns with sample standard deviation.
+[^STDdev]: It may be helpful in approximating the severity of the problem to remember that RMSE aligns with sample standard deviation in a normal distribution. No assumptions are made about distribution in this case, but in a normal distribution, a range of about 53 points on the scale would be required to represent 95% of contributions.
+ Alternately, the RMSE of uniformly distributed random judgments would be approximately 40-41. This would be the performance if an unbiased game of Plinko judged audio similarity.
 
 The noise presented here suggests a great deal of circumstance and randomness in evaluating music similarity algorithms for MIREX.
 
@@ -190,7 +191,7 @@ In other words, the notion that judges were internally consistent in a way that 
 
   > _RQ3_: Is subjectivity or disagreement of the grading task responsible for inconsistent reciprocal ratings?
 
-Would the same low consistent been seen if new judges were asked?
+Would the same low consistency be seen if new judges were asked?
 Getting a second opinion addresses two possibilities: expected error (good judges, biased task) and unexpected error (agreeable task, bad judges).
 
 To answer these two research questions, $156$ tasks were posted on Mechanical Turk.
@@ -200,7 +201,7 @@ In parameterizing the task for this study, worker judges were presented with a q
 The audio files were the same clips used in MIREX.
 
 Restrictions were not placed how fully the clips were listened to, and in fact the average task time was lower than the length of the clips.
-The task was carefully designed were also careful to mimic the question phrasing and level of guidance from the original task.
+The task was carefully designed to mimic the question phrasing and level of guidance from the original task.
 As a result, Turk workers are potentially less fatigued [@lee_crowdsourcing_2010], but may also be less experienced.
 This was done both due to the conventions of Mechanical Turk and because our MIREX data was not rich enough to emulate the order or continuity of task sets.
 Thus, any priming effects from the series of songs would not translate here.

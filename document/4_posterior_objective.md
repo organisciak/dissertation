@@ -45,7 +45,7 @@ This chapter makes the following contributions:
 - Evaluation of a number of approaches for separating worker quality from rating difficulty, including dwell time, worker experience, task difficulty, and agreement with other workers. 
 - Introduction of an iterative algorithm that allows task difficulty (inherent disagreement) to be disambiguated from worker reliability (i.e. synthetic disagreement).
 
-The scope of this study is in relevance assessment for information retrieval related to the IMLS DCC cultural heritage aggregation.
+The scope of this study is in relevance assessment for information retrieval related to a cultural heritage aggregation.
 Relevance assessments are a vital part of information retrieval evaluation and help in addressing the unique search challenges faced by large aggregators of cultural heritage content.
 
 
@@ -128,7 +128,7 @@ In achieving these results, the ten teams used a variety of approaches, includin
 
 When measured by accuracy, the EM algorithm was among the most prominent.
 The best performing team against each evaluation set – BUPT-WILDCAT and uc3m, respectively – both had an EM implementation in their submission, though the latter was paired with a number of additional rules.
-However, uc3m's second, non-official run slightly outperformed the accuracy of their official submission with a support vector machine (SVM) approach[@urbano_university_2011].
+However, uc3m's second, non-official run slightly outperformed the accuracy of their official submission with an approach using support vector machines (SVM) [@urbano_university_2011].
 
 ## Approach
 
@@ -139,11 +139,11 @@ The factors that we consider are in the following three areas:
 
 -   _Temporality_.
 
-    __RQ1__: Does the length of time that a worker spends on a question reflect the quality of their rating?
+    __RQ 1.1__: Does the length of time that a worker spends on a question reflect the quality of their rating?
  
 -   _Experience_.
 
-    __RQ2__: Do workers grow more reliable over time?
+    __RQ 1.2__: Do workers grow more reliable over time?
 
     Can you account for the rating distribution given the worker's experience? In this study, tasks are grouped topically, by "queries".
     Workers were asked 'is this metadata record relevant to Query X' or 'what is the tone of Query X?'
@@ -151,9 +151,9 @@ The factors that we consider are in the following three areas:
 
 -   _Agreement_.
 
-    __RQ3__: Does a worker's agreement or disagreement with other workers reflect their overall quality as a worker?
+    __RQ 1.3__: Does a worker's agreement or disagreement with other workers reflect their overall quality as a worker?
 
-    __RQ4__: If so, can disagreement be used for data improvements?
+    __RQ 1.4__: If so, can disagreement be used for data improvements?
 
 Most of the evaluations are measured through accuracy, which is percentage of correct classifications that are made:
 
@@ -211,7 +211,7 @@ These were used for evaluation.
 
 ## Temporality
 
- > __RQ1__: Does the length of time that a worker spends on a question reflect the quality of their rating?
+ > __RQ 1.1__: Does the length of time that a worker spends on a question reflect the quality of their rating?
 
 Among the statistics collected for the relevance judgment dataset was _dwell time_: the time spent on each rating.
 The hypothesis motivating this metric was that dwell time was not significant when understood independently, but might indicate the quality of workers when taking into account the order in which tasks were completed.
@@ -221,8 +221,8 @@ Since tasks were done in sets of ten, the order referred to where in this set th
 
 Order served as a useful grouping factor because the time spent on the first rating is confounded with the time spent reading the rating instructions, which is to say that the two are inseparable.
 Figure @fig:ch3-dwell1 shows the distribution of worker performance by dwell time alone.
-As expected, a correct classification do tend to take slightly more time, 
-there is not enough evidence to reject the null hypothesis of equal distributions.
+As expected, a correct classification does tend to take slightly more time, 
+but there is not enough evidence to reject the null hypothesis of equal distributions.
 Thus, for this the setting of cultural heritage retrieval relevance judgments, dwell time alone is insignificant to performance (Wilcoxon rank sum $p=0.064$; $p=0.154$ when excluding extreme outliers).
 
 However, dwell time considered alongside the order or task completion (i.e. how much time was spent on the first task? On the second?) tells a more complete story.
@@ -249,12 +249,12 @@ Figure @fig:ch3-prob-after-first shows this to be the case, with workers that ma
 As part of the rating instructions, workers were presented with a description of what types of results are relevant to the given query (see screenshot in Figure @fig:ch3ratedist).
 If a worker does not read this section carefully, their ratings would be more interpretive, possibly resulting in inconsistencies with workers that followed the instructions more carefully.
 
-With regards to _RQ1_, the amount of time that a user spends on each task is not, by itself, an indicator of a quality contribution.
+With regard to _RQ 1.1_, the amount of time that a user spends on each task is not, by itself, an indicator of a quality contribution.
 However, workers that spend more time at the start of a task set, particularly before their first contribution, _are_ shown to perform better.
 
 ### Experience
 
- > __RQ2__: Do workers grow more reliable over time?
+ > __RQ 1.2__: Do workers grow more reliable over time?
 
 An extension of the order grouping factor, the next factor considered was the long-term experience of a worker.
 Experience was looked at in two forms: lifetime experience and query experience.
@@ -284,14 +284,16 @@ However, ratings beyond that point showed a sharp increase in quality.
 What is unclear, is whether this is an effect of improvement through experience, or self-selection by better workers.
 Regardless, for the purposes of determining what information to trust from a data perspective, this distinction is not greatly important.
 
-With regard to RQ2, workers do not appear to improve with practice for the type of task studied.
+With regard to RQ 1.2, workers do not appear to improve with practice for the type of task studied.
+The sole exception is the most experienced experienced workers, which may be a factor related to the self-selection of which workers stay around for that long.
+<!-- TODO: redraw chart with stardard error bars -->
 As noted above, it only took about two ratings for most workers to get into the groove of relevance judgments.
 
 ## Worker Agreement and Task Difficulty
 
- > __RQ3__: Does a worker's agreement or disagreement with other workers reflect their overall quality as a worker?
+ > __RQ 1.3__: Does a worker's agreement or disagreement with other workers reflect their overall quality as a worker?
 
- > __RQ4__: Can disagreement be used for data improvements?
+ > __RQ 1.4__: Can disagreement be used for data improvements?
 
 Finally, in addition to worker experience and time spent per tasks, this chapter looks at the ability of worker agreement and task difficulty to discern the accuracy of ratings.
 The reason that these were considered together is that they are invariably confounded: a task has as little as three ratings informing any estimates of the quality, and those ratings are each biased by the quality of the specific workers involved.
@@ -514,7 +516,7 @@ More information can become available by including more categories or increasing
 However, including more workers also has a positive effect on quality.
 Thus, the experience of this study is that for binary labels, majority rating is generally robust enough.
 
-With regards to RQ3: agreement does seem to indicate quality for objective-normative tasks. However, while removing high disagreement workers improves, well, measures of agreement, for low granularity tasks like relevance judgments it more fruitful to collect multiple independent contributions rather that seeking to punish the black sheep workers.
+With regard to RQ 1.3: agreement does seem to indicate quality for objective-normative tasks. However, while removing high disagreement workers improves, well, measures of agreement, for low granularity tasks like relevance judgments it more fruitful to collect multiple independent contributions rather that seeking to punish the black sheep workers.
 Still, for more complex data like the Twitter sentiment ratings, correcting judgments based on measures of a worker's quality (by proxy of agreement) is effective.
 
 ## Conclusion
@@ -538,4 +540,4 @@ It was found that high disagreement among non-expert workers is not necessarily 
 Low inter-rater agreement may indicate a difficult task or individual rogue workers.
 While inter-rater agreement can be increased significantly by replacing the work of low quality workers, the improvement in accuracy is less defined.
 
-\newthought{These results shed light on} the characteristics of workers on a simple relevance judgment tasks. However, the most interesting finding seems to suggest the important of a worker's time spent internalizing the codebook. Are there ways to encourage this sort of behavior? What other changes can we make through collection-time tweaks? The next chapter shifts focus to these issues.
+\newthought{These results shed light on} the characteristics of workers on a simple relevance judgment tasks. However, the most interesting finding seems to suggest the importance of a worker's time spent internalizing the codebook. Are there ways to encourage this sort of behavior? What other changes can we make through collection-time tweaks? The next chapter shifts focus to these issues.
