@@ -786,7 +786,7 @@ Following from this, tagging is particularly helpful for difficult to model form
 Tagging has been used to encode scans of text [@von_ahn_recaptcha_2008], improve information retrieval document modelling [@lamere_social_2008; @bao_optimizing_2007], augment personalized search [@lerman_personalizing_2007; @noll_web_2007].
 
 Tagging also promises, in theory, a break from the Vocabulary Problem [@furnas_vocabulary_1987].
-Furnas et al. performed a set of term generation experiments in 1987 where the asked participants to describe functions or objects.
+Furnas et al. performed a set of term generation experiments in 1987 where they asked participants to describe functions or objects.
 They found that the amount of spontaneous consensus was very low, arguing that this problem of vocabulary becomes a user issue because different users expect different vocabularies.
 However, it's the designers who get to choose the primary vocabulary and, "as heavy users, grow to find [their] terms obvious and natural" (ibid).
 
