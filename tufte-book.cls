@@ -23,7 +23,7 @@
 \renewcommand\frontmatter{%
   \cleardoublepage%
   \@mainmatterfalse%
-  \pagenumbering{arabic}%
+  \pagenumbering{roman}%
   %\pagestyle{plain}%
   \fancyhf{}%
   \ifthenelse{\boolean{@tufte@twoside}}%
@@ -37,17 +37,10 @@
 % numbering---it continues where it left off in the front matter.
 \renewcommand\mainmatter{%
   \cleardoublepage%
+  \pagenumbering{arabic}%
   \@mainmattertrue%
   \fancyhf{}%
-  \ifthenelse{\boolean{@tufte@twoside}}%
-    {% two-side
-      \renewcommand{\chaptermark}[1]{\markboth{##1}{}}%
-      \fancyhead[LE]{\thepage\quad\smallcaps{\newlinetospace{\plaintitle}}}% book title
-      \fancyhead[RO]{\smallcaps{\newlinetospace{\leftmark}}\quad\thepage}% chapter title
-    }%
-    {% one-side
-      \fancyhead[RE,RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\thepage}% book title
-    }%
+  \fancyhead[RE,RO]{\smallcaps{\newlinetospace{\leftmark}}\quad\thepage}% chapter title
 }
 
 
