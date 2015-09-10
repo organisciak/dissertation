@@ -239,10 +239,12 @@ Figure @fig:ch3-prob-after-first shows this to be the case, with workers that ma
 As part of the rating instructions, workers were presented with a description of what types of results are relevant to the given query (see screenshot in Figure @fig:ch3ratedist).
 If a worker does not read this section carefully, their ratings would be more interpretive, possibly resulting in inconsistencies with workers that followed the instructions more carefully.
 
-With regard to _RQ 1.1_, the amount of time that a user spends on each task is not, by itself, an indicator of a quality contribution.
-However, workers that spend more time at the start of a task set, particularly before their first contribution, _are_ shown to perform better.
+\marginnote{Answer \em{RQ 1.1})}
 
-### Experience
+ > __Answer (RQ1.1)__: the amount of time that a user spends on each task is not, by itself, an indicator of a quality contribution.
+ However, workers that spend more time at the start of a task set, particularly before their first contribution, \em{are} shown to perform better.
+
+## Experience
 
  > __RQ 1.2__: Do workers grow more reliable over time?
 
@@ -268,18 +270,21 @@ Similarly, in the secondary dataset of Twitter sentiment ratings, workers were a
 
 ![Average accuracy of workers' nth contribution with a query. Only points aggregating 20 or more workers are shown.](../images/ch4-query-exp.png) {#fig:query-experience}
 
+<!-- TODO: redraw chart with standard error bars -->
+
 Query experience proved to be an indicator of worker quality among the most experienced users, but not notable otherwise (Figure @fig:query-experience).
 For approximately the first thirty tasks which workers completed with a single query, they did not demonstrate any meaningful difference in quality.
 However, ratings beyond that point showed a sharp increase in quality.
 What is unclear, is whether this is an effect of improvement through experience, or self-selection by better workers.
 Regardless, for the purposes of determining what information to trust from a data perspective, this distinction is not greatly important.
 
-With regard to RQ 1.2, workers do not appear to improve with practice for the type of task studied.
-The sole exception is the most experienced experienced workers, which may be a factor related to the self-selection of which workers stay around for that long.
-<!-- TODO: redraw chart with stardard error bars -->
-As noted above, it only took about two ratings for most workers to get into the groove of relevance judgments.
+\marginnote{Answer (\em{RQ1.2})}
 
-## Worker Agreement and Task Difficulty
+  > __Answer (RQ1.2)__: Workers do not appear to improve with practice for the type of task studied.
+  The sole exception is the most experienced experienced workers, which may be a factor related to the self-selection of which workers stay around for that long.
+  As noted above, it only took about two ratings for most workers to get into the groove of relevance judgments.
+
+## Worker Agreement
 
  > __RQ 1.3__: Does a worker's agreement or disagreement with other workers reflect their overall quality as a worker?
 
@@ -506,8 +511,11 @@ More information can become available by including more categories or increasing
 However, including more workers also has a positive effect on quality.
 Thus, the experience of this study is that for binary labels, majority rating is generally robust enough.
 
-With regard to RQ 1.3: agreement does seem to indicate quality for objective tasks. However, while removing high disagreement workers improves, well, measures of agreement, for low granularity tasks like relevance judgments it more fruitful to collect multiple independent contributions rather that seeking to punish the black sheep workers.
-Still, for more complex data like the Twitter sentiment ratings, correcting judgments based on measures of a worker's quality (by proxy of agreement) is effective.
+\marginnote{Answer (\em{RQ1.3, RQ1.4})}
+
+ > __Answer (RQ1.3, RQ1.4)__: Agreement does appear to indicate quality for objective tasks.
+ However, while removing high disagreement workers improves, well, measures of agreement, for low granularity tasks like relevance judgments it more fruitful to collect multiple independent contributions rather that seeking to punish the black sheep workers.
+ Still, for more complex data like the Twitter sentiment ratings, correcting judgments based on measures of a worker's quality (by proxy of agreement) is effective.
 
 ## Conclusion
 
