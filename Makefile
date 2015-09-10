@@ -58,10 +58,10 @@ tex: refs
 
 pdf: refs tex
 	# Compile to PDF and view
-	export TEXINPUTS=document//:
-	pdflatex --include-directory=document $(name)
+	export TEXINPUTS=document//:texstyles//
+	pdflatex --include-directory=document --include-directory=texstyles $(name)
 	biber $(name)
-	pdflatex --include-directory=document $(name)
+	pdflatex --include-directory=document --include-directory=texstyles $(name)
 	# Check if I'm using any ill-advised subsubsubheadings
 	# grep -q "#####" document/*md
 
