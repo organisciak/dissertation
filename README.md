@@ -11,7 +11,7 @@ Maximizing data quality in using paid crowds for objective and subjective encodi
 2. [Overview of Crowdsourcing](document/2_crowdsourcing.md)
 3. [Design Facets of Crowdsourcing: A Typology for Information Science](document/3_typology.md)
 4. [Interpreting Objective Tasks for Paid Crowdsourcing](document/4_posterior_objective.md)
-5. (Designing Tasks for Objective Needs)[document/5_design_objective.md] ([Part 2](document/5_5_ams-study.md))
+5. [Designing Tasks for Objective Needs](document/5_design_objective.md), [part 2](document/5_5_ams-study.md)
 6. [Designing Tasks for Subjective Needs](document/6_subjective.md)
 7. [Summary and Conclusions](document/7_conclusions.md)
 
