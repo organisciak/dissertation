@@ -29,7 +29,7 @@ Maximizing data quality in using paid crowds for objective and subjective encodi
 
 This project outlines Peter's dissertation research and writing.
 
-Writing can be found in #/documents, one document per chapter. It's written in Markdown (a text-only format), but is easily converted to laTex or HTML with [Pandoc http://johnmacfarlane.net/pandoc/getting-started.html].
+Writing can be found in [/documents](documents/), one document per chapter. It's written in Markdown (a text-only format), but is easily converted to laTex or HTML with [Pandoc](http://johnmacfarlane.net/pandoc/getting-started.html).
 
 
 ## To Compile
