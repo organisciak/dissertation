@@ -1,6 +1,5 @@
 pandoc_args = -f markdown --filter pandoc-tablenos --filter pandoc-fignos --bibliography=refs.bib --smart
-#name =thesis
-name=thesis-tufte
+name=dissertation
 data= logs/stats.csv
 progressfile='./progress/data.csv'
 
