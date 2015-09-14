@@ -282,7 +282,7 @@ Finally, an empty 'tab' to collapse the instructions completely was added. This 
 Figure {@fig:basic-inturk} shows the limited task space when it is embedded within the Mechanical Turk interface.[^TagDifficulty]
 Collapsible instructions have been recommended previously [@chen_making_2012; @chen_mechanical_2012].
 
-![Screenshot of task within the Mechanical Turk interface.](images/design-basic-inturk.png) {#fig:basic-inturk}
+![Screenshot of task within the Mechanical Turk interface.](../images/design-basic-inturk.png) {#fig:basic-inturk}
 
 [^TagDifficulty]: Incidentally, Figure {@fig:basic-inturk} also shows of the more challenging images to tag. How would you tag them? 
 
@@ -297,9 +297,9 @@ Instead, even for the basic interface, improper work that would have been reject
 For example, workers were asked for a minimum of two tags in the tagging task; as shown in Figure @fig:basicvalidation, they could not submit before entering two tags.
 To account for instances where a second tag was too difficult to create, workers could also add a placeholder 'TOOHARD' tag, which the interface alerted a worker to if their cursor was inactive for a few seconds (Figure @fig:tippopup).
 
-![Screenshot of contribution validation, which informs contributors of issues before submission](images/design-basic-validation.png) {#fig:basicvalidation}
+![Screenshot of contribution validation, which informs contributors of issues before submission](../images/design-basic-validation.png) {#fig:basicvalidation}
 
-![An example of the suggestion message in the basic condition of the tagging task, which appears after the input field is active for a small period.](images/design-basic-tippopup.png) {#fig:tippopup}
+![An example of the suggestion message in the basic condition of the tagging task, which appears after the input field is active for a small period.](../images/design-basic-tippopup.png) {#fig:tippopup}
 
 [^Workers]: These unofficial guidelines, on the Dynamo Wiki, were written collaboratively by academic researchers and Mechanical Turk workers.
 
@@ -328,7 +328,7 @@ However, removing the most difficult items from the post-training pool would unf
 During the training interface, workers are greeted with a message noting that their first task will be atypical, in that answers will be provided.
 The tasks set itself appears similar to a basic interface taskset, except that the individual items have a 'Check your Answer' button (Figure @fig:trainexample1).
 
-![Item in a training condition, before and after checking the answer.](images/upcycletrain1.png) {#fig:trainexample1}
+![Item in a training condition, before and after checking the answer.](../images/upcycletrain1.png) {#fig:trainexample1}
 
 To better guide workers and for a clearer understanding of how the worker is performing, the 'Check Answer' button is disabled until a submission is made, and the submission interface is disabled after the answer is checked.
 This helps explain to workers the intended order of contribution with minimal text: we want workers to try a contribution before checking their answer, and we don't want them changing the answer afterward.
@@ -342,7 +342,7 @@ This intervention amounts to a full screen window with the task instructions as 
 Contrary to the main training condition, workers do not have their own choices evaluated; instead, INSTRUCT focuses on recontextualizing the standard training instructions in a direct manner, one that has to be explicitly dismissed.
 However, it is also applied alongside each task set, rather than existing solely as a first-interaction task.
 
-![Intervention in INSTRUCT condition](images/instructModal.png) {#fig:instruct-modal}
+![Intervention in INSTRUCT condition](../images/instructModal.png) {#fig:instruct-modal}
 
 To summarize, the TRAIN condition:
 
@@ -368,7 +368,7 @@ In the feedback interface, a worker is shown feedback about their estimated perf
 The first task that they complete is identical to the basic interface.
 Starting with the second task, however, the interface gives them a window with their estimated performance, relative to other workers.
 
-![Example of showing feedback shown to workers](images/performance-feedback.png) {#fig:showperformance}
+![Example of showing feedback shown to workers](../images/performance-feedback.png) {#fig:showperformance}
 
 The estimate of performance was determined differently for the different task types, image tagging and image relevance judgments, and is described in those respective sections.
 
@@ -390,7 +390,7 @@ As with the training condition, workers are encouraged to continue performing ta
 This is because feedback is only applied starting with the second task.
 Base payment was \$0.05 lower than was provided for the basic interface, while the continued engagement bonus was \$0.10 per task.
 
-![Message encouraging repeat work](images/design-stickaround.png) {#fig:staybonus}
+![Message encouraging repeat work](../images/design-stickaround.png) {#fig:staybonus}
 
 In sum, of the ample ways to design a feedback mechanism, this study's condition:
 
@@ -416,7 +416,7 @@ Instead, this design seeks to encourage _flow_ [@csikszentmihalyi_flow_1991], wh
 To avoid the potential distress of thinking about what is to come, this interface does not show a list of tasks to complete (e.g. "complete these ten tasks in a minute").
 Instead, tasks are shown one at a time (e.g. "See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers. Figure @fig:fast-screen shows an example of the interface.
 
-![Task in FAST design.](images/fastScreen.png) {#fig:fast-screen}
+![Task in FAST design.](../images/fastScreen.png) {#fig:fast-screen}
 
 Determining a payment is nuanced for this condition.
 Bonuses are bound in promises: there is no system restraint to guarantee payment other than the requester's word.
@@ -613,7 +613,7 @@ TRAIN       0.780    0.800    0.214
 
 Table: Statistics for the likelihood of a document's relevance being correctly judged, by condition. Significance marks rejection of equal distribution to the baseline (Mann-Whitney U, Bonferroni-adjusted significance at 0.05 - \*, 0.01 - \*\*, and 0.001 - \*\*\*). {#tbl:byItemRelStats}
 
-![Distribution of correct judgments by item, shown by condition. The Lower quartile is marked by dotted lines and the median is marked by a dashed line.](images/byItemRelevanceCorrect.png) {#fig:byItemRelChart}
+![Distribution of correct judgments by item, shown by condition. The Lower quartile is marked by dotted lines and the median is marked by a dashed line.](../images/byItemRelevanceCorrect.png) {#fig:byItemRelChart}
 
 How good were the workers on average? Table @tbl:byWorkerRelStats shows the median and mean quality of worker, scored by their accuracy rate.
 This does not take into account whether workers were given easy or difficult tasks to perform or if some documents were judged more than others, but it reflects the same order of INSTRUCT, FDBK, TRAIN, BASE, as was seen above.
@@ -648,7 +648,7 @@ Table: Time spent per relevance judgment in each condition. Significance marks r
 
 \clearpage
 
-![Comparison of time spent per task, in seconds (n=12667)](images/relevanceTime1.png) {#fig:relevance-time}
+![Comparison of time spent per task, in seconds (n=12667)](../images/relevanceTime1.png) {#fig:relevance-time}
 
 Considering this data by mean user time, to reduce the influence of outliers, tells a comparable story.
 Viewed in this manner, the time-limited interface and the baseline were comparable, while feedback and training shortened the mean time of the average worker.
@@ -698,9 +698,9 @@ Figure @fig:rel-task-satisfaction shows the distribution of task satisfaction sc
 In all cases, they were skewed toward the upper end -- the median is 5 for each condition -- as may not be surprising.
 The main point to note is that none of the conditions are troublesome for workers, and that workers in the pseudo-competitive conditions (FAST and FDBK) seem to enjoy the tasks slightly more.
 
-![Relevance judgment task satisfaction scores, by condition.](images/taskSatisfaction-relevance.png) {#fig:rel-task-satisfaction}
+![Relevance judgment task satisfaction scores, by condition.](../images/taskSatisfaction-relevance.png) {#fig:rel-task-satisfaction}
 
-![Relevance judgment payment satisfaction scores, by condition.](images/paySatisfaction-relevance.png) {#fig:rel-pay-satisfaction}
+![Relevance judgment payment satisfaction scores, by condition.](../images/paySatisfaction-relevance.png) {#fig:rel-pay-satisfaction}
 
 A related question is whether a person's rank -- as given in the feedback condition -- affected their satisfaction.
 There were not enough measurements for a non-parametric comparison, but it did not appear to be a notable factor.
@@ -732,7 +732,7 @@ One possible explanation is that, while workers in the 60th percentile slowed do
 The goal of the performance feedback was to give honest but poorly performing workers an indicator of lower quality contributions.
 This somewhat performed its function in the middle of the pack, but didn't compel the poorest workers.
 
-![Comparison of the time workers in the Feedback condition spent on relevance judgments against their percentile rank, as provided to them.](images/relFdbkByRank.png) {#fig:relFeedbackByRank}
+![Comparison of the time workers in the Feedback condition spent on relevance judgments against their percentile rank, as provided to them.](../images/relFdbkByRank.png) {#fig:relFeedbackByRank}
 
 
 \newthought{Work in the first-task training condition}, TRAIN, was not significantly different in quality from the baseline, which appears to confirm that training on one query does not assist in completing relevance judgments for other queries.
@@ -748,7 +748,7 @@ A possible explanation is that image relevance judgments are already a very quic
 The one-at-a-time fast interface may have stood in the way of workers' comprehension of the entire task set: where in a traditional setting they can click on their answer and already be thinking about the next one, here they had to click again to move to the next task.
 It is possible that for relevance judgments over more complex types of documents, the fast interface would perform differently, akin to what will be seen in the next experiment.
 
-![Likelihood of correct relevance judgment shown by query](images/byQueryPerformance.png) {#fig:byQueryRelPerformance}
+![Likelihood of correct relevance judgment shown by query](../images/byQueryPerformance.png) {#fig:byQueryRelPerformance}
 
 \newthought{A comparison of performance per query} (Figure @fig:byQueryRelPerformance) offers some insight as to the relative strengths and weaknesses of the various conditions.
 
@@ -911,7 +911,7 @@ These were evaluated on their own merits against the goals stated in the task --
 
 A relationship between good tags and how often they were applied if weak at best, only for tags used very often, eight times or more. Tags applied a handful of times were not any better than tags applied once or twice.
 
-![Relationship between the tag length (by character count) and tag quality. N=1976.](images/tagLength2.png) {#fig:tagLength2.png}
+![Relationship between the tag length (by character count) and tag quality. N=1976.](../images/tagLength2.png) {#fig:tagLength2.png}
 
 There does appear to be a relationship between strong tags and tag length, in that moderate to long length tags are better than short tags and -- to the extent that there was data -- very long tags.
 Figure @fig:tagLength2 demonstrates this relationship clearly.
@@ -920,12 +920,12 @@ Figure @fig:tagLength2 demonstrates this relationship clearly.
 
 Figure @fig:tagQualities shows the quality distribution of tags applied in each condition, not factoring in user or item effects. Performing a Kruskal-Wallis ranked test comparing the conditions to the baseline, we find that TRAIN and FAST are different distributions than BASE, at $\alpha=0.001$, but we fail to reject the null hypothesis of equal medians for FDBK.
 
-![Proportions of tags which were poor, okay, good, or great, by condition.](images/tagQuality.png) {#fig:tagQualities}
+![Proportions of tags which were poor, okay, good, or great, by condition.](../images/tagQuality.png) {#fig:tagQualities}
 
 If we assume that the difference between the ground truth categories is roughly linear -- e.g. that a rating of 4 ('great') is twice as good as a rating of 2 ('okay') -- then the quality ranks can be averaged. Controlling by item, Figure @fig:tagItemQualities shows the distribution of average qualities for each image, with accompanying statistics in Table @tbl:tagItemQualities2.
 Each datum represents the average quality for one of the 100 tags studies; for example, a median of 3.00 for the TRAIN condition means that for half of the tags, you are likely to get a tag that is at the 'good' end of the scale.
 
-![Distribution of each item's average tag quality.](images/tagItemQuality.png) {#fig:tagItemQualities}
+![Distribution of each item's average tag quality.](../images/tagItemQuality.png) {#fig:tagItemQualities}
 
 condition  mean     median   std   
 ---------- -------- -------- ------
@@ -940,7 +940,7 @@ Table: Statistics for average item tag quality. {#tbl:tagItemQualities2}
 This contrasts with the earlier relevance judgment experiment.
 Like the earlier experiment, however, the feedback condition also shortened workers' per-task completion time.
 
-![Distribution of time spent, per tagged item, for each condition. Kernel density shown rather than nominal counts, to account for variations in N.](images/tagTime1.png) {#fig:tag-time1}
+![Distribution of time spent, per tagged item, for each condition. Kernel density shown rather than nominal counts, to account for variations in N.](../images/tagTime1.png) {#fig:tag-time1}
 
 The relative difference in per-item tagging tasks is shown in Figure @fig:tag-time1.
 To avoid misleading graphics due to difficulties in controlling for N, the kernel density estimates are shown rather than counts.
@@ -961,9 +961,9 @@ Comparisons to the baseline rejected equality with the baseline, though for the 
 
 \newthought{The rated satisfaction} of the task by workers is shown in Figure @fig:tagTaskSatisfaction, and their satisfaction with the payment are shown in Figure @fig:tagPaySatisfaction.
 
-![Task satisfaction ratings for tagging task.](images/taskSatisfaction-tag.png) {#fig:tagTaskSatisfaction}
+![Task satisfaction ratings for tagging task.](../images/taskSatisfaction-tag.png) {#fig:tagTaskSatisfaction}
 
-![Pay satisfaction ratings for tagging task.](images/paySatisfaction-tag.png) {#fig:tagPaySatisfaction}
+![Pay satisfaction ratings for tagging task.](../images/paySatisfaction-tag.png) {#fig:tagPaySatisfaction}
 
 Satisfaction with both the task and pay are similar.
 The TRAIN condition is heavily skewed upward, while the basic interface received notably poor feedback.

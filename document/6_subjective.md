@@ -129,7 +129,7 @@ The underlying intuition pursued by taste-matching is that people who perform si
 Taste-matching pursues this notion by asking the requester being personalized for to complete a small task in the same manner as the workers will be expected to complete it.
 The results of this task compose a profile of the requester.
 
-![Simplified example of Taste-Matching protocols.](images/matching-example1.png) {#fig:matching-example1}
+![Simplified example of Taste-Matching protocols.](../images/matching-example1.png) {#fig:matching-example1}
 
 Figure @fig:matching-example1 illustrates a simple taste-matching setting.
 As new workers arrive, they complete the same task set as the requester, and a similarity process is used to measure how similar their work is to the requester profile.
@@ -150,7 +150,7 @@ Taste-grokking considers a different intuition than taste-matching: that workers
 'Grokking', a term referring to interpreted understanding, belies the human activity underlying this protocol.
 Whereas taste-matching performs an algorithmic similarity matching based on requester and worker profiles, taste-grokking leaves the personalization logic to worker interpretation.
 
-![Simplified example of Taste-Grokking protocol](images/personalizedXX2.png) {#fig:personalizedXX2}
+![Simplified example of Taste-Grokking protocol](../images/personalizedXX2.png) {#fig:personalizedXX2}
 
 As illustrated in Figure @fig:personalizedXX2, taste-grokking workers are shown a requester's profiling set and asked a variant of the question, 'how do you think the requester would perform the next tasks?' For example, with the product image rating task, workers were shown a requester's ratings for a few items, and asked to rate what the requester's opinion would be for additional products.
 
@@ -363,7 +363,7 @@ recommended ratings were aggregated with a simple mean.
 Aggregating through the mean of five workers' predictions provides improvements of 34% for salt and pepper shaker taste prediction, and 9% and 19% for the cuisine tasks.
 The choice to aggregate 5 workers is motivated by a recommendation in @novotney_cheap_2010 for a different task type but with similar complexity.
 
-![Performance of opinion predictions aggregated from top workers, as determined by a held-out cross-validation set.](images/topgrokkers.png) {#fig:top-grokkers}
+![Performance of opinion predictions aggregated from top workers, as determined by a held-out cross-validation set.](../images/topgrokkers.png) {#fig:top-grokkers}
 
 Using a cross-validation set of ten ratings to identify and aggregate top workers improves the quality of predictions further, though at the cost and time of collecting additional recommendations.
 Figure @fig:top-grokkers
@@ -392,9 +392,9 @@ The time is measured from the start to end of the worker interaction,
 for a set of 100 ratings for taste-matching or 90 rating predictions for taste-grokking.
 As such, part of the time spent might be related to the reading of instructions, which may also contribute to differences between the two protocols.
 
-![Taste-Grokking performance for each individual requester x profiling set experiment.](images/taste-grokking-performance1.png) {#fig:tastegrokkingPerformance}
+![Taste-Grokking performance for each individual requester x profiling set experiment.](../images/taste-grokking-performance1.png) {#fig:tastegrokkingPerformance}
 
-![Comparison of time per item rating spent by workers in taste-grokking and taste-matching](images/personalization-time-spent.png) {#fig:subjTimeSpent}
+![Comparison of time per item rating spent by workers in taste-grokking and taste-matching](../images/personalization-time-spent.png) {#fig:subjTimeSpent}
 
 \newthought{When collecting taste-matching data}, a tertiary evaluation was done where workers were not only asked to provide a rating of their opinion,
 but were also asked 'what is your reason for this rating?' It was found that by asking workers to contemplate and explicate their reasoning for judgments, their behaviors changed.
@@ -418,7 +418,7 @@ The reason the bottom set in Figure @fig:goodPoorGrokking performed poorly is on
 The taste cluster examples in Figure @fig:cluster-examples show that this is a large facet of the space.
 However, of the nine workers that left feedback for the poorly recommended task, none expressed concerns about the training set.
 
-![An example of a taste-grokking communication set where workers’ subsequent predictions were very strong (top, RMSE=0.87) and poorly (bottom, RMSE=1.47). The example do not correspond to the same requester.](images/goodPoorGrokking.png) {#fig:goodPoorGrokking}
+![An example of a taste-grokking communication set where workers’ subsequent predictions were very strong (top, RMSE=0.87) and poorly (bottom, RMSE=1.47). The example do not correspond to the same requester.](../images/goodPoorGrokking.png) {#fig:goodPoorGrokking}
 
 In the results presented, the items used for profiling and subsequently for profiling in taste-grokking were selected randomly.
 Random selection can potentially fail when there are many decision dimensions to communicate, as was observed for taste-grokking over cuisine.
@@ -434,9 +434,9 @@ The intention was to capture the breadth of tastes.
 Using an optimized selection of items in the profiling set improved performance greatly over the salt and pepper shaker prediction task.
 Figure @fig:aggregation shows the quality of aggregating 1-30 workers; for comparison to Table @tbl:grokking-performance, aggregating 5 random workers gave an RMSE of $1.04$.
 
-![Example of salt-and-pepper clusters, k=10](images/subj-examples.png) {#fig:cluster-examples}
+![Example of salt-and-pepper clusters, k=10](../images/subj-examples.png) {#fig:cluster-examples}
 
-![Performance of optimized training set for predicting product opinions, aggregating multiple workers](images/subj-aggregation.png) {#fig:aggregation}
+![Performance of optimized training set for predicting product opinions, aggregating multiple workers](../images/subj-aggregation.png) {#fig:aggregation}
 
 Predicting a requester's rating was a suitable application of personalized crowdsourcing for two image recommendation tasks.
 Both taste-grokking and taste-matching improved over the baseline.
@@ -574,7 +574,7 @@ The proportion of one-hundred evaluators that answered “Yes” to the question
 
 ### Style-Matching
 
-![Handwriting imitation example, showing imitators, true sample, and non-imitated distractors](images/handwriting-example.png) {#fig:handwriting-example}
+![Handwriting imitation example, showing imitators, true sample, and non-imitated distractors](../images/handwriting-example.png) {#fig:handwriting-example}
 
 Handwriting was assumed to be too varied for workers to match well to requesters within a reasonable worker pool size.
 Matching was nonetheless measured for comparison: how similar any given sample is to the requester's, and whether more similar handwriting on the target phrase predicts similarity on the testing phrase.
@@ -597,7 +597,7 @@ $0.17$ - i.e., 17% of the time workers thought that the evaluated sample was wri
 This was low, but expected, given how different handwriting may be.
 On the upper end, the requester's true handwriting scored $0.83$ providing an insight into the cautiousness of evaluators.
 
-![Success of handwriting samples in passing for the requester’s handwriting, in percentage. The performance of the best grokked sample from a set of 1...5 shown, and the best non-grokked sample from 1...13.](images/handwriting-success.png) {#fig:handwriting-success}
+![Success of handwriting samples in passing for the requester’s handwriting, in percentage. The performance of the best grokked sample from a set of 1...5 shown, and the best non-grokked sample from 1...13.](../images/handwriting-success.png) {#fig:handwriting-success}
 
 Matching ranked as poorly as expected.
 Figure @fig:handwriting-success shows the score of the best of $k$ random samples in people's own handwriting.

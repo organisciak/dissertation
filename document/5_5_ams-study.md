@@ -69,7 +69,7 @@ RMSE is generally meaningful in comparison, but for a sense of the variance with
 Alternately, the FINE scale judgements are plotted in Figure {@fig:recip-fine}, which shows this variance clearly.
 The slope shows the expected relationship if similarity was an agreeable metric independent of "which song is listened to first" order effects – an assumption implicitly made in treating similarity as something that can be evaluated.
 
-![Audio similarity judgments for (Song _x_, Song _y_) pairs judged in multiple years.](images/reciprocal-scores.png) {#fig:recip-fine}
+![Audio similarity judgments for (Song _x_, Song _y_) pairs judged in multiple years.](../images/reciprocal-scores.png) {#fig:recip-fine}
 
 [^STDdev]: It may be helpful in approximating the severity of the problem to remember that RMSE aligns with sample standard deviation in a normal distribution. No assumptions are made about distribution in this case, but in a normal distribution, a range of about 53 points on the scale would be required to represent 95% of contributions.
  Alternately, the RMSE of uniformly distributed random judgments would be approximately 40-41.
@@ -119,7 +119,7 @@ In line with the thrust of this dissertation, I focus on measuring how much of t
 The rest of this chapter will at consider 1) corrections for user-specific biases, 2) multiple-keyed judgments, and 3) a task design.
 While order effect are not focused on, partially because their measurement is possibly confounded by the other issues, this chapter's positive results -- showing improved judgment consistency -- provide a better sense of the magnitude at which such effects might exist.
 
-![Distribution of FINE scores relative to BROAD categories](images/broad-histogram.png) {#fig:all-dist}
+![Distribution of FINE scores relative to BROAD categories](../images/broad-histogram.png) {#fig:all-dist}
 
 ## Related Work
 

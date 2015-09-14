@@ -178,7 +178,7 @@ The unknown option was considered a skipped option and the data was removed from
 Annotations were collected through Amazon's Mechanical Turk service, using a custom rating interface.
 When a worker accepted a judgment task, they were shown a page with a query, description of the task, description of the coding manual (i.e. what types of documents should be rated as relevant), and up to ten ribbons of documents to rate (see Figure @fig:ch3interface).
 
-![The rating interface.](images/ch3-rating-interface.png) {#fig:ch3interface}
+![The rating interface.](../images/ch3-rating-interface.png) {#fig:ch3interface}
 
 The structured form of digital item records lends itself well to such tasks, which we represented through the title, description, and related image thumbnail.
 To aid the task of scrolling through ratings and decrease the time spent on tasks, our interface automatically scrolled to the next tasks once the previous one was rated.
@@ -196,7 +196,7 @@ Note that not all sets of tasks had ten items, as our system would track tasks t
 Originally $17700$ data points were collected, though this was later increased to just under $23000$.
 The average amount of time spent on each individual item was $4.8$ seconds, with half of all ratings being done in less than $1.8$ seconds and full rating sets being completed in an average time of $37.3$ seconds.
 
-![The number of ratings contributed per rater, roughly following a power-law distribution.](images/ch3-contributiondist.png) {#fig:ch3ratedist}
+![The number of ratings contributed per rater, roughly following a power-law distribution.](../images/ch3-contributiondist.png) {#fig:ch3ratedist}
 
 There were $157$ unique workers that contributed ratings, rating an average of $141.9$ tasks.
 The most dedicated worker completed a total of 1404 ratings.
@@ -217,7 +217,7 @@ Among the statistics collected for the relevance judgment dataset was _dwell tim
 The hypothesis motivating this metric was that dwell time was not significant when understood independently, but might indicate the quality of workers when taking into account the order in which tasks were completed.
 Since tasks were done in sets of ten, the order referred to where in this set they occurred.
 
-![Frequency distribution of the average amount of time that users spent on the tasks that they rated incorrectly and those they rated correctly.](images/ch3-dwell.png) {#fig:ch3-dwell1}
+![Frequency distribution of the average amount of time that users spent on the tasks that they rated incorrectly and those they rated correctly.](../images/ch3-dwell.png) {#fig:ch3-dwell1}
 
 Order served as a useful grouping factor because the time spent on the first rating is confounded with the time spent reading the rating instructions, which is to say that the two are inseparable.
 Figure @fig:ch3-dwell1 shows the distribution of worker performance by dwell time alone.
@@ -242,7 +242,7 @@ The fact that a worker spending more time on the first rating indicates a higher
 
 If this is in fact what accounts for the significant different, it should be an effect that lingers across the full set of data.
 
-![Accuracy of workers on ratings after then first one, shown as density distribution of all workers. Dotted line shows workers that are correct on the first task, solid line shows workers that are incorrect.](images/ch3-prob-after-first.png) {#fig:ch3-prob-after-first}
+![Accuracy of workers on ratings after then first one, shown as density distribution of all workers. Dotted line shows workers that are correct on the first task, solid line shows workers that are incorrect.](../images/ch3-prob-after-first.png) {#fig:ch3-prob-after-first}
 
 Figure @fig:ch3-prob-after-first shows this to be the case, with workers that make a correct rating on the first item are much more reliable in the rest of the rating set.
 
@@ -264,7 +264,7 @@ Is a worker's 100th task more likely to be correct than their first task?
 The hypothesis motivating this was that over time workers would grow more reliable.
 However, this hypothesis proved to be incorrect.
 
-![Average accuracy of workers' nth contribution overall.](images/ch4-life-exp-redrawn2015.png) {#fig:ch4-lifeexp}
+![Average accuracy of workers' nth contribution overall.](../images/ch4-life-exp-redrawn2015.png) {#fig:ch4-lifeexp}
 
 Lifetime experience was not an indicator of contribution quality.
 Plotting makes the case emphatically: Figure @fig:ch4-lifeexp shows the distribution of ratings across lifetime experience.
@@ -276,7 +276,7 @@ The second measure of experience, query experience, refers to the number of task
 In information retrieval relevance judgments, workers are asked to judge whether a document is relevant to a given query; thus, the query experience.
 Similarly, in the secondary dataset of Twitter sentiment ratings, workers were asked to annotate the opinion of the tweet regarding a given topic; i.e. what is the sentiment toward entity _Q_.
 
-![Average accuracy of workers' nth contribution with a query. Only points aggregating 20 or more workers are shown.](images/ch4-query-exp.png) {#fig:query-experience}
+![Average accuracy of workers' nth contribution with a query. Only points aggregating 20 or more workers are shown.](../images/ch4-query-exp.png) {#fig:query-experience}
 
 Query experience proved to be an indicator of worker quality among the most experienced users, but not notable otherwise (Figure @fig:query-experience).
 For approximately the first thirty tasks which workers completed with a single query, they did not demonstrate any meaningful difference in quality.
