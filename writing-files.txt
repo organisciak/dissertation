@@ -8,4 +8,3 @@ document/5_5_ams-study.md
 document/6_subjective.md
 document/7_conclusions.md
 document/appendix_contributions.md
-document/appendix_code.md
