@@ -6,7 +6,7 @@ progressfile='./progress/data.csv'
 all: mostlyclean docx
 
 all.md:
-	cat writing-files.txt | parallel cat >all.md
+	cat writing-files.txt | parallel -n1 -j1 cat {} " && " echo "" >all.md
 
 stats:
 	# Show chart of word count progress
@@ -70,7 +70,9 @@ html: refs all.md
 	--css pandoc-bootstrap-template/template.css -o $(name).html all.md
 
 docx: refs all.md
-	pandoc $(pandoc_args) -t docx -o $(name).docx all.md
+	sed "s:../images/:images/:g" all.md >all-links-fixed.md
+	pandoc $(pandoc_args) -t docx -o $(name).docx all-links-fixed.md
+	rm all-links-fixed.md
 
 mostlyclean:
 	rm -f all.md
