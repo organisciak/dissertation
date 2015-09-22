@@ -1,5 +1,9 @@
 \documentclass[nobib,oneside,openany]{tufte-book}
 
+%\usepackage[titles]{tocloft}
+%\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} % for parts
+%\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+
 \hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
 
 %%
@@ -175,27 +179,29 @@
 % for deposit, they want it on page 2
 %\cleardoublepage
 \setcounter{page}{2}
+\pagestyle{plain}
+\pagenumbering{roman}
 \include{0_abstract}
 
 % v.4 epigraphs and copyright page
 \newpage
 
-\openepigraph{%
-In these democratic days, any investigation in the trustworthiness and peculiarities of popular judgments is of interest
-}{Francis Galton, {\itshape Vox Populi, 1907}
-}
+%\openepigraph{%
+%In these democratic days, any investigation in the trustworthiness and peculiarities of popular judgments is of interest
+%}{Francis Galton, {\itshape Vox Populi, 1907}
+%}
 
 
 
-\begin{fullwidth}
-~\vfill
-\thispagestyle{empty}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{\baselineskip}
-Copyright \copyright\ \the\year\ \thanklessauthor
+%\begin{fullwidth}
+%~\vfill
+%\thispagestyle{empty}
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{\baselineskip}
+%Copyright \copyright\ \the\year\ \thanklessauthor
 
-\par\textit{DRAFT, \monthyear}
-\end{fullwidth}
+%\par\textit{DRAFT, \monthyear}
+%\end{fullwidth}
 
 % r.5 contents
 \tableofcontents
@@ -204,13 +210,13 @@ Copyright \copyright\ \the\year\ \thanklessauthor
 % but it may just be easier to remove these options and
 % not particularly recommended sections for deposit
 
-\cleardoublepage
-\addcontentsline{toc}{chapter}{\listfigurename}
-\listoffigures
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{\listfigurename}
+%\listoffigures
 
-\cleardoublepage
-\addcontentsline{toc}{chapter}{\listtablename}
-\listoftables
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{\listtablename}
+%\listoftables
 
 % r.7 dedication
 %\cleardoublepage

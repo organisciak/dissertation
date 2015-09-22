@@ -47,11 +47,12 @@
     \end{textblock}
 
     % Committe list should be 8.5 inches from the top
-    \begin{textblock}{6.5}(1,8.5)
+    \begin{textblock}{6.5}(0.5,8.5)
     \setlength{\parindent}{36pt}%
     \setlength{\parskip}{4pt}%
     Doctoral Committee: \\
-    \-\hspace{0.5in} Professor Michael Twidale, Advisor \\
+    \vspace*{\baselineskip} % blank line separating by and name
+    \-\hspace{0.5in} Professor Michael Twidale, Chair \\
     \-\hspace{0.5in} Associate Professor Miles Efron \\
     \-\hspace{0.5in} Professor J. Stephen Downie \\
     \-\hspace{0.5in} Jaime Teevan, Microsoft Research \\
@@ -64,4 +65,8 @@
 }
 
 
-
+\makeatletter
+\renewcommand*{\numberline}[1]{%
+	  \hb@xt@\@tempdima{\hfil#1 }%
+  }
+  \makeatother

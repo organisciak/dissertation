@@ -40,7 +40,16 @@
   \pagenumbering{arabic}%
   \@mainmattertrue%
   \fancyhf{}%
-  \fancyhead[RE,RO]{\smallcaps{\newlinetospace{\leftmark}}\quad\thepage}% chapter title
+  \ifthenelse{\boolean{@tufte@twoside}}%
+    {% two-side
+      \renewcommand{\chaptermark}[1]{\markboth{##1}{}}%
+      \fancyhead[LE]{\thepage\quad\smallcaps{\newlinetospace{\plaintitle}}}% book title
+      \fancyhead[RO]{\smallcaps{\newlinetospace{\leftmark}}\quad\thepage}% chapter title
+    }%
+    {% one-side
+      \fancyhead[RE,RO]{\thepage}% chapter title
+    }%
+
 }
 
 

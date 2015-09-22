@@ -33,12 +33,6 @@ This goal is pursued for tasks with an expected truth -- that is, objective task
 However, a key assumption is made: that of a negotiated "ground truth" over an objective one.
 By assuming that the truth-value is a negotiated truth, worker disagreement is not in itself a sign of bad workers, but should be considered in light of the agreement among workers.
 
-\marginnote{
-This work was supported by Institute of Museum and Library Services LG-06-07-0020 and costed by the Center for Informatics Research in Science and Scholarship (CIRSS).
-
-In addition to the coauthors on Organisciak et al. (2012) -- Efron, Fenlon, and Senseney -- other contributing members include Timothy W. Cole, Thomas Habing, Jacob Jett, Carole L. Palmer, and Sarah L. Shreeves.
-}
-
 This chapter makes the following contributions:
 
 - Description of the problem of reconciling annotation contributions or work by non-expert, semi-anonymous workers.

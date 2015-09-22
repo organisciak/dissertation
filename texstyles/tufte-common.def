@@ -1673,27 +1673,29 @@
     related threads on Ask E.T. at http://www.edwardtufte.com/.}
 }
 
-
+\RequirePackage[titles]{tocloft}
+%\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} % for parts
+%\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
 % Formatting for main TOC (printed in front matter)
 % {section} [left] {above} {before w/label} {before w/o label} {filler + page} [after]
 \ifthenelse{\boolean{@tufte@toc}}{%
   \titlecontents{part}% FIXME
     [0em] % distance from left margin
-    {\vspace{1.5\baselineskip}\begin{fullwidth}\LARGE\rmfamily\itshape} % above (global formatting of entry)
+    {\vspace{1.5\baselineskip}\begin{fullwidth}} % above (global formatting of entry)
     {\contentslabel{2em}} % before w/label (label = ``II'')
     {} % before w/o label
     {\rmfamily\upshape\qquad\thecontentspage} % filler + page (leaders and page num)
     [\end{fullwidth}] % after
   \titlecontents{chapter}%
     [0em] % distance from left margin
-    {\vspace{1.5\baselineskip}\begin{fullwidth}\LARGE\rmfamily\itshape} % above (global formatting of entry)
+    {\vspace{1.5\baselineskip}\begin{fullwidth}} % above (global formatting of entry)
     {\hspace*{0em}\contentslabel{2em}} % before w/label (label = ``2'')
     {\hspace*{0em}} % before w/o label
-    {\rmfamily\upshape\qquad\thecontentspage} % filler + page (leaders and page num)
+    {\rmfamily\upshape\cftdotfill{\cftdotsep}\thecontentspage} % filler + page (leaders and page num)
     [\end{fullwidth}] % after
   \titlecontents{section}% FIXME
     [0em] % distance from left margin
-    {\vspace{0\baselineskip}\begin{fullwidth}\Large\rmfamily\itshape} % above (global formatting of entry)
+    {\vspace{0\baselineskip}\begin{fullwidth}} % above (global formatting of entry)
     {\hspace*{2em}\contentslabel{2em}} % before w/label (label = ``2.6'')
     {\hspace*{2em}} % before w/o label
     {\rmfamily\upshape\qquad\thecontentspage} % filler + page (leaders and page num)
