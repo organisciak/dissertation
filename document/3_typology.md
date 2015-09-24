@@ -1,5 +1,5 @@
-Design Facets of Crowdsourcing: A Typology for Information Science
-===================================================================
+A Typology for Crowdsourcing
+==========================================
 
 
 \newthought{Crowdsourcing is a production model} where many people, often non-professionals, contribute to a common product.
