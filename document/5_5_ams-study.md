@@ -280,7 +280,7 @@ We also tested this interface with colloquial language to make the instructions 
 | 100   | They are the same song!                                  |
 +-------+----------------------------------------------------------+
 
-Table: The colloquial wording presented to graders in the alternative task interface {#tbl:colloquial}
+Table: The colloquial wording presented to graders in the alternative task interface. {#tbl:colloquial}
 
 ### Results
 

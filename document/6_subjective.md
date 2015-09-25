@@ -308,7 +308,7 @@ Such a correlation could still exist if the task was not subjective, and is only
 | random 10                | 1.35 (-18%)  | 1.08 (-29%) | 1.08 (-31%) |
 +--------------------------+--------------+-------------+-------------+
 
-Table: Taste-matching performance for recommendation task {#tbl:matching-performance}
+Table: Taste-matching performance for recommendation task. {#tbl:matching-performance}
 
 Table @tbl:matching-performance shows the performance of recommendations predicted by taste-matching.
 In both task types, taste-matching improved over the baseline, with stronger gains against the cuisine recommendation tasks.

@@ -147,7 +147,7 @@ Unskilled, locally trained, specialized \\
 heterogeneous / diverse \\
 \bottomrule
 \end{tabular}
-\caption[][-24pt]{Overview of facets in our crowdsourcing typology}
+\caption[][-24pt]{Overview of facets in this study's crowdsourcing typology.}
 \end{table}
 \end{center}
 <!--_-->

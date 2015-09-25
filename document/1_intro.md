@@ -294,7 +294,7 @@ Feedback                 sharing personal knowledge and  Correct problem data, d
 
 --------------------------------------------------------------------------------------------
 
-Table: Chart comparing contributor and system uses for a selection of crowdsourcing actions {#tbl:user_system}
+Table: Chart comparing contributor and system uses for a selection of crowdsourcing actions. {#tbl:user_system}
 
 \newthought{While crowdsourcing has shown itself as a useful method} for enriching information objects, there remains the question of how the method of collection affects the way the data can be used.
 Contributors are self-selected and often without verified reliability, training or expertise.
