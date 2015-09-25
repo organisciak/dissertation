@@ -119,7 +119,7 @@ In line with the thrust of this dissertation, I focus on measuring how much of t
 The rest of this chapter will at consider 1) corrections for user-specific biases, 2) multiple-keyed judgments, and 3) a task design.
 While order effect are not focused on, partially because their measurement is possibly confounded by the other issues, this chapter's positive results -- showing improved judgment consistency -- provide a better sense of the magnitude at which such effects might exist.
 
-![Distribution of FINE scores relative to BROAD categories](../images/broad-histogram.png) {#fig:all-dist}
+![Distribution of FINE scores relative to BROAD categories.](../images/broad-histogram.png) {#fig:all-dist}
 
 ## Related Work
 

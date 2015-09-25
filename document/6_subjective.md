@@ -129,7 +129,7 @@ The underlying intuition pursued by taste-matching is that people who perform si
 Taste-matching pursues this notion by asking the requester being personalized for to complete a small task in the same manner as the workers will be expected to complete it.
 The results of this task compose a profile of the requester.
 
-![Simplified example of Taste-Matching protocols.](../images/matching-example1.png) {#fig:matching-example1}
+![Simplified example of Taste-matching protocol.](../images/matching-example1.png) {#fig:matching-example1}
 
 Figure @fig:matching-example1 illustrates a simple taste-matching setting.
 As new workers arrive, they complete the same task set as the requester, and a similarity process is used to measure how similar their work is to the requester profile.
@@ -150,7 +150,7 @@ Taste-grokking considers a different intuition than taste-matching: that workers
 'Grokking', a term referring to interpreted understanding, belies the human activity underlying this protocol.
 Whereas taste-matching performs an algorithmic similarity matching based on requester and worker profiles, taste-grokking leaves the personalization logic to worker interpretation.
 
-![Simplified example of Taste-Grokking protocol](../images/personalizedXX2.png) {#fig:personalizedXX2}
+![Simplified example of Taste-grokking protocol.](../images/personalizedXX2.png) {#fig:personalizedXX2}
 
 As illustrated in Figure @fig:personalizedXX2, taste-grokking workers are shown a requester's profiling set and asked a variant of the question, 'how do you think the requester would perform the next tasks?' For example, with the product image rating task, workers were shown a requester's ratings for a few items, and asked to rate what the requester's opinion would be for additional products.
 
@@ -347,7 +347,7 @@ For the salt and pepper shaker recommendation task, the taste-matching improveme
 | (mean, 5 top workers)    | 1.02 (-34%)  | 1.22 (-19%)  | 1.13 (-28%)  |
 +--------------------------+--------------+--------------+--------------+
 
-Table: Taste-Grokking performance {#tbl:grokking-performance}
+Table: Taste-grokking performance. {#tbl:grokking-performance}
 
 Taste-grokking improves over the baseline in many settings, but not all.
 In all cases, it works better for product recommendation than it does for cuisine recommendation, a reversal of what was seen with taste-matching.
@@ -392,9 +392,9 @@ The time is measured from the start to end of the worker interaction,
 for a set of 100 ratings for taste-matching or 90 rating predictions for taste-grokking.
 As such, part of the time spent might be related to the reading of instructions, which may also contribute to differences between the two protocols.
 
-![Taste-Grokking performance for each individual requester x profiling set experiment.](../images/taste-grokking-performance1.png) {#fig:tastegrokkingPerformance}
+![Taste-grokking performance for each individual requester x profiling set experiment.](../images/taste-grokking-performance1.png) {#fig:tastegrokkingPerformance}
 
-![Comparison of time per item rating spent by workers in taste-grokking and taste-matching](../images/personalization-time-spent.png) {#fig:subjTimeSpent}
+![Comparison of time per item rating spent by workers in taste-grokking and taste-matching.](../images/personalization-time-spent.png) {#fig:subjTimeSpent}
 
 \newthought{When collecting taste-matching data}, a tertiary evaluation was done where workers were not only asked to provide a rating of their opinion,
 but were also asked 'what is your reason for this rating?' It was found that by asking workers to contemplate and explicate their reasoning for judgments, their behaviors changed.
@@ -434,9 +434,9 @@ The intention was to capture the breadth of tastes.
 Using an optimized selection of items in the profiling set improved performance greatly over the salt and pepper shaker prediction task.
 Figure @fig:aggregation shows the quality of aggregating 1-30 workers; for comparison to Table @tbl:grokking-performance, aggregating 5 random workers gave an RMSE of $1.04$.
 
-![Example of salt-and-pepper clusters, k=10](../images/subj-examples.png) {#fig:cluster-examples}
+![Example of salt-and-pepper clusters, k=10.](../images/subj-examples.png) {#fig:cluster-examples}
 
-![Performance of optimized training set for predicting product opinions, aggregating multiple workers](../images/subj-aggregation.png) {#fig:aggregation}
+![Performance of optimized training set for predicting product opinions, aggregating multiple workers.](../images/subj-aggregation.png) {#fig:aggregation}
 
 Predicting a requester's rating was a suitable application of personalized crowdsourcing for two image recommendation tasks.
 Both taste-grokking and taste-matching improved over the baseline.
@@ -508,7 +508,7 @@ Baseline                0.32
 Best-matched workers    0.39 (+20%)
 5 best-matched workers  0.38 (+17%)
 
-Table: Taste-Matching Text Highlighting Results {#tbl:matching-highlights}
+Table: Taste-matching text highlighting results. {#tbl:matching-highlights}
 
                           Performance (F1)
 ------------------------- ------------------
@@ -516,7 +516,7 @@ Baseline                  0.32
 Any worker                0.30 (-7%)
 Best workers (pool of 5)  0.52 (+62%)
 
-Table: Taste-Grokking Text Highlighting Results {#tbl:grokking-highlights}
+Table: Taste-grokking text highlighting results. {#tbl:grokking-highlights}
 
 Taste-grokking workers were shown a single film review highlighted by a requester and asked to highlight additional reviews for that requester.
 The review that was shown was randomly selected from the two profiling examples that requesters had provided, though data was collected for each profiling example.
@@ -574,7 +574,7 @@ The proportion of one-hundred evaluators that answered “Yes” to the question
 
 ### Style-Matching
 
-![Handwriting imitation example, showing imitators, true sample, and non-imitated distractors](../images/handwriting-example.png) {#fig:handwriting-example}
+![Handwriting imitation example, showing imitators, true sample, and non-imitated distractors.](../images/handwriting-example.png) {#fig:handwriting-example}
 
 Handwriting was assumed to be too varied for workers to match well to requesters within a reasonable worker pool size.
 Matching was nonetheless measured for comparison: how similar any given sample is to the requester's, and whether more similar handwriting on the target phrase predicts similarity on the testing phrase.

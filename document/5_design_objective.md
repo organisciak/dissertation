@@ -282,7 +282,7 @@ Finally, an empty 'tab' to collapse the instructions completely was added. This 
 Figure {@fig:basic-inturk} shows the limited task space when it is embedded within the Mechanical Turk interface.[^TagDifficulty]
 Collapsible instructions have been recommended previously [@chen_making_2012; @chen_mechanical_2012].
 
-![Screenshot of task within the Mechanical Turk interface.](../images/design-basic-inturk.png) {#fig:basic-inturk}
+![Task within the Mechanical Turk interface.](../images/design-basic-inturk.png) {#fig:basic-inturk}
 
 [^TagDifficulty]: Incidentally, Figure {@fig:basic-inturk} also shows of the more challenging images to tag. How would you tag them? 
 
@@ -297,9 +297,9 @@ Instead, even for the basic interface, improper work that would have been reject
 For example, workers were asked for a minimum of two tags in the tagging task; as shown in Figure @fig:basicvalidation, they could not submit before entering two tags.
 To account for instances where a second tag was too difficult to create, workers could also add a placeholder 'TOOHARD' tag, which the interface alerted a worker to if their cursor was inactive for a few seconds (Figure @fig:tippopup).
 
-![Screenshot of contribution validation, which informs contributors of issues before submission](../images/design-basic-validation.png) {#fig:basicvalidation}
+![Contribution validation, which informs contributors of issues before submission.](../images/design-basic-validation.png) {#fig:basicvalidation}
 
-![An example of the suggestion message in the basic condition of the tagging task, which appears after the input field is active for a small period.](../images/design-basic-tippopup.png) {#fig:tippopup}
+![An example of the additional help message in the basic condition of the tagging task, which appears after the input field is active for a small period.](../images/design-basic-tippopup.png) {#fig:tippopup}
 
 [^Workers]: These unofficial guidelines, on the Dynamo Wiki, were written collaboratively by academic researchers and Mechanical Turk workers.
 
@@ -342,7 +342,7 @@ This intervention amounts to a full screen window with the task instructions as 
 Contrary to the main training condition, workers do not have their own choices evaluated; instead, INSTRUCT focuses on recontextualizing the standard training instructions in a direct manner, one that has to be explicitly dismissed.
 However, it is also applied alongside each task set, rather than existing solely as a first-interaction task.
 
-![Intervention in INSTRUCT condition](../images/instructModal.png) {#fig:instruct-modal}
+![Intervention in INSTRUCT condition.](../images/instructModal.png) {#fig:instruct-modal}
 
 To summarize, the TRAIN condition:
 
@@ -368,7 +368,7 @@ In the feedback interface, a worker is shown feedback about their estimated perf
 The first task that they complete is identical to the basic interface.
 Starting with the second task, however, the interface gives them a window with their estimated performance, relative to other workers.
 
-![Example of showing feedback shown to workers](../images/performance-feedback.png) {#fig:showperformance}
+![Example of showing feedback shown to workers.](../images/performance-feedback.png) {#fig:showperformance}
 
 The estimate of performance was determined differently for the different task types, image tagging and image relevance judgments, and is described in those respective sections.
 
@@ -390,7 +390,7 @@ As with the training condition, workers are encouraged to continue performing ta
 This is because feedback is only applied starting with the second task.
 Base payment was \$0.05 lower than was provided for the basic interface, while the continued engagement bonus was \$0.10 per task.
 
-![Message encouraging repeat work](../images/design-stickaround.png) {#fig:staybonus}
+![Message encouraging repeat work.](../images/design-stickaround.png) {#fig:staybonus}
 
 In sum, of the ample ways to design a feedback mechanism, this study's condition:
 
@@ -648,7 +648,7 @@ Table: Time spent per relevance judgment in each condition. Significance marks r
 
 \clearpage
 
-![Comparison of time spent per task, in seconds (n=12667)](../images/relevanceTime1.png) {#fig:relevance-time}
+![Comparison of time spent per task, in seconds. N=12667.](../images/relevanceTime1.png) {#fig:relevance-time}
 
 Considering this data by mean user time, to reduce the influence of outliers, tells a comparable story.
 Viewed in this manner, the time-limited interface and the baseline were comparable, while feedback and training shortened the mean time of the average worker.
@@ -748,7 +748,7 @@ A possible explanation is that image relevance judgments are already a very quic
 The one-at-a-time fast interface may have stood in the way of workers' comprehension of the entire task set: where in a traditional setting they can click on their answer and already be thinking about the next one, here they had to click again to move to the next task.
 It is possible that for relevance judgments over more complex types of documents, the fast interface would perform differently, akin to what will be seen in the next experiment.
 
-![Likelihood of correct relevance judgment shown by query](../images/byQueryPerformance.png) {#fig:byQueryRelPerformance}
+![Likelihood of correct relevance judgment shown by query.](../images/byQueryPerformance.png) {#fig:byQueryRelPerformance}
 
 \newthought{A comparison of performance per query} (Figure @fig:byQueryRelPerformance) offers some insight as to the relative strengths and weaknesses of the various conditions.
 

@@ -211,7 +211,7 @@ Among the statistics collected for the relevance judgment dataset was _dwell tim
 The hypothesis motivating this metric was that dwell time was not significant when understood independently, but might indicate the quality of workers when taking into account the order in which tasks were completed.
 Since tasks were done in sets of ten, the order referred to where in this set they occurred.
 
-![Frequency distribution of the average amount of time that users spent on the tasks that they rated incorrectly and those they rated correctly.](../images/ch3-dwell.png) {#fig:ch3-dwell1}
+![Frequency distribution of the average amount of time that users spent on the tasks they rated incorrectly and those they rated correctly.](../images/ch3-dwell.png) {#fig:ch3-dwell1}
 
 Order served as a useful grouping factor because the time spent on the first rating is confounded with the time spent reading the rating instructions, which is to say that the two are inseparable.
 Figure @fig:ch3-dwell1 shows the distribution of worker performance by dwell time alone.
@@ -236,7 +236,7 @@ The fact that a worker spending more time on the first rating indicates a higher
 
 If this is in fact what accounts for the significant different, it should be an effect that lingers across the full set of data.
 
-![Accuracy of workers on ratings after then first one, shown as density distribution of all workers. Dotted line shows workers that are correct on the first task, solid line shows workers that are incorrect.](../images/ch3-prob-after-first.png) {#fig:ch3-prob-after-first}
+![Accuracy of workers on ratings after the first one, shown as density distribution of all workers. Dotted line shows workers that are correct on the first task, solid line shows workers that are incorrect.](../images/ch3-prob-after-first.png) {#fig:ch3-prob-after-first}
 
 Figure @fig:ch3-prob-after-first shows this to be the case, with workers that make a correct rating on the first item are much more reliable in the rest of the rating set.
 
