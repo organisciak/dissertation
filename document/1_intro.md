@@ -6,8 +6,8 @@ Rather than merely transmitting information to readers, web pages allow their au
 The products of these interactions are a trove of qualitative judgments, valuable to modeling information objects.
 In recent years, this form of creation-through-collaboration has been studied as _crowdsourcing_.
 
-\marginnote{In the style of modern mass communications, this work described in under 140 characters:
-\em{Maximizing data quality in using paid crowds for objective and subjective encoding tasks} }
+\marginnote{This work in a sentence:
+\em{Maximizing data quality in using paid crowds for objective and subjective encoding tasks, leveraging post-collection and collection-time strategies.} }
 
 There are many circumstances where access to human encoding and human judgments is invaluable to information science, whether it is in transcribing scanned material, organizing or judging the quality of documents within a collection, building evaluation datasets for information retrieval, or preparing training data for better inferential algorithms.
 People can provide latent information about documents that would not be possible to ascertain computationally, such as quality judgments or higher-level thematic description.
