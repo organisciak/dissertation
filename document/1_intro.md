@@ -18,9 +18,9 @@ Most importantly, crowdsourcing looks at human contribution at scales that are d
 \newthought{However, humans have predictable and unpredictable biases} that make it difficult to systematically adopt their contributions in an information system.
 _How do we control and interpret qualitative user contributions in a quantified system?_
 
-This work focuses on understanding the characteristics of data collected through crowdsourcing, toward two ends: awareness of potentially unanticipated biases in crowd data collection, and ways to improve the quality of crowd-collected data.
+This work focuses on understanding the characteristics of data collected through crowdsourcing, toward two ends: awareness of potentially unanticipated biases in crowd data collection, and subsequent strategies to improve the quality of crowd-collected data.
 As will be demonstrated, crowdsourcing research is sensitive to various circumstances of instrumentation, context, and community.
-This work seeks to _understand_ the intricacies of these biases: looking at how tasks are completed when they are more or less engaging, restrictive, or subjective.
+This work seeks to understand the intricacies of these biases: looking at how tasks are completed when they are more or less engaging, restrictive, or subjective.
 Valid research needs to be aware of how circumstance affects crowds, as well as know what information is important to report for reproducibility.
 Understanding leads to practical recommendations for maximizing data quality in crowdsourced data, and this study focuses on a priori instrumentation choices and posterior data normalization for improving how both subjective and objective tasks are collected.
 
@@ -32,7 +32,22 @@ These are viewed in the space of subjective and objective types of tasks.
 It is important to stay aware of the broader space of crowdsourcing and how characteristics of paid microtasks generalize to it.
 However, as the chapter _A Typology for Crowdsourcing_ makes clear, crowdsourcing is a broad expanse; the treatment here is controlled to a subset pertinent to information science research.
 
-Details of each part of this scope will follow -- crowdsourcing metadata, microtasks, paid crowd platforms, and subjective/objective crowdsourcing -- but it is important to understand why it matters first.
+In the interest of not obscuring the details, the specifics of this scoping will be presented after first drawing out the problem and this dissertation's approach to tackling it.
+
+<!-- Overview of findings-->
+
+\newthought{The goal of this work} is to leave the reader with an understanding of how online crowds can reliably generate metadata about information system objects, both for subjective or objective ends.
+The main contribution of this study is _methodological_: understanding issues related to proper -- or improper -- crowdsourcing in information sciences.
+It is written in the service of uncovering issues and answering them thoroughly, where a reader may develop realistic expectations or hypotheses for tasks beyond the tasks used for this study's experiments.
+
+A reader of this work will understand:
+
+ * the issues related to using crowdsourcing contributions for improving document metadata, particularly for information retrieval indexing and evaluation, and user-based filtering or recommendation;
+ * the effect of different designs of crowdsourcing collection tasks on the resulting reliability and consistency of the collected data, particularly designs that train workers, give them feedback, or hurry them;
+ * sources of contributor-specific error in information retrieval evaluation tasks; and
+ * how these findings may assist future working in information science and cultural heritage.
+
+
 
 ## Problem
 
@@ -162,20 +177,6 @@ Two protocols for personalized crowdsourcing are then presented, referred to as 
  - __RQ 3.3__: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
  - __RQ 3.4__: How do different types of subjective tasks affect the efficacy of personalized crowdsourcing approaches?
  <!-- - __RQ 3.5__: How do task design manipulations affect the quality of crowd contributions?-->
-
-### Goal
-
-The goal of this work is to leave you, the reader, with an understanding of how online crowds can reliably generate metadata about information system objects, both for subjective or objective ends.
-The main contribution of this study is _methodological_: understanding issues related to proper -- or improper -- crowdsourcing in information sciences.
-It is written in the service of uncovering issues and answering them thoroughly, where a reader may develop realistic expectations or hypotheses for tasks beyond the tasks used for this study's experiments.
-
-A reader of this work will understand:
-
- * the issues related to using crowdsourcing contributions for improving document metadata, particularly for information retrieval indexing and evaluation, and user-based filtering or recommendation;
- * the effect of different designs of crowdsourcing collection tasks on the resulting reliability and consistency of the collected data, particularly designs that train workers, give them feedback, or hurry them;
- * sources of contributor-specific error in information retrieval evaluation tasks; and
- * how these findings may assist future working in information science and cultural heritage.
-
 
 ## Scope
 
