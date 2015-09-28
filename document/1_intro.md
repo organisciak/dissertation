@@ -30,7 +30,7 @@ Understanding leads to practical recommendations for maximizing data quality in 
 These are viewed in the space of subjective and objective types of tasks.
 
 It is important to stay aware of the broader space of crowdsourcing and how characteristics of paid microtasks generalize to it.
-However, as the typology presented in _Chapter 3_ makes clear, crowdsourcing is a broad expanse; the treatment here is controlled to a subset pertinent to information science research.
+However, as the chapter _A Typology for Crowdsourcing_ makes clear, crowdsourcing is a broad expanse; the treatment here is controlled to a subset pertinent to information science research.
 
 Details of each part of this scope will follow -- crowdsourcing metadata, microtasks, paid crowd platforms, and subjective/objective crowdsourcing -- but it is important to understand why it matters first.
 
@@ -93,24 +93,24 @@ What are the properties of data collected from paid crowds for objective and sub
 Each research chapter turns the lens on a piece of this question.
 The broad research questions informing the chapters are as follows:
 
-- __Broad Research Question 1__: What are the _post-collection_ indicators of quality in worker-contributed objective task data, and can these be leveraged for improved data modelling? ^[Reported in Chapter 4, with an additional approach comprising part of Chapter 5.2.]
+- __Broad Research Question 1__: What are the _post-collection_ indicators of quality in worker-contributed objective task data, and can these be leveraged for improved data modelling? ^[Reported in _Interpreting Tasks for Objective Needs_, with an additional approach reported in the second part of _Designing Tasks for Objective Needs_.]
 
-- __RQ 2__: What are the biases inherent to the task design for objective or normative tasks (i.e. the data collection instrument), and can design manipulations correct for them at _collection time_? ^[Reported in both parts of Chapter 5.]
+- __RQ 2__: What are the biases inherent to the task design for objective or normative tasks (i.e. the data collection instrument), and can design manipulations correct for them at _collection time_? ^[Reported in _Designing Tasks for Objective Needs_.]
 
-- __RQ 3__: What are the quality losses when treating non-normative tasks in objective ways, and can collection-time framing or post-collection modeling approaches reduce these? ^[Reported in Chapter 6.]
+- __RQ 3__: What are the quality losses when treating non-normative tasks in objective ways, and can collection-time framing or post-collection modeling approaches reduce these? ^[Reported in _Designing Tasks for Subjective Needs_.]
 
 Though in each chapter there are concrete solutions proposed and evaluated, the first step of each research question is to understand the scope of the problem.
 Regardless of implementation, this dissertation's _pertinent and valuable contribution_ is in understanding some ways that crowdsourced data may have unexpected and perhaps overlooked variance, bias, and low-consistency.
 
-\newthought{Before conducting our own experiments}, Chapters 2 and 3 present an in-depth look at crowdsourcing.
+\newthought{Before conducting our own experiments}, the next two chapters present an in-depth look at crowdsourcing.
 
-Chapter 2 presents a brief overview of crowdsourcing.
+_Introduction to Crowdsourcing_ presents a brief overview of crowdsourcing.
 One can consider this chapter the seed of what might be taught in the first two weeks of a course on crowdsourcing.
 
-Chapter 3 then presents an information-science typology of crowdsourcing, a necessity for appreciating the expansive area of crowdsourcing and this study's particular scoping.
+_A Typology of Crowdsourcing_ then presents an information-science typology of crowdsourcing, a necessity for appreciating the expansive area of crowdsourcing and this study's particular scoping.
 Both of these chapters are general, and literature reviews pertinent to the experiments in this study are reported in the relevant research chapters.
 
-\newthought{Chapter 4 applies a post-collection lens to crowdsourcing error}, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
+\newthought{A post-collection lens is applied to crowdsourcing error} in _Interpreting Tasks for Objective Needs_, looking to identify and promote high-quality contributions from strong contributors, while adjusting for poor work.
 
 The chapter is largely analytical, hoping to understand what we can infer from crowd behaviors about the strength of their contributions and evaluating strategies for better paid crowdsourcing.
 By taking this approach, this chapter seeds some the expected outcomes driving later chapters.
@@ -126,12 +126,12 @@ The questions this chapter asks are the following:
 
 However, in many circumstances, contributions are _not_ a hallowed set of data, bestowed upon a researcher to work with.
 They are collected, and as such the _way they are collected_ can change what they look like at the end.
-Chapter 5 turns our attention toward this less-explored corollary of post-collection data modelling: the effect of the collection instrument on the resultant contributions, toward understanding and potentially optimizing the contribution collection process.
+The next chapter turns our attention toward this less-explored corollary of post-collection data modelling: the effect of the collection instrument on the resultant contributions, toward understanding and potentially optimizing the contribution collection process.
 This is about how you ask, and how it affects what you are told.
 
-Chapter 5 is presented in two parts, both studies conducted for this dissertation, one published previously and one presenting work for the first time.
+_Designing Tasks for Objective Needs_ is presented in two parts, both studies conducted for this dissertation, one published previously and one presenting work for the first time.
 
-The first part (5.1) selects two control tasks, and measures the effect of three different design manipulations on the makeup of the data -- consistency and quality, but also contribution patterns.
+The first part selects two control tasks, and measures the effect of three different design manipulations on the makeup of the data -- consistency and quality, but also contribution patterns.
 Looking at interfaces that give users training, performance feedback, or timer-driven nudges, it asks:
 <!--These design manipulations are looked at again over a subjective context in Chapter 6.-->
 
@@ -143,7 +143,7 @@ Looking at interfaces that give users training, performance feedback, or timer-d
 
 <!-- * __RQ 2.4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?-->
 
-The second part of Chapter 5 (5.2) bridges chapters 4 and 5 in a real world setting, applying post-collection corrections as well as collection-time task manipulations to the human judgments used in evaluating audio similarity for the Music Information Retrieval Exchange (MIREX).
+The second part of Designing Tasks for Objective Needs bridges the studied strategies in a real world setting, applying post-collection corrections as well as collection-time task manipulations to the human judgments used in evaluating audio similarity for the Music Information Retrieval Exchange (MIREX).
 Finding the inter-grader consistency to be very low, this small chapters asks:
 
  - __RQ 2.4__: Are grader differences responsible for low inter-grader consistency in MIREX judgments?
@@ -151,7 +151,7 @@ Finding the inter-grader consistency to be very low, this small chapters asks:
  - __RQ 2.6__: Is subjectivity or disagreement of the grading task responsible for low inter-grader consistency?
  - __RQ 2.7__: Does the task design affect the quality of contributions?
 
-\newthought{Chapter 6 focuses on completing subjective tasks} through paid crowdsourcing, again focusing on maximizing quality through a priori design and instrumentation choices.
+\newthought{Moving beyond objective contexts}, _Designing Tasks for Subjective Needs_ again focuses on maximizing quality through a priori design and instrumentation choices, but for a different class of task.
 Subjective tasks are rarely done in paid contexts, so _personalized crowdsourcing_ is introduced as a way to formalize and argue for the approach.
 Two protocols for personalized crowdsourcing are then presented, referred to as _taste-matching_ and _taste-grokking_, and compared.
 
@@ -198,12 +198,12 @@ Microtasks are often associated with paid platforms, where interactions are gene
 
 _Objective-Subjective contexts_:
   Objective tasks assume the existence of a universal ground truth, while subjective tasks have truth relative to different individuals.
-  This work starts by looking at objective contexts, which are less complicated to study. In Part 2 of Chapter 5, a study of poor intercoder reliability in music information retrieval evaluation is found to be due, at least partially, to the task being quite subjective. Following this, Chapter 6 looks at how tasks that are known to be subjective can be performed on paid platforms. 
+  This work starts by looking at objective contexts, which are less complicated to study. In the latter part of _Designing Tasks for Objective Needs_, a study of poor intercoder reliability in music information retrieval evaluation is found to be due, at least partially, to the task being quite subjective. Following this, _Designing Tasks for Subjective Needs_ looks at how tasks that are known to be subjective can be performed on paid platforms. 
   An intermediate category is considered in this study, that of _normative_ tasks: ones that do not have a factual 'truth' but have an expectation of an agreed-upon truth.
 
 The experiments in this work general follow this scoping. While I will aim to discuss broader generalizations to other forms of crowdsourcing, like volunteer-driven crowdsourcing (e.g. Wikipedia), this will follow from secondary sources and not original research.
 
-Chapter 3 provides a more thorough language for understanding these subclasses, through an Information Science-centric crowdsourcing typology.
+_A Typology for Crowdsourcing_ provides a more thorough language for understanding these subclasses.
 
 ## Relevance
 
@@ -345,7 +345,7 @@ It refers to activities where humans perform work in a paradigm reminiscent to c
 Human computation does not need to be crowdsourced, but many such tasks benefit from crowdsourcing.
 Likewise, while there are many creative crowdsourcing tasks, such as writing or commenting, human computation represents a large portion of the types of crowdsourcing seen in the wild.
 
-Most of the experiments in this study fall into the paradigm of human computation: collecting relevance judgments for information retrieval research (Chapters 4 and 5), collecting descriptive labels (tags) of images on image-sharing social network Pinterest (Chapter 5), collecting judgments of how similar songs are for music information retrieval evaluation (Chapter 5-2), and collecting opinion judgments of products and food for the purpose or recommendation (Chapter 6).
+Most of the experiments in this study fall into the paradigm of human computation: collecting relevance judgments for information retrieval research, collecting descriptive labels (tags) of images on image-sharing social network Pinterest, collecting judgments of how similar songs are for music information retrieval evaluation, and collecting opinion judgments of products and food for the purpose or recommendation.
 
 \newthought{Worker, volunteer, contributor:} there are many labels for people within the crowd.
 The space of crowdsourcing is large and the incentives for contributors are varied.
