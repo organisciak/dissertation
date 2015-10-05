@@ -1,4 +1,4 @@
-# Crowdsourcing metadata: Reliably augmenting documents by collecting and interpreting amateur contributions
+# Design Problems in Crowdsourcing: Improving The Quality of Crowd-Based Data Collection
 
 _Dissertation: Peter Organisciak_
 
