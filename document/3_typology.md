@@ -1,12 +1,8 @@
 A Typology for Crowdsourcing
 ==========================================
 
-
-\newthought{Crowdsourcing is a production model} where many people, often non-professionals, contribute to a common product.
-The pattern is potentially very useful for information science, because the ability for large numbers of diverse people to react to and enrich information items offers new ways to represent them.
-
-The scope of crowdsourcing is broad, however, and the myriad approaches to collaboration among distributed crowds lend a lack of coherence which may intimidate a practitioner.
-In order to address this, this chapter presents a typology of crowdsourcing for information science.[^iConfCite]
+\newthought{The scope of crowdsourcing is broad} and the myriad approaches to collaboration among distributed crowds lend a lack of coherence which may intimidate a practitioner.
+To address the sprawl and provide a structure for the rest of this work, this chapter presents a typology of crowdsourcing for information science.[^iConfCite]
 
 [^iConfCite]: A version of this chapter was previously presented at iConference 2015 with co-author Michael B. Twidale [@organisciak_design_2015].
  Co-authorship notes in appendix. Copyright retained by authors.
@@ -16,39 +12,12 @@ Information systems and digital repositories deal with overwhelming amounts of m
 @holley_crowdsourcing_2010 notes some potential uses to crowdsourcing, including tapping into the expertise of the community,
 building loyalty of users while tapping into their altruistic tendencies, adding value to data such as with quality ratings, and improving information access to materials.
 
-There have been earlier attempts at crowd taxonomies [e.g.
+\newthought{There have been earlier attempts} at crowd taxonomies [e.g.
 @geiger_managing_2011; @vukovic_towards_2010; @schenk_crowdsourcing_2009; @rouse_preliminary_2010].
 However, these have primarily emerged from other domains, with a focus on economic or quantitative variables.
 Perhaps the most valuable prior work is in Quinn and Bederson's taxonomy of human computation [-@quinn_human_2011], a field focusing on humans performed work in the mode of computing.
 Human computation often overlaps with crowdsourcing but focuses on a more narrow type of labor and is not necessarily performed by distributed crowds.
-
-This chapter collects and builds on prior studies of crowdsourcing,
-including earlier typologies, while offering new facets which aid in a more human-centric treatment of crowdsourcing.
-
-\newthought{Crowdsourcing is broad term} referring to the collaboration of large numbers of distributed people on a common product, usually organized through information technology and generally invited through an open call.
-
-The term was coined in 2006 [@howe_rise_2006], initially scoped to business uses of the term but quickly co-opted to its current,
-wide-ranging usage [@howe_birth_2006].
-There are a number of concepts under the umbrella of crowdsourcing that have been studied individually: of these, the previous chapter's _Related Concepts_ introduced free and open-source software development, wisdom of the crowds, human computation, commons-based peer production, user innovation, and citizen science.
-
-What does crowdsourcing look like? One particularly popular system is
-*Wikipedia*, a crowd-written online encyclopedia.
-Wikipedia is written, policed, and managed by a mostly volunteer crowd, and in most cases accepts page edits from anybody, regardless of credentials or status.
-An example of more skilled parallel to Wikipedia is *Suda Online*, a project translating and annotating a Byzantine Greek encyclopedia since 1998.
-
-Other crowdsourcing projects, especially those in library and information science, involve encoding tasks that are less open-ended than simply writing.
-*Old Weather* is one such example, where contributors encode weather data from scans of old ship logs.
-*What's on the Menu* pursues a similar transcription task, of menu items from scanned restaurant menus.
-In both these cases, the act of participating allows contributors to interact with novel, interesting archive materials.
-
-Not all crowdsourcing uses involve new systems: sometimes valuable contributions are gathered incidentally.
-For example, the Library of Congress found that user comments on archival photos provided a valuable source of additional information about the holding [@springer_for_2008],
-and steve.museum has researched the ability of free-text tagging for providing descriptive keywords more in line with the language which information-seeking individuals use [@trant_investigating_2006].
-
-\newthought{In addition to} a typology of citizen science
-[@wiggins_goals_2012] and a taxonomy of human computation [@quinn_human_2011],
-attempts to provide the same for crowdsourcing have been attempted
-[@geiger_managing_2011; @vukovic_towards_2010; @schenk_crowdsourcing_2009; @rouse_preliminary_2010].
+@wiggins_goals_2012 also offer a typology of a useful related concept, citizen science.
 
 @geiger_managing_2011 identify crowdsourcing processes by four defining characteristics: the pre-selection process for contributors, the accessibility of peer contributions, the aggregation of contributions, and the form of remuneration for contributors.
 While these are all valid ways of viewing crowdsourcing, more qualitative or naturalistic models are also necessary in order to understand crowdsourcing websites, such as motivation or centrality.
@@ -70,31 +39,25 @@ However, they are generally grounded in different domains than information scien
 The space of crowdsourcing is large, and there have been a number of attempts to organize the sub-concepts within it or to reconcile it in a space alongside other areas of research.
 Some of the most important questions in differentiating crowdsourcing include:
 
--   Who are the contributors? What are their skills?
+-   Motivation: How are contributors motivated? Are they paid or do they volunteer for other incentives?
 
--   How are contributors motivated? Are they paid or do they volunteer
-    for other incentives?
+-   Crowd type: Who are the contributors? What are their skills?
 
--   Are contributions new, or do they react to existing documents or
-    entities?
-
--   Are contributions preserved in the form they are submitted, or are
-    they combined into a larger contribution?
-
--   What do the contributions look like? Are they subjective (involving
+-   Contribution type: Are contributions new, or do they react to existing documents or entities?
+    What do the contributions look like? Are they subjective (involving
     opinions or ranking) or objective (there is an agreed best
     response)?
 
--   Who is asking for the contributions? Who is benefiting?
+-   Aggregation and style of collaboration: Are contributions preserved in the form they are submitted, or are they combined into a larger contribution?
+    Is the collaboration indirect (i.e. contributors work on parts independently) or truly collaborative?
+    How is quality controlled for?
 
--   Is the collaboration indirect (i.e. contributors work on parts
-    independently) or manifest?
+-   Beneficiary: Who is asking for the contributions? Who is benefiting?
 
--   Is the crowdsourcing central to the system?
+-   Centrality: Is the crowdsourcing central to the system?
 
--   How is quality controlled for?
 
-Table 1 provides an overview of our crowdsourcing typology, including references when the dimensions are influenced closely by prior work.
+Table 1 provides an overview of this crowdsourcing typology, including references when the dimensions are influenced closely by prior work.
 In the next section, we consider existing work more thoroughly, adapting it into our typology, explain how we reinterpret it, and argue for new facets not present in non-IS taxonomies or classifications.
 
 
@@ -112,25 +75,16 @@ Primary/Secondary \autocite{organisciak_why_2010}, Contribution/commitment \auto
 &
 &
 Extrinsic/Intrinsic \\
-\midrule Centrality &
-How central is the crowdsourcing to the overall project? &
-Core / Peripheral \autocite{organisciak_incidental_2013} \\
-\midrule Beneficiary &
-Who benefits? What is their relationship to contributors? &
-Autonomous / sponsored \autocite{zwass_cocreation_2010} \\
+
+\midrule Type of Crowd &
+What are the dimensions of the crowd and how they are expected to perform? &
+Unskilled, locally trained, specialized \\
 &
 &
-Crowd / individual \\
-\midrule Aggregation &
-How are diverse contributions reconciled into a common product? &
-Selective /Integrative \autocite{geiger_managing_2011, schenk_crowdsourcing_2009} \\
-&
-&
-Summative / Iterative / Averaged \\
+heterogeneous / diverse \\
+
 \midrule
-
-
-Type of Work &
+Type of Contribution &
 What is the nature of the work? &
 Human computation / Creative \\
 &
@@ -139,12 +93,25 @@ Generative / Reactive \\
 &
 &
 Subjective / Objective \\
-\midrule Type of Crowd &
-What are the dimensions of the crowd and how they are expected to perform? &
-Unskilled, locally trained, specialized \\
+
+\midrule Aggregation &
+How are diverse contributions reconciled into a common product? &
+Selective /Integrative \autocite{geiger_managing_2011, schenk_crowdsourcing_2009} \\
 &
 &
-heterogeneous / diverse \\
+Summative / Iterative / Averaged \\
+
+\midrule Beneficiary &
+Who benefits? What is their relationship to contributors? &
+Autonomous / sponsored \autocite{zwass_cocreation_2010} \\
+&
+&
+Crowd / individual \\
+
+\midrule Centrality &
+How central is the crowdsourcing to the overall project? &
+Core / Peripheral \autocite{organisciak_incidental_2013} \\
+
 \bottomrule
 \end{tabular}
 \caption[][-24pt]{Overview of facets in this study's crowdsourcing typology.}
@@ -310,18 +277,80 @@ This motivator factors into the taxonomy by as
 -   **Window fixing**.
 Nurturing a well-maintained community where the members feel compelled to support its health.
 
-### Centrality
+### Type of Crowd
 
-How central, or necessary, is the crowdsourcing to the task at hand? Is it *peripheral*, or *core*?
+@vukovic_towards_2010 define two extremes of crowd types: *internal* and *external*.
+Internal crowds are composed solely of contributors from the organization that is crowdsourcing, if it is thus centralized.
+External crowds are members outside of the institution.
+@vukovic_towards_2010 also note that *mixed*
+crowds are observable.
 
-The work in @organisciak_incidental_2013 tried to counterbalance a perceived focus on whole-hog crowdsourcing – the large, highly novel initiatives like Wikipedia – by introducing *incidental crowdsourcing*.
-Incidental crowdsourcing focused on types of crowdsourcing – like rating, commenting, or tagging – that are peripheral and non-critical.
-The shift to an incidental mode brings with it its own design tendencies, such as lower bandwidth forms of contribution and fallback strategies for low engagement cases.
+\newthought{A point of separation between crowd methods} is the skills required to perform the work.
+*Unskilled*, *locally training*, and *specialized* are all seen among crowdsourcing systems.
+Where unskilled labour encourages contributions from anybody at anytime, systems that use methods for authority control leave certain tasks to long-term, involved contributors.
+For example, on question and answer service *Stack Overflow*, a user's administrative ability grows more open as they contribute more to the management of the system, a way of ensuring that those users have learned the proper management of the site.
 
-This distinction between peripheral and core is important to an information science treatment of crowdsourcing.
-It shows that the benefits of crowdsourcing are not only attainable by those with the infrastructure and resources to commit to a new large system.
-It can be an augmentative feature, that engages with users and accepts useful feedback from them in addition to a non-crowdsourcing primary objective.
-Peripheral crowdsourcing also often accompanies a pattern of reacting to existing information objects, pertinent to those that deal with museum repositories or digital libraries.
+\newthought{In additional to what the crowd is}, there is a distinction to be made on what the crowd is desired to be.
+Here, it is helpful to think of a spectrum between *diverse* and *homogeneous* crowds.
+In some cases, the crowdsourcing task benefits from multiple unique viewpoints.
+When online players compete to fold proteins in the most efficient way possible for
+*FoldIt*, the project's success is predicated on the ability of people to problem-solve in variable ways.
+In contrast, for a project like
+*Building Inspector* where participants outline building boundaries from scanned survey records, the desire is for the participants to perform in a standard way.
+Here, reliability and consistency are important traits.
+
+### Type of Contribution
+
+The type of work performed by crowds can vary greatly in its complexity and style.
+
+\newthought{One notable form of crowdsourced work} is represented by the concept of human computation, where "the problems fit the general paradigm of computation, and as such might someday be solvable by computers"
+[@quinn_human_2011].
+Understanding that crowdsourcing is not solely human computation tasks, the inferred corollary to these types of tasks are those that are expected to be too complex for computers: creative,
+judgment-based, or requiring critical thinking.
+Creative crowdsourcing might take the form of artistic human expression, such as online contributors collectively animating a music video (*Johnny Cash Project*) or the sum of YouTube.
+Opinion or judgment-based crowdsourcing often does not have a definitive answer, and is seen in areas such as movie reviews or product ratings.
+More complex critical thinking tasks do not fit the paradigm of computation and are much more complex, such as Wikipedia or protein-folding project FoldIt.
+
+@schenk_crowdsourcing_2009 have previously distinguished between three types of crowdsourcing.
+First are routine tasks, such as crowdsourcing of OCR text correction with ReCaptcha.
+The majority of human computation tasks would likely fall within this category of rote tasks.
+Second are complex tasks, such are open-source software development.
+Finally, they suggest creative tasks, with a slightly different meaning than our typology's usage as a disjunct to human computation.
+An example of their final category would be a system like *MyStarbucksIdea*, a space where people suggest changes they would like to see at the coffee chain Starbucks.
+Since @schenk_crowdsourcing_2009 focus on crowdsourcing when there is a client, usually a corporate client, they do not consider the wider space of creative crowdsourcing tasks.
+
+\newthought{Another view that touches on the nature of the contribution} is
+*generative* versus *reactive*.
+In the former, new intellectual products are created.
+With reactive work, the work is a reaction or interpretation of an existing information object: reviews, ratings,
+encoding.
+
+Such a distinction is neglected in most views of crowdsourcing, but important in information science.
+At the heart of many projects by libraries, museums, and cultural heritage institutions, is a focus on information objects.
+There is much effort expended in archiving, enriching, appreciating, and sharing works, and a reactive view of crowdsourcing products places the public within this tradition.
+
+\newthought{A final view of types of work}, one adopted strongly in this dissertation, is the spectrum between *objective* and *subjective* tasks.
+
+Objective tasks are assumed to have an authoritative truth, even if it is unknown.
+For example, in transcribing scanned texts, it is assumed that there is a ‘correct’ transcription in the work that has been scanned.
+
+In contrast, subjective tasks have a variable concept of correctness, as they are not expected to be consistent between contributors.
+
+Human computation undertakings are commonly objective tasks, and taxonomic efforts for human computation – such as Schenk and Guittard's split of routine, complex, and creative
+[-@schenk_crowdsourcing_2009] – do not touch on the subjective/objective separation directly.
+
+The subjective-objective distinction has consequences for training and quality control.
+Objective tasks lead to a training approach where the ideal result is that everyone performs the task in the same one right way.
+Quality control on those tasks can employ approaches such as intercoder reliability, since it can be assumed that there is an objective set of results that raters are striving for.
+Subjective tasks can still need training and quality control, but it will necessarily be of a different kind.
+For example, certain subjective tasks want to take advantage of the diversity of human activity and so explicitly do not want everyone to do the same thing in the same way.
+
+This distinction is still present with different forms of aggregation.
+Multiple contributions can be aggregated with an objective assumption,
+expecting a truth and deviations from it as bad work or data.
+Other systems try to aggregate a normative opinion or judgment of subjective contributions.
+This latter assumption is seen often in opinion ratings,
+such as film or restaurant ratings: just because there is an aggregated rating presented, there is an understanding that some people might disagree and that they are not incorrect for doing so.
 
 ### Aggregation
 
@@ -380,7 +409,7 @@ Other times, such as with question and answer websites
 With iterative contributions, peer review is sometimes used, as in the versioned workflow of many open-source projects or with the concept of watching pages and reversions on Wikipedia.
 As noted, averaged aggregation receives a lot of focus because it lends itself to quantification, and numerous studies focus on the quality increases of adding redundant contributors or methods to identify low-quality contributors [@sheng_get_2008; @snow_cheap_2008; @wei_lda-based_2006; @wallace_who_2011].
 
-### Director / Beneficiary
+### Beneficiary
 
 Who directs the crowdsourcing activities and who benefits from the contributions?
 
@@ -401,82 +430,22 @@ One way to view this relationship between contributor and director is in light o
 Do both director and contributor benefit (symbiosis)? Does one benefit at the expense of the other
 (parasitism)? Or is it a case of commensalism, where both benefit but in mutually exclusive ways.
 
-### Type of Work
 
-The type of work performed by crowds can vary greatly in its complexity and style.
+### Centrality
 
-\newthought{One notable form of crowdsourced work} is represented by the concept of human computation, where "the problems fit the general paradigm of computation, and as such might someday be solvable by computers"
-[@quinn_human_2011].
-Understanding that crowdsourcing is not solely human computation tasks, the inferred corollary to these types of tasks are those that are expected to be too complex for computers: creative,
-judgment-based, or requiring critical thinking.
-Creative crowdsourcing might take the form of artistic human expression, such as online contributors collectively animating a music video (*Johnny Cash Project*) or the sum of YouTube.
-Opinion or judgment-based crowdsourcing often does not have a definitive answer, and is seen in areas such as movie reviews or product ratings.
-More complex critical thinking tasks do not fit the paradigm of computation and are much more complex, such as Wikipedia or protein-folding project FoldIt.
+How central, or necessary, is the crowdsourcing to the task at hand? Is it *peripheral*, or *core*?
 
-@schenk_crowdsourcing_2009 have previously distinguished between three types of crowdsourcing.
-First are routine tasks, such as crowdsourcing of OCR text correction with ReCaptcha.
-The majority of human computation tasks would likely fall within this category of rote tasks.
-Second are complex tasks, such are open-source software development.
-Finally, they suggest creative tasks, with a slightly different meaning than our typology's usage as a disjunct to human computation.
-An example of their final category would be a system like *MyStarbucksIdea*, a space where people suggest changes they would like to see at the coffee chain Starbucks.
-Since @schenk_crowdsourcing_2009 focus on crowdsourcing when there is a client, usually a corporate client, they do not consider the wider space of creative crowdsourcing tasks.
+The work in @organisciak_incidental_2013 tried to counterbalance a perceived focus on whole-hog crowdsourcing – the large, highly novel initiatives like Wikipedia – by introducing *incidental crowdsourcing*.
+Incidental crowdsourcing focused on types of crowdsourcing – like rating, commenting, or tagging – that are peripheral and non-critical.
+The shift to an incidental mode brings with it its own design tendencies, such as lower bandwidth forms of contribution and fallback strategies for low engagement cases.
 
-\newthought{Another view that touches on the nature of the contribution} is
-*generative* versus *reactive*.
-In the former, new intellectual products are created.
-With reactive work, the work is a reaction or interpretation of an existing information object: reviews, ratings,
-encoding.
+This distinction between peripheral and core is important to an information science treatment of crowdsourcing.
+It shows that the benefits of crowdsourcing are not only attainable by those with the infrastructure and resources to commit to a new large system.
+It can be an augmentative feature, that engages with users and accepts useful feedback from them in addition to a non-crowdsourcing primary objective.
+Peripheral crowdsourcing also often accompanies a pattern of reacting to existing information objects, pertinent to those that deal with museum repositories or digital libraries.
 
-Such a distinction is neglected in most views of crowdsourcing, but important in information science.
-At the heart of many projects by libraries, museums, and cultural heritage institutions, is a focus on information objects.
-There is much effort expended in archiving, enriching, appreciating, and sharing works, and a reactive view of crowdsourcing products places the public within this tradition.
 
-\newthought{A final view of types of work}, one adopted strongly in this dissertation, is the spectrum between *objective* and *subjective* tasks.
-
-Objective tasks are assumed to have an authoritative truth, even if it is unknown.
-For example, in transcribing scanned texts, it is assumed that there is a ‘correct’ transcription in the work that has been scanned.
-
-In contrast, subjective tasks have a variable concept of correctness, as they are not expected to be consistent between contributors.
-
-Human computation undertakings are commonly objective tasks, and taxonomic efforts for human computation – such as Schenk and Guittard's split of routine, complex, and creative
-[-@schenk_crowdsourcing_2009] – do not touch on the subjective/objective separation directly.
-
-The subjective-objective distinction has consequences for training and quality control.
-Objective tasks lead to a training approach where the ideal result is that everyone performs the task in the same one right way.
-Quality control on those tasks can employ approaches such as intercoder reliability, since it can be assumed that there is an objective set of results that raters are striving for.
-Subjective tasks can still need training and quality control, but it will necessarily be of a different kind.
-For example, certain subjective tasks want to take advantage of the diversity of human activity and so explicitly do not want everyone to do the same thing in the same way.
-
-This distinction is still present with different forms of aggregation.
-Multiple contributions can be aggregated with an objective assumption,
-expecting a truth and deviations from it as bad work or data.
-Other systems try to aggregate a normative opinion or judgment of subjective contributions.
-This latter assumption is seen often in opinion ratings,
-such as film or restaurant ratings: just because there is an aggregated rating presented, there is an understanding that some people might disagree and that they are not incorrect for doing so.
-
-### Type of Crowd
-
-@vukovic_towards_2010 define two extremes of crowd types: *internal* and *external*.
-Internal crowds are composed solely of contributors from the organization that is crowdsourcing, if it is thus centralized.
-External crowds are members outside of the institution.
-@vukovic_towards_2010 also note that *mixed*
-crowds are observable.
-
-\newthought{A point of separation between crowd methods} is the skills required to perform the work.
-*Unskilled*, *locally training*, and *specialized* are all seen among crowdsourcing systems.
-Where unskilled labour encourages contributions from anybody at anytime, systems that use methods for authority control leave certain tasks to long-term, involved contributors.
-For example, on question and answer service *Stack Overflow*, a user's administrative ability grows more open as they contribute more to the management of the system, a way of ensuring that those users have learned the proper management of the site.
-
-\newthought{In additional to what the crowd is}, there is a distinction to be made on what the crowd is desired to be.
-Here, it is helpful to think of a spectrum between *diverse* and *homogeneous* crowds.
-In some cases, the crowdsourcing task benefits from multiple unique viewpoints.
-When online players compete to fold proteins in the most efficient way possible for
-*FoldIt*, the project's success is predicated on the ability of people to problem-solve in variable ways.
-In contrast, for a project like
-*Building Inspector* where participants outline building boundaries from scanned survey records, the desire is for the participants to perform in a standard way.
-Here, reliability and consistency are important traits.
-
-### Common Design Patterns
+## Common Design Patterns
 
 A number of design patterns have been established and repeated in crowdsourcing, some organically and some, like the ESP Game, carefully engineered.
 These include:
@@ -601,7 +570,7 @@ Examples of efficient routing on
 
 ## Conclusion
 
-Crowdsourcing offers potential for involving the public and improving data in digital libraries and cultural heritage repositories.
+Crowdsourcing offers potential in information science for involving the public and improving data in digital libraries and cultural heritage repositories.
 However,
 the scope of crowdsourcing is so large and the implementation possibilities so varied that it can seem rather daunting to pursue it.
 
@@ -617,7 +586,7 @@ some of which may be contradictory), and constraints, while exploiting technolog
 For any given product, there are many experiences that could be constructed.
 The dimensions provided offer help in comprehending the alternatives and how they are practiced.
 
-\newthought{In the language of this chapter}, the rest of this dissertation pursues crowdsourcing in the following space:
+\newthought{Within the framework introduced}, the rest of this dissertation pursues crowdsourcing in the following space:
 
  - Crowds that are paid, rather than motivated to volunteer;
  - Tasks that are reactive, positioning contributions relative to existing documents, rather than generative;
