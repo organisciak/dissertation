@@ -1068,5 +1068,5 @@ For both tasks, workers that were told they were better workers in the feedback 
 This chapter measured three design manipulations, one in two variants, against two control tasks appropriate for information science.
 Notably, it was found that training interventions improved data quality at little extra cost, while performance feedback improved over a baseline in circumstances where workers were capable of self-correction.
 
-These findings can support future work on crowdsourcing design, as well as informing practical applications for tasks where there is an objective or normative truth.
+These findings can support future work on crowdsourcing design, as well as informing practical applications for tasks where there is an objective truth or a reasonable expectation of agreement.
 The next chapter presents one real-world application of crowdsourcing, in an experiment that applies both post-collection corrections and collection-time design changes.

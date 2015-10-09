@@ -10,7 +10,7 @@ music systems submitted to the Audio Music Similarity and Retrieval (AMS) task.[
 [^JCDLCite]: A version of this work was previously presented at JCDL 2015, with co-author J. Stephen Downie [@organisciak_improving_2015]. Copyright held by ACM, permission provided for dissertation reuse.
 
 After analyzing four years of crowd judgments from AMS, finding that the consistency across different raters and years is remarkably poor, this chapter looks at the role of crowdsourcing design and modeling choices in this data variable.
-Following from the previous chapter and especially the first half of this chapter, the low inter-coder consistency is tackled from both a collection approach perspective and a post-collection perspective. 
+Following from the previous chapter and especially the first half of this chapter, the low intercoder consistency is tackled from both a collection approach perspective and a post-collection perspective. 
 Specifically, user normalization, collection instrument design changes, and multiple independent judgments are pursued.
 
 The primary contribution here is a better understanding of data issues that stem from crowdsourced music evaluation datasets, and methods to avoid data quality pitfalls.
@@ -256,7 +256,7 @@ One of the threats to grading reliability is a hard to understand or poorly defi
 Following from earlier discussion, we turn to the effect of a task's design on the consistency of judgments by evaluating a different collection interface.
 
 New judgments are again collected on Mechanical Turk.
-In contrast to the previous evaluation's fidelity to the original collection interface, here the task design is changed to more carefully guide graders.
+In contrast to the previous evaluation's fidelity to the original collection interface, here the task design is changed to more carefully guide coders.
 
 Previous literature notes that the similarity ratings can be biased because the perceived distance between points in a rating scale is not linear, and word choice can affect interpretation of the task [@katter_influence_1968; @eisenberg_measuring_1988].
 This motivated us to measure some changes to the rating scale: BROAD scores were no longer collected, and FINE scores gave textual descriptions for ranges of the 0-100 scale, serving as anchors.
@@ -280,7 +280,7 @@ We also tested this interface with colloquial language to make the instructions 
 | 100   | They are the same song!                                  |
 +-------+----------------------------------------------------------+
 
-Table: The colloquial wording presented to graders in the alternative task interface. {#tbl:colloquial}
+Table: The colloquial wording presented to coders in the alternative task interface. {#tbl:colloquial}
 
 ### Results
 
@@ -298,7 +298,7 @@ For AMS and similarly semi-subjective tasks, there are two changes that can be i
 **Collecting multiple judgments.** Despite the added complexity or cost of collecting multiple judgments for each query-candidate pair, it is an important step toward collecting consistent results.
 While finding enough volunteer judges in the MIR community is a restricting factor, amateur paid crowds offer similar performance [@lee_crowdsourcing_2010;@urbano_crowdsourcing_2010] and may be one way to augment the volunteer judgments. 
 
-**Providing a more specific codebook.** While it is important to acknowledge the subjectivity of similarity judging, providing structure for graders to anchor their interpretations into a score improves the reliability of their contributions.[^EarlyAMS]
+**Providing a more specific codebook.** While it is important to acknowledge the subjectivity of similarity judging, providing structure for coders to anchor their interpretations into a score improves the reliability of their contributions.[^EarlyAMS]
 Unlike multiple judgments, these sorts of task design changes do not add to the cost of evaluation.
 
 [^EarlyAMS]: There was purportedly great discussion at the conception of the AMS task around the expected subjectivity, which may have motivated the loose instructions stating that "we expect to see variations across evaluators... as this is a normal part of human subjectivity." However, I would argue, in light of the results here, that there is a confounding between natural, expected subjectivity of the task, and artificial variance stemming from the treatment of the task itself.
@@ -307,13 +307,13 @@ For the benefit of further study, it would be also beneficial for MIREX to retai
 While the poor consistency is improved through multiple judgments and stronger instructions, an outstanding question is whether a judge's approach to a task evolves over time.
 
 Normalizing for systematic user-specific biases did not improve the consistency of the data.
-However, when graders were provided a rating scale that gave them more guidance, they performed better.
+However, when coders were provided a rating scale that gave them more guidance, they performed better.
 Why did the former not improve consistency, while the latter did?
-One possibility is that, in addition to intra-grader differences in interpreting the FINE scale, graders were also internally less strict, something that the task design might have corrected.
+One possibility is that, in addition to intra-coder differences in interpreting the FINE scale, coders were also internally less strict, something that the task design might have corrected.
 
 ## Conclusion
 
-Finding human graders for a time-consuming task is difficult.
+Finding human coders for a time-consuming task is difficult.
 However, since music similarity tries to derive a consensus for a quality that people do not always agree on, it is imperative to collect multiple judgments for reliable evaluation.
 Judging music similarity is normative: it does not have a clear truth but it is possible to strive for a rough consensus that strives to satisfy most opinions.
 This type of task is important to building better information systems: it can apply to certain contexts of information retrieval relevance, or ratings of item quality in online collections, or even in crowd-curated lists, but as we found with audio similarity, it is important to treat it as such.

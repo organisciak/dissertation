@@ -10,7 +10,7 @@ This dissertation focuses on particular area of crowdsourcing -- paid labor thou
 This is primary a study of data quality maximization: in what ways can crowdsourcing data be optimized, both before and during collection time, and in both objective and subjective contexts. _How do we control and interpret qualitative user contributions in a quantified system?_
 
 There were three movements to this dissertation.
-First, a post-collection approach was taken to interpreting objective or normative tasks: what indicators exist that help us identify and use good contributions while excluding poor ones?
+First, a post-collection approach was taken to interpreting objective tasks: what indicators exist that help us identify and use good contributions while excluding poor ones?
 The way you ask affects what you receive, so next this study looked at objective tasks at the collection stage.
 How does the implementation of the collection instrument improve or otherwise bias the collected contributions?
 Following in this direction, this study finally shifted focus to the implementation of subjective tasks, ones that do not have a concept of correctness except in relation to who they are collected for.
@@ -33,7 +33,7 @@ Exploring the possibility that this is due to time spent in reading instructions
 
 Since poor workers in this class were not exhibiting profit-optimizing behaviours, this finding suggests that interventions during collection time might assist in course-correcting workers -- leading to the next research question.
 
-> __Broad RQ 2__: What are the biases inherent to the task design for objective or normative tasks (i.e., the data collection instrument), and can design manipulations correct for them at _collection time_?
+> __Broad RQ 2__: What are the biases inherent to the task design for objective tasks (i.e., the data collection instrument), and can design manipulations correct for them at _collection time_?
 
 In _Designing Tasks for Objective Needs_, this work moved past an immutable treatment of contributions and looks at how contribution quality can be influenced at collection-time.
 
@@ -52,12 +52,12 @@ These findings support, to the extent of the types of tasks collected, a positio
 More to the point, they show that there are ways of improving results at no extra collection cost.
 This makes it an asset for practical implementations, and exploring alternative forms of design manipulations and interventions is worthy of further study.
 
-Tying together the preceded two chapters, a small study was next conducted on the low inter-grader reliability of audio similarity judgments for music information retrieval.
-Correcting the existing data was not found to be effective, but increasing the redundant contribution count and redesigning the collection interface to anchor the categories was able to account for a significant portion of the inter-grader error.
+Tying together the preceded two chapters, a small study was next conducted on the low intercoder reliability of audio similarity judgments for music information retrieval.
+Correcting the existing data was not found to be effective, but increasing the redundant contribution count and redesigning the collection interface to anchor the categories was able to account for a significant portion of the intercoder error.
 
 Part of this chapter focused on the problem of contributor subjectivity. Despite being performed by trusted contributions, the subjectivity of audio similarity judgment tasks confounded their normative use for system evaluation.
 
-> __Broad RQ 3__: What are the quality losses when treating non-normative tasks in objective ways, and can collection-time framing or post-collection modeling approaches reduce these?
+> __Broad RQ 3__: What are the quality losses when treating subjective tasks in objective ways, and can collection-time framing or post-collection modeling approaches reduce these?
 
 _Designing Tasks for Subjective Needs_ again focused on maximizing quality through a priori design and instrumentation choices, this time pursued in the context of subjective tasks.
 Focusing on a setting of on-demand personalization, it introduced two approaches.

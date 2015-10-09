@@ -510,7 +510,7 @@ More information can become available by including more categories or increasing
 However, including more workers also has a positive effect on quality.
 Thus, the experience of this study is that for binary labels, majority rating is generally robust enough.
 
-With regard to RQ 1.3: agreement does seem to indicate quality for objective-normative tasks. However, while removing high disagreement workers improves, well, measures of agreement, for low granularity tasks like relevance judgments it more fruitful to collect multiple independent contributions rather that seeking to punish the black sheep workers.
+With regard to RQ 1.3: agreement does seem to indicate quality for objective tasks. However, while removing high disagreement workers improves, well, measures of agreement, for low granularity tasks like relevance judgments it more fruitful to collect multiple independent contributions rather that seeking to punish the black sheep workers.
 Still, for more complex data like the Twitter sentiment ratings, correcting judgments based on measures of a worker's quality (by proxy of agreement) is effective.
 
 ## Conclusion
@@ -531,7 +531,7 @@ For more complex tasks or noisier data, an iterative algorithm can offer slight 
 
 Just because there is disagreement does not mean that the data is problematic, however.
 It was found that high disagreement among non-expert workers is not necessarily indicative of problematic results.
-Low inter-rater agreement may indicate a difficult task or individual rogue workers.
-While inter-rater agreement can be increased significantly by replacing the work of low quality workers, the improvement in accuracy is less defined.
+Low intercoder agreement may indicate a difficult task or individual rogue workers.
+While intercoder agreement can be increased significantly by replacing the work of low quality workers, the improvement in accuracy is less defined.
 
 \newthought{These results shed light on} the characteristics of workers on a simple relevance judgment tasks. However, the most interesting finding seems to suggest the importance of a worker's time spent internalizing the codebook. Are there ways to encourage this sort of behavior? What other changes can we make through collection-time tweaks? The next chapter shifts focus to these issues.

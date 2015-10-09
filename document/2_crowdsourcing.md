@@ -221,7 +221,7 @@ In information retrieval, the focus on crowdsourcing has been predominantly in t
 
 The benefit of paid crowds for relevance judgments is that it allows for on-demand evaluation datasets [@alonso_crowdsourcing_2008].
 This has been a costly and exhausting process in the past, making it difficult to perform IR research on more novel datasets than the judged sets available from TREC.
-Relevance judgments benefit from the agreement among multiple humans, since the concept of 'relevance' is not clear-cut but rather normative.
+Relevance judgments benefit from the agreement among multiple humans, since the concept of 'relevance' is not clear-cut but rather negotiated and agreed upon.
 The ability to attract a breadth of rater types also positions paid crowdsourcing as an effective means to collecting evaluation data.
 
 TREC itself ran a crowdsourcing track for three years, the primary task a competition to improve relevance judgment quality [@lease_overview_2011; @smucker_overview_2012].

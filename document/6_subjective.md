@@ -545,7 +545,7 @@ It seems, while most taste-grokking workers were poor at the task, some very eff
 Handwriting Imitation
 ---------------------
 
-Despite adopting the term 'taste' in taste-matching and taste-grokking, there are many non-normative tasks that do not refer to subjective taste but nonetheless are requester-specific and may be suited for personalization.
+Despite adopting the term 'taste' in taste-matching and taste-grokking, there are many subjective or context-specific tasks that do not refer to taste but nonetheless may be suited for personalization.
 Two additional areas may be characterized as those affected by *style* and *biases*.
 By way of example, a small handwriting imitation study was performed, looking at the ability of strangers to personalize text in a person's handwriting.
 This is more a question of style than of taste.

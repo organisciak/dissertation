@@ -443,7 +443,7 @@ Human computation undertakings are commonly objective tasks, and taxonomic effor
 
 The subjective-objective distinction has consequences for training and quality control.
 Objective tasks lead to a training approach where the ideal result is that everyone performs the task in the same one right way.
-Quality control on those tasks can employ approaches such as interrater reliability, since it can be assumed that there is an objective set of results that raters are striving for.
+Quality control on those tasks can employ approaches such as intercoder reliability, since it can be assumed that there is an objective set of results that raters are striving for.
 Subjective tasks can still need training and quality control, but it will necessarily be of a different kind.
 For example, certain subjective tasks want to take advantage of the diversity of human activity and so explicitly do not want everyone to do the same thing in the same way.
 
