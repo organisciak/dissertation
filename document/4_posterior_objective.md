@@ -16,18 +16,16 @@ These findings may inform large-scale digital collections' use of non-expert wor
 \end{quote}
 \end{fullwidth}-->
 
-\newthought{Work supported through online} volunteer contributions or micropayment-based labor presents a strikingly different mode for annotating information items.
-The accessibility of large groups of contributors online -- in the form of either interested volunteers or paid workers -- allows for large-scale annotation tasks to be completed quickly.
-However, this approach also introduces new problems of reliability by problematizing assumptions about expertise and work quality.
+\newthought{This chapter approaches a crucial problem}: disambiguating the influence of unreliable annotators from natural uncertainty in multi-worker aggregation.[^ASISTcite]
+The accessibility of large groups of contributors online allows for large-scale annotation tasks to be completed quickly.
+However, it also introduces new problems of reliability by problematizing assumptions about expertise and work quality.
 The actual workers in these tasks are generally self-selected and unvetted, making it difficult to ascertain the reliability of the ratings.
+
+[^ASISTcite]: A version of this chapter was previously published at ASIS&T 2012, with co-authors Miles Efron, Katrina Fenlon, and Megan Senseney [@organisciak_evaluating_2012]. Copyright retained by authors.
 
 Online annotations need to be both collected and interpreted.
 Where later chapters focus on issues in collection, here the post-collection interpretative stage is considered.
 In the absence of traditional measures of reliability, how do we know what online contributions can be trusted, and is it possible to improve their signal?
-
-This chapter approaches a crucial problem: disambiguating the influence of unreliable annotators from natural uncertainty in multi-worker aggregation.[^ASISTcite]
-
-[^ASISTcite]: A version of this chapter was previously published at ASIS&T 2012, with co-authors Miles Efron, Katrina Fenlon, and Megan Senseney [@organisciak_evaluating_2012]. Copyright retained by authors.
 
 This goal is pursued for tasks with an expected truth -- that is, objective tasks.
 However, a key assumption is made: that of a negotiated "ground truth" over an objective one.
@@ -47,8 +45,6 @@ Relevance assessments are a vital part of information retrieval evaluation and h
 
 Online annotation generally takes the form of short, fragmented tasks.
 To capitalize on the scale and ephemerality of online users, services such as Amazon's Mechanical Turk (AMT) have emerged, which encourage the short task model as a form of on-demand human work.
-Amazon describes the Mechanical Turk service as "artificial artificial intelligence," referring to the facade of computation with a human core.
-The subtext here is that Turk enables the easy undertaking of tasks that require human perception – tasks such as encoding, rating, and annotating.
 
 AMT has shown itself useful in information retrieval, where many individual human tasks benefit from parallelized contributions.
 The workers are non-expert workers. 
@@ -76,17 +72,7 @@ Volunteer contributions may provide entirely new content – such as suggested l
 While unpaid engagement does not have the same financial motivation for malicious workers, contributions that are open to the public are still susceptible to low-quality results: whether through recklessness, misunderstanding, mischief, or simply spam.
 Furthermore, even when the ratings or annotations from unvetted semi-anonymous online workers are of a high quality, there is nonetheless a need to justify the quality of those ratings.
 
-## Motivation
-
-The impetus for the research in this chapter was a desire to improve the effectiveness of an information retrieval system for the Institute of Museum and Library Services Digital Collections and Content project (IMLS DCC).
-The IMLS DCC is a large aggregation of digital cultural heritage materials from museums, libraries, and archives across the country. 
-Originally launched in 2002 as a point of access to digital collections supported by the IMLS through National Leadership Grants and LSTA funding, it has since expanded its scope to provide more inclusive coverage of American history collections, regardless of funding source.
-As a result of its position among the largest cultural heritage aggregations in the US, research through the IMLS DCC looks at the problems associated with reconciling content from thousands of different providers, including metadata interoperability, collection-item relationships, and access to materials.
-One of the difficulties that IMLS DCC must address is information retrieval when the metadata records in its aggregation are of inconsistent length, style, and informativeness.
-Overcoming these types of problems in order to improve subject access to the breadth of materials is an active problem [e.g., @efron_building_2011; @efron_improving_2012].
-In doing so, human relevance ratings are an invaluable resource for evaluating document relevance in a given query.
-
-## Related Work ^[Or, _what we already know_]
+## Related Work
 
 As non-expert classification has become more common, there have been a number of studies into the quality of its workers.
 Generally, such studies have found that, while a single worker does not match the quality of an expert, aggregating votes from multiple earnest workers can match the quality of an expert. 
@@ -124,12 +110,50 @@ When measured by accuracy, the EM algorithm was among the most prominent.
 The best performing team against each evaluation set – BUPT-WILDCAT and uc3m, respectively – both had an EM implementation in their submission, though the latter was paired with a number of additional rules.
 However, uc3m's second, non-official run slightly outperformed the accuracy of their official submission with an approach using support vector machines (SVM) [@urbano_university_2011].
 
-## Approach
+## Data
 
-The purpose of this study is to determine important factors in making truth value decisions from repeated ratings by non-expert workers.
-In the context of paid microtask labor, this study looks to simultaneously interrogate worker quality and task difficulty, allowing the estimates of one to inform the estimates of the other. 
+Post-collection looks at the data quality of descriptive crowdsourcing is studied for contributions over two datasets.
 
-The factors that we consider are in the following three areas: 
+In the dataset of primary focus, workers contributed judgements of the relevance of cultural heritage documents to a given query.
+This data was rated with three-annotator redundancy, which means that for each document, there were three workers that completed the rating task.
+There were three label options available to workers: _relevant_, _non-relevant_, and _I don't know_.
+The unknown option was considered a skipped option and the data was removed from the final dataset. 
+
+Annotations were collected through Amazon's Mechanical Turk service, using a custom rating interface.
+When a worker accepted a judgment task, they were shown a page with a query, description of the task, description of the coding manual (i.e., what types of documents should be rated as relevant), and up to ten ribbons of documents to rate (see Figure @fig:ch3interface).
+
+![The rating interface.](../images/ch3-rating-interface.png) {#fig:ch3interface}
+
+The structured form of digital item records lends itself well to such tasks, which we represented through the title, description, and related image thumbnail.
+To aid the task of scrolling through ratings and decrease the time spent on tasks, our interface automatically scrolled to the next tasks once the previous one was rated.
+
+The impetus for the chapter was improving the effectiveness of an information retrieval system for the Institute of Museum and Library Services Digital Collections and Content project (IMLS DCC).
+The IMLS DCC is a large aggregation of digital cultural heritage materials from museums, libraries, and archives across the country. 
+Originally launched in 2002 as a point of access to digital collections supported by the IMLS through National Leadership Grants and LSTA funding, it has since expanded its scope to provide more inclusive coverage of American history collections, regardless of funding source.
+As a result of its position among the largest cultural heritage aggregations in the US, research through the IMLS DCC looks at the problems associated with reconciling content from thousands of different providers, including metadata interoperability, collection-item relationships, and access to materials.
+One of the difficulties that IMLS DCC must address is information retrieval when the metadata records in its aggregation are of inconsistent length, style, and informativeness.
+Overcoming these types of problems in order to improve subject access to the breadth of materials is an active problem [e.g., @efron_building_2011; @efron_improving_2012].
+In doing so, human relevance ratings are an invaluable resource for evaluating document relevance in a given query.
+
+\newthought{Most of the evaluations are measured} through accuracy, which is percentage of correct classifications that are made:
+
+$accuracy = \frac{\# of correct classifications}{total \# of classifications}$
+
+There are two comparison sets of data by which ‘correct' classifications were taken.
+The first was against consensus labels, which were simply generated by taking the majority vote for a given task.
+Since these are derived from the actual dataset, they may not be completely reliable.
+However, for comparative purposes, they offer us a metric by which to see trends in the data.
+
+The cleaner set of ground truth data is a set of oracle ratings done by myself and the authors of @organisciak_evaluating_2012.
+Since the authors are of known reliability and have a close understanding of both the rating task and the data being rated, the oracle judgments serve as an effective measure for evaluating the accuracy of the majority votes themselves.
+
+
+
+## Research Questions
+
+In the context of paid crowdsourcing, this study looks to simultaneously interrogate worker quality and task difficulty, allowing the estimates of one to inform the estimates of the other. 
+
+The intention is to better understand post-collection strategies to improve data quality, pursued through three areas:
 
 -   _Temporality_.
 
@@ -148,34 +172,6 @@ The factors that we consider are in the following three areas:
     __RQ 1.3__: Does a worker's agreement or disagreement with other workers reflect their overall quality as a worker?
 
     __RQ 1.4__: If so, can disagreement be used for data improvements?
-
-Most of the evaluations are measured through accuracy, which is percentage of correct classifications that are made:
-
-$accuracy = \frac{\# of correct classifications}{total \# of classifications}$
-
-There are two comparison sets of data by which ‘correct' classifications were taken.
-The first was against consensus labels, which were simply generated by taking the majority vote for a given task.
-Since these are derived from the actual dataset, they may not be completely reliable.
-However, for comparative purposes, they offer us a metric by which to see trends in the data.
-
-The cleaner set of ground truth data is a set of oracle ratings done by myself and the authors of @organisciak_evaluating_2012.
-Since the authors are of known reliability and have a close understanding of both the rating task and the data being rated, the oracle judgments serve as an effective measure for evaluating the accuracy of the majority votes themselves.
-
-## Data
-Crowdsourced annotation is studied over two datasets in this study. 
-
-In the dataset of primary focus, workers contributed judgements of the relevance of cultural heritage documents to a given query.
-This data was rated with three-annotator redundancy, which means that for each document, there were three workers that completed the rating task.
-There were three label options available to workers: _relevant_, _non-relevant_, and _I don't know_.
-The unknown option was considered a skipped option and the data was removed from the final dataset. 
-
-Annotations were collected through Amazon's Mechanical Turk service, using a custom rating interface.
-When a worker accepted a judgment task, they were shown a page with a query, description of the task, description of the coding manual (i.e., what types of documents should be rated as relevant), and up to ten ribbons of documents to rate (see Figure @fig:ch3interface).
-
-![The rating interface.](../images/ch3-rating-interface.png) {#fig:ch3interface}
-
-The structured form of digital item records lends itself well to such tasks, which we represented through the title, description, and related image thumbnail.
-To aid the task of scrolling through ratings and decrease the time spent on tasks, our interface automatically scrolled to the next tasks once the previous one was rated.
 
 ## Approach
 
