@@ -112,7 +112,7 @@ Four 'threats to reliability' that @neuendorf_content_2002 lists echo issues in 
 
 ## Overview
 
-What are the properties of data collected from paid crowds for objective and subjective information system tasks, and how can the quality of data -- in terms of consistency and variance -- be optimized?
+What are the properties of data collected from crowds for objective and subjective information system tasks, and how can the quality of data -- in terms of consistency and variance -- be optimized?
 
 Each research chapter turns the lens on a piece of this question.
 The broad research questions informing the chapters are as follows:
@@ -146,10 +146,8 @@ The questions this chapter asks are the following:
  - __RQ 1.3__: Does a worker's agreement or disagreement with other workers reflect their overall quality as a worker?
  - __RQ 1.4__: If so, can disagreement be used for data improvements?
 
-\newthought{Considering the data quality of crowdsourcing} as an immutable set of contributions is an important avenue toward properly analyzing and controlling  crowd data, and also pays proper reverence toward a popular stream of crowdsourcing research.
-
-However, in many circumstances, contributions are not a hallowed set of data, bestowed upon a researcher or practitioner to work with.
-They are collected, and as such the _way they are collected_ can change what they look like at the end.
+\newthought{In many circumstances, contributions are not} simply a hallowed set of data bestowed upon a researcher or practitioner to work with.
+Rather, contributions are collected, and as such the _way they are collected_ can change what they look like at the end.
 The next chapter turns our attention toward this less-explored corollary of post-collection data modeling: the effect of the collection instrument on the resultant contributions, toward understanding and potentially optimizing the contribution collection process.
 This is about how you ask, and how it affects what you are told.
 
@@ -159,7 +157,7 @@ The first part selects two control tasks, and measures the effect of three diffe
 Looking at interfaces that give users training, performance feedback, or timer-driven nudges, it asks:
 <!--These design manipulations are looked at again over a subjective context in Chapter 6.-->
 
- * __RQ 2.1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
+ * __RQ 2.1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in crowdsourcing?
 
  * __RQ 2.2__: Is there a significant difference in the quality, reliability, and consistency of crowd contributions for the same task collected through different collection interfaces?
 
@@ -326,10 +324,10 @@ Modern approaches to collaborative filtering commonly normalize ratings against
 For objective tasks, @neuendorf_content_2002 differentiates between two types: manifest and latent.
 
 In a simplified comparison, tasks with manifest content are ones where there is a clear correct contribution.
-Correcting or transcribing text from a scanned image would be grouped in the category.
+Transcribing text from a scanned image would be grouped in the category: the 'right answer' is there in the image.
 
 In contrast, latent tasks are assumed to have a theoretical truth, but one that is not outwardly stated.
-When a person tags a photograph with a free-text label or a worker classifies the sentiment of an opinionated tweet, they are interpreting the content.
+When a person tags a photograph with a free-text label or a worker classifies the sentiment of an opinionated tweet, they are interpreting the content: a much more abstract action.
 As @neuendorf_content_2002 notes, "objectivity is a much tougher criterion to achieve with latent than with manifest variables".
 
 ## Key concepts

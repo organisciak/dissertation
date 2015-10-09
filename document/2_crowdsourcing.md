@@ -34,11 +34,12 @@ He gives his definition[^HoweDefinition], but also notes that language is slippe
 
 Thus, crowdsourcing was adopted to refer broadly to a series of related concepts, all related to people being connected online.
 These concepts included
+ free and open-source development [@lakhani_how_2003; @raymond_cathedral_1999],
  the 'wisdom of the crowds' [@surowiecki_wisdom_2004], 
- human computation [@ahn_labeling_2004],
- commons-based peer production [@benkler_wealth_2006], and
- free and open-source development [@lakhani_how_2003; @raymond_cathedral_1999].
-Further, is overlaps with the content of user-generated content, at least to the extent that user-generated content is used toward a common production or purpose.
+ human computation [@ahn_labeling_2004], and
+ commons-based peer production [@benkler_wealth_2006].
+Further, it overlaps with the content of user-generated content, at least to the extent that user-generated content is used toward a common production or purpose.
+Each of these are discussed in greater detail below.
 
 ## Related Concepts
 
@@ -53,10 +54,10 @@ Raymond compared this form of software development to a bazaar, "open to the poi
 The many hands approach to open-source demonstrated that technologically-connected crowds can coherently delegate and create works.
 Like with crowdsourcing, open source software development often does not discriminate on credentials or background; if a contributor can make an adequate contribution, it can be used.
 
-The roots of crowdsourcing in open source are credited in @howe_crowdsourcing_2008 and also are on display in Howe's "soundbyte" definition: "the application of Open Source principles to fields outside of software" (sidebar, www.crowdsourcing.com)
+The roots of crowdsourcing in open source are credited in @howe_crowdsourcing_2008 and also are on display in Howe's "soundbyte" definition: "the application of Open Source principles to fields outside of software" (sidebar, www.crowdsourcing.com).
 
 **Wisdom of the crowds**. *The Wisdom of the Crowds* [@surowiecki_wisdom_2004] observed the collected effectiveness of crowds when properly aggregated.
-Building from Francis Galton's *Vox Populi* [-@galton_vox_1907], where Galton aggregated guesses at a steer weight guessing competition and found that the median guess was more accurate that any individual guess, Surowiecki argues that the ability of many autonomous amateurs to aggregate into a product comparable to something an expert would produce has important ramifications on the internet.
+Building from Francis Galton's *Vox Populi* [-@galton_vox_1907], where Galton aggregated guesses at a steer weight guessing competition and found that the median guess was more accurate that any individual guess, Surowiecki argues that the ability of many autonomous people to aggregate into a product comparable to something an expert would produce has important ramifications on the internet.
 
 The term 'wisdom of the crowds' has survived the book to refer to the strength of human decision-making in aggregate, and design patterns that make use of that strength.
 
@@ -73,7 +74,7 @@ This is a fitting anecdote, given that many crowdsourcing efforts do come down t
 It is seen most clearly in cases such as question and answer websites (e.g., Stack Overflow, Ask Metafilter, Quora).
 However, increasing the pool applies in much more than cases of 'wisdom': many successful websites receive the bulk of their contributions from a small core group of contributors [e.g., Wikipedia - @muchnik_origins_2013; Transcribe Bentham - @causer_transcription_2012; The Commons - @springer_for_2008] and the benefit of opening up their projects to public contributions is in increasingly the likelihood of a "power user" [@springer_for_2008].
 
-The second lesson that permeates crowdsourcing is the idea of aggregation that results in a product better than the sum of its parts. Grand projects like Wikipedia and FoldIt^[An online research-supporting game that looks for the most efficient ways to fold proteins.] [@khatib_algorithm_2011] allow contributions to build on the work of past contributors.
+The second lesson of the wisdom of the crowds that permeates crowdsourcing is the idea of aggregation that results in a product better than the sum of its parts. Grand projects like Wikipedia and FoldIt^[An online research-supporting game that looks for the most efficient ways to fold proteins.] [@khatib_algorithm_2011] allow contributions to build on the work of past contributors.
 
 
 **Human computation**.
@@ -87,17 +88,17 @@ In synthesizing the various definitions of human computation in relation to crow
  that "the human participation is directed by the computational system or process".
 
 As noted by @law_human_2011, Turing defined the purpose of computers as carrying out operations that humans would normally do.
-Human Computation, then, refers to utilizing humans for operations that computers are not capable of performing yet.
+Human computation, is humans performing work that computers would normally do, but are not yet able to.
 
 By this definition, much human computation aligns with crowdsourcing, but large swaths of crowdsourcing are not relevant to human computation.
 For example, creative crowdsourcing projects like T-shirt design website Threadless are not human computation.
-Inversely, human computation does not have to be sustained by self-selected workers; a more traditionally hired closed system can suffice [@law_human_2011].
+Inversely, human computation does not have to be sustained by an open call; a more traditionally employed closed system can suffice [@law_human_2011].
 
 The paradigm of computation in human computation is just a subset of ways that crowds can collaborate in crowdsourcing, and human computation can be performed without the modality of multiple collaborators seen in crowdsourcing.
 
  **Commons-based peer production** and **user innovation**.
 
-Recent cultural observers have noted the behaviours seen in crowdsourcing through various lens.
+Recent cultural observers have noted the behaviours seen in crowdsourcing through various lenses.
 Crowdsourcing emerges from various affordances -- both technical and social [@wellman_social_2003] -- of modern information networks.
 Such as was seen with open-source software development, networked society encourages new forms of cultural creation, not by intention but by consequence of the type of connectedness it allows.
 
@@ -130,7 +131,7 @@ At the same time, loose collaborations are easier to organize, allowing the purs
 
 **Citizen science**.
 Citizen science refers to collaboration between scientific communities and members of the public on research.
-Early crowdsourcing projects, such as galaxy annotation site *Galaxy Zoo* and protein-folding competition *FoldIt*, were noted as a form of citizen science, and crowdsourcing has been used for numerous successful results in the field.
+Early crowdsourcing projects, such as galaxy annotation site *Galaxy Zoo* [@lintott_galaxy_2008]^[http://www.galaxyzoo.org] and protein-folding competition *FoldIt*[@khatib_algorithm_2011]^[https://fold.it], were noted as a form of citizen science, and crowdsourcing has been used for numerous successful results in the field.
 
 @wiggins_goals_2012 present a typology of citizen science projects, organizing them into action-oriented, conservation-focused, investigative, wholly-virtual, and educational projects.
 
@@ -151,14 +152,14 @@ They also identified that intrinsic motivation is still at play in paid crowdsou
 Yochai Benkler's Wealth of Networks [-@benkler_wealth_2006], discussed earlier, which took a political economy view to commons-based forms of production, and the affordances that technology provides for sidestepping corporate production in this way.
 -->
 
-## Crowdsourcing in the Wild
+## Crowdsourcing in Practice
 
 There is a great deal of crowdsourcing "in the wild", including notable successes and failures.
 The successful projects are particularly worth looking at for clues as to what distinguishes them in the face of less successful or failed sites.
 Below is a selection of projects that have lasted.
-This small list is chosen in a somewhat arbitrary manner but in the service of a few points.
+This small list is chosen in the service of a few points.
 
-Many of these projects are approaching or have surpassed a decade of existence: an eon for the networked age.
+First, many of these projects are approaching or have surpassed a decade of existence: an eon for the networked age.
 The age shows, however, which certainly adds dimension: novelty wears off and communities gentrify.
 A project such as Wikipedia or LibraryThing has a very different makeup than a new and novel project as the British Library's LibCrowds [@chiesura_introducing_2015].
 
@@ -170,13 +171,22 @@ Adopting a speculative position for a moment, it appears that many of the design
 Likewise, the best new projects are ephemeral: they are not intended to last by design.
 The point has been made that the amount of human effort and leisure-time labour on the Internet is endless [@shirky_here_2009;@mcgonigal_reality_2011]; however, attention is scare.
 
-Projects like those from citizen science exemplar Zooniverse, discussed below, or LibCrowds, or from NYPL Labs: they develop single-serving projects to symbiotically engage communities with their collections in focused, short-term ways, rather than grandiose 'digitize all of history' projects.
+Projects like those from citizen science exemplar *Zooniverse*[^zoourl], discussed below, or *LibCrowds*[^libcrowdurl], or the crowdsourcing projects from NYPL Labs [^menuurl]: they develop single-serving projects to symbiotically engage communities with their collections in focused, short-term ways, rather than grandiose 'digitize all of history' projects.
 In my past work on motivations of crowds [@organisciak_why_2010], revisiting in the next chapter's crowdsourcing typology, I avoid discussing novelty given the expectation that it was unsubstantial.
-Novelty is indeed ephemeral, but this does not particularly detract: projects with short-term design may make that ephemerality acceptable.
+Novelty is indeed ephemeral, but this does not particularly detract: projects with short-term design may make that ephemerality acceptable while capitalizing on the public's initial excitement at a new project.
+
+[^zoourl]: _Zooniverse_ is a collection of citizen science crowdsourcing projects.
+  https://www.zooniverse.org
+
+[^libcrowdurl]: _LibCrowds_ is the space tying together the British Library's crowdsourcing initiatives.
+  http://www.libcrowds.com
+
+[^menuurl]: One example of a single-serving project from NYPL labs is _What's on the Menu_, a transcription effort for restaurant menus.
+  http://menus.nypl.org
 
 With that in mind, below are some notable examples in the wild and as a whole, while the next chapter's typology provides a contrasting view of crowdsourcing in its parts.
 
-\newthought{Wikipedia is a collaboratively-written encyclopedia}, where the majority of contributors are volunteers.
+__Wikipedia__ is a collaboratively-written encyclopedia, where the majority of contributors are volunteers.
 Wikipedia, formed in 2001 and now containing 4,579,708 articles [as August 2014: @_wikipedia:size_2014], has an open editing policy that allows anonymous contributions and only restricts who can edit a page for few special cases where vandalism is likely.
 The policy also ensures that readers are latent editors [@shirky_here_2009], helping police, correct, and improve poor quality content.
 
@@ -193,9 +203,8 @@ The __Netflix Prize__ was a competition run by film rental (and now streaming) c
 Claiming the prize required the winner to publish their results but did not require transfer of intellectual property, only a license for Netflix.
 A 2008 New York Times article about the prize noted that the community of participants were notably open in sharing their insights [@thompson_if_2008].
 
-Underlying the Netflix Prize was another type of crowdsourcing: modeling the quality of Netflix's collection through user-contributed rating.
+Underlying the Netflix Prize's open call for expert contributions was another type of crowdsourcing: modeling the quality of Netflix's collection through user-contributed rating.
 This use of user-generated content for prediction and recommendation is an area known as collaborative filtering [@resnick_grouplens_1994; @hofmann_latent_2004].
-The relevance of this point to the Netflix Prize (beyond the contributions that it made to CF research, particularly the progress prize and final prize papers [@bell_bellkor_2008; @koren_bellkor_2009]) is in the postscript to the Netflix Prize. When Netflix tried to run a second challenge, they were criticized and sued for sharing too much of the contributor data: a success in one form of crowdsourcing followed by a failure in another.
 
 __Kickstarter__ is a microfunding platform that enables patronage of artists and creators in their project through small but plentiful contributions.
 A project creator on Kickstarter proposes a project and offers tiers of rewards for backers that contribute varying amounts.
@@ -215,7 +224,7 @@ FoldIt shows that, when well matched to competitive impulses, complex problems c
 __ReCaptcha__ [@von_ahn_recaptcha_2008] cleverly took a system intended to distinguish humans from bots -- obfuscated text transcription with Captchas -- and combined it with a problem that by definition only humans can do: fixing scanned text that computational techniques failed at.
 With ReCaptcha, online visitors prove they are human and help digitize scanned archives at the same time.
 
-## In Information Science
+## Crowdsourcing in Information Science
 
 In information retrieval, the focus on crowdsourcing has been predominantly in the use of paid crowds for generating evaluation datasets, though there have been efforts to use crowds to improve document representation or even query-specific ranking.
 
@@ -236,7 +245,7 @@ Recently, crowdsourcing has proven useful for time-sensitive queries, and has be
 One of the better explored spaces of retrieval over or incorporating crowdsourced information is in folksonomies.
 Folksonomies refer to free-text labelling (i.e., 'tagging') by non-professionals.
 A popular resource for folksonomies over general web documents is the older incarnation of bookmarking website del.icio.us.
-In folksonomies such as on del.icio.us, over 50% of tags contribute information that was not contained in the document; for music tags (on the website Last.fm), over 98% of tags provide text information not previously help in the record [@bischoff_can_2008].
+In folksonomies such as on del.icio.us, over 50% of tags contribute information that was not contained in the document; for music tags (on the website Last.fm), over 98% of tags provide text information not previously held in the record [@bischoff_can_2008].
 Information retrieval can benefit for this extra information, and a comparison of web query logs to folksonomies from del.icio.us, Flickr, and Last.fm shows that 58.43-71.22% of queries overlap at least partially with tags in those systems (ibid).
 
 Studying ways to retrieve saved bookmarks on del.icio.us, [@hotho_information_2006] present _FolkRank_, a technique to adjust authority of authors and importance of tags in order to find important resources.
@@ -247,8 +256,10 @@ Their model categorizes users by expertise domain and builds domain topics from 
 These are linearly smoothed with document and query language models.
 In the context of del.icio.us, their approach improves over traditional unigram models over the document text.
 
-Finally, @harris_applying_2012 provide a comprehensive overview of ways that crowdsourcing and games with a purpose can be incorporated in the information retrieval workflow.
+Finally, @harris_applying_2012 provide a comprehensive overview of ways that crowdsourcing and _games with a purpose_[^gwap] can be incorporated in the information retrieval workflow.
 While crowdsourcing is noted as highly feasible for evaluation, it is also noted as an approach which can help in building document collections, identifying information needs, and query refinement.
+
+[^gwap]: _Games with a purpose_ was introduced by von Ahn [-@von_ahn_games_2006] to describe online games as a mechanism to collect information from crowds. A popular example was the _ESP Game_, where paired players competed with the clock to independently agree on a tag for an image. 
 
 Discussion of crowdsourcing in information science continues generally in the next chapter, an IS-centric typology of crowdsourcing, then in the context of paid crowdsourcing in the subsequent two chapters.
 
