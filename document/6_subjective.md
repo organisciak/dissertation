@@ -55,7 +55,7 @@ For example, many online ratings exhibit a bimodal distribution, seeming to sugg
 Similarly, early contributors of opinion ratings or reviews tend to affect later opinions [@li_can_2009].
 
 Paying workers may lower self-selection biases for subjective tasks.
-However, the most common uses of paid crowds are in the style of human computation [@quinn_human_2011; @law_human_2011]: tasks such as evaluation dataset creation [e.g. @snow_cheap_2008; @novotney_cheap_2010; @alonso_crowdsourcing_2008].
+However, the most common uses of paid crowds are in the style of human computation [@quinn_human_2011; @law_human_2011]: tasks such as evaluation dataset creation [e.g., @snow_cheap_2008; @novotney_cheap_2010; @alonso_crowdsourcing_2008].
 As a result, much literature focuses on issues of reconciling multiple contributions into a trustworthy output [@sheng_get_2008; @wallace_who_2011; @eickhoff_increasing_2012];
 
 \newthought{Though personalized crowdsourcing can be applied in numerous contexts},
@@ -398,7 +398,7 @@ As such, part of the time spent might be related to the reading of instructions,
 
 \newthought{When collecting taste-matching data}, a tertiary evaluation was done where workers were not only asked to provide a rating of their opinion,
 but were also asked 'what is your reason for this rating?' It was found that by asking workers to contemplate and explicate their reasoning for judgments, their behaviors changed.
-The mean worker ratings (i.e. each worker's average opinion) were more measured, with workers that were overall consistently negative or positive not represented.
+The mean worker ratings (i.e., each worker's average opinion) were more measured, with workers that were overall consistently negative or positive not represented.
 This data was not used for the main evaluation, but serves to emphasize that unexpected variance when working with online crowds not only stems from their tastes and needs,
 but also the contexts in which they contribute data.
 
@@ -653,7 +653,7 @@ Since all workers are striving to do the same thing, traditional quality control
 worker weighting, and cross-validation.
 
 Taste-matching is more robust to scaling on-demand tasks to large numbers of requesters or many workers.
-This is because taste-grokking contributions are explicitly conditioned on the requester, while workers contributing tasks in their own style or opinions can be reused for new requesters, and for modelling person-types.
+This is because taste-grokking contributions are explicitly conditioned on the requester, while workers contributing tasks in their own style or opinions can be reused for new requesters, and for modeling person-types.
 Scaling worker counts to large numbers of workers provided better improvements with taste-matching, almost monotonically improving with each additional worker.
 
 Taste-matching at scale bridges the protocol to its conceptual antecedent: collaborative filtering.

@@ -17,7 +17,7 @@ Following in this direction, this study finally shifted focus to the implementat
 
 What are the properties of data collected from paid crowds for objective and subjective information system tasks, and how can the quality of data -- in terms of consistency and variance -- be optimized? We addressed this motivating question through three broad research questions.
 
-> __Broad Research Question 1__: What are the _post-collection_ indicators of quality in worker-contributed objective task data, and can these be leveraged for improved data modelling?
+> __Broad Research Question 1__: What are the _post-collection_ indicators of quality in worker-contributed objective task data, and can these be leveraged for improved data modeling?
 
 In _Interpreting Objective Tasks for Paid Crowdsourcing_, time, experience, and agreement were studied as potential indicators of quality in already collected data.
 
@@ -33,7 +33,7 @@ Exploring the possibility that this is due to time spent in reading instructions
 
 Since poor workers in this class were not exhibiting profit-optimizing behaviours, this finding suggests that interventions during collection time might assist in course-correcting workers -- leading to the next research question.
 
-> __Broad RQ 2__: What are the biases inherent to the task design for objective or normative tasks (i.e. the data collection instrument), and can design manipulations correct for them at _collection time_?
+> __Broad RQ 2__: What are the biases inherent to the task design for objective or normative tasks (i.e., the data collection instrument), and can design manipulations correct for them at _collection time_?
 
 In _Designing Tasks for Objective Needs_, this work moved past an immutable treatment of contributions and looks at how contribution quality can be influenced at collection-time.
 
@@ -84,11 +84,11 @@ This dissertation looked at cost indirectly, focusing on indicators such a time 
 Future work might consider cost not in terms of how low contributions are, but how motivated workers are to continue after they have already been paid [similar to @harris_applying_2012; @mason_financial_2010].
 
 Studying post-collection indicators of worker quality hinted at different styles of contributor.
-@bernstein_soylent_2010 speaks of lazy turkers and eager beavers, but there seem to be many different classes on contributor; e.g. those who skim over instructions^[_rtfmers_, as suggested by my advisor in earlier drafts of this document.], those who stick around as long as tasks are available, those who work slower and speed up, those whose attention drops over time, etc.
+@bernstein_soylent_2010 speaks of lazy turkers and eager beavers, but there seem to be many different classes on contributor; e.g., those who skim over instructions^[_rtfmers_, as suggested by my advisor in earlier drafts of this document.], those who stick around as long as tasks are available, those who work slower and speed up, those whose attention drops over time.
 A survey of different types of individuals was afield from this dissertation's focus, but would be a valuable future contribution.
 
 The quantity that people contribute is another behavior worth studying.
-In crowdsourcing, the contribution quantity usually follows a curve similar to the inverse power law (i.e. the second most active contributor provides half as many contributions of the most active, the third most active contributor provides 1/4 of the contributions, and so on).
+In crowdsourcing, the contribution quantity usually follows a curve similar to the inverse power law (i.e., the second most active contributor provides half as many contributions of the most active, the third most active contributor provides 1/4 of the contributions, and so on).
 However, while the drop-off is non-linear, the steepness of the curve varies between systems.
 A large survey of contribution distributions and a comparison of how different approaches are able to extend the long tail or soften the curve is work that would further contextualize the experiments in this study.
 

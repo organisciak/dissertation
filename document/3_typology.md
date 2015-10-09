@@ -340,7 +340,7 @@ Contributions are clearly part
 For
     example, with online reviews, each individual contributor writes
     their own review with their own interpretation of the given product,
-    movie, travel destination, etc.; at the same time, the collection of
+    movie, travel destination; at the same time, the collection of
     reviews forms a more comprehensive document of people’s attitudes.
 
 -   **Iterative**.
@@ -605,7 +605,7 @@ Crowdsourcing offers potential for involving the public and improving data in di
 However,
 the scope of crowdsourcing is so large and the implementation possibilities so varied that it can seem rather daunting to pursue it.
 
-This chapter attempted to provide a way of making a bit more sense of the patterns that emerge when considering these projects not so much from the perspective of what they are for (e.g. rating books, movies or restaurants versus citizen science or digital humanities) but rather in terms of how they were designed to achieve particular ends.
+This chapter attempted to provide a way of making a bit more sense of the patterns that emerge when considering these projects not so much from the perspective of what they are for (e.g., rating books, movies or restaurants versus citizen science or digital humanities) but rather in terms of how they were designed to achieve particular ends.
 
 The typology presented consolidated a number of past taxonomies of crowdsourcing and project examples toward a view of crowdsourcing appropriate for information science.
 In addition to modifications on previously studied dimensions such as motivation, aggregation, and beneficiary, new dimensions were argued for, regarding centrality of crowdsourcing, the diversity needs of the crowd,
@@ -623,4 +623,4 @@ The dimensions provided offer help in comprehending the alternatives and how the
  - Tasks that are reactive, positioning contributions relative to existing documents, rather than generative;
  - Both objective and subjective contexts, considered distinctly.
 
-The data quality of contributions is considered in this context, starting with the next chapter: a treatment of post-collection data modelling of contributions for objective tasks.
+The data quality of contributions is considered in this context, starting with the next chapter: a treatment of post-collection data modeling of contributions for objective tasks.

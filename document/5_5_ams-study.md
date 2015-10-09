@@ -17,7 +17,7 @@ The primary contribution here is a better understanding of data issues that stem
 Particularly, our case study of music information retrieval judgments generalizes to a class of evaluation tasks that are subjective-biased.
 
 Music similarity is desired by music digital library users [@lee_survey_2004], and other digital libraries deal with a comparable form of *normative* task where there is no absolutely correct ground truth but a desire to reach a consensus or
-a generally agreeable classification; e.g. item similarity ratings,
+a generally agreeable classification; e.g., item similarity ratings,
 information quality judgments, and information retrieval relevance
 judgments.
 The findings are also important to understanding the reliability of Audio Music Similarity evaluation, and we provide recommendations to improve future tasks.
@@ -55,7 +55,7 @@ However, $80\%$ of queries have also occurred as candidates for other songs.
 As a result, there are
 $156$ judgments of the same song pairs across the years, with the caveat that the query-candidate relationship is inverted.[^inverted]
 
-[^inverted]: Indeed, the initial spark that led to this study was a curiosity in whether the query-candidate assignment of a song pair -- i.e. which song is presented as the query, which song is presented as the candidate -- was meaningful. By studying other possible sources for the variance in the data, as will be seen, a significant portion of the error was accounted for, not precluding but certainly limiting the potential magnitude of a query order effect.
+[^inverted]: Indeed, the initial spark that led to this study was a curiosity in whether the query-candidate assignment of a song pair -- i.e., which song is presented as the query, which song is presented as the candidate -- was meaningful. By studying other possible sources for the variance in the data, as will be seen, a significant portion of the error was accounted for, not precluding but certainly limiting the potential magnitude of a query order effect.
 
 \newpage
 

@@ -37,7 +37,7 @@ This chapter makes the following contributions:
 
 - Description of the problem of reconciling annotation contributions or work by non-expert, semi-anonymous workers.
 - Evaluation of a number of approaches for separating worker quality from rating difficulty, including dwell time, worker experience, task difficulty, and agreement with other workers. 
-- Introduction of an iterative algorithm that allows task difficulty (inherent disagreement) to be disambiguated from worker reliability (i.e. synthetic disagreement).
+- Introduction of an iterative algorithm that allows task difficulty (inherent disagreement) to be disambiguated from worker reliability (i.e., synthetic disagreement).
 
 The scope of this study is in relevance assessment for information retrieval related to a cultural heritage aggregation.
 Relevance assessments are a vital part of information retrieval evaluation and help in addressing the unique search challenges faced by large aggregators of cultural heritage content.
@@ -83,7 +83,7 @@ The IMLS DCC is a large aggregation of digital cultural heritage materials from 
 Originally launched in 2002 as a point of access to digital collections supported by the IMLS through National Leadership Grants and LSTA funding, it has since expanded its scope to provide more inclusive coverage of American history collections, regardless of funding source.
 As a result of its position among the largest cultural heritage aggregations in the US, research through the IMLS DCC looks at the problems associated with reconciling content from thousands of different providers, including metadata interoperability, collection-item relationships, and access to materials.
 One of the difficulties that IMLS DCC must address is information retrieval when the metadata records in its aggregation are of inconsistent length, style, and informativeness.
-Overcoming these types of problems in order to improve subject access to the breadth of materials is an active problem [e.g. @efron_building_2011; @efron_improving_2012].
+Overcoming these types of problems in order to improve subject access to the breadth of materials is an active problem [e.g., @efron_building_2011; @efron_improving_2012].
 In doing so, human relevance ratings are an invaluable resource for evaluating document relevance in a given query.
 
 ## Related Work ^[Or, _what we already know_]
@@ -170,7 +170,7 @@ There were three label options available to workers: _relevant_, _non-relevant_,
 The unknown option was considered a skipped option and the data was removed from the final dataset. 
 
 Annotations were collected through Amazon's Mechanical Turk service, using a custom rating interface.
-When a worker accepted a judgment task, they were shown a page with a query, description of the task, description of the coding manual (i.e. what types of documents should be rated as relevant), and up to ten ribbons of documents to rate (see Figure @fig:ch3interface).
+When a worker accepted a judgment task, they were shown a page with a query, description of the task, description of the coding manual (i.e., what types of documents should be rated as relevant), and up to ten ribbons of documents to rate (see Figure @fig:ch3interface).
 
 ![The rating interface.](../images/ch3-rating-interface.png) {#fig:ch3interface}
 
@@ -219,7 +219,7 @@ As expected, a correct classification does tend to take slightly more time,
 but there is not enough evidence to reject the null hypothesis of equal distributions.
 Thus, for this the setting of cultural heritage retrieval relevance judgments, dwell time alone is insignificant to performance (Wilcoxon rank sum $p=0.064$; $p=0.154$ when excluding extreme outliers).
 
-However, dwell time considered alongside the order or task completion (i.e. how much time was spent on the first task? On the second?) tells a more complete story.
+However, dwell time considered alongside the order or task completion (i.e., how much time was spent on the first task? On the second?) tells a more complete story.
 
 Consider first the amount of time that is spent on each $n^{th}$ task.
 Pairwise Wilcoxon Rank Sum tests show that the amount of time spent on the first rating in a set is significantly different from all other ratings ($p<0.001$, with Bonferroni adjustment), as were all pairwise comparisons with the second rating in a set ($p=0.02$ vs order 3, $p<0.001$ vs all others; Bonferroni adjustment).
@@ -268,7 +268,7 @@ As is apparent, there is no trend with increased lifetime experience, or it is c
 
 The second measure of experience, query experience, refers to the number of tasks that a worker has completed within a single topical domain.
 In information retrieval relevance judgments, workers are asked to judge whether a document is relevant to a given query; thus, the query experience.
-Similarly, in the secondary dataset of Twitter sentiment ratings, workers were asked to annotate the opinion of the tweet regarding a given topic; i.e. what is the sentiment toward entity _Q_.
+Similarly, in the secondary dataset of Twitter sentiment ratings, workers were asked to annotate the opinion of the tweet regarding a given topic; i.e., what is the sentiment toward entity _Q_.
 
 ![Average accuracy of workers' nth contribution with a query. Only points aggregating 20 or more workers are shown.](../images/ch4-query-exp.png) {#fig:query-experience}
 

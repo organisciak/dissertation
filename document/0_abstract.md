@@ -1,20 +1,20 @@
 \chapter*{Abstract}\label{abstract}
 
 Text, images, video and other types of information objects can be described in many ways.
-Having strong metadata and a broad array of interpretations of the object helps in providing better access and use.
-Collecting new and novel descriptions is difficult, but crowdsourcing provides many opportunities for doing so.
+Having detailed metadata and a various people's interpretations of the object helps in providing better access and use.
+While collecting novel descriptions is challenging, crowdsourcing is presenting new opportunities to do so.
 
 Large-scale human contributions open the door to latent information, subjective judgments, and other encoding of data that is otherwise difficult to infer algorithmically.
 However, such contributions are also subject to variance from the inconsistencies of human interpretation.
 
-This dissertation studies the problem of variance in crowdsourcing and investigates how it can be controlled both through post-collection modelling and better collection-time design decisions.
+This dissertation studies the problem of variance in crowdsourcing and investigates how it can be controlled both through post-collection modeling and better collection-time design decisions.
 
 Crowd-contributed data is affected by many inconsistencies that differ from automated processes: differences in attention, interpretation, skill, and engagement.
 The types of tasks that we require of humans are also more inherently abstract and more difficult to agree on. Particularly, qualitative or judgment-based tasks may be subjective, affected by contributer opinions and tastes.
 
 Approaches to understanding contribution variance and improve data quality are studied in three spaces.
 
-First, post-collection modelling is pursued as a way of improving crowdsourced data quality, looking at whether factors including time, experience, and agreement with others provide indicators of contributions quality.
+First, post-collection modeling is pursued as a way of improving crowdsourced data quality, looking at whether factors including time, experience, and agreement with others provide indicators of contributions quality.
 Secondly, collection-time design problems are studied, comparing design manipulations for a controlled set of tasks.
 Since crowdsourcing is borne out of an interaction, not all crowdsourcing data corrections are posterior: it also matters how you collect that data.
 Finally, designing for subjective contexts is studied. Crowds are well-positioned to teach us about how information can be adapted to different person-specific needs, but treating subjective tasks similarly to other tasks results in unnecessary error.

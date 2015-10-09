@@ -70,8 +70,8 @@ On the show, contestants unsure about their response can poll the audience.
 The audience poll turned out to be remarkably effective, but not surprising: even if most of the audience does not know the answer and the probability of choosing one of the four choices in ignorance is roughly equal, then only a few people that are informed of the answer can sway the "crowd" response in the right direction.
 
 This is a fitting anecdote, given that many crowdsourcing efforts do come down to connecting to the right individual from the mass of candidates.
-It is seen most clearly in cases such as question and answer websites (e.g. Stack Overflow, Ask Metafilter, Quora).
-However, increasing the pool applies in much more than cases of 'wisdom': many successful websites receive the bulk of their contributions from a small core group of contributors [e.g. Wikipedia - @muchnik_origins_2013; Transcribe Bentham - @causer_transcription_2012; The Commons - @springer_for_2008] and the benefit of opening up their projects to public contributions is in increasingly the likelihood of a "power user" [@springer_for_2008].
+It is seen most clearly in cases such as question and answer websites (e.g., Stack Overflow, Ask Metafilter, Quora).
+However, increasing the pool applies in much more than cases of 'wisdom': many successful websites receive the bulk of their contributions from a small core group of contributors [e.g., Wikipedia - @muchnik_origins_2013; Transcribe Bentham - @causer_transcription_2012; The Commons - @springer_for_2008] and the benefit of opening up their projects to public contributions is in increasingly the likelihood of a "power user" [@springer_for_2008].
 
 The second lesson that permeates crowdsourcing is the idea of aggregation that results in a product better than the sum of its parts. Grand projects like Wikipedia and FoldIt^[An online research-supporting game that looks for the most efficient ways to fold proteins.] [@khatib_algorithm_2011] allow contributions to build on the work of past contributors.
 
@@ -113,7 +113,7 @@ With user innovation, new information products or physical products are generate
 Notably, von Hippel focuses on 'lead users,' users with specific needs that precede broader trends.
 These users either develop new products to fill their needs or modify existing products.
 
-Not all crowdsourcing creation is user innovation, though there are echoes of von Hippel's work in companies that turn to the Internet for help in conducting their business, whether it is soliciting feedback and suggestions (e.g. MyStarbucksIdea [^Starbucks]), bug reports, or even work at a bounty (e.g. 99Designs^[http://99designs.com]).
+Not all crowdsourcing creation is user innovation, though there are echoes of von Hippel's work in companies that turn to the Internet for help in conducting their business, whether it is soliciting feedback and suggestions (e.g., MyStarbucksIdea [^Starbucks]), bug reports, or even work at a bounty (e.g., 99Designs^[http://99designs.com]).
 User sharing of work performed for themselves is another similar area: for example, when a music service allows users to share their playlists publicly, their realization of a personal need has potential value to other users.
 
 Benkler's work takes a political economy view on what he calls the 'networked information economy', but arrives at a very similar place to von Hippel.
@@ -234,7 +234,7 @@ PageRank is one such effort, utilizing the linking habits of web page authors as
 Recently, crowdsourcing has proven useful for time-sensitive queries, and has been used by Twitter to model searches that may have never been seen before [@chen_improving_2013].
 
 One of the better explored spaces of retrieval over or incorporating crowdsourced information is in folksonomies.
-Folksonomies refer to free-text labelling (i.e. 'tagging') by non-professionals.
+Folksonomies refer to free-text labelling (i.e., 'tagging') by non-professionals.
 A popular resource for folksonomies over general web documents is the older incarnation of bookmarking website del.icio.us.
 In folksonomies such as on del.icio.us, over 50% of tags contribute information that was not contained in the document; for music tags (on the website Last.fm), over 98% of tags provide text information not previously help in the record [@bischoff_can_2008].
 Information retrieval can benefit for this extra information, and a comparison of web query logs to folksonomies from del.icio.us, Flickr, and Last.fm shows that 58.43-71.22% of queries overlap at least partially with tags in those systems (ibid).

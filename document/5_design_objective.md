@@ -50,7 +50,7 @@ However, when using crowd contributions to inform an algorithmic system, as in i
 This chapter investigates how the design of crowdsourcing tasks for collecting useful metadata for information retrieval metadata affects the quality of the content.
 
 In a controlled set up, crowdsourcing in information retrieval usually follows a typical design: a task, description, and a set of one or more documents that are reacted to.
-This type of design is common for creating custom evaluation datasets through relevance judgments [@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [e.g. @chen_improving_2013].
+This type of design is common for creating custom evaluation datasets through relevance judgments [@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [e.g., @chen_improving_2013].
 
 Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions [@alonso_crowdsourcing_2008; @howe_crowdsourcing_2008; @mason_financial_2010; @mitra_comparing_2015].
 The manner to improve on a basic task/description/items interface design is not immediately clear, though: some success has been attained by slowing workers down, while other times it has been beneficial to encourage cheaper, more impulsive contributions in larger numbers.
@@ -133,7 +133,7 @@ Scoped to a reasonable parameterization of crowdsourcing as it is commonly pract
 
  * __RQ 2.3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?^[The secondary _satisfaction_ question.]
 
- <!--* __RQ 2.4__: Do the findings generalize to different tasks, task types, and contexts (i.e. outside of paid platforms)?^[The _generalizability_ question.]-->
+ <!--* __RQ 2.4__: Do the findings generalize to different tasks, task types, and contexts (i.e., outside of paid platforms)?^[The _generalizability_ question.]-->
 
 RQ 2.1 is the question of design, on synthesizing prior work and brainstorming directions to explore.
 It is a partially subjective question, but one still worth pursuing with diligence.
@@ -164,15 +164,15 @@ Workers are also given escape options, to skip, reject or return tasks.
 
 Metadata encoding tasks generally consist of the following parts:
 
- * __Goal__ statement/question. _e.g. "Is this page relevant to query `q`?", "Find the topic of a tweet."_
+ * __Goal__ statement/question. _e.g., "Is this page relevant to query `q`?", "Find the topic of a tweet."_
  * __Instructions__ for performing the task.
- * One or more __Items__ that worker responds to. _e.g. webpage snippets, microblogging messages_
+ * One or more __Items__ that worker responds to (e.g., webpage snippets, microblogging messages).
  * __Action__, one per item: the data collection mechanism.
 
 \newthought{Within this framework}, a number of factors are observable that may potentially affect how our microblog encoding task is completed.
 First are the parameterizations of the task within its existing structure.
 
-The *task* can be modified, changing parts such as payment [e.g. @mason_financial_2010], bonuses [e.g. @grady_crowdsourcing_2010], or number of tasks available.
+The *task* can be modified, changing parts such as payment [e.g., @mason_financial_2010], bonuses [e.g., @grady_crowdsourcing_2010], or number of tasks available.
 
 The *goal* can also be modified; as discussed in the introductory chapter, worker and system goals can and often do vary.
 
@@ -180,7 +180,7 @@ The *instructions* can change: changes can be made to the clarity, the restricti
 
 The *item* can change, such as modifying the presentation or the size of the single assignment set.
 
-Even the *contribution* action can change: for example, the granularity of the contribution mechanism (free text, multiple choice, single button, etc.).
+Even the *contribution* action can change: for example, the granularity of the contribution mechanism (e.g., free text, multiple choice, single button).
 
 There are also harder to qualify elements such as the appeal of the topic and the visual layout.
 
@@ -214,7 +214,7 @@ How would the contribution change if:
   Verbosely, with many examples?
 - Contributors were tested on the instructions at the beginning of the task?
   If there were known (gold label) items throughout the task?
-  If everything had a known answer and workers were inconvenienced (e.g. with a time delay) when they got an answer wrong?
+  If everything had a known answer and workers were inconvenienced (e.g., with a time delay) when they got an answer wrong?
 - Contributors were asked to volunteer their time?
   Were paid 1c per task? Were paid 10c per task?
   Were paid by the hour?
@@ -276,7 +276,7 @@ Amazon's advice for designing good tasks states that the task should not require
 In addition to conciseness, the instructions for this study's basic interface strive to follow other recommendations in a conservative and uncontroversial manner: specificity, examples, and clarity about poor work [@_requester_2011; @_guidelines_2014].
 
 It is difficult to balance the various needs of a good instruction set.
-With concern to succinctness and ease of readability, key information was italicized, examples were added as mouse-over popups, and secondary information (e.g. 'Tips') was hidden behind a tab.
+With concern to succinctness and ease of readability, key information was italicized, examples were added as mouse-over popups, and secondary information (e.g., 'Tips') was hidden behind a tab.
 Another tab held a reference copy of the IRB disclosure (which, for this condition and all others, was shown fully when a worker was previewing the task before acceptance).
 Finally, an empty 'tab' to collapse the instructions completely was added. This is not a common feature of archetypal tasks, but given the difficulty of scrolling in the embedded window on Mechanical Turk, was deemed a humane addition.
 Figure {@fig:basic-inturk} shows the limited task space when it is embedded within the Mechanical Turk interface.[^TagDifficulty]
@@ -413,8 +413,8 @@ The amount of time workers actually had differed between task types, because rel
 
 It is important not to distress the worker when trying to push them into a visceral form of task completion, as this might have the opposite effect.
 Instead, this design seeks to encourage _flow_ [@csikszentmihalyi_flow_1991], where a user is in an uninterrupted state on concentration on the task.
-To avoid the potential distress of thinking about what is to come, this interface does not show a list of tasks to complete (e.g. "complete these ten tasks in a minute").
-Instead, tasks are shown one at a time (e.g. "See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers. Figure @fig:fast-screen shows an example of the interface.
+To avoid the potential distress of thinking about what is to come, this interface does not show a list of tasks to complete (e.g., "complete these ten tasks in a minute").
+Instead, tasks are shown one at a time (e.g., "See how many tasks you can complete in a minute"), with bonuses paid for each complete task and increased for correct answers. Figure @fig:fast-screen shows an example of the interface.
 
 ![Task in FAST design.](../images/fastScreen.png) {#fig:fast-screen}
 
@@ -422,7 +422,7 @@ Determining a payment is nuanced for this condition.
 Bonuses are bound in promises: there is no system restraint to guarantee payment other than the requester's word.
 To assure workers that they will be paid, it is important to still have a notable base payment.
 At the same time, an effort-optimizing worker might realize that it is favourable to avoid the per-contribution bonuses, and keep completing 'do as many as you can in X seconds' tasks with only one contribution.
-To counter such a possibility, the per-item bonuses ramp up; e.g. no bonus for the first task, \$0.01 for the second, \$0.02 for the third.[^FastExample]
+To counter such a possibility, the per-item bonuses ramp up; e.g., no bonus for the first task, \$0.01 for the second, \$0.02 for the third.[^FastExample]
 This provides incentive to actually try to maximize time.
 
 [^FastExample]: The screenshot in figure @fig:fast-screen was taken for the first item in a set, so it shows a zero-sum bonus.
@@ -506,13 +506,13 @@ The 'descriptions' are required but free-text, meaning they do not necessarily _
 
 Pins are sorted into curated lists, referred to as 'boards'.
 Like pins, classification into boards is not controlled.
-While adding a pin to a board is an act of classification, the classes are user-defined and can be created for various reason, such as quality judgments (e.g. "Neat stuff"), thematically descriptive (e.g. "dream wedding"), or miscellany of various sorts (e.g. "inspiration", "funny").
+While adding a pin to a board is an act of classification, the classes are user-defined and can be created for various reason, such as quality judgments (e.g., "Neat stuff"), thematically descriptive (e.g., "dream wedding"), or miscellany of various sorts (e.g., "inspiration", "funny").
 Boards are user-specific, created by a user with a title, description, category, and optional map.
 
 In the words of the company materials, Pinterest features three primary purposes: saving (as pins), organizing (into boards), and discovery [@_about_].
 In this way, it is organized in a way familiar to library and archival communities, distributing online images with an eye toward discoverability and curation.
 
-It is also a large-scale site of descriptive crowdsourcing, recalling past trends in social bookmarking (i.e. the eventually doomed _del.icio.us_) but with a visual spin to the bookmarking activity.
+It is also a large-scale site of descriptive crowdsourcing, recalling past trends in social bookmarking (i.e., the eventually doomed _del.icio.us_) but with a visual spin to the bookmarking activity.
 Users describe pins and categorize them into boards; describe, title, and categorize boards; and contribute various social information, such as comments, repins[^repin], and voting (in the form of 'heart'-ing).
 
 [^repin]: To _repin_ is to save a new pin from an existing pin, using the same source URL and image, but applying a new description and saving to a new board.
@@ -568,7 +568,7 @@ To shift the sample list away from the most-popular queries, the sampling frame 
 For each query, a description of what constitute the different levels of relevance was written by myself.
 Three point categorical relevance was used, with 'not', 'somewhat', and 'very' relevant as the options.
 
-Results to judge were generated using a Dirichlet-smoothed language modelling system.
+Results to judge were generated using a Dirichlet-smoothed language modeling system.
 A basic form of query expansion was used wherein the original query was run, and a word list consisting of the top results was resubmitted as a secondary query.
 Given the short nature of these documents, document expansion in this style would have been appropriate [@efron_improving_2012], but the query expansion sufficed for widening the net for results.
 
@@ -588,7 +588,7 @@ Regarding feedback, workers had an optional free text response form, an optional
 Time spent was gathered in seconds.
 It should be noted that, unlike the later tagging experiment, where a worker's time spent focused on an input box could be measured, there is no easy proxy for measuring per-task time in a set.
 Since the relevance judgment options are a set of radio buttons, we do not capture the *start* of a worker's attention, just the moment that they actually make their contribution.
-As a proxy, a measure was taking of the amount of time that the *previous* item was in focus; i.e. worker clicks item A, and while they think about item B, A is still in focus.
+As a proxy, a measure was taking of the amount of time that the *previous* item was in focus; i.e., worker clicks item A, and while they think about item B, A is still in focus.
 This provides a rough estimate of the time spent, good enough for broad comparisons, though not robust enough to tie time to a specific item.
 
 ### Results
@@ -782,8 +782,8 @@ For example, on business recommendation system Yelp, tags allow users to contrib
 
 
 Trant and Wyman argue that tagging from online users "appears to fill gaps in current documentation practice" [-@trant_investigating_2006].
-Following from this, tagging is particularly helpful for difficult to model formats (i.e. non-text) and when corpus sizes surpass the ability to formally classify works.
-Tagging has been used to encode scans of text [@von_ahn_recaptcha_2008], improve information retrieval document modelling [@lamere_social_2008; @bao_optimizing_2007], augment personalized search [@lerman_personalizing_2007; @noll_web_2007].
+Following from this, tagging is particularly helpful for difficult to model formats (i.e., non-text) and when corpus sizes surpass the ability to formally classify works.
+Tagging has been used to encode scans of text [@von_ahn_recaptcha_2008], improve information retrieval document modeling [@lamere_social_2008; @bao_optimizing_2007], augment personalized search [@lerman_personalizing_2007; @noll_web_2007].
 
 Tagging also promises, in theory, a break from the Vocabulary Problem [@furnas_vocabulary_1987].
 Furnas et al. performed a set of term generation experiments in 1987 where they asked participants to describe functions or objects.
@@ -853,7 +853,7 @@ This study looks to augment image record data and metadata with additional infor
 Particularly, we look to information retrieval uses, to help in findability, filtering, and organization.
 
 One typology for types of tags was offered for tagged bookmarks by @golder_usage_2006.
-They present seven kinds of bookmarking tags: those for identifying what the item is about (i.e. topical), for identifying what the item is (e.g. blog), for identifying the creator of the item, for qualifying or refining other tags, for labeling subjective characteristics of the content, for establishing a relationship to the tagger (e.g. 'my post'), and for organization.
+They present seven kinds of bookmarking tags: those for identifying what the item is about (i.e., topical), for identifying what the item is (e.g., blog), for identifying the creator of the item, for qualifying or refining other tags, for labeling subjective characteristics of the content, for establishing a relationship to the tagger (e.g., 'my post'), and for organization.
 
 @sen_tagging_2006 collapse the seven classes from @golder_structure_2007 into three: _factual_ tags conveying objective information, _subjective_ tags conveying opinions, and _personal_ tags that are intended only for the tagger.
 As expected, factual tags were found to be most generally useful, particularly for learning and finding, although personal and subjective tags were useful for self-expression and organizing, respectively.
@@ -922,7 +922,7 @@ Figure @fig:tagQualities shows the quality distribution of tags applied in each 
 
 ![Proportions of tags which were poor, okay, good, or great, by condition.](../images/tagQuality.png) {#fig:tagQualities}
 
-If we assume that the difference between the ground truth categories is roughly linear -- e.g. that a rating of 4 ('great') is twice as good as a rating of 2 ('okay') -- then the quality ranks can be averaged. Controlling by item, Figure @fig:tagItemQualities shows the distribution of average qualities for each image, with accompanying statistics in Table @tbl:tagItemQualities2.
+If we assume that the difference between the ground truth categories is roughly linear -- e.g., that a rating of 4 ('great') is twice as good as a rating of 2 ('okay') -- then the quality ranks can be averaged. Controlling by item, Figure @fig:tagItemQualities shows the distribution of average qualities for each image, with accompanying statistics in Table @tbl:tagItemQualities2.
 Each datum represents the average quality for one of the 100 tags studies; for example, a median of 3.00 for the TRAIN condition means that for half of the tags, you are likely to get a tag that is at the 'good' end of the scale.
 
 ![Distribution of each item's average tag quality.](../images/tagItemQuality.png) {#fig:tagItemQualities}
@@ -1036,7 +1036,7 @@ The relevance judgment form was already naturally optimized, to the extent that 
 
 Training was useful in both conditions, but in different implementations.
 The first-taskset training condition was helpful in assisting tagging workers in understanding the requirements because all the tasks followed the same convention.
-For relevance judgments, a smaller training condition at the start of each task was more effective, likely because the context -- i.e. the query -- would change between task sets.
+For relevance judgments, a smaller training condition at the start of each task was more effective, likely because the context -- i.e., the query -- would change between task sets.
 This may be a differentiating factor for applying training to future conditions: can all task sets be described with the same instructions?
 
 Performance feedback was effective for image relevance judgments but not for image tagging.
