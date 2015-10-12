@@ -983,7 +983,7 @@ In a circumstance where shorter tags are useful, the time-limited condition migh
 
 ## Discussion
 
-\marginnote{Answer (\em{RQ 2.1})}
+\marginnote{Answer: \em{RQ 2.1}}
 
  > __RQ 2.1__: Which approaches to collection interface design are worth pursuing as alternatives to the basic designs commonly employed in paid crowdsourcing?
 
@@ -992,7 +992,7 @@ With regard to the design space question, the start of this chapter explored the
 The approaches that were chosen to be pursued focused on attention and awareness, measuring how design can refocus attention on instructions, inform workers of problems, or push workers to more instinctual forms of contribution.
 The lower performance of contributions in the time-limited interface without sufficiently compelling improvements in time (except perhaps in the tagging condition) and satisfaction suggests to future work is better focused on the former types of task design.
 
-\marginnote{Answer (\em{RQ 2.2})}
+\marginnote{Answer: \em{RQ 2.2}}
 
  > __RQ 2.2__: Is there a significant difference in the quality of crowd contributions for the same task collected through different collection interfaces?
 
@@ -1029,7 +1029,7 @@ However, for both tasks, the quality of contributions fell.
 In different contexts, one can imagine this interface being helpful: in cases where the faster contribution style did not lower collection quality.
 For example, a less restrained tagging task might be better suited; indeed, this is similar to the fast tagging mode of the ESP Game [@ahn_labeling_2004].
 
-\marginnote{Answer (\em{RQ 2.3})}
+\marginnote{Answer: \em{RQ 2.3}}
 
  > __RQ 2.3__: Is there a qualitative difference in contributor satisfaction across different interfaces for the same task?
 

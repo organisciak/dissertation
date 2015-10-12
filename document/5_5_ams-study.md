@@ -149,11 +149,11 @@ To address possible sources of the error in MIREX's crowdsourced relevance judgm
  3. Adding additional redundant judges[^languageAMS];
  4. Testing an alternate interface that gives judges more guidance on what rating is appropriate.
 
-[^languageAMS]: Since this chapter involves volunteer contributions, contributors are not uniformly referred to as _workers_, as in the other chapters, except when discussing paid contributors.
+[^languageAMS]: Although organized similarly to paid workers, this chapter involves volunteer contributions. Therefore, contributors are not uniformly referred to as _workers_, as in the other chapters, except when discussing paid contributors.
 
 ## Normalizing for Grader-Specific Effects {#normalizing-workers}
 
-  > _RQ1_: Are intra-judge inconsistencies responsible for the lack of reciprocation in AMS similarity judgments?
+  > _RQ 2.4_: Are intra-judge inconsistencies responsible for the lack of reciprocation in AMS similarity judgments?
 
 The human judges are given a large amount of leeway regarding how they perform a task.
 We set out to see if this contributes to superficial variance, and whether correcting for it can address the poor reciprocation in AMS.
@@ -184,15 +184,17 @@ With this mapping, 95% of not similar ratings occur between $FINE=0-27.63$; some
 
 ### Results
 
+\marginnote{Answer: \em{RQ 2.4}}
+
 Normalizing user FINE judgments weighted against their BROAD judgments resulted in variance of $RMSE=16.15$, a non-significant change.
 Thus, there is no evidence that greatly different internal scales by judges were the reason for the low consistency.
 In other words, the notion that judges were internally consistent in a way that can be normalized globally is not tractable.
 
 ## Verifying Judgments with New Graders
 
-  > _RQ2_: Are problem judges responsible for inconsistent reciprocal ratings?
+  > *RQ 2.5*: Are problem judges responsible for inconsistent reciprocal ratings?
 
-  > _RQ3_: Is subjectivity or disagreement of the grading task responsible for inconsistent reciprocal ratings?
+  > *RQ 2.6*: Is subjectivity or disagreement of the grading task responsible for inconsistent reciprocal ratings?
 
 Would the same low consistency be seen if new judges were asked?
 Getting a second opinion addresses two possibilities: expected error (good judges, biased task) and unexpected error (agreeable task, bad judges).
@@ -211,12 +213,16 @@ Thus, any priming effects from the series of songs would not translate here.
 
 ### Results
 
+\marginnote{Answer: \em{RQ 2.5}}
+
 Asking individual paid amateur judges to provide judgments yielded an average $RMSE=15.53$, a comparable level of inconsistency.
-With regards to *RQ2*, the low consistency when asking a new group of judges for judgments suggests that the MIREX volunteers are not unreliable compared to other workers.
+With regards to *RQ 2.5*, the low consistency when asking a new group of judges for judgments suggests that the MIREX volunteers are not unreliable compared to other workers.
+
+\marginnote{Answer: \em{RQ 2.6}}
 
 In contrast, aggregating multiple worker judgments toward a normative opinion results in drastic improvements: aggregating two workers by mean judgment improved the RMSE to $9.72$ ($41.4\%$ improvement), while three judge judgments improved the RMSE to $7.45$
 ($55.1\%$ improvement).
-This means that, as asked in *RQ3*, the task is too subjective to trust a single judge and has a high natural variance in judgment.
+This means that, as asked in *RQ 2.6*, the task is too subjective to trust a single judge and has a high natural variance in judgment.
 
 
 +---------------------------+----------------+
@@ -250,7 +256,7 @@ Table: Deviation (in RMSE) of similarity judgments from expectation.{#tbl:rmse-v
 
 ## Improving task guidance
 
-  > _RQ4_: Does the task design affect the quality of judgments?
+  > _RQ 2.7_: Does the task design affect the quality of judgments?
 
 One of the threats to grading reliability is a hard to understand or poorly defined coding scheme [@neuendorf_content_2002].
 Following from earlier discussion, we turn to the effect of a task's design on the consistency of judgments by evaluating a different collection interface.
@@ -284,6 +290,8 @@ Table: The colloquial wording presented to coders in the alternative task interf
 
 ### Results
 
+\marginnote{Answer: \em{RQ 2.7}}
+
 When workers used the modified FINE rating scale, they averaged an RMSE of $11.44$.
 In light of the gains observed earlier with multi-worker aggregation, this interface was also looked at in conjunction with 2- and 3-worker judgments, which yielded additional improvements still: respectively RMSE=$7.55$ and $5.40$.
 As seen in Table @tbl:rmse-vals, this means that the alternate design offered consistent per-worker improvement without increasing cost.
@@ -301,7 +309,7 @@ While finding enough volunteer judges in the MIR community is a restricting fact
 **Providing a more specific codebook.** While it is important to acknowledge the subjectivity of similarity judging, providing structure for coders to anchor their interpretations into a score improves the reliability of their contributions.[^EarlyAMS]
 Unlike multiple judgments, these sorts of task design changes do not add to the cost of evaluation.
 
-[^EarlyAMS]: There was purportedly great discussion at the conception of the AMS task around the expected subjectivity, which may have motivated the loose instructions stating that "we expect to see variations across evaluators... as this is a normal part of human subjectivity." However, I would argue, in light of the results here, that there is a confounding between natural, expected subjectivity of the task, and artificial variance stemming from the treatment of the task itself.
+[^EarlyAMS]: There was purportedly great discussion at the conception of the AMS task around the expected subjectivity, which may have motivated the loose instructions stating that "we expect to see variations across evaluators... as this is a normal part of human subjectivity." In light of the results here, I would argue that there is a confounding between natural, expected subjectivity of the task, and artificial variance stemming from the treatment of the task itself.
 
 For the benefit of further study, it would be also beneficial for MIREX to retain information about judgment order and time taken for each judgment.
 While the poor consistency is improved through multiple judgments and stronger instructions, an outstanding question is whether a judge's approach to a task evolves over time.
