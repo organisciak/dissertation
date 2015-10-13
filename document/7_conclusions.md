@@ -110,7 +110,7 @@ A number of practices can be also be recommended based on context:
 
 _Q. I started collecting some test data and it doesn't look right (low agreement, doesn't match what I know is true, etc.). What's wrong?_
 
-You can try to identify poor workers, as described in the chapter _Interpreting Tasks for Objective Needs_, and weigh them down or remove them altogether. As that chapter notes however, in many cases simply using consensus voting from multiple redundant workers smooths over poor workers. For tasks that do not lend themselves to majority selection, it is possible to conduct a second set of microtasks where workers explicitly choose the best option [see verify step of Find-Fix-Verify pattern in @bernstein_soylent:_2010].
+You can try to identify poor workers, as described in the chapter _Interpreting Tasks for Objective Needs_, and weigh them down or remove them altogether. As that chapter notes however, in many cases simply using consensus voting from multiple redundant workers smooths over poor workers. For tasks that do not lend themselves to majority selection, it is possible to conduct a second set of microtasks where workers explicitly choose the best option [see verify step of Find-Fix-Verify pattern in @bernstein_soylent_2010].
 
 Before assuming poor workers it is important to consider other possibilities. Are instructions clear enough? Some more testing may be necessary. Are there any bugs in the interface (e.g. are some images failing to load), or are there outlier tasks that cannot be encoded (e.g. not providing a 'spam' or 'broken' option)? Worker feedback forms should be reviewed. Are there multiple possible ways to perform a task and you want a specific approach? A training task can help.
 
@@ -163,4 +163,9 @@ This does not mean that there are not good or bad contributions -- rather, by sh
 
 As crowdsourcing matures as a concept and as a focus of research, it is important to remember that well-organized online crowds are individuals, operating differently from the single-minded, simplified 'crowds' described by @le_bon_crowd_1896.
 Crowd individuals are capable and intelligent, but subject to the whims of attention and influence that we all are.
-For those hoping to work with data created by crowds, understanding the way those biases sway is of interest.
+
+Jesse Shera once scolded that the computer "should neither be feared as a competitor nor condemned and ridiculed because it has not yet achieved the intellectual capabilities of the human being" [@shera_librarians_1967].
+With crowdsourcing, we see an embrace of the computer as a collaborator, borrowing its efficiencies while turning to humans to assuage its intellectual faults.
+The development of crowdsourcing has been fundamentally about the pairing of people with machines, insofar as the machines guide the connection between worker and worker, as well as worker and director.
+It is a story of efficiencies: quicker connections between people, greater access through ubiquitous computing, improvements in modularizing tasks.
+This work, concerned with raising the value of the individual contribution, contributes to this story: with improvements in designing crowdsourcing tasks and organizing special cases, the abstract and interpretive benefits of crowds can be tapped with fewer people, less uncertainty, and stronger outcomes.
