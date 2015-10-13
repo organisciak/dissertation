@@ -118,9 +118,9 @@ The broad research questions informing the chapters are as follows:
 
 - __Broad Research Question 1 (RQ1)__: What are the _post-collection_ indicators of quality in worker-contributed objective task data, and can these be leveraged for improved data modeling? ^[Reported in _Interpreting Tasks for Objective Needs_, with an additional approach reported in the second part of _Designing Tasks for Objective Needs_.]
 
-- __RQ 2__: What are the biases inherent to the task design for _objective_ tasks (i.e., the data collection instrument), and can design manipulations correct for them at _collection time_? ^[Reported in _Designing Tasks for Objective Needs_.]
+- __Broad RQ 2__: What are the biases inherent to the task design for _objective_ tasks (i.e., the data collection instrument), and can design manipulations correct for them at _collection time_? ^[Reported in _Designing Tasks for Objective Needs_.]
 
-- __RQ 3__: What are the quality losses when treating _subjective_ tasks in objective ways, and can _collection-time_ framing or _post-collection_ modeling approaches reduce these? ^[Reported in _Designing Tasks for Subjective Needs_.]
+- __Broad RQ 3__: What are the quality losses when treating _subjective_ tasks in objective ways, and can _collection-time_ framing or _post-collection_ modeling approaches reduce these? ^[Reported in _Designing Tasks for Subjective Needs_.]
 
 Though in each chapter there are concrete solutions proposed and evaluated, the first step of each research question is to understand the scope of the problem.
 Regardless of implementation, this dissertation's _pertinent and valuable contribution_ is in understanding some ways that crowdsourced data may have unexpected and perhaps overlooked variance, bias, and low-consistency.

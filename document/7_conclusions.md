@@ -9,7 +9,8 @@ To efficiently and reliably crowdsource descriptive metadata, one has to account
 This dissertation focuses on particular area of crowdsourcing -- paid labor though crowd platforms -- and studies these issues as they relate to the quality of data contributed.
 This is primary a study of data quality maximization: in what ways can crowdsourcing data be optimized, both before and during collection time, and in both objective and subjective contexts. _How do we control and interpret qualitative user contributions in a quantified system?_
 
-There were three movements to this dissertation.
+There were three stages to this dissertation: better making sense of collected data, collecting better quality data, and collecting better quality subjective data.
+
 First, a post-collection approach was taken to interpreting objective tasks: what indicators exist that help us identify and use good contributions while excluding poor ones?
 The way you ask affects what you receive, so next this study looked at objective tasks at the collection stage.
 How does the implementation of the collection instrument improve or otherwise bias the collected contributions?
@@ -67,7 +68,56 @@ The second was a post-collection modeling choice, _taste-matching_, where worker
 Both approaches improved over an unpersonalized baseline.
 Taste-matching was strong in contexts whether the factors affecting a person's tasks were more complex or latent, but in simple contexts taste-grokking performed better and resulted in more satisfied workers.
 
-<!-- Future directions -->
+\newpage 
+
+## Some Answers for Better Crowdsourcing
+
+_Q. How do I start?_
+
+The first step of designing a crowdsourcing task is determining the nature of the task. This work's crowdsourcing typology and related practitioner questions can help in understanding the nature of your task.
+
+One of the first questions to answer is whether a task is subjective or objective.
+
+Tasks with a subjective lean -- when a 'correct' answer is person-specific or context-specific -- require special design. This much is perhaps apparent, but it is not always clear that a task is subjective.
+It is useful to pilot a task with multiple trusted, careful contributors: how well do they agree?
+Internally consistent disagreement may be a sign of subjectivity, in addition to other problems like varying interpretations of the codebook. 
+
+Collecting subjective information can be aided by taste-matching or taste-grokking, as introduced in this dissertation. A reader in a hurry can consult the discussion section of _Designing Tasks for Subjective Needs_ for advice on which approach is more appropriate. Another possible approach is one where the target person explicitly articulates their needs [e.g., @kokkalis_emailvalet_2013; @zhang_human_2012].
+
+> Q. _My task looks to have some subjectivity, but I want a single output. What do I do?_
+
+Though it is often used for quality control to find errant workers, multi-worker aggregation or consensus voting is also useful in deriving a 'normative' objective answer when there is no universal answer.
+This was necessary in one of this dissertation's studies, where we wanted to use crowd judgments of music similarity for evaluating music algorithms, even though people themselves often disagree.
+
+As shown in comparison with taste-matching and taste-grokking, however, the overall system performance is worse when taking this approach. Furthermore, it needs to be tested how many redundant workers need to be aggregated: past studies find that this number changes depending on the type of task.
+
+> Q. _I have a task with a clear concept of a correct contribution. How do I collect the contributions on a paid platform?_
+
+The pattern that has been repeatedly found to be effective in crowdsourcing is microtasking, which involves breaking down a task into the smallest possible unit of contribution, preferably so that each microtask does not require context-shifting (e.g. writing and editing would be two different tasks in a composition task).
+
+Much focus in this dissertation was on the recoverable error around collection. Some basic rules can be inferred:
+
+- Design task instructions to be short, with the key points highlighted: people skim and overlook details. Show examples of good or bad contributions.
+- Detailed codebooks should be taught, not simply shown.
+- If possible, forefront instructions with a dismissable window.
+- Optional free-text feedback should be included to allow a manner for workers to communicate problems.
+
+A number of practices can be also be recommended based on context:
+
+- Collection mechanisms that may collect at different granularities are more reliable with less choices. For example, a rating scale can be unary (e.g. star, like), binary (e.g. thumbs up/thumps down), five-point, maybe even 100 points: each step up in complexity lowers intercoder reliability. 
+- Scales should be anchored with text descriptions: labeling what each choice means.
+- If the task is straightforward, performance feedback helps motivate middling workers. If it does not help, there may be instruction issues (i.e., a worker trying to do better cannot figure what they were not doing well).
+
+> Q. _I started collecting some test data and it doesn't look right (low agreement, doesn't match what I know is true, etc.). What's wrong?_
+
+You can try to identify poor workers, as described in the chapter _Interpreting Tasks for Objective Needs_, and weigh them down or remove them altogether. As that chapter notes however, in many cases simply using consensus voting from multiple redundant workers smooths over poor workers. For tasks that do not lend themselves to majority selection, it is possible to conduct a second set of microtasks where workers explicitly choose the best option [see verify step of Find-Fix-Verify pattern in @bernstein_soylent:_2010].
+
+Before assuming poor workers it is important to consider other possibilities. Are instructions clear enough? Some more testing may be necessary. Are there any bugs in the interface (e.g. are some images failing to load), or are there outlier tasks that cannot be encoded (e.g. not providing a 'spam' or 'broken' option)? Worker feedback forms should be reviewed. Are there multiple possible ways to perform a task and you want a specific approach? A training task can help.
+
+Finally, workers that are confused about a task or simply bad at it can be identified early; for relevance judgments, this study could identify a poor worker after the first item in a task set. This allows you to focus interventions where they are needed.
+
+## Future Directions
+
 \newthought{An array of new questions follow} from those answered in this dissertation.
 Some relate to different contexts, practical implementations, or directions grazed but not directly measured.
 Other new questions arise as next steps, now that we know more about the makeup of paid crowds and how their contributions may be guided through the collection interface implementation.
@@ -94,6 +144,8 @@ A large survey of contribution distributions and a comparison of how different a
 
 Finally, some of the more novel implementations -- such as the feedback design manipulation or the taste-grokking personalized crowdsourcing protocol -- should be studied in the future within the context of their novelty.
 Are some of their effects propped up by the attention associated with 'something different', or do they continue with prolonged interactions?
+
+## Conclusion
 
 \newthought{Crowdsourcing is a promising approach} for teaching us more about the data in our information systems.
 Volunteer crowdsourcing inherits various incentivization complexities, something that paid crowdsourcing is able to sidestep.
