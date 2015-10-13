@@ -84,14 +84,14 @@ Internally consistent disagreement may be a sign of subjectivity, in addition to
 
 Collecting subjective information can be aided by taste-matching or taste-grokking, as introduced in this dissertation. A reader in a hurry can consult the discussion section of _Designing Tasks for Subjective Needs_ for advice on which approach is more appropriate. Another possible approach is one where the target person explicitly articulates their needs [e.g., @kokkalis_emailvalet_2013; @zhang_human_2012].
 
-> Q. _My task looks to have some subjectivity, but I want a single output. What do I do?_
+_Q. My task looks to have some subjectivity, but I want a single output. What do I do?_
 
 Though it is often used for quality control to find errant workers, multi-worker aggregation or consensus voting is also useful in deriving a 'normative' objective answer when there is no universal answer.
 This was necessary in one of this dissertation's studies, where we wanted to use crowd judgments of music similarity for evaluating music algorithms, even though people themselves often disagree.
 
 As shown in comparison with taste-matching and taste-grokking, however, the overall system performance is worse when taking this approach. Furthermore, it needs to be tested how many redundant workers need to be aggregated: past studies find that this number changes depending on the type of task.
 
-> Q. _I have a task with a clear concept of a correct contribution. How do I collect the contributions on a paid platform?_
+_Q. I have a task with a clear concept of a correct contribution. How do I collect the contributions on a paid platform?_
 
 The pattern that has been repeatedly found to be effective in crowdsourcing is microtasking, which involves breaking down a task into the smallest possible unit of contribution, preferably so that each microtask does not require context-shifting (e.g. writing and editing would be two different tasks in a composition task).
 
@@ -108,7 +108,7 @@ A number of practices can be also be recommended based on context:
 - Scales should be anchored with text descriptions: labeling what each choice means.
 - If the task is straightforward, performance feedback helps motivate middling workers. If it does not help, there may be instruction issues (i.e., a worker trying to do better cannot figure what they were not doing well).
 
-> Q. _I started collecting some test data and it doesn't look right (low agreement, doesn't match what I know is true, etc.). What's wrong?_
+_Q. I started collecting some test data and it doesn't look right (low agreement, doesn't match what I know is true, etc.). What's wrong?_
 
 You can try to identify poor workers, as described in the chapter _Interpreting Tasks for Objective Needs_, and weigh them down or remove them altogether. As that chapter notes however, in many cases simply using consensus voting from multiple redundant workers smooths over poor workers. For tasks that do not lend themselves to majority selection, it is possible to conduct a second set of microtasks where workers explicitly choose the best option [see verify step of Find-Fix-Verify pattern in @bernstein_soylent:_2010].
 
@@ -122,27 +122,29 @@ Finally, workers that are confused about a task or simply bad at it can be ident
 Some relate to different contexts, practical implementations, or directions grazed but not directly measured.
 Other new questions arise as next steps, now that we know more about the makeup of paid crowds and how their contributions may be guided through the collection interface implementation.
 
-Applying the methods of this study to different contexts is the most pertinent direction forward.
+**Different contexts**. Applying the methods of this study to different contexts is the most pertinent direction forward.
 How amenable is personalized crowdsourcing to other personalization tasks, like film recommendation, personal photo collection filtering, or comparison shopping? How effective are training intervention or performance feedback for activities such as transcription of historical letters, or other types of encoding beyond tagging? Where possible, this work tried to study multiple task types to get a better sense of how they react to different collection methods.
 Now that there is a sense of what works when, more focused research can follow in alternate contexts.
 For example, in the earlier example of transcribing historical correspondence, a first-task training condition would be promising for a collection of a single author's letters, but in a collection with a mixed of different people's writing, resources would be better spent on per-task training interventions.
 
-One question that was not thoroughly explored in this dissertation is that of cost.
+**Cost**. One question that was not thoroughly explored in this dissertation is that of cost.
 This is because the practical floor for payment is lower than what might be ethical to pay: you are usually paying more than you actually need to.
 Some paid workers rely on the money from Mechanical Turk, so studies that push against the low end of payment in order to compare what methods are less costly are difficult to measure directly.
 This dissertation looked at cost indirectly, focusing on indicators such a time spent on contribution and, in the case of personalized crowdsourcing, how the number of contributions needed changes in different contexts.
 Future work might consider cost not in terms of how low contributions are, but how motivated workers are to continue after they have already been paid [similar to @harris_applying_2012; @mason_financial_2010].
 
-Studying post-collection indicators of worker quality hinted at different styles of contributor.
+**Targeted interventions**. This study found evidence of intervention efficacy and also noted that early success predicts long-term good workers. The natural next step is to study targeted interventions, specifically targeting workers that need them.
+
+**Typology of contributors**. Studying post-collection indicators of worker quality hinted at different styles of contributor.
 @bernstein_soylent_2010 speaks of lazy turkers and eager beavers, but there seem to be many different classes on contributor; e.g., those who skim over instructions^[_rtfmers_, as suggested by my advisor in earlier drafts of this document.], those who stick around as long as tasks are available, those who work slower and speed up, those whose attention drops over time.
 A survey of different types of individuals was afield from this dissertation's focus, but would be a valuable future contribution.
 
-The quantity that people contribute is another behavior worth studying.
+**Contribution distributions**. The quantity that people contribute is another behavior worth studying.
 In crowdsourcing, the contribution quantity usually follows a curve similar to the inverse power law (i.e., the second most active contributor provides half as many contributions of the most active, the third most active contributor provides 1/4 of the contributions, and so on).
 However, while the drop-off is non-linear, the steepness of the curve varies between systems.
 A large survey of contribution distributions and a comparison of how different approaches are able to extend the long tail or soften the curve is work that would further contextualize the experiments in this study.
 
-Finally, some of the more novel implementations -- such as the feedback design manipulation or the taste-grokking personalized crowdsourcing protocol -- should be studied in the future within the context of their novelty.
+**Long-term effects**. Finally, some of the more novel implementations -- such as the feedback design manipulation or the taste-grokking personalized crowdsourcing protocol -- should be studied in the future within the context of their novelty.
 Are some of their effects propped up by the attention associated with 'something different', or do they continue with prolonged interactions?
 
 ## Conclusion
