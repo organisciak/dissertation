@@ -1,5 +1,4 @@
-Designing Tasks for Objective Needs
-=====================================
+# Designing Tasks for Objective Needs
 
 This chapter investigates how the design of crowdsourcing tasks for collecting useful metadata for information retrieval metadata affects the quality of the content.
 
@@ -7,7 +6,7 @@ This chapter investigates how the design of crowdsourcing tasks for collecting u
 Many of the benefits of crowdsourcing follow from that fact: human contributions are valuable specifically because they are not easily automated.
 However, when using crowd contributions to inform an algorithmic system, as in information retrieval, the inconsistencies of human work present a challenge.
 
-In a controlled set up, crowdsourcing in information retrieval usually follows a typical design: a task, description, and a set of one or more documents that are reacted to.
+In a controlled set up, crowdsourcing usually follows a common design: a task, description, and a set of one or more documents that are reacted to.
 This type of design is common for creating custom evaluation datasets through relevance judgments [@alonso_crowdsourcing_2008], but has been used for encoding and verifying indexing information [e.g., @chen_improving_2013].
 
 Evidence suggests that the design of a data collection interface affects the quality and distribution of user contributions [@alonso_crowdsourcing_2008; @howe_crowdsourcing_2008; @mason_financial_2010; @mitra_comparing_2015].
@@ -158,7 +157,7 @@ Which of these can be influenced by external factors?
    Teaching workers by reinforcing their successes and failures might also have an effect.
  - _Self-confidence and decisiveness_. Contributors or workers that second-guess themselves more often may be less internally consistent.
  - _Attentiveness and fatigue_. Environmental distractions or fatigue can change how consistently a task is completed.
-The microtasking design pattern in paid crowdsourcing is meant to negate some of the fatigue seen in traditional classification labour, but there is no way to anticipate other outside factors, such has how many tasks from other requesters were completed. It is possible to affect attentiveness and fatigue within a task, however, with higher- or lower-effort tasks.
+The microtasking design pattern in paid crowdsourcing is meant to negate some of the fatigue seen in traditional classification labour, but there is no way to anticipate other outside factors, such has how many tasks from other directors were completed. It is possible to affect attentiveness and fatigue within a task, however, with higher- or lower-effort tasks.
  - _Perceived importance of task_. The perceived importance of a task might affect some other factors, such as attentiveness or self-confidence.
  - _Time spent on each task_. The time spent on a task does not always translate to an indicator or quality, but might encourage greater numbers of contributions or more decisive contributions when controlled.
 
@@ -254,7 +253,7 @@ Following the advice laid out by a notable set of best practices [@_guidelines_2
 The time estimate was determined based on testing and updated following an initial batch of tasks.
 
 It is recommended to be clear about what work is rejected [@_requester_2011; @_guidelines_2014].<!--_-->
-Given that an underlying premise of this chapter is investigating whether the work requester is sometimes to blame for poor work, it would be a troublesome foregone conclusion to actually reject work, so no work was rejected.
+Given that an underlying premise of this chapter is investigating whether the work director is sometimes to blame for poor work, it would be a troublesome foregone conclusion to actually reject work, so no work was rejected.
 Instead, even for the basic interface, improper work that would have been rejected in other settings was validated by the system when possible.
 For example, workers were asked for a minimum of two tags in the tagging task; as shown in Figure @fig:basicvalidation, they could not submit before entering two tags.
 To account for instances where a second tag was too difficult to create, workers could also add a placeholder 'TOOHARD' tag, which the interface alerted a worker to if their cursor was inactive for a few seconds (Figure @fig:tippopup).
@@ -273,8 +272,8 @@ While this is far from a standard convention, many have recommended it as a stan
 The ability to respond easily provides valuable information on worker satisfaction and task problems.[^feedback]
 
 [^feedback]: Most feedback form practice is anecdotal, because its value is qualitatively palpable but quantitatively intangible.
- Based on my own experiences, feedback forms provide a space for critical information -- such as broken tasks -- and qualitative information -- such as worker satisfaction. Most importantly, they provide a more human interface between workers and requesters.
- This runs contrary to Amazon's purposes as 'artificial artificial intelligence' but encourages requesters to respect their workers.
+ Based on my own experiences, feedback forms provide a space for critical information -- such as broken tasks -- and qualitative information -- such as worker satisfaction. Most importantly, they provide a more human interface between workers and directors.
+ This runs contrary to Amazon's purposes as 'artificial artificial intelligence' but encourages directors to respect their workers.
  Interestingly, as noted earlier, when @alonso_design_2011 tried to mandate feedback form responses, they found that their quality fell relative to volunteered feedback.
 
 ### Training interface (TRAIN)
@@ -381,7 +380,7 @@ Instead, tasks are shown one at a time (e.g., "See how many tasks you can comple
 ![Task in FAST design.](../images/fastScreen.png) {#fig:fast-screen}
 
 Determining a payment is nuanced for this condition.
-Bonuses are bound in promises: there is no system restraint to guarantee payment other than the requester's word.
+Bonuses are bound in promises: there is no system restraint to guarantee payment other than the director's word.
 To assure workers that they will be paid, it is important to still have a notable base payment.
 At the same time, an effort-optimizing worker might realize that it is favourable to avoid the per-contribution bonuses, and keep completing 'do as many as you can in X seconds' tasks with only one contribution.
 To counter such a possibility, the per-item bonuses ramp up; e.g., no bonus for the first task, \$0.01 for the second, \$0.02 for the third.[^FastExample]
@@ -678,7 +677,7 @@ Their contributions were significantly more accurate at the same cost and with n
 However, supporting the interpreted finding in the previous chapter, accompanying the improved performance was more time spend reading instructions.
 In the previous chapter this measurement was confounded with the completion of the first task, here we confirm it.
 
-INSTRUCT is an easy condition to parameterize, only requiring a one-time cost from the requester to collect training examples and perhaps a slight development cost to implement instructions as a dismissable, up-front modal window.
+INSTRUCT is an easy condition to parameterize, only requiring a one-time cost from the director to collect training examples and perhaps a slight development cost to implement instructions as a dismissable, up-front modal window.
 
 The intervention in INSTRUCT was in part motivated by @shu_signing_2012, who found that for reporting forms requiring a signature to confirm honesty, such as tax or insurance forms, asking people to sign at the top led to more honest reporting.
 By foregrounding the instructions, this condition seems to encourage workers to be more honest about the codebook.
@@ -734,7 +733,7 @@ Likewise, it seems that the manual choice of examples for 'Islam' and 'Easter cr
 
 In sum, for relevance judgments of image documents, a per-task training intervention and performance feedback improved the quality of judgments, while a training set on an unrelated query had no significant effect, and a time-limited interface actively disrupted workers.
 
-## Experiment  #2: Tagging
+## Experiment #2: Tagging
 
 To study design manipulations in a more inherently interpretative, difficult task, we turn to tagging.
 Tagging is a type of free-text labeling often applied in online social contexts.
@@ -807,9 +806,9 @@ While this form of usage-based quality indicator does not help in collecting goo
 When @sen_tagging_2006 compared different approaches to collecting tags -- an interface where prior tags are seen, an interface where only popular prior tags are seen, an interface that shows recommended prior tags -- the interface that did not show prior tags had a much larger proportion of never before seen tags.
 This is an unsurprising phenomenon, given that tagging habits appear to be influenced by the community [@golder_structure_2007; @sen_tagging_2006]; however, it is a factor influencing our approach to tag collection through paid crowdsourcing.
 
-A crowd marketplace is emphatically not a community, at least not in the service of a requester's particular task, and generally the pragmatic system-oriented uses
+A crowd marketplace is emphatically not a community, at least not in the service of a director's particular task, and generally the pragmatic system-oriented uses
 are underlaid by a desire for convergence and minimal redundancy.
-This is to say, a requester looking to pay for image tags may not want a vocabulary explosion, but also may be looking to avoid the added complexity and cost of collecting prior tags to show to workers.
+This is to say, a director looking to pay for image tags may not want a vocabulary explosion, but also may be looking to avoid the added complexity and cost of collecting prior tags to show to workers.
 
 <!--##### Tagging Instruction-->
 

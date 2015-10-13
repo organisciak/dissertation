@@ -1,5 +1,4 @@
-Introduction
-==============
+# Introduction
 
 \newthought{The internet} is growing increasingly interactive as it matures.
 Rather than merely transmitting information to readers, web pages allow their audience to react and interact with their information.
@@ -181,10 +180,8 @@ Two protocols for personalized crowdsourcing are then presented, referred to as 
 
 [^definegrokking]: _Taste-grokking_ focuses on communicating a target person's opinions or style to workers, who then perform work specific to their impression of that person.
 
-<!-- Reminder: update any changes here and in the actual chapter -->
-
  - __RQ 3.1__: Is it feasible to apply paid crowdsourcing to subjective problems?
- - __RQ3.2__: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
+ - __RQ 3.2__: Does the taste-matching protocol reduce the amount of error in personalized crowdsourcing?
  - __RQ 3.3__: Does the taste-grokking protocol reduce the amount of error in personalized crowdsourcing?
  - __RQ 3.4__: How do different types of subjective tasks affect the efficacy of personalized crowdsourcing approaches?
  <!-- - __RQ 3.5__: How do task design manipulations affect the quality of crowd contributions?-->

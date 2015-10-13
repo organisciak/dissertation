@@ -1,5 +1,4 @@
-A Typology for Crowdsourcing
-==========================================
+# A Typology for Crowdsourcing
 
 \newthought{The scope of crowdsourcing is broad} and the myriad approaches to collaboration among distributed crowds lend a lack of coherence which may intimidate a practitioner.
 To address the sprawl and provide a structure for the rest of this work, this chapter presents a typology of crowdsourcing for information science.[^iConfCite]
@@ -34,7 +33,7 @@ Their hierarchical taxonomy notes motivations relative to the other two conditio
 Each of these taxonomies has features to inform our understanding of crowdsourcing.
 However, they are generally grounded in different domains than information science, focusing more on crowds as labour and missing ways of conceptualizing the product or the volunteer contributor that are useful for our purposes.
 
-## An Information Science Typology of Crowdsourcing {#taxonomies-of-crowdsourcing}
+## An Information Science Typology of Crowdsourcing
 
 The space of crowdsourcing is large, and there have been a number of attempts to organize the sub-concepts within it or to reconcile it in a space alongside other areas of research.
 Some of the most important questions in differentiating crowdsourcing include:
@@ -52,7 +51,7 @@ Some of the most important questions in differentiating crowdsourcing include:
     Is the collaboration indirect (i.e. contributors work on parts independently) or truly collaborative?
     How is quality controlled for?
 
--   Beneficiary: Who is asking for the contributions? Who is benefiting?
+-   Beneficiary / Director: Who is asking for the contributions? Who is benefiting?
 
 -   Centrality: Is the crowdsourcing central to the system?
 
@@ -101,7 +100,7 @@ Selective /Integrative \autocite{geiger_managing_2011, schenk_crowdsourcing_2009
 &
 Summative / Iterative / Averaged \\
 
-\midrule Beneficiary &
+\midrule Beneficiary / Director &
 Who benefits? What is their relationship to contributors? &
 Autonomous / sponsored \autocite{zwass_cocreation_2010} \\
 &
@@ -409,7 +408,7 @@ Other times, such as with question and answer websites
 With iterative contributions, peer review is sometimes used, as in the versioned workflow of many open-source projects or with the concept of watching pages and reversions on Wikipedia.
 As noted, averaged aggregation receives a lot of focus because it lends itself to quantification, and numerous studies focus on the quality increases of adding redundant contributors or methods to identify low-quality contributors [@sheng_get_2008; @snow_cheap_2008; @wei_lda-based_2006; @wallace_who_2011].
 
-### Beneficiary
+### Beneficiary / Director
 
 Who directs the crowdsourcing activities and who benefits from the contributions?
 
@@ -492,7 +491,7 @@ Wisdom of the crowds, in addition to the principle referring to the effectivenes
 [@surowiecki_wisdom_2004].
 This is embodied by multiple-keying for tasks which are expected to have a real answer, such as classifying galaxies, or averaging opinions for subjective tasks to derive a normative judgment.
 
-## Practitioner's questions
+## Practitioner's Questions
 
 To conclude, I offer some practical examples to provide a template for crowdsourcing planning using this typology.
 

@@ -1,5 +1,4 @@
-Introduction to Crowdsourcing
-==============================
+# Introduction to Crowdsourcing
 
 Crowdsourcing is a conceptually simple idea that has received considerable research attention in the past few years, alongside a realization of the power of the internet for effectively connecting people in large numbers.
 
