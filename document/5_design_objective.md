@@ -75,7 +75,7 @@ Captchas were also used to confirm human input and, perhaps most amusing, questi
 This is a direct solution to some problems this chapter looks at.
 @kazai_crowdsourcing_2011 tested a number of confounded features, but these quality control metrics appeared to improve worker agreement with gold standard data.
 
-[^PerformanceBonus]: We also used a performance-based bonus in the 'taste-grokking' personalization approach detailed in a later chapter (_Designing Tasks for SUbjective Needs_).
+[^PerformanceBonus]: We also used a performance-based bonus in the 'taste-grokking' personalization approach detailed in a later chapter (_Designing Tasks for Subjective Needs_).
 Though we hypothesized it may have a self-competitive effect, it was not the focus of that study and a controlled comparison was not performed to see if it was exerted an inordinate bias on the results. @mitra_comparing_2015 did not find this type of incentive to improve quality.
 
 ## Research Questions
