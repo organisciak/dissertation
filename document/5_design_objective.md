@@ -65,18 +65,20 @@ The collection-time design problem has been previously pursued by @mitra_compari
 Their study is a unique precedent for a controlled experiment of different collection-time strategies for paid crowdsourcing contributions.
 They consider the following strategies: (1) screening workers, (2) providing examples and training workers, (3) offering financial incentives for improved quality (bonuses), and (4) aggregating or filtering multiple independent workers.
 
+\newpage
+
 Screening (1) and aggregation (4) are strategies discussed further and employed respectively in the previous and next chapter, and performance bonuses (3) are a parameterization manipulation that has been studied before[^PerformanceBonus].
 Pertinent to this study, however, @mitra_comparing_2015 found that training contributors on task expectations improved contribution quality on nearly all tasks, generally compounding improvements on top of other conditions.
 Similar to this study, @mitra_comparing_2015 compare interaction against a set of tasks that range in their subjectivity.
+
+[^PerformanceBonus]: We also used a performance-based bonus in the 'taste-grokking' personalization approach detailed in a later chapter (_Designing Tasks for Subjective Needs_).
+Though we hypothesized it may have a self-competitive effect, it was not the focus of that study and a controlled comparison was not performed to see if it was exerted an inordinate bias on the results. @mitra_comparing_2015 did not find this type of incentive to improve quality.
 
 Finally, @kazai_crowdsourcing_2011 approach the problem of HIT design quality improvement by inputting various trap mechanisms for inattentive workers.
 Tasks were completed by a survey flow, where the set of questions to be answered depended on the answers, allowing peculiar flows to be filtered.
 Captchas were also used to confirm human input and, perhaps most amusing, questions were planted that had workers check a box if they "did not pay attention" or "did not read the instructions".
 This is a direct solution to some problems this chapter looks at.
 @kazai_crowdsourcing_2011 tested a number of confounded features, but these quality control metrics appeared to improve worker agreement with gold standard data.
-
-[^PerformanceBonus]: We also used a performance-based bonus in the 'taste-grokking' personalization approach detailed in a later chapter (_Designing Tasks for Subjective Needs_).
-Though we hypothesized it may have a self-competitive effect, it was not the focus of that study and a controlled comparison was not performed to see if it was exerted an inordinate bias on the results. @mitra_comparing_2015 did not find this type of incentive to improve quality.
 
 ## Research Questions
 
@@ -272,9 +274,8 @@ While this is far from a standard convention, many have recommended it as a stan
 The ability to respond easily provides valuable information on worker satisfaction and task problems.[^feedback]
 
 [^feedback]: Most feedback form practice is anecdotal, because its value is qualitatively palpable but quantitatively intangible.
- Based on my own experiences, feedback forms provide a space for critical information -- such as broken tasks -- and qualitative information -- such as worker satisfaction. Most importantly, they provide a more human interface between workers and directors.
+ Feedback forms provide a space for critical information -- such as broken tasks -- and qualitative information -- such as worker satisfaction. Most importantly, they provide a more human interface between workers and directors.
  This runs contrary to Amazon's purposes as 'artificial artificial intelligence' but encourages directors to respect their workers.
- Interestingly, as noted earlier, when @alonso_design_2011 tried to mandate feedback form responses, they found that their quality fell relative to volunteered feedback.
 
 ### Training interface (TRAIN)
 

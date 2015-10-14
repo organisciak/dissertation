@@ -118,13 +118,13 @@ Core / Peripheral \autocite{organisciak_incidental_2013} \\
 \end{center}
 <!--_-->
 
+\newpage
 
 ### Motivation
 
 The incentives for contributors to participate in crowdsourcing are complex and not always consistent from contributor to contributor.
 
-\newthought{Motivation in crowdsourcing} follows related work in the motivations of humans in general @maslow_theory_1943
-[@alderfer_empirical_1969; @ryan_intrinsic_2000].
+\newthought{Motivation in crowdsourcing} follows related work in the motivations of humans in general [@maslow_theory_1943; @alderfer_empirical_1969; @ryan_intrinsic_2000].
 While a review of that work is beyond the scope of this paper, many views of crowdsourcing motivation adopt the lens of motivation as a mixture of *intrinsic*
 factors and *extrinsic* factors [@ryan_intrinsic_2000].
 In the former,

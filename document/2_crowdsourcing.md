@@ -126,7 +126,6 @@ First, individuals are more empowered to operate autonomously, for themselves an
 At the same time, loose collaborations are easier to organize, allowing the pursuit of individual needs at scales beyond the capabilities of a single person.
 
 [^Starbucks]: http://mystarbucksidea.force.com/
-  This presents what would amount to the first few weeks of an introductory crowdsourcing course.
 
 **Citizen science**.
 Citizen science refers to collaboration between scientific communities and members of the public on research.
@@ -254,6 +253,8 @@ While their approach has limited success as a generalized retrieval approach, th
 Their model categorizes users by expertise domain and builds domain topics from related annotations.
 These are linearly smoothed with document and query language models.
 In the context of del.icio.us, their approach improves over traditional unigram models over the document text.
+
+\newpage
 
 Finally, @harris_applying_2012 provide a comprehensive overview of ways that crowdsourcing and _games with a purpose_[^gwap] can be incorporated in the information retrieval workflow.
 While crowdsourcing is noted as highly feasible for evaluation, it is also noted as an approach which can help in building document collections, identifying information needs, and query refinement.
