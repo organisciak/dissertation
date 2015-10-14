@@ -28,7 +28,7 @@ MIREX is an annual evaluation event where techniques tailored to a variety of Mu
 (MIR) tasks are submitted by research laboratories from all over the world.
 
 The Audio Music Similarity and Retrieval (AMS) task was started in 2006.
-AMS resembles a classic information retrieval scenario, whereby the systems being evaluated are expected to return a ranked list of audio items that are considered similar to a given query [@downie_music_2010].
+AMS resembles a classic information retrieval scenario, whereby the systems being evaluated are expected to return a ranked list of audio items that are considered similar to a given query [@downie_music_2003].
 It is also desired by digital library users: in a survey of MDL users, 54% said they were likely to use music similarity functions [@lee_survey_2004].
 AMS relies on human judgments for evaluation, recruiting volunteers each year to judge the similarity of song “candidates” to randomly selected queries.
 
