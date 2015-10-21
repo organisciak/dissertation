@@ -238,7 +238,9 @@ Manual tweaking of results is not a scholarly activity, but there is evidence th
 
 Using crowdsourcing in the machine, as evidence for search engine algorithms rather than evaluation, is less common.
 PageRank is one such effort, utilizing the linking habits of web page authors as a proxy for authoritativeness and quality [@page_pagerank_1999].
-Recently, crowdsourcing has proven useful for time-sensitive queries, and has been used by Twitter to model searches that may have never been seen before [@chen_improving_2013].
+Recently, crowdsourcing has proven useful for novel queries, and has been used by Twitter to model searches that may have never been seen before [@chen_improving_2013].
+Crowdsourcing has also been considered as a way to improve the quality of results in an extended or follow-up interaction [@teevan_slow_2013; @harris_applying_2012; @kim_crowdsourcing_2013].
+Similarly, @bernstein_direct_2012 used both search log analysis of user behaviors and paid crowds to find web queries that may be answered directly.
 
 One of the better explored spaces of retrieval over or incorporating crowdsourced information is in folksonomies.
 Folksonomies refer to free-text labelling (i.e., 'tagging') by non-professionals.
