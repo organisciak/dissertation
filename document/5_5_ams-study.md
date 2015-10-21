@@ -1,4 +1,4 @@
-# Designing Tasks for Objective Needs 2
+# Designing Tasks for Objective Needs: A Case Study
 
 The next chapter will turn to more subjective settings.
 Before continuing, however, it is worth reported on one more study of objective task design, one which has been extracted to its own section because the study looks at both posterior data correction and task design corrections, as discussed in the two chapters prior, while the findings bridge the shift in focus from objective task design to subjective.
