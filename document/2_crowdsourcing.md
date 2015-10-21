@@ -22,7 +22,7 @@ through the internet one can perform human-specific tasks at a scale usually onl
 The term _crowdsourcing_ comes from a 2006 Wired article by Jeff Howe [-@howe_rise_2006].
 While the word is recent and has an unambiguous source, immediately upon its introduction it was adopted and expanded on through public discourse.
 Howe was writing from a labor perspective, looking at online marketplaces for people to solve problems and create content.
-His focus was on systems like InnoCentive^[http://www.innocentive.com/], a site for companies to outsource research and development problems for a bounty, and iStockPhoto^[http://www.istockphoto.com/], a website that allowed amateur photographers to sell their images as stock photos.
+His focus was on systems like InnoCentive^[http://www.innocentive.com], a site for companies to outsource research and development problems for a bounty, and iStockPhoto^[http://www.istockphoto.com], a website that allowed amateur photographers to sell their images as stock photos.
 The article briefly looked at user-generated online content, though in the context of television programs that use online video as content, rather than the bottom-up style of content creation associated with the first two decades of the internet.
 Despite the narrowness and brevity of the initial definition, the term _crowdsourcing_ struck a chord more broadly and was culturally co-opted.
 The definitional appropriation happened very quickly: within nine days Howe noted a jump from three Google results to 189,000 [@howe_birth_2006].
@@ -125,7 +125,7 @@ Benkler [-@benkler_wealth_2006] singles out two user behaviors borne out of acce
 First, individuals are more empowered to operate autonomously, for themselves and with less reliance on mass-market goods.
 At the same time, loose collaborations are easier to organize, allowing the pursuit of individual needs at scales beyond the capabilities of a single person.
 
-[^Starbucks]: http://mystarbucksidea.force.com/
+[^Starbucks]: http://mystarbucksidea.force.com
 
 **Citizen science**.
 Citizen science refers to collaboration between scientific communities and members of the public on research.

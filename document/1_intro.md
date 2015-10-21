@@ -227,7 +227,7 @@ In the presence of large collections of information objects, information-seeking
 Sites like Amazon[^Amazon], LibraryThing[^LibraryThing] and the Pinterest[^PinterestExample] let people create lists of products, books, and images, respectively.
 
 [^Amazon]: https://www.amazon.com. The online store includes a curated feature called "Listmania Lists", one of a series of crowdsourcing features they refer to as the "Amazon Community". Others include customer reviews, customer communities, a pre-release review program, customer images, and the similar "So You'd Like to..." guides.
-[^LibraryThing]: https://www.librarything.com/. A community for book lovers that includes a curated 'Lists' feature for books. Other crowdsourcing features include member recommendations, tagging, and rating.
+[^LibraryThing]: https://www.librarything.com. A community for book lovers that includes a curated 'Lists' feature for books. Other crowdsourcing features include member recommendations, tagging, and rating.
 [^PinterestExample]: http://www.pinterest.com. A social visual bookmarking website. Images from Pinterest are used as a dataset in a later chapter.
 
 The themes binding the lists are also user-defined, so a list can be about

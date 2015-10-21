@@ -422,8 +422,8 @@ The task serving code is also released online[^crowdybackend].
 <!--
 Details of the experimental system, including design documents, model descriptions, and logic, are provided in the Appendices. TODO2 add proper link. -->
 
-[^angularjs]: https://angularjs.org/
-[^nodejs]: https://nodejs.org/
+[^angularjs]: https://angularjs.org
+[^nodejs]: https://nodejs.org
 [^express]: http://expressjs.com
 [^mongodb]: https://www.mongodb.com
 [^crowdy]: https://github.com/organisciak/crowdy
