@@ -1,4 +1,4 @@
-# Designing Tasks for Objective Needs: A Case Study
+# Designing Tasks for Objective Needs 2
 
 The next chapter will turn to more subjective settings.
 Before continuing, however, it is worth reported on one more study of objective task design, one which has been extracted to its own section because the study looks at both posterior data correction and task design corrections, as discussed in the two chapters prior, while the findings bridge the shift in focus from objective task design to subjective.
@@ -25,15 +25,15 @@ The findings are also important to understanding the reliability of Audio Music 
 ## Problem
 
 MIREX is an annual evaluation event where techniques tailored to a variety of Music Digital Library (MDL) and Music Information Retrieval
-(MIR) tasks are submitted by research laboratories from all over the world.
+(MIR) tasks are submitted by research laboratories from all over the world [@downie_music_2003].
 
 The Audio Music Similarity and Retrieval (AMS) task was started in 2006.
-AMS resembles a classic information retrieval scenario, whereby the systems being evaluated are expected to return a ranked list of audio items that are considered similar to a given query [@downie_music_2003].
+AMS resembles a classic information retrieval scenario, whereby the systems being evaluated are expected to return a ranked list of audio items that are considered similar to a given query [@downie_music_2010].
 It is also desired by digital library users: in a survey of MDL users, 54% said they were likely to use music similarity functions [@lee_survey_2004].
 AMS relies on human judgments for evaluation, recruiting volunteers each year to judge the similarity of song “candidates” to randomly selected queries.
 
 For each query song, each retrieval system under evaluation gives MIREX a list of candidate similar songs.
-These query–candidate sets are presented randomly to evaluators in a judging system called 'Evalutron 6000' (E6K) [@downie_music_2006; @gruzd_evalutron_2007].
+These query–candidate sets are presented randomly to evaluators in a judging system called 'Evalutron 6000' (E6K) [@gruzd_evalutron_2007].
 To avoid exhaustion, E6K saves judgments continuously, so that workers can step away and return without losing data.
 
 \newthought{The problem looked at in this chapter is that there is a lack of agreement} between workers in song pairs judged across multiple years.
